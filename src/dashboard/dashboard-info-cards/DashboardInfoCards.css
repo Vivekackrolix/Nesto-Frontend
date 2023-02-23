@@ -1,0 +1,7 @@
+.card-blue {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+.card-title {
+  font-size: 0.9rem;
+}
