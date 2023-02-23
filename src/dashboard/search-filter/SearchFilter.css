@@ -1,0 +1,6 @@
+.voice-location-icons .rounded-circle {
+  width: 35px;
+  height: 35px;
+  background-color: rgb(39 143 217 / 48%);
+  color: var(--primary-color);
+}

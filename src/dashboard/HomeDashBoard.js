@@ -1,13 +1,14 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import ContentCard from './dashboard-info-cards/DashboardInfoCards';
 import DashboardHeader from './header/DashboardHeader';
-import { useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import {
   FaChartLine,
   FaMoneyBillWave,
   FaUser,
   FaCreditCard,
 } from 'react-icons/fa';
+import SearchFilterBox from './search-filter/SearchFilter';
 
 const dashboardInfoCardsData = [
   {
@@ -18,10 +19,18 @@ const dashboardInfoCardsData = [
   {
     icon: <FaMoneyBillWave size={35} />,
     title: 'Loan Management',
-    path: '/loan',
+    path: '/home-dashboard/loan',
   },
-  { icon: <FaCreditCard size={35} />, title: 'Payment', path: '/payment' },
-  { icon: <FaUser size={35} />, title: 'Profile', path: '/profile' },
+  {
+    icon: <FaCreditCard size={35} />,
+    title: 'Payment',
+    path: '/home-dashboard/payment',
+  },
+  {
+    icon: <FaUser size={35} />,
+    title: 'Profile',
+    path: '/home-dashboard/profile',
+  },
 ];
 
 const HomeDashBoard = () => {
@@ -30,19 +39,22 @@ const HomeDashBoard = () => {
   return (
     <>
       <DashboardHeader />
-      <Container className="pt-4">
-        <Row className="gx-4">
+      <Container className="pt-5 pb-4">
+        <Row className="gx-4 dashboard-cards">
           {dashboardInfoCardsData.map(cardItem => (
             <Col md={6} lg={3} className="mb-4">
               <ContentCard
                 icon={cardItem.icon}
                 title={cardItem.title}
                 active={location.pathname === cardItem.path}
+                path={cardItem.path}
               />
             </Col>
           ))}
         </Row>
       </Container>
+      <SearchFilterBox />
+      <Outlet />
     </>
   );
 };

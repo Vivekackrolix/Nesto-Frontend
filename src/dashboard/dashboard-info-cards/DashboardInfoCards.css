@@ -5,3 +5,16 @@
 .card-title {
   font-size: 0.9rem;
 }
+
+.dashboard-cards a {
+  color: unset;
+  text-decoration: none;
+}
+
+.dashboard-cards .card-blue {
+  color: #ffffff !important;
+}
+
+.dashboard-cards a:hover {
+  color: unset;
+}
