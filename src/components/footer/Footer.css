@@ -1,0 +1,29 @@
+footer img {
+  width: 200px;
+}
+
+footer h5 {
+  font-size: 20px;
+  line-height: 21px;
+  color: var(--color-white);
+}
+
+footer ul a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+footer ul a:hover {
+  color: var(--color-white);
+}
+
+footer p {
+  color: var(--color-white);
+}
+
+.icon-container {
+  width: 43.62px;
+  height: 43.62px;
+}
