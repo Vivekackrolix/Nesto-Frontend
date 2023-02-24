@@ -3,12 +3,12 @@ import DashboardChildCard from './DashboardChildCard';
 
 const DashboardParentCard = ({ title }) => {
   return (
-    <Card className="border-0 shadow mb-4">
+    <Card className="border-0 shadow mb-4 dashboard-parent-card">
       <Card.Header className="bg-transparent py-3">
         <h5 className="mb-0">{title}</h5>
       </Card.Header>
       <Card.Body>
-        <Row>
+        <Row className="g-4">
           <Col xs={12}>
             <DashboardChildCard />
           </Col>

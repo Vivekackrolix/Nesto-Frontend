@@ -102,6 +102,13 @@ body {
   color: #ffffff;
 }
 
+.btn.btn-color-danger {
+  background: var(--carnation-color);
+  outline: none;
+  border: 1px solid var(--carnation-color);
+  color: #ffffff;
+}
+
 .rounded-100 {
   border-radius: 100px;
 }

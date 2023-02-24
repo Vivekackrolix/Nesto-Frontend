@@ -11,10 +11,18 @@
   border-bottom-left-radius: 10px;
   padding-inline: 20px;
   position: absolute;
-  top: 0;
+  top: -13px;
   right: 0;
 }
 
 .overdue-btn:hover {
   background-color: var(--bg-red-darker);
+}
+
+.stacked-bar span {
+  font-size: 0.8rem;
+}
+
+.stacked-bar-month {
+  color: var(--carnation-color);
 }

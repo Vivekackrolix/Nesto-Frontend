@@ -35,7 +35,7 @@ const options = {
       stacked: true,
       ticks: {
         beginAtZero: true,
-        stepSize: 100, // Add a step of 100 between y-axis numbers
+        stepSize: 5, // set step size to 5
         callback: function (value, index, values) {
           if (value === 0) {
             return '$' + value;
@@ -67,24 +67,24 @@ const data = {
       data: [0, 10, 15, 20],
       backgroundColor: '#278FD9',
       borderColor: 'transparent',
-      barThickness: 20, // add thickness to bars
-      borderRadius: 5, // add radius to bars
+      barThickness: 30, // add thickness to bars
+      borderRadius: 9.1, // add radius to bars
     },
     {
       label: 'Not Mature',
       data: [25, 30, 35, 40],
       backgroundColor: '#FC5C67',
       borderColor: 'transparent',
-      barThickness: 20, // add thickness to bars
-      borderRadius: 5, // add radius to bars
+      barThickness: 30, // add thickness to bars
+      borderRadius: 9.1, // add radius to bars
     },
     {
       label: 'Assigned',
       data: [45, 50, 55, 60],
       backgroundColor: '#FFAFAF',
       borderColor: 'transparent',
-      barThickness: 20, // add thickness to bars
-      borderRadius: 5, // add radius to bars
+      barThickness: 30, // add thickness to bars
+      borderRadius: 9.1, // add radius to bars
     },
   ],
 };
@@ -99,14 +99,22 @@ const StackedBarChartDashboard = () => {
       <Card.Header className="bg-transparent">
         <Card.Title>Loan</Card.Title>
       </Card.Header>
-      <Card.Body className="d-flex justify-content-center align-items-center">
-        <StackedBarChart />
+      <Card.Body>
+        <div className="d-flex justify-content-between align-items-center stacked-bar">
+          <span className="fw-semibold">Social Growth</span>
+          <span className="fw-semibold">
+            Show data: <span className="stacked-bar-month">7 months</span>
+          </span>
+        </div>
+        <div className="d-flex justify-content-center align-items-center mt-4">
+          <StackedBarChart />
+        </div>
       </Card.Body>
       <Card.Footer className="bg-transparent py-3 border-0">
         <div className="d-flex justify-content-center">
           <div className="container">
             <div className="row gx-2 gy-4">
-              {data.datasets.map(({ label, backgroundColor }, index) => (
+              {data.datasets.map(({ label, backgroundColor }) => (
                 <div className="col-12 col-lg-6" key={label}>
                   <div className="d-flex align-items-center gap-1">
                     <div

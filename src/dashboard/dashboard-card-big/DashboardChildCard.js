@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { Button, Card, Row, Col } from 'react-bootstrap';
 import { BsCreditCard, BsDownload } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
-const columns = [
+const overdueColumnsData = [
   'Unity type  :  3 BHK',
   'Client  Name : Tisha',
   'Broker  Name :  Vinit',
@@ -15,37 +17,97 @@ const columns = [
   'Invoice Amt : 3.94 Cr',
 ];
 
+const assignedColumnsData = [
+  'Property Type : 3 BHK',
+  'Demanding Cost : ₹ 3.94 Cr',
+  'Broker Name :  Tisha',
+  'Broker ID :  7865432',
+];
+
 const DashboardChildCard = () => {
+  const [showCards, setShowCards] = useState({
+    overdue: true,
+    assigned: false,
+  });
   return (
-    <Card className="border-0 shadow-sm mt-4">
-      <Card.Body className="d-flex p-0">
-        <Card.Img
-          // src={childCardImg}
-          src="/assets/dashboard-img-content.png"
-          style={{ width: '200px', alignSelf: 'stretch' }}
-        />
-        <div className="dash-content p-4">
-          <Button className="overdue-btn bg-color-red btn-sm">Overdue</Button>
-          <Card.Title>Title</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">Subtitle</Card.Subtitle>
-          <Row className="justify-content-center g-3">
-            {columns.map((content, index) => (
-              <Col key={index} xs={12} md={4}>
-                {content}
+    <Card className="border-0 shadow-sm mt-3">
+      {/* <Card.Body className="d-flex p-0"> */}
+      <Card.Body className="row p-0">
+        <Col xs={3} className="d-flex">
+          <Card.Img
+            className="align-self-stretch d-flex"
+            src={`${
+              showCards.overdue
+                ? `/assets/dashboard-img-content.png`
+                : `/assets/dashboard-img-content-small.png`
+            }`}
+          />
+        </Col>
+        <Col xs={`${showCards.overdue ? 9 : 6}`}>
+          <div className="dash-content py-1">
+            {showCards.overdue && (
+              <Button className="overdue-btn bg-color-red btn-sm">
+                Overdue
+              </Button>
+            )}
+
+            <Row className="g-3">
+              <Col xs={12} className="bg-transparent">
+                <Card.Title>Title</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">
+                  Subtitle
+                </Card.Subtitle>
               </Col>
-            ))}
-            <Col xs={12} md={4} className="d-grid gap-3">
-              <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
-                Download Invoice
-                <BsDownload size={20} className="mr-2" />
-              </Button>
-              <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-primary rounded-100">
-                Pay Now
-                <BsCreditCard size={20} className="ml-2" />
-              </Button>
-            </Col>
-          </Row>
-        </div>
+              {showCards.overdue &&
+                overdueColumnsData.map((content, index) => (
+                  <Col key={index} xs={12} md={4} className="text-truncate">
+                    {content}
+                  </Col>
+                ))}
+              {showCards.overdue && (
+                <Col xs={12} md={4} className="d-grid gap-3">
+                  <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                    Download Invoice
+                    <BsDownload size={20} className="mr-2" />
+                  </Button>
+                  <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-primary rounded-100">
+                    Pay Now
+                    <BsCreditCard size={20} className="ml-2" />
+                  </Button>
+                </Col>
+              )}
+
+              {/* assigned cards */}
+              {showCards.assigned &&
+                assignedColumnsData.map((content, index) => (
+                  <Col key={index} xs={12} md={6}>
+                    {content}
+                  </Col>
+                ))}
+            </Row>
+          </div>
+        </Col>
+        {showCards.assigned && (
+          <Col
+            className="border-start d-flex justify-content-center align-items-center"
+            xs={3}
+          >
+            <div>
+              <Card.Text>Lorem Ipsum Dummy text</Card.Text>
+              <div className="d-grid px-4 gap-2">
+                <Button className="btn-color-primary">Accept</Button>
+                <Button className="btn-color-danger">Deny</Button>
+                <Button
+                  variant="link"
+                  as={Link}
+                  className="text-decoration-none color-blue"
+                >
+                  View Details
+                </Button>
+              </div>
+            </div>
+          </Col>
+        )}
       </Card.Body>
     </Card>
   );
