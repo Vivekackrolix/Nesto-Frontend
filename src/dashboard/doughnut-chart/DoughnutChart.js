@@ -9,7 +9,7 @@ const data = {
   labels: ['Paid', 'Processing', 'Pending', 'Overdue'],
   datasets: [
     {
-      label: '# of Votes',
+      label: 'Payment',
       data: [12, 19, 3, 5],
       backgroundColor: ['#278FD9', '#FC5C67', '#FFAFAF', '#ECE9FF'],
       borderColor: ['#278FD9', '#FC5C67', '#FFAFAF', '#ECE9FF'],
@@ -36,24 +36,31 @@ const DoughnutChartDashboard = () => {
       <Card.Header className="bg-transparent">
         <Card.Title>Payment Card</Card.Title>
       </Card.Header>
-      <Card.Body>
+      <Card.Body className="d-flex justify-content-center align-items-center p-5">
         <DoughnutChart />
       </Card.Body>
-      <Card.Footer className="bg-transparent">
+      <Card.Footer className="bg-transparent py-4">
         <div className="d-flex justify-content-center">
-          {data.labels.map((label, index) => (
-            <div className="d-flex align-items-center mr-3" key={label}>
-              <div
-                className="rounded mr-2"
-                style={{
-                  backgroundColor: data.datasets[0].backgroundColor[index],
-                  width: '30px',
-                  height: '30px',
-                }}
-              ></div>
-              <div>{label}</div>
+          <div className="container">
+            <div className="row gy-4 gx-2">
+              {data.labels.map((label, index) => (
+                <div className="col-12 col-lg-6" key={label}>
+                  <div className="d-flex align-items-center gap-1">
+                    <div
+                      className="rounded flex-shrink-0"
+                      style={{
+                        backgroundColor:
+                          data.datasets[0].backgroundColor[index],
+                        flexBasis: '30px',
+                        height: '30px',
+                      }}
+                    ></div>
+                    <div className="text-truncate">{label}</div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </Card.Footer>
     </Card>

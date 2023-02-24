@@ -36,17 +36,11 @@ const DashboardChildCard = () => {
                 </Col>
               ))}
               <Col xs={12} md={4} className="d-grid gap-3">
-                <Button
-                  block
-                  className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100"
-                >
+                <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                   Download Invoice
                   <BsDownload size={20} className="mr-2" />
                 </Button>
-                <Button
-                  block
-                  className="d-flex align-items-center justify-content-center gap-2 btn-color-primary rounded-100"
-                >
+                <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-primary rounded-100">
                   Pay Now
                   <BsCreditCard size={20} className="ml-2" />
                 </Button>

@@ -12,6 +12,7 @@ import SearchFilterBox from './search-filter/SearchFilter';
 import './Dashboard.css';
 import DashboardParentCard from './dashboard-card-big/DashboardParentCard';
 import DoughnutChartDashboard from './doughnut-chart/DoughnutChart';
+import StackedBarChartDashboard from './stacked-bar-chart-loan/StackedBarChart';
 
 const dashboardInfoCardsData = [
   {
@@ -44,8 +45,8 @@ const HomeDashBoard = () => {
       <DashboardHeader />
       <Container className="pt-5 pb-4">
         <Row className="gx-4 dashboard-cards">
-          {dashboardInfoCardsData.map(cardItem => (
-            <Col md={6} lg={3} className="mb-4">
+          {dashboardInfoCardsData.map((cardItem, index) => (
+            <Col md={6} lg={3} className="mb-4" key={index}>
               <ContentCard
                 icon={cardItem.icon}
                 title={cardItem.title}
@@ -61,7 +62,14 @@ const HomeDashBoard = () => {
             <DashboardParentCard title="Overdue" />
           </Col>
           <Col md={3}>
-            <DoughnutChartDashboard style={{ width: '100%' }} />
+            <div className="row g-5">
+              <div className="col">
+                <DoughnutChartDashboard style={{ width: '100%' }} />
+              </div>
+              <div className="col">
+                <StackedBarChartDashboard />
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>
