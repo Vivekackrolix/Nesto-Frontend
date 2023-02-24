@@ -3,7 +3,7 @@ import DashboardChildCard from './DashboardChildCard';
 
 const DashboardParentCard = ({ title }) => {
   return (
-    <Card className="border-0 shadow mt-4">
+    <Card className="border-0 shadow mb-4">
       <Card.Header className="bg-transparent py-3">
         <h5 className="mb-0">{title}</h5>
       </Card.Header>

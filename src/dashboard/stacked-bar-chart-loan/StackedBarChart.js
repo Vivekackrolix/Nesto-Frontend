@@ -113,8 +113,8 @@ const StackedBarChartDashboard = () => {
                       className="rounded flex-shrink-0"
                       style={{
                         backgroundColor,
-                        flexBasis: '30px',
-                        height: '30px',
+                        flexBasis: '20px',
+                        height: '20px',
                       }}
                     ></div>
                     <div className="text-truncate ms-2">{label}</div>

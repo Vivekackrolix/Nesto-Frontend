@@ -5,20 +5,7 @@ import { Card } from 'react-bootstrap';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const data = {
-  labels: ['Paid', 'Processing', 'Pending', 'Overdue'],
-  datasets: [
-    {
-      label: 'Payment',
-      data: [12, 19, 3, 5],
-      backgroundColor: ['#278FD9', '#FC5C67', '#FFAFAF', '#ECE9FF'],
-      borderColor: ['#278FD9', '#FC5C67', '#FFAFAF', '#ECE9FF'],
-      borderWidth: 1,
-    },
-  ],
-};
-
-const DoughnutChart = () => {
+const DoughnutChart = ({ data }) => {
   const options = {
     plugins: {
       legend: {
@@ -30,14 +17,14 @@ const DoughnutChart = () => {
   return <Doughnut data={data} options={options} />;
 };
 
-const DoughnutChartDashboard = () => {
+const DoughnutChartDashboard = ({ title, data }) => {
   return (
     <Card className="shadow-sm border-0">
       <Card.Header className="bg-transparent">
-        <Card.Title>Payment Card</Card.Title>
+        <Card.Title>{title}</Card.Title>
       </Card.Header>
       <Card.Body className="d-flex justify-content-center align-items-center p-5">
-        <DoughnutChart />
+        <DoughnutChart data={data} />
       </Card.Body>
       <Card.Footer className="bg-transparent py-4">
         <div className="d-flex justify-content-center">
@@ -51,8 +38,8 @@ const DoughnutChartDashboard = () => {
                       style={{
                         backgroundColor:
                           data.datasets[0].backgroundColor[index],
-                        flexBasis: '30px',
-                        height: '30px',
+                        flexBasis: '20px',
+                        height: '20px',
                       }}
                     ></div>
                     <div className="text-truncate">{label}</div>

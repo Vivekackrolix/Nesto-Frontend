@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RouteData } from './utils/Routes';
+import HomeDashboardContent from './dashboard/home-dashnoard-content/HomeDashboardContent';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
           } else if (page === 'dashboard' && routes) {
             return (
               <Route key={id} path={path} element={element}>
+                <Route index element={<HomeDashboardContent />} />
                 {routes.map(({ id, path, element }) => (
                   <Route key={id} path={path} element={element} />
                 ))}
