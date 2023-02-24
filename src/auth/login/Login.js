@@ -1,24 +1,44 @@
 import LoginUser from './LoginUser';
-import { Container, Row, Col, Form, Button, Image } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  Button,
+  Image,
+  InputGroup,
+} from 'react-bootstrap';
+
+import { RiEyeOffFill, RiEyeFill } from 'react-icons/ri';
+import { useState } from 'react';
+import ForgetPassword from './ForgetPassword';
 import ResetPasswordModal from './ResetPasswordModal';
 import EnterOtp from './EnterOtp';
-import ForgetPassword from './ForgetPassword';
+import './Login.css';
+import { Footer, Header } from '../../components';
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showModal, setShowModal] = useState({
+    forgetPassword: false,
+    resetPassword: false,
+    enterOtp: false,
+  });
   return (
     <>
-      {/* login modals */}
-      <ResetPasswordModal show={false} />
-      <EnterOtp show={false} />
-      <ForgetPassword show={false} />
+      {/* modal */}
+      {showModal.forgetPassword && <ForgetPassword show={true} />}
+      {showModal.resetPassword && <ResetPasswordModal show={true} />}
+      {showModal.enterOtp && <EnterOtp show={true} />}
 
-      {/* login user name */}
+      <Header />
       <LoginUser />
 
       <Container className="mt-5">
         <Row className="g-0">
           <Col md={6}>
             <Image
+              className="h-100"
               src="https://via.placeholder.com/800x500.png"
               fluid
               alt="login img"
@@ -26,13 +46,70 @@ const Login = () => {
           </Col>
           <Col
             md={6}
-            className="px-5 shadow-sm d-flex flex-column justify-content-center"
+            className="p-5 shadow-sm d-flex flex-column justify-content-center"
           >
             <Form>
               <Form.Group>
                 <Form.Label>Mobile Number/Email</Form.Label>
-                <Form.Control type="email" required />
+                <Form.Control
+                  type="tel"
+                  name="phone"
+                  className="rounded-0"
+                  required
+                />
               </Form.Group>
+              <Form.Group className="mt-4">
+                <Form.Label>Password</Form.Label>
+              </Form.Group>
+
+              <InputGroup className="mb-0">
+                <Form.Control
+                  type={`${showPassword ? 'text' : `password`}`}
+                  name="password"
+                  aria-label="Password"
+                  className="rounded-0 border-end-0"
+                />
+                <Button
+                  variant="transparent"
+                  type="button"
+                  className="border border-start-0 rounded-0"
+                  onClick={() =>
+                    setShowPassword(prevShowPassword => !prevShowPassword)
+                  }
+                >
+                  {showPassword && <RiEyeFill color="#fc5c67" />}
+                  {!showPassword && <RiEyeOffFill color="#fc5c67" />}
+                </Button>
+              </InputGroup>
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="invalid-feedback d-inline">
+                  Incorrect Password
+                </div>
+                <div className="w-100 d-flex justify-content-end">
+                  <Button
+                    onClick={() =>
+                      setShowModal(prevShowModal => ({
+                        ...prevShowModal,
+                        forgetPassword: true,
+                      }))
+                    }
+                    variant="link"
+                    to="/forgetPassword"
+                    className="forget-password text-decoration-none p-0"
+                  >
+                    Forget Password?
+                  </Button>
+                </div>
+              </div>
+
+              <Form.Group className="mt-3" controlId="formBasicCheckbox">
+                <Form.Check
+                  className="form-check-inline"
+                  type="checkbox"
+                  label="Remember Me"
+                />
+              </Form.Group>
+
               <div className="d-grid mt-5">
                 <Button
                   variant="primary"
@@ -63,6 +140,7 @@ const Login = () => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </>
   );
 };

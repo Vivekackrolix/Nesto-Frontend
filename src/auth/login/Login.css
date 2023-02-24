@@ -2,3 +2,12 @@
   width: 30px;
   height: 30px;
 }
+
+.forget-password {
+  font-size: 0.875rem;
+  color: unset;
+}
+
+.form-check-inline .form-check-label {
+  font-size: 0.875rem;
+}

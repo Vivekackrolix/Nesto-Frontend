@@ -1,9 +1,37 @@
 import Login from '../auth/login/Login';
+import HomeDashBoard from '../dashboard/HomeDashBoard';
+import Loan from '../dashboard/loan/Loan';
+import Payment from '../dashboard/payment/Payment';
+import Profile from '../dashboard/profile/Profile';
 
 export const RouteData = [
   {
     id: 1,
+    page: 'login',
     path: '/',
     element: <Login />,
+  },
+  {
+    id: 2,
+    page: 'dashboard',
+    path: '/home-dashboard',
+    element: <HomeDashBoard />,
+    routes: [
+      {
+        id: 3,
+        path: 'loan',
+        element: <Loan />,
+      },
+      {
+        id: 4,
+        path: 'payment',
+        element: <Payment />,
+      },
+      {
+        id: 5,
+        path: 'profile',
+        element: <Profile />,
+      },
+    ],
   },
 ];

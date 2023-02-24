@@ -6,6 +6,10 @@
   --primary-color-darker: #1980c9;
   --color-white: #ffffff;
   --Pattens-Blue: #e0f2ff;
+  --carnation-color: #fc5c67;
+  --wild-sand: #f6f6f6;
+  --bg-red: #ff000e;
+  --bg-red-darker: #b7010d;
 
   /* divider */
   --divider: #d3d3d3;
@@ -15,8 +19,24 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.carnation-color {
+  color: var(--carnation-color);
+}
+
+.color-blue {
+  color: var(--primary-color);
+}
+
 .bg-color-primary {
   background-color: var(--primary-color);
+}
+
+.bg-color-red {
+  background-color: var(--bg-red);
+}
+
+.border-color-primary {
+  border: 1px solid var(--primary-color);
 }
 
 .bg-color-primary-darker {
@@ -34,4 +54,41 @@ body {
 
 .bg-pattens-blue {
   background-color: var(--Pattens-Blue);
+}
+.btn.bg-color-primary,
+.btn.bg-color-primary-darker {
+  outline: none;
+  border: none;
+}
+
+.btn.bg-color-primary:hover,
+.btn.bg-color-primary-darker:hover {
+  background-color: var(--primary-color-darker);
+}
+
+.btn.btn-color-primary {
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  color: #ffffff;
+}
+
+.btn.btn-color-primary:hover {
+  background-color: var(--primary-color-darker);
+}
+
+.btn.btn-color-outline-primary {
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn.btn-color-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.rounded-100 {
+  border-radius: 100px;
 }

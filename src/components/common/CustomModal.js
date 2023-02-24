@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 const CustomModal = ({ show, title, children }) => {

@@ -1,3 +1,4 @@
+import './Header.css';
 import { useState } from 'react';
 import { Container, Nav, NavDropdown } from 'react-bootstrap';
 
@@ -14,8 +15,8 @@ const Header = () => {
           <Nav.Item className="ms-auto">
             <NavDropdown
               title="Login"
-              id="login-dropdown"
               show={dropdown}
+              className="border-color-primary me-3 p-0 btn btn-sm"
               onClick={() => setDropdown(!dropdown)}
             >
               <NavDropdown.Item href="#">Action</NavDropdown.Item>

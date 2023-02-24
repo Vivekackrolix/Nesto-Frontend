@@ -1,0 +1,20 @@
+.dash-content .col-12 {
+  background-color: var(--wild-sand);
+  text-align: center;
+}
+
+.overdue-btn {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-inline: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.overdue-btn:hover {
+  background-color: var(--bg-red-darker);
+}

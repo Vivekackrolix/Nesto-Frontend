@@ -9,6 +9,9 @@ import {
   FaCreditCard,
 } from 'react-icons/fa';
 import SearchFilterBox from './search-filter/SearchFilter';
+import './Dashboard.css';
+import DashboardParentCard from './dashboard-card-big/DashboardParentCard';
+import DoughnutChartDashboard from './doughnut-chart/DoughnutChart';
 
 const dashboardInfoCardsData = [
   {
@@ -52,8 +55,17 @@ const HomeDashBoard = () => {
             </Col>
           ))}
         </Row>
+        <SearchFilterBox />
+        <Row>
+          <Col md={9}>
+            <DashboardParentCard title="Overdue" />
+          </Col>
+          <Col md={3}>
+            <DoughnutChartDashboard style={{ width: '100%' }} />
+          </Col>
+        </Row>
       </Container>
-      <SearchFilterBox />
+
       <Outlet />
     </>
   );

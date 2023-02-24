@@ -78,7 +78,11 @@ const Footer = () => {
                   aria-label="Email address"
                   aria-describedby="basic-addon2"
                 />
-                <Button variant="primary" type="submit">
+                <Button
+                  variant="primary"
+                  type="submit"
+                  className="bg-color-primary-darker"
+                >
                   Send
                 </Button>
               </InputGroup>
