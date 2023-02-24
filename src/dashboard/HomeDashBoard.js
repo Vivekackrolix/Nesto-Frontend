@@ -9,7 +9,6 @@ import {
   FaCreditCard,
 } from 'react-icons/fa';
 import SearchFilterBox from './search-filter/SearchFilter';
-// import HomeDashboardContent from './home-dashnoard-content/HomeDashboardContent';
 import './Dashboard.css';
 
 const dashboardInfoCardsData = [
@@ -56,7 +55,6 @@ const HomeDashBoard = () => {
         </Row>
         <SearchFilterBox />
       </Container>
-
       <Outlet />
     </>
   );

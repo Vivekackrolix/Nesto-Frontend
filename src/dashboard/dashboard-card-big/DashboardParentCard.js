@@ -1,7 +1,7 @@
 import { Card, Row, Col, Button } from 'react-bootstrap';
 import DashboardChildCard from './DashboardChildCard';
 
-const DashboardParentCard = ({ title }) => {
+const DashboardParentCard = ({ title, cardType }) => {
   return (
     <Card className="border-0 shadow mb-4 dashboard-parent-card">
       <Card.Header className="bg-transparent py-3">
@@ -10,10 +10,10 @@ const DashboardParentCard = ({ title }) => {
       <Card.Body>
         <Row className="g-4">
           <Col xs={12}>
-            <DashboardChildCard />
+            <DashboardChildCard cardType={cardType} />
           </Col>
           <Col xs={12}>
-            <DashboardChildCard />
+            <DashboardChildCard cardType={cardType} />
           </Col>
         </Row>
       </Card.Body>

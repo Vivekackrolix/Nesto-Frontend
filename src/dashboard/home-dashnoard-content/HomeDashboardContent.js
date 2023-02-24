@@ -3,13 +3,16 @@ import DashboardParentCard from '../dashboard-card-big/DashboardParentCard';
 import DoughnutChartDashboard from '../doughnut-chart/DoughnutChart';
 import StackedBarChartDashboard from '../stacked-bar-chart-loan/StackedBarChart';
 import { ChartData } from '../chart-data/ChartData';
+import { HomeDashboardContentContentData } from './HomeDashboardContentData';
 
 const HomeDashboardContent = () => {
   return (
     <Container>
       <Row>
         <Col md={9}>
-          <DashboardParentCard title="Overdue" />
+          {HomeDashboardContentContentData.map(({ title, cardType }, index) => (
+            <DashboardParentCard title={title} cardType={cardType} />
+          ))}{' '}
         </Col>
         <Col md={3}>
           <div className="row g-5">
@@ -18,14 +21,6 @@ const HomeDashboardContent = () => {
                 <DoughnutChartDashboard data={data} title={title} />
               </div>
             ))}
-
-            {/* <div className="col">
-              <DoughnutChartDashboard
-                data={data}
-                title="Loan Queries Analysis"
-              />
-            </div> */}
-
             <div className="col">
               <StackedBarChartDashboard />
             </div>

@@ -24,11 +24,7 @@ const assignedColumnsData = [
   'Broker ID :  7865432',
 ];
 
-const DashboardChildCard = () => {
-  const [showCards, setShowCards] = useState({
-    overdue: false,
-    assigned: true,
-  });
+const DashboardChildCard = ({ cardType }) => {
   return (
     <Card className="border-0 shadow-sm mt-3">
       {/* <Card.Body className="d-flex p-0"> */}
@@ -37,63 +33,68 @@ const DashboardChildCard = () => {
           <Card.Img
             className="align-self-stretch d-flex"
             src={`${
-              showCards.overdue
+              cardType === 'overdue'
                 ? `/assets/dashboard-img-content.png`
                 : `/assets/dashboard-img-content-small.png`
             }`}
           />
         </Col>
-        <Col className="col">
-          <div className="dash-content py-1">
-            {showCards.overdue && (
-              <Button className="overdue-btn bg-color-red btn-sm">
-                Overdue
-              </Button>
+        <Col className="col dash-content">
+          {cardType === 'overdue' && (
+            <Button className="overdue-btn bg-color-red btn-sm">Overdue</Button>
+          )}
+
+          {cardType === 'acceptedLoanQueries' && (
+            <Button className="overdue-btn bg-color-primary btn-sm">
+              Assigned
+            </Button>
+          )}
+
+          <Row className="g-3">
+            <Col xs={12} className="bg-transparent gap-2">
+              <Card.Title className="d-flex justify-content-start fw-bold">
+                Title
+              </Card.Title>
+              <Card.Subtitle className="d-flex justify-content-start text-muted">
+                Subtitle
+              </Card.Subtitle>
+            </Col>
+            {cardType === 'overdue' &&
+              overdueColumnsData.map((content, index) => (
+                <Col key={index} xs={12} md={4} className="text-truncate">
+                  {content}
+                </Col>
+              ))}
+            {cardType === 'overdue' && (
+              <Col xs={12} md={4} className="d-grid gap-3 bg-transparent px-3">
+                <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                  Download Invoice
+                  <BsDownload size={20} className="mr-2" />
+                </Button>
+                <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-primary rounded-100">
+                  Pay Now
+                  <BsCreditCard size={20} className="ml-2" />
+                </Button>
+              </Col>
             )}
 
-            <Row className="g-3">
-              <Col xs={12} className="bg-transparent gap-2">
-                <Card.Title className="d-flex justify-content-start">
-                  Title
-                </Card.Title>
-                <Card.Subtitle className="d-flex justify-content-start text-muted">
-                  Subtitle
-                </Card.Subtitle>
-              </Col>
-              {showCards.overdue &&
-                overdueColumnsData.map((content, index) => (
-                  <Col key={index} xs={12} md={4} className="text-truncate">
-                    {content}
-                  </Col>
-                ))}
-              {showCards.overdue && (
-                <Col
-                  xs={12}
-                  md={4}
-                  className="d-grid gap-3 bg-transparent px-3"
-                >
-                  <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
-                    Download Invoice
-                    <BsDownload size={20} className="mr-2" />
-                  </Button>
-                  <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-primary rounded-100">
-                    Pay Now
-                    <BsCreditCard size={20} className="ml-2" />
-                  </Button>
+            {/* assigned cards */}
+            {cardType === 'assigned' &&
+              assignedColumnsData.map((content, index) => (
+                <Col key={index} xs={12} md={6}>
+                  {content}
                 </Col>
-              )}
+              ))}
 
-              {/* assigned cards */}
-              {showCards.assigned &&
-                assignedColumnsData.map((content, index) => (
-                  <Col key={index} xs={12} md={6}>
-                    {content}
-                  </Col>
-                ))}
-            </Row>
-          </div>
+            {cardType === 'acceptedLoanQueries' &&
+              assignedColumnsData.map((content, index) => (
+                <Col key={index} xs={12} md={4} className="text-truncate">
+                  {content}
+                </Col>
+              ))}
+          </Row>
         </Col>
-        {showCards.assigned && (
+        {cardType === 'assigned' && (
           <Col className="col-3 border-start d-flex justify-content-center align-items-center">
             <div>
               <Card.Text>Lorem Ipsum Dummy text</Card.Text>
