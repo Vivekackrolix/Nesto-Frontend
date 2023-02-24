@@ -7,6 +7,7 @@
   --color-white: #ffffff;
   --Pattens-Blue: #e0f2ff;
   --carnation-color: #fc5c67;
+  --wild-watermelon-color: #fe5e6a;
   --wild-sand: #f6f6f6;
   --bg-red: #ff000e;
   --bg-red-darker: #b7010d;
@@ -86,6 +87,18 @@ body {
 
 .btn.btn-color-outline-primary:hover {
   background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn.btn-color-outline-secondary {
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--wild-watermelon-color);
+  color: var(--wild-watermelon-color);
+}
+
+.btn.btn-color-outline-secondary:hover {
+  background-color: var(--wild-watermelon-color);
   color: #ffffff;
 }
 

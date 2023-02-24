@@ -12,6 +12,11 @@ const DoughnutChart = ({ data }) => {
         display: false,
       },
     },
+
+    // cutout: 50,
+    // layout: {
+    //   padding: 20,
+    // },
   };
 
   return <Doughnut data={data} options={options} />;

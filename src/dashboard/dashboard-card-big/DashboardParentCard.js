@@ -1,4 +1,4 @@
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col, Button } from 'react-bootstrap';
 import DashboardChildCard from './DashboardChildCard';
 
 const DashboardParentCard = ({ title }) => {
@@ -9,11 +9,19 @@ const DashboardParentCard = ({ title }) => {
       </Card.Header>
       <Card.Body>
         <Row>
-          <Col>
+          <Col xs={12}>
+            <DashboardChildCard />
+          </Col>
+          <Col xs={12}>
             <DashboardChildCard />
           </Col>
         </Row>
       </Card.Body>
+      <Card.Footer className="bg-transparent border-0 d-flex justify-content-center align-items-center py-3">
+        <Button className="btn-color-outline-secondary rounded-100">
+          Browse More
+        </Button>
+      </Card.Footer>
     </Card>
   );
 };

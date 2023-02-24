@@ -22,8 +22,8 @@ export const ChartData = [
         {
           label: 'Payment',
           data: [12, 19, 3],
-          backgroundColor: ['#278FD9', '#FC5C67', '#FFAFAF'],
-          borderColor: ['#278FD9', '#FC5C67', '#FFAFAF'],
+          backgroundColor: ['#FC5C67', '#FFAFAF', '#278FD9'],
+          borderColor: ['#FC5C67', '#FFAFAF', '#278FD9'],
           borderWidth: 1,
         },
       ],

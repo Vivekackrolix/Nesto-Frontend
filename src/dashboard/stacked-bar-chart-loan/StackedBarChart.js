@@ -57,7 +57,7 @@ const options = {
   barPercentage: 0.8, // Add gap between bars
 };
 
-const labels = ['January', 'February', 'March', 'April'];
+const labels = ['Jan', 'Feb', 'Mar', 'Apr'];
 
 const data = {
   labels,
