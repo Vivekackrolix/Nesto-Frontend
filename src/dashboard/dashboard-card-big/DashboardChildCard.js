@@ -26,14 +26,14 @@ const assignedColumnsData = [
 
 const DashboardChildCard = () => {
   const [showCards, setShowCards] = useState({
-    overdue: true,
-    assigned: false,
+    overdue: false,
+    assigned: true,
   });
   return (
     <Card className="border-0 shadow-sm mt-3">
       {/* <Card.Body className="d-flex p-0"> */}
       <Card.Body className="row p-0">
-        <Col xs={3} className="d-flex">
+        <Col className="d-flex col-auto">
           <Card.Img
             className="align-self-stretch d-flex"
             src={`${
@@ -43,7 +43,7 @@ const DashboardChildCard = () => {
             }`}
           />
         </Col>
-        <Col xs={`${showCards.overdue ? 9 : 6}`}>
+        <Col className="col">
           <div className="dash-content py-1">
             {showCards.overdue && (
               <Button className="overdue-btn bg-color-red btn-sm">
@@ -52,9 +52,11 @@ const DashboardChildCard = () => {
             )}
 
             <Row className="g-3">
-              <Col xs={12} className="bg-transparent">
-                <Card.Title>Title</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
+              <Col xs={12} className="bg-transparent gap-2">
+                <Card.Title className="d-flex justify-content-start">
+                  Title
+                </Card.Title>
+                <Card.Subtitle className="d-flex justify-content-start text-muted">
                   Subtitle
                 </Card.Subtitle>
               </Col>
@@ -65,7 +67,11 @@ const DashboardChildCard = () => {
                   </Col>
                 ))}
               {showCards.overdue && (
-                <Col xs={12} md={4} className="d-grid gap-3">
+                <Col
+                  xs={12}
+                  md={4}
+                  className="d-grid gap-3 bg-transparent px-3"
+                >
                   <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                     Download Invoice
                     <BsDownload size={20} className="mr-2" />
@@ -88,10 +94,7 @@ const DashboardChildCard = () => {
           </div>
         </Col>
         {showCards.assigned && (
-          <Col
-            className="border-start d-flex justify-content-center align-items-center"
-            xs={3}
-          >
+          <Col className="col-3 border-start d-flex justify-content-center align-items-center">
             <div>
               <Card.Text>Lorem Ipsum Dummy text</Card.Text>
               <div className="d-grid px-4 gap-2">
