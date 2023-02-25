@@ -2,18 +2,16 @@ import { Col, Container, Row } from 'react-bootstrap';
 import ContentCard from './dashboard-info-cards/DashboardInfoCards';
 import DashboardHeader from './header/DashboardHeader';
 import { Outlet, useLocation } from 'react-router-dom';
-import {
-  FaChartLine,
-  FaMoneyBillWave,
-  FaUser,
-  FaCreditCard,
-} from 'react-icons/fa';
+import { FaMoneyBillWave, FaCreditCard } from 'react-icons/fa';
+import { RiHome3Line } from 'react-icons/ri';
+import { FaRegUser } from 'react-icons/fa';
+
 import SearchFilterBox from './search-filter/SearchFilter';
 import './Dashboard.css';
 
 const dashboardInfoCardsData = [
   {
-    icon: <FaChartLine size={35} />,
+    icon: <RiHome3Line size={35} />,
     title: 'Dashboard',
     path: '/home-dashboard',
   },
@@ -28,7 +26,7 @@ const dashboardInfoCardsData = [
     path: '/home-dashboard/payment',
   },
   {
-    icon: <FaUser size={35} />,
+    icon: <FaRegUser size={35} />,
     title: 'Profile',
     path: '/home-dashboard/profile',
   },
