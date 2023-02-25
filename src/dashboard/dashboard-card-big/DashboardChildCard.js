@@ -3,24 +3,24 @@ import { BsCreditCard, BsDownload } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const overdueColumnsData = [
-  'Unity type  :  3 BHK',
-  'Client  Name : Tisha',
-  'Broker  Name :  Vinit',
-  'Broker ID  :  BR01211',
-  'Query No. : 3234',
-  'Bank  Name :  HDFC',
-  'Disbursed Amt :  3.94 Cr',
-  'Disbursed Date : 12/01/23',
-  'Invoice  No :  34454',
-  'Invoice Date  :  14/01/23',
-  'Invoice Amt : 3.94 Cr',
+  { label: 'Unity type', value: '3 BHK' },
+  { label: 'Client Name', value: 'Tisha' },
+  { label: 'Broker Name', value: 'Vinit' },
+  { label: 'Broker ID', value: 'BR01211' },
+  { label: 'Query No.', value: '3234' },
+  { label: 'Bank Name', value: 'HDFC' },
+  { label: 'Disbursed Amt', value: '3.94 Cr' },
+  { label: 'Disbursed Date', value: '12/01/23' },
+  { label: 'Invoice No', value: '34454' },
+  { label: 'Invoice Date', value: '14/01/23' },
+  { label: 'Invoice Amt', value: '3.94 Cr' },
 ];
 
 const assignedColumnsData = [
-  'Property Type : 3 BHK',
-  'Demanding Cost : ₹ 3.94 Cr',
-  'Broker Name :  Tisha',
-  'Broker ID :  7865432',
+  { label: 'Property Type', value: '3 BHK' },
+  { label: 'Demanding Cost', value: '₹ 3.94 Cr' },
+  { label: 'Broker Name', value: 'Tisha' },
+  { label: 'Broker ID', value: '7865432' },
 ];
 
 const DashboardChildCard = ({ cardType }) => {
@@ -59,9 +59,9 @@ const DashboardChildCard = ({ cardType }) => {
               </Card.Subtitle>
             </Col>
             {cardType === 'overdue' &&
-              overdueColumnsData.map((content, index) => (
+              overdueColumnsData.map(({ label, value }, index) => (
                 <Col key={index} xs={12} md={4} className="text-truncate">
-                  {content}
+                  {label} : {value}
                 </Col>
               ))}
             {cardType === 'overdue' && (
@@ -79,16 +79,16 @@ const DashboardChildCard = ({ cardType }) => {
 
             {/* assigned cards */}
             {cardType === 'assigned' &&
-              assignedColumnsData.map((content, index) => (
+              assignedColumnsData.map(({ label, value }, index) => (
                 <Col key={index} xs={12} md={6}>
-                  {content}
+                  {label} : {value}
                 </Col>
               ))}
 
             {cardType === 'acceptedLoanQueries' &&
-              assignedColumnsData.map((content, index) => (
+              assignedColumnsData.map(({ label, value }, index) => (
                 <Col key={index} xs={12} md={4} className="text-truncate">
-                  {content}
+                  {label} : {value}
                 </Col>
               ))}
           </Row>
