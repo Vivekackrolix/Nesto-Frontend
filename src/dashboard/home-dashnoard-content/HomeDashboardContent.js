@@ -34,7 +34,7 @@ const HomeDashboardContent = () => {
           md={9}
           className="d-flex justify-content-center align-items-center mt-4"
         >
-          <Button className="btn-color-primary rounded-100">
+          <Button className="btn-color-primary rounded-100 mb-5">
             Download All Pdf
           </Button>
         </Col>
