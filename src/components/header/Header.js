@@ -6,11 +6,15 @@ const Header = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <header className="py-3">
+    <header className="py-3 login__header">
       <Container>
         <Nav className="d-flex align-items-center">
           <Nav.Item>
-            <img src="/assets/nesto-logo.png" alt="logo" />
+            <img
+              src="/assets/nesto-logo.png"
+              alt="logo"
+              className="login__header__img"
+            />
           </Nav.Item>
           <Nav.Item className="ms-auto">
             <NavDropdown

@@ -1,3 +1,15 @@
-.nav-item img {
-  width: 200px;
+.login__header__img {
+  width: 170px;
+}
+
+.login__header .nav-link {
+  font-weight: 350;
+  font-size: 15px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.login__header .nav-link:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
 }

@@ -19,7 +19,7 @@ const SocialMedia = () => {
       {SocialMediaIcons.map((item, index) => (
         <Col xs="auto" key={index}>
           <div className="icon-container d-flex bg-white rounded-circle">
-            <item.icon className="m-auto" size={22.62} color="#278FD9" />
+            <item.icon className="m-auto" size={16} color="#278FD9" />
           </div>
         </Col>
       ))}

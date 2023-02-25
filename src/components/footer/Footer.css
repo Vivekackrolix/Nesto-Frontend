@@ -1,29 +1,84 @@
-footer img {
-  width: 200px;
+.login__footer img {
+  width: 170px;
 }
 
-footer h5 {
-  font-size: 20px;
-  line-height: 21px;
+.login__footer h5 {
+  font-weight: 600;
+  font-size: 18px;
   color: var(--color-white);
 }
 
-footer ul a {
+.login__footer ul a {
   color: var(--color-white);
   text-decoration: none;
   font-size: 16px;
   line-height: 28px;
-}
 
-footer ul a:hover {
+  font-weight: 300;
+  font-size: 15px;
   color: var(--color-white);
 }
 
-footer p {
+.login__footer ul a:hover {
   color: var(--color-white);
+}
+
+.login__footer p {
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--color-white);
+  line-height: 28px;
 }
 
 .icon-container {
-  width: 43.62px;
-  height: 43.62px;
+  width: 28px;
+  height: 28px;
+}
+
+.login__footer form button {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--color-white);
+}
+
+/* Set common styles for input placeholders */
+input::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 38px;
+  color: var(--primary-color) !important;
+  border-radius: 12px !important;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.07) !important;
+}
+
+/* Set styles for specific vendor prefixes */
+/* WebKit, Blink, Edge */
+input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+  opacity: 1;
+}
+
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+  opacity: 1;
+}
+
+/* Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+/* Microsoft Edge */
+input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.login__footer__copyright {
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--color-white);
 }

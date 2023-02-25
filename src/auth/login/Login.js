@@ -8,14 +8,13 @@ import {
   Image,
   InputGroup,
 } from 'react-bootstrap';
-
 import { RiEyeOffFill, RiEyeFill } from 'react-icons/ri';
 import { useState } from 'react';
 import ForgetPassword from './ForgetPassword';
 import ResetPasswordModal from './ResetPasswordModal';
 import EnterOtp from './EnterOtp';
-import './Login.css';
 import { Footer, Header } from '../../components';
+import './Login.css';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -35,7 +34,7 @@ const Login = () => {
       <LoginUser />
 
       <Container className="mt-5">
-        <Row className="g-0">
+        <Row className="g-0 login__form">
           <Col md={6}>
             <Image
               className="h-100"
@@ -50,7 +49,9 @@ const Login = () => {
           >
             <Form>
               <Form.Group>
-                <Form.Label>Mobile Number/Email</Form.Label>
+                <Form.Label className="fw-light">
+                  Mobile Number/Email
+                </Form.Label>
                 <Form.Control
                   type="tel"
                   name="phone"
@@ -59,7 +60,7 @@ const Login = () => {
                 />
               </Form.Group>
               <Form.Group className="mt-4">
-                <Form.Label>Password</Form.Label>
+                <Form.Label className="fw-light">Password</Form.Label>
               </Form.Group>
 
               <InputGroup className="mb-0">
@@ -95,7 +96,7 @@ const Login = () => {
                     }
                     variant="link"
                     to="/forgetPassword"
-                    className="forget-password text-decoration-none p-0"
+                    className="login__form__forgetpassword p-0"
                   >
                     Forget Password?
                   </Button>
@@ -128,12 +129,12 @@ const Login = () => {
             <div className="d-flex gap-2">
               <div className="flex-grow-1 d-flex justify-content-center">
                 <Button variant="link" className="border-0 p-0 mr-3">
-                  <img src="/assets/google.svg" alt="" />
+                  <img src="/assets/google.svg" alt="google" />
                 </Button>
               </div>
               <div className="flex-grow-1 d-flex justify-content-center border-start">
                 <Button variant="link" className="border-0 p-0 mr-3">
-                  <img src="/assets/facebook.svg" alt="" />
+                  <img src="/assets/facebook.svg" alt="facebook" />
                 </Button>
               </div>
             </div>
