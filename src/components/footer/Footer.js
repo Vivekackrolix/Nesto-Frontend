@@ -56,7 +56,7 @@ const Footer = () => {
           </Col>
 
           <Col md={3}>
-            <h5 className="fw-bold">Get in Touch</h5>
+            <h5 className="fw-bold">Get in Touch With Us</h5>
             <p className="mt-3">
               Duis mattis laoreet neque, et ornare neque sollicitudin at. Proin
               sagittis dolor sed ...
