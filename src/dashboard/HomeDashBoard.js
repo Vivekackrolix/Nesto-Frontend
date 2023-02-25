@@ -11,22 +11,22 @@ import './Dashboard.css';
 
 const dashboardInfoCardsData = [
   {
-    icon: <RiHome3Line size={35} />,
+    icon: <RiHome3Line size={50} />,
     title: 'Dashboard',
     path: '/home-dashboard',
   },
   {
-    icon: <FaMoneyBillWave size={35} />,
+    icon: <FaMoneyBillWave size={50} />,
     title: 'Loan Management',
     path: '/home-dashboard/loan',
   },
   {
-    icon: <FaCreditCard size={35} />,
+    icon: <FaCreditCard size={50} />,
     title: 'Payment',
     path: '/home-dashboard/payment',
   },
   {
-    icon: <FaRegUser size={35} />,
+    icon: <FaRegUser size={50} />,
     title: 'Profile',
     path: '/home-dashboard/profile',
   },
@@ -38,7 +38,7 @@ const HomeDashBoard = () => {
   return (
     <>
       <DashboardHeader />
-      <Container className="pt-5 pb-4">
+      <Container className="pt-5 pb-4 dashboard__wrapper">
         <Row className="gx-4 dashboard-cards">
           {dashboardInfoCardsData.map((cardItem, index) => (
             <Col md={6} lg={3} className="mb-4" key={index}>

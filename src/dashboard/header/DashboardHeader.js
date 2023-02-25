@@ -7,7 +7,7 @@ import './DashboardHeader.css';
 
 const DashboardHeader = () => {
   return (
-    <Navbar className="shadow-sm py-3" expand="lg">
+    <Navbar className="shadow-sm py-3 dashboard__navbar" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img src="/assets/nesto-logo.png" alt="logo" />

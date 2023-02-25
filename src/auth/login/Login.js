@@ -84,9 +84,7 @@ const Login = () => {
                 </Button>
               </InputGroup>
               <div className="d-flex justify-content-between align-items-center">
-                <div className="invalid-feedback d-inline">
-                  Incorrect Password
-                </div>
+                <div className="invalid-feedback">Incorrect Password</div>
                 <div className="w-100 d-flex justify-content-end">
                   <Button
                     onClick={() =>
