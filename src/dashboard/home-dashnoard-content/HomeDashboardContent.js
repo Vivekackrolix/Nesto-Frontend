@@ -10,7 +10,7 @@ const HomeDashboardContent = () => {
     <Container>
       <Row>
         <Col md={9}>
-          {HomeDashboardContentContentData.map(({ title, cardType }, index) => (
+          {HomeDashboardContentContentData.map(({ title, cardType }) => (
             <DashboardParentCard
               title={title}
               cardType={cardType}

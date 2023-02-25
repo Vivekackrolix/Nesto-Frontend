@@ -28,7 +28,7 @@ const CopyrightText = () => {
               as={Link}
               className="text-decoration-none text-white text-opacity-75 fw-light"
             >
-              Privacy
+              Privacy Policy
             </Button>
           </Col>
         </Row>

@@ -1,14 +1,14 @@
 export const HomeDashboardContentContentData = [
   {
-    title: 'Payment',
+    title: 'Overdue',
     cardType: 'overdue',
   },
   {
-    title: 'Overdue',
+    title: 'Assigned Loan Queries',
     cardType: 'assigned',
   },
   {
-    title: 'Loan Queries Analysis',
+    title: 'Recently Accepted Loan Queries',
     cardType: 'acceptedLoanQueries',
   },
 ];

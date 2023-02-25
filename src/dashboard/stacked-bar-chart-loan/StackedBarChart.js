@@ -7,6 +7,7 @@ import {
   LinearScale,
   BarElement,
 } from 'chart.js';
+import './StackedBarChart.css';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement);
 
@@ -95,9 +96,9 @@ export const StackedBarChart = () => {
 
 const StackedBarChartDashboard = () => {
   return (
-    <Card className="shadow-sm border-0">
+    <Card className="shadow-sm border-0 stacked-bar-chart">
       <Card.Header className="bg-transparent">
-        <Card.Title>Loan</Card.Title>
+        <Card.Title className="fw-semibold">Loan</Card.Title>
       </Card.Header>
       <Card.Body>
         <div className="d-flex justify-content-between align-items-center stacked-bar">

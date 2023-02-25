@@ -2,6 +2,7 @@ import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { Card } from 'react-bootstrap';
+import './DoughnutChart.css';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -24,9 +25,9 @@ const DoughnutChart = ({ data }) => {
 
 const DoughnutChartDashboard = ({ title, data }) => {
   return (
-    <Card className="shadow-sm border-0">
+    <Card className="shadow-sm border-0 doughnut-chart">
       <Card.Header className="bg-transparent">
-        <Card.Title>{title}</Card.Title>
+        <Card.Title className="fw-semibold">{title}</Card.Title>
       </Card.Header>
       <Card.Body className="d-flex justify-content-center align-items-center p-5">
         <DoughnutChart data={data} />

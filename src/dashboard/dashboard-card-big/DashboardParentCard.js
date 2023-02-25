@@ -1,11 +1,12 @@
 import { Card, Row, Col, Button } from 'react-bootstrap';
 import DashboardChildCard from './DashboardChildCard';
+import './DashboardParentCard.css';
 
 const DashboardParentCard = ({ title, cardType }) => {
   return (
     <Card className="border-0 shadow mb-4 dashboard-parent-card">
       <Card.Header className="bg-transparent py-3">
-        <h5 className="mb-0">{title}</h5>
+        <h5 className="mb-0 fw-semibold">{title}</h5>
       </Card.Header>
       <Card.Body>
         <Row className="g-4">
