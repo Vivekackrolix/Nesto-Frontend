@@ -10,13 +10,13 @@ import './SearchFilter.css';
 
 const SearchFilterBox = () => {
   return (
-    <div className="bg-white shadow-sm d-flex align-items-center mb-5 mt-4">
+    <div className="dashboard__wrapper__filter bg-white shadow-sm d-flex align-items-center mb-5 mt-4">
       <div className="px-3 py-2">
         <Form.Select
           defaultValue="All residential"
           className="border-0 rounded-0 border-end"
         >
-          <option>All residential</option>
+          <option>All Residential</option>
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
@@ -25,15 +25,15 @@ const SearchFilterBox = () => {
       <div className="flex-grow-1">
         <InputGroup>
           <InputGroup.Text className="border-0 bg-transparent">
-            <BsSearch />
+            <BsSearch color="#B3B4B8" />
           </InputGroup.Text>
-          <FormControl placeholder="Search" style={{ border: 'none' }} />
+          <FormControl placeholder="Search" className="border-0" />
         </InputGroup>
       </div>
       <div className="px-3 py-2 voice-location-icons">
-        <BsGeoAlt className="rounded-circle me-2 p-2" size={24} />
-        <BsMic className="rounded-circle me-2 p-2" size={24} />
-        <Button variant="primary" className="bg-color-primary">
+        <BsGeoAlt className="rounded-circle me-2 p-2" size={16} />
+        <BsMic className="rounded-circle me-2 p-2" size={16} />
+        <Button variant="primary" className="ms-2 bg-color-primary">
           Search
         </Button>
       </div>
