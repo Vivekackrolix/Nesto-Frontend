@@ -1,6 +1,18 @@
 .dash-content .col-12 {
   background-color: var(--wild-sand);
-  text-align: center;
+}
+
+.dash-content span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.dash-content .text-truncate span:first-child {
+  color: var(--cold-steel-color);
+}
+
+.dash-content .text-truncate span:last-child {
+  color: var(--gray-color);
 }
 
 .overdue-btn {
@@ -25,4 +37,8 @@
 
 .stacked-bar-month {
   color: var(--carnation-color);
+}
+
+.downloaded-pdf {
+  font-size: 1.3rem;
 }

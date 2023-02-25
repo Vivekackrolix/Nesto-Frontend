@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import { Card, Row, Col, Button } from 'react-bootstrap';
 import DashboardChildCard from './DashboardChildCard';
 import './DashboardParentCard.css';
-import { useState } from 'react';
 
 const DashboardParentCard = ({ title, cardType }) => {
   const [showMore, setShowMore] = useState(false);

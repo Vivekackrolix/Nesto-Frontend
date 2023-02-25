@@ -8,15 +8,20 @@ import { HomeDashboardContentContentData } from './HomeDashboardContentData';
 const HomeDashboardContent = () => {
   return (
     <Container>
-      <Row>
-        <Col md={9}>
+      <Row className="mb-5">
+        <Col md={9} className="dashboard-parent-card-wrapper">
           {HomeDashboardContentContentData.map(({ title, cardType }) => (
             <DashboardParentCard
               title={title}
               cardType={cardType}
               key={title}
             />
-          ))}{' '}
+          ))}
+          <div className="d-flex justify-content-center align-items-center">
+            <Button className="btn-color-primary rounded-100 mb-5 px-5 py-3 downloaded-pdf">
+              Download All PDF
+            </Button>
+          </div>
         </Col>
         <Col md={3}>
           <div className="row g-5">
@@ -29,14 +34,6 @@ const HomeDashboardContent = () => {
               <StackedBarChartDashboard />
             </div>
           </div>
-        </Col>
-        <Col
-          md={9}
-          className="d-flex justify-content-center align-items-center mt-4"
-        >
-          <Button className="btn-color-primary rounded-100 mb-5">
-            Download All Pdf
-          </Button>
         </Col>
       </Row>
     </Container>

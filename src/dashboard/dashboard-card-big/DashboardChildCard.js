@@ -57,7 +57,7 @@ const DashboardChildCard = ({ cardType }) => {
             </Button>
           )}
 
-          <Row className="g-3">
+          <Row className="g-3 align-items-start">
             <Col xs={12} className="bg-transparent gap-2 dashboard-cards-title">
               <Card.Title className="d-flex justify-content-start fw-bold">
                 Sky Dandelions Apartment
@@ -69,7 +69,8 @@ const DashboardChildCard = ({ cardType }) => {
             {cardType === 'overdue' &&
               overdueColumnsData.map(({ label, value }, index) => (
                 <Col key={index} xs={12} md={4} className="text-truncate">
-                  <span>{label}</span> : <span>{value}</span>
+                  <span className="fw-semibold">{label}</span> :{' '}
+                  <span>{value}</span>
                 </Col>
               ))}
             {cardType === 'overdue' && (
@@ -89,14 +90,16 @@ const DashboardChildCard = ({ cardType }) => {
             {cardType === 'assigned' &&
               assignedColumnsData.map(({ label, value }, index) => (
                 <Col key={index} xs={12} md={6}>
-                  {label} : {value}
+                  <span className="fw-semibold">{label}</span> :{' '}
+                  <span>{value}</span>
                 </Col>
               ))}
 
             {cardType === 'acceptedLoanQueries' &&
               acceptedLoanQueriesData.map(({ label, value }, index) => (
                 <Col key={index} xs={12} md={4} className="text-truncate">
-                  {label} : {value}
+                  <span className="fw-semibold">{label}</span> :{' '}
+                  <span>{value}</span>
                 </Col>
               ))}
           </Row>
