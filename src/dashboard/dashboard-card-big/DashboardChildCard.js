@@ -23,6 +23,15 @@ const assignedColumnsData = [
   { label: 'Broker ID', value: '7865432' },
 ];
 
+const acceptedLoanQueriesData = [
+  { label: 'Property Type', value: '3 BHK' },
+  { label: 'Demanding Cost', value: '₹ 3.94 Cr' },
+  { label: 'Broker Name', value: 'Tisha' },
+  { label: 'Broker ID', value: '7865432' },
+  { label: 'Broker ID', value: '7865432' },
+  { label: 'Broker ID', value: '7865432' },
+];
+
 const DashboardChildCard = ({ cardType }) => {
   return (
     <Card className="border-0 shadow-sm mt-3">
@@ -86,7 +95,7 @@ const DashboardChildCard = ({ cardType }) => {
               ))}
 
             {cardType === 'acceptedLoanQueries' &&
-              assignedColumnsData.map(({ label, value }, index) => (
+              acceptedLoanQueriesData.map(({ label, value }, index) => (
                 <Col key={index} xs={12} md={4} className="text-truncate">
                   {label} : {value}
                 </Col>
