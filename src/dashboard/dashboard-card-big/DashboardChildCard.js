@@ -35,7 +35,6 @@ const acceptedLoanQueriesData = [
 const DashboardChildCard = ({ cardType }) => {
   return (
     <Card className="border-0 shadow-sm mt-3">
-      {/* <Card.Body className="d-flex p-0"> */}
       <Card.Body className="row p-0">
         <Col className="d-flex col-auto">
           <Card.Img
@@ -59,18 +58,18 @@ const DashboardChildCard = ({ cardType }) => {
           )}
 
           <Row className="g-3">
-            <Col xs={12} className="bg-transparent gap-2">
+            <Col xs={12} className="bg-transparent gap-2 dashboard-cards-title">
               <Card.Title className="d-flex justify-content-start fw-bold">
-                Title
+                Sky Dandelions Apartment
               </Card.Title>
-              <Card.Subtitle className="d-flex justify-content-start text-muted">
-                Subtitle
+              <Card.Subtitle className="d-flex justify-content-start text-muted mt-1">
+                Sector-29,Gurugram
               </Card.Subtitle>
             </Col>
             {cardType === 'overdue' &&
               overdueColumnsData.map(({ label, value }, index) => (
                 <Col key={index} xs={12} md={4} className="text-truncate">
-                  {label} : {value}
+                  <span>{label}</span> : <span>{value}</span>
                 </Col>
               ))}
             {cardType === 'overdue' && (
