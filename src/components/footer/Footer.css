@@ -42,7 +42,7 @@
 }
 
 /* Set common styles for input placeholders */
-input::placeholder {
+.login__footer input::placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 38px;

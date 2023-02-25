@@ -1,0 +1,23 @@
+.login__page__modal .modal-title {
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.login__page__modal p {
+  font-weight: 350;
+  font-size: 13px;
+  line-height: 37px;
+  color: #282431;
+}
+
+.login__page__modal .form-label {
+  font-weight: 350;
+  font-size: 15px;
+  color: #282431;
+}
+
+.login__page__modal input {
+  border-radius: 0px;
+}

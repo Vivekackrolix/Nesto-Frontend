@@ -1,3 +1,9 @@
+input.invalid {
+  color: var(--carnation-color) !important;
+  font-weight: 350;
+  font-size: 19.5815px;
+}
+
 .user-img {
   width: 30px;
   height: 30px;
