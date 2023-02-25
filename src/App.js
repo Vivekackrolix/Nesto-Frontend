@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RouteData } from './utils/Routes';
 import HomeDashboardContent from './dashboard/home-dashnoard-content/HomeDashboardContent';
-import CopyrightText from './components/footer/CopyrightText';
+import CopyrightText from './dashboard/footer/CopyrightText';
 
 const App = () => {
   return (

@@ -10,7 +10,6 @@ import {
 } from 'react-icons/fa';
 import SearchFilterBox from './search-filter/SearchFilter';
 import './Dashboard.css';
-import CopyrightText from '../components/footer/CopyrightText';
 
 const dashboardInfoCardsData = [
   {
