@@ -1,0 +1,21 @@
+.property__details__form input,
+.property__details__form select,
+.property__details__form textarea {
+  background: var(--wild-sand) !important;
+  border-radius: 3.60116px;
+  border: 0px;
+}
+
+.property__details__form label {
+  font-weight: 400;
+  font-size: 15.5613px;
+  color: #000000 !important;
+}
+
+input,
+select,
+textarea {
+  font-weight: 400;
+  font-size: 17.7973px;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
