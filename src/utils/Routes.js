@@ -3,6 +3,7 @@ import HomeDashBoard from '../dashboard/HomeDashBoard';
 import Loan from '../dashboard/loan/Loan';
 import Payment from '../dashboard/payment/Payment';
 import Profile from '../dashboard/profile/Profile';
+import PropertyDetails from '../dashboard/property-details/PropertyDetails';
 
 export const RouteData = [
   {
@@ -31,6 +32,11 @@ export const RouteData = [
         id: 5,
         path: 'profile',
         element: <Profile />,
+      },
+      {
+        id: 6,
+        path: 'property-details',
+        element: <PropertyDetails />,
       },
     ],
   },
