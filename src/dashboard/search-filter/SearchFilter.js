@@ -1,11 +1,5 @@
 import { BsSearch, BsMic, BsGeoAlt } from 'react-icons/bs';
-import {
-  Container,
-  InputGroup,
-  FormControl,
-  Button,
-  Form,
-} from 'react-bootstrap';
+import { InputGroup, FormControl, Button, Form } from 'react-bootstrap';
 import './SearchFilter.css';
 
 const SearchFilterBox = () => {

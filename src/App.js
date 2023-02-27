@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RouteData } from './utils/Routes';
 import HomeDashboardContent from './dashboard/home-dashnoard-content/HomeDashboardContent';
 import CopyrightText from './dashboard/footer/CopyrightText';
+import Chat from './dashboard/chat/Chat';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
                 path={path}
                 element={
                   <>
-                    {element} <CopyrightText />
+                    {element} <CopyrightText /> <Chat />
                   </>
                 }
               >

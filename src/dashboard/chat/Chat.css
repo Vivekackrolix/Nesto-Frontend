@@ -1,0 +1,9 @@
+.dashboard-chat {
+  background-color: var(--primary-color);
+  width: 73px;
+  height: 73px;
+  z-index: 100000;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
