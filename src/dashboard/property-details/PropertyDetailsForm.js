@@ -12,10 +12,6 @@ const timeSlots = [
 ];
 
 const PropertyDetailsForm = () => {
-  const handleSubmit = e => {
-    e.preventDefault();
-  };
-
   return (
     <>
       <Card className="property__details__form shadow-sm border-0">
@@ -23,7 +19,7 @@ const PropertyDetailsForm = () => {
           <h4>Loan Query Details</h4>
         </Card.Header>
         <Card.Body>
-          <Form onSubmit={handleSubmit}>
+          <Form>
             <Row className="mb-3">
               <Col>
                 <FloatingLabel
@@ -344,7 +340,7 @@ const PropertyDetailsForm = () => {
         </Card.Body>
       </Card>
 
-      {/* disburments details */}
+      {/* disbursements details */}
       <Card className="property__details__form shadow-sm border-0 mt-5">
         <Card.Header className="bg-white shadow-sm">
           <h4>Disbursement Details</h4>

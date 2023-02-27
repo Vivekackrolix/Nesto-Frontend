@@ -3,8 +3,11 @@ import './PropertyDetails.css';
 import PropertyDetailsHeader from './PropertyDetailsHeader';
 import DashboardChildCard from '../dashboard-card-big/DashboardChildCard';
 import PropertyDetailsForm from './PropertyDetailsForm';
+import { useState } from 'react';
+import PropertyDetailsText from './PropertyDetailsText';
 
 const PropertyDetails = () => {
+  const [propertyDetailsForm, setPropertyDetails] = useState(false);
   return (
     <Container className="property__details">
       <PropertyDetailsHeader />
@@ -13,7 +16,8 @@ const PropertyDetails = () => {
           <DashboardChildCard cardType="propertyDetailsProfile" />
         </Col>
         <Col xs={12}>
-          <PropertyDetailsForm />
+          {propertyDetailsForm && <PropertyDetailsForm />}
+          {!propertyDetailsForm && <PropertyDetailsText />}
         </Col>
       </Row>
     </Container>

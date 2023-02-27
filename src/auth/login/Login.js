@@ -34,7 +34,7 @@ const Login = () => {
       <Header />
       <LoginUser />
 
-      <Container className="mt-5">
+      <Container className="container-md mt-5">
         <Row className="g-0 login__form">
           <Col md={6}>
             <Image

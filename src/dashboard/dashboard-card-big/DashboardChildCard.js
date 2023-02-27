@@ -1,6 +1,7 @@
 import { Button, Card, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Rating from '../property-details/Rating';
+import { useState } from 'react';
 
 const overdueColumnsData = [
   { label: 'Unity type', value: '3 BHK' },
@@ -33,12 +34,29 @@ const acceptedLoanQueriesData = [
 ];
 
 const DashboardChildCard = ({ cardType }) => {
+  const [propertyDetailsProfile, setPropertyDetailsProfile] = useState(true);
   return (
     <Card className="border-0 shadow-sm mt-3">
       <Card.Body
         className={`p-0 ${cardType === `propertyDetailsProfile` && `p-3`}`}
       >
         <Row>
+          {propertyDetailsProfile && (
+            <Col xs={12} className="d-flex justify-content-end">
+              <div className="d-flex gap-2 bg-transparent">
+                <Button
+                  className="btn-color-primary"
+                  style={{ width: '150px' }}
+                >
+                  Accept
+                </Button>
+                <Button className="btn-color-danger" style={{ width: '150px' }}>
+                  Deny
+                </Button>
+              </div>
+            </Col>
+          )}
+
           <Col className="d-flex col-auto">
             <Card.Img
               className={`align-self-stretch d-flex ${
@@ -72,11 +90,14 @@ const DashboardChildCard = ({ cardType }) => {
                   </Button>
                 )}
 
-                {cardType === 'propertyDetailsProfile' && (
-                  <div className="card-label d-flex justify-content-end align-items-center bg-transparent">
-                    05/01/23
-                  </div>
-                )}
+                {cardType === 'propertyDetailsProfile' &&
+                  !propertyDetailsProfile && (
+                    <>
+                      <div className="card-label d-flex justify-content-end align-items-center bg-transparent">
+                        05/01/23
+                      </div>
+                    </>
+                  )}
               </Col>
               <Col
                 xs={12}
