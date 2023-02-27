@@ -23,6 +23,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.shadow-sm {
+  box-shadow: 0px 7.68538px 43.4338px rgba(0, 0, 0, 0.07) !important;
+}
+
 .carnation-color {
   color: var(--carnation-color);
 }

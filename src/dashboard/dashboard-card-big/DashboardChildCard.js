@@ -1,6 +1,6 @@
 import { Button, Card, Row, Col, Image } from 'react-bootstrap';
-import { BsDownload } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import Rating from '../property-details/Rating';
 
 const overdueColumnsData = [
   { label: 'Unity type', value: '3 BHK' },
@@ -35,11 +35,16 @@ const acceptedLoanQueriesData = [
 const DashboardChildCard = ({ cardType }) => {
   return (
     <Card className="border-0 shadow-sm mt-3">
-      <Card.Body className="p-0">
+      <Card.Body
+        className={`p-0 ${cardType === `propertyDetailsProfile` && `p-3`}`}
+      >
         <Row>
           <Col className="d-flex col-auto">
             <Card.Img
-              className="align-self-stretch d-flex"
+              className={`align-self-stretch d-flex ${
+                cardType === `propertyDetailsProfile` &&
+                `rounded-circle property__details__profileimg`
+              }`}
               src={`${
                 cardType === 'overdue'
                   ? `/assets/dashboard-img-content.png`
@@ -47,27 +52,40 @@ const DashboardChildCard = ({ cardType }) => {
               }`}
             />
           </Col>
-          <Col className="col dash-content">
+          <Col
+            className={`col dash-content ${
+              cardType === `propertyDetailsProfile` &&
+              'd-flex flex-column justify-content-center'
+            }`}
+          >
             <Row className="g-3 align-items-start">
               <Col xs={12}>
                 {cardType === 'overdue' && (
-                  <Button className="overdue-btn bg-color-red btn-sm">
+                  <Button className="card-label bg-color-red btn-sm">
                     Overdue
                   </Button>
                 )}
 
                 {cardType === 'acceptedLoanQueries' && (
-                  <Button className="overdue-btn bg-color-primary btn-sm">
+                  <Button className="card-label bg-color-primary btn-sm">
                     Assigned
                   </Button>
+                )}
+
+                {cardType === 'propertyDetailsProfile' && (
+                  <div className="card-label d-flex justify-content-end align-items-center bg-transparent">
+                    05/01/23
+                  </div>
                 )}
               </Col>
               <Col
                 xs={12}
                 className="bg-transparent gap-2 dashboard-cards-title"
               >
-                <Card.Title className="d-flex justify-content-start fw-bold">
+                <Card.Title className="d-flex align-items-center justify-content-start fw-bold">
                   Sky Dandelions Apartment
+                  {/* rating */}
+                  <Rating cardType="propertyDetailsProfile" />
                 </Card.Title>
                 <Card.Subtitle className="d-flex justify-content-start text-muted mt-1">
                   Sector-29,Gurugram
@@ -138,6 +156,22 @@ const DashboardChildCard = ({ cardType }) => {
             </Col>
           )}
         </Row>
+
+        {cardType === `propertyDetailsProfile` && (
+          <Row className="mt-3 dashboard-parent-card g-2">
+            {overdueColumnsData.map(({ label, value }, index) => (
+              <Col
+                key={index}
+                xs={12}
+                md={3}
+                className="text-truncate wild-sand-bg"
+              >
+                <span className="fw-semibold">{label}</span> :
+                <span>{value}</span>
+              </Col>
+            ))}
+          </Row>
+        )}
       </Card.Body>
     </Card>
   );

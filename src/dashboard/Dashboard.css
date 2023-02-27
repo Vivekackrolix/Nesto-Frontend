@@ -15,7 +15,8 @@
   color: var(--gray-color);
 }
 
-.overdue-btn {
+.overdue-btn,
+.card-label {
   border: 0;
   outline: none;
   border-radius: 0;
@@ -41,4 +42,8 @@
 
 .downloaded-pdf {
   font-size: 1.3rem;
+}
+
+.wild-sand-bg {
+  background-color: var(--wild-sand);
 }

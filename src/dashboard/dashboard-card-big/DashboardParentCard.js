@@ -11,7 +11,7 @@ const DashboardParentCard = ({ title, cardType }) => {
   };
 
   return (
-    <Card className="border-0 shadow mb-5 dashboard-parent-card">
+    <Card className="border-0 shadow-sm mb-5 dashboard-parent-card">
       <Card.Header className="bg-transparent py-3">
         <h5 className="mb-0 fw-semibold">{title}</h5>
       </Card.Header>
