@@ -57,3 +57,16 @@ textarea {
 .testimonial button {
   color: var(--primary-color);
 }
+
+.property__details__text .card-title {
+  font-weight: 600;
+  color: #282431;
+  font-size: 26px;
+}
+
+.property__details__text .card-text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #535353;
+  font-family: 'Montserrat';
+}

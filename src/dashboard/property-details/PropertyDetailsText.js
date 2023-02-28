@@ -4,7 +4,7 @@ import IconsCard from './IconsCard';
 const PropertyDetailsText = () => {
   return (
     <>
-      <Card className="border-0 shadow-sm">
+      <Card className="border-0 shadow-sm property__details__text">
         <Card.Header className="bg-white">
           <Card.Title>Description</Card.Title>
         </Card.Header>

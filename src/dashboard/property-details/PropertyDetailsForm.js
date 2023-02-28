@@ -104,7 +104,7 @@ const PropertyDetailsForm = () => {
               <Col>
                 {/* <FloatingLabel
                   controlId="preferredBankNBFCSelect"
-                  label="Preferred Bank/NBFC"
+                  label="Preferred Bank/NBFC (Select upto 3)"
                   className="mb-3"
                 >
                   <Form.Select multiple>
