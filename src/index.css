@@ -34,6 +34,10 @@ a:focus {
   min-height: 100vh;
 }
 
+.card {
+  border-radius: 10.3896px;
+}
+
 .shadow-sm {
   /* box-shadow: 0px 7.68538px 43.4338px rgba(0, 0, 0, 0.07) !important; */
   box-shadow: 0px 6px 26px rgba(0, 0, 0, 0.07);

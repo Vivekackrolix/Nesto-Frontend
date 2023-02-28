@@ -194,6 +194,7 @@ const PropertyDetailsForm = () => {
             </Row>
             <Row className="mb-3">
               <Col>
+                <Form.Label>Comment History</Form.Label>
                 <div
                   className="overflow-auto p-4 wild-sand-bg"
                   style={{ height: '200px' }}
@@ -204,7 +205,14 @@ const PropertyDetailsForm = () => {
                 </div>
               </Col>
             </Row>
-            <Row className="mb-3">
+
+            <Row>
+              <Col>
+                <h5 className="mt-5 mb-2">Follow Up Date</h5>
+              </Col>
+            </Row>
+
+            <Row className="mb-5">
               <Col xs={3}>
                 <FloatingLabel
                   controlId="followUpDateInput"
@@ -215,6 +223,11 @@ const PropertyDetailsForm = () => {
               </Col>
             </Row>
 
+            <Row>
+              <Col>
+                <h5 className="mb-3">Follow Up Time</h5>
+              </Col>
+            </Row>
             <Row className="mb-3">
               <Col>
                 <Form.Label>Morning Slots</Form.Label>
@@ -330,7 +343,7 @@ const PropertyDetailsForm = () => {
                   label="Query Status"
                 >
                   <Form.Select>
-                    <option>Select an option</option>
+                    <option>Select</option>
                     <option value="Resolved">Resolved</option>
                     <option value="Pending">Pending</option>
                     <option value="Rejected">Rejected</option>
@@ -354,8 +367,8 @@ const PropertyDetailsForm = () => {
       </Card>
 
       {/* disbursements details */}
-      <Card className="property__details__form shadow-sm border-0 mt-5">
-        <Card.Header className="bg-white shadow-sm">
+      <Card className="property__details__form shadow-sm border-0 my-5">
+        <Card.Header className="bg-white shadow-sm border-0">
           <h4>Disbursement Details</h4>
         </Card.Header>
         <Card.Body>

@@ -9,7 +9,7 @@ function Testimonial() {
   };
 
   return (
-    <Card className="border-0 mb-3">
+    <Card className="border-0 mb-3 testimonial">
       <Card.Header className="shadow-none border-0 bg-white py-2">
         <Card.Title as="h5" className="m-0">
           10/12/2022
@@ -31,7 +31,11 @@ function Testimonial() {
             Portland. David and his skilled team helped make that dream a
             reality. The sale went smoothly, and we just closed on an ideal new
             place we're excited to call home...{' '}
-            <Button variant="link" onClick={toggleExpanded}>
+            <Button
+              variant="link"
+              onClick={toggleExpanded}
+              className="p-0 text-text-decoration-none"
+            >
               Read more
             </Button>
           </Card.Text>

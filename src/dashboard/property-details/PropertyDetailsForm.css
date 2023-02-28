@@ -32,8 +32,28 @@ textarea {
   color: #000000;
 }
 
-.property__details__form input {
+.property__details__form input,
+.property__details__form textarea {
   font-weight: 400;
   font-size: 17.7973px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.testimonial .card-title {
+  font-weight: 400;
+  font-size: 11.0599px;
+  letter-spacing: 0.02em;
+  color: #1a1e25;
+}
+
+.testimonial .card-text,
+.testimonial button {
+  font-weight: 400;
+  font-size: 15.4839px;
+  letter-spacing: 0.02em;
+  color: #7d7f88;
+}
+
+.testimonial button {
+  color: var(--primary-color);
 }
