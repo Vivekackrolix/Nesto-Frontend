@@ -1,6 +1,9 @@
 import { Card, Form, Row, Col, Button, FloatingLabel } from 'react-bootstrap';
-import './PropertyDetailsForm.css';
+import React from 'react';
+import Select from 'react-select';
+
 import Testimonial from '../comment-history-testimonial/CommentHistoryTestimonial';
+import './PropertyDetailsForm.css';
 
 const timeSlots = [
   '9:00 AM - 10:00 AM',
@@ -9,6 +12,12 @@ const timeSlots = [
   '1:00 PM - 2:00 PM',
   '2:00 PM - 3:00 PM',
   '3:00 PM - 4:00 PM',
+];
+
+const options = [
+  { value: 'hDFC Bank', label: 'HDFC Bank' },
+  { value: 'bank2', label: 'Bank2' },
+  { value: 'Bank3', label: 'Bank3' },
 ];
 
 const PropertyDetailsForm = () => {
@@ -93,7 +102,7 @@ const PropertyDetailsForm = () => {
                 </FloatingLabel>
               </Col>
               <Col>
-                <FloatingLabel
+                {/* <FloatingLabel
                   controlId="preferredBankNBFCSelect"
                   label="Preferred Bank/NBFC"
                   className="mb-3"
@@ -103,7 +112,11 @@ const PropertyDetailsForm = () => {
                     <option value="bank2">Bank 2</option>
                     <option value="bank3">Bank 3</option>
                   </Form.Select>
-                </FloatingLabel>
+                </FloatingLabel> */}
+
+                <Form.Group>
+                  <Select closeMenuOnSelect={false} isMulti options={options} />
+                </Form.Group>
               </Col>
             </Row>
             <Row className="mb-3">

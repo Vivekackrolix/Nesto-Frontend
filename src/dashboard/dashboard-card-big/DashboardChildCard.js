@@ -109,7 +109,7 @@ const DashboardChildCard = ({ cardType }) => {
                 {cardType === 'propertyDetailsProfile' &&
                   location.pathname === '/home-dashboard/property-details' && (
                     <>
-                      <div className="card-label d-flex justify-content-end align-items-center bg-transparent text-dark">
+                      <div className="card-label d-flex justify-content-end align-items-center bg-transparent date-container">
                         05/01/23
                       </div>
                     </>

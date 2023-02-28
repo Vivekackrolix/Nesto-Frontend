@@ -19,3 +19,21 @@ textarea {
   font-size: 17.7973px;
   color: rgba(0, 0, 0, 0.5) !important;
 }
+
+.property__details__form h4 {
+  font-weight: 400;
+  font-size: 26px;
+  color: #000000;
+}
+
+.property__details__form label {
+  font-weight: 400;
+  font-size: 15.5613px;
+  color: #000000;
+}
+
+.property__details__form input {
+  font-weight: 400;
+  font-size: 17.7973px;
+  color: rgba(0, 0, 0, 0.5);
+}
