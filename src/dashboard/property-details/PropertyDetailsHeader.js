@@ -4,7 +4,7 @@ const PropertyDetailsHeader = () => {
   return (
     <Row className="property__details__header">
       <Col xs={8}>
-        <Card>
+        <Card className="shadow-sm border-0">
           <Card.Img
             variant="top"
             src="/assets/property-screen-img1.png"
@@ -26,7 +26,7 @@ const PropertyDetailsHeader = () => {
       <Col xs={4}>
         <Row className="h-100 d-flex flex-column justify-content-between">
           <Col xs={12}>
-            <Card>
+            <Card className="border-0">
               <Card.Img
                 variant="top"
                 src="/assets/property-screen-img2.png"
@@ -46,7 +46,7 @@ const PropertyDetailsHeader = () => {
             </Card>
           </Col>
           <Col xs={12}>
-            <Card>
+            <Card className="border-0">
               <Card.Img
                 variant="top"
                 src="/assets/property-screen-img3.png"
