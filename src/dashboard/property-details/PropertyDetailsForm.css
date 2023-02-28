@@ -58,10 +58,15 @@ textarea {
   color: var(--primary-color);
 }
 
-.property__details__text .card-title {
+.property__details__text .card-title,
+.property__details__iconcard .card-title {
   font-weight: 600;
   color: #282431;
-  font-size: 26px;
+  font-size: 18px;
+}
+
+.property__details__iconcard .card-title {
+  font-size: 22px;
 }
 
 .property__details__text .card-text {
