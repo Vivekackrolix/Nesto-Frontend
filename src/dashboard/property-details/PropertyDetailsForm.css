@@ -75,3 +75,17 @@ textarea {
   color: #535353;
   font-family: 'Montserrat';
 }
+
+.property__details__iconcard__icontitle {
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.property__details__iconcard__iconsubtitle {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #7d7f88;
+}

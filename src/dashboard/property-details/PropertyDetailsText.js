@@ -19,7 +19,18 @@ const PropertyDetailsText = () => {
         </Card.Body>
       </Card>
 
-      <IconsCard />
+      <IconsCard
+        length={10}
+        title="Project Amenities"
+        iconTitle={false}
+        col={5}
+      />
+      <IconsCard
+        length={4}
+        title="Location Advantages"
+        col={4}
+        iconTitle={true}
+      />
     </>
   );
 };
