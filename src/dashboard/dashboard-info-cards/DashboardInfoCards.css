@@ -2,6 +2,12 @@
   background-color: var(--primary-color);
   color: #ffffff;
 }
+
+.card-border {
+  background: #ffffff;
+  border: 1px solid #eae8e8;
+  border-radius: 14.4785px;
+}
 .card-title {
   font-size: 0.9rem;
 }
@@ -21,5 +27,5 @@
 
 .dashboard__infocard .card-title {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
 }

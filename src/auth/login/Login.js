@@ -18,7 +18,7 @@ import './Login.css';
 
 const Login = () => {
   // email phone number validation
-  const [inputPlaceholderColor, setInputPlaceholderColor] = useState('');
+
   const [inputValue, setInputValue] = useState('');
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -41,7 +41,6 @@ const Login = () => {
       setShowErrorMessage(false);
       event.target.classList.remove('is-invalid');
       event.target.classList.add('is-valid');
-      // Do something with the input
     } else {
       setShowErrorMessage(true);
       event.target.classList.remove('is-valid');
@@ -89,7 +88,6 @@ const Login = () => {
                   value={inputValue}
                   onChange={handleInputChange}
                   placeholder="Enter your email address or phone number"
-                  style={{ color: inputPlaceholderColor }}
                   isInvalid={showErrorMessage}
                   isValid={!showErrorMessage && inputValue !== ''}
                 />

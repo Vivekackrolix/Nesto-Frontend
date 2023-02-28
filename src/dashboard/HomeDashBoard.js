@@ -2,31 +2,27 @@ import { Col, Container, Row } from 'react-bootstrap';
 import ContentCard from './dashboard-info-cards/DashboardInfoCards';
 import DashboardHeader from './header/DashboardHeader';
 import { Outlet, useLocation } from 'react-router-dom';
-import { FaMoneyBillWave, FaCreditCard } from 'react-icons/fa';
-import { RiHome3Line } from 'react-icons/ri';
-import { FaRegUser } from 'react-icons/fa';
-
 import SearchFilterBox from './search-filter/SearchFilter';
 import './Dashboard.css';
 
 const dashboardInfoCardsData = [
   {
-    icon: <RiHome3Line size={50} />,
+    icon: `/assets/home-sharp-`,
     title: 'Dashboard',
     path: '/home-dashboard',
   },
   {
-    icon: <FaMoneyBillWave size={50} />,
+    icon: `/assets/wallet-outline-`,
     title: 'Loan Management',
     path: '/home-dashboard/loan',
   },
   {
-    icon: <FaCreditCard size={50} />,
+    icon: `/assets/card-outline-`,
     title: 'Payment',
     path: '/home-dashboard/payment',
   },
   {
-    icon: <FaRegUser size={50} />,
+    icon: `/assets/user-outline-`,
     title: 'Profile',
     path: '/home-dashboard/profile',
   },
@@ -39,7 +35,7 @@ const HomeDashBoard = () => {
     <>
       <DashboardHeader />
       <Container className="pt-5 pb-4 dashboard__wrapper">
-        <Row className="gx-4 dashboard-cards">
+        <Row className="gx-4 dashboard-cards align-items-center">
           {dashboardInfoCardsData.map((cardItem, index) => (
             <Col md={6} lg={3} className="mb-4" key={index}>
               <ContentCard

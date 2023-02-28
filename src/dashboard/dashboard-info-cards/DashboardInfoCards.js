@@ -12,8 +12,12 @@ const ContentCard = ({ icon, title, active, path }) => {
     >
       <Card.Body>
         <div className="d-flex align-items-center justify-content-center flex-column">
-          {icon}
-          <Card.Title className="mt-3">{title}</Card.Title>
+          <img
+            src={`${icon}${active ? `white` : `black`}.svg`}
+            alt={title}
+            className="img-fluid"
+          />
+          {active && <Card.Title className="mt-3">{title}</Card.Title>}
         </div>
       </Card.Body>
     </Card>
