@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CopyrightText = () => {
   return (
-    <div className="bg-color-primary-darker py-3 mt-5">
+    <div className="bg-color-primary-darker py-3 mt-auto">
       <Container>
         <Row>
           <Col
