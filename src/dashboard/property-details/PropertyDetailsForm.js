@@ -5,6 +5,8 @@ import Select from 'react-select';
 import Testimonial from '../comment-history-testimonial/CommentHistoryTestimonial';
 import './PropertyDetailsForm.css';
 
+const followUpTime = ['Morning Slots', 'Afternoon Slots', 'Evening Slots'];
+
 const timeSlots = [
   '9:00 AM - 10:00 AM',
   '10:00 AM - 11:00 AM',
@@ -229,111 +231,25 @@ const PropertyDetailsForm = () => {
               </Col>
             </Row>
             <Row className="mb-3">
-              <Col>
-                <Form.Label>Morning Slots</Form.Label>
-                <Row>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                </Row>
-              </Col>
-              <Col>
-                <Form.Label>Afternoon Slots</Form.Label>
-                <Row>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                </Row>
-              </Col>
-              <Col>
-                <Form.Label>Evening Slots</Form.Label>
-                <Row>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                  <Col>
-                    <Form.Select className="form-control-sm">
-                      <option>Choose time slot</option>
-                      {timeSlots.map(timeSlot => (
-                        <option key={timeSlot} value={timeSlot}>
-                          {timeSlot}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </Col>
-                </Row>
-              </Col>
+              {followUpTime.map((item, index) => (
+                <Col key={index}>
+                  <Form.Label>{item}</Form.Label>
+                  <Row>
+                    {Array.from({ length: 3 }, (_, index) => (
+                      <Col key={index}>
+                        <Form.Select className="form-control-sm">
+                          <option>Choose time slot</option>
+                          {timeSlots.map(timeSlot => (
+                            <option key={timeSlot} value={timeSlot}>
+                              {timeSlot}
+                            </option>
+                          ))}
+                        </Form.Select>
+                      </Col>
+                    ))}
+                  </Row>
+                </Col>
+              ))}
             </Row>
 
             <Row className="mb-3">
