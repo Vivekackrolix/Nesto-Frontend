@@ -17,12 +17,39 @@ import { Footer, Header } from '../../components';
 import './Login.css';
 
 const Login = () => {
+  // email phone number validation
+  const [inputPlaceholderColor, setInputPlaceholderColor] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
+
   const [showPassword, setShowPassword] = useState(false);
   const [showModal, setShowModal] = useState({
     forgetPassword: false,
     resetPassword: false,
     enterOtp: false,
   });
+
+  const handleInputChange = event => {
+    const inputText = event.target.value;
+    const emailPhoneRegex =
+      /^(?:\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b|\b(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})\b)?$/;
+    const isMatch = emailPhoneRegex.test(inputText);
+
+    setInputValue(inputText);
+
+    if (isMatch) {
+      setShowErrorMessage(false);
+      setInputPlaceholderColor('green');
+      event.target.classList.remove('is-invalid');
+      event.target.classList.add('is-valid');
+      // Do something with the input
+    } else {
+      setShowErrorMessage(true);
+      setInputPlaceholderColor('red');
+      event.target.classList.remove('is-valid');
+      event.target.classList.add('is-invalid');
+    }
+  };
 
   return (
     <>
@@ -53,13 +80,29 @@ const Login = () => {
                 <Form.Label className="fw-light">
                   Mobile Number/Email
                 </Form.Label>
+              </Form.Group>
+
+              <InputGroup className="mb-0">
                 <Form.Control
-                  type="tel"
-                  name="phone"
+                  name="emailPhone"
                   className="rounded-0"
                   required
+                  type="text"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  placeholder="Enter your email address or phone number"
+                  style={{ color: inputPlaceholderColor }}
+                  isInvalid={showErrorMessage}
+                  isValid={!showErrorMessage && inputValue !== ''}
                 />
-              </Form.Group>
+                <Form.Control.Feedback type="invalid">
+                  Please enter a valid email address or phone number.
+                </Form.Control.Feedback>
+                <Form.Control.Feedback type="valid">
+                  Input is valid!
+                </Form.Control.Feedback>
+              </InputGroup>
+
               <Form.Group className="mt-4">
                 <Form.Label className="fw-light">Password</Form.Label>
               </Form.Group>
