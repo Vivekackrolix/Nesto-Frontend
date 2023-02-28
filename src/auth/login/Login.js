@@ -39,13 +39,11 @@ const Login = () => {
 
     if (isMatch) {
       setShowErrorMessage(false);
-      setInputPlaceholderColor('green');
       event.target.classList.remove('is-invalid');
       event.target.classList.add('is-valid');
       // Do something with the input
     } else {
       setShowErrorMessage(true);
-      setInputPlaceholderColor('red');
       event.target.classList.remove('is-valid');
       event.target.classList.add('is-invalid');
     }
