@@ -1,5 +1,5 @@
 import { Button, Card, Row, Col, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Rating from '../property-details/Rating';
 import { useState } from 'react';
 
@@ -34,14 +34,20 @@ const acceptedLoanQueriesData = [
 ];
 
 const DashboardChildCard = ({ cardType }) => {
+  const location = useLocation();
+  console.log(location.pathname);
   const [propertyDetailsProfile, setPropertyDetailsProfile] = useState(true);
   return (
-    <Card className="border-0 shadow-sm mt-3">
+    <Card
+      className="border-0 shadow-sm mt-3 text-decoration-none"
+      as={Link}
+      to="/home-dashboard/property-details"
+    >
       <Card.Body
         className={`p-0 ${cardType === `propertyDetailsProfile` && `p-3`}`}
       >
         <Row>
-          {propertyDetailsProfile && (
+          {location.pathname === '/home-dashboard/property-details' && (
             <Col xs={12} className="d-flex justify-content-end">
               <div className="d-flex gap-2 bg-transparent">
                 <Button
@@ -115,8 +121,8 @@ const DashboardChildCard = ({ cardType }) => {
               {cardType === 'overdue' &&
                 overdueColumnsData.map(({ label, value }, index) => (
                   <Col key={index} xs={12} md={4} className="text-truncate">
-                    <span className="fw-semibold">{label}</span> :{' '}
-                    <span>{value}</span>
+                    <span className="fw-semibold text-dark">{label}</span> :{' '}
+                    <span className="text-dark">{value}</span>
                   </Col>
                 ))}
               {cardType === 'overdue' && (
@@ -144,16 +150,16 @@ const DashboardChildCard = ({ cardType }) => {
               {cardType === 'assigned' &&
                 assignedColumnsData.map(({ label, value }, index) => (
                   <Col key={index} xs={12} md={6}>
-                    <span className="fw-semibold">{label}</span> :{' '}
-                    <span>{value}</span>
+                    <span className="fw-semibold text-dark">{label}</span> :{' '}
+                    <span className="text-dark">{value}</span>
                   </Col>
                 ))}
 
               {cardType === 'acceptedLoanQueries' &&
                 acceptedLoanQueriesData.map(({ label, value }, index) => (
                   <Col key={index} xs={12} md={4} className="text-truncate">
-                    <span className="fw-semibold">{label}</span> :{' '}
-                    <span>{value}</span>
+                    <span className="fw-semibold text-dark">{label}</span> :{' '}
+                    <span className="text-dark">{value}</span>
                   </Col>
                 ))}
             </Row>
@@ -187,8 +193,8 @@ const DashboardChildCard = ({ cardType }) => {
                 md={3}
                 className="text-truncate wild-sand-bg"
               >
-                <span className="fw-semibold">{label}</span> :
-                <span>{value}</span>
+                <span className="fw-semibold text-dark">{label}</span> :
+                <span className="text-dark">{value}</span>
               </Col>
             ))}
           </Row>
