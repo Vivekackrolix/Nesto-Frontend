@@ -5,9 +5,12 @@ import DashboardChildCard from '../dashboard-card-big/DashboardChildCard';
 import PropertyDetailsForm from './PropertyDetailsForm';
 import { useState } from 'react';
 import PropertyDetailsText from './PropertyDetailsText';
+import { useLocation } from 'react-router-dom';
 
 const PropertyDetails = () => {
-  const [propertyDetailsForm, setPropertyDetails] = useState(false);
+  const [propertyDetailsForm, setPropertyDetails] = useState(true);
+  const location = useLocation();
+
   return (
     <Container className="property__details">
       <PropertyDetailsHeader />
@@ -16,8 +19,12 @@ const PropertyDetails = () => {
           <DashboardChildCard cardType="propertyDetailsProfile" />
         </Col>
         <Col xs={12}>
-          {propertyDetailsForm && <PropertyDetailsForm />}
-          {!propertyDetailsForm && <PropertyDetailsText />}
+          {location.pathname === '/home-dashboard/property-details' && (
+            <PropertyDetailsForm />
+          )}
+          {location.pathname === '/home-dashboard/property-details-info' && (
+            <PropertyDetailsText />
+          )}
         </Col>
       </Row>
     </Container>

@@ -35,19 +35,19 @@ const acceptedLoanQueriesData = [
 
 const DashboardChildCard = ({ cardType }) => {
   const location = useLocation();
-  console.log(location.pathname);
-  const [propertyDetailsProfile, setPropertyDetailsProfile] = useState(true);
+
   return (
     <Card
       className="border-0 shadow-sm mt-3 text-decoration-none"
       as={Link}
       to="/home-dashboard/property-details"
     >
+      {/* /home-dashboard/property-details-info */}
       <Card.Body
         className={`p-0 ${cardType === `propertyDetailsProfile` && `p-3`}`}
       >
         <Row>
-          {location.pathname === '/home-dashboard/property-details' && (
+          {location.pathname === '/home-dashboard/property-details-info' && (
             <Col xs={12} className="d-flex justify-content-end">
               <div className="d-flex gap-2 bg-transparent">
                 <Button
@@ -97,9 +97,9 @@ const DashboardChildCard = ({ cardType }) => {
                 )}
 
                 {cardType === 'propertyDetailsProfile' &&
-                  !propertyDetailsProfile && (
+                  location.pathname === '/home-dashboard/property-details' && (
                     <>
-                      <div className="card-label d-flex justify-content-end align-items-center bg-transparent">
+                      <div className="card-label d-flex justify-content-end align-items-center bg-transparent text-dark">
                         05/01/23
                       </div>
                     </>

@@ -38,6 +38,11 @@ export const RouteData = [
         path: 'property-details',
         element: <PropertyDetails />,
       },
+      {
+        id: 6,
+        path: 'property-details-info',
+        element: <PropertyDetails />,
+      },
     ],
   },
 ];
