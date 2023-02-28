@@ -3,12 +3,10 @@ import './PropertyDetails.css';
 import PropertyDetailsHeader from './PropertyDetailsHeader';
 import DashboardChildCard from '../dashboard-card-big/DashboardChildCard';
 import PropertyDetailsForm from './PropertyDetailsForm';
-import { useState } from 'react';
 import PropertyDetailsText from './PropertyDetailsText';
 import { useLocation } from 'react-router-dom';
 
 const PropertyDetails = () => {
-  const [propertyDetailsForm, setPropertyDetails] = useState(true);
   const location = useLocation();
 
   return (

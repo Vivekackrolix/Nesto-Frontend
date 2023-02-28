@@ -1,7 +1,6 @@
 import { Button, Card, Row, Col, Image } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import Rating from '../property-details/Rating';
-import { useState } from 'react';
 
 const overdueColumnsData = [
   { label: 'Unity type', value: '3 BHK' },
@@ -36,11 +35,22 @@ const acceptedLoanQueriesData = [
 const DashboardChildCard = ({ cardType }) => {
   const location = useLocation();
 
+  // Check if the current URL contains the string "/home-dashboard/property-details"
+  const isPropertyDetailsPage = location.pathname.includes(
+    '/home-dashboard/property-details'
+  );
+
+  // Set the path dynamically based on the condition
+  const path = isPropertyDetailsPage
+    ? '/home-dashboard/property-details-info'
+    : '/home-dashboard/property-details';
+
   return (
     <Card
       className="border-0 shadow-sm mt-3 text-decoration-none"
       as={Link}
-      to="/home-dashboard/property-details"
+      // to="/home-dashboard/property-details"
+      to={path}
     >
       {/* /home-dashboard/property-details-info */}
       <Card.Body
