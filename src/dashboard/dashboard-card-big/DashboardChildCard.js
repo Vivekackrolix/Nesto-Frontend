@@ -54,7 +54,7 @@ const DashboardChildCard = ({ cardType }) => {
     >
       {/* /home-dashboard/property-details-info */}
       <Card.Body
-        className={`p-0 ${cardType === `propertyDetailsProfile` && `p-3`}`}
+        className={`p-0 ${cardType === `propertyDetailsProfile` ? `p-3` : ''}`}
       >
         <Row>
           {location.pathname === '/home-dashboard/property-details-info' && (
@@ -76,8 +76,9 @@ const DashboardChildCard = ({ cardType }) => {
           <Col className="d-flex col-auto">
             <Card.Img
               className={`align-self-stretch d-flex ${
-                cardType === `propertyDetailsProfile` &&
-                `rounded-circle property__details__profileimg`
+                cardType === `propertyDetailsProfile`
+                  ? `rounded-circle property__details__profileimg`
+                  : ''
               }`}
               src={`${
                 cardType === 'overdue'
