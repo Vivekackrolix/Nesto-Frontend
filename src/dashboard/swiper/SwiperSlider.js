@@ -39,11 +39,11 @@ const Slider = () => {
         navigation
         autoplay={{ delay: 3000 }}
         // autoplay={{ delay: 3000, disableOnInteraction: false }}
-        className="my-5 p-4"
+        className="my-5"
       >
         {items.map(item => (
           <SwiperSlide key={item.id}>
-            <Card className="h-100 border-0 shadow swiper__card p-3">
+            <Card className="h-100 border-0 shadow-sm swiper__card p-3">
               <div class="ribbon">
                 <span>2 BHK</span>
               </div>

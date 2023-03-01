@@ -1,3 +1,7 @@
+.swiper {
+  padding: 10px 10px 10px 10px !important;
+}
+
 .ribbon {
   position: absolute;
   right: -5px;
