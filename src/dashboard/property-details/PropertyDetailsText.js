@@ -1,3 +1,4 @@
+import Slider from '../swiper/SwiperSlider';
 import IconsCard from './IconsCard';
 import ViewDetailsCard from './ViewDetailsCard';
 
@@ -17,6 +18,8 @@ const PropertyDetailsText = () => {
         col={4}
         iconTitle={true}
       />
+
+      <Slider />
     </>
   );
 };
