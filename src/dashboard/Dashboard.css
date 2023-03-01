@@ -55,3 +55,8 @@
 
   color: #7d7f88;
 }
+
+.property__details__text .no-bg-title {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}

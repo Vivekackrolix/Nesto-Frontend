@@ -14,7 +14,7 @@ const dashboardInfoCardsData = [
   {
     icon: `/assets/wallet-outline-`,
     title: 'Loan Management',
-    path: '/home-dashboard/loan',
+    path: '/home-dashboard/loan-management',
   },
   {
     icon: `/assets/card-outline-`,

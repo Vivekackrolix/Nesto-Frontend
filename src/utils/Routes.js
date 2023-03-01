@@ -1,6 +1,6 @@
 import Login from '../auth/login/Login';
 import HomeDashBoard from '../dashboard/HomeDashBoard';
-import Loan from '../dashboard/loan/Loan';
+import LoanManagement from '../dashboard/loan-management/LoanManagement';
 import Payment from '../dashboard/payment/Payment';
 import Profile from '../dashboard/profile/Profile';
 import PropertyDetails from '../dashboard/property-details/PropertyDetails';
@@ -20,8 +20,8 @@ export const RouteData = [
     routes: [
       {
         id: 3,
-        path: 'loan',
-        element: <Loan />,
+        path: 'loan-management',
+        element: <LoanManagement />,
       },
       {
         id: 4,

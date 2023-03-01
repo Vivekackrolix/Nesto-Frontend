@@ -135,3 +135,9 @@ a:focus {
 .rounded-100 {
   border-radius: 100px;
 }
+
+.card-link {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--carnation-color);
+}
