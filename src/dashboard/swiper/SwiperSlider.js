@@ -14,33 +14,18 @@ import './SwiperSlider.css';
 const items = [
   {
     id: 1,
-    image: 'https://via.placeholder.com/350x150',
-    title: 'Card 1',
-    subtitle: 'Subtitle for Card 1',
   },
   {
     id: 2,
-    image: 'https://via.placeholder.com/350x150',
-    title: 'Card 2',
-    subtitle: 'Subtitle for Card 2',
   },
   {
     id: 3,
-    image: 'https://via.placeholder.com/350x150',
-    title: 'Card 3',
-    subtitle: 'Subtitle for Card 3',
   },
   {
     id: 4,
-    image: 'https://via.placeholder.com/350x150',
-    title: 'Card 3',
-    subtitle: 'Subtitle for Card 3',
   },
   {
     id: 5,
-    image: 'https://via.placeholder.com/350x150',
-    title: 'Card 3',
-    subtitle: 'Subtitle for Card 3',
   },
 ];
 
@@ -54,7 +39,7 @@ const Slider = () => {
         navigation
         autoplay={{ delay: 3000 }}
         // autoplay={{ delay: 3000, disableOnInteraction: false }}
-        className="my-5"
+        className="my-5 p-4"
       >
         {items.map(item => (
           <SwiperSlide key={item.id}>
