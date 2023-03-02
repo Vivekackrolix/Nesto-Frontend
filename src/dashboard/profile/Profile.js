@@ -32,7 +32,7 @@ const ProfilePage = () => {
   return (
     <Container className="profile mb-5">
       <Row className="gx-5">
-        <Col md={3} className="profile__sidebar__wrapper">
+        <Col md={3} className="profile__sidebar__wrapper align-self-start">
           <aside className="d-flex flex-column h-100 justify-content-between py-4">
             <div>
               {/* profile img */}

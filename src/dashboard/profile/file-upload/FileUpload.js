@@ -40,7 +40,7 @@ const FileUpload = () => {
             <Form.Group controlId="formFileMultiple" className="mb-3">
               <Form.Label>
                 Drag and drop files or{' '}
-                <span className="upload-link">browse</span>
+                <span className="upload-link color-blue">browse</span>
               </Form.Label>
               <Form.Control
                 type="file"
