@@ -93,9 +93,9 @@ const ProfilePage = () => {
             <Tab.Content>
               {tabs.map((tab, index) => (
                 <Tab.Pane key={index} eventKey={index}>
-                  <PersonalDetailsForm />
+                  {/* <PersonalDetailsForm /> */}
                   {/* <QueriesHistory /> */}
-                  {/* <TransactionHistory /> */}
+                  <TransactionHistory />
                 </Tab.Pane>
               ))}
             </Tab.Content>

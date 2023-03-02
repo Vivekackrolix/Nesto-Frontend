@@ -1,13 +1,14 @@
 import { Card, Table } from 'react-bootstrap';
+import './TransactionHistory.css';
 
 const TransactionHistory = () => {
   return (
-    <Card className="shadow-none border-0">
+    <Card className="shadow-none border-0 profile__transaction">
       <Card.Header className="bg-transparent border-0">
-        Example Header
+        Transactions
       </Card.Header>
       <Card.Body>
-        <Table bordered>
+        <Table>
           <thead>
             <tr>
               <th>Invoice ID</th>
