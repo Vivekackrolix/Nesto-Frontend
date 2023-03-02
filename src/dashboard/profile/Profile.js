@@ -14,6 +14,7 @@ import { BsBoxArrowRight } from 'react-icons/bs';
 import PersonalDetailsForm from './personal-details/PersonalDetailsForm';
 import QueriesHistory from './queries-history/QueriesHistory';
 import TransactionHistory from './profile-table/TransactionHistory';
+import TermsConditions from './terms-and-conditions/TermsConditions';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -95,7 +96,8 @@ const ProfilePage = () => {
                 <Tab.Pane key={index} eventKey={index}>
                   {/* <PersonalDetailsForm /> */}
                   {/* <QueriesHistory /> */}
-                  <TransactionHistory />
+                  {/* <TransactionHistory /> */}
+                  <TermsConditions />
                 </Tab.Pane>
               ))}
             </Tab.Content>
