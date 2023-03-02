@@ -1,4 +1,5 @@
 import Login from '../auth/login/Login';
+import Banner from '../components/informative/banner';
 import HomeDashBoard from '../dashboard/HomeDashBoard';
 import LoanManagement from '../dashboard/loan-management/LoanManagement';
 import Payment from '../dashboard/payment/Payment';
@@ -45,9 +46,9 @@ export const RouteData = [
       },
     ],
   },
-  // {
-  //   id: 8,
-  //   path: '/property-details-info-broker',
-  //   element: <PropertyDetails />,
-  // },
+  {
+    id: 8,
+    path: '/banner',
+    element: <Banner />,
+  },
 ];
