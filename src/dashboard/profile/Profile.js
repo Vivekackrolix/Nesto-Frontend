@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Tab,
-  Nav,
-  Form,
-  Button,
-  Image,
-} from 'react-bootstrap';
+import { Container, Row, Col, Tab, Nav, Button, Image } from 'react-bootstrap';
 import {
   FiUser,
   FiClock,
@@ -16,12 +7,11 @@ import {
   FiBookOpen,
   FiHelpCircle,
   FiPlus,
-  FiMinus,
-  FiEdit,
 } from 'react-icons/fi';
 import './Profile.css';
 import { RiArrowRightSLine, RiPencilFill } from 'react-icons/ri';
 import { BsBoxArrowRight } from 'react-icons/bs';
+import PersonalDetailsForm from './personal-details/PersonalDetailsForm';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -33,9 +23,9 @@ const tabs = [
 ];
 
 const ProfilePage = () => {
-  const [phone, setPhone] = useState('');
-  const [minLoan, setMinLoan] = useState(0);
-  const [maxLoan, setMaxLoan] = useState(10000);
+  // const [phone, setPhone] = useState('');
+  // const [minLoan, setMinLoan] = useState(0);
+  // const [maxLoan, setMaxLoan] = useState(10000);
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabChange = index => {
@@ -43,7 +33,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <Container className="profile">
+    <Container className="profile mb-5">
       <Row>
         <Col md={3} className="profile__sidebar__wrapper">
           <aside className="d-flex flex-column h-100 justify-content-between py-4">
@@ -104,8 +94,7 @@ const ProfilePage = () => {
             <Tab.Content>
               {tabs.map((tab, index) => (
                 <Tab.Pane key={index} eventKey={index}>
-                  <h3>{tab.title}</h3>
-                  <p>This is the {tab.title} tab.</p>
+                  <PersonalDetailsForm />
                 </Tab.Pane>
               ))}
             </Tab.Content>
