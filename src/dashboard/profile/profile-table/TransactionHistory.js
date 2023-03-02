@@ -2,7 +2,7 @@ import { Card, Table } from 'react-bootstrap';
 
 const TransactionHistory = () => {
   return (
-    <Card className="shadow-none border-0 Transactions  ">
+    <Card className="shadow-none border-0">
       <Card.Header className="bg-transparent border-0">
         Example Header
       </Card.Header>

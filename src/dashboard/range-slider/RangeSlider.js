@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Range } from 'react-range';
 import { Form } from 'react-bootstrap';
+import { currencyConverter } from '../../helper/currencyConverter';
 
 const RangeSlider = () => {
   const [values, setValues] = useState([0, 160]);
@@ -47,8 +48,8 @@ const RangeSlider = () => {
         )}
       />
       <div className="d-flex justify-content-between">
-        <span>{`$${values[0]}`}</span>
-        <span>{`$${values[1]}`}</span>
+        <span>{currencyConverter(values[0])}</span>
+        <span>{currencyConverter(values[1])}</span>
       </div>
     </Form.Group>
   );
