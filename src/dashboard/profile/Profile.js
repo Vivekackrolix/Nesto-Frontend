@@ -12,6 +12,7 @@ import './Profile.css';
 import { RiArrowRightSLine, RiPencilFill } from 'react-icons/ri';
 import { BsBoxArrowRight } from 'react-icons/bs';
 import PersonalDetailsForm from './personal-details/PersonalDetailsForm';
+import QueriesHistory from './queries-history/QueriesHistory';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -91,7 +92,8 @@ const ProfilePage = () => {
             <Tab.Content>
               {tabs.map((tab, index) => (
                 <Tab.Pane key={index} eventKey={index}>
-                  <PersonalDetailsForm />
+                  {/* <PersonalDetailsForm /> */}
+                  <QueriesHistory />
                 </Tab.Pane>
               ))}
             </Tab.Content>
