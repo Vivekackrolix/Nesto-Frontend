@@ -233,12 +233,12 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                             alt="upload"
                           />
                         </Button>
-                        <Button
+                        {/* <Button
                           className="btn-color-primary rounded-100"
                           disabled
                         >
                           Pay Now
-                        </Button>
+                        </Button> */}
                       </>
                     ) : (
                       <>
