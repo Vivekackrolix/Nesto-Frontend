@@ -1,4 +1,12 @@
-import { Button, Card, Row, Col, Image } from 'react-bootstrap';
+import {
+  Button,
+  Card,
+  Row,
+  Col,
+  Image,
+  FloatingLabel,
+  Form,
+} from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import Rating from '../property-details/Rating';
 
@@ -32,7 +40,7 @@ const acceptedLoanQueriesData = [
   { label: 'Broker ID', value: '7865432' },
 ];
 
-const DashboardChildCard = ({ cardType }) => {
+const DashboardChildCard = ({ cardType, status, payment }) => {
   const location = useLocation();
 
   // Check if the current URL contains the string "/home-dashboard/property-details"
@@ -40,17 +48,25 @@ const DashboardChildCard = ({ cardType }) => {
     '/home-dashboard/property-details'
   );
 
-  // Set the path dynamically based on the condition
-  const path = isPropertyDetailsPage
-    ? '/home-dashboard/property-details-info'
-    : '/home-dashboard/property-details';
+  const isHomeDashboardPage = location.pathname === '/home-dashboard';
+
+  let cardProps = {};
+  if (isPropertyDetailsPage) {
+    cardProps.as = Link;
+    cardProps.to = '/home-dashboard/property-details-info';
+  }
+
+  if (isHomeDashboardPage) {
+    cardProps.as = Link;
+    cardProps.to = '/home-dashboard/property-details';
+  }
 
   return (
     <Card
-      className="border-0 shadow-sm mt-3 text-decoration-none"
-      as={Link}
-      // to="/home-dashboard/property-details"
-      to={path}
+      className={`border-0 shadow-sm ${
+        payment ? 'mt-5' : 'mt-3'
+      } text-decoration-none`}
+      {...cardProps}
     >
       {/* /home-dashboard/property-details-info */}
       <Card.Body
@@ -95,9 +111,25 @@ const DashboardChildCard = ({ cardType }) => {
           >
             <Row className="g-3 align-items-start">
               <Col xs={12}>
-                {cardType === 'overdue' && (
+                {cardType === 'overdue' && !payment && (
                   <Button className="card-label bg-color-red btn-sm">
                     Overdue
+                  </Button>
+                )}
+
+                {cardType === 'overdue' && payment && (
+                  <Button
+                    className={`card-label bg-color-red btn-sm ${
+                      payment !== 'Paid'
+                        ? payment === 'Pending'
+                          ? `Pending`
+                          : payment === 'Processing'
+                          ? 'Processing'
+                          : `Overdue`
+                        : `Paid`
+                    }`}
+                  >
+                    {payment}
                   </Button>
                 )}
 
@@ -136,7 +168,8 @@ const DashboardChildCard = ({ cardType }) => {
                     <span className="text-dark">{value}</span>
                   </Col>
                 ))}
-              {cardType === 'overdue' && (
+
+              {cardType === 'overdue' && !payment && (
                 <Col
                   xs={12}
                   md={4}
@@ -151,9 +184,89 @@ const DashboardChildCard = ({ cardType }) => {
                       alt="upload"
                     />
                   </Button>
+
                   <Button className="btn-color-primary rounded-100">
                     Pay Now
                   </Button>
+
+                  {/* payment !== 'Paid'
+                        ? payment === 'Pending'
+                          ? `Pending`
+                          : payment === 'Processing'
+                          ? 'Processing'
+                          : `Overdue`
+                        : `Paid`
+                    } */}
+                </Col>
+              )}
+
+              {payment && (
+                <Col
+                  xs={12}
+                  md={4}
+                  className="d-grid gap-3 bg-transparent px-3"
+                >
+                  {payment !== 'Paid' ? (
+                    payment === 'Pending' ? (
+                      <>
+                        <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                          Download Invoice
+                          <Image
+                            className="h-100"
+                            fluid
+                            src="/assets/upload-icon.svg"
+                            alt="upload"
+                          />
+                        </Button>
+                        <Button className="btn-color-primary rounded-100">
+                          Pay Now
+                        </Button>
+                      </>
+                    ) : payment === 'Processing' ? (
+                      <>
+                        <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                          Download Invoice
+                          <Image
+                            className="h-100"
+                            fluid
+                            src="/assets/upload-icon.svg"
+                            alt="upload"
+                          />
+                        </Button>
+                        <Button
+                          className="btn-color-primary rounded-100"
+                          disabled
+                        >
+                          Pay Now
+                        </Button>
+                      </>
+                    ) : (
+                      <>
+                        <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                          Download Invoice
+                          <Image
+                            className="h-100"
+                            fluid
+                            src="/assets/upload-icon.svg"
+                            alt="upload"
+                          />
+                        </Button>
+                        <Button className="btn-color-primary rounded-100">
+                          Pay Now
+                        </Button>
+                      </>
+                    )
+                  ) : (
+                    <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                      Download Invoice
+                      <Image
+                        className="h-100"
+                        fluid
+                        src="/assets/upload-icon.svg"
+                        alt="upload"
+                      />
+                    </Button>
+                  )}
                 </Col>
               )}
 
@@ -175,7 +288,7 @@ const DashboardChildCard = ({ cardType }) => {
                 ))}
             </Row>
           </Col>
-          {cardType === 'assigned' && (
+          {cardType === 'assigned' && !status && (
             <Col className="col-3 border-start d-flex justify-content-center align-items-center">
               <div>
                 <Card.Text>Lorem Ipsum Dummy text</Card.Text>
@@ -191,6 +304,27 @@ const DashboardChildCard = ({ cardType }) => {
                   </Button>
                 </div>
               </div>
+            </Col>
+          )}
+
+          {cardType === 'assigned' && status && (
+            <Col className="col-3 border-start d-flex justify-content-center align-items-center">
+              <Col>
+                <Form>
+                  <FloatingLabel
+                    controlId="statusSelect"
+                    label="Status"
+                    className="mb-3"
+                  >
+                    <Form.Select required>
+                      <option>status</option>
+                      <option value="status1">Assigned</option>
+                      <option value="status2">Matured</option>
+                      <option value="status3">Not Matured</option>
+                    </Form.Select>
+                  </FloatingLabel>
+                </Form>
+              </Col>
             </Col>
           )}
         </Row>

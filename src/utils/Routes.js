@@ -2,7 +2,7 @@ import Login from '../auth/login/Login';
 import HomeDashBoard from '../dashboard/HomeDashBoard';
 import LoanManagement from '../dashboard/loan-management/LoanManagement';
 import Payment from '../dashboard/payment/Payment';
-import Profile from '../dashboard/profile/Profile';
+import ProfilePage from '../dashboard/profile/Profile';
 import PropertyDetails from '../dashboard/property-details/PropertyDetails';
 
 export const RouteData = [
@@ -31,7 +31,7 @@ export const RouteData = [
       {
         id: 5,
         path: 'profile',
-        element: <Profile />,
+        element: <ProfilePage />,
       },
       {
         id: 6,

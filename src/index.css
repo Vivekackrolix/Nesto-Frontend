@@ -141,3 +141,30 @@ a:focus {
   font-size: 13px;
   color: var(--carnation-color);
 }
+
+/* payment status */
+
+.Paid {
+  background: #eaf5e7;
+  border: 0.791323px solid #88c879;
+  font-weight: 400;
+  color: #000000;
+}
+.Processing {
+  background: #ffedcc;
+  border: 0.791323px solid #ffb630;
+  font-weight: 400;
+  color: #000000;
+}
+.Pending {
+  background: #ffe1e1;
+  border: 0.791323px solid #fc5c67;
+  font-weight: 400;
+  color: #000000;
+}
+.Overdue {
+  background: #ff000e;
+  border: 0.791323px solid #b7010d;
+  font-weight: 400;
+  color: #ffffff;
+}
