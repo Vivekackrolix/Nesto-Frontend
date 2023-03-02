@@ -109,3 +109,19 @@
   letter-spacing: 0.02em;
   color: #278fd9;
 }
+
+/* profile form */
+.profile__form .form-label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+
+.profile__form input {
+  font-weight: 700;
+  font-size: 15px;
+  color: #000000;
+  padding: 14.2345px;
+  background: #f8f8f8;
+  border-radius: 10.6759px;
+}

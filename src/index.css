@@ -136,6 +136,11 @@ a:focus {
   border-radius: 100px;
 }
 
+.btn-rounded {
+  width: 221px;
+  padding: 11.1518px 13.3822px;
+}
+
 .card-link {
   font-weight: 700;
   font-size: 13px;

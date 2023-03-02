@@ -34,7 +34,7 @@ const ProfilePage = () => {
 
   return (
     <Container className="profile mb-5">
-      <Row>
+      <Row className="gx-5">
         <Col md={3} className="profile__sidebar__wrapper">
           <aside className="d-flex flex-column h-100 justify-content-between py-4">
             <div>
@@ -89,7 +89,7 @@ const ProfilePage = () => {
             </div>
           </aside>
         </Col>
-        <Col md={9} className="p-4">
+        <Col md={9} className="pt-0">
           <Tab.Container activeKey={activeTab}>
             <Tab.Content>
               {tabs.map((tab, index) => (

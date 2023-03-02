@@ -39,10 +39,15 @@ export const RouteData = [
         element: <PropertyDetails />,
       },
       {
-        id: 6,
+        id: 7,
         path: 'property-details-info',
         element: <PropertyDetails />,
       },
     ],
   },
+  // {
+  //   id: 8,
+  //   path: '/property-details-info-broker',
+  //   element: <PropertyDetails />,
+  // },
 ];

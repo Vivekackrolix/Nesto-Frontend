@@ -29,7 +29,7 @@ const App = () => {
               </Route>
             );
           } else {
-            return null;
+            return <Route key={id} path={path} element={element} />;
           }
         })}
       </Routes>

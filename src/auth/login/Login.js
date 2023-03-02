@@ -15,6 +15,7 @@ import ResetPasswordModal from './ResetPasswordModal';
 import EnterOtp from './EnterOtp';
 import { Footer, Header } from '../../components';
 import './Login.css';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   // email phone number validation
@@ -154,6 +155,8 @@ const Login = () => {
                   variant="primary"
                   size="md"
                   className="rounded-0 border-0 bg-color-primary"
+                  as={Link}
+                  to="/home-dashboard"
                 >
                   Login
                 </Button>
