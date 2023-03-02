@@ -1,6 +1,7 @@
 import { Form, Button } from 'react-bootstrap';
 import CreatableSelect from 'react-select/creatable';
 import RangeSlider from '../../range-slider/RangeSlider';
+import FileUpload from '../file-upload/FileUpload';
 
 const options = [
   { value: 'sector 28', label: 'Sector 28' },
@@ -59,10 +60,9 @@ const PersonalDetailsForm = () => {
 
         <RangeSlider />
 
-        {/* <Form.Group className='mb-4' controlId="uploadDocument">
-          <Form.Label>Upload Document</Form.Label>
-          <Form.File id="uploadDocument" />
-        </Form.Group> */}
+        {/* file upload */}
+        <FileUpload />
+        {/* file upload code end here */}
 
         <div className="d-flex gap-4 mt-5">
           <Button className="btn-color-outline-primary rounded-100 btn-rounded">

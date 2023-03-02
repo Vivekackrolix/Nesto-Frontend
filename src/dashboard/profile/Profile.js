@@ -23,9 +23,6 @@ const tabs = [
 ];
 
 const ProfilePage = () => {
-  // const [phone, setPhone] = useState('');
-  // const [minLoan, setMinLoan] = useState(0);
-  // const [maxLoan, setMaxLoan] = useState(10000);
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabChange = index => {
