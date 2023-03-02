@@ -72,6 +72,19 @@
   height: 120px;
 }
 
+.profile__sidebar__wrapper h4 {
+  font-weight: 400;
+  font-size: 18.7982px;
+  color: #282431;
+}
+
+.profile__sidebar__wrapper p {
+  font-weight: 350;
+  font-size: 13.023px;
+  color: #282431;
+  opacity: 0.5;
+}
+
 .profile__image img {
   width: 100%;
   height: 100%;
