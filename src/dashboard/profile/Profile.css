@@ -19,7 +19,7 @@
 
 .profile__sidebar__wrapper .nav-link {
   color: #000000 !important;
-  padding: 25px 20px !important;
+  padding: 15px 20px !important;
 }
 .profile__sidebar__wrapper .nav-link {
   border-bottom: 0.481264px solid #ebecf0;
@@ -120,7 +120,7 @@
 }
 
 .profile__sidebar__wrapper__signout {
-  height: 67.38px;
+  padding: 15px 20px !important;
   background: #ffffff;
   border: 0.962528px solid #278fd9;
   border-radius: 12.5129px;
