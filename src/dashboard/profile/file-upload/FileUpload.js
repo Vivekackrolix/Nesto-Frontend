@@ -38,16 +38,18 @@ const FileUpload = () => {
             onDrop={handleDrop}
           >
             <Form.Group controlId="formFileMultiple" className="mb-3">
-              <Form.Label>
+              {/* <Form.Label>
                 Drag and drop files or{' '}
                 <span className="upload-link color-blue">browse</span>
-              </Form.Label>
+              </Form.Label> */}
               <Form.Control
                 type="file"
                 multiple
                 onChange={handleFileInputChange}
               />
               <div className="drag-drop-text">
+                <span>Drag and drop files or</span>{' '}
+                <span className="upload-link color-blue">browse</span>
                 <p>Supported formats: JPEG, PNG</p>
               </div>
             </Form.Group>

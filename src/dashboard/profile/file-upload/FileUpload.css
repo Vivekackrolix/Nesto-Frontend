@@ -28,3 +28,14 @@ input[type='file'] {
   color: blue;
   cursor: pointer;
 }
+
+.drag-drop-text {
+  font-weight: 700;
+  font-size: 10.2294px;
+  color: #0f0f0f;
+  padding: 2rem;
+  background: #f8f8f8;
+  border-radius: 22.6664px;
+  height: 143.86px;
+  width: 135.48px;
+}
