@@ -21,6 +21,13 @@
   color: #000000 !important;
   padding: 25px 20px !important;
 }
+.profile__sidebar__wrapper .nav-link {
+  border-bottom: 0.481264px solid #ebecf0;
+}
+.profile__sidebar__wrapper .nav-link.active,
+.profile__sidebar__wrapper .nav-item:last-child .nav-link {
+  border: none !important;
+}
 
 .profile__sidebar__wrapper .nav-link.active,
 .profile__sidebar__wrapper .nav-item.show .nav-link {
