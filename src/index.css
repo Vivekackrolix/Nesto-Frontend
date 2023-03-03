@@ -28,6 +28,14 @@ a:focus {
   color: var(--primary-color);
 }
 
+/* remove outline from button */
+button:focus,
+button:active,
+button:active:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -173,17 +181,17 @@ a:focus {
   font-weight: 400;
   color: #ffffff;
 }
-.bg-sky{
-  background-color: #ECF7FF;
+.bg-sky {
+  background-color: #ecf7ff;
 }
-.text-bold{
+.text-bold {
   color: #000000;
   font-weight: 700;
   line-height: 2.4px;
   font-size: 44.26px;
   margin-top: 15px;
 }
-.text-grey{
+.text-grey {
   color: #282431;
   font-weight: 400;
   font-size: 26.57px;
