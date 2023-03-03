@@ -1,8 +1,12 @@
+import Footer from '../footer/Footer';
 import './banner.css';
+import ChooseUs from './chooseus';
+import Header from '../header/Header';
 import Stats from './stats';
 export default function Banner(){
     return (
       <>
+      <Header/>
         <div className="banner-body">
           <div className="row">
             <div className="col-md-5">
@@ -56,6 +60,8 @@ export default function Banner(){
           </div>
         </div>
         <Stats/>
+        <ChooseUs/>
+        <Footer/>
       </>
     );
 }
