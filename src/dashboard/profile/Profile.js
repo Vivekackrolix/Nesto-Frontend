@@ -15,6 +15,8 @@ import PersonalDetailsForm from './personal-details/PersonalDetailsForm';
 import QueriesHistory from './queries-history/QueriesHistory';
 import TransactionHistory from './profile-table/TransactionHistory';
 import TermsConditions from './terms-and-conditions/TermsConditions';
+import AccordionCard from './accordion/AccordionCard';
+import RaiseQuery from './raise-query/RaiseQuery';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -97,7 +99,10 @@ const ProfilePage = () => {
                   {/* <PersonalDetailsForm /> */}
                   {/* <QueriesHistory /> */}
                   {/* <TransactionHistory /> */}
-                  <TermsConditions />
+
+                  {/* <TermsConditions /> */}
+                  {/* <AccordionCard /> */}
+                  <RaiseQuery />
                 </Tab.Pane>
               ))}
             </Tab.Content>
