@@ -4,6 +4,8 @@ import DashboardHeader from './header/DashboardHeader';
 import { Outlet, useLocation } from 'react-router-dom';
 import SearchFilterBox from './search-filter/SearchFilter';
 import './Dashboard.css';
+import CustomModal from '../components/common/CustomModal';
+import PaymentOverdueModal from './payment-overdue-modal/PaymentOverdueModal';
 
 const dashboardInfoCardsData = [
   {
@@ -33,6 +35,7 @@ const HomeDashBoard = () => {
 
   return (
     <>
+      <PaymentOverdueModal show={true} />
       <DashboardHeader />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <Row className="gx-4 dashboard-cards align-items-center">
