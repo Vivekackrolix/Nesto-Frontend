@@ -15,7 +15,6 @@ import PersonalDetailsForm from './personal-details/PersonalDetailsForm';
 import QueriesHistory from './queries-history/QueriesHistory';
 import TransactionHistory from './profile-table/TransactionHistory';
 import TermsConditions from './terms-and-conditions/TermsConditions';
-import AccordionCard from './accordion/AccordionCard';
 import RaiseQuery from './raise-query/RaiseQuery';
 import CardWrapper from './card-wrapper/CardWrapper';
 import Support from './support/Support';

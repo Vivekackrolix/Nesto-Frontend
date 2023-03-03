@@ -21,7 +21,6 @@
   font-size: 14px;
   line-height: 26px;
   color: #8ba0ae;
-  padding-top: 0;
 }
 
 .accordion__wrapper .accordion-item {
@@ -29,7 +28,7 @@
   border-radius: 12.1093px;
 }
 
-.accordion__wrapper .active__item {
+.accordion__wrapper .accordion-item {
   /* border: 1px solid blue !important; */
   background: #ffffff;
   border: 1.7299px solid #278fd9;
