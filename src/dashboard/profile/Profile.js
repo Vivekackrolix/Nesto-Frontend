@@ -27,6 +27,15 @@ const tabs = [
   { title: 'Raise Query', icon: <FiPlus /> },
 ];
 
+const profileSidebarNavContent = [
+  <PersonalDetailsForm />,
+  <QueriesHistory />,
+  <TransactionHistory />,
+  <TermsConditions />,
+  <AccordionCard />,
+  <RaiseQuery />,
+];
+
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -96,13 +105,7 @@ const ProfilePage = () => {
             <Tab.Content>
               {tabs.map((tab, index) => (
                 <Tab.Pane key={index} eventKey={index}>
-                  {/* <PersonalDetailsForm /> */}
-                  {/* <QueriesHistory /> */}
-                  {/* <TransactionHistory /> */}
-
-                  {/* <TermsConditions /> */}
-                  {/* <AccordionCard /> */}
-                  <RaiseQuery />
+                  {profileSidebarNavContent[index]}
                 </Tab.Pane>
               ))}
             </Tab.Content>
