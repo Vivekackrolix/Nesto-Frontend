@@ -18,6 +18,7 @@ import TermsConditions from './terms-and-conditions/TermsConditions';
 import AccordionCard from './accordion/AccordionCard';
 import RaiseQuery from './raise-query/RaiseQuery';
 import CardWrapper from './card-wrapper/CardWrapper';
+import Support from './support/Support';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -29,12 +30,27 @@ const tabs = [
 ];
 
 const profileSidebarNavContent = [
-  <PersonalDetailsForm />,
-  <QueriesHistory />,
-  <TransactionHistory />,
-  <TermsConditions />,
-  <AccordionCard />,
-  <RaiseQuery />,
+  {
+    element: <PersonalDetailsForm />,
+  },
+  {
+    element: <QueriesHistory />,
+  },
+  {
+    element: <TransactionHistory />,
+    title: 'Transactions',
+  },
+  {
+    element: <TermsConditions />,
+    title: 'Terms & Conditions',
+  },
+  {
+    element: <Support />,
+  },
+  {
+    element: <RaiseQuery />,
+    title: 'Your Recent Queries',
+  },
 ];
 
 const ProfilePage = () => {
@@ -104,9 +120,11 @@ const ProfilePage = () => {
         <Col md={9} className="pt-0">
           <Tab.Container activeKey={activeTab}>
             <Tab.Content>
-              {tabs.map((tab, index) => (
+              {tabs.map((_, index) => (
                 <Tab.Pane key={index} eventKey={index}>
-                  <CardWrapper>{profileSidebarNavContent[index]}</CardWrapper>
+                  <CardWrapper title={profileSidebarNavContent[index]?.title}>
+                    {profileSidebarNavContent[index].element}
+                  </CardWrapper>
                 </Tab.Pane>
               ))}
             </Tab.Content>
