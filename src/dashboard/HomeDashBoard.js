@@ -6,6 +6,7 @@ import SearchFilterBox from './search-filter/SearchFilter';
 import './Dashboard.css';
 import CustomModal from '../components/common/CustomModal';
 import PaymentOverdueModal from './payment-overdue-modal/PaymentOverdueModal';
+import RequestDenyModal from './request-deny-modal/RequestDenyModal';
 
 const dashboardInfoCardsData = [
   {
@@ -35,7 +36,8 @@ const HomeDashBoard = () => {
 
   return (
     <>
-      <PaymentOverdueModal show={true} />
+      <PaymentOverdueModal show={false} />
+      <RequestDenyModal show={false} />
       <DashboardHeader />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <Row className="gx-4 dashboard-cards align-items-center">

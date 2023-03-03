@@ -1,0 +1,23 @@
+.request__deny__form input,
+.request__deny__form select,
+.request__deny__form textarea {
+  background: var(--wild-sand) !important;
+  border: 0px;
+  font-weight: 400;
+  font-size: 17.7973px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.request__deny__form label {
+  font-weight: 400;
+  font-size: 15.5613px;
+  color: #000000 !important;
+}
+/*
+input,
+select,
+textarea {
+  font-weight: 400;
+  font-size: 17.7973px;
+  color: rgba(0, 0, 0, 0.5) !important;
+} */
