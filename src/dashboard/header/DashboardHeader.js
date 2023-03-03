@@ -4,6 +4,7 @@ import { Container, Nav, Navbar, Image } from 'react-bootstrap';
 import { BsBellFill, BsQuestionCircle, BsBoxArrowRight } from 'react-icons/bs';
 
 import './DashboardHeader.css';
+import NotificationDropdown from '../profile/notification/NotificationDropdown';
 
 const DashboardHeader = () => {
   return (
@@ -24,13 +25,7 @@ const DashboardHeader = () => {
                 alt="profile img"
               />
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/notifications"
-              className="p-0 mx-2 text-dark"
-            >
-              <BsBellFill className="icon" size={18} />
-            </Nav.Link>
+            <NotificationDropdown />
             <Nav.Link as={Link} to="/faq" className="p-0 mx-2 text-dark">
               <BsQuestionCircle className="icon" size={18} />
             </Nav.Link>
