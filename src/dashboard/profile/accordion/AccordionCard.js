@@ -1,5 +1,4 @@
 import Accordion from 'react-bootstrap/Accordion';
-import DashboardTabs from '../../dashboard-tabs/DashboardTabs';
 
 const AccordionCard = () => {
   return (

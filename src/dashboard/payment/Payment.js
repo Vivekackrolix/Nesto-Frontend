@@ -11,7 +11,7 @@ const Payment = () => {
       <PaymentModal />
       <Row className="mb-5">
         <Col>
-          <DashboardTabs tabsKey={tabKey}>
+          <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
             {/* <DashboardChildCard cardType="assigned" status={true} /> */}
             <DashboardChildCard cardType="overdue" payment="Paid" />
             <DashboardChildCard cardType="overdue" payment="Pending" />

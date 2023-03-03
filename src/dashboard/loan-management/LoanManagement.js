@@ -9,7 +9,7 @@ const LoanManagement = () => {
     <Container>
       <Row className="mb-5">
         <Col>
-          <DashboardTabs tabsKey={tabKey}>
+          <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
             <DashboardChildCard cardType="assigned" status={true} />
           </DashboardTabs>
         </Col>

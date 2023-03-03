@@ -17,6 +17,7 @@ import TransactionHistory from './profile-table/TransactionHistory';
 import TermsConditions from './terms-and-conditions/TermsConditions';
 import AccordionCard from './accordion/AccordionCard';
 import RaiseQuery from './raise-query/RaiseQuery';
+import CardWrapper from './card-wrapper/CardWrapper';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -105,7 +106,7 @@ const ProfilePage = () => {
             <Tab.Content>
               {tabs.map((tab, index) => (
                 <Tab.Pane key={index} eventKey={index}>
-                  {profileSidebarNavContent[index]}
+                  <CardWrapper>{profileSidebarNavContent[index]}</CardWrapper>
                 </Tab.Pane>
               ))}
             </Tab.Content>

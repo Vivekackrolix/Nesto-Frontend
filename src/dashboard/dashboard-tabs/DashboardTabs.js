@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 import './DashboardTabs.css';
-const DashboardTabs = ({ children, tabsKey }) => {
-  const [key, setKey] = useState('All');
+const DashboardTabs = ({ children, tabsKey, activeState }) => {
+  const [key, setKey] = useState(activeState);
 
   return (
     <Tabs
