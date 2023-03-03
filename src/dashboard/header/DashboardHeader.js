@@ -15,7 +15,7 @@ const DashboardHeader = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto align-items-center">
+          <Nav className="ms-auto align-items-center gap-3">
             <Nav.Link as={Link} to="/profile" className="p-0 me-2 profile-img">
               <Image
                 className="h-100 profile-img"
