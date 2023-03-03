@@ -3,7 +3,6 @@
   border: 0.920177px solid #ebecf0;
   box-shadow: none !important;
   border-radius: 10.122px;
-
   background: #f8f8f8;
   border-radius: 7.51047px;
 }
@@ -20,6 +19,17 @@
   font-weight: 600;
   font-size: 18px;
   color: #000000;
+}
+
+.notification .dropdown-toggle {
+  color: #000000;
+  width: 30px !important;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.dropdown-toggle::after {
+  display: none;
 }
 
 .view-all {

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Container, Nav, Navbar, Image } from 'react-bootstrap';
-import { BsBellFill, BsQuestionCircle, BsBoxArrowRight } from 'react-icons/bs';
+import { BsQuestionCircle, BsBoxArrowRight } from 'react-icons/bs';
 
 import './DashboardHeader.css';
 import NotificationDropdown from '../profile/notification/NotificationDropdown';
@@ -25,7 +25,7 @@ const DashboardHeader = () => {
                 alt="profile img"
               />
             </Nav.Link>
-            <NotificationDropdown />
+            <NotificationDropdown notification={3} />
             <Nav.Link as={Link} to="/faq" className="p-0 mx-2 text-dark">
               <BsQuestionCircle className="icon" size={18} />
             </Nav.Link>
