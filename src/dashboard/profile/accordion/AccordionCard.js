@@ -1,10 +1,14 @@
 import Accordion from 'react-bootstrap/Accordion';
+import './AccordionCard.css';
 
 const AccordionCard = () => {
   return (
     <>
-      <Accordion defaultActiveKey="0">
-        <Accordion.Item eventKey="0">
+      <Accordion
+        defaultActiveKey="0"
+        className="accordion__wrapper accordion-flush"
+      >
+        <Accordion.Item eventKey="0" className="border-0 active__item">
           <Accordion.Header>
             What is App flow and why is it the best App ?
           </Accordion.Header>
