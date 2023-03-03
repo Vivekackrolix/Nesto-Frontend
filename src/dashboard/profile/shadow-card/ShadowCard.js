@@ -1,19 +1,18 @@
 import Card from 'react-bootstrap/Card';
+import './ShadowCard.css';
 
-function ShadowCard() {
+function ShadowCard({ itemLength, title, text }) {
   return (
-    <Card className="shadow border-0">
-      <Card.Header className="border-0 bg-transparent">
-        Title of Card
-      </Card.Header>
-      <Card.Body>
-        <Card.Text>
-          This is the description of the card. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua.
-        </Card.Text>
-      </Card.Body>
-    </Card>
+    <>
+      {Array.from({ length: itemLength }, (_, index) => (
+        <Card className="shadow border-0 shadow-card mb-4" key={index}>
+          <Card.Header className="border-0 bg-transparent">{title}</Card.Header>
+          <Card.Body>
+            <Card.Text>{text}</Card.Text>
+          </Card.Body>
+        </Card>
+      ))}
+    </>
   );
 }
 

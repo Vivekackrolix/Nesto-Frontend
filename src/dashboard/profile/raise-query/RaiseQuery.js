@@ -4,8 +4,17 @@ import ShadowCard from '../shadow-card/ShadowCard';
 const RaiseQuery = () => {
   return (
     <>
-      <ShadowCard />
-      <AccordionCard />
+      <ShadowCard
+        itemLength={5}
+        title="Loreum ipsum dolor sit amet, consectetur elit"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut."
+      />
+      <div className="mt-5 mb-3">Chat With Us</div>
+      <AccordionCard
+        itemLength={2}
+        accordionTitle="Contact 24×7 Help"
+        accordionText="text goes here"
+      />
     </>
   );
 };
