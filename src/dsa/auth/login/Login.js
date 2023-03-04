@@ -65,7 +65,7 @@ const Login = () => {
 
       <Container className="container-md my-5">
         <Row className="g-0 login__form">
-          <Col md={6}>
+          <Col md={6} className="d-none d-md-block">
             <Image
               className="h-100"
               src="https://via.placeholder.com/800x500.png"
