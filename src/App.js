@@ -6,7 +6,7 @@ import BuilderWeb from "./builder/App";
 
 const App = () => {
   // Add your logic here to determine which website to load
-  const websiteToLoad = "dsa";
+  const websiteToLoad = "builder";
 
   if (websiteToLoad === "dsa") {
     return <DsaWebsite />;
