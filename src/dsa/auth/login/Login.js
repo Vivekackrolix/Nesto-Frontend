@@ -13,9 +13,13 @@ import { useState } from 'react';
 import ForgetPassword from './ForgetPassword';
 import ResetPasswordModal from './ResetPasswordModal';
 import EnterOtp from './EnterOtp';
-import { Footer, Header } from '../../components';
-import './Login.css';
 import { Link } from 'react-router-dom';
+// import { Footer, Header } from '../../../components';
+// import Header from '../../components/header/Header';
+// import { Header } from '../../components';
+// import { Footer, Header } from '../../components';
+import './Login.css';
+import { Footer, Header } from '../../../components';
 
 const Login = () => {
   // email phone number validation

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Form, Button, InputGroup } from 'react-bootstrap';
-import { CustomModal } from '../../components';
+import { CustomModal } from '../../../components';
 import OtpContent from './OtpContent';
 import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';
 

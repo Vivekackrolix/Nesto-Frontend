@@ -1,5 +1,6 @@
 import { Form } from 'react-bootstrap';
-import { CustomModal } from '../../components';
+// import { CustomModal } from '../../components';
+import { CustomModal } from '../../../components';
 import OtpContent from './OtpContent';
 
 const EnterOtp = ({ show }) => {
