@@ -1,5 +1,5 @@
-import { Modal } from 'react-bootstrap';
-import './CustomModal.css';
+import { Modal } from "react-bootstrap";
+import "./CustomModal.css";
 
 const CustomModal = ({ show, title, children }) => {
   return (
