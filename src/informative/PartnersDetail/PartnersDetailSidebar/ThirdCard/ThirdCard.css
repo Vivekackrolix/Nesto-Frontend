@@ -1,5 +1,5 @@
 .partners-container .partners-third__card {
-    padding: 30px 25px;
+    padding: 30px 20px;
     background: linear-gradient(to right, rgba(255, 255, 255, 1), var(--lite-skyblue));
     margin-top: 50px;
 }
@@ -9,14 +9,14 @@
 }
 .third-card__p-1 {
     color: var(--cold-steel-color);
-    font-size: 31px;
+    font-size: 28px;
     line-height: 38px;
+    padding-bottom: 15px;
     font-weight: 300;
 }
 .third-card__span-1 {
     color: var(--cold-steel-color);
-    padding-bottom: 6px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .third-card__link {
     color: var(--purple-color);

@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 :root {
   /* colors */
   --primary-color: #278fd9;
+  --purple-color: #bf0063;
   --primary-color-darker: #1980c9;
+  --lite-skyblue: #eaf4fb;
   --cold-steel-color: #282431;
   --color-white: #ffffff;
   --Pattens-Blue: #e0f2ff;
@@ -14,7 +17,6 @@
   --bg-red-darker: #b7010d;
   --gray-color: #b3b4b8;
   --silver-surfer: #7d7f88;
-
   /* divider */
   --divider: #d3d3d3;
 }
@@ -87,6 +89,7 @@ button:active:focus {
 .bg-pattens-blue {
   background-color: var(--Pattens-Blue);
 }
+
 .btn.bg-color-primary,
 .btn.bg-color-primary-darker {
   outline: none;
@@ -163,27 +166,32 @@ button:active:focus {
   font-weight: 400;
   color: #000000;
 }
+
 .Processing {
   background: #ffedcc;
   border: 0.791323px solid #ffb630;
   font-weight: 400;
   color: #000000;
 }
+
 .Pending {
   background: #ffe1e1;
   border: 0.791323px solid #fc5c67;
   font-weight: 400;
   color: #000000;
 }
+
 .Overdue {
   background: #ff000e;
   border: 0.791323px solid #b7010d;
   font-weight: 400;
   color: #ffffff;
 }
+
 .bg-sky {
   background-color: #ecf7ff;
 }
+
 .text-bold {
   color: #000000;
   font-weight: 700;
@@ -191,6 +199,7 @@ button:active:focus {
   font-size: 44.26px;
   margin-top: 15px;
 }
+
 .text-grey {
   color: #282431;
   font-weight: 400;
@@ -200,4 +209,5 @@ button:active:focus {
   opacity: 0.5;
   margin: 8px 0;
 }
+
 /*  */

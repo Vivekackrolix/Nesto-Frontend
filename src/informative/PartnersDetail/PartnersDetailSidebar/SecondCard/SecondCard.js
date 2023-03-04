@@ -13,10 +13,10 @@ const SecondCard = () => {
                         <div className='text-center'>
                             <span className='second-card__span-1'>Download Nestohub Mobile App</span>
                         </div>
-                        <div className='d-flex gap-2'>
+                        <div className='d-flex gap-2 second-card__btn-div'>
                             <Link to='/' className='second-card__btn d-flex align-items-center rounded-3'>
                                 <div>
-                                    <img src='./assets/google-play.png' className='second-card__icon' />
+                                    <img src='/assets/google-play.png' className='second-card__icon' />
                                 </div>
                                 <div className='d-flex flex-column'>
                                     <span className='second-card__icon-span-1'>GET IT ON</span>
