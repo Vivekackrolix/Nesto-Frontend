@@ -1,0 +1,35 @@
+.partners-container .partners-third__card {
+    padding: 30px 25px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), var(--lite-skyblue));
+    margin-top: 50px;
+}
+.partners-container .third-card__img {
+    width: 100%;
+    height: 160px;
+}
+.third-card__p-1 {
+    color: var(--cold-steel-color);
+    font-size: 31px;
+    line-height: 38px;
+    font-weight: 300;
+}
+.third-card__span-1 {
+    color: var(--cold-steel-color);
+    padding-bottom: 6px;
+    font-weight: 500;
+}
+.third-card__link {
+    color: var(--purple-color);
+    font-weight: 600;
+    font-size: 21px;
+    text-decoration: none;
+}
+.third-card__link:hover {
+    color: var(--purple-color);
+}
+.third-card__span-2 {
+    display: block;
+    color: var(--cold-steel-color);
+    padding-top: 8px;
+    font-weight: 300;
+}

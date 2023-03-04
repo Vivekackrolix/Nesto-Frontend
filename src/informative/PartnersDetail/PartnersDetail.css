@@ -1,0 +1,10 @@
+.partners-container {
+    margin: 2rem 0;
+}
+.partners-container .partners-img {
+    width: 100%;
+    height: 100%;
+}
+.partners-container .partners-img-2 {
+    height: 50%;
+}
