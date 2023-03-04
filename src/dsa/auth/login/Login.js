@@ -134,7 +134,7 @@ const Login = () => {
                       }))
                     }
                     variant="link"
-                    to="/forgetPassword"
+                    to="/dsa/forgetPassword"
                     className="login__form__forgetpassword p-0"
                   >
                     Forget Password?
@@ -156,7 +156,7 @@ const Login = () => {
                   size="md"
                   className="rounded-0 border-0 bg-color-primary"
                   as={Link}
-                  to="/home-dashboard"
+                  to="/dsa/home-dashboard"
                 >
                   Login
                 </Button>

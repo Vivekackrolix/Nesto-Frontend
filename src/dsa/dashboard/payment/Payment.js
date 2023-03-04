@@ -1,14 +1,12 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import DashboardTabs from '../dashboard-tabs/DashboardTabs';
 import DashboardChildCard from '../dashboard-card-big/DashboardChildCard';
-import PaymentModal from './PaymentModal';
 
 const tabKey = ['All', 'Overdue', 'Pending', 'Processing', 'Paid'];
 
 const Payment = () => {
   return (
     <Container>
-      <PaymentModal />
       <Row className="mb-5">
         <Col>
           <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>

@@ -3,31 +3,31 @@ import ContentCard from './dashboard-info-cards/DashboardInfoCards';
 import DashboardHeader from './header/DashboardHeader';
 import { Outlet, useLocation } from 'react-router-dom';
 import SearchFilterBox from './search-filter/SearchFilter';
-import './Dashboard.css';
-import CustomModal from '../components/common/CustomModal';
 import PaymentOverdueModal from './payment-overdue-modal/PaymentOverdueModal';
 import RequestDenyModal from './request-deny-modal/RequestDenyModal';
+import PayNowModal from './pay-now-modal/PayNowModal';
+import './Dashboard.css';
 
 const dashboardInfoCardsData = [
   {
     icon: `/assets/home-sharp-`,
     title: 'Dashboard',
-    path: '/home-dashboard',
+    path: '/dsa/home-dashboard',
   },
   {
     icon: `/assets/wallet-outline-`,
     title: 'Loan Management',
-    path: '/home-dashboard/loan-management',
+    path: '/dsa/home-dashboard/loan-management',
   },
   {
     icon: `/assets/card-outline-`,
     title: 'Payment',
-    path: '/home-dashboard/payment',
+    path: '/dsa/home-dashboard/payment',
   },
   {
     icon: `/assets/user-outline-`,
     title: 'Profile',
-    path: '/home-dashboard/profile',
+    path: '/dsa/home-dashboard/profile',
   },
 ];
 
@@ -36,6 +36,7 @@ const HomeDashBoard = () => {
 
   return (
     <>
+      <PayNowModal show={false} />
       <PaymentOverdueModal show={false} />
       <RequestDenyModal show={false} />
       <DashboardHeader />

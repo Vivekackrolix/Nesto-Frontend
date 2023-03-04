@@ -1,22 +1,22 @@
-import Login from '../auth/login/Login';
-import Banner from '../components/informative/banner';
-import HomeDashBoard from '../dashboard/HomeDashBoard';
-import LoanManagement from '../dashboard/loan-management/LoanManagement';
-import Payment from '../dashboard/payment/Payment';
-import ProfilePage from '../dashboard/profile/Profile';
-import PropertyDetails from '../dashboard/property-details/PropertyDetails';
+// import Banner from '../components/informative/banner';
+import LoanManagement from '../dsa/dashboard/loan-management/LoanManagement';
+import Payment from '../dsa/dashboard/payment/Payment';
+import ProfilePage from '../dsa/dashboard/profile/Profile';
+import PropertyDetails from '../dsa/dashboard/property-details/PropertyDetails';
+import Login from '../dsa/auth/login/Login';
+import HomeDashBoard from '../dsa/dashboard/HomeDashBoard';
 
 export const RouteData = [
   {
     id: 1,
     page: 'login',
-    path: '/',
+    path: '/dsa/login',
     element: <Login />,
   },
   {
     id: 2,
     page: 'dashboard',
-    path: '/home-dashboard',
+    path: '/dsa/home-dashboard',
     element: <HomeDashBoard />,
     routes: [
       {
@@ -46,9 +46,9 @@ export const RouteData = [
       },
     ],
   },
-  {
-    id: 8,
-    path: '/banner',
-    element: <Banner />,
-  },
+  // {
+  //   id: 8,
+  //   path: '/banner',
+  //   element: <Banner />,
+  // },
 ];

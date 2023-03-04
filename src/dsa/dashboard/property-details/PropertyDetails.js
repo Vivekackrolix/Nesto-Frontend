@@ -17,10 +17,11 @@ const PropertyDetails = () => {
           <DashboardChildCard cardType="propertyDetailsProfile" />
         </Col>
         <Col xs={12}>
-          {location.pathname === '/home-dashboard/property-details' && (
+          {location.pathname === '/dsa/home-dashboard/property-details' && (
             <PropertyDetailsForm />
           )}
-          {location.pathname === '/home-dashboard/property-details-info' && (
+          {location.pathname ===
+            '/dsa/home-dashboard/property-details-info' && (
             <PropertyDetailsText />
           )}
         </Col>

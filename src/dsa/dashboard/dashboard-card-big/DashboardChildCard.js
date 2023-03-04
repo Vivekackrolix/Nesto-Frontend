@@ -45,20 +45,20 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
 
   // Check if the current URL contains the string "/home-dashboard/property-details"
   const isPropertyDetailsPage = location.pathname.includes(
-    '/home-dashboard/property-details'
+    '/dsa/home-dashboard/property-details'
   );
 
-  const isHomeDashboardPage = location.pathname === '/home-dashboard';
+  const isHomeDashboardPage = location.pathname === '/dsa/home-dashboard';
 
   let cardProps = {};
   if (isPropertyDetailsPage) {
     cardProps.as = Link;
-    cardProps.to = '/home-dashboard/property-details-info';
+    cardProps.to = '/dsa/home-dashboard/property-details-info';
   }
 
   if (isHomeDashboardPage) {
     cardProps.as = Link;
-    cardProps.to = '/home-dashboard/property-details';
+    cardProps.to = '/dsa/home-dashboard/property-details';
   }
 
   return (
