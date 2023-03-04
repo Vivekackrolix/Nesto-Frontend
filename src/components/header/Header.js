@@ -1,41 +1,41 @@
-import './Header.css';
 import { useState } from 'react';
-import { Container, Nav, NavDropdown } from 'react-bootstrap';
-
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import './Header.css';
 const Header = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <header className="py-3 login__header">
+    <Navbar bg="light" expand="lg" className="login__header nes__header">
       <Container>
-        <Nav className="d-flex align-items-center">
-          <Nav.Item>
-            <img
-              src="/assets/nesto-logo.png"
-              alt="logo"
-              className="login__header__img"
-            />
-          </Nav.Item>
-          <Nav.Item className="ms-auto">
+        <Navbar.Brand href="#home">
+          <img
+            src="/assets/nesto-logo.png"
+            alt="logo"
+            className="login__header__img me-auto"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto d-flex align-items-center">
             <NavDropdown
               title="Login"
               show={dropdown}
-              className="border-color-primary me-3 p-0 btn btn-sm"
+              className="border-color-primary my-3 my-lg-0 me-3 p-0 btn btn-sm"
               onClick={() => setDropdown(!dropdown)}
             >
               <NavDropdown.Item href="#">Action</NavDropdown.Item>
               <NavDropdown.Item href="#">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#">Something else here</NavDropdown.Item>
             </NavDropdown>
-          </Nav.Item>
-          <Nav.Item>
-            <button className="btn btn-primary bg-color-primary btn-sm">
-              List your Property
-            </button>
-          </Nav.Item>
-        </Nav>
+            <Nav.Item>
+              <button className="btn btn-color-primary mb-3 mb-lg-0 btn-sm">
+                List your Property
+              </button>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
-    </header>
+    </Navbar>
   );
 };
 
