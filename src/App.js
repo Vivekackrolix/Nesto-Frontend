@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RouteData } from './utils/Routes';
-import HomeDashboardContent from './dashboard/home-dashnoard-content/HomeDashboardContent';
-import CopyrightText from './dashboard/footer/CopyrightText';
-import Chat from './dashboard/chat/Chat';
+import HomeDashboardContent from './dsa/dashboard/home-dashnoard-content/HomeDashboardContent';
+import CopyrightText from './dsa/dashboard/footer/CopyrightText';
+import Chat from './dsa/dashboard/chat/Chat';
 
 const App = () => {
   return (
