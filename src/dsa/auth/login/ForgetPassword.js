@@ -1,5 +1,5 @@
 import { Form, Button } from 'react-bootstrap';
-import { CustomModal } from '../../components';
+import { CustomModal } from '../../../components';
 
 const ForgetPassword = ({ show }) => {
   return (

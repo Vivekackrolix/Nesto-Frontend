@@ -1,40 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { RouteData } from './utils/Routes';
-import HomeDashboardContent from './dsa/dashboard/home-dashnoard-content/HomeDashboardContent';
-import CopyrightText from './dsa/dashboard/footer/CopyrightText';
-import Chat from './dsa/dashboard/chat/Chat';
+import React from 'react';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import DsaWebsite from './dsa/App';
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        {RouteData.map(({ id, path, element, page, routes }) => {
-          if (page === 'login') {
-            return <Route key={id} path={path} element={element} />;
-          } else if (page === 'dashboard' && routes) {
-            return (
-              <Route
-                key={id}
-                path={path}
-                element={
-                  <>
-                    {element} <CopyrightText /> <Chat />
-                  </>
-                }
-              >
-                <Route index element={<HomeDashboardContent />} />
-                {routes.map(({ id, path, element }) => (
-                  <Route key={id} path={path} element={element} />
-                ))}
-              </Route>
-            );
-          } else {
-            return <Route key={id} path={path} element={element} />;
-          }
-        })}
-      </Routes>
-    </BrowserRouter>
-  );
+  // Add your logic here to determine which website to load
+  const websiteToLoad = 'dsa';
+
+  if (websiteToLoad === 'dsa') {
+    return <DsaWebsite />;
+  }
+  //  else if (websiteToLoad === 'website2') {
+  //   return <Website2 />;
+  // } else {
+  //   return <Website3 />;
+  // }
 };
 
 export default App;

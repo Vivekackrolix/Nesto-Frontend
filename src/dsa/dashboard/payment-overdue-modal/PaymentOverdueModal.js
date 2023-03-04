@@ -1,5 +1,5 @@
 import { Button } from 'react-bootstrap';
-import { CustomModal } from '../../components';
+import { CustomModal } from '../../../components';
 
 const PaymentOverdueModal = ({ show }) => {
   return (
