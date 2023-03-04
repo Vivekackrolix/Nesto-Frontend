@@ -53,3 +53,9 @@ input.invalid {
 .login__form__forgetpassword {
   margin-top: 0.25rem;
 }
+
+@media (max-width: 374px) {
+  .nes__google__facebook img {
+    width: 80px;
+  }
+}
