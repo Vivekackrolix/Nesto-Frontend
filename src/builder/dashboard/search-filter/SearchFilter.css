@@ -1,0 +1,50 @@
+.voice-location-icons .rounded-circle {
+  width: 32px;
+  height: 32px;
+  background-color: rgb(39 143 217 / 31%);
+  color: var(--primary-color);
+}
+
+.dashboard__wrapper__filter select {
+  font-weight: 400;
+  color: var(--cold-steel-color);
+}
+
+/* Set common styles for input placeholders */
+.dashboard__wrapper__filter input::placeholder {
+  font-weight: 350;
+  font-size: 20px;
+  color: #b3b4b8;
+  opacity: 0.3;
+}
+
+/* Set styles for specific vendor prefixes */
+/* WebKit, Blink, Edge */
+input::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+  opacity: 0.3;
+}
+
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+  opacity: 0.3;
+}
+
+/* Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+/* Microsoft Edge */
+input::-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+.voice-location-icons .bg-color-primary {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
