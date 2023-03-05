@@ -1,10 +1,10 @@
-import { Col, Container, Row } from "react-bootstrap";
-import ContentCard from "./dashboard-info-cards/DashboardInfoCards";
-import DashboardHeader from "./header/DashboardHeader";
-import { Outlet, useLocation } from "react-router-dom";
-import SearchFilterBox from "./search-filter/SearchFilter";
-import PropertyAnalytics from "./dashboard-property-analytics/PropertyAnalytics";
-import SoldOut from "./dashboard-soldout-properties/SoldOut";
+import { Col, Container, Row } from 'react-bootstrap';
+import ContentCard from './dashboard-info-cards/DashboardInfoCards';
+import DashboardHeader from './header/DashboardHeader';
+import { Outlet, useLocation } from 'react-router-dom';
+import SearchFilterBox from './search-filter/SearchFilter';
+import PropertyAnalytics from './dashboard-property-analytics/PropertyAnalytics';
+import SoldOut from './dashboard-soldout-properties/SoldOut';
 // import PaymentOverdueModal from "./payment-overdue-modal/PaymentOverdueModal";
 // import RequestDenyModal from "./request-deny-modal/RequestDenyModal";
 // import PayNowModal from "./pay-now-modal/PayNowModal";
@@ -13,23 +13,23 @@ import SoldOut from "./dashboard-soldout-properties/SoldOut";
 const dashboardInfoCardsData = [
   {
     icon: `/assets/home-sharp-`,
-    title: "Dashboard",
-    path: "/builder/home-dashboard",
+    title: 'Dashboard',
+    path: '/builder/home-dashboard',
   },
   {
     icon: `/assets/wallet-outline-`,
-    title: "Loan Management",
-    path: "/builder/home-dashboard/loan-management",
+    title: 'Loan Management',
+    path: '/builder/home-dashboard/loan-management',
   },
   {
     icon: `/assets/card-outline-`,
-    title: "Payment",
-    path: "/builder/home-dashboard/payment",
+    title: 'Payment',
+    path: '/builder/home-dashboard/payment',
   },
   {
     icon: `/assets/user-outline-`,
-    title: "Profile",
-    path: "/builder/home-dashboard/profile",
+    title: 'Profile',
+    path: '/builder/home-dashboard/profile',
   },
 ];
 
