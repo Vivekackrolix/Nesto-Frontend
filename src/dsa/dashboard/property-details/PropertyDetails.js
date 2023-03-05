@@ -10,7 +10,7 @@ const PropertyDetails = () => {
   const location = useLocation();
 
   return (
-    <Container className="property__details">
+    <Container fluid="lg" className="property__details">
       <PropertyDetailsHeader />
       <Row>
         <Col xs={12} className="mt-4 mb-5">

@@ -6,7 +6,7 @@ const tabKey = ['All', 'Overdue', 'Pending', 'Processing', 'Paid'];
 
 const Payment = () => {
   return (
-    <Container>
+    <Container fluid="lg">
       <Row className="mb-5">
         <Col>
           <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>

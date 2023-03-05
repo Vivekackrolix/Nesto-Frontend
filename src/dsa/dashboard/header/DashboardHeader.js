@@ -17,7 +17,7 @@ const DashboardHeader = () => {
         className="shadow-sm py-3 nes__dashboard__navbar dashboard__navbar d-none d-lg-block"
         expand="lg"
       >
-        <Container>
+        <Container fluid="lg">
           <Navbar.Brand as={Link} to="/dsa/login">
             <img src="/assets/nesto-logo.png" alt="logo" />
           </Navbar.Brand>
@@ -58,7 +58,7 @@ const DashboardHeader = () => {
         className="shadow-sm py-3 nes__dashboard__navbar dashboard__navbar d-block d-lg-none"
         expand="lg"
       >
-        <Container>
+        <Container fluid="lg">
           <Navbar.Brand as={Link} to="/dsa/login">
             <img src="/assets/nesto-logo.png" alt="logo" />
           </Navbar.Brand>

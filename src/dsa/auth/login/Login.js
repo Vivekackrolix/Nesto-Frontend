@@ -63,7 +63,7 @@ const Login = () => {
       <Header />
       <LoginUser />
 
-      <Container className="container-md my-5">
+      <Container fluid="lg" className="container-md my-5">
         <Row className="g-0 login__form">
           <Col md={6} className="d-none d-md-block">
             <Image

@@ -7,7 +7,7 @@ import { HomeDashboardContentContentData } from './HomeDashboardContentData';
 
 const HomeDashboardContent = () => {
   return (
-    <Container>
+    <Container fluid="lg">
       <Row className="mb-5">
         <Col md={9} className="dashboard-parent-card-wrapper">
           {HomeDashboardContentContentData.map(({ title, cardType }) => (
@@ -23,7 +23,7 @@ const HomeDashboardContent = () => {
             </Button>
           </div>
         </Col>
-        <Col md={3}>
+        <Col md={3} className="flex-column overflow-hidden">
           <div className="row g-5">
             {ChartData.map(({ title, data }) => (
               <div className="col" key={title}>
