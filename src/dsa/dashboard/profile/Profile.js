@@ -120,7 +120,7 @@ const ProfilePage = () => {
             </div>
           </aside>
         </Col>
-        <Col md={7} lg={9} className="pt-0">
+        <Col md={7} lg={9} className="pt-0 ">
           <Tab.Container activeKey={activeTab}>
             <Tab.Content>
               {tabs.map((_, index) => (
