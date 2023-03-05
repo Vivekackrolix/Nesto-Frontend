@@ -48,3 +48,36 @@ input::-ms-input-placeholder {
   padding-top: 13px;
   padding-bottom: 13px;
 }
+
+@media (max-width: 767px) {
+  .nes__dashboard__filter {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nes__dashboard__filter div:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  .nes__dashboard__filter div:nth-child(2) {
+    grid-column: start 1 / end -1;
+  }
+}
+
+@media (max-width: 400px) {
+  .nes__dashboard__filter {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nes__dashboard__filter > div {
+    width: 100%;
+  }
+
+  .nes__dashboard__filter div:last-child {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+}

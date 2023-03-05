@@ -40,7 +40,7 @@ const HomeDashBoard = () => {
       <PaymentOverdueModal show={false} />
       <RequestDenyModal show={false} />
       <DashboardHeader />
-      <Container className="pt-5 pb-4 dashboard__wrapper">
+      <Container fluid="lg" className="pt-5 pb-4 dashboard__wrapper">
         <Row className="gx-4 dashboard-cards align-items-center">
           {dashboardInfoCardsData.map((cardItem, index) => (
             <Col xs={12} sm={6} lg={3} className="mb-4" key={index}>
