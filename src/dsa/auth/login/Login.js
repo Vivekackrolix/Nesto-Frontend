@@ -63,9 +63,9 @@ const Login = () => {
       <Header />
       <LoginUser />
 
-      <Container className="container-md my-5">
+      <Container fluid="lg" className="container-md my-5">
         <Row className="g-0 login__form">
-          <Col md={6}>
+          <Col md={6} className="d-none d-md-block">
             <Image
               className="h-100"
               src="https://via.placeholder.com/800x500.png"
@@ -75,7 +75,7 @@ const Login = () => {
           </Col>
           <Col
             md={6}
-            className="p-5 shadow-sm d-flex flex-column justify-content-center"
+            className="p-4 shadow-sm d-flex flex-column justify-content-center"
           >
             <Form>
               <Form.Group>
@@ -148,7 +148,7 @@ const Login = () => {
 
               <Form.Group className="mt-3" controlId="formBasicCheckbox">
                 <Form.Check
-                  className="form-check-inline"
+                  className="form-check"
                   type="checkbox"
                   label="Remember Me"
                 />
@@ -171,7 +171,7 @@ const Login = () => {
               <p className="m-0 px-1">Or Login Using</p>
               <div className="divider flex-grow-1"></div>
             </div>
-            <div className="d-flex gap-2">
+            <div className="d-flex align-item-center gap-2 nes__google__facebook">
               <div className="flex-grow-1 d-flex justify-content-center">
                 <Button variant="link" className="border-0 p-0 mr-3">
                   <img src="/assets/google.svg" alt="google" />

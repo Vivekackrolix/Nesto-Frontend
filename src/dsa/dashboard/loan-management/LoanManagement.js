@@ -6,7 +6,7 @@ const tabKey = ['All', 'Assigned ', ' Matured', 'Not Matured'];
 
 const LoanManagement = () => {
   return (
-    <Container>
+    <Container fluid="lg">
       <Row className="mb-5">
         <Col>
           <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>

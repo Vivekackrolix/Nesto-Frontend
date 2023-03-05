@@ -1,8 +1,10 @@
 import React from 'react'
 import './PartnersDetailSidebar.css';
-import FirstCard from '../PartnersDetailSidebar/FirstCard/FirstCard'
-import SecondCard from '../PartnersDetailSidebar/SecondCard/SecondCard'
-import ThirdCard from '../PartnersDetailSidebar/ThirdCard/ThirdCard'
+import FirstCard from './FirstCard/FirstCard'
+import SecondCard from './SecondCard/SecondCard'
+import ThirdCard from './ThirdCard/ThirdCard'
+import FourthCard from './FourthCard/FourthCard';
+import FifthCard from './FifthCard/FifthCard';
 
 export default function PartnersDetailSidebar() {
     return (
@@ -13,6 +15,10 @@ export default function PartnersDetailSidebar() {
                         <div className='row'>
                             <FirstCard />
                             <SecondCard />
+                            <ThirdCard />
+                            <FourthCard />
+                            <FifthCard />
+                            <FourthCard />
                             <ThirdCard />
                         </div>
                     </div>

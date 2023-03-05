@@ -34,7 +34,7 @@ const tabKey = ['All', '2BHK ', ' 3BHK', '4BHK', '5BHK'];
 
 const Slider = () => {
   return (
-    <Container className="mt-5">
+    <Container fluid="lg" className="mt-5">
       <div className="mb-4 mt-5">
         <h5 className="swiper-title">Floor Plans & Pricing</h5>
         <span className="swiper-subtitle">in Arocon Rainbow</span>
