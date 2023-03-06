@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
-import PartnersDetailLeft from './PartnersDetail/PartnersDetailLeft';
+import PartnersDetailLeft from './PartnersDetail/PartnersDetailLeft/PartnersDetailLeft';
 import PartnersDetailSidebar from './PartnersDetail/PartnersDetailSidebar/PartnersDetailSidebar';
+
 export default function PartnersDetailsMain() {
     return (
         <>
