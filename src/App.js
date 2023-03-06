@@ -1,8 +1,6 @@
 import React from 'react';
 import DsaWebsite from './dsa/App';
-import PartnersDetailsMain from './informative/App';
-import BuilderWeb from './builder/App';
-import BrokerWeb from './broker/App';
+import PartnersDetailsMain from './informative/App'
 
 const App = () => {
   const websiteToLoad = 'builder';
