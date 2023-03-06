@@ -6,6 +6,7 @@ import {
   Image,
   FloatingLabel,
   Form,
+  Container,
 } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import Rating from '../property-details/Rating';
@@ -90,7 +91,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
           )}
           {/* property details page button end */}
 
-          <Col className="d-flex col-auto">
+          <Col className="col-auto d-flex">
             <Card.Img
               className={`align-self-stretch d-flex ${
                 cardType === `propertyDetailsProfile`
@@ -106,164 +107,83 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
           </Col>
           <Col
             className={`col dash-content ${
-              cardType === `propertyDetailsProfile` &&
-              'd-flex flex-column justify-content-center'
+              cardType === `propertyDetailsProfile`
+                ? 'd-flex flex-column justify-content-center'
+                : ''
             }`}
           >
-            <Row className="g-3 align-items-start">
-              <Col xs={12}>
-                {cardType === 'overdue' && !payment && (
-                  <Button className="card-label bg-color-red btn-sm">
-                    Overdue
-                  </Button>
-                )}
-
-                {cardType === 'overdue' && payment && (
-                  <Button
-                    className={`card-label bg-color-red btn-sm ${
-                      payment !== 'Paid'
-                        ? payment === 'Pending'
-                          ? `Pending`
-                          : payment === 'Processing'
-                          ? 'Processing'
-                          : `Overdue`
-                        : `Paid`
-                    }`}
-                  >
-                    {payment}
-                  </Button>
-                )}
-
-                {cardType === 'acceptedLoanQueries' && (
-                  <Button className="card-label bg-color-primary btn-sm">
-                    Assigned
-                  </Button>
-                )}
-
-                {/* property-details-assigned page content */}
-                {cardType === 'propertyDetailsProfile' &&
-                  location.pathname ===
-                    '/dsa/home-dashboard/property-details-assigned' && (
-                    <>
-                      <div className="card-label d-flex justify-content-end align-items-center bg-transparent date-container">
-                        05/01/23
-                      </div>
-                    </>
+            <Container>
+              <Row className="g-3 align-items-start">
+                <Col xs={12}>
+                  {cardType === 'overdue' && !payment && (
+                    <Button className="card-label bg-color-red btn-sm">
+                      Overdue
+                    </Button>
                   )}
-                {/* property-details-assigned page content end */}
-              </Col>
 
-              <Col
-                xs={12}
-                className="bg-transparent gap-2 dashboard-cards-title"
-              >
-                <Card.Title className="d-flex align-items-center justify-content-start fw-bold">
-                  Sky Dandelions Apartment
-                  {/* rating */}
-                  {!payment && <Rating cardType="propertyDetailsProfile" />}
-                </Card.Title>
-                <Card.Subtitle className="d-flex justify-content-start text-muted mt-1">
-                  Sector-29,Gurugram
-                </Card.Subtitle>
-              </Col>
+                  {cardType === 'overdue' && payment && (
+                    <Button
+                      className={`card-label bg-color-red btn-sm ${
+                        payment !== 'Paid'
+                          ? payment === 'Pending'
+                            ? `Pending`
+                            : payment === 'Processing'
+                            ? 'Processing'
+                            : `Overdue`
+                          : `Paid`
+                      }`}
+                    >
+                      {payment}
+                    </Button>
+                  )}
 
-              {cardType === 'overdue' &&
-                overdueColumnsData.map(({ label, value }, index) => (
-                  <Col key={index} xs={12} md={4} className="text-truncate">
-                    <span className="fw-semibold text-dark">{label}</span> :{' '}
-                    <span className="text-dark">{value}</span>
-                  </Col>
-                ))}
+                  {cardType === 'acceptedLoanQueries' && (
+                    <Button className="card-label bg-color-primary btn-sm">
+                      Assigned
+                    </Button>
+                  )}
 
-              {cardType === 'overdue' && !payment && (
-                <Col
-                  xs={12}
-                  md={4}
-                  className="d-grid gap-3 bg-transparent px-3"
-                >
-                  <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
-                    Download Invoice
-                    <Image
-                      className="h-100"
-                      fluid
-                      src="/assets/upload-icon.svg"
-                      alt="upload"
-                    />
-                  </Button>
-
-                  <Button className="btn-color-primary rounded-100">
-                    Pay Now
-                  </Button>
-
-                  {/* payment !== 'Paid'
-                        ? payment === 'Pending'
-                          ? `Pending`
-                          : payment === 'Processing'
-                          ? 'Processing'
-                          : `Overdue`
-                        : `Paid`
-                    } */}
+                  {/* property-details-assigned page content */}
+                  {cardType === 'propertyDetailsProfile' &&
+                    location.pathname ===
+                      '/dsa/home-dashboard/property-details-assigned' && (
+                      <>
+                        <div className="card-label d-flex justify-content-end align-items-center bg-transparent date-container">
+                          05/01/23
+                        </div>
+                      </>
+                    )}
+                  {/* property-details-assigned page content end */}
                 </Col>
-              )}
 
-              {/* payment page code start */}
-              {payment && (
                 <Col
                   xs={12}
-                  md={4}
-                  className="d-grid gap-3 bg-transparent px-3"
+                  className="bg-transparent gap-2 dashboard-cards-title"
                 >
-                  {payment !== 'Paid' ? (
-                    payment === 'Pending' ? (
-                      <>
-                        <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
-                          Download Invoice
-                          <Image
-                            className="h-100"
-                            fluid
-                            src="/assets/upload-icon.svg"
-                            alt="upload"
-                          />
-                        </Button>
-                        <Button className="btn-color-primary rounded-100">
-                          Pay Now
-                        </Button>
-                      </>
-                    ) : payment === 'Processing' ? (
-                      <>
-                        <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
-                          Download Invoice
-                          <Image
-                            className="h-100"
-                            fluid
-                            src="/assets/upload-icon.svg"
-                            alt="upload"
-                          />
-                        </Button>
-                        {/* <Button
-                          className="btn-color-primary rounded-100"
-                          disabled
-                        >
-                          Pay Now
-                        </Button> */}
-                      </>
-                    ) : (
-                      <>
-                        <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
-                          Download Invoice
-                          <Image
-                            className="h-100"
-                            fluid
-                            src="/assets/upload-icon.svg"
-                            alt="upload"
-                          />
-                        </Button>
-                        <Button className="btn-color-primary rounded-100">
-                          Pay Now
-                        </Button>
-                      </>
-                    )
-                  ) : (
+                  <Card.Title className="d-flex align-items-center justify-content-start fw-bold">
+                    Sky Dandelions Apartment
+                    {/* rating */}
+                    {!payment && <Rating cardType="propertyDetailsProfile" />}
+                  </Card.Title>
+                  <Card.Subtitle className="d-flex justify-content-start text-muted mt-1">
+                    Sector-29,Gurugram
+                  </Card.Subtitle>
+                </Col>
+
+                {cardType === 'overdue' &&
+                  overdueColumnsData.map(({ label, value }, index) => (
+                    <Col key={index} xs={12} md={4} className="text-truncate">
+                      <span className="fw-semibold text-dark">{label}</span> :{' '}
+                      <span className="text-dark">{value}</span>
+                    </Col>
+                  ))}
+
+                {cardType === 'overdue' && !payment && (
+                  <Col
+                    xs={12}
+                    md={4}
+                    className="d-grid gap-3 bg-transparent px-3"
+                  >
                     <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                       Download Invoice
                       <Image
@@ -273,32 +193,116 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                         alt="upload"
                       />
                     </Button>
-                  )}
-                </Col>
-              )}
 
-              {/* payment page code end */}
+                    <Button className="btn-color-primary rounded-100">
+                      Pay Now
+                    </Button>
 
-              {/* assigned cards */}
-              {cardType === 'assigned' &&
-                assignedColumnsData.map(({ label, value }, index) => (
-                  <Col key={index} xs={12} md={6}>
-                    <span className="fw-semibold text-dark">{label}</span> :{' '}
-                    <span className="text-dark">{value}</span>
+                    {/* payment !== 'Paid'
+                        ? payment === 'Pending'
+                          ? `Pending`
+                          : payment === 'Processing'
+                          ? 'Processing'
+                          : `Overdue`
+                        : `Paid`
+                    } */}
                   </Col>
-                ))}
-              {/* assigned cards code end here */}
+                )}
 
-              {/* accepted loan queries code start */}
-              {cardType === 'acceptedLoanQueries' &&
-                acceptedLoanQueriesData.map(({ label, value }, index) => (
-                  <Col key={index} xs={12} md={4} className="text-truncate">
-                    <span className="fw-semibold text-dark">{label}</span> :{' '}
-                    <span className="text-dark">{value}</span>
+                {/* payment page code start */}
+                {payment && (
+                  <Col
+                    xs={12}
+                    md={4}
+                    className="d-grid gap-3 bg-transparent px-3"
+                  >
+                    {payment !== 'Paid' ? (
+                      payment === 'Pending' ? (
+                        <>
+                          <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                            Download Invoice
+                            <Image
+                              className="h-100"
+                              fluid
+                              src="/assets/upload-icon.svg"
+                              alt="upload"
+                            />
+                          </Button>
+                          <Button className="btn-color-primary rounded-100">
+                            Pay Now
+                          </Button>
+                        </>
+                      ) : payment === 'Processing' ? (
+                        <>
+                          <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                            Download Invoice
+                            <Image
+                              className="h-100"
+                              fluid
+                              src="/assets/upload-icon.svg"
+                              alt="upload"
+                            />
+                          </Button>
+                          {/* <Button
+                          className="btn-color-primary rounded-100"
+                          disabled
+                        >
+                          Pay Now
+                        </Button> */}
+                        </>
+                      ) : (
+                        <>
+                          <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                            Download Invoice
+                            <Image
+                              className="h-100"
+                              fluid
+                              src="/assets/upload-icon.svg"
+                              alt="upload"
+                            />
+                          </Button>
+                          <Button className="btn-color-primary rounded-100">
+                            Pay Now
+                          </Button>
+                        </>
+                      )
+                    ) : (
+                      <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                        Download Invoice
+                        <Image
+                          className="h-100"
+                          fluid
+                          src="/assets/upload-icon.svg"
+                          alt="upload"
+                        />
+                      </Button>
+                    )}
                   </Col>
-                ))}
-              {/* accepted loan queries code end here */}
-            </Row>
+                )}
+
+                {/* payment page code end */}
+
+                {/* assigned cards */}
+                {cardType === 'assigned' &&
+                  assignedColumnsData.map(({ label, value }, index) => (
+                    <Col key={index} xs={12} md={6}>
+                      <span className="fw-semibold text-dark">{label}</span> :{' '}
+                      <span className="text-dark">{value}</span>
+                    </Col>
+                  ))}
+                {/* assigned cards code end here */}
+
+                {/* accepted loan queries code start */}
+                {cardType === 'acceptedLoanQueries' &&
+                  acceptedLoanQueriesData.map(({ label, value }, index) => (
+                    <Col key={index} xs={12} md={4} className="text-truncate">
+                      <span className="fw-semibold text-dark">{label}</span> :{' '}
+                      <span className="text-dark">{value}</span>
+                    </Col>
+                  ))}
+                {/* accepted loan queries code end here */}
+              </Row>
+            </Container>
           </Col>
 
           {cardType === 'assigned' && !status && (
