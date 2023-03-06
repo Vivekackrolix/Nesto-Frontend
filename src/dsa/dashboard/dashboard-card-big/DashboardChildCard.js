@@ -91,7 +91,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
           )}
           {/* property details page button end */}
 
-          <Col className="col-auto d-flex">
+          <Col className="col-12 col-sm-auto d-flex">
             <Card.Img
               className={`align-self-stretch d-flex ${
                 cardType === `propertyDetailsProfile`
@@ -172,7 +172,13 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
 
                 {cardType === 'overdue' &&
                   overdueColumnsData.map(({ label, value }, index) => (
-                    <Col key={index} xs={12} md={4} className="text-truncate">
+                    <Col
+                      key={index}
+                      xs={12}
+                      md={6}
+                      lg={4}
+                      className="text-truncate"
+                    >
                       <span className="fw-semibold text-dark">{label}</span> :{' '}
                       <span className="text-dark">{value}</span>
                     </Col>
@@ -181,8 +187,9 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                 {cardType === 'overdue' && !payment && (
                   <Col
                     xs={12}
-                    md={4}
-                    className="d-grid gap-3 bg-transparent px-3"
+                    md={6}
+                    lg={4}
+                    className="d-grid gap-3 bg-transparent px-3 card__paynow__invoice"
                   >
                     <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                       Download Invoice
@@ -194,7 +201,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                       />
                     </Button>
 
-                    <Button className="btn-color-primary rounded-100">
+                    <Button className="btn-color-primary rounded-100 my-2">
                       Pay Now
                     </Button>
 
@@ -213,8 +220,9 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                 {payment && (
                   <Col
                     xs={12}
-                    md={4}
-                    className="d-grid gap-3 bg-transparent px-3"
+                    md={6}
+                    lg={4}
+                    className="d-grid gap-3 bg-transparent px-3 card__paynow__invoice"
                   >
                     {payment !== 'Paid' ? (
                       payment === 'Pending' ? (
@@ -228,13 +236,13 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                               alt="upload"
                             />
                           </Button>
-                          <Button className="btn-color-primary rounded-100">
+                          <Button className="btn-color-primary rounded-100 my-2">
                             Pay Now
                           </Button>
                         </>
                       ) : payment === 'Processing' ? (
                         <>
-                          <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                          <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100 mb-2">
                             Download Invoice
                             <Image
                               className="h-100"
@@ -243,12 +251,6 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                               alt="upload"
                             />
                           </Button>
-                          {/* <Button
-                          className="btn-color-primary rounded-100"
-                          disabled
-                        >
-                          Pay Now
-                        </Button> */}
                         </>
                       ) : (
                         <>
@@ -261,7 +263,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                               alt="upload"
                             />
                           </Button>
-                          <Button className="btn-color-primary rounded-100">
+                          <Button className="btn-color-primary rounded-100 my-2">
                             Pay Now
                           </Button>
                         </>
@@ -285,7 +287,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                 {/* assigned cards */}
                 {cardType === 'assigned' &&
                   assignedColumnsData.map(({ label, value }, index) => (
-                    <Col key={index} xs={12} md={6}>
+                    <Col key={index} xs={12} sm={12} md={6} lg={4}>
                       <span className="fw-semibold text-dark">{label}</span> :{' '}
                       <span className="text-dark">{value}</span>
                     </Col>
@@ -295,7 +297,13 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                 {/* accepted loan queries code start */}
                 {cardType === 'acceptedLoanQueries' &&
                   acceptedLoanQueriesData.map(({ label, value }, index) => (
-                    <Col key={index} xs={12} md={4} className="text-truncate">
+                    <Col
+                      key={index}
+                      xs={12}
+                      md={6}
+                      lg={4}
+                      className="text-truncate"
+                    >
                       <span className="fw-semibold text-dark">{label}</span> :{' '}
                       <span className="text-dark">{value}</span>
                     </Col>
@@ -306,8 +314,8 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
           </Col>
 
           {cardType === 'assigned' && !status && (
-            <Col className="col-3 border-start d-flex justify-content-center align-items-center">
-              <div>
+            <Col className="col-12 col-lg-3 border-start d-flex justify-content-center align-items-center">
+              <div className="mt-4 mt-lg-0 text-center w-100 w-lg-auto">
                 <Card.Text>Lorem Ipsum Dummy text</Card.Text>
                 <div className="d-grid px-4 gap-2">
                   <Button className="btn-color-primary">Accept</Button>
