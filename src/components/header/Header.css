@@ -13,3 +13,10 @@
   background-color: var(--primary-color);
   color: #ffffff;
 }
+
+@media (max-width: 992px) {
+  /* .nes__header .navbar-nav {
+      display: flex;
+      flex-direction: column;
+    } */
+}

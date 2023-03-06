@@ -40,7 +40,7 @@ export const RouteData = [
       },
       {
         id: 7,
-        path: 'property-details-info',
+        path: 'property-details-assigned',
         element: <PropertyDetails />,
       },
     ],
