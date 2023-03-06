@@ -2,6 +2,7 @@ import "./DashboardHeader.css";
 import { Container, Nav } from "react-bootstrap";
 import profile from "../../Images/Profile.png";
 import bgImage from "../../Images/bg-image.png";
+import { Link } from "react-router-dom";
 
 const DashboardHeader = () => {
   return (
@@ -17,7 +18,9 @@ const DashboardHeader = () => {
           </Nav.Item>
           <div className="d-flex flex-row col-4 justify-content-between ms-auto">
             <Nav.Item className="">Home</Nav.Item>
-            <Nav.Item>Property</Nav.Item>
+            <Nav.Link as={Link} to="/builder/home-dashboard/property">
+              Property
+            </Nav.Link>
             <Nav.Item>Brockerage</Nav.Item>
           </div>
           <div className="d-flex col-2 ms-auto">

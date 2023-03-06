@@ -1,7 +1,7 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import propertyImage from "../../Images/propertyimage.png";
+import { Card, Col, Container, Row } from "react-bootstrap";
+import propertyImage from "../../Images/propertyadded.png";
 
-const SoldOut = ({ data }) => {
+const RecentlyAdded = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Card className="m-4" style={{ width: "23rem" }}>
@@ -11,33 +11,35 @@ const SoldOut = ({ data }) => {
           <Card.Text>
             <Row>
               <Row>Sky Danelions Apartment</Row>
-              <Row style={{ opacity: 0.5 }}>Farmhouse in Sector 63 Gurgaon</Row>
+              <Row style={{ opacity: 0.5 }}>
+                Luxury Apartment in Sector-29,Gurugram
+              </Row>
             </Row>
             <Row className="pt-3">
               <Col>
-                <Row style={{ opacity: 0.5 }}>Unit Type</Row>
+                <Row>Unit Type</Row>
                 <Row>2BHK</Row>
               </Col>
               <Col>
-                <Row style={{ opacity: 0.5 }}>Unit Number</Row>
+                <Row>Unit Number</Row>
                 <Row>123456789</Row>
               </Col>
               <Col>
-                <Row style={{ opacity: 0.5 }}>Selling Price</Row>
-                <Row>₹ 3.94 Cr</Row>
+                <Row>Selling Price</Row>
+                <Row>Rs. 3.94 Cr</Row>
               </Col>
             </Row>
             <Row className="pt-3">
               <Col>
-                <Row style={{ opacity: 0.5 }}>Client Name</Row>
+                <Row>Client Name</Row>
                 <Row>Lorem Ipsum</Row>
               </Col>
               <Col>
-                <Row style={{ opacity: 0.5 }}>Broker ID</Row>
+                <Row>Broker ID</Row>
                 <Row>1234456</Row>
               </Col>
               <Col>
-                <Row style={{ opacity: 0.5 }}>Selling Date</Row>
+                <Row>Selling Date</Row>
                 <Row>10/11/22</Row>
               </Col>
             </Row>
@@ -49,7 +51,7 @@ const SoldOut = ({ data }) => {
   return (
     <Container className="mt-5">
       <div className="row justify-content-between">
-        <h3 className="col-4">Recently Sold Out Property</h3>
+        <h3 className="col-4">Recently Added</h3>
         <i className="col-1" style={{ color: "#FC5C67" }}>
           View all
         </i>
@@ -62,4 +64,4 @@ const SoldOut = ({ data }) => {
   );
 };
 
-export default SoldOut;
+export default RecentlyAdded;
