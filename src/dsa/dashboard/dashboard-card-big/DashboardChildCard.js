@@ -44,26 +44,14 @@ const acceptedLoanQueriesData = [
 const DashboardChildCard = ({ cardType, status, payment }) => {
   const location = useLocation();
 
-  // Check if the current URL contains the string "/home-dashboard/property-details"
-  // const isPropertyDetailsPage = location.pathname.includes(
-  //   '/dsa/home-dashboard/property-details'
-  // );
-
-  // const isHomeDashboardPage = location.pathname === '/dsa/home-dashboard';
-
-  // let cardProps = {};
-  // if (isPropertyDetailsPage) {
-  //   cardProps.as = Link;
-  //   cardProps.to = '/dsa/home-dashboard/property-details-info';
-  // }
-
-  // if (isHomeDashboardPage) {
-  //   cardProps.as = Link;
-  //   cardProps.to = '/dsa/home-dashboard/property-details';
-  // }
-
+  const cardProps = {};
+  if (location.pathname === '/dsa/home-dashboard') {
+    cardProps.as = Link;
+    cardProps.to = `/dsa/home-dashboard/property-details-assigned`;
+  }
   return (
     <Card
+      {...cardProps}
       className={`border-0 shadow-sm ${
         payment ? 'mt-5' : 'mt-3'
       } text-decoration-none`}
