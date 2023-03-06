@@ -1,47 +1,26 @@
-import { Col, Container, Row } from 'react-bootstrap';
-import ContentCard from './dashboard-info-cards/DashboardInfoCards';
-import DashboardHeader from './header/DashboardHeader';
-import { Outlet, useLocation } from 'react-router-dom';
-import SearchFilterBox from './search-filter/SearchFilter';
-import PropertyAnalytics from './dashboard-property-analytics/PropertyAnalytics';
-import SoldOut from './dashboard-soldout-properties/SoldOut';
-// import PaymentOverdueModal from "./payment-overdue-modal/PaymentOverdueModal";
-// import RequestDenyModal from "./request-deny-modal/RequestDenyModal";
-// import PayNowModal from "./pay-now-modal/PayNowModal";
-// import "./Dashboard.css";
+import { Col, Container, Row } from "react-bootstrap";
+import ContentCard from "./dashboard-info-cards/DashboardInfoCards";
+import DashboardHeader from "./header/DashboardHeader";
+import { Outlet, useLocation } from "react-router-dom";
+import SearchFilterBox from "./search-filter/SearchFilter";
+import PropertyAnalytics from "./dashboard-property-analytics/PropertyAnalytics";
+import SoldOut from "./dashboard-soldout-properties/SoldOut";
 
-const dashboardInfoCardsData = [
-  {
-    icon: `/assets/home-sharp-`,
-    title: 'Dashboard',
-    path: '/builder/home-dashboard',
-  },
-  {
-    icon: `/assets/wallet-outline-`,
-    title: 'Loan Management',
-    path: '/builder/home-dashboard/loan-management',
-  },
-  {
-    icon: `/assets/card-outline-`,
-    title: 'Payment',
-    path: '/builder/home-dashboard/payment',
-  },
-  {
-    icon: `/assets/user-outline-`,
-    title: 'Profile',
-    path: '/builder/home-dashboard/profile',
-  },
-];
+// import "./Dashboard.css";
+import homeImage from "../Images/Home.png";
+import PropertyInvoice from "./dashboard-property-analytics/PendindInvoice";
+import PendingInvoice from "./dashboard-property-analytics/PendingInvoice";
+import RecentlyAdded from "./dashboard-soldout-properties/RecentlyAdded";
+
+const dashboardInfoCardsData = [];
 
 const HomeDashBoard = () => {
   const location = useLocation();
 
   return (
     <>
-      {/* <PayNowModal show={false} />
-      <PaymentOverdueModal show={false} />
-      <RequestDenyModal show={false} />*/}
       <DashboardHeader />
+
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <Row className="gx-4 dashboard-cards align-items-center">
           {dashboardInfoCardsData.map((cardItem, index) => (
@@ -55,11 +34,15 @@ const HomeDashBoard = () => {
             </Col>
           ))}
         </Row>
+        <img src={homeImage} className="rounded my-3" alt="Home" />
         <SearchFilterBox />
         <PropertyAnalytics />
         <SoldOut data={[1, 2, 3, 4, 5, 6]} />
+        <RecentlyAdded data={[1, 2, 3, 4, 5, 6]} />
+        <PendingInvoice />
+        <PropertyInvoice />
       </Container>
-      {/* <Outlet /> */}
+      <Outlet />
     </>
   );
 };
