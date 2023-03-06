@@ -61,6 +61,18 @@
   font-weight: bold !important;
 }
 
+.nes__dashboard__loanmanagement form select {
+  background: #f6f6f6;
+  border-radius: 3px;
+}
+
+.nes__dashboard__loanmanagement span {
+  color: #0070c0;
+  font-weight: 400;
+  font-size: 12px;
+  color: #0070c0;
+}
+
 @media (max-width: 1250px) {
   .card__paynow__invoice {
     width: 100% !important;
