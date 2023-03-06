@@ -18,7 +18,7 @@ const DashboardHeader = () => {
         expand="lg"
       >
         <Container fluid="lg">
-          <Navbar.Brand as={Link} to="/dsa/login">
+          <Navbar.Brand as={Link} to="/dsa/home-dashboard">
             <img src="/assets/nesto-logo.png" alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -59,7 +59,7 @@ const DashboardHeader = () => {
         expand="lg"
       >
         <Container fluid="lg">
-          <Navbar.Brand as={Link} to="/dsa/login">
+          <Navbar.Brand as={Link} to="/dsa/home-dashboard">
             <img src="/assets/nesto-logo.png" alt="logo" />
           </Navbar.Brand>
           <Dropdown

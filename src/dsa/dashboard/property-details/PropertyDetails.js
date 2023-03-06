@@ -11,18 +11,26 @@ const PropertyDetails = () => {
 
   return (
     <Container fluid="lg" className="property__details">
-      <PropertyDetailsHeader />
       <Row>
-        <Col xs={12} className="mt-4 mb-5">
-          <DashboardChildCard cardType="propertyDetailsProfile" />
-        </Col>
         <Col xs={12}>
           {location.pathname === '/dsa/home-dashboard/property-details' && (
-            <PropertyDetailsForm />
+            <>
+              <PropertyDetailsHeader />
+              <div className="mt-5"></div>
+              <DashboardChildCard cardType="propertyDetailsProfile" />
+              <div className="mb-5"></div>
+              <PropertyDetailsText />
+            </>
           )}
           {location.pathname ===
-            '/dsa/home-dashboard/property-details-info' && (
-            <PropertyDetailsText />
+            '/dsa/home-dashboard/property-details-assigned' && (
+            <>
+              <PropertyDetailsHeader />
+              <div className="mt-5"></div>
+              <DashboardChildCard cardType="propertyDetailsProfile" />
+              <div className="mb-5"></div>
+              <PropertyDetailsForm />
+            </>
           )}
         </Col>
       </Row>
