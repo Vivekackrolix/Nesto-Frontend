@@ -335,23 +335,24 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
 
           {/* assigned card code start here  */}
           {cardType === 'assigned' && status && (
-            <Col className="col-3 border-start d-flex justify-content-center align-items-center">
-              <Col>
-                <Form>
-                  <FloatingLabel
-                    controlId="statusSelect"
-                    label="Status"
-                    className="mb-3"
-                  >
-                    <Form.Select required>
-                      <option>status</option>
-                      <option value="status1">Assigned</option>
-                      <option value="status2">Matured</option>
-                      <option value="status3">Not Matured</option>
-                    </Form.Select>
-                  </FloatingLabel>
-                </Form>
-              </Col>
+            <Col className="col-12 mt-3 mt-md-0 col-md-3 border-start d-flex flex-column justify-content-center nes__dashboard__loanmanagement text-center">
+              <Form className="px-2">
+                <FloatingLabel
+                  controlId="statusSelect"
+                  label="Status"
+                  className="mb-3"
+                >
+                  <Form.Select required>
+                    <option>status</option>
+                    <option value="status1">Assigned</option>
+                    <option value="status2">Matured</option>
+                    <option value="status3">Not Matured</option>
+                  </Form.Select>
+                </FloatingLabel>
+              </Form>
+              <span>
+                <span>Last Status Date</span> : <span>04/01/23</span>
+              </span>
             </Col>
           )}
           {/* assigned code end here  */}
