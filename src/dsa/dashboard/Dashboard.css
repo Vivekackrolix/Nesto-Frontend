@@ -24,7 +24,7 @@
   border-bottom-left-radius: 10px;
   padding-inline: 20px;
   position: absolute;
-  top: 0;
+  top: -10px;
   right: 0;
 }
 
@@ -59,4 +59,10 @@
 .property__details__text .no-bg-title {
   font-size: 20px !important;
   font-weight: bold !important;
+}
+
+@media (max-width: 1250px) {
+  .card__paynow__invoice {
+    width: 100% !important;
+  }
 }
