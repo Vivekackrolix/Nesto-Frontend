@@ -21,8 +21,8 @@ const Footer = () => {
   return (
     <footer className="bg-color-primary mt-5 login__footer mt-auto">
       <Container className="py-5">
-        <Row className="gx-5">
-          <Col md={3}>
+        <Row className="gy-sm-2 gx-lg-4">
+          <Col sm={12} lg={3}>
             <img src="/assets/nesto-logo-white.png" alt="logo 2" />
             <p className="mt-2">
               We’re reimagining how you buy, sell and rent. It’s now easier to
@@ -30,8 +30,8 @@ const Footer = () => {
             </p>
             <SocialMedia />
           </Col>
-          <Col md={3}>
-            <h5 className="fw-bold">Company Info</h5>
+          <Col sm={12} lg={3}>
+            <h5 className="fw-bold mt-sm-5 my-4 my-lg-0">Company Info</h5>
             <ul className="list-unstyled text-white mt-3">
               {footerLinks[0].companyInfo.map((ftLink, index) => (
                 <li key={index}>
@@ -42,11 +42,11 @@ const Footer = () => {
               ))}
             </ul>
           </Col>
-          <Col md={3}>
+          <Col sm={12} lg={3}>
             <h5 className="fw-bold">Quick Link</h5>
             <ul className="list-unstyled mt-3">
-              {footerLinks[1].quickLink.map(ftLink => (
-                <li>
+              {footerLinks[1].quickLink.map((ftLink, index) => (
+                <li key={index}>
                   <Link className="fw-light" to="/dsa/login">
                     {ftLink}
                   </Link>
@@ -55,7 +55,7 @@ const Footer = () => {
             </ul>
           </Col>
 
-          <Col md={3}>
+          <Col sm={12} lg={3}>
             <h5 className="fw-bold">Get in Touch With Us</h5>
             <p className="mt-3">
               Duis mattis laoreet neque, et ornare neque sollicitudin at. Proin

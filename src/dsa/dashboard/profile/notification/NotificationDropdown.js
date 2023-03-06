@@ -5,7 +5,7 @@ import './NotificationDropdown.css';
 import { Link } from 'react-router-dom';
 const NotificationDropdown = ({ notification }) => {
   return (
-    <Dropdown align="end" className="notification">
+    <Dropdown align="end" drop="down" className="notification">
       <Dropdown.Toggle
         as={Button}
         variant="link"

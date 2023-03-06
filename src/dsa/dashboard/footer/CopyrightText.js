@@ -1,21 +1,32 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './CopyrightText.css';
 
 const CopyrightText = () => {
   return (
     <div className="bg-color-primary-darker py-3 mt-auto">
-      <Container>
+      <Container fluid="lg">
         <Row>
           <Col
-            xs={8}
-            className="text-white text-opacity-75 d-flex align-items-center"
+            md={12}
+            lg={8}
+            className="text-white text-opacity-75 d-flex justify-content-center justify-content-lg-start align-items-center"
           >
-            © {new Date().getFullYear()}
-            <span className="text-white fw-bold">&nbsp;Nesto Hub&nbsp;</span> |
-            All Rights Reserved | Design & Develop by
-            <span className="text-white fw-bold"> &nbsp;Bizzeonline </span>
+            <span className="text-center">
+              {' '}
+              © {new Date().getFullYear()}
+              <span className="text-white fw-bold">
+                &nbsp;Nesto Hub&nbsp;
+              </span>{' '}
+              | All Rights Reserved | Design & Develop by
+              <span className="text-white fw-bold"> &nbsp;Bizzeonline </span>
+            </span>
           </Col>
-          <Col xs={4} className="d-flex justify-content-end align-items-center">
+          <Col
+            md={12}
+            lg={4}
+            className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-end align-items-center nes__dashboard__footersm"
+          >
             <Button
               variant="link"
               as={Link}

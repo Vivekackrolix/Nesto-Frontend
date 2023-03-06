@@ -9,7 +9,7 @@ const DashboardTabs = ({ children, tabsKey, activeState }) => {
       id="dashboard-tabs"
       activeKey={key}
       onSelect={k => setKey(k)}
-      className="mb-3 rounded"
+      className="mb-3 p-5 rounded flex-column flex-sm-row"
     >
       {tabsKey &&
         tabsKey.map((item, index) => (
