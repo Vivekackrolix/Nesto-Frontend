@@ -1,10 +1,10 @@
-import Test from '../Test';
+import Login from '../Pages/Login';
 
 export const RouteData = [
   {
     id: 1,
-    page: 'Broker test',
-    path: '/broker/test',
-    element: <Test />,
+    page: 'Login Page',
+    path: '/broker/login',
+    element: <Login />,
   },
 ];

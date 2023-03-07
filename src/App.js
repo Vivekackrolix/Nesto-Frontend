@@ -9,13 +9,13 @@ const App = () => {
   const websiteToLoad = 'broker';
 
   switch (websiteToLoad) {
-      case 'informativeHomeBanner':
-      return <Banner/>;
+    case 'informativeHomeBanner':
+      return <Banner />;
     case 'dsa':
       return <DsaWebsite />;
     case 'partnersDetailsMain':
       return <PartnersDetailsMain />;
-    
+
     case 'builder':
       return <BuilderWeb />;
     case 'broker':
