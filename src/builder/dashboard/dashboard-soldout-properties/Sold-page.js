@@ -8,6 +8,7 @@ import Anlytics from "../dashboard-property-analytics/dashboard-property-details
 import Location from "../dashboard-property-analytics/dashboard-property-details/Location";
 import Amenities from "../dashboard-property-analytics/dashboard-property-details/Amenities";
 import Payment from "../dashboard-property-analytics/dashboard-property-details/Payment";
+import Danelions from "./Danelions";
 
 const SoldPage = () => {
   return (
@@ -16,6 +17,7 @@ const SoldPage = () => {
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
         <img src={homeImage} className="rounded my-3" alt="Home" />
+        <Danelions />
         <Anlytics />
         <Amenities />
         <Col>

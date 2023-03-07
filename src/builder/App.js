@@ -6,11 +6,9 @@ import Property from "./dashboard/property/Property";
 // import VisitDetails from "./dashboard/dashboard-property-analytics/Visit-Details/VisitDetails";
 import SoldPage from "./dashboard/dashboard-soldout-properties/Sold-page";
 import PromotedVisit from "./dashboard/dashboard-property-analytics/Visit Details/PromotedVisit";
-// import VisitDetails from "./dashboard/dashboard-property-analytics/Visit-Details/VisitDetails";
-// import VisitDetails from "./dashboard/dashboard-property-analytics/Visit Details/VisitDetails";
-import VisitDetails from "./dashboard/dashboard-property-analytics/Visit Details/VisitDetails";
 
-// import PromotedVisit from "./dashboard/dashboard-property-analytics/Visit-Details/PromotedVisit.js";
+import VisitDetails from "./dashboard/dashboard-property-analytics/Visit Details/VisitDetails";
+import PropertyEdit from "./dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
 
 const App = () => {
   return (
@@ -26,6 +24,12 @@ const App = () => {
           exact
           path="/builder/home-dashboard/visit"
           element={<VisitDetails />}
+        />
+
+        <Route
+          exact
+          path="/builder/home-dashboard/propertyedit"
+          element={<PropertyEdit />}
         />
 
         <Route
