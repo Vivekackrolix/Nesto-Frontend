@@ -5,7 +5,7 @@ import ContactUs from './informative/App';
 import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
-import PartnerBanner from './informative/PartnersPage/Partnerbanner/Partnerbanner';
+import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner'
 
 const App = () => {
   const websiteToLoad = 'informativePartnersDetailsMain';
