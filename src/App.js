@@ -1,17 +1,20 @@
 import React from 'react';
 import DsaWebsite from './dsa/App';
 import PartnersDetailsMain from './informative/App';
+import ContactUs from './informative/App';
 import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
 
 const App = () => {
-  const websiteToLoad = 'dsa';
+  const websiteToLoad = 'partnersDetailsMain';
 
   switch (websiteToLoad) {
     case 'dsa':
       return <DsaWebsite />;
-    case 'partnersDetailsMain':
+      case 'partnersDetailsMain':
       return <PartnersDetailsMain />;
+    case 'contactUs':
+      return <ContactUs />
     case 'builder':
       return <BuilderWeb />;
     case 'broker':
