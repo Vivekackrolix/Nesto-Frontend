@@ -1,5 +1,6 @@
-import Footer from "../../footer/Footer";
-import Header from "../../header/Header";
+
+import { Footer, Header } from '../../../components';
+import Partner from '../partners/partner';
 import './partnerbanner.css'
 
 
@@ -26,17 +27,22 @@ Represent Us.
               </div>
             </div>
             <div className="col-md-5 d-flex image-div">
-            <img className='dot-curve' src="dotted-curve" alt="" />
+            {/* <img className='dot-curve' src="dotted-curve" alt="" /> */}
              
               <img
                 className="building-image"
-                src="./assets/partnerbuiding.png"
+                src="./assets/partnerbuilding.png"
                 alt=""
               />
             </div>
           </div>
         </div>
-       <Footer/>
+      <Partner/>
+      <Partner/>
+      <Partner/>
+      <Partner/>
+      <Partner/>
+   
        
 
       </>
