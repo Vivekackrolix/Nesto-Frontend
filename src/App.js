@@ -1,9 +1,11 @@
 import React from 'react';
 import DsaWebsite from './dsa/App';
-import PartnersDetailsMain from './informative/App'
+import PartnersDetailsMain from './informative/App';
+import BuilderWeb from './builder/App';
+import BrokerWeb from './broker/App';
 
 const App = () => {
-  const websiteToLoad = 'builder';
+  const websiteToLoad = 'dsa';
 
   switch (websiteToLoad) {
     case 'dsa':

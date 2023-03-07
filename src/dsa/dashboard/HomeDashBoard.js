@@ -7,6 +7,7 @@ import PaymentOverdueModal from './payment-overdue-modal/PaymentOverdueModal';
 import RequestDenyModal from './request-deny-modal/RequestDenyModal';
 import PayNowModal from './pay-now-modal/PayNowModal';
 import './Dashboard.css';
+import { useState } from 'react';
 
 const dashboardInfoCardsData = [
   {
@@ -33,10 +34,13 @@ const dashboardInfoCardsData = [
 
 const HomeDashBoard = () => {
   const location = useLocation();
-
+  const [payNowShow, setPayNowShow] = useState(false);
+  const onHide = () => {
+    setPayNowShow(prevPayNowShow => !prevPayNowShow);
+  };
   return (
     <>
-      <PayNowModal show={false} />
+      <PayNowModal show={payNowShow} onHide={onHide} />
       <PaymentOverdueModal show={false} />
       <RequestDenyModal show={false} />
       <DashboardHeader />
