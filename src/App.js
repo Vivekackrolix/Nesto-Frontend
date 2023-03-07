@@ -6,7 +6,7 @@ import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
 
 const App = () => {
-  const websiteToLoad = 'informativeHomeBanner';
+  const websiteToLoad = 'broker';
 
   switch (websiteToLoad) {
       case 'informativeHomeBanner':
