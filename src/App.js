@@ -1,20 +1,24 @@
-import React from "react";
-import DsaWebsite from "./dsa/App";
-import PartnersDetailsMain from "./informative/App";
-import BuilderWeb from "./builder/App";
-import BrokerWeb from "./broker/App";
+import React from 'react';
+import DsaWebsite from './dsa/App';
+import PartnersDetailsMain from './informative/App';
+import BuilderWeb from './builder/App';
+import BrokerWeb from './broker/App';
+import Banner from './informative/HomePage/Banner/Banner';
 
 const App = () => {
-  const websiteToLoad = "builder";
+  const websiteToLoad = 'broker';
 
   switch (websiteToLoad) {
-    case "dsa":
+      case 'informativeHomeBanner':
+      return <Banner/>;
+    case 'dsa':
       return <DsaWebsite />;
-    case "partnersDetailsMain":
+    case 'partnersDetailsMain':
       return <PartnersDetailsMain />;
-    case "builder":
+    
+    case 'builder':
       return <BuilderWeb />;
-    case "broker":
+    case 'broker':
       return <BrokerWeb />;
     default:
       return <div>Website not found</div>;

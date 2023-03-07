@@ -32,7 +32,7 @@ const PropertyDetailsForm = () => {
         <Card.Body>
           <Form>
             <Row className="mb-3">
-              <Col>
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="clientNameInput"
                   label="Client Name"
@@ -46,7 +46,7 @@ const PropertyDetailsForm = () => {
                   />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="clientMobileNoInput"
                   label="Client Mobile No"
@@ -60,7 +60,7 @@ const PropertyDetailsForm = () => {
                   />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="clientEmailInput"
                   label="Client Email"
@@ -74,9 +74,8 @@ const PropertyDetailsForm = () => {
                   />
                 </FloatingLabel>
               </Col>
-            </Row>
-            <Row className="mb-3">
-              <Col>
+
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="loanRequirementInput"
                   label="Loan Requirement"
@@ -90,7 +89,7 @@ const PropertyDetailsForm = () => {
                   />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="requiredDateInput"
                   label="Required Date"
@@ -103,26 +102,13 @@ const PropertyDetailsForm = () => {
                   />
                 </FloatingLabel>
               </Col>
-              <Col>
-                {/* <FloatingLabel
-                  controlId="preferredBankNBFCSelect"
-                  label="Preferred Bank/NBFC (Select upto 3)"
-                  className="mb-3"
-                >
-                  <Form.Select multiple>
-                    <option value="bank1">Bank 1</option>
-                    <option value="bank2">Bank 2</option>
-                    <option value="bank3">Bank 3</option>
-                  </Form.Select>
-                </FloatingLabel> */}
-
+              <Col className="my-3 my-lg-0" lg={4}>
                 <Form.Group>
                   <Select closeMenuOnSelect={false} isMulti options={options} />
                 </Form.Group>
               </Col>
-            </Row>
-            <Row className="mb-3">
-              <Col>
+
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="select1Input"
                   label="Select 1"
@@ -136,7 +122,7 @@ const PropertyDetailsForm = () => {
                   </Form.Select>
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="loanApplicationInput"
                   label="Loan Application"
@@ -150,7 +136,7 @@ const PropertyDetailsForm = () => {
                   />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="applicationDateInput"
                   label="Application Date"
@@ -163,7 +149,7 @@ const PropertyDetailsForm = () => {
                   />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <FloatingLabel
                   controlId="statusSelect"
                   label="Status"
@@ -178,7 +164,7 @@ const PropertyDetailsForm = () => {
                 </FloatingLabel>
               </Col>
             </Row>
-            <Row className="mb-3">
+            <Row className="mb-3" xs={1}>
               <Col>
                 <FloatingLabel
                   controlId="commentInput"
@@ -194,7 +180,7 @@ const PropertyDetailsForm = () => {
                 </FloatingLabel>
               </Col>
             </Row>
-            <Row className="mb-3">
+            <Row className="mb-3" xs={1}>
               <Col>
                 <Form.Label>Comment History</Form.Label>
                 <div
@@ -214,8 +200,8 @@ const PropertyDetailsForm = () => {
               </Col>
             </Row>
 
-            <Row className="mb-5">
-              <Col xs={3}>
+            <Row className="mb-5" xs={1} md={2} lg={4}>
+              <Col>
                 <FloatingLabel
                   controlId="followUpDateInput"
                   label="Follow-up Date"
@@ -230,13 +216,14 @@ const PropertyDetailsForm = () => {
                 <h5 className="mb-3">Follow Up Time</h5>
               </Col>
             </Row>
-            <Row className="mb-3">
+
+            <Row className="mb-3 g-3">
               {followUpTime.map((item, index) => (
-                <Col key={index}>
+                <Col key={index} xs={12} md={6} lg={4}>
                   <Form.Label>{item}</Form.Label>
-                  <Row>
+                  <Row className="mb-3 mb-md-0">
                     {Array.from({ length: 3 }, (_, index) => (
-                      <Col key={index}>
+                      <Col key={index} className="my-2 my-lg-0" md={6} lg={4}>
                         <Form.Select className="form-control-sm">
                           <option>Choose time slot</option>
                           {timeSlots.map(timeSlot => (
@@ -252,8 +239,8 @@ const PropertyDetailsForm = () => {
               ))}
             </Row>
 
-            <Row className="mb-3">
-              <Col xs={3}>
+            <Row className="mb-3" xs={1} md={2} lg={4}>
+              <Col>
                 <FloatingLabel
                   controlId="queryStatusSelect"
                   label="Query Status"
@@ -288,7 +275,7 @@ const PropertyDetailsForm = () => {
           <h4>Disbursement Details</h4>
         </Card.Header>
         <Card.Body>
-          <Row>
+          <Row xs={1} md={2} lg={4}>
             <Col>
               <FloatingLabel
                 controlId="select1Input"

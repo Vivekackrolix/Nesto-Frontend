@@ -1,6 +1,16 @@
 .property__details__header__imgfull {
-  height: 370px;
+  /* height: 370px; */
   border-radius: 13.9239px;
+}
+
+.nes__dashboard__images__small1,
+.nes__dashboard__images__small2 {
+  height: 50%;
+}
+
+.nes__dashboard__images__small1 img,
+.nes__dashboard__images__small2 img {
+  height: 100%;
 }
 
 .property__details__header .card-img-overlay {
