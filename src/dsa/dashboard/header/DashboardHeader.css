@@ -20,3 +20,12 @@
 .nes__dashboard__navbar .dropdown-menu > .notification {
   padding: 0.3rem 0.7rem !important;
 }
+
+@media (max-width: 992px) {
+  .nes__dashboard__navbar .dropdown-menu > .dropdown-item,
+  .nes__dashboard__navbar .dropdown-menu > .notification {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
