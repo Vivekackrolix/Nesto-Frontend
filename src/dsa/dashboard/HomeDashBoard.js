@@ -34,6 +34,11 @@ const dashboardInfoCardsData = [
 
 const HomeDashBoard = () => {
   const location = useLocation();
+  const currentPath =
+    location.pathname === '/dsa/home-dashboard' ||
+    location.pathname.includes('property-details')
+      ? '/dsa/home-dashboard'
+      : location.pathname;
   const [payNowShow, setPayNowShow] = useState(false);
   const onHide = () => {
     setPayNowShow(prevPayNowShow => !prevPayNowShow);
@@ -51,7 +56,7 @@ const HomeDashBoard = () => {
               <ContentCard
                 icon={cardItem.icon}
                 title={cardItem.title}
-                active={location.pathname === cardItem.path}
+                active={currentPath === cardItem.path}
                 path={cardItem.path}
               />
             </Col>

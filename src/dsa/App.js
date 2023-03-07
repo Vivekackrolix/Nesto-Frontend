@@ -5,10 +5,12 @@ import CopyrightText from './dashboard/footer/CopyrightText';
 import Chat from './dashboard//chat/Chat';
 import '../index.css';
 import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         {RouteData.map(({ id, path, element, page, routes }) => {
           if (page === 'login') {
