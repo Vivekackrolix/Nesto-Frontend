@@ -8,6 +8,7 @@ import ChooseUs from '../chooseus/Chooseus';
 import Stats from '../stats/Stats';
 import Heading from '../heading/Heading';
 import Residency from '../residency/Residency';
+import GetStarted from '../getStarted/GetStarted';
 export default function Banner(){
     return (
       <>
@@ -68,8 +69,8 @@ export default function Banner(){
         <Stats/>
         
         <ChooseUs/>
-        {/*
-        <Footer/> */}
+        <GetStarted/>
+        
       </>
     );
 }

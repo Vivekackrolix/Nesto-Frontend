@@ -4,9 +4,10 @@ import PartnersDetailsMain from './informative/App';
 import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
+import PartnerBanner from './informative/PartnersPage/Partnerbanner/Partnerbanner';
 
 const App = () => {
-  const websiteToLoad = 'broker';
+  const websiteToLoad = 'informativeHomeBanner';
 
   switch (websiteToLoad) {
       case 'informativeHomeBanner':
@@ -15,7 +16,8 @@ const App = () => {
       return <DsaWebsite />;
     case 'partnersDetailsMain':
       return <PartnersDetailsMain />;
-    
+      case 'partnerPage':
+      return <PartnerBanner />;
     case 'builder':
       return <BuilderWeb />;
     case 'broker':
@@ -26,3 +28,4 @@ const App = () => {
 };
 
 export default App;
+ 

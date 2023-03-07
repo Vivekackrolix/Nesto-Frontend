@@ -1,5 +1,6 @@
 import Banner from "../HomePage/Banner/Banner";
 import PartnersDetailsMain from "../PartnersDetailsMain";
+import PartnerBanner from "../PartnersPage/Partnerbanner/partnerbanner";
 
 export const RouteData = [
   {
@@ -13,5 +14,11 @@ export const RouteData = [
     page: 'Home Page',
     path: '/home-page',
     element: <Banner/>
+  },
+   {
+    id: 5,
+    page: 'Partner Page',
+    path: '/partner-page',
+    element: <PartnerBanner/>
   },
 ];
