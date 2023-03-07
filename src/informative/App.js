@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PartnersDetailsMain from '../informative/PartnersDetail/PartnersDetailsMain'
+import PartnersDetailsMain from './PartnersDetail/PartnersDetailsMain'
 import ContactUsMain from './ContactUs/ContactUsMain';
 import Banner from './HomePage/Banner/Banner';
-import PartnerBanner from './PartnersPage/Partnerbanner/Partnerbanner';
+import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner'
 
 const App = () => {
   return (
