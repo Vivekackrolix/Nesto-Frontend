@@ -3,7 +3,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./login/Login";
 import HomeDashBoard from "./dashboard/HomeDashBoard";
 import Property from "./dashboard/property/Property";
+// import VisitDetails from "./dashboard/dashboard-property-analytics/Visit-Details/VisitDetails";
+import SoldPage from "./dashboard/dashboard-soldout-properties/Sold-page";
+import PromotedVisit from "./dashboard/dashboard-property-analytics/Visit Details/PromotedVisit";
+// import VisitDetails from "./dashboard/dashboard-property-analytics/Visit-Details/VisitDetails";
+// import VisitDetails from "./dashboard/dashboard-property-analytics/Visit Details/VisitDetails";
 import VisitDetails from "./dashboard/dashboard-property-analytics/Visit Details/VisitDetails";
+
+// import PromotedVisit from "./dashboard/dashboard-property-analytics/Visit-Details/PromotedVisit.js";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -11,9 +19,21 @@ const App = () => {
         <Route exact path="/builder/login" element={<Login />} />
         <Route
           exact
+          path="/builder/home-dashboard/promoted"
+          element={<PromotedVisit />}
+        />
+        <Route
+          exact
           path="/builder/home-dashboard/visit"
           element={<VisitDetails />}
         />
+
+        <Route
+          exact
+          path="/builder/home-dashboard/sold"
+          element={<SoldPage />}
+        />
+
         <Route exact path="/builder/home-dashboard" element={<HomeDashBoard />}>
           <Route exact path="property" element={<Property />} />
           <Route exact spath="HOME" />
