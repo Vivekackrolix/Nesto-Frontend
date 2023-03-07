@@ -1,29 +1,23 @@
 import { Table, Container, Button } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
-import { Link } from "react-router-dom";
-const VisitDetails = () => {
+
+const PromotedVisit = () => {
   return (
     <>
       <SearchFilterBox />
-      <h1> Visit Details</h1>
+      <h1> Promoted Details</h1>
       <div
-        className=" btn-group rounded-pill border-0 justify-content-center  py-2 mx-5 row"
+        className=" btn-group rounded-pill border-0  py-2 mx-5"
         role="group"
         aria-label="Basic example"
       >
-        <button type="button" className="rounded-pill col-1 btn btn-primary">
+        <button type="button" className="rounded-pill  btn btn-secondary">
           All Visits
         </button>
 
-        <Button
-          variant="primary"
-          type="button"
-          className="rounded-pill col-1 btn btn-secondary "
-          as={Link}
-          to="/builder/home-dashboard/promoted"
-        >
+        <button type="button" className="rounded-pill btn btn-primary ">
           Promoted Visits
-        </Button>
+        </button>
       </div>
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <div className="p-4 d-flex justify-content-around">
@@ -183,4 +177,4 @@ const VisitDetails = () => {
   );
 };
 
-export default VisitDetails;
+export default PromotedVisit;

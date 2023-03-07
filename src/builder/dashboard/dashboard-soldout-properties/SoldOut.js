@@ -1,5 +1,6 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../Images/propertyimage.png";
+import { Link } from "react-router-dom";
 
 const SoldOut = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
@@ -10,7 +11,20 @@ const SoldOut = ({ data }) => {
           {/* <Card.Title></Card.Title> */}
           <Card.Text>
             <Row>
-              <Row>Sky Danelions Apartment</Row>
+              <Row>
+                {" "}
+                <Link
+                  style={{
+                    color: "black",
+                    fontWeight: "bold",
+                    fontSize: "1.4em",
+                    textDecoration: "none",
+                  }}
+                  to="/builder/home-dashboard/sold"
+                >
+                  Sky Danelions Apartment
+                </Link>
+              </Row>
               <Row style={{ opacity: 0.5 }}>Farmhouse in Sector 63 Gurgaon</Row>
             </Row>
             <Row className="pt-3">
