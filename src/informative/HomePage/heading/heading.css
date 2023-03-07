@@ -1,0 +1,47 @@
+.bg-sky {
+    background-color: #ECF7FF;
+}
+
+.text-bold {
+    color: #000000;
+    font-weight: 700;
+    line-height: 2.4px;
+    font-size: 44.26px;
+    margin-top: 15px;
+}
+
+.text-grey {
+    color: #282431;
+    font-weight: 400;
+    font-size: 26.57px;
+    line-height: 87.41px;
+    text-align: center;
+    opacity: 0.5;
+    margin: 8px 0;
+}
+
+.desc {
+
+    font-style: normal;
+    font-weight: 350;
+    font-size: 17.75px;
+    line-height: 31px;
+    /* or 176% */
+    text-align: left;
+
+    color: #282431;
+
+    opacity: 0.5;
+}
+
+.text-orange {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26.1051px;
+    line-height: 56px;
+    /* identical to box height, or 214% */
+
+    text-transform: uppercase;
+
+    color: #FC5C67;
+}

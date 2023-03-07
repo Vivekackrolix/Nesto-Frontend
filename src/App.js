@@ -3,15 +3,19 @@ import DsaWebsite from './dsa/App';
 import PartnersDetailsMain from './informative/App';
 import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
+import Banner from './informative/HomePage/Banner/Banner';
 
 const App = () => {
-  const websiteToLoad = 'dsa';
+  const websiteToLoad = 'informativeHomeBanner';
 
   switch (websiteToLoad) {
+      case 'informativeHomeBanner':
+      return <Banner/>;
     case 'dsa':
       return <DsaWebsite />;
     case 'partnersDetailsMain':
       return <PartnersDetailsMain />;
+    
     case 'builder':
       return <BuilderWeb />;
     case 'broker':

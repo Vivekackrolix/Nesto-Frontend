@@ -1,8 +1,13 @@
-import Footer from '../footer/Footer';
+
 import './banner.css';
-import ChooseUs from './chooseus';
-import Header from '../header/Header';
-import Stats from './stats';
+
+
+
+import { Footer, Header } from '../../../components';
+import ChooseUs from '../chooseus/Chooseus';
+import Stats from '../stats/Stats';
+import Heading from '../heading/Heading';
+import Residency from '../residency/Residency';
 export default function Banner(){
     return (
       <>
@@ -59,9 +64,12 @@ export default function Banner(){
             </div>
           </div>
         </div>
+         <Residency/>
         <Stats/>
+        
         <ChooseUs/>
-        <Footer/>
+        {/*
+        <Footer/> */}
       </>
     );
 }
