@@ -6,6 +6,7 @@ import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
 import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner';
+import TermsCondition from './informative/TermsCondition/TermsCondition';
 
 const App = () => {
   const websiteToLoad = 'informativePartnersDetailsMain';
@@ -21,6 +22,8 @@ const App = () => {
       return <PartnerBanner />;
     case 'informativeContactUs':
       return <ContactUs />;
+    case 'informativeTermsCondition':
+      return <TermsCondition />;
     case 'builder':
       return <BuilderWeb />;
     case 'broker':
