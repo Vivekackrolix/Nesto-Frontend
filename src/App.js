@@ -1,3 +1,4 @@
+
 import React from 'react';
 import DsaWebsite from './dsa/App';
 import PartnersDetailsMain from './informative/App';
@@ -8,28 +9,24 @@ import Banner from './informative/HomePage/Banner/Banner';
 import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner';
 import TermsCondition from './informative/TermsCondition/TermsCondition';
 
-const App = () => {
-  const websiteToLoad = 'informativePartnersDetailsMain';
-
-  switch (websiteToLoad) {
-    case 'informativeHomeBanner':
-      return <Banner />;
-    case 'dsa':
-      return <DsaWebsite />;
-    case 'informativePartnersDetailsMain':
-      return <PartnersDetailsMain />;
-    case 'partnerPage':
-      return <PartnerBanner />;
-    case 'informativeContactUs':
-      return <ContactUs />;
-    case 'informativeTermsCondition':
-      return <TermsCondition />;
-    case 'builder':
-      return <BuilderWeb />;
-    case 'broker':
-      return <BrokerWeb />;
-    default:
-      return <div>Website not found</div>;
-  }
+const components = {
+  informativeHomeBanner: <Banner />,
+  dsa: <DsaWebsite />,
+  informativePartnersDetailsMain: <PartnersDetailsMain />,
+  partnerPage: <PartnerBanner />,
+  informativeContactUs: <ContactUs />,
+  informativeTandC: <TermsCondition />,
+  builder: <BuilderWeb />,
+  broker: <BrokerWeb />,
 };
+
+const App = () => {
+  const websiteToLoad = 'dsa';
+  const ComponentToRender = components[websiteToLoad] || (
+    <div>Website not found</div>
+  );
+
+  return ComponentToRender;
+};
+
 export default App;
