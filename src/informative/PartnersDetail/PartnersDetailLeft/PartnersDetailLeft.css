@@ -88,17 +88,20 @@
     height: 240px;
     padding-right: 20px;
 }
+
 .listing-container_col-1 {
     padding-left: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .listing-container_span {
     font-weight: 700;
     font-size: 32px;
     display: block;
 }
+
 .listing-container_link {
     margin-top: 20px;
     background: var(--primary-color);
@@ -108,14 +111,31 @@
     font-size: 14px;
     padding: 8px 30px;
 }
+
 .listing-container_link:hover {
     color: var(--color-white) !important;
 }
+
 .listing-container_col-2 {
     display: flex;
     align-items: end;
     justify-content: end;
 }
+
 .listing-container_img {
     width: 100%;
+}
+
+/* mediaQueri */
+@media(max-width: 550px) {
+    .partners-container_span-1 {
+        font-weight: 400;
+        font-size: 12px;
+    }
+}
+@media(max-width: 768px) and (min-width: 550px) {
+    .partners-container_span-1 {
+        font-weight: 400;
+        font-size: 14px;
+    }
 }

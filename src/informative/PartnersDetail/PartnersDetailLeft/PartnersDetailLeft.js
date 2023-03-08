@@ -14,13 +14,13 @@ export default function PartnersDetailLeft() {
         <>
             <div className='container-fluid partners-container'>
                 <div className='row'>
-                    <div className='col-lg-6'>
+                    <div className='col-lg-6 col-md-6 col-sm-6 col-6 '>
                         <div className='partners-container_box-3'>
                             <span className='partners-container_span-1'>All Photos & Videos</span>
                             <span className='partners-container_span-1'>16 Photos</span>
                         </div>
                     </div>
-                    <div className='col-lg-6 rounded-3'>
+                    <div className='col-lg-6 col-md-6 col-sm-6 col-6  rounded-3'>
                         <div className='partners-container_box-1'>
                             <span className='partners-container_span-1'>Indoor</span>
                             <span className='partners-container_span-1'>10 Photos</span>
