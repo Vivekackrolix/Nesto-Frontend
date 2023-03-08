@@ -5,22 +5,22 @@ import ContactUs from './informative/App';
 import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
-import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner'
+import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner';
 
 const App = () => {
   const websiteToLoad = 'informativePartnersDetailsMain';
 
   switch (websiteToLoad) {
-      case 'informativeHomeBanner':
-      return <Banner/>;
+    case 'informativeHomeBanner':
+      return <Banner />;
     case 'dsa':
       return <DsaWebsite />;
-      case 'informativePartnersDetailsMain':
+    case 'informativePartnersDetailsMain':
       return <PartnersDetailsMain />;
-      case 'partnerPage':
+    case 'partnerPage':
       return <PartnerBanner />;
     case 'informativeContactUs':
-      return <ContactUs />
+      return <ContactUs />;
     case 'builder':
       return <BuilderWeb />;
     case 'broker':
