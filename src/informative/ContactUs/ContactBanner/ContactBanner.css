@@ -14,6 +14,7 @@
     font-weight: 700;
     font-size: 34px;
     display: block;
+    color: var(--cold-steel-color);
     width: 80%;
 }
 .contact-us_hr {
