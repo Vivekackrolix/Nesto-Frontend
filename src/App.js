@@ -8,6 +8,7 @@ import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
 import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner';
 import TermsCondition from './informative/TermsCondition/TermsCondition';
+import PrivacyPolicy from './informative/PrivacyPolicy/PrivacyPolicy';
 
 const components = {
   informativeHomeBanner: <Banner />,
@@ -18,10 +19,11 @@ const components = {
   informativeTandC: <TermsCondition />,
   builder: <BuilderWeb />,
   broker: <BrokerWeb />,
+  informativePrivacyPolicy: <PrivacyPolicy />,
 };
 
 const App = () => {
-  const websiteToLoad = 'dsa';
+  const websiteToLoad = 'informativePartnersDetailsMain';
   const ComponentToRender = components[websiteToLoad] || (
     <div>Website not found</div>
   );

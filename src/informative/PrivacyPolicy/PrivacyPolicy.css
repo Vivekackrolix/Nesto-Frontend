@@ -1,0 +1,26 @@
+.p-p_heading-box {
+    background: var(--lite-skyblue);
+    padding: 14px 0;
+    margin-top: 50px;
+}
+.p-p_heading {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+.p-p_span {
+    margin-top: 40px;
+    line-height: 34px;
+    font-weight: 350;
+    font-size: 18px;
+    color: var(--cold-steel-color);
+    display: block;
+}
+.p-p_span2 {
+    /* margin-top: 10px; */
+    line-height: 34px;
+    font-weight: 350;
+    font-size: 18px;
+    color: var(--cold-steel-color);
+    display: block;
+}
