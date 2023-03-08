@@ -1,21 +1,26 @@
 import React from 'react';
 import DsaWebsite from './dsa/App';
 import PartnersDetailsMain from './informative/App';
+import ContactUs from './informative/App';
 import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
+import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner';
 
 const App = () => {
-  const websiteToLoad = 'dsa';
+  const websiteToLoad = 'informativePartnersDetailsMain';
 
   switch (websiteToLoad) {
     case 'informativeHomeBanner':
       return <Banner />;
     case 'dsa':
       return <DsaWebsite />;
-    case 'partnersDetailsMain':
+    case 'informativePartnersDetailsMain':
       return <PartnersDetailsMain />;
-
+    case 'partnerPage':
+      return <PartnerBanner />;
+    case 'informativeContactUs':
+      return <ContactUs />;
     case 'builder':
       return <BuilderWeb />;
     case 'broker':
@@ -24,5 +29,4 @@ const App = () => {
       return <div>Website not found</div>;
   }
 };
-
 export default App;
