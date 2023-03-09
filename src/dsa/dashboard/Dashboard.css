@@ -78,3 +78,11 @@
     width: 100% !important;
   }
 }
+
+@media (max-width: 498px) {
+  .accept-deny {
+    flex-direction: column;
+    order: 2;
+    margin: 1rem 0rem 0rem;
+  }
+}

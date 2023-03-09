@@ -63,7 +63,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
         <Row>
           {/* property details page button start */}
           {location.pathname === '/dsa/home-dashboard/property-details' && (
-            <Col xs={12} className="d-flex justify-content-end">
+            <Col xs={12} className="d-flex justify-content-end accept-deny">
               <div className="d-flex gap-2 bg-transparent">
                 <Button
                   className="btn-color-primary"
@@ -330,8 +330,8 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                   label="Status"
                   className="mb-3"
                 >
-                  <Form.Select required>
-                    <option>status</option>
+                  <Form.Select className="border-0" required>
+                    {/* <option>status</option> */}
                     <option value="status1">Assigned</option>
                     <option value="status2">Matured</option>
                     <option value="status3">Not Matured</option>

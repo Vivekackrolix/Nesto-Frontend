@@ -2,9 +2,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PartnersDetailsMain from './PartnersDetail/PartnersDetailsMain';
 import BrokerHome from './BrokerPage/BrokerHome/BrokerHome';
-import ContactUsMain from './ContactUs/ContactUsMain'
+
+import ContactUsMain from './ContactUs/ContactUsMain';
 import Banner from './HomePage/Banner/Banner';
-import PartnerBanner from './PartnersPage/Partnerbanner/Partnerbanner';
+import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner'
+import TermsCondition from './TermsCondition/TermsCondition';
+import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -15,6 +18,8 @@ const App = () => {
         <Route path='/home-page' element={<Banner />} />
          <Route path='/partner-page' element={<PartnerBanner />} />
          <Route path='/broker-page' element={<BrokerHome />} />
+         <Route path='/terms-condition' element={<TermsCondition />} />
+         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
   );

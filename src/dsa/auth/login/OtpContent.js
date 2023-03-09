@@ -11,6 +11,7 @@ const OtpContent = () => {
           <Form.Control type="text" maxLength={1} />
           <Form.Control type="text" maxLength={1} />
           <Form.Control type="text" maxLength={1} />
+          <Form.Control type="text" maxLength={1} />
         </div>
         <div className="d-flex justify-content-center align-items-center my-4">
           <Form.Text className="text-muted me-3">

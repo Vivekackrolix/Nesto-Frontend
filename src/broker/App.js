@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import BrokerLogin from './Login/BrokerLogin';
-
+import { RouteData } from './utils/Routes';
+import DashboardPage from './Pages/DashboardPage';
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/broker/login" element={<BrokerLogin />} />
+        <Route path="/" element={<DashboardPage />} />
       </Routes>
     </BrowserRouter>
   );

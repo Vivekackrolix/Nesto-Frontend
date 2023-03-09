@@ -35,7 +35,7 @@ const Footer = () => {
             <ul className="list-unstyled text-white mt-3">
               {footerLinks[0].companyInfo.map((ftLink, index) => (
                 <li key={index}>
-                  <Link className="fw-light" to="/dsa/login">
+                  <Link className="fw-light" to="/">
                     {ftLink}
                   </Link>
                 </li>
@@ -47,7 +47,7 @@ const Footer = () => {
             <ul className="list-unstyled mt-3">
               {footerLinks[1].quickLink.map((ftLink, index) => (
                 <li key={index}>
-                  <Link className="fw-light" to="/dsa/login">
+                  <Link className="fw-light" to="/">
                     {ftLink}
                   </Link>
                 </li>

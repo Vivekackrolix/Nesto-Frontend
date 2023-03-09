@@ -5,31 +5,32 @@ import ContactUs from './informative/App';
 import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
-import PartnerBanner from './informative/PartnersPage/Partnerbanner/Partnerbanner';
+import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner';
+import TermsCondition from './informative/TermsCondition/TermsCondition';
+import PrivacyPolicy from './informative/PrivacyPolicy/PrivacyPolicy';
 import BrokerHome from './informative/BrokerPage/BrokerHome/BrokerHome';
 
-const App = () => {
-  const websiteToLoad = 'informativePartnersDetailsMain';
 
-  switch (websiteToLoad) {
-      case 'informativeHomeBanner':
-      return <Banner/>;
-      case 'brokerHome':
-      return <BrokerHome/>;
-    case 'dsa':
-      return <DsaWebsite />;
-      case 'informativePartnersDetailsMain':
-      return <PartnersDetailsMain />;
-      case 'partnerPage':
-      return <PartnerBanner />;
-    case 'informativeContactUs':
-      return <ContactUs />
-    case 'builder':
-      return <BuilderWeb />;
-    case 'broker':
-      return <BrokerWeb />;
-    default:
-      return <div>Website not found</div>;
-  }
+const components = {
+  informativeHomeBanner: <Banner />,
+  dsa: <DsaWebsite />,
+  informativePartnersDetailsMain: <PartnersDetailsMain />,
+  partnerPage: <PartnerBanner />,
+  informativeContactUs: <ContactUs />,
+  informativeTandC: <TermsCondition />,
+  builder: <BuilderWeb />,
+  broker: <BrokerWeb />,
+  informativePrivacyPolicy: <PrivacyPolicy />,
+  brokerHome:<BrokerHome/>,
 };
+
+const App = () => {
+  const websiteToLoad = 'informativeHomeBanner';
+  const ComponentToRender = components[websiteToLoad] || (
+    <div>Website not found</div>
+  );
+
+  return ComponentToRender;
+};
+
 export default App;

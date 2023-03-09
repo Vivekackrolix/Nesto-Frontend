@@ -14,14 +14,14 @@ const ViewDetailsCard = ({ title, link, bg, media, img }) => {
           bg ? `bg-white` : `bg-transparent border-0 px-0`
         }`}
       >
-        <Card.Title className={`${!bg && `no-bg-title px-0`}`}>
+        <Card.Title className={`${!bg ? `no-bg-title px-0` : ''}`}>
           {title}
         </Card.Title>
         {link && <Link className="card-link">{link}</Link>}
       </Card.Header>
       <Card.Body
-        className={`py-4 ${bg ?? `border rounded`} ${
-          img && `shadow-sm border-0`
+        className={`py-4 ${bg ? `border rounded` : ''} ${
+          img ? `shadow-sm border-0` : ''
         }`}
       >
         {/* {media && (
