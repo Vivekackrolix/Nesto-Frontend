@@ -330,8 +330,8 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                   label="Status"
                   className="mb-3"
                 >
-                  <Form.Select required>
-                    <option>status</option>
+                  <Form.Select className="border-0" required>
+                    {/* <option>status</option> */}
                     <option value="status1">Assigned</option>
                     <option value="status2">Matured</option>
                     <option value="status3">Not Matured</option>
