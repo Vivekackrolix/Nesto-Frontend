@@ -3,7 +3,7 @@ import { Container, Nav } from "react-bootstrap";
 import profile from "../../Images/Profile.png";
 import bgImage from "../../Images/bg-image.png";
 import { Link } from "react-router-dom";
-import eye from "../../Images/eye.png";
+import eye from "../../Images/Eye.png";
 import notification from "../../Images/notification.png";
 import property from "../../Images/property.png";
 import brockerage from "../../Images/brokrage.png";
