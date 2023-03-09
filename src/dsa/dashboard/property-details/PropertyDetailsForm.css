@@ -89,3 +89,19 @@ textarea {
   letter-spacing: 0.02em;
   color: #7d7f88;
 }
+
+@media (max-width: 921px) {
+  .nes__dashboard__largeicons .card-body .row,
+  .nes__dashboard__smallicons .card-body .row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 939px) {
+  .nes__dashboard__banks .card-body .row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+    gap: 2rem;
+  }
+}

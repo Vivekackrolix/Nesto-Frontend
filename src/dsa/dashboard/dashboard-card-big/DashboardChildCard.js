@@ -63,7 +63,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
         <Row>
           {/* property details page button start */}
           {location.pathname === '/dsa/home-dashboard/property-details' && (
-            <Col xs={12} className="d-flex justify-content-end">
+            <Col xs={12} className="d-flex justify-content-end accept-deny">
               <div className="d-flex gap-2 bg-transparent">
                 <Button
                   className="btn-color-primary"
