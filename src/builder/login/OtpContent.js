@@ -13,7 +13,8 @@ const OtpContent = () => {
           <Form.Control className="rounded" type="text" maxLength={1} />
           <Form.Control className="rounded" type="text" maxLength={1} />
           <Form.Control className="rounded" type="text" maxLength={1} />
-          {/* <Form.Control className="rounded" type="text" maxLength={1} /> */}
+          <Form.Control className="rounded" type="text" maxLength={1} />
+          <Form.Control className="rounded" type="text" maxLength={1} />
         </div>
         <div className="d-flex justify-content-center align-items-center my-4">
           <Form.Text className="text-muted me-3">

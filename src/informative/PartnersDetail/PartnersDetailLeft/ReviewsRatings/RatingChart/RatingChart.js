@@ -3,7 +3,6 @@ import './RatingChart.css'
 import { MdOutlineStarPurple500, MdOutlineStarOutline } from 'react-icons/md'
 import { CircularProgressbar, CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { className } from 'react-slick-slider/lib/default-props';
 
 const RatingChart = () => {
     const ratingData = [
@@ -49,13 +48,13 @@ const RatingChart = () => {
         },
         {
             number: 3.3,
-            percentage: 44,
+            percentage: 12,
             name: 'Connectivity',
             outOf: '4.7 Out of 5'
         },
         {
             number: 4.3,
-            percentage: 92,
+            percentage: 44,
             name: 'Lifestyle    ',
             outOf: '2.3 Out of 5'
         },
@@ -100,17 +99,15 @@ const RatingChart = () => {
                         <div className='col-lg-12 d-flex flex-wrap rating-chart_box10 gap-2'>
                             {ChartData.map((item, index) => {
                                 return (
-                                    <>
-                                        <div className='col-lg-4 rating-chart_box11 gap-2'>
-                                            <div className='rating-chart_box12'>
-                                                <CircularProgressbar value={item.percentage} text={item.number} strokeWidth={10} />
-                                            </div>
-                                            <div>
-                                                <span className='rating-chart_span6'>{item.name}</span>
-                                                <span className='rating-chart_span7'>{item.outOf}</span>
-                                            </div>
+                                    <div className='col-lg-4 rating-chart_box11 gap-2'>
+                                        <div className='rating-chart_box12'>
+                                            <CircularProgressbar value={item.percentage} text={item.number} strokeWidth={10} />
                                         </div>
-                                    </>
+                                        <div>
+                                            <span className='rating-chart_span6'>{item.name}</span>
+                                            <span className='rating-chart_span7'>{item.outOf}</span>
+                                        </div>
+                                    </div>
                                 )
                             })}
                         </div>
