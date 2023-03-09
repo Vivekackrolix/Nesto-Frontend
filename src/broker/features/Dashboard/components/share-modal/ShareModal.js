@@ -1,13 +1,13 @@
 import { Button, Form } from 'react-bootstrap';
 import { CustomModal } from '../../../../../components';
-import 'react-phone-number-input/style.css';
 import {
   CountryDropdown,
   CountryRegionData,
 } from 'react-country-region-selector';
-import './ShareModal.css';
 import { useState } from 'react';
 import { FlagIcon } from 'react-flag-kit';
+import 'react-phone-number-input/style.css';
+import './ShareModal.css';
 
 const ShareModal = ({ show, onHide }) => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -51,6 +51,7 @@ const ShareModal = ({ show, onHide }) => {
             )}
           </div>
         </Form.Group>
+
         <Button className="btn-color-primary rounded-pill btn-rounded w-100 mt-3">
           Share Brochure
         </Button>

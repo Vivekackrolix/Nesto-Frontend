@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   BookAVisitModal,
+  CustomerModal,
   ShareModal,
   SuccessModal,
   VisitAlertModal,
@@ -16,10 +17,12 @@ const DashboardPage = () => {
     <>
       <div className="nes__broker__Dashboard">
         {/* popup modal */}
+        {/* <ShareModal show={show} onHide={onHide} /> */}
         {/* <ShareModal show={show} onHide={onHide} />
         <BookAVisitModal show={show} onHide={onHide} /> */}
         {/* <SuccessModal show={show} onHide={onHide} /> */}
-        <VisitAlertModal show={show} onHide={onHide} />
+        {/* <VisitAlertModal show={show} onHide={onHide} /> */}
+        <CustomerModal show={show} onHide={onHide} />
         {/* popup modal code end here */}
       </div>
     </>
