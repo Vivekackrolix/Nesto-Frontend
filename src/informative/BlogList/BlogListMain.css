@@ -1,4 +1,4 @@
-.blog-list {
+.blog-list-banner {
     background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.45)),
     url(../../../public/assets/informative/blogListBanner.png);
     width: 100%;
@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-.blog-list-heading {
+.blog-list-banner-heading {
     font-weight: 700;
     font-size: 59.38px;
     color: var(--color-white);

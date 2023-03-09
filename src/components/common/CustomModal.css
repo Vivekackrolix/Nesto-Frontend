@@ -21,3 +21,12 @@
 .login__page__modal input {
   border-radius: 0px;
 }
+
+.custom__modal__close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000 !important;
+}

@@ -1,0 +1,58 @@
+.latest-post-right {
+    margin-top: 100px;
+    padding: 0 0 0 40px;
+}
+
+.latest-left_input-box {
+    position: relative;
+}
+
+.latest-left_input {
+    padding: 10px 55px 10px 10px;
+    width: 100%;
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+}
+
+.latest-left_input:focus {
+    outline: none;
+}
+
+.latest-left_search-icon {
+    position: absolute;
+    right: 4%;
+    top: 26%;
+    font-size: 21px;
+    color: var(--gray-color);
+}
+
+.latest-left_box-1 {
+    margin-top: 50px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid var(--divider);
+}
+
+.latest-left_span-1 {
+    font-weight: 350;
+    font-size: 18px;
+}
+
+.latest-left_box-2 {
+    display: flex;
+    align-items: start;
+    margin-bottom: 30px;
+}
+.latest-left_box-4 {
+    width: 60%;
+}
+.latest-left_span-2 {
+    font-weight: 600;
+    font-size: 16px;
+}
+.latest-left_span-3 {
+    font-size: 12px;
+}
+.latest-left_img-2 {
+    width: 14%;
+}

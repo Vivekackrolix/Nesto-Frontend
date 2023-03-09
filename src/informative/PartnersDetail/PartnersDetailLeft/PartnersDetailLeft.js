@@ -8,6 +8,7 @@ import AboutBuilder from './AboutBuilder/AboutBuilder'
 import { Link } from 'react-router-dom';
 import ReviewCard from './ReviewsRatings/ReviewCard/ReviewCard';
 import RatingChart from './ReviewsRatings/RatingChart/RatingChart';
+import ListProperty from '../ListProperty/ListProperty';
 
 export default function PartnersDetailLeft() {
     return (
@@ -53,18 +54,8 @@ export default function PartnersDetailLeft() {
                 {/* Localities========================
                 ================================== */}
                 <Localities />
-                {/* Listing Button */}
-                <div className='listing-container shadow-sm rounded-4 mt-5 d-flex'>
-                    <div className='col-lg-7 listing-container_col-1'>
-                        <span className='listing-container_span'>Start listing or Selling a Property with NestoHub</span>
-                        <Link to='/' className='listing-container_link rounded-3'>
-                            <span>List your Property</span>
-                        </Link>
-                    </div>
-                    <div className='col-lg-5 listing-container_col-2'>
-                        <img src='/assets/informative/listing1.png' className='listing-container_img' />
-                    </div>
-                </div>
+                {/* List Property */}
+                <ListProperty />
                 {/*About the Builder ==================
                 =================================== */}
                 <AboutBuilder />

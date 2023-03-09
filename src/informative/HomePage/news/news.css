@@ -1,0 +1,47 @@
+.top-body{
+    background-image: url('../../../../public/assets/blocks.png');
+}
+.news-heading{
+    font-family: 'Bahnschrift';
+        font-style: normal;
+        font-weight: 350;
+        font-size: 23.45px;
+        line-height: 30px;
+        /* or 129% */
+    
+    
+        color: #282431;
+}
+.news-desc{
+    font-family: 'Bahnschrift';
+        font-style: normal;
+        font-weight: 350;
+        font-size: 14.2647px;
+        line-height: 23px;
+        /* or 161% */
+    
+    
+        color: #282431;
+    
+        opacity: 0.5;
+}
+.news-image{
+    max-width: 100%;
+}
+.news-box{
+    max-width: 380px;
+    border-radius: 8px;
+}
+.date{
+    font-family: 'Bahnschrift';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12.4277px;
+        line-height: 30px;
+        /* or 244% */
+    
+    
+        color: #282431;
+    
+        opacity: 0.8;
+}
