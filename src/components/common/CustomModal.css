@@ -37,3 +37,23 @@
   margin-inline: auto;
   background-color: #f8f7f7 !important;
 }
+
+.nes__dashboard__modal__icon {
+  width: 145px;
+  height: 145px;
+  background-color: hsl(135deg 59% 49%);
+}
+
+.nes__dashboard__modal__success span {
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.nes__dashboard__modal__success p {
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
+  color: #838ba1;
+}
