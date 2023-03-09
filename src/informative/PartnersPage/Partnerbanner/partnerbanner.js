@@ -1,5 +1,6 @@
 
 import { Footer, Header } from '../../../components';
+import InformativeNavbar from '../../Navbar/Navbar';
 import Partner from '../partners/partner';
 import './partnerbanner.css'
 
@@ -7,7 +8,7 @@ import './partnerbanner.css'
 export default function PartnerBanner() {
   return (
     <>
-      <Header />
+      <InformativeNavbar/>
       <div className="banner-body">
         <div className="row">
           <div className="col-md-7">
