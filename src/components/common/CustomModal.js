@@ -2,9 +2,23 @@ import { Button, Modal } from 'react-bootstrap';
 import { FiX } from 'react-icons/fi';
 import './CustomModal.css';
 
-const CustomModal = ({ show, title, children, border, onHide, closeBtn }) => {
+const CustomModal = ({
+  show,
+  title,
+  children,
+  border,
+  onHide,
+  closeBtn,
+  cssClassName,
+  size,
+}) => {
   return (
-    <Modal show={show} centered size="md" className="login__page__modal">
+    <Modal
+      show={show}
+      centered
+      size={size ? size : `md`}
+      className={`login__page__modal ${cssClassName ? cssClassName : ``}`}
+    >
       {!closeBtn && (
         <Modal.Header className={`justify-content-center p2-4 pb-0 border-0`}>
           <Modal.Title className="fw-bold display-6">{title}</Modal.Title>

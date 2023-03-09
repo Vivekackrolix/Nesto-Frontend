@@ -9,10 +9,12 @@ const DashboardPage = () => {
   };
   return (
     <>
-      {/* popup modal */}
-      <ShareModal show={show} onHide={onHide} />
-      <BookAVisitModal show={show} onHide={onHide} />
-      {/* popup modal code end here */}
+      <div className="nes__broker__Dashboard">
+        {/* popup modal */}
+        <ShareModal show={show} onHide={onHide} />
+        <BookAVisitModal show={show} onHide={onHide} />
+        {/* popup modal code end here */}
+      </div>
     </>
   );
 };
