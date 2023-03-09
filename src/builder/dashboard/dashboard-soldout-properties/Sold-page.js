@@ -1,7 +1,7 @@
 import DashboardHeader from "../header/DashboardHeader";
 import { Col, Container, Row } from "react-bootstrap";
 import SearchFilterBox from "../search-filter/SearchFilter";
-import homeImage from "../../Images/Home.png";
+import homeImage from "../../Images/homeimage.png";
 import map from "../../Images/Map.png";
 import brochure from "../../Images/brochure.png";
 import Anlytics from "../dashboard-property-analytics/dashboard-property-details/anlytics";
@@ -9,6 +9,7 @@ import Location from "../dashboard-property-analytics/dashboard-property-details
 import Amenities from "../dashboard-property-analytics/dashboard-property-details/Amenities";
 import Payment from "../dashboard-property-analytics/dashboard-property-details/Payment";
 import Danelions from "./Danelions";
+import Footer from "../Footer/Footer";
 
 const SoldPage = () => {
   return (
@@ -82,6 +83,7 @@ const SoldPage = () => {
           </Container>
         </Col>
       </Container>
+      <Footer />
     </>
   );
 };

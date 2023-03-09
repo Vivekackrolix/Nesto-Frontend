@@ -7,10 +7,11 @@ import PropertyAnalytics from "./dashboard-property-analytics/PropertyAnalytics"
 import SoldOut from "./dashboard-soldout-properties/SoldOut";
 
 // import "./Dashboard.css";
-import homeImage from "../Images/Home.png";
+import homeImage from "../Images/homeimage.png";
 import PropertyInvoice from "./dashboard-property-analytics/PendindInvoice";
 import PendingInvoice from "./dashboard-property-analytics/PendingInvoice";
 import RecentlyAdded from "./dashboard-soldout-properties/RecentlyAdded";
+import Footer from "./Footer/Footer";
 
 const dashboardInfoCardsData = [];
 
@@ -43,6 +44,7 @@ const HomeDashBoard = () => {
         <PropertyInvoice />
       </Container>
       <Outlet />
+      <Footer />
     </>
   );
 };

@@ -1,10 +1,11 @@
 import Login from "../login/Login";
 import HomeDashBoard from "../dashboard/HomeDashBoard";
 import Property from "../dashboard/property/Property";
-import SoldPage from "../Property Details/property";
+
 import PromotedVisit from "../dashboard/dashboard-property-analytics/Visit-Details/PromotedVisit.js";
 import SoldOut from "../dashboard/dashboard-soldout-properties/SoldOut";
 import PropertyEdit from "../dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
+import AmenitiesPop from "../dashboard/dashboard-info-cards/Property Edit/Amenitiespop";
 export const RouteData = [
   {
     id: 1,
@@ -39,6 +40,11 @@ export const RouteData = [
         path: "Property-Edit",
         element: <PropertyEdit />,
       },
+      // {
+      //   id: 6,
+      //   path: "Amenities",
+      //   element: <AmenitiesPop />,
+      // },
     ],
   },
 ];
