@@ -10,7 +10,13 @@ const LoanManagement = () => {
       <Row className="mb-5">
         <Col>
           <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
-            <DashboardChildCard cardType="assigned" status={true} />
+            {Array.from({ length: 10 }, (_, index) => (
+              <DashboardChildCard
+                key={index}
+                cardType="assigned"
+                status={true}
+              />
+            ))}
           </DashboardTabs>
         </Col>
       </Row>

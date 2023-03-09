@@ -1,0 +1,60 @@
+/* .building-image{
+    height: 500px;
+    width: 500px;
+} */
+body {
+    font-family: Bahnschrift;
+    overflow-x: hidden;
+}
+
+.banner-body {
+    background-color: #E0F2FF;
+    overflow-x: hidden;
+}
+
+.image-div {
+    /* position: absolute; */
+}
+
+.hero-image {
+    position: relative;
+    left: 50px;
+}
+
+.banner-heading {
+    font-family: Bahnschrift;
+    line-height: 47.5px;
+    color: black;
+    font-weight: 700;
+    padding-right: 50px;
+}
+
+.banner-content {
+    text-align: left;
+    padding: 150px 70px;
+
+}
+
+.banner-description {
+    line-height: 25.7px;
+    font-weight: 300;
+    font-size: 15.19px;
+    padding: 30px 5px;
+}
+
+.banner-button {
+    background-color: #278FD9;
+    color: #ffff;
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+
+
+.scan {
+    margin-left: 50px;
+}
+
+.dot-curve {
+    position: relative;
+}

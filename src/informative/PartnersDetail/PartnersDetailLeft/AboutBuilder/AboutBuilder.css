@@ -1,0 +1,32 @@
+.about-builder {
+    padding: 15px 0 36px 0;
+    /* padding: 30px; */
+}
+.about-builder_box {
+    padding: 10px 20px 0 20px;
+}
+.about-builder_span-1 {
+    padding-left: 30px;
+    font-weight: 600;
+    font-size: 24px;
+}
+.about-builder_span-2 {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--cold-steel-color);
+}
+.about-builder_span-3 {
+    display: block;
+    /* padding: 10px 0 0 30px; */
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 30px;
+    color: var(--cold-steel-color);
+}
+.about-builder_star {
+    color: #ffb630;
+    font-size: 18px;
+    margin-right: 2px;
+}
