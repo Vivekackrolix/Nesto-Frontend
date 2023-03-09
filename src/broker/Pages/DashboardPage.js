@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { ShareModal } from '../features';
+import { BookAVisitModal, ShareModal } from '../features';
 import '../features/Dashboard/assets/styles/Dashboard.css';
 
 const DashboardPage = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const onHide = () => {
     setShow(false);
   };
   return (
     <>
-      <div>DashboardPage</div>
+      {/* popup modal */}
       <ShareModal show={show} onHide={onHide} />
+      <BookAVisitModal show={show} onHide={onHide} />
+      {/* popup modal code end here */}
     </>
   );
 };
