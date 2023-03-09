@@ -17,7 +17,7 @@ const CustomModal = ({ show, title, children, border, onHide, closeBtn }) => {
           </Modal.Title>
           {closeBtn && (
             <Button
-              className="ms-auto bg-transparent p-0 custom__close rounded rounded-circle"
+              className="ms-auto bg-transparent p-0 custom__modal__close rounded rounded-circle"
               onClick={onHide}
             >
               <FiX size={20} color="#000000" />

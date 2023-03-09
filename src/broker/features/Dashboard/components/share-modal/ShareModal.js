@@ -15,7 +15,7 @@ const ShareModal = ({ show, onHide }) => {
 
   return (
     <CustomModal show={show} title="Share" border closeBtn onHide={onHide}>
-      <Form className="profile__form ps-2 custom__form py-3">
+      <Form className="profile__form ps-2 custom__modal__form py-3">
         <Form.Group className="mb-4" controlId="companyName">
           <Form.Label>Client Name</Form.Label>
           <Form.Control
