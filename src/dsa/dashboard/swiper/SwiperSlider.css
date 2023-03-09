@@ -90,3 +90,7 @@
   font-size: 14px;
   color: #7d7f88;
 }
+
+.swiper__price {
+  text-align: right !important;
+}
