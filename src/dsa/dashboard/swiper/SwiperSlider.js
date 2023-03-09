@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper';
 import { Card, Container } from 'react-bootstrap';
@@ -33,6 +33,25 @@ const items = [
 const tabKey = ['All', '2BHK ', ' 3BHK', '4BHK', '5BHK'];
 
 const Slider = () => {
+  const [slidesPerView, setSlidesPerView] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setSlidesPerView(3);
+      } else if (window.innerWidth >= 576) {
+        setSlidesPerView(2);
+      } else {
+        setSlidesPerView(1);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <Container fluid="lg" className="mt-5">
       <div className="mb-4 mt-5">
@@ -43,7 +62,7 @@ const Slider = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={30}
-          slidesPerView={3}
+          slidesPerView={slidesPerView}
           navigation
           autoplay={{ delay: 3000 }}
           // autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -64,7 +83,9 @@ const Slider = () => {
                   </div>
                   <div className="swiper__card__row d-flex justify-content-between align-items-center">
                     <span>1413 Sq.ft.</span>
-                    <span>₹ 3.94 Cr (5,000/sq.ft.)</span>
+                    <span className="swiper__price text-wrap">
+                      ₹ 3.94 Cr (5,000/sq.ft.)
+                    </span>
                   </div>
                   <div className="swiper__card__row d-flex justify-content-between align-items-center mt-2">
                     <span>(130.6 sq.m.)</span>
