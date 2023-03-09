@@ -5,13 +5,16 @@ import BuilderWeb from './builder/App';
 import BrokerWeb from './broker/App';
 import Banner from './informative/HomePage/Banner/Banner';
 import PartnerBanner from './informative/PartnersPage/Partnerbanner/Partnerbanner';
+import BrokerHome from './informative/BrokerPage/BrokerHome/BrokerHome';
 
 const App = () => {
-  const websiteToLoad = 'informativeHomeBanner';
+  const websiteToLoad = 'brokerHome';
 
   switch (websiteToLoad) {
       case 'informativeHomeBanner':
       return <Banner/>;
+      case 'brokerHome':
+      return <BrokerHome/>;
     case 'dsa':
       return <DsaWebsite />;
     case 'partnersDetailsMain':
