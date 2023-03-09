@@ -12,11 +12,13 @@ import GetStarted from '../getStarted/GetStarted';
 import News from '../news/News';
 import Testimonial from '../../../dsa/dashboard/comment-history-testimonial/CommentHistoryTestimonial';
 import Testimonials from '../testimonials/Testimonials';
+import Navbar from '../../Navbar/Navbar';
+import InformativeNavbar from '../../Navbar/Navbar';
 
 export default function Banner(){
     return (
       <>
-      <Header/>
+      <InformativeNavbar/>
         <div className="banner-body">
           <div className="row">
             <div className="col-md-5">
@@ -30,7 +32,7 @@ export default function Banner(){
                   maximize their business.
                 </p>
                 <div>
-                  <a href="#" className="banner-button text-decoration-none">
+                  <a href="#" className="btn btn-color-primary text-decoration-none">
                     Join us
                   </a>
                 </div>

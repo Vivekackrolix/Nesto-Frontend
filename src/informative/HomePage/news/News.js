@@ -28,7 +28,7 @@ export default function News() {
                 </p>
               </div>
               <div>
-                <a href="" className="btn mx-3 btn-outline-primary">
+                <a href="" className="btn mx-3 btn-color-primary">
                   Read More
                 </a>
               </div>
@@ -54,7 +54,7 @@ export default function News() {
                 </p>
               </div>
               <div>
-                <a href="" className="btn mx-3 btn-outline-primary">
+                <a href="" className="btn mx-3 btn-color-primary">
                   Read More
                 </a>
               </div>
@@ -80,7 +80,7 @@ export default function News() {
                 </p>
               </div>
               <div>
-                <a href="" className="btn mx-3 btn-outline-primary">
+                <a href="" className="btn mx-3 btn-color-primary">
                   Read More
                 </a>
               </div>
