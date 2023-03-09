@@ -1,4 +1,3 @@
-
 import React from 'react';
 import DsaWebsite from './dsa/App';
 import PartnersDetailsMain from './informative/App';
@@ -23,7 +22,7 @@ const components = {
 };
 
 const App = () => {
-  const websiteToLoad = 'informativePartnersDetailsMain';
+  const websiteToLoad = 'dsa';
   const ComponentToRender = components[websiteToLoad] || (
     <div>Website not found</div>
   );
