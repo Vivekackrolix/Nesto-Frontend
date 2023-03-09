@@ -5,17 +5,10 @@ import { MdOutlineStarOutline, MdOutlineStarPurple500 } from 'react-icons/md';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai'
 
 const PastProjects = () => {
-    const [heart, setHeart] = useState(false)
-    function heartChange() {
-        setHeart(true)
-    }
-    function heartUndo() {
-        setHeart(false)
-    }
     var settings = {
         dots: false,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         arrows: true,
         speed: 300,
         slidesToShow: 2,

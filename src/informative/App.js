@@ -8,6 +8,7 @@ import Banner from './HomePage/Banner/Banner';
 import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner'
 import TermsCondition from './TermsCondition/TermsCondition';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
+import BlogListMain from './BlogList/BlogListMain'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
          <Route path='/broker-page' element={<BrokerHome />} />
          <Route path='/terms-condition' element={<TermsCondition />} />
          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+         <Route path='/blog-list' element={<BlogListMain />} />
       </Routes>
     </BrowserRouter>
   );
