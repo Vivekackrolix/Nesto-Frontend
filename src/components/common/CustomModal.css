@@ -30,3 +30,10 @@
   align-items: center;
   border: 1px solid #000000 !important;
 }
+
+.nes__dashboard__modal .nav-tabs {
+  padding: 0.2rem 0.5rem !important;
+  width: min(100%, 358px);
+  margin-inline: auto;
+  background-color: #f8f7f7 !important;
+}
