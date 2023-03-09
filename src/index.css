@@ -24,3 +24,16 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.btn.btn-color-outline-primary {
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.btn.btn-color-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
