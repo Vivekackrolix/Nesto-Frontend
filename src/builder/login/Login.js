@@ -8,18 +8,15 @@ import {
   Image,
   InputGroup,
 } from "react-bootstrap";
-// import { RiEyeOffFill, RiEyeFill } from "react-icons/ri";
+
 import { useState } from "react";
 import EnterOtp from "./EnterOtp";
-// import { Link } from "react-router-dom";
-// import { Footer, Header } from '../../../components';
-// import Header from '../../components/header/Header';
-// import { Header } from '../../components';
-// import { Footer, Header } from '../../components';
+
 import "./Login.css";
 import loginImage from "../Images/Rectangle-34624401.png";
 import Header from "../header/Header";
-
+import builder from "../Images/builder.png";
+import loan from "../Images/loan.png";
 const Login = () => {
   // email phone number validation
 
@@ -34,7 +31,7 @@ const Login = () => {
         return (prev = true);
       });
     } else {
-      console.log("ERror");
+      console.log("Error");
     }
   };
 
@@ -189,9 +186,9 @@ const Login = () => {
                   className="rounded-pill border-0 bg-color-primary py-2 wd-200"
                 >
                   <Image
-                    src="/assets/profile.svg"
+                    src={builder}
                     fluid
-                    className="rounded mx-2 user-img"
+                    className="rounded-circle mx-2 user-img"
                     alt="profile"
                   />
                   Builder
@@ -204,9 +201,9 @@ const Login = () => {
                   className="rounded-pill border-0 bg-color-primary py-2 wd-200"
                 >
                   <Image
-                    src="/assets/profile.svg"
+                    src={loan}
                     fluid
-                    className="rounded mx-2 user-img"
+                    className="rounded-circle mx-2 user-img"
                     alt="profile"
                   />
                   Loan Agent
