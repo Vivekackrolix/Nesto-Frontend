@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
                 </div>
             </div>
             <Information />
-            <div className='t-c_heading-box text-center'>
+            <div className='t-c_heading-box mt-5 text-center'>
                 <div className='container'>
                     <span className='t-c_heading'>Your Trusted Partner in Property Search</span>
                 </div>

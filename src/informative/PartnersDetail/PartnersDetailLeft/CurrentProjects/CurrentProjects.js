@@ -15,7 +15,7 @@ const CurrentProjects = () => {
     var settings = {
         dots: false,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         arrows: true,
         speed: 300,
         slidesToShow: 2,

@@ -1,7 +1,7 @@
 .p-p_heading-box {
     background: var(--lite-skyblue);
     padding: 14px 0;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .p-p_heading {
     font-weight: 600;
@@ -23,4 +23,9 @@
     font-size: 18px;
     color: var(--cold-steel-color);
     display: block;
+}
+@media(max-width: 998px) {
+    .p-p_heading-box {
+        margin-top: 30px;
+    }
 }

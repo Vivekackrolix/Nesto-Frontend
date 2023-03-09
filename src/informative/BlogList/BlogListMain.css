@@ -1,0 +1,16 @@
+.blog-list {
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.45)),
+    url(../../../public/assets/informative/blogListBanner.png);
+    width: 100%;
+    height: 310px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-list-heading {
+    font-weight: 700;
+    font-size: 59.38px;
+    color: var(--color-white);
+}

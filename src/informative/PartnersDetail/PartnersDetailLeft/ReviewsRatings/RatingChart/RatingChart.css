@@ -1,15 +1,18 @@
 .rating-chart {
     margin-top: 50px;
 }
+
 .rating-chart .rating-chart_box1 {
     padding: 20px 0;
     border: 1px solid var(--gray-color);
     border-radius: 15px;
     display: flex;
 }
+
 .rating-chart .rating-chart_box2 {
     border-right: 2px solid var(--divider);
 }
+
 .rating-chart .rating-chart_box3 {
     text-align: center;
 }
@@ -32,14 +35,17 @@
 .rating-chart .rating-chart_box4 {
     margin-bottom: 15px;
 }
+
 .rating-chart .rating-chart_star {
     color: #ffb630;
     font-size: 21px;
     margin-right: 3px;
 }
+
 .rating-chart .rating-chart_box5 {
     padding: 10px 30px 20px 30px;
 }
+
 .rating-chart .rating-chart_box7 {
     background: var(--lite-skyblue);
     border-radius: 5rem;
@@ -51,16 +57,20 @@
     background: var(--primary-color);
     height: 14px;
 }
+
 .rating-chart .rating-chart_box9 {
     padding: 20px;
 }
+
 .rating-chart .rating-chart_box10 {
     margin-top: 20px;
 }
+
 .rating-chart .rating-chart_span5 {
     font-size: 24px;
     font-weight: 400;
 }
+
 .rating-chart .rating-chart_box11 {
     display: flex;
     width: 48%;
@@ -68,15 +78,24 @@
     align-items: center;
     padding: 10px;
 }
+
 .rating-chart .rating-chart_box12 {
     width: 30%;
 }
+
 .rating-chart .rating-chart_span6 {
     display: block;
     color: var(--cold-steel-color);
     font-weight: 600;
     font-size: 16px;
 }
+
 .rating-chart .rating-chart_span7 {
     color: var(--gray-color);
+}
+
+@media(max-width: 992px) {
+    .rating-chart .rating-chart_box2 {
+        border-right: none;
+    }
 }
