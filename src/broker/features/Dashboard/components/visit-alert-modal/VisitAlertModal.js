@@ -42,12 +42,12 @@ const VisitAlertModal = ({ show, onHide }) => {
             <Row>
               {visitModalData.map(({ label, value }) => (
                 <>
-                  <Col xs={6} className="mb-3">
+                  <Col xs={12} sm={6} className="mb-3">
                     <Row>
-                      <Col xs={7}>
+                      <Col xs={12} lg={7}>
                         <span>{label}:</span>
                       </Col>
-                      <Col xs={5} className="text-wrap">
+                      <Col xs={12} lg={5} className="text-wrap">
                         {value}
                       </Col>
                     </Row>
@@ -56,7 +56,7 @@ const VisitAlertModal = ({ show, onHide }) => {
               ))}
             </Row>
           </Card.Body>
-          <Card.Footer className="bg-transparent border-0 px-0 d-flex gap-4 justify-content-center">
+          <Card.Footer className="bg-transparent border-0 px-0 d-flex flex-column flex-sm-row align-items-center gap-4 justify-content-center">
             <div className="d-flex gap-2">
               <Button className="btn-color-outline-primary rounded-pill px-4 py-2">
                 Remind Later
