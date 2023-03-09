@@ -11,6 +11,7 @@ const CustomModal = ({
   closeBtn,
   cssClassName,
   size,
+  modalHeader,
 }) => {
   return (
     <Modal
@@ -19,26 +20,37 @@ const CustomModal = ({
       size={size ? size : `md`}
       className={`login__page__modal ${cssClassName ? cssClassName : ``}`}
     >
-      {!closeBtn && (
-        <Modal.Header className={`justify-content-center p2-4 pb-0 border-0`}>
-          <Modal.Title className="fw-bold display-6">{title}</Modal.Title>
-        </Modal.Header>
+      {!modalHeader && !closeBtn && (
+        <>
+          <Modal.Header className="justify-content-center p2-4 pb-0 border-0">
+            <Modal.Title className="fw-bold display-6">{title}</Modal.Title>
+          </Modal.Header>
+        </>
       )}
-      {closeBtn && (
-        <Modal.Header className={`align-items-center p2-4 pb-0`}>
-          <Modal.Title className="ms-auto fw-bold d-flex align-items-center">
-            {title}
-          </Modal.Title>
-          {closeBtn && (
-            <Button
-              className="ms-auto bg-transparent p-0 custom__modal__close rounded rounded-circle"
-              onClick={onHide}
-            >
-              <FiX size={20} color="#000000" />
-            </Button>
+
+      {modalHeader && closeBtn && (
+        <>
+          {!closeBtn && (
+            <Modal.Header className="justify-content-center p2-4 pb-0 border-0">
+              <Modal.Title className="fw-bold display-6">{title}</Modal.Title>
+            </Modal.Header>
           )}
-        </Modal.Header>
+          {closeBtn && (
+            <Modal.Header className="align-items-center p2-4 pb-0">
+              <Modal.Title className="ms-auto fw-bold d-flex align-items-center">
+                {title}
+              </Modal.Title>
+              <Button
+                className="ms-auto bg-transparent p-0 custom__modal__close rounded rounded-circle"
+                onClick={onHide}
+              >
+                <FiX size={20} color="#000000" />
+              </Button>
+            </Modal.Header>
+          )}
+        </>
       )}
+
       <Modal.Body className="pt-2 px-5 pb-4">{children}</Modal.Body>
     </Modal>
   );
