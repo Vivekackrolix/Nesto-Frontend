@@ -9,6 +9,8 @@ import Stats from '../stats/Stats';
 import Heading from '../heading/Heading';
 import Residency from '../residency/Residency';
 import GetStarted from '../getStarted/GetStarted';
+import News from '../news/News';
+
 export default function Banner(){
     return (
       <>
@@ -70,7 +72,7 @@ export default function Banner(){
         
         <ChooseUs/>
         <GetStarted/>
-        
+        <News/>
       </>
     );
 }

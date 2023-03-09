@@ -1,0 +1,31 @@
+.main-body{
+    background: #E0F2FF;
+    /* position: absolute; */
+        /* opacity: 0.6; */
+        z-index: -10;
+        /* transform: matrix(1, 0, 0, -1, 0, 0); */
+}
+.broker-img{
+position: relative;
+z-index: 10;
+}
+.submit-form{
+    background-color: white;
+    position: relative;
+    z-index: 10;
+    border-radius: 8px;
+}
+.form-input{
+    box-sizing: border-box;
+    
+        /* position: absolute; */
+        width: 375.25px;
+        height: 50.96px;
+        padding: 8px 12px;
+    
+        background: #F8F8F8;
+        /* Border */
+    
+        border: 1.13367px solid #E8ECF4;
+        border-radius: 9.0694px;
+}
