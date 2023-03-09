@@ -10,6 +10,8 @@ import Heading from '../heading/Heading';
 import Residency from '../residency/Residency';
 import GetStarted from '../getStarted/GetStarted';
 import News from '../news/News';
+import Testimonial from '../../../dsa/dashboard/comment-history-testimonial/CommentHistoryTestimonial';
+import Testimonials from '../testimonials/Testimonials';
 
 export default function Banner(){
     return (
@@ -73,6 +75,7 @@ export default function Banner(){
         <ChooseUs/>
         <GetStarted/>
         <News/>
+        <Testimonials/>
       </>
     );
 }

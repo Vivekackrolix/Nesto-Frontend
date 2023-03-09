@@ -1,9 +1,17 @@
 import Login from "../login/Login";
 import HomeDashBoard from "../dashboard/HomeDashBoard";
 import Property from "../dashboard/property/Property";
+<<<<<<< HEAD
+
 import PromotedVisit from "../dashboard/dashboard-property-analytics/Visit-Details/PromotedVisit.js";
 import SoldOut from "../dashboard/dashboard-soldout-properties/SoldOut";
 import PropertyEdit from "../dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
+import AmenitiesPop from "../dashboard/dashboard-info-cards/Property Edit/Amenitiespop";
+=======
+import PromotedVisit from "../dashboard/dashboard-property-analytics/Visit-Details/PromotedVisit.js";
+import SoldOut from "../dashboard/dashboard-soldout-properties/SoldOut";
+import PropertyEdit from "../dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
+>>>>>>> 27ac21555805623af7afb3fbd7a06f81edb599fd
 export const RouteData = [
   {
     id: 1,
@@ -37,6 +45,14 @@ export const RouteData = [
         path: "Property-Edit",
         element: <PropertyEdit />,
       },
+<<<<<<< HEAD
+      // {
+      //   id: 6,
+      //   path: "Amenities",
+      //   element: <AmenitiesPop />,
+      // },
+=======
+>>>>>>> 27ac21555805623af7afb3fbd7a06f81edb599fd
     ],
   },
 ];

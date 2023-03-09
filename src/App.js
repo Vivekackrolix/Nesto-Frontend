@@ -10,7 +10,6 @@ import TermsCondition from './informative/TermsCondition/TermsCondition';
 import PrivacyPolicy from './informative/PrivacyPolicy/PrivacyPolicy';
 import BrokerHome from './informative/BrokerPage/BrokerHome/BrokerHome';
 
-
 const components = {
   informativeHomeBanner: <Banner />,
   dsa: <DsaWebsite />,
@@ -21,7 +20,7 @@ const components = {
   builder: <BuilderWeb />,
   broker: <BrokerWeb />,
   informativePrivacyPolicy: <PrivacyPolicy />,
-  brokerHome:<BrokerHome/>,
+  brokerHome: <BrokerHome />,
 };
 
 const App = () => {

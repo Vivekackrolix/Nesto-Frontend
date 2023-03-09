@@ -1,9 +1,13 @@
 import { Table, Container, Button } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import { Link } from "react-router-dom";
+import Footer from "../../Footer/Footer";
+import DashboardHeader from "../../header/DashboardHeader";
+import { RiStarSFill } from "react-icons/ri";
 const VisitDetails = () => {
   return (
     <>
+      <DashboardHeader />
       <SearchFilterBox />
       <h1> Visit Details</h1>
       <div
@@ -108,7 +112,11 @@ const VisitDetails = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345 </td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -116,7 +124,11 @@ const VisitDetails = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -124,7 +136,11 @@ const VisitDetails = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -132,7 +148,11 @@ const VisitDetails = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -140,7 +160,11 @@ const VisitDetails = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -148,7 +172,11 @@ const VisitDetails = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -156,7 +184,11 @@ const VisitDetails = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -164,7 +196,11 @@ const VisitDetails = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
           </tbody>
         </Table>
@@ -179,6 +215,7 @@ const VisitDetails = () => {
           Download Pdf
         </Button>
       </div>
+      <Footer />
     </>
   );
 };

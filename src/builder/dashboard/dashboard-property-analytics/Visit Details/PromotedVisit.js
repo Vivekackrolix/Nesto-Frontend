@@ -1,11 +1,15 @@
 import { Table, Container, Button } from "react-bootstrap";
+import { RiStarSFill } from "react-icons/ri";
+import Footer from "../../Footer/Footer";
+import DashboardHeader from "../../header/DashboardHeader";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 
 const PromotedVisit = () => {
   return (
     <>
+      <DashboardHeader />
       <SearchFilterBox />
-      <h1> Promoted Details</h1>
+      <h1> Visit Details</h1>
       <div
         className=" btn-group rounded-pill border-0  py-2 mx-5"
         role="group"
@@ -102,7 +106,11 @@ const PromotedVisit = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345 </td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -110,7 +118,11 @@ const PromotedVisit = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -118,7 +130,11 @@ const PromotedVisit = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -126,7 +142,11 @@ const PromotedVisit = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -134,7 +154,11 @@ const PromotedVisit = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -142,7 +166,11 @@ const PromotedVisit = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -150,7 +178,11 @@ const PromotedVisit = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
             <tr>
               <td>2111321321</td>
@@ -158,7 +190,11 @@ const PromotedVisit = () => {
               <td>12 Jan 2023</td>
               <td style={{ color: "#278FD9" }}>Bought</td>
               <td>Lorem Ipsum</td>
-              <td>12345</td>
+              <td>
+                {Array.from({ length: 5 }, (_, index) => (
+                  <RiStarSFill color="#FFB630" />
+                ))}
+              </td>
             </tr>
           </tbody>
         </Table>
@@ -173,6 +209,7 @@ const PromotedVisit = () => {
           Download Pdf
         </Button>
       </div>
+      <Footer />
     </>
   );
 };
