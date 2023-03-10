@@ -3,7 +3,9 @@ import { Container, Row, Col, Image, Figure } from "react-bootstrap";
 const LoginUser = () => {
   return (
     <Container fluid className="mb-4 login__user">
-      <h1 className="fw-bold  mb-3">Welcome back! Glad to see you, Again!</h1>
+      <h1 className="fw-bold  mb-3" style={{ fontFamily: "Bahnschrift" }}>
+        Welcome back! Glad to see you, Again!
+      </h1>
       <Row className="justify-content-center align-items-center">
         <Col xs="auto" className="d-flex align-items-center gap-2">
           <Image
@@ -12,7 +14,10 @@ const LoginUser = () => {
             className="rounded my-3 user-img"
             alt="profile"
           />
-          <Figure.Caption className="text-center mb-0">
+          <Figure.Caption
+            className="text-center mb-0"
+            style={{ fontFamily: "Bahnschrift" }}
+          >
             Login as a Builder
           </Figure.Caption>
         </Col>

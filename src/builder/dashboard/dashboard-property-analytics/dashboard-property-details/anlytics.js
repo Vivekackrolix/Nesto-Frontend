@@ -10,14 +10,15 @@ import Three from "../../../Images/3BHK.png";
 const Anlytics = () => {
   return (
     <>
-      <h3>Property Analytics</h3>
+      <br></br>
+      <h3 style={{ fontFamily: "Bahnschrift" }}>Property Analytics</h3>
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <div className="p-4 d-flex justify-content-around">
           <div className="text-center d-flex flex-column">
             <span>
               <img src={Sold} className="rounded my-3" alt="Search" />
             </span>
-            <span>
+            <span style={{ fontFamily: "Bahnschrift" }}>
               2<br></br>Sold
             </span>
           </div>
@@ -26,7 +27,7 @@ const Anlytics = () => {
               <img src={visit} className="rounded my-3" alt="Search" />
             </span>
 
-            <span>
+            <span style={{ fontFamily: "Bahnschrift" }}>
               20<br></br>Visits
             </span>
           </div>
@@ -35,7 +36,7 @@ const Anlytics = () => {
               <img src={Search} className="rounded my-3" alt="Search" />
             </span>
 
-            <span>
+            <span style={{ fontFamily: "Bahnschrift" }}>
               200 <br></br> Search
             </span>
           </div>
@@ -43,7 +44,7 @@ const Anlytics = () => {
             <span>
               <img src={view} className="rounded my-3" alt="Search" />
             </span>
-            <span>
+            <span style={{ fontFamily: "Bahnschrift" }}>
               100 <br></br> Views
             </span>
           </div>{" "}
@@ -51,7 +52,7 @@ const Anlytics = () => {
             <span>
               <img src={Share} className="rounded my-3" alt="Search" />
             </span>
-            <span>
+            <span style={{ fontFamily: "Bahnschrift" }}>
               40 <br></br> Shared
             </span>
           </div>
@@ -59,9 +60,12 @@ const Anlytics = () => {
       </Container>
       <br></br>
       <br></br>
-      <h3>Floor Plane & Pricing</h3>
-      <p>in Arocon Rainbow</p>
-      <div className="d-flex rounded-pill gap-4 p-2    col">
+      <h3 style={{ fontFamily: "Bahnschrift" }}>Floor Plane & Pricing</h3>
+      <p style={{ fontFamily: "Bahnschrift" }}>in Arocon Rainbow</p>
+      <div
+        className="d-flex rounded-pill gap-4 p-2    col"
+        style={{ fontFamily: "Bahnschrift" }}
+      >
         <button type="button" className="btn btn-primary rounded-pill">
           All
         </button>

@@ -7,7 +7,7 @@ const OtpContent = () => {
   return (
     <>
       <Form.Group className="mb-3">
-        <Form.Label>OTP</Form.Label>
+        <Form.Label style={{ fontFamily: "Bahnschrift" }}>OTP</Form.Label>
         <div className="d-flex justify-content-between align-items-center gap-4 mb-3">
           <Form.Control className="rounded" type="text" maxLength={1} />
           <Form.Control className="rounded" type="text" maxLength={1} />
@@ -17,7 +17,10 @@ const OtpContent = () => {
           <Form.Control className="rounded" type="text" maxLength={1} />
         </div>
         <div className="d-flex justify-content-center align-items-center my-4">
-          <Form.Text className="text-muted me-3">
+          <Form.Text
+            className="text-muted me-3"
+            style={{ fontFamily: "Bahnschrift" }}
+          >
             Didn't get OTP. Resend In 30 Sec
           </Form.Text>
           <Image
