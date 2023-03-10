@@ -20,6 +20,6 @@ jobs:
           script: |
             cd ..
             cd ..
-            cd NestoHub-Frontend/
+            cd Nesto-Frontend/
             git pull origin main
             pm2 restart web
