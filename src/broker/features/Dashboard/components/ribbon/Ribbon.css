@@ -50,7 +50,7 @@
 
 .ribbonStyle2 {
   position: absolute;
-  padding: 0 0.5em;
+  padding: 0 1rem;
   font-size: 2em;
   line-height: 1.875em;
   font-family: 'Montserrat';
@@ -65,3 +65,16 @@
 }
 
 /* ribbon style 2 code end here */
+
+/* ribbon style 3 code start here */
+.ribbonStyle3 {
+  padding: 0.3rem 1rem;
+  border-radius: 0px 0px 2.54px 2.54px;
+  background-color: #fc5c67;
+  font-weight: 350;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+  color: #ffffff;
+}
+/* ribbon style 3 code end here */

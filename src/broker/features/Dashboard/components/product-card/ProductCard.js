@@ -4,6 +4,7 @@ import { FaBuilding } from 'react-icons/fa';
 import { MdShare } from 'react-icons/md';
 import './ProductCard.css';
 import Ribbon from '../ribbon/Ribbon';
+import { RiBuilding2Fill } from 'react-icons/ri';
 
 const ProductCard = ({
   imageUrl,
@@ -26,44 +27,50 @@ const ProductCard = ({
       }}
     >
       <div className="position-relative">
-        <Card.Img variant="top" src={imageUrl} alt="Product Image" />
-        <Ribbon cssClass="ribbonStyle" text="BEST SELLER" />
+        <Card.Img
+          variant="top"
+          src={imageUrl}
+          alt="Product Image"
+          className="nes__product__card__image"
+        />
+        <Ribbon cssClass="ribbonStyle" text="Best Seller" />
         <Ribbon cssClass="ribbonStyle2" text="5% Brokerage" />
 
-        <div className="overlay-blue top-right">
-          <span>5% Brokerage</span>
-        </div>
-        <Button
-          variant="secondary"
-          className="overlay-dark bottom-left"
-          style={{ position: 'absolute', bottom: '0', left: '0' }}
-        >
+        <Button className="nes__product__card__btndark px-4">
           Ready To Move
         </Button>
       </div>
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{location}</Card.Subtitle>
-        <Row className="mt-3">
-          {bhk.map((item, index) => (
-            <Col xs={6} md={3} key={index}>
-              <FaBuilding className="mr-2" />
-              <span>{item} BHK</span>
-            </Col>
-          ))}
-        </Row>
-        <div className="bg-danger text-white py-2 my-3 px-3 rounded">
-          <span>Get ₹ {visitAmount} per Visit</span>
+      <Card.Body className="px-0">
+        <div className="px-4">
+          <Card.Title className="nes__product__card__title">{title}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted nes__product__card__subtitle">
+            {location}
+          </Card.Subtitle>
+          <Row className="my-3 nes__product__card__icons gx-5">
+            {bhk.map((item, index) => (
+              <Col
+                key={index}
+                className="col-auto d-flex flex-column justify-content-center align-items-center"
+              >
+                <RiBuilding2Fill color="#939197" />
+                <span>{item} BHK</span>
+              </Col>
+            ))}
+          </Row>
         </div>
-        <div>
-          <h4 className="d-inline-block font-weight-bold">{price}</h4>
-          <span className="d-inline-block ml-2 text-muted">{discount}</span>
+        <div className="d-flex justify-content-end align-items-center my-2">
+          <Ribbon
+            cssClass="ribbonStyle3 d-inline-flex align-items-center"
+            text={`Get ₹ ${visitAmount} per Visit`}
+          />
+        </div>
+
+        <div className="px-4 nes__product__card__price d-flex align-items-center gap-2">
+          <h4 className="d-inline-block font-weight-bold m-0">{price}</h4>
+          <span className="d-inline-block text-muted m-0">{discount}</span>
         </div>
       </Card.Body>
-      <Card.Footer
-        className="d-flex justify-content-end border-0"
-        style={{ background: '#FFFFFF' }}
-      >
+      <Card.Footer className="d-flex justify-content-end border-0 bg-white pt-0">
         <Button className="btn-color-outline-primary rounded-pill px-4">
           Book a visit
         </Button>
