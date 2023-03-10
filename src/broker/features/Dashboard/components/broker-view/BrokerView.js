@@ -3,11 +3,11 @@ import './BrokerView.css';
 import HeroSection from '../hero-section/HeroSection';
 import SmallCardSection from '../small-card-section/SmallCardSection';
 import ProductCard from '../product-card/ProductCard';
-
+import productImg from '../../assets/images/product-img.png';
 const BrokerView = () => {
   const productCards = [
     {
-      imageUrl: 'https://via.placeholder.com/350x200',
+      imageUrl: productImg,
       title: 'Sky Dandelions Apartment',
       location: 'Luxury Apartment in Sector-29, Gurugram',
       bhk: [1, 2, 3, 4],
@@ -16,7 +16,7 @@ const BrokerView = () => {
       visitAmount: '500',
     },
     {
-      imageUrl: 'https://via.placeholder.com/350x200',
+      imageUrl: productImg,
       title: 'Sky Dandelions Apartment',
       location: 'Luxury Apartment in Sector-29, Gurugram',
       bhk: [1, 2, 3, 4],
@@ -25,7 +25,7 @@ const BrokerView = () => {
       visitAmount: '500',
     },
     {
-      imageUrl: 'https://via.placeholder.com/350x200',
+      imageUrl: productImg,
       title: 'Sky Dandelions Apartment',
       location: 'Luxury Apartment in Sector-29, Gurugram',
       bhk: [1, 2, 3, 4],
