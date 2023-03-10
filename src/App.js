@@ -24,7 +24,7 @@ const components = {
 };
 
 const App = () => {
-  const websiteToLoad = 'broker';
+  const websiteToLoad = 'informativeHomeBanner';
   const ComponentToRender = components[websiteToLoad] || (
     <div>Website not found</div>
   );

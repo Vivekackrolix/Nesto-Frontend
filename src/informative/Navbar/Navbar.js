@@ -7,8 +7,8 @@ const InformativeNavbar = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <Navbar bg="light" expand="lg" className="login__header nes__header">
-      <Container>
+    <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
+      <Container className='nav-container'>
         <Navbar.Brand href="#home">
           <img
             src="/assets/nesto-logo.png"
@@ -42,7 +42,7 @@ const InformativeNavbar = () => {
                 List your Property
               </button>
             </Nav.Item>
-            <Nav.Item className="mx-4">
+            <Nav.Item className="download">
               <button className="download-button d-flex mb-3 p-4 mb-lg-0 btn-lg">
                 <span>Download App</span>
                 <span className='text-white mx-2'>
