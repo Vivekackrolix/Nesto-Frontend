@@ -3,24 +3,23 @@ name: CICD for NestoHub
 on:
   push:
     branches:
-      - main
+        - main
 
 jobs:
   depoly:
-    needs: [build]
     runs-on: ubuntu-latest
 
     steps:
-      - name: SSH deploy
-        uses: appleboy/ssh-action@master
-        with:
+     - name: SSH deploy
+       uses: appleboy/ssh-action@master
+       with:
           host: ${{ secrets.HOST }}
-          username: ubuntu
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
+          username:  ubuntu
+          key:  ${{ secrets.KEY }}
+          port:  ${{ secrets.PORT }}
           script: |
-            cd ..
-            cd ..
-            cd NestoHub-Frontend/
-            git pull origin main
-            pm2 restart web
+               cd ..
+               cd ..
+               cd NestoHub-Frontend/
+               git pull origin main
+               pm2 restart web
