@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import {
   BookAVisitModal,
+  BrokerView,
   CustomerModal,
+  Footer,
+  Header,
   ShareModal,
   SuccessModal,
   VisitAlertModal,
@@ -22,8 +25,18 @@ const DashboardPage = () => {
         <BookAVisitModal show={show} onHide={onHide} /> */}
         {/* <SuccessModal show={show} onHide={onHide} /> */}
         {/* <VisitAlertModal show={show} onHide={onHide} /> */}
-        <CustomerModal show={show} onHide={onHide} />
+        {/* <CustomerModal show={show} onHide={onHide} /> */}
         {/* popup modal code end here */}
+        <Header />
+        {/* dashbaord page main content start here */}
+        <main className="nes__broker__dashboard">
+          {/* Broker View Page*/}
+          <BrokerView />
+          {/* Broker View Page code end here */}
+        </main>
+        {/* dashboard page main content end here */}
+
+        <Footer />
       </div>
     </>
   );
