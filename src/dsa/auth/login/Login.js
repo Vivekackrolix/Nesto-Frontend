@@ -24,7 +24,7 @@ const Login = () => {
   const [showModal, setShowModal] = useState({
     forgetPassword: false,
     resetPassword: false,
-    enterOtp: true,
+    enterOtp: false,
   });
 
   const handleInputChange = event => {

@@ -24,7 +24,7 @@ const components = {
 };
 
 const App = () => {
-  const websiteToLoad = 'informativeHomeBanner';
+  const websiteToLoad = 'dsa';
   const ComponentToRender = components[websiteToLoad] || (
     <div>Website not found</div>
   );
