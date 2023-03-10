@@ -13,7 +13,7 @@ const LoginUser = () => {
             alt="profile"
           />
           <Figure.Caption className="text-center mb-0">
-            Login as the a DSA
+            Login as a DSA
           </Figure.Caption>
         </Col>
       </Row>
