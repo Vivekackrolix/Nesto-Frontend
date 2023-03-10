@@ -4,8 +4,9 @@ import HeroSection from '../hero-section/HeroSection';
 import SmallCardSection from '../small-card-section/SmallCardSection';
 import ProductCard from '../product-card/ProductCard';
 import productImg from '../../assets/images/product-img.png';
+import { ProductContainers } from '../../../../dashboard-containers';
 const BrokerView = () => {
-  const productCards = [
+  const productData = [
     {
       imageUrl: productImg,
       title: 'Sky Dandelions Apartment',
@@ -37,17 +38,14 @@ const BrokerView = () => {
 
   return (
     <Container fluid="lg">
-      <section className="my-5">
+      <section className="mt-5">
         <HeroSection />
       </section>
       <SmallCardSection />
-      <Row>
-        {productCards.map((productCard, index) => (
-          <Col key={index} xs={12} sm={6} md={4} className="mb-4">
-            <ProductCard {...productCard} />
-          </Col>
-        ))}
-      </Row>
+      <ProductContainers
+        sectionTitle="Promoted Property"
+        productData={productData}
+      />
     </Container>
   );
 };

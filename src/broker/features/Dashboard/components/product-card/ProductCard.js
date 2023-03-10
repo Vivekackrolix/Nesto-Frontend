@@ -1,10 +1,9 @@
 import React from 'react';
 import { Card, Button, Row, Col } from 'react-bootstrap';
-import { FaBuilding } from 'react-icons/fa';
 import { MdShare } from 'react-icons/md';
-import './ProductCard.css';
 import Ribbon from '../ribbon/Ribbon';
 import { RiBuilding2Fill } from 'react-icons/ri';
+import './ProductCard.css';
 
 const ProductCard = ({
   imageUrl,
@@ -65,7 +64,7 @@ const ProductCard = ({
           />
         </div>
 
-        <div className="px-4 nes__product__card__price d-flex align-items-center gap-2">
+        <div className="px-4 nes__product__card__price d-flex flex-wrap align-items-center gap-2">
           <h4 className="d-inline-block font-weight-bold m-0">{price}</h4>
           <span className="d-inline-block text-muted m-0">{discount}</span>
         </div>
