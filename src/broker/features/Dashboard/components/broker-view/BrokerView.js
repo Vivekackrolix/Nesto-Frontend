@@ -36,8 +36,10 @@ const BrokerView = () => {
   ];
 
   return (
-    <Container>
-      <HeroSection />
+    <Container fluid="lg">
+      <section className="my-5">
+        <HeroSection />
+      </section>
       <SmallCardSection />
       <Row>
         {productCards.map((productCard, index) => (
