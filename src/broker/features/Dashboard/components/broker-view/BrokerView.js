@@ -5,6 +5,7 @@ import SmallCardSection from '../small-card-section/SmallCardSection';
 import ProductCard from '../product-card/ProductCard';
 import productImg from '../../assets/images/product-img.png';
 const BrokerView = () => {
+  //
   const productCards = [
     {
       imageUrl: productImg,
