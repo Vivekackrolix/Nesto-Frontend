@@ -7,6 +7,7 @@ on:
 
 jobs:
   depoly:
+    needs: [build]
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +21,6 @@ jobs:
           script: |
             cd ..
             cd ..
-            cd Nesto-Frontend/
-            git stash
+            cd NestoHub-Frontend/
             git pull origin main
             pm2 restart web
