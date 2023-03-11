@@ -23,7 +23,10 @@ const Payment = () => {
       <br></br>
       <br></br>
       <div className="p-1 d-flex justify-content-between  rounded">
-        <Container className="dashboard_wrapper_filter border border_light rounded container p-3 mx-5 ">
+        <Container
+          className="dashboard_wrapper_filter border border_light rounded container p-3 mx-5 "
+          style={{ border: "2.94206px solid #E3E3E7" }}
+        >
           <Col>
             <h4>Milestone 1</h4>
             <Row>
@@ -36,7 +39,10 @@ const Payment = () => {
             </Row>
           </Col>
         </Container>
-        <Container className="dashboard_wrapper_filter border border_light rounded p-3 mx-5">
+        <Container
+          className="dashboard_wrapper_filter border border_light rounded p-3 mx-5"
+          style={{ border: "2.94206px solid #E3E3E7" }}
+        >
           <Col>
             {" "}
             <h4>Milestone 2</h4>
@@ -50,7 +56,10 @@ const Payment = () => {
             </Row>
           </Col>
         </Container>
-        <Container className="dashboard_wrapper_filter border border_light rounded p-3 mx-5">
+        <Container
+          className="dashboard_wrapper_filter border border_light rounded p-3 mx-5"
+          style={{ border: "2.94206px solid #E3E3E7" }}
+        >
           <Col>
             <h4>Milestone 3</h4>
             <Row>
@@ -92,9 +101,9 @@ const Payment = () => {
       <br></br>
       <br></br>
       <h3>Payment Plan</h3>
-      <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
-        <div className="p-4 d-flex justify-content-around"></div>
-        <Table className="profile__transaction mx-3 p-4">
+      <Container className="  border-light rounded shadow-sm ">
+        <div className=" d-flex justify-content-around"></div>
+        <Table className="profile__transaction ">
           <thead>
             <tr>
               <th>Payment %</th>

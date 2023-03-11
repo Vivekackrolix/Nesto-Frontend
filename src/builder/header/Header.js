@@ -23,15 +23,19 @@ const Header = () => {
           </Nav.Item>
 
           <div className="d-flex flex-row col-4 justify-content-between ms-auto ">
-            <Nav.Item as={Link} to="/builder/home-dashboard">
+            <Nav.Item
+              as={Link}
+              to="/builder/home-dashboard"
+              className="d-flex align-items-center gap-2"
+            >
               <img src={home} alt="home" />
               Home
             </Nav.Item>
-            <Nav.Item>
+            <Nav.Item className="d-flex align-items-center gap-2">
               <img src={client} alt="client" />
               Client
             </Nav.Item>
-            <Nav.Item>
+            <Nav.Item className="d-flex align-items-center gap-2">
               <img src={brockerage} alt="brockerage" />
               Brockerage
             </Nav.Item>

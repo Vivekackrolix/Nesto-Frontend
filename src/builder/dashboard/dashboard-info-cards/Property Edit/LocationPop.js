@@ -3,27 +3,17 @@ import { Button, Container, Form, Modal } from "react-bootstrap";
 const LocationPop = ({ show }) => {
   return (
     <>
-      {/* <h1>Amenities</h1>
-      <Form.Group className="mb-3">
-        <Form.Label>Add Amenities</Form.Label>
-
-        <Button
-          variant="primary"
-          className="w-100 rounded-pill bg-color-primary"
-          as={Link}
-          to="/builder/home-dashboard/proertyedit"
-        >
-          Submit
-        </Button>
-      </Form.Group> */}
       <Modal show={show}>
         <Modal.Header>
           <Modal.Title>Location Advantages</Modal.Title>
         </Modal.Header>
         <Form.Group className="mb-3">
           <Form.Label>Add Location</Form.Label>
-          <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
-            <div className="p-1 d-flex justify-around  dropdown">
+          <Container
+            className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+            style={{ background: "#F8F8F8" }}
+          >
+            {/* <div className="p-1 d-flex justify-around  dropdown">
               <button type="button" class="btn btn-secondary">
                 Hospital (200 m)
               </button>
@@ -37,6 +27,36 @@ const LocationPop = ({ show }) => {
               >
                 Add More
               </button>
+            </div> */}
+            <div
+              className="btn-group"
+              role="group"
+              aria-label="Button group with nested dropdown"
+            >
+              <button
+                type="button"
+                className="btn btn-secondary"
+                style={{ background: "#EFEFEF" }}
+              >
+                Hospital(200m)
+              </button>
+
+              <div className="btn-group" role="group">
+                <button
+                  id="btnGroupDrop1"
+                  type="button"
+                  className="btn btn-secondary dropdown-toggle"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Add more
+                </button>
+                <div
+                  className="dropdown-menu"
+                  aria-labelledby="btnGroupDrop1"
+                ></div>
+              </div>
             </div>
           </Container>
 
