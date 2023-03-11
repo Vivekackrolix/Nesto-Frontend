@@ -20,6 +20,16 @@
   /* divider */
   --divider: #d3d3d3;
 }
+/* Custom Scroll-bar */
+*::-webkit-scrollbar {
+  background: #0e507c;
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #54baff;
+  /* border-radius: 2rem; */
+}
 
 body {
   font-family: 'Poppins', sans-serif;
