@@ -18,14 +18,14 @@ const App = () => {
       <Routes>
         <Route path='/partners/details' element={<PartnersDetailsMain />} />
         <Route path='/contact-us' element={<ContactUsMain />} />
-        <Route path='/home-page' element={<Banner />} />
-         <Route path='/partner-page' element={<PartnerBanner />} />
-         <Route path='/broker-page' element={<BrokerHome />} />
-         <Route path='/terms-condition' element={<TermsCondition />} />
-         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-         <Route path='/blog-list' element={<BlogListMain />} />
-         <Route path='/blog-detail' element={<BlogDetailMain />} />
-         <Route path='/about-us' element={<AboutUsMain />} />
+        <Route path='/' element={<Banner />} />
+        <Route path='/partner-page' element={<PartnerBanner />} />
+        <Route path='/broker-page' element={<BrokerHome />} />
+        <Route path='/terms-condition' element={<TermsCondition />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route path='/blog-list' element={<BlogListMain />} />
+        <Route path='/blog-detail' element={<BlogDetailMain />} />
+        <Route path='/about-us' element={<AboutUsMain />} />
       </Routes>
     </BrowserRouter>
   );
