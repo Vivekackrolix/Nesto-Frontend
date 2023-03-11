@@ -1,9 +1,10 @@
-import { Container, Row, Col } from 'react-bootstrap';
-import './BrokerView.css';
+import { Container } from 'react-bootstrap';
 import HeroSection from '../hero-section/HeroSection';
 import SmallCardSection from '../small-card-section/SmallCardSection';
 import productImg from '../../assets/images/product-img.png';
 import { ProductContainers } from '../../../../dashboard-containers';
+import SwiperSliderDashboard from '../swiper-slider-dashboard/SwiperSliderDashboard';
+import './BrokerView.css';
 const BrokerView = () => {
   const productData = [
     {
@@ -41,6 +42,9 @@ const BrokerView = () => {
         <HeroSection />
       </section>
       <SmallCardSection />
+      <section className="mt-5">
+        <SwiperSliderDashboard />
+      </section>
       <ProductContainers
         sectionTitle="Promoted Property"
         productData={productData}

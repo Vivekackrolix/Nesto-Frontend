@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import LoginUser from './LoginUser';
 import {
   Container,
@@ -8,7 +9,6 @@ import {
   Image,
   InputGroup,
 } from 'react-bootstrap';
-import { useState } from 'react';
 import ForgetPassword from './ForgetPassword';
 import ResetPasswordModal from './ResetPasswordModal';
 import EnterOtp from './EnterOtp';
