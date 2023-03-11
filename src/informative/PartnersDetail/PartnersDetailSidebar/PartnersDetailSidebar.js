@@ -14,7 +14,7 @@ export default function PartnersDetailSidebar() {
                     <div className='col-lg-12'>
                         <div className='row'>
                             <FirstCard />
-                            <SecondCard />
+                            <SecondCard url='/assets/informative/device.png' />
                             <ThirdCard />
                             <FourthCard />
                             <FifthCard />

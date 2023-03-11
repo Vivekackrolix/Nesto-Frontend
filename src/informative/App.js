@@ -9,6 +9,8 @@ import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner'
 import TermsCondition from './TermsCondition/TermsCondition';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 import BlogListMain from './BlogList/BlogListMain'
+import BlogDetailMain from './BlogDetail.js/BlogDetailMain';
+import AboutUsMain from './AboutUs/AboutUsMain';
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
          <Route path='/terms-condition' element={<TermsCondition />} />
          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
          <Route path='/blog-list' element={<BlogListMain />} />
+         <Route path='/blog-detail' element={<BlogDetailMain />} />
+         <Route path='/about-us' element={<AboutUsMain />} />
       </Routes>
     </BrowserRouter>
   );

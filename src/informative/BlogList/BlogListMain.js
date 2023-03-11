@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/header/Header'
+import InformativeNavbar from '../Navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import './BlogListMain.css'
 import ArticleNews from './ArticleNews/ArticleNews';
@@ -9,7 +9,7 @@ import LatestPost from './LatestPost/LatestPost';
 export default function BlogListMain() {
     return (
         <>
-            <Header />
+            <InformativeNavbar/>
             <div className="blog-list-banner">
                 <span className='blog-list-banner-heading'>Blog</span>
             </div>

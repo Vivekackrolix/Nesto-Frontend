@@ -1,14 +1,12 @@
 import React from 'react'
 import './SecondCard.css'
 import { Link } from 'react-router-dom'
-import { FaLongArrowAltRight } from 'react-icons/fa'
 
-const SecondCard = () => {
+const SecondCard = ({url}) => {
     return (
         <>
-            {/* First Card */}
             <div className='d-flex justify-content-between partners-second__card rounded-3'>
-                <div className=''>
+                <div className='' style={{width: '100%'}}>
                     <div className='second-card__box rounded-3'>
                         <div className='text-center'>
                             <span className='second-card__span-1'>Download Nestohub Mobile App</span>
@@ -34,7 +32,7 @@ const SecondCard = () => {
                             </Link>
                         </div>
                         <div className='second-card__box-2'>
-                            <img src='/assets/device.png' className='second-card__img-1' />
+                            <img src={url} className='second-card__img-1' />
                         </div>
                     </div>
                 </div>
