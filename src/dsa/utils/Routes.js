@@ -9,7 +9,7 @@ export const RouteData = [
   {
     id: 1,
     page: 'login',
-    path: '/',
+    path: '/dsa/login',
     element: <Login />,
   },
   {
