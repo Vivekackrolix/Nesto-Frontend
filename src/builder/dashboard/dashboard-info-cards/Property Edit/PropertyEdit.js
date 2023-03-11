@@ -23,22 +23,43 @@ import FileUpload from "../../Fileupload/Fileupload";
 import blank from "../../../Images/blank.png";
 import { RiAddBoxFill } from "react-icons/ri";
 import edit from "../../../Images/edit.png";
+import SubmitPop from "./Submitpop";
 
 const PropertyEdit = () => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
+  // const [showLocationPop, setShowLocationPop] = useState(false);
+  // const [showSubmitPop, setShowSubmitPop] = useState(false);
 
-  const onContinueHandler = () => {
-    setShow(true);
+  // const onContinueHandler = () => {
+  //   setShow((prev) => {
+  //     console.log(prev);
+  //     return !prev;
+  //   });
+  // };
+
+  // const onSubmitHandler = () => {
+  //   setShowSubmitPop((prev) => !prev);
+  // };
+
+  // const handleSubmit = () => {
+  //   setShowLocationPop((prev) => !prev);
+  // };
+  const [show, setShow] = useState({
+    amenities: false,
+    location: false,
+    submit: false,
+  });
+  console.log(show);
+
+  const onAmenitiesClick = () => {
+    setShow((prev) => ({ ...prev, amenities: true }));
   };
-
-  const handleSubmit = () => {
-    setShow(true);
+  const onLocationClick = () => {
+    setShow((prev) => ({ ...prev, location: true }));
   };
 
   return (
     <>
-      <AmenitiesPop show={show} />
-      <LocationPop show={show} />
       <DashboardHeader />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
@@ -95,19 +116,40 @@ const PropertyEdit = () => {
           <div className="p-3 d-flex justify-content-between">
             <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
           </div>
+          {/* <div
+            className="dropdown dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 p-3 d-flex justify-content-between"
+            style={{ background: "#F8F8F8" }}
+          >
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a className="dropdown-item">Action</a>
+              <a className="dropdown-item">Another action</a>
+              <a className="dropdown-item">Something else here</a>
+            </div>
+          </div> */}
         </Container>
         <br></br>
         <br></br>
         <div className="d-flex justify-content-between">
           <h3 style={{ fontFamily: "Bahnschrift" }}> Amenities</h3>
-
+          <SubmitPop show={show.submit} onChange={setShow} />
           <Button
             variant="primary"
             size="sm"
             className="rounded-circle bg-color-primary p-3"
-            onClick={handleSubmit}
+            onClick={onAmenitiesClick}
           >
             <RiAddBoxFill size={20} />
+            <AmenitiesPop show={show} onChange={setShow} />
           </Button>
         </div>
         <Container
@@ -153,9 +195,10 @@ const PropertyEdit = () => {
             variant="primary"
             size="sm"
             className="rounded-circle  bg-color-primary p-3"
-            onClick={onContinueHandler}
+            onClick={onLocationClick}
           >
             <RiAddBoxFill size={20} />
+            <LocationPop show={show.location} onChange={setShow} />
           </Button>
         </div>
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">

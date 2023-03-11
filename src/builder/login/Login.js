@@ -57,9 +57,6 @@ const Login = () => {
 
   return (
     <>
-      {/* modal */}
-      {/* {showModal.forgetPassword && <ForgetPassword show={true} />}
-      {showModal.resetPassword && <ResetPasswordModal show={true} />} */}
       {showModal && <EnterOtp show={true} />}
 
       <Header />
@@ -76,12 +73,6 @@ const Login = () => {
             <LoginUser />
 
             <Form>
-              {/* <Form.Group>
-                <Form.Label className="fw-light">
-                  Mobile Number/Email
-                </Form.Label>
-              </Form.Group> */}
-
               <InputGroup className="mb-0">
                 <Form.Control
                   name="phone"
@@ -102,56 +93,6 @@ const Login = () => {
                 </Form.Control.Feedback>
               </InputGroup>
 
-              {/* <Form.Group className="mt-4">
-                <Form.Label className="fw-light">Password</Form.Label>
-              </Form.Group> */}
-
-              {/* <InputGroup className="mb-0">
-                <Form.Control
-                  type={`${showPassword ? "text" : `password`}`}
-                  name="password"
-                  aria-label="Password"
-                  className="rounded-0 border-end-0"
-                />
-                <Button
-                  variant="transparent"
-                  type="button"
-                  className="border border-start-0 rounded-0"
-                  onClick={() =>
-                    setShowPassword((prevShowPassword) => !prevShowPassword)
-                  }
-                >
-                  {showPassword && <RiEyeFill color="#fc5c67" />}
-                  {!showPassword && <RiEyeOffFill color="#fc5c67" />}
-                </Button>
-              </InputGroup> */}
-              {/* <div className="d-flex justify-content-between align-items-center">
-                <div className="invalid-feedback">Incorrect Password</div>
-                <div className="w-100 d-flex justify-content-end">
-                  <Button
-                    onClick={() =>
-                      setShowModal((prevShowModal) => ({
-                        ...prevShowModal,
-                        forgetPassword: true,
-                      }))
-                    }
-                    variant="link"
-                    to="/dsa/forgetPassword"
-                    className="login__form__forgetpassword p-0"
-                  >
-                    Forget Password?
-                  </Button>
-                </div>
-              </div> */}
-
-              {/* <Form.Group className="mt-3" controlId="formBasicCheckbox">
-                <Form.Check
-                  className="form-check-inline"
-                  type="checkbox"
-                  label="Remember Me"
-                />
-              </Form.Group> */}
-
               <div className="d-grid mt-5">
                 <Button
                   variant="primary"
@@ -169,16 +110,6 @@ const Login = () => {
               <div className="divider flex-grow-1"></div>
             </div>
             <div className="d-flex justify-content-between">
-              {/* <div className="flex-grow-1 d-flex justify-content-center">
-                <Button variant="link" className="border-0 p-0 mr-3">
-                  <img src="/assets/google.svg" alt="google" />
-                </Button>
-              </div>
-              <div className="flex-grow-1 d-flex justify-content-center border-start">
-                <Button variant="link" className="border-0 p-0 mr-3">
-                  <img src="/assets/facebook.svg" alt="facebook" />
-                </Button>
-              </div> */}
               <div className="d-grid mt-5">
                 <Button
                   variant="primary"
@@ -213,7 +144,6 @@ const Login = () => {
           </Col>
         </Row>
       </Container>
-      {/* <Footer /> */}
     </>
   );
 };
