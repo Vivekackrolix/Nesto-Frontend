@@ -33,7 +33,9 @@ const components = {
 };
 
 const App = () => {
-  const [websiteToLoad, setWebsiteToLoad] = useState('informativePartnersDetailsMain');
+  const [websiteToLoad, setWebsiteToLoad] = useState(
+    'informativePartnersDetailsMain'
+  );
 
   const ComponentToRender = components[websiteToLoad] || (
     <div>Website not found</div>
