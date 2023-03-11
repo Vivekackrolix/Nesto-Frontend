@@ -1,35 +1,49 @@
-import React from 'react';
-import DsaWebsite from './dsa/App';
-import PartnersDetailsMain from './informative/App';
-import ContactUs from './informative/App';
-import BuilderWeb from './builder/App';
-import BrokerWeb from './broker/App';
-import Banner from './informative/HomePage/Banner/Banner';
-import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner';
-import TermsCondition from './informative/TermsCondition/TermsCondition';
-import PrivacyPolicy from './informative/PrivacyPolicy/PrivacyPolicy';
-import BrokerHome from './informative/BrokerPage/BrokerHome/BrokerHome';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
+import LoadingScreen from './components/loading-screen/LoadingScreen';
+const DsaWebsite = lazy(() => import('./dsa/App'));
+const PartnersDetailsMain = lazy(() => import('./informative/App'));
+const ContactUs = lazy(() => import('./informative/App'));
+const BuilderWeb = lazy(() => import('./builder/App'));
+const BrokerWeb = lazy(() => import('./broker/App'));
+const Banner = lazy(() => import('./informative/HomePage/Banner/Banner'));
+const PartnerBanner = lazy(() =>
+  import('./informative/PartnersPage/Partnerbanner/partnerbanner')
+);
+const TermsCondition = lazy(() =>
+  import('./informative/TermsCondition/TermsCondition')
+);
+const PrivacyPolicy = lazy(() =>
+  import('./informative/PrivacyPolicy/PrivacyPolicy')
+);
+const BrokerHome = lazy(() =>
+  import('./informative/BrokerPage/BrokerHome/BrokerHome')
+);
 
 const components = {
-  informativeHomeBanner: <Banner />,
-  dsa: <DsaWebsite />,
-  informativePartnersDetailsMain: <PartnersDetailsMain />,
-  partnerPage: <PartnerBanner />,
-  informativeContactUs: <ContactUs />,
-  informativeTandC: <TermsCondition />,
-  builder: <BuilderWeb />,
-  broker: <BrokerWeb />,
-  informativePrivacyPolicy: <PrivacyPolicy />,
-  brokerHome: <BrokerHome />,
+  dsa: DsaWebsite,
+  informativePartnersDetailsMain: PartnersDetailsMain,
+  partnerPage: PartnerBanner,
+  informativeContactUs: ContactUs,
+  builder: BuilderWeb,
+  broker: BrokerWeb,
+  informativeTandC: TermsCondition,
+  informativePrivacyPolicy: PrivacyPolicy,
+  brokerHome: BrokerHome,
+  informativeHomeBanner: Banner,
 };
 
 const App = () => {
-  const websiteToLoad = 'informativePartnersDetailsMain';
+  const [websiteToLoad, setWebsiteToLoad] = useState('informativePartnersDetailsMain');
+
   const ComponentToRender = components[websiteToLoad] || (
     <div>Website not found</div>
   );
 
-  return ComponentToRender;
+  return (
+    <Suspense fallback={<LoadingScreen />}>
+      <ComponentToRender />
+    </Suspense>
+  );
 };
 
 export default App;

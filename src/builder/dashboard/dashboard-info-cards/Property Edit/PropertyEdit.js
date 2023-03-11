@@ -21,10 +21,17 @@ import img from "../../../Images/img.png";
 import loc from "../../../Images/loc.png";
 import FileUpload from "../../Fileupload/Fileupload";
 import blank from "../../../Images/blank.png";
+import { RiAddBoxFill } from "react-icons/ri";
+import edit from "../../../Images/edit.png";
 
 const PropertyEdit = () => {
   const [show, setShow] = useState(false);
+
   const onContinueHandler = () => {
+    setShow(true);
+  };
+
+  const handleSubmit = () => {
     setShow(true);
   };
 
@@ -35,9 +42,9 @@ const PropertyEdit = () => {
       <DashboardHeader />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
-        <h2>Property Edit</h2> <br></br>
+        <h2 style={{ fontFamily: "Bahnschrift" }}>Property Edit</h2> <br></br>
         <br></br>
-        <h2> Images</h2>
+        <h3 style={{ fontFamily: "Bahnschrift" }}> Images</h3>
         <br></br>
         <div
           className="d-flex gap-4"
@@ -56,85 +63,99 @@ const PropertyEdit = () => {
         </div>
         <br></br>
         <br></br>
-        <h2>Name</h2>
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+        <h4 style={{ fontFamily: "Bahnschrift" }}>Name</h4>
+        <Container
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          style={{ background: "#F8F8F8" }}
+        >
           <div className="p-3 d-flex justify-content-between ">
-            <h4>Reet</h4>
+            <h4 style={{ fontFamily: "Bahnschrift" }}>Reet</h4>
           </div>
         </Container>
         <br></br>
         <br></br>
-        <h2>Location</h2>
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+        <h4 style={{ fontFamily: "Bahnschrift" }}>Location</h4>
+        <Container
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          style={{ background: "#F8F8F8" }}
+        >
           <div className="p-3 d-flex justify-content-between">
-            <h4>Lorem Ipsum</h4>
+            <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
             <img src={loc} className="rounded my-3" alt="loc" />
           </div>
         </Container>
         <br></br>
         <br></br>
-        <h2>Property category</h2>
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm">
+        <h4 style={{ fontFamily: "Bahnschrift" }}>Property category</h4>
+        <br />
+        <Container
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm"
+          style={{ background: "#F8F8F8" }}
+        >
           <div className="p-3 d-flex justify-content-between">
-            <h4>Lorem Ipsum</h4>
+            <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
           </div>
         </Container>
         <br></br>
         <br></br>
         <div className="d-flex justify-content-between">
-          <h2> Amenities</h2>
+          <h3 style={{ fontFamily: "Bahnschrift" }}> Amenities</h3>
+
           <Button
             variant="primary"
-            size="md"
-            className="rounded-circle bg-color-primary"
-            onClick={onContinueHandler}
+            size="sm"
+            className="rounded-circle bg-color-primary p-3"
+            onClick={handleSubmit}
           >
-            +
+            <RiAddBoxFill size={20} />
           </Button>
         </div>
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+        <Container
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          style={{ boxShadow: "0px 6.86709px 30.0435px rgba(0, 0, 0, 0.07)" }}
+        >
           <div
-            className="p-4 d-flex justify-content-around "
+            className="p-2 d-flex justify-content-around "
             style={{ opacity: 0.5 }}
           >
             <div className="text-center d-flex flex-column ">
               <span>
                 <img src={sqft} className="rounded my-3" alt="Search" />
               </span>
-              <span>2110 Sqft</span>
+              <span style={{ fontFamily: "Bahnschrift" }}>2110 Sqft</span>
             </div>
             <div className="text-center d-flex flex-column">
               <span>
                 <img src={beds} className="rounded my-3" alt="Search" />
               </span>
-              <span>3 Beds</span>
+              <span style={{ fontFamily: "Bahnschrift" }}>3 Beds</span>
             </div>
             <div className="text-center d-flex flex-column">
               <span>
                 <img src={bath} className="rounded my-3" alt="Search" />
               </span>
 
-              <span>1 Bath</span>
+              <span style={{ fontFamily: "Bahnschrift" }}>1 Bath</span>
             </div>
             <div className="text-center d-flex flex-column">
               <span>
                 <img src={garage} className="rounded my-3" alt="Search" />
               </span>
-              <span>1 Garages</span>
+              <span style={{ fontFamily: "Bahnschrift" }}>1 Garages</span>
             </div>
           </div>
         </Container>
         <br></br>
         <br></br>
         <div className="d-flex justify-content-between">
-          <h2>Location Advantage</h2>
+          <h3 style={{ fontFamily: "Bahnschrift" }}>Location Advantage</h3>
           <Button
             variant="primary"
-            size="md"
-            className="rounded-circle  bg-color-primary "
+            size="sm"
+            className="rounded-circle  bg-color-primary p-3"
             onClick={onContinueHandler}
           >
-            +
+            <RiAddBoxFill size={20} />
           </Button>
         </div>
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
@@ -146,15 +167,17 @@ const PropertyEdit = () => {
               <span>
                 <img src={market} className="rounded my-3" alt="Search" />
               </span>
-              <span>
-                Mini Market<br></br>200m
+              <span style={{ fontFamily: "Bahnschrift" }}>
+                Mini Market
+                <br />
+                200m
               </span>
             </div>
             <div className="text-center d-flex flex-column">
               <span>
                 <img src={canteen} className="rounded my-3" alt="Search" />
               </span>
-              <span>
+              <span style={{ fontFamily: "Bahnschrift" }}>
                 Canteen<br></br>200m
               </span>
             </div>
@@ -163,7 +186,7 @@ const PropertyEdit = () => {
                 <img src={hospital} className="rounded my-3" alt="Search" />
               </span>
 
-              <span>
+              <span style={{ fontFamily: "Bahnschrift" }}>
                 Hospital <br></br> 200m
               </span>
             </div>
@@ -171,7 +194,7 @@ const PropertyEdit = () => {
               <span>
                 <img src={station} className="rounded my-3" alt="Search" />
               </span>
-              <span>
+              <span style={{ fontFamily: "Bahnschrift" }}>
                 Station <br></br> 200m
               </span>
             </div>
@@ -179,12 +202,18 @@ const PropertyEdit = () => {
         </Container>
         <br></br>
         <br></br>
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
-          <div className="p-2 d-flex justify-content-between">
-            <h4>About the Project</h4>
-          </div>
-          <hr />
-          <span style={{ color: "#7D7F88", alignitems: "cente" }}>
+        <h3 style={{ fontFamily: "Bahnschrift" }}>About the Project</h3>
+        <Container
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          style={{ background: "#F8F8F8" }}
+        >
+          <p
+            style={{
+              color: "#000000",
+              alignitems: "cente",
+              fontFamily: "Bahnschrift",
+            }}
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -194,67 +223,77 @@ const PropertyEdit = () => {
             with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
-          </span>
-          <br></br>
-          <br></br>
+          </p>
         </Container>
         <br></br>
         <br></br>
-        <h3>Payment Plan</h3>
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm ">
-          <div className="p-2 d-flex justify-content-around"></div>
-          <Table className="profile__transaction">
+        <h3 style={{ fontFamily: "Bahnschrift" }}>Payment Plan</h3>
+        <div
+          className="  border-light rounded shadow-sm "
+          style={{ background: "#F8F8F8" }}
+        >
+          {/* <div
+            className="p-2 d-flex justify-content-around"
+            style={{ background: "#F8F8F8" }}
+          ></div> */}
+          <Table
+            className="profile__transaction"
+            style={{ background: "#F8F8F8" }}
+          >
             <thead>
               <tr>
-                <th>Payment %</th>
-                <th>Milestone</th>
+                <th style={{ fontFamily: "Bahnschrift" }}>Payment %</th>
+                <th style={{ fontFamily: "Bahnschrift" }}>Milestone</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>10%</td>
-                <td>
+                <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
+                <td style={{ fontFamily: "Bahnschrift" }}>
                   Lorem Ipsum is simply dummy text of the printing and type
                   setting industry
                 </td>
               </tr>
               <tr>
-                <td>10%</td>
-                <td>
+                <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
+                <td style={{ fontFamily: "Bahnschrift" }}>
                   Lorem Ipsum is simply dummy text of the printing and type
                   setting industry
                 </td>
               </tr>
               <tr>
-                <td>10%</td>
-                <td>
+                <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
+                <td style={{ fontFamily: "Bahnschrift" }}>
                   Lorem Ipsum is simply dummy text of the printing and type
                   setting industry
                 </td>
               </tr>
               <tr>
-                <td>10%</td>
-                <td>
+                <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
+                <td style={{ fontFamily: "Bahnschrift" }}>
                   Lorem Ipsum is simply dummy text of the printing and type
                   setting industry
                 </td>
               </tr>
             </tbody>
           </Table>
-        </Container>
+        </div>
         <br></br>
         <br></br>
         <div className="p-4 d-flex justify-content-between">
-          <h3>Loan Approved By</h3>
+          <h3 style={{ fontFamily: "Bahnschrift" }}>Loan Approved By</h3>
           <Button
             variant="primary"
             size="md"
-            className="rounded-circle  bg-color-primary "
+            className="rounded-circle  bg-color-primary p-3"
           >
-            +
+            <RiAddBoxFill size={20} />
           </Button>
         </div>
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+        <Container
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          style={{ boxShadow: "0px 6.86709px 30.0435px rgba(0, 0, 0, 0.07)" }}
+        >
           <div className="p-4 d-flex justify-content-around">
             <img src={Axis} className="rounded my-3" alt="Home" />
             <img src={HDFC} className="rounded my-3" alt="Home" />
@@ -264,12 +303,18 @@ const PropertyEdit = () => {
         </Container>
         <br></br>
         <br></br>
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
-          <div className="p-4 d-flex justify-content-between">
-            <h4>About the Builder</h4>
-          </div>
-          <hr />
-          <span style={{ color: "#7D7F88", alignitems: "cente" }}>
+        <h3 style={{ fontFamily: "Bahnschrift" }}>About the Builder</h3>
+        <Container
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 "
+          style={{ background: "#F8F8F8" }}
+        >
+          <p
+            style={{
+              color: "#000000",
+              alignitems: "cente",
+              fontFamily: "Bahnschrift",
+            }}
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -279,16 +324,21 @@ const PropertyEdit = () => {
             with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
-          </span>
-          <br></br>
-          <br></br>
+          </p>
         </Container>
         <br></br>
         <br></br>
-        <Col>
-          <h2> View official brochure</h2>
-          <img src={brochure} className="rounded my-3" alt="Home" />
-        </Col>
+        <div className="d-flex justify-content-between">
+          <h3 style={{ fontFamily: "Bahnschrift" }}> View official brochure</h3>
+          <img src={edit} alt="" />
+        </div>
+        <br />
+        <Container
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm  "
+          style={{ background: "#F8F8F8" }}
+        >
+          <img src={brochure} className="rounded my-3 mx-4 " alt="Home" />
+        </Container>
       </Container>
       <div className="d-grid mt-5">
         <Button

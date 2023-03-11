@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import LoginUser from './LoginUser';
 import {
   Container,
@@ -8,7 +9,6 @@ import {
   Image,
   InputGroup,
 } from 'react-bootstrap';
-import { useState } from 'react';
 import ForgetPassword from './ForgetPassword';
 import ResetPasswordModal from './ResetPasswordModal';
 import EnterOtp from './EnterOtp';
@@ -24,7 +24,7 @@ const Login = () => {
   const [showModal, setShowModal] = useState({
     forgetPassword: false,
     resetPassword: false,
-    enterOtp: true,
+    enterOtp: false,
   });
 
   const handleInputChange = event => {
@@ -75,15 +75,15 @@ const Login = () => {
         <Row className="g-0 login__form">
           <Col md={6} className="d-none d-md-block">
             <Image
-              className="h-100"
-              src="https://via.placeholder.com/800x500.png"
+              className="h-100 nes__dsa__login__img"
+              src="/assets/dsa/login-page.jpg"
               fluid
               alt="login img"
             />
           </Col>
           <Col
             md={6}
-            className="p-4 shadow-sm d-flex flex-column justify-content-center"
+            className="p-4 nes__dsa__login__formwrapper d-flex flex-column justify-content-center"
           >
             <Form onSubmit={handleSubmit}>
               <Form.Group>

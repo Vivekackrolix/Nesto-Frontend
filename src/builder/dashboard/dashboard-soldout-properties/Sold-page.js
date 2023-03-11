@@ -18,6 +18,26 @@ const SoldPage = () => {
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
         <img src={homeImage} className="rounded my-3" alt="Home" />
+        <div
+          className="d-flex gap-2"
+          style={{ color: "#7D7F88", border: "none", outline: "none" }}
+        >
+          <button
+            type="button"
+            // className="btn btn-secondary"
+            style={{ color: "#7D7F88", border: "none", outline: "none" }}
+          >
+            Under Constructions
+          </button>
+          <button
+            type="button"
+            // className="btn btn-secondary"
+            style={{ color: "#7D7F88", border: "none", outline: "none" }}
+          >
+            Possession in Dec,2023
+          </button>
+        </div>
+        <br></br>
         <Danelions />
         <Anlytics />
         <Amenities />
@@ -29,14 +49,14 @@ const SoldPage = () => {
           <Payment />
         </Col>
         <Col>
-          <h2> View offical brochure</h2>
+          <h2 style={{ fontFamily: "Bahnschrift" }}> View offical brochure</h2>
           <img src={brochure} className="rounded my-3" alt="Home" />
         </Col>
         <Col>
-          <h2> Terms & Conditions</h2>
+          <h2 style={{ fontFamily: "Bahnschrift" }}> Terms & Conditions</h2>
           <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
             <div className="p-4 d-flex justify-content-between">
-              <p style={{ color: "#7D7F88" }}>
+              <p style={{ color: "#7D7F88", fontFamily: "Bahnschrift" }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
