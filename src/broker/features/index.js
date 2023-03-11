@@ -12,3 +12,4 @@ export { default as HeroSection } from './Dashboard/components/hero-section/Hero
 export { default as SmallCardSection } from './Dashboard/components/small-card-section/SmallCardSection';
 export { default as ProductCard } from './Dashboard/components/product-card/ProductCard';
 export { default as Ribbon } from './Dashboard/components/ribbon/Ribbon';
+export { default as SwiperSliderDashboard } from './Dashboard/components/swiper-slider-dashboard/SwiperSliderDashboard';
