@@ -1,8 +1,8 @@
-import BrokerHome from "../BrokerPage/BrokerHome/BrokerHome";
-import ContactUs from "../ContactUs/ContactUs";
-import Banner from "../HomePage/Banner/Banner";
-import PartnersDetailsMain from "../PartnersDetailsMain";
-import PartnerBanner from "../PartnersPage/Partnerbanner/partnerbanner";
+import BrokerHome from '../BrokerPage/BrokerHome/BrokerHome';
+import ContactUs from '../ContactUs/ContactUs';
+import Banner from '../HomePage/Banner/Banner';
+import PartnersDetailsMain from '../PartnersDetailsMain';
+import PartnerBanner from '../PartnersPage/Partnerbanner/partnerbanner';
 
 export const RouteData = [
   {
@@ -11,7 +11,7 @@ export const RouteData = [
     path: '/partners/details',
     element: <PartnersDetailsMain />,
   },
-  
+
   {
     id: 2,
     page: 'Contact Us',
@@ -22,18 +22,18 @@ export const RouteData = [
     id: 3,
     page: 'Home Page',
     path: '/home-page',
-    element: <Banner />
+    element: <Banner />,
   },
   {
     id: 5,
     page: 'Partner Page',
     path: '/partner-page',
-    element: <PartnerBanner />
+    element: <PartnerBanner />,
   },
   {
     id: 7,
     page: 'Broker Page',
     path: '/broker-page',
-    element: <BrokerHome/>
+    element: <BrokerHome />,
   },
 ];
