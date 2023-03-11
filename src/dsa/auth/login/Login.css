@@ -54,6 +54,16 @@ input.invalid {
   margin-top: 0.25rem;
 }
 
+.nes__dsa__login__img {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.nes__dsa__login__formwrapper {
+  box-shadow: 0px 6.24258px 35.2798px rgba(0, 0, 0, 0.07);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 @media (max-width: 374px) {
   .nes__google__facebook img {
     width: 80px;

@@ -2,7 +2,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './BrokerView.css';
 import HeroSection from '../hero-section/HeroSection';
 import SmallCardSection from '../small-card-section/SmallCardSection';
-import ProductCard from '../product-card/ProductCard';
 import productImg from '../../assets/images/product-img.png';
 import { ProductContainers } from '../../../../dashboard-containers';
 const BrokerView = () => {
@@ -44,6 +43,14 @@ const BrokerView = () => {
       <SmallCardSection />
       <ProductContainers
         sectionTitle="Promoted Property"
+        productData={productData}
+      />
+      <ProductContainers
+        sectionTitle="Recently Added"
+        productData={productData}
+      />
+      <ProductContainers
+        sectionTitle="Best Selling"
         productData={productData}
       />
     </Container>
