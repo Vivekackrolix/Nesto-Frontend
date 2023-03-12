@@ -27,7 +27,7 @@ const ArticleNews = () => {
     ]
     return (
         <>
-            <div className='container article-news'>
+            <div className='container article-news' data-aos='zoom-in'>
                 <div className='article-news_head-box'>
                     <h3 className='article-news_heading'>Articles & News</h3>
                     <span className='article-news_para'>Get the Latest News, Updates and Tips</span>

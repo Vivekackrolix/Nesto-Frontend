@@ -5,8 +5,7 @@ import './FifthCard.css'
 const FifthCard = () => {
     return (
         <>
-            {/* First Card */}
-            <div className='d-flex flex-column justify-content-between partners-fifth__card rounded-3'>
+            <div className='d-flex flex-column justify-content-between partners-fifth__card rounded-3' data-aos='fade-left'>
                 <div className='fifth-card__box rounded-3'>
                     <div className='text-center'>
                         <span className='fifth-card__span-1'>Sell your Property with us for

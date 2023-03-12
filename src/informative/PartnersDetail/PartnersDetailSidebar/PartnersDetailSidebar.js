@@ -12,7 +12,7 @@ export default function PartnersDetailSidebar() {
             <div className='container-fluid partners-container'>
                 <div className='row'>
                     <div className='col-lg-12'>
-                        <div className='row'>
+                        <div className='row' data-aos='fade-left'>
                             <FirstCard />
                             <SecondCard url='/assets/informative/device.png' />
                             <ThirdCard />

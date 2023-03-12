@@ -23,14 +23,13 @@
 /* Custom Scroll-bar */
 *::-webkit-scrollbar {
   background: #0e507c;
-  width: 8px;
+  width: 6px;
 }
 
 *::-webkit-scrollbar-thumb {
   background: #54baff;
   /* border-radius: 2rem; */
 }
-
 body {
   font-family: 'Poppins', sans-serif;
 }

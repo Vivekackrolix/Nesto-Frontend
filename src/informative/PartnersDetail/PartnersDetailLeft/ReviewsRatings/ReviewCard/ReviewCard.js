@@ -58,7 +58,7 @@ const ReviewCard = () => {
             },
         ]
     return (
-        <div className='container reviews_slider mt-5 shdow-sm rounded-4'>
+        <div className='container reviews_slider mt-5 shdow-sm rounded-4' data-aos='zoom-in'>
             <Slider {...settings}>
                 {projectSliderData.map((item) => (
                     <div className='container'>

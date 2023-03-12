@@ -8,7 +8,7 @@ export default function PartnersDetailsMain() {
     return (
         <>
             <InformativeNavbar/>
-                <div className="container">
+                <div className="container" style={{overflowX: 'hidden'}}>
                     <div className='row'>
                         <div className='col-lg-8'>
                             <PartnersDetailLeft />
