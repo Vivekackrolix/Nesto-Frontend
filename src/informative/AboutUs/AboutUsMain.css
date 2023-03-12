@@ -22,11 +22,9 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 8% 0;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    padding: 8% 0 0 0;
 }
+
 .about-us_box1-img {
     width: 100%;
 }
@@ -78,17 +76,63 @@
 }
 
 .about-us_box-span2 {
-    font-weight: 700;
-    font-size: 46.08px;
+    font-weight: 600;
+    font-size: 36px;
     display: block;
-    width: 90%;
+    width: 80%;
     padding: 40px 0;
 }
 
 .about-us_box-span3 {
-    font-weight: 350;
+    font-weight: 400;
     font-size: 14px;
     display: block;
+    line-height: 32px;
     width: 75%;
-    color: var(--gray-color);
+    color: var(--silver-surfer);
+}
+
+/* media queri */
+@media (max-width: 490px) {
+    .second-card__icon {
+        width: 20px;
+    }
+
+    .about-us_box1_btn {
+        padding: 6px 0 4px 6px;
+        width: 120px;
+        margin: auto;
+    }
+
+    .about-us_box-span2 {
+        width: 100%;
+    }
+
+    .about-us_box1_icon-span-2 {
+        font-size: 14px;
+    }
+
+    .about-us_box-span3 {
+        width: 96%;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 490px) {
+    .second-card__icon {
+        width: 20px;
+    }
+
+    .about-us_box1_btn {
+        padding: 6px 0 4px 6px;
+        width: 140px;
+        margin: auto;
+    }
+
+    .about-us_box1_icon-span-2 {
+        font-size: 14px;
+    }
+
+    .about-us_box-span3 {
+        width: 95%;
+    }
 }

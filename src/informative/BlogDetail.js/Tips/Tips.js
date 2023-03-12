@@ -80,7 +80,7 @@ const Tips = () => {
     ]
     return (
         <>
-            <div className='container tips-container'>
+            <div className='container tips-container' data-aos='fade-up'>
                 <div className='tips-header'>
                     <div className='tips-header_box text-center'>
                         <span className='tips-header_heading'>
@@ -108,7 +108,7 @@ const Tips = () => {
                                 quis ullamcorper augue. Nunc ristique.
                             </span>
                         </div>
-                        <div className='tips_box-4'>
+                        <div className='tips_box-4' data-aos='zoom-in'>
                             <img className='tips_box-4-img' src='/assets/informative/tipsImg.png' />
                         </div>
                         <div className='tips_box-3'>
@@ -130,8 +130,8 @@ const Tips = () => {
                             return (
                                 <>
                                     <div className='d-flex gap-3 align-items-center mt-3'>
-                                        <img src='/assets/informative/line.png' className='tips_box-5-line' />
-                                        <li className='tips_box-5-li'>{item.para}</li>
+                                        <img src='/assets/informative/line.png' className='tips_box-5-line' data-aos='fade-right' />
+                                        <li className='tips_box-5-li' data-aos='fade-right'>{item.para}</li>
                                     </div>
                                 </>
                             )
@@ -184,10 +184,10 @@ const Tips = () => {
             <div className='container mb-5'>
                 <div className='row'>
                     <div className='recent-post_box'>
-                        <div>
+                        <div data-aos='fade-right'>
                             <span className='recent-post_span3'>Recent Post</span>
                         </div>
-                        <div>
+                        <div data-aos='fade-left'>
                             <Link to='/' style={{textDecoration: 'none'}}>
                                 <span className='recent-post_span4'>Browse All Article</span>
                             </Link>
@@ -195,7 +195,7 @@ const Tips = () => {
                     </div>
                     {data.map((item) => {
                         return (
-                            <div className='col-lg-4 left-col mt-4'>
+                            <div className='col-lg-4 left-col mt-4' data-aos='fade-right'>
                                 <div className='left-col_box'>
                                     <img className='left-col_img' src='/assets/informative/latest-news1.png' />
                                     <p className='left-col_date'>{item.date}</p>
