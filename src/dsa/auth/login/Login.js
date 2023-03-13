@@ -62,12 +62,16 @@ const Login = () => {
     }
   };
 
+  const onHide = () => {
+    setShowModal(prevShowModal => ({ ...prevShowModal, enterOtp: false }));
+  };
+
   return (
     <>
       {/* modal */}
       {/* {showModal.forgetPassword && <ForgetPassword show={true} />}
       {showModal.resetPassword && <ResetPasswordModal show={true} />} */}
-      {showModal.enterOtp && <EnterOtp show={true} />}
+      {showModal.enterOtp && <EnterOtp show={true} onHide={onHide} />}
 
       <Header />
       {/* <LoginUser /> */}
@@ -183,7 +187,6 @@ const Login = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 };
