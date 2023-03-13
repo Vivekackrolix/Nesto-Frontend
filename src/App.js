@@ -34,7 +34,7 @@ const components = {
 
 const App = () => {
   const [websiteToLoad, setWebsiteToLoad] = useState(
-    'informativePartnersDetailsMain'
+    'dsa'
   );
 
   const ComponentToRender = components[websiteToLoad] || (

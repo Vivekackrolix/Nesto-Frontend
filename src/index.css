@@ -21,19 +21,33 @@
   --divider: #d3d3d3;
 }
 /* Custom Scroll-bar */
-*::-webkit-scrollbar {
-  background: #0e507c;
-  width: 8px;
+html::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
 }
 
-*::-webkit-scrollbar-thumb {
-  background: #54baff;
-  /* border-radius: 2rem; */
+html::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
 }
 
+html::-webkit-scrollbar-thumb {
+  background: #278fd9;
+  border-radius: 10px;
+}
+
+  @font-face {
+    font-family: "Bahnschrift";
+    src: url(./fonts/Bahnschrift.ttf) format('truetype');
+  }
+  
+  :root {
+    font-family: "Bahnschrift";
+  }  
+/* 
 body {
   font-family: 'Poppins', sans-serif;
-}
+} */
 
 .btn.btn-color-outline-primary {
   background: transparent;
@@ -46,4 +60,10 @@ body {
 .btn.btn-color-outline-primary:hover {
   background-color: var(--primary-color);
   color: #ffffff;
+}
+::placeholder{
+  color: #8391A1;
+}
+.btn-shadow{
+  box-shadow: 2px 10px 22px #278fd973;
 }
