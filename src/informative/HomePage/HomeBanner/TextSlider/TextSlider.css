@@ -1,0 +1,42 @@
+.text-slider {
+    position: absolute;
+    left: 26%;
+    top: 4%;
+    width: 300px;
+    height: 100px;
+    padding: 10px 45px 0 45px;
+    background: url(../../../../../public/assets/informative/text-slider.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-slider-div {
+    /* padding: 20px 40px; */
+    /* width: 100%;
+    height: 100%; */
+}
+
+.text-slider-div .text-slider-div-span {
+    font-weight: 350;
+    font-size: 14px;
+    color: var(--color-white);
+}
+
+.text-slider .slick-dots {
+    position: absolute;
+    top: 95%;
+    left: 0%;
+    margin: 0 !important;
+}
+.text-slider .slick-dots li  {
+    margin: 0 -2px;
+}
+
+.text-slider .slick-dots li button:before {
+    content: '';
+    height: 3px;
+    width: 10px;
+    margin: 0 !important;
+    border-radius: 5px;
+    background: var(--color-white);
+}
