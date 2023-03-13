@@ -27,6 +27,9 @@ const OtpContent = () => {
       otpInputs.current[index + 1].focus();
     } else if (e.key === 'ArrowLeft' && otpInputs.current[index - 1]) {
       otpInputs.current[index - 1].focus();
+    } else if (e.key === 'Backspace' && !otpInputs.current[index].value) {
+      e.preventDefault();
+      otpInputs.current[index - 1]?.focus();
     }
   };
 
