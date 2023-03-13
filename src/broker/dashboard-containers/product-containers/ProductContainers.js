@@ -6,7 +6,7 @@ import './ProductContainers.css';
 const ProductContainers = ({ sectionTitle, productData }) => {
   return (
     <section className="nes__product__section mt-5">
-      <Row>
+      <Row className="gy-3">
         <Col
           sm={12}
           className="d-flex justify-content-between align-items-center mb-3"

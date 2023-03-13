@@ -26,6 +26,7 @@
 .nes__login__form .btn-md {
   font-size: 12px;
   font-weight: normal;
+  width: min(100%, 218px) !important;
 }
 
 .nes__login__form .figure-caption {

@@ -34,13 +34,38 @@ const BrokerView = () => {
       discount: 'Book now & get 5% discount',
       visitAmount: '500',
     },
+    {
+      imageUrl: productImg,
+      title: 'Sky Dandelions Apartment',
+      location: 'Luxury Apartment in Sector-29, Gurugram',
+      bhk: [1, 2, 3, 4],
+      price: '₹ 3.94 - 6.01 Cr',
+      discount: 'Book now & get 5% discount',
+      visitAmount: '500',
+    },
+    {
+      imageUrl: productImg,
+      title: 'Sky Dandelions Apartment',
+      location: 'Luxury Apartment in Sector-29, Gurugram',
+      bhk: [1, 2, 3, 4],
+      price: '₹ 3.94 - 6.01 Cr',
+      discount: 'Book now & get 5% discount',
+      visitAmount: '500',
+    },
+    {
+      imageUrl: productImg,
+      title: 'Sky Dandelions Apartment',
+      location: 'Luxury Apartment in Sector-29, Gurugram',
+      bhk: [1, 2, 3, 4],
+      price: '₹ 3.94 - 6.01 Cr',
+      discount: 'Book now & get 5% discount',
+      visitAmount: '500',
+    },
   ];
 
   return (
     <Container fluid="lg">
-      <section className="mt-5">
-        <HeroSection />
-      </section>
+      <HeroSection />
       <SmallCardSection />
       <section className="mt-5">
         <SwiperSliderDashboard />
@@ -49,6 +74,9 @@ const BrokerView = () => {
         sectionTitle="Promoted Property"
         productData={productData}
       />
+
+      <HeroSection />
+
       <ProductContainers
         sectionTitle="Recently Added"
         productData={productData}
