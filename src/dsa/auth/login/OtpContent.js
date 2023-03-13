@@ -1,5 +1,5 @@
 import { Form, Button } from 'react-bootstrap';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const OtpContent = () => {
@@ -29,6 +29,10 @@ const OtpContent = () => {
       otpInputs.current[index - 1].focus();
     }
   };
+
+  useEffect(() => {
+    otpInputs.current[0]?.focus();
+  }, []);
 
   return (
     <>
@@ -60,7 +64,7 @@ const OtpContent = () => {
             }
           }}
         >
-          Claim
+          Submit
         </Button>
       </Form.Group>
     </>
