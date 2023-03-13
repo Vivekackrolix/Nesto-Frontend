@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import LoginUser from './LoginUser';
+import { useState } from "react";
+import LoginUser from "./LoginUser";
 import {
   Container,
   Row,
@@ -8,17 +8,18 @@ import {
   Button,
   Image,
   InputGroup,
-} from 'react-bootstrap';
-import ForgetPassword from './ForgetPassword';
-import ResetPasswordModal from './ResetPasswordModal';
-import EnterOtp from './EnterOtp';
-import { useNavigate } from 'react-router-dom';
-import { Footer, Header } from '../../../components';
-import './Login.css';
+  Figure,
+} from "react-bootstrap";
+import ForgetPassword from "./ForgetPassword";
+import ResetPasswordModal from "./ResetPasswordModal";
+import EnterOtp from "./EnterOtp";
+import { useNavigate } from "react-router-dom";
+import { Footer, Header } from "../../../components";
+import "./Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const [showModal, setShowModal] = useState({
@@ -27,7 +28,7 @@ const Login = () => {
     enterOtp: false,
   });
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     const inputText = event.target.value;
     const emailPhoneRegex =
       /^(?:\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b|\b(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})\b)?$/;
@@ -37,26 +38,26 @@ const Login = () => {
 
     if (isMatch) {
       setShowErrorMessage(false);
-      event.target.classList.remove('is-invalid');
-      event.target.classList.add('is-valid');
+      event.target.classList.remove("is-invalid");
+      event.target.classList.add("is-valid");
     } else {
       setShowErrorMessage(true);
-      event.target.classList.remove('is-valid');
-      event.target.classList.add('is-invalid');
+      event.target.classList.remove("is-valid");
+      event.target.classList.add("is-invalid");
     }
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!showErrorMessage) {
-      setShowModal(prevShowModal => ({
+      setShowModal((prevShowModal) => ({
         ...prevShowModal,
         enterOtp: true,
       }));
 
       // Redirect to /dsa/home-dashboard
-      navigate('/dsa/home-dashboard');
+      navigate("/dsa/home-dashboard");
       setShowErrorMessage(false);
     }
   };
@@ -69,9 +70,9 @@ const Login = () => {
       {showModal.enterOtp && <EnterOtp show={true} />}
 
       <Header />
-      <LoginUser />
+      {/* <LoginUser /> */}
 
-      <Container fluid="lg" className="container-md my-5">
+      <Container fluid="lg" className="container-md my-5 login-shadow">
         <Row className="g-0 login__form">
           <Col md={6} className="d-none d-md-block">
             <Image
@@ -83,60 +84,101 @@ const Login = () => {
           </Col>
           <Col
             md={6}
-            className="p-4 nes__dsa__login__formwrapper d-flex flex-column justify-content-center"
+            className="px-4 nes__dsa__login__formwrapper d-flex flex-column justify-content-center"
           >
+            <div className="mt-4">
+              <h2 className="fw-bold text-center mb-3">
+                Welcome Back! <br></br>Glad to see you, Again!
+              </h2>
+              <Row className="justify-content-center align-items-center">
+                <Col xs="auto" className="d-flex align-items-center gap-2">
+                  <Image
+                    src="/assets/profile.svg"
+                    fluid
+                    className="rounded user-img"
+                    alt="profile"
+                  />
+                  <Figure.Caption className="text-center mb-0">
+                    Login As Loan Agent
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </div>
             <Form onSubmit={handleSubmit}>
+              
               <Form.Group>
-                <Form.Label className="fw-light">
-                  Mobile Number/Email
+                <Form.Label className="fw-dark mt-4">
+                  Phone Number<span class="astric">*</span>
                 </Form.Label>
               </Form.Group>
 
               <InputGroup className="mb-0">
                 <Form.Control
                   name="emailPhone"
-                  className="rounded-0"
+                  className="rounded-2"
                   required
                   type="text"
                   value={inputValue}
+                  maxLength="10"
+                  placeholder="Enter your phone number"
                   onChange={handleInputChange}
-                  placeholder="Enter your email address or phone number"
                   isInvalid={showErrorMessage}
-                  isValid={!showErrorMessage && inputValue !== ''}
+                  isValid={!showErrorMessage && inputValue !== ""}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Please enter a valid email address or phone number.
+                  Please enter a valid phone number.
                 </Form.Control.Feedback>
                 <Form.Control.Feedback type="valid">
-                  Input is valid!
+                  Valid Phone Number!
                 </Form.Control.Feedback>
               </InputGroup>
 
-              <div className="d-grid mt-5">
+              <div className="d-grid mt-3">
                 <Button
                   type="submit"
                   variant="primary"
                   size="md"
-                  className="rounded-0 border-0 bg-color-primary"
+                  className="rounded-pill border-0 bg-color-primary"
                 >
-                  Login
+                  Continue
                 </Button>
               </div>
             </Form>
-            <div className="d-flex align-items-center my-5">
+            <div className="d-flex align-items-center my-4">
               <div className="divider flex-grow-1"></div>
-              <p className="m-0 px-1">Or Login Using</p>
+              <p className="m-0 px-1">Or Login</p>
               <div className="divider flex-grow-1"></div>
             </div>
-            <div className="d-flex align-item-center gap-2 nes__google__facebook">
-              <div className="flex-grow-1 d-flex justify-content-center">
-                <Button variant="link" className="border-0 p-0 mr-3">
-                  <img src="/assets/google.svg" alt="google" />
+            <div className="d-flex justify-content-between">
+              
+              <div className="d-grid mb-5">
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="rounded-pill border-0 bg-color-primary py-2 wd-200 px-5 btn-shadow"
+                >
+                  <Image
+                    src="/assets/profile.svg"
+                    fluid
+                    className="rounded-circle mx-2 user-img"
+                    alt="builder"
+                  />
+                  Builder
                 </Button>
               </div>
-              <div className="flex-grow-1 d-flex justify-content-center border-start">
-                <Button variant="link" className="border-0 p-0 mr-3">
-                  <img src="/assets/facebook.svg" alt="facebook" />
+              <div className="d-grid mb-5">
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="rounded-pill border-0 bg-color-primary py-2 wd-200 px-5 btn-shadow"
+                >
+                  <Image
+                    src="/assets/profile.svg"
+                    fluid
+                    className="rounded-circle mx-2 user-img"
+                    alt="broker"
+                  />
+                  Broker
                 </Button>
               </div>
             </div>

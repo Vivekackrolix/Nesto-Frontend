@@ -4,7 +4,7 @@
   /* colors */
   --primary-color: #278fd9;
   --primary-color-darker: #1980c9;
-  --cold-steel-color: #282431;
+  --cold-steel-color: #656f7b;
   --color-white: #ffffff;
   --Pattens-Blue: #e0f2ff;
   --carnation-color: #fc5c67;
@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Bahnschrift';
 }
 
 a:hover,
@@ -28,6 +28,14 @@ a:focus {
   color: var(--primary-color);
 }
 
+.btn{
+  --bs-btn-padding-y: 0.5rem;
+}
+
+.input-group > .form-control, .input-group > .form-select, .input-group > .form-floating{
+  background: #F8F8F8;
+  border: 1px solid #E8ECF4;
+}
 /* remove outline from button */
 button:focus,
 button:active,
@@ -144,6 +152,10 @@ button:active:focus {
   border-radius: 100px;
 }
 
+.form-control{
+  padding: 0.5rem 0.75rem;
+}
+
 .btn-rounded {
   width: 221px;
   padding: 11.1518px 13.3822px;
@@ -199,4 +211,7 @@ button:active:focus {
   text-align: center;
   opacity: 0.5;
   margin: 8px 0;
+}
+.astric{
+  color: #ff656f;
 }
