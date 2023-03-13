@@ -1,5 +1,5 @@
-import { useState } from "react";
-import LoginUser from "./LoginUser";
+import { useState } from 'react';
+import LoginUser from './LoginUser';
 import {
   Container,
   Row,
@@ -9,17 +9,17 @@ import {
   Image,
   InputGroup,
   Figure,
-} from "react-bootstrap";
-import ForgetPassword from "./ForgetPassword";
-import ResetPasswordModal from "./ResetPasswordModal";
-import EnterOtp from "./EnterOtp";
-import { useNavigate } from "react-router-dom";
-import { Footer, Header } from "../../../components";
-import "./Login.css";
+} from 'react-bootstrap';
+import ForgetPassword from './ForgetPassword';
+import ResetPasswordModal from './ResetPasswordModal';
+import EnterOtp from './EnterOtp';
+import { useNavigate } from 'react-router-dom';
+import { Footer, Header } from '../../../components';
+import './Login.css';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const [showModal, setShowModal] = useState({
@@ -28,7 +28,7 @@ const Login = () => {
     enterOtp: false,
   });
 
-  const handleInputChange = (event) => {
+  const handleInputChange = event => {
     const inputText = event.target.value;
     const emailPhoneRegex =
       /^(?:\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b|\b(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})\b)?$/;
@@ -38,35 +38,35 @@ const Login = () => {
 
     if (isMatch) {
       setShowErrorMessage(false);
-      event.target.classList.remove("is-invalid");
-      event.target.classList.add("is-valid");
+      event.target.classList.remove('is-invalid');
+      event.target.classList.add('is-valid');
     } else {
       setShowErrorMessage(true);
-      event.target.classList.remove("is-valid");
-      event.target.classList.add("is-invalid");
+      event.target.classList.remove('is-valid');
+      event.target.classList.add('is-invalid');
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     if (!showErrorMessage) {
-      setShowModal((prevShowModal) => ({
+      setShowModal(prevShowModal => ({
         ...prevShowModal,
         enterOtp: true,
       }));
 
       // Redirect to /dsa/home-dashboard
-      navigate("/dsa/home-dashboard");
-      setShowErrorMessage(false);
+      // navigate('/dsa/home-dashboard');
+      // setShowErrorMessage(false);
     }
   };
 
   return (
     <>
       {/* modal */}
-      {showModal.forgetPassword && <ForgetPassword show={true} />}
-      {showModal.resetPassword && <ResetPasswordModal show={true} />}
+      {/* {showModal.forgetPassword && <ForgetPassword show={true} />}
+      {showModal.resetPassword && <ResetPasswordModal show={true} />} */}
       {showModal.enterOtp && <EnterOtp show={true} />}
 
       <Header />
@@ -105,7 +105,6 @@ const Login = () => {
               </Row>
             </div>
             <Form onSubmit={handleSubmit}>
-              
               <Form.Group>
                 <Form.Label className="fw-dark mt-4">
                   Phone Number<span class="astric">*</span>
@@ -123,7 +122,7 @@ const Login = () => {
                   placeholder="Enter your phone number"
                   onChange={handleInputChange}
                   isInvalid={showErrorMessage}
-                  isValid={!showErrorMessage && inputValue !== ""}
+                  isValid={!showErrorMessage && inputValue !== ''}
                 />
                 <Form.Control.Feedback type="invalid">
                   Please enter a valid phone number.
@@ -150,7 +149,6 @@ const Login = () => {
               <div className="divider flex-grow-1"></div>
             </div>
             <div className="d-flex justify-content-between">
-              
               <div className="d-grid mb-5">
                 <Button
                   variant="primary"

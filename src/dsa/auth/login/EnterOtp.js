@@ -5,7 +5,7 @@ import OtpContent from './OtpContent';
 
 const EnterOtp = ({ show }) => {
   return (
-    <CustomModal show={show} title="Enter OTP">
+    <CustomModal show={show} title="Visit Verification Code">
       <Form>
         <OtpContent />
       </Form>
