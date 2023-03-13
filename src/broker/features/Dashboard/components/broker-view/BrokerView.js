@@ -5,6 +5,7 @@ import productImg from '../../assets/images/product-img.png';
 import { ProductContainers } from '../../../../dashboard-containers';
 import SwiperSliderDashboard from '../swiper-slider-dashboard/SwiperSliderDashboard';
 import './BrokerView.css';
+import { SearchFilter } from '../../../../../components';
 const BrokerView = () => {
   const productData = [
     {
@@ -67,6 +68,9 @@ const BrokerView = () => {
     <Container fluid="lg">
       <HeroSection />
       <SmallCardSection />
+      <section className="mt-3">
+        <SearchFilter addBtn />
+      </section>
       <section className="mt-5">
         <SwiperSliderDashboard />
       </section>
