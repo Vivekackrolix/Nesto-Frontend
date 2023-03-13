@@ -2,11 +2,12 @@ import { Form, Button } from 'react-bootstrap';
 import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RiTimerLine } from 'react-icons/ri';
-import './OtpContent.css';
+
 const OtpContent = () => {
   const otpInputs = useRef([]);
+  const [otpPassword, setOtpPassword] = useState(false);
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timer, setTimer] = useState(30);
 
   const handleOtpInputChange = (e, index) => {
     const otpInput = e.target;
@@ -17,7 +18,10 @@ const OtpContent = () => {
     }
 
     if (index === 5 && otpInputs.current.every(input => input.value)) {
-      navigate('/dsa/home-dashboard');
+      // clearInterval(timerInterval);
+      if (otpPassword) {
+        navigate('/dsa/home-dashboard');
+      }
     }
   };
 
@@ -35,25 +39,31 @@ const OtpContent = () => {
     }
   };
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(timeLeft => timeLeft - 1);
-    }, 1000);
+  const resetOtpInputs = () => {
+    otpInputs.current.forEach(input => {
+      input.value = '';
+    });
+    otpInputs.current[0].focus();
+  };
 
-    return () => clearInterval(timer);
+  const startTimer = () => {
+    setTimer(30);
+  };
+
+  useEffect(() => {
+    otpInputs.current[0]?.focus();
+    const timerInterval = setInterval(() => {
+      setTimer(prevTimer => prevTimer - 1);
+    }, 1000);
+    return () => clearInterval(timerInterval);
   }, []);
 
   useEffect(() => {
-    if (timeLeft === 0) {
-      navigate('/dsa/home-dashboard');
+    if (timer === 0) {
+      resetOtpInputs();
+      startTimer();
     }
-  }, [timeLeft]);
-
-  const minutes = Math.floor(timeLeft / 60);
-  const seconds = timeLeft % 60;
-  const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds
-    .toString()
-    .padStart(2, '0')}`;
+  }, [timer]);
 
   return (
     <>
@@ -74,8 +84,8 @@ const OtpContent = () => {
           <Form.Text className="text-muted me-3">
             <div className="d-flex align-items-center justify-content-center gap-1">
               <RiTimerLine color="#278FD9" />
-              <span className="otp-timer nes__dashboard__resend">
-                {formattedTime}
+              <span className="otp-timer">
+                {timer >= 10 ? `00:${timer}` : `00:0${timer}`}
               </span>
             </div>
             <div className="d-flex align-items-center">
@@ -83,7 +93,10 @@ const OtpContent = () => {
               <Button
                 color="Resend"
                 variant="transparent"
-                className="fw-semibold nes__dashboard__resend"
+                onClick={() => {
+                  resetOtpInputs();
+                  startTimer();
+                }}
               >
                 Resend
               </Button>
