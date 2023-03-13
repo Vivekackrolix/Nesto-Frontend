@@ -51,7 +51,7 @@ const LatestPostRight = () => {
   return (
     <>
       <div className='latest-post-right'>
-        <div className='latest-left_input-box'>
+        <div className='latest-left_input-box' data-aos='fade-left'>
           <input
             type='text'
             placeholder='Search...'
@@ -60,7 +60,7 @@ const LatestPostRight = () => {
           <BsSearch className='latest-left_search-icon' />
         </div>
         <div className='row'>
-          <div className='col-lg-12'>
+          <div className='col-lg-12' data-aos='fade-left'>
             <div className='latest-left_box-1'>
               <span className='latest-left_span-1'>Trending Now</span>
               <hr />

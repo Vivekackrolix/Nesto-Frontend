@@ -4,7 +4,7 @@ import { MdOutlineStarPurple500 } from 'react-icons/md'
 
 const AboutBuilder = () => {
     return (
-        <div className='about-builder shadow-sm rounded-4 mt-5'>
+        <div className='about-builder shadow-sm rounded-4 mt-5' data-aos='fade-right'>
             <span className='about-builder_span-1'>About The Builder</span>
             <hr />
             <div className='about-builder_box'>

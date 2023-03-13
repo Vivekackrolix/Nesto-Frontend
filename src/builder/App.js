@@ -10,6 +10,7 @@ import PromotedVisit from "./dashboard/dashboard-property-analytics/Visit Detail
 import VisitDetails from "./dashboard/dashboard-property-analytics/Visit Details/VisitDetails";
 import PropertyEdit from "./dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
 import AmenitiesPop from "./dashboard/dashboard-info-cards/Property Edit/Amenitiespop";
+import PropertyClaim from "./dashboard/dashboard-property-analytics/Visit Details/Property claim/PropertyClaim";
 
 const App = () => {
   return (
@@ -26,11 +27,11 @@ const App = () => {
           path="/builder/home-dashboard/visit"
           element={<VisitDetails />}
         />
-        {/* <Route
+        <Route
           exact
-          path="/builder/home-dashboard/propertyedit/amenities"
-          element={<AmenitiesPop />}
-        /> */}
+          path="/builder/home-dashboard/promoted/claim"
+          element={<PropertyClaim />}
+        />
 
         <Route
           exact

@@ -7,7 +7,7 @@ const FirstCard = () => {
     return (
         <>
             {/* First Card */}
-            <div div className='d-flex justify-content-between partners-first__card rounded-3' >
+            <div div className='d-flex justify-content-between partners-first__card rounded-3' data-aos='fade-left' >
                 <div style={{ width: '60%' }}>
                     <span className='first-card__span-1'>NEW</span>
                     <span className='first-card__span-2'>Explore Insight</span>

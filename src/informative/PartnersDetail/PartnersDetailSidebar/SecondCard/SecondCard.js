@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const SecondCard = ({url}) => {
     return (
         <>
-            <div className='d-flex justify-content-between partners-second__card rounded-3'>
+            <div className='d-flex justify-content-between partners-second__card rounded-3' data-aos='fade-left'>
                 <div className='' style={{width: '100%'}}>
                     <div className='second-card__box rounded-3'>
                         <div className='text-center'>
@@ -31,7 +31,7 @@ const SecondCard = ({url}) => {
                                 </div>
                             </Link>
                         </div>
-                        <div className='second-card__box-2'>
+                        <div className='second-card__box-2' data-aos="flip-left">
                             <img src={url} className='second-card__img-1' />
                         </div>
                     </div>

@@ -49,12 +49,14 @@ const LatestPostLeft = () => {
     ]
     return (
         <div className='latest-post-left'>
-            <span className='latest-left_heading'>Latest Post</span>
-            <span className='latest-left_para'>Don't miss the trending news</span>
+            <div data-aos='fade-right'>
+                <span className='latest-left_heading'>Latest Post</span>
+                <span className='latest-left_para'>Don't miss the trending news</span>
+            </div>
             <div className='row mt-3'>
                 {data.map((item) => {
                     return (
-                        <div className='col-lg-6 left-col'>
+                        <div className='col-lg-6 left-col' data-aos='fade-right'>
                             <div className='left-col_box'>
                                 <img className='left-col_img' src='/assets/informative/latest-news1.png' />
                                 <p className='left-col_date'>{item.date}</p>
