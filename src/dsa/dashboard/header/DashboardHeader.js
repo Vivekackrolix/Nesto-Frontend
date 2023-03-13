@@ -41,7 +41,11 @@ const DashboardHeader = () => {
               <Nav.Link as={Link} to="/dsa/faq" className="p-0 mx-2 text-dark">
                 <BsQuestionCircle className="icon" size={18} />
               </Nav.Link>
-              <Nav.Link as={Link} to="/" className="p-0 ms-2 color-blue">
+              <Nav.Link
+                as={Link}
+                to="/dsa/login"
+                className="p-0 ms-2 color-blue"
+              >
                 <BsBoxArrowRight className="icon" size={18} />
               </Nav.Link>
             </Nav>
@@ -88,7 +92,7 @@ const DashboardHeader = () => {
               <Dropdown.Item as={Link}>
                 <BsQuestionCircle className="icon" size={18} />
               </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/">
+              <Dropdown.Item as={Link} to="/dsa/login">
                 <BsBoxArrowRight className="icon" size={18} />
               </Dropdown.Item>
             </Dropdown.Menu>
