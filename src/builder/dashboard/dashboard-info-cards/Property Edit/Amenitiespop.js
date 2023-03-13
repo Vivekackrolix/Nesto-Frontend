@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
 // import { useNavigate } from "react-router-dom";
 
@@ -8,10 +9,24 @@ import { Button, Container, Form, Modal } from "react-bootstrap";
 
 //     navigate(`/`);
 //   };
-const AmenitiesPop = ({ show }) => {
+const AmenitiesPop = (props) => {
+  // const [showModal, setShowModal] = useState(false);
+
+  // const onContinueHandler = () => {
+  //   setShowModal((prev) => {
+  //     return (prev = true);
+  //   });
+  // };
+  const onSubmitHandler = () => {
+    debugger;
+    console.log(props.show);
+    props.onChange((prev) => ({ ...prev, amenities: false, submit: true }));
+  };
+  console.log(props.show);
+
   return (
     <>
-      <Modal show={show}>
+      <Modal show={props.show.amenities}>
         <Modal.Header>
           <Modal.Title>Amenities</Modal.Title>
         </Modal.Header>
@@ -22,14 +37,6 @@ const AmenitiesPop = ({ show }) => {
             className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
             style={{ background: "#F8F8F8" }}
           >
-            {/* <div className="p-1 d-flex justify-around ">
-                <button type="button" className="btn btn-secondary">
-                  3 Beds
-                </button>
-                <button type="button" className="btn btn-secondary">
-                  2 bathrooms
-                </button>
-              </div> */}
             <div
               className="btn-group"
               role="group"
@@ -66,6 +73,7 @@ const AmenitiesPop = ({ show }) => {
               type="submit"
               variant="primary"
               className="w-50 rounded-pill bg-color-primary"
+              onClick={onSubmitHandler}
             >
               Submit
             </Button>

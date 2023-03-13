@@ -11,8 +11,8 @@ import {
 } from 'react-bootstrap';
 import loanAgentImg from '../assets/images/loan-agent.svg';
 import builderImg from '../assets/images/builder.svg';
-import './LoginForm.css';
 import { Link } from 'react-router-dom';
+import './LoginForm.css';
 
 const LoginForm = () => {
   return (
@@ -43,7 +43,7 @@ const LoginForm = () => {
                 alt="profile"
               />
               <Figure.Caption className="text-center mb-0">
-                Login as a Builder
+                Login as a Broker
               </Figure.Caption>
             </Col>
           </Row>
@@ -70,7 +70,7 @@ const LoginForm = () => {
                 type="submit"
                 variant="primary"
                 size="lg"
-                className="py-4 rounded-pill bg-color-primary"
+                className="py-3 rounded-pill bg-color-primary"
               >
                 Continue
               </Button>
@@ -89,7 +89,7 @@ const LoginForm = () => {
                 type="submit"
                 variant="primary"
                 size="md"
-                className="w-100 py-3 rounded-pill bg-color-primary d-flex shadow"
+                className="w-100 py-2 rounded-pill bg-color-primary d-flex shadow"
               >
                 <div className="m-auto d-flex gap-2 align-items-center m-auto">
                   <div className="nes__login__form__btnimg d-flex rounded-circle">
@@ -103,12 +103,12 @@ const LoginForm = () => {
                 </div>
               </Button>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={6} className="d-flex justify-content-end">
               <Button
                 type="submit"
                 variant="primary"
                 size="md"
-                className="w-100 py-3 rounded-pill bg-color-primary d-flex shadow"
+                className="w-100 py-2 rounded-pill bg-color-primary d-flex shadow"
               >
                 <div className="m-auto d-flex gap-2 align-items-center m-auto">
                   <div className="nes__login__form__btnimg d-flex rounded-circle">
