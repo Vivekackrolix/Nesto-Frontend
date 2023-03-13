@@ -12,7 +12,7 @@ function HeroSection() {
         }}
       >
         <Container>
-          <div className="hero-caption ms-5">
+          <div className="hero-caption d-flex flex-column justify-content-center justify-content-sm-start ms-sm-5">
             <h1 className="d-flex flex-column text-white">
               <span>Summer</span> <span>Vacation</span>
             </h1>
