@@ -75,17 +75,6 @@ const BrokerHome = lazy(() =>
 );
 
 const App = () => {
-<<<<<<< HEAD
-  const [websiteToLoad, setWebsiteToLoad] = useState(
-    'dsa'
-  );
-
-  const ComponentToRender = components[websiteToLoad] || (
-    <div>Website not found</div>
-  );
-
-=======
->>>>>>> fa5b3cf777be0ca2c3459565cffe186cfa445626
   return (
     <>
       {/* Informative */}
