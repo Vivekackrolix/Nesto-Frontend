@@ -1,9 +1,20 @@
+import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
 
-const LocationPop = ({ show }) => {
+const LocationPop = (props) => {
+  // const [showModal, setShowModal] = useState(false);
+
+  // const handleSubmit = () => {
+  //   setShowModal((prev) => {
+  //     return (prev = true);
+  //   });
+  // };
+  const submitHandler = () => {
+    props.onChange((prev) => ({ ...prev, location: false, submit: true }));
+  };
   return (
     <>
-      <Modal show={show}>
+      <Modal show={props.show}>
         <Modal.Header>
           <Modal.Title>Location Advantages</Modal.Title>
         </Modal.Header>
@@ -64,6 +75,7 @@ const LocationPop = ({ show }) => {
             <Button
               variant="primary"
               className="w-50 rounded-pill bg-color-primary"
+              onClick={submitHandler}
             >
               Submit
             </Button>

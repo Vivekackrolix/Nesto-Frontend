@@ -8,12 +8,12 @@ const SoldOut = ({ data }) => {
       <Card
         className="m-4"
         style={{
-          width: "23rem",
+          width: "22rem",
           boxShadow: " 0px 4.64761px 20.3333px rgba(0, 0, 0, 0.07)",
           borderRadius: "17.4597px",
         }}
       >
-        <Card.Img variant="top" src={propertyImage} />
+        <Card.Img className="w-100" variant="" src={propertyImage} />
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
           <Card.Text>
