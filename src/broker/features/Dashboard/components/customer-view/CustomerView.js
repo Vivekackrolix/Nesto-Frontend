@@ -4,9 +4,9 @@ import SmallCardSection from '../small-card-section/SmallCardSection';
 import productImg from '../../assets/images/product-img.png';
 import { ProductContainers } from '../../../../dashboard-containers';
 import SwiperSliderDashboard from '../swiper-slider-dashboard/SwiperSliderDashboard';
-import './BrokerView.css';
 import { SearchFilter } from '../../../../../components';
-const BrokerView = () => {
+import './CustomerView.css';
+const CustomerView = () => {
   const productData = [
     {
       imageUrl: productImg,
@@ -77,7 +77,7 @@ const BrokerView = () => {
       <ProductContainers
         sectionTitle="Promoted Property"
         productData={productData}
-        view="broker"
+        view="customer"
       />
 
       <HeroSection />
@@ -85,15 +85,15 @@ const BrokerView = () => {
       <ProductContainers
         sectionTitle="Recently Added"
         productData={productData}
-        view="broker"
+        view="customer"
       />
       <ProductContainers
         sectionTitle="Best Selling"
         productData={productData}
-        view="broker"
+        view="customer"
       />
     </Container>
   );
 };
 
-export default BrokerView;
+export default CustomerView;
