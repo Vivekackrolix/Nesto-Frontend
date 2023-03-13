@@ -11,8 +11,8 @@ import {
 } from 'react-bootstrap';
 import loanAgentImg from '../assets/images/loan-agent.svg';
 import builderImg from '../assets/images/builder.svg';
-import './LoginForm.css';
 import { Link } from 'react-router-dom';
+import './LoginForm.css';
 
 const LoginForm = () => {
   return (
