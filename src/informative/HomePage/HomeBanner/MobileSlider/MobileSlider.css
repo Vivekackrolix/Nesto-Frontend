@@ -1,0 +1,30 @@
+.mobile-slider_div {
+    width: 100%;
+}
+.mobile-slider_div-2 {
+    display: flex;
+    justify-content: end;
+    text-align: right;
+    position: relative;
+}
+.mobile-arrow {
+    width: 100px;
+    /* position: static; */
+    position: sticky;
+    top: 8%;
+    right: 30%;
+    margin-left: auto;
+    transform: rotate(-10deg);
+}
+.mobile-cartoon-img {
+    width: 60%;
+    margin-bottom: -3rem;
+    z-index: 10 !important;
+    position: relative;
+    margin-left: auto;
+}
+.mobile-slider-img {
+    width: 100%;
+    z-index: -1 !important;
+    height: 550px;
+}

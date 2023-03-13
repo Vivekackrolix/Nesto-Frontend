@@ -1,0 +1,118 @@
+.faq-banner {
+    background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .45)),
+        url(../../../public/assets/informative/faqbanner.png);
+    width: 100%;
+    height: 310px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-banner-heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 59px;
+    color: var(--color-white);
+}
+
+.faq-container {
+    padding: 4% 0;
+}
+
+.faq-col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.faq-col_box-1 {
+    width: 110%;
+    z-index: 10;
+    /* padding: ; */
+    background: var(--color-white);
+    /* border: .1px solid var(--gray-color); */
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, .2);
+    /* padding: 10px 20px 10px 20px; */
+}
+
+.faq-span {
+    display: block;
+    padding: 24px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cold-steel-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-span:not(:first-child) {
+    border-top: 1px solid #f3f3f3;
+}
+
+.faq-span:hover {
+    background: var(--Pattens-Blue);
+}
+
+.circle-icon {
+    color: var(--Pattens-Blue);
+    font-size: 1.65rem;
+    margin-right: 10px;
+    transition: all .25s ease-in;
+}
+
+.arrow-icon {
+    color: var(--Pattens-Blue);
+    font-size: 18px;
+    transition: all .25s ease-in;
+}
+
+.faq-span:hover .circle-icon,
+.faq-span:hover .arrow-icon {
+    color: var(--primary-color);
+}
+
+.faq-col-2 {
+    z-index: -10;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, .065);
+    padding: 40px 10px 30px 80px;
+    border-radius: 14px;
+}
+
+.faq-span-2 {
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bs-gray);
+}
+
+.faq-span-3 {
+    display: block;
+    padding: 24px 0 0 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-color);
+}
+
+/* media queri */
+@media (max-width: 509px) {
+    .faq-banner-heading {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 509px) {
+    .faq-span-3 {
+        /* display: block;
+        padding: 10px 0 0 0;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--gray-color); */
+    }
+}

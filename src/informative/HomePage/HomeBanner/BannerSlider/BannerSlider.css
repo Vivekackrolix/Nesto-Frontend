@@ -1,0 +1,45 @@
+.slider-div {
+    /* position: relative; */
+}
+.slider-div-2 {
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+
+.cartoon_img {
+    margin-right: -49px;
+    height: 100%;
+    z-index: 10;
+}
+.slider-img {
+    height: 550px;
+    width: 100%;
+}
+.slider-div .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 55%;
+    width: 150px;
+    margin-right: auto;
+    /* background: #000; */
+}
+
+.slider-div .slick-dots li button:before {
+    content: '';
+    height: 5px;
+    border-radius: 5px;
+    background: var(--color-white);
+}
+
+.slick-prev::before,
+.slick-next::before {
+    display: none;
+}
+
+.arrow-img {
+    width: 60px;
+    position: absolute;
+    top: 20%;
+    left: -1%;
+}

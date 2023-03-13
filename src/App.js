@@ -60,7 +60,7 @@ const PartnersDetailsMain = lazy(() => import('./informative/App'));
 const ContactUs = lazy(() => import('./informative/App'));
 const BuilderWeb = lazy(() => import('./builder/App'));
 const BrokerWeb = lazy(() => import('./broker/App'));
-const Banner = lazy(() => import('./informative/HomePage/Banner/Banner'));
+// const Banner = lazy(() => import('./informative/HomePage/Banner/Banner'));
 const PartnerBanner = lazy(() =>
   import('./informative/PartnersPage/Partnerbanner/partnerbanner')
 );
