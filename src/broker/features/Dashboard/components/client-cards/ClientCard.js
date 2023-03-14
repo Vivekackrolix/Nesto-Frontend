@@ -94,7 +94,7 @@ const ClientCards = () => {
                       <span className="fw-semibold">{client.recentVisit}</span>
                     </Card.Text>
                   </Card.Body>
-                  <Card.Footer className="bg-transparent border-0 d-flex justify-content-center gap-3 py-3">
+                  <Card.Footer className="bg-transparent border-0 d-flex justify-content-center gap-3 py-3 px-lg-3 px-xl-5">
                     <Button className="flex-fill btn-color-green rounded-pill">
                       Follow Up
                     </Button>
