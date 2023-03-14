@@ -13,6 +13,7 @@ import {
 } from '../features';
 import '../features/Dashboard/assets/styles/Dashboard.css';
 import ClientCards from '../features/Dashboard/components/client-cards/ClientCard';
+import { clientsData } from '../data/Constant';
 
 const DashboardPage = () => {
   const [show, setShow] = useState(true);
@@ -42,10 +43,18 @@ const DashboardPage = () => {
           {/* <PromotedProperty /> */}
 
           {/* Client Management */}
-          {/* <ClientCards title="Client Management" clientManagement /> */}
+          {/* <ClientCards
+            title="Client Management"
+            clientManagement
+            clientData={clientsData}
+          /> */}
 
           {/* requirements */}
-          <ClientCards title="Requirement Details" requirementDetails />
+          <ClientCards
+            title="Requirement Details"
+            requirementDetails
+            clientsData={clientsData}
+          />
         </main>
         {/* Main content code end here */}
 
