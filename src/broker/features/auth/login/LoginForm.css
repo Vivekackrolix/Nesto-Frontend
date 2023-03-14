@@ -1,0 +1,54 @@
+.nes__login__form h1 {
+  font-weight: 700;
+  font-size: 43.3864px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.nes__login__form .form-control-lg {
+  background-color: #f8f8f8;
+  font-weight: 400;
+  font-size: 14px !important;
+  color: #8391a1;
+  border: 1.53686px solid #e8ecf4;
+  border-radius: 12.2949px !important;
+}
+
+.nes__login__form .btn-lg,
+.nes__login__form .btn-md {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.nes__login__form .figure-caption {
+  font-weight: 350;
+  font-size: 18px;
+  color: #000000;
+}
+
+.nes__login__form__btnimg {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
+}
+
+.nes__login__form__row {
+  box-shadow: 0px 4.71221px 20.6323px rgba(0, 0, 0, 0.07);
+  border-top-right-radius: 18.0038px;
+  border-bottom-right-radius: 18.0038px;
+}
+
+.nes__dsa__login__img {
+  border-radius: 18.0038px;
+}
+
+@media (min-width: 992px) {
+  .nes__login__form .btn-md {
+    font-size: 12px;
+    font-weight: normal;
+    width: min(100%, 218px) !important;
+  }
+}

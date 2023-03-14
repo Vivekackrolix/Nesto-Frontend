@@ -63,10 +63,10 @@ const RatingChart = () => {
     return (
         <>
             <div className='container rating-chart'>
-                <p className='partners-sections_headings'>Rating & Review</p>
+                <p className='partners-sections_headings' data-aos='fade-right'>Rating & Review</p>
                 <div className='row rating-chart_box1'>
                     {/* <div className='rating-chart_box1'> */}
-                    <div className='col-lg-6'>
+                    <div className='col-lg-6' data-aos='fade-right'>
                         <div className='rating-chart_box2'>
                             <div className='rating-chart_box3'>
                                 <span className='rating-chart_span1'>4.0<span className='rating-chart_span2'>/5</span></span>
@@ -93,7 +93,7 @@ const RatingChart = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-6 col-md-12 rating-chart_box9'>
+                    <div className='col-lg-6 col-md-12 rating-chart_box9' data-aos='fade-right'>
                         <span className='rating-chart_span5'>Ratings by Features</span>
                         {/* <div className='row'> */}
                         <div className='col-lg-12 d-flex flex-wrap rating-chart_box10 gap-2'>

@@ -1,10 +1,11 @@
 .dash-content .col-12 {
   background-color: var(--wild-sand);
+  margin-top: 8px;
 }
 
 .dash-content span {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .dash-content .text-truncate span:first-child {

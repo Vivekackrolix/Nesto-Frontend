@@ -177,19 +177,18 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                     xs={12}
                     md={6}
                     lg={4}
-                    className="d-grid gap-3 bg-transparent px-3 card__paynow__invoice"
+                    className="d-grid bg-transparent px-3 card__paynow__invoice"
                   >
-                    <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                    <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                       Download Invoice
                       <Image
-                        className="h-100"
-                        fluid
                         src="/assets/upload-icon.svg"
                         alt="upload"
+                        className='upload'
                       />
                     </Button>
 
-                    <Button className="btn-color-primary rounded-100 my-2">
+                    <Button className="pay btn-color-primary rounded-100 my-2">
                       Pay Now
                     </Button>
 
@@ -210,60 +209,56 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                     xs={12}
                     md={6}
                     lg={4}
-                    className="d-grid gap-3 bg-transparent px-3 card__paynow__invoice"
+                    className="d-grid bg-transparent px-3 card__paynow__invoice"
                   >
                     {payment !== 'Paid' ? (
                       payment === 'Pending' ? (
                         <>
-                          <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                          <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                             Download Invoice
                             <Image
-                              className="h-100"
-                              fluid
                               src="/assets/upload-icon.svg"
                               alt="upload"
+                              className='upload'
                             />
                           </Button>
-                          <Button className="btn-color-primary rounded-100 my-2">
+                          <Button className="pay btn-color-primary rounded-100 my-2">
                             Pay Now
                           </Button>
                         </>
                       ) : payment === 'Processing' ? (
                         <>
-                          <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100 mb-2">
+                          <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100 mb-2">
                             Download Invoice
-                            <Image
-                              className="h-100"
-                              fluid
+                            <Image                          
                               src="/assets/upload-icon.svg"
                               alt="upload"
+                              className='upload'
                             />
                           </Button>
                         </>
                       ) : (
                         <>
-                          <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                          <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                             Download Invoice
                             <Image
-                              className="h-100"
-                              fluid
                               src="/assets/upload-icon.svg"
                               alt="upload"
+                              className='upload'
                             />
                           </Button>
-                          <Button className="btn-color-primary rounded-100 my-2">
+                          <Button className="pay btn-color-primary rounded-100 my-2">
                             Pay Now
                           </Button>
                         </>
                       )
                     ) : (
-                      <Button className="d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                      <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                         Download Invoice
                         <Image
-                          className="h-100"
-                          fluid
                           src="/assets/upload-icon.svg"
                           alt="upload"
+                          className='upload'
                         />
                       </Button>
                     )}

@@ -7,7 +7,7 @@ const ThirdCard = () => {
     return (
         <>
             {/* First Card */}
-            <div div className='d-flex partners-third__card rounded-3' >
+            <div div className='d-flex partners-third__card rounded-3' data-aos='fade-left'>
                 <div style={{ width: '100%' }}>
                     <p className='third-card__p-1'>Get Assured
                         <span className='third-card__span-1'> ₹90K Cashback </span>

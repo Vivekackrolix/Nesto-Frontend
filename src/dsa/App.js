@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RouteData } from './utils/Routes';
 import HomeDashboardContent from './dashboard/home-dashnoard-content/HomeDashboardContent';
 import CopyrightText from './dashboard/footer/CopyrightText';
-import Chat from './dashboard//chat/Chat';
+import Chat from './dashboard/chat/Chat';
 import '../index.css';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';

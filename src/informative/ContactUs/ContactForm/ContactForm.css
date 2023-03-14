@@ -1,4 +1,5 @@
 .contact-form {
+    z-index: 10;
     margin: 80px 0;
     position: relative;
 }
@@ -143,9 +144,11 @@
     background: var(--primary-color);
     border: none;
 }
-
+/* Map====
+======= */
 .contact-form_map-box {
     margin-top: -10rem;
+    z-index: -10;
 }
 
 /* mediaQueri */

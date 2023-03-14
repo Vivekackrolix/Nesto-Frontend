@@ -1,5 +1,7 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../Images/propertyadded.png";
+import buld from "../../Images/buld.png";
+import subs from "../../Images/subs.png";
 
 const RecentlyAdded = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
@@ -10,39 +12,57 @@ const RecentlyAdded = ({ data }) => {
           {/* <Card.Title></Card.Title> */}
           <Card.Text>
             <Row>
-              <Row>Sky Danelions Apartment</Row>
+              <Col className="d-flex justify-content-between">
+                <Row>Sky Danelions Apartment</Row>
+                <img src={subs} alt="" />
+              </Col>
               <Row style={{ opacity: 0.5 }}>
                 Luxury Apartment in Sector-29,Gurugram
               </Row>
+
+              <br></br>
+              <br></br>
+
+              <Row>
+                <img src={buld} alt="" />
+              </Row>
+              <br></br>
             </Row>
-            <Row className="pt-3">
-              <Col>
-                <Row>Unit Type</Row>
-                <Row>2BHK</Row>
+            <br></br>
+            <Row>
+              <Col
+                style={{
+                  color: "#000000",
+                  fontSize: "1.3em",
+                  fontWeight: "bold",
+                }}
+              >
+                Rs.3.94-6.01 Cr
               </Col>
-              <Col>
-                <Row>Unit Number</Row>
-                <Row>123456789</Row>
-              </Col>
-              <Col>
-                <Row>Selling Price</Row>
-                <Row>Rs. 3.94 Cr</Row>
-              </Col>
-            </Row>
-            <Row className="pt-3">
-              <Col>
-                <Row>Client Name</Row>
-                <Row>Lorem Ipsum</Row>
-              </Col>
-              <Col>
-                <Row>Broker ID</Row>
-                <Row>1234456</Row>
-              </Col>
-              <Col>
-                <Row>Selling Date</Row>
-                <Row>10/11/22</Row>
+              <br></br>
+              <Col style={{ color: "#7D7F88", fontSize: "0.6em" }}>
+                Book now & get 5% discount
               </Col>
             </Row>
+            <div
+              className="d-flex justify-content-end gap-2"
+              style={{ borderColor: "#278FD9" }}
+            >
+              <button
+                type="button"
+                className="btn btn-light rounded-pill"
+                style={{ color: "#278FD9" }}
+              >
+                50 Visits
+              </button>
+              <button
+                type="button"
+                className="btn btn-light rounded-pill"
+                style={{ color: "#278FD9" }}
+              >
+                Edit
+              </button>
+            </div>
           </Card.Text>
         </Card.Body>
       </Card>
@@ -51,13 +71,25 @@ const RecentlyAdded = ({ data }) => {
   return (
     <Container className="mt-5">
       <div className="row justify-content-between">
-        <h3 className="col-4">Recently Added</h3>
-        <i className="col-1" style={{ color: "#FC5C67" }}>
+        <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
+          Recently Added
+        </h3>
+        <i
+          className="col-1"
+          style={{
+            color: "#FC5C67",
+            fontFamily: "Bahnschrift",
+            textDecorationLine: "underline",
+          }}
+        >
           View all
         </i>
       </div>
       {/* <div className="mt-4">{propertyListing}</div> */}
-      <div className="mt-4 row row-cols-2 justify-content-center">
+      <div
+        className="mt-4 row row-cols-2 justify-content-center"
+        style={{ fontFamily: "Bahnschrift" }}
+      >
         {propertyListing}
       </div>
     </Container>

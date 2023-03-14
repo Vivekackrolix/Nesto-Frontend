@@ -20,21 +20,27 @@ input.invalid {
 }
 
 .login__user figcaption {
-  font-weight: 350;
+  font-weight: 400;
   font-size: 16px;
   opacity: 0.5;
+  color: #000;
 }
 
 /* login form */
 .login__form form label {
-  font-weight: 350;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 16px;
   color: var(--cold-steel-color);
 }
 
 .login__form p {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--cold-steel-color);
+}
+.login-shadow{
+  box-shadow: 0px 6.24258px 35.2798px rgb(0 0 0 / 7%);
+  padding: 0;
+  border-radius: 10px;
 }
 
 .login__form .invalid-feedback,
@@ -52,6 +58,16 @@ input.invalid {
 
 .login__form__forgetpassword {
   margin-top: 0.25rem;
+}
+
+.nes__dsa__login__img {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.nes__dsa__login__formwrapper {
+  /* box-shadow: 0px 6.24258px 35.2798px rgba(0, 0, 0, 0.07); */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 @media (max-width: 374px) {

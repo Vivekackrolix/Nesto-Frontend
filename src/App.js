@@ -1,37 +1,28 @@
-import React from 'react';
-import DsaWebsite from './dsa/App';
-import PartnersDetailsMain from './informative/App';
-import ContactUs from './informative/App';
-import BuilderWeb from './builder/App';
-import BrokerWeb from './broker/App';
-import Banner from './informative/HomePage/Banner/Banner';
-import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanner';
-import TermsCondition from './informative/TermsCondition/TermsCondition';
-import PrivacyPolicy from './informative/PrivacyPolicy/PrivacyPolicy';
-import BrokerHome from './informative/BrokerPage/BrokerHome/BrokerHome';
-import BuilderHome from './informative/BuilderPage/BuilderPageHome/BuilderHome';
+// updated code with routes
+import React, { lazy, Suspense } from 'react';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import LoadingScreen from './components/loading-screen/LoadingScreen';
 
-const components = {
-  informativeHomeBanner: <Banner />,
-  dsa: <DsaWebsite />,
-  informativePartnersDetailsMain: <PartnersDetailsMain />,
-  partnerPage: <PartnerBanner />,
-  informativeContactUs: <ContactUs />,
-  informativeTandC: <TermsCondition />,
-  builder: <BuilderWeb />,
-  broker: <BrokerWeb />,
-  informativePrivacyPolicy: <PrivacyPolicy />,
-  brokerHome: <BrokerHome />,
-  builderHome: <BuilderHome/>
-};
+const DsaWebsite = lazy(() => import('./dsa/App'));
+const PartnersDetailsMain = lazy(() => import('./informative/App'));
+const BuilderWeb = lazy(() => import('./builder/App'));
+const BrokerWeb = lazy(() => import('./broker/App'));
 
 const App = () => {
-  const websiteToLoad = 'builderHome';
-  const ComponentToRender = components[websiteToLoad] || (
-    <div>Website not found</div>
+  return (
+    <>
+      {/* informative */}
+      <PartnersDetailsMain />
+
+      {/* dsa */}
+      <DsaWebsite />
+
+      {/* builder */}
+      <BuilderWeb />
+
+      {/* broker */}
+      <BrokerWeb />
+    </>
   );
-
-  return ComponentToRender;
 };
-
 export default App;

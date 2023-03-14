@@ -1,19 +1,23 @@
-import React from 'react';
-import Header from '../../components/header/Header'
+import React, { useEffect } from 'react';
+import InformativeNavbar from '../Navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import './BlogListMain.css'
 import ArticleNews from './ArticleNews/ArticleNews';
 import ListProperty from '../PartnersDetail/ListProperty/ListProperty'
 import LatestPost from './LatestPost/LatestPost';
+import Aos from 'aos';
 
 export default function BlogListMain() {
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     return (
         <>
-            <Header />
+            <InformativeNavbar />
             <div className="blog-list-banner">
-                <span className='blog-list-banner-heading'>Blog</span>
+                <span className='blog-list-banner-heading' data-aos='zoom-in'>Blog</span>
             </div>
-            <div className='container'>
+            <div className='container' style={{overflowX: 'hidden'}}>
                 {/* ArticleNews===
                 ============== */}
                 <ArticleNews />
@@ -23,7 +27,7 @@ export default function BlogListMain() {
                 {/* LatestPost======
                 ================ */}
                 <LatestPost />
-                <br/><br/><br/><br/>
+                <br /><br /><br /><br />
             </div>
             <Footer />
         </>

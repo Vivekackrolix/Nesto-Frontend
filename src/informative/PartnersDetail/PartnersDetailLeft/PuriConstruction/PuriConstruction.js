@@ -4,7 +4,7 @@ import { MdOutlineStarOutline, MdOutlineStarPurple500 } from 'react-icons/md';
 
 const PuriConstruction = () => {
     return (
-        <div className='mt-5 col-lg-12 d-flex justify-content-start gap-2 align-items-center'>
+        <div className='mt-5 col-lg-12 d-flex justify-content-start gap-2 align-items-center' data-aos='fade-right'>
             <div>
                 <img src='/assets/profile-card-img.png' />
             </div>

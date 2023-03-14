@@ -19,7 +19,8 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-color-primary mt-5 login__footer mt-auto">
+    // bg-color-primary
+    <footer className="bg-primary mt-5 login__footer mt-auto">
       <Container className="py-5">
         <Row className="gy-sm-2 gx-lg-4">
           <Col sm={12} lg={3}>

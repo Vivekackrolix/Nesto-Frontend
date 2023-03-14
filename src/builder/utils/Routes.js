@@ -1,17 +1,17 @@
 import Login from "../login/Login";
 import HomeDashBoard from "../dashboard/HomeDashBoard";
 import Property from "../dashboard/property/Property";
-<<<<<<< HEAD
 
 import PromotedVisit from "../dashboard/dashboard-property-analytics/Visit-Details/PromotedVisit.js";
 import SoldOut from "../dashboard/dashboard-soldout-properties/SoldOut";
 import PropertyEdit from "../dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
-import AmenitiesPop from "../dashboard/dashboard-info-cards/Property Edit/Amenitiespop";
-=======
-import PromotedVisit from "../dashboard/dashboard-property-analytics/Visit-Details/PromotedVisit.js";
-import SoldOut from "../dashboard/dashboard-soldout-properties/SoldOut";
-import PropertyEdit from "../dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
->>>>>>> 27ac21555805623af7afb3fbd7a06f81edb599fd
+
+import PropertyClaim from "../dashboard/dashboard-property-analytics/Visit Details/Property claim/PropertyClaim";
+import ProfilePage from "../dashboard/Builderprofile/Profile";
+import Brockrage from "../dashboard/Brokerage/Brokerage";
+import SettledInvoice from "../dashboard/Brokerage/SettledInvoice";
+import BrockrageSettled from "../dashboard/Brokerage/BrokerageSettled";
+import NotificationDropdown from "../dashboard/Builderprofile/notification/NotificationDropdown";
 export const RouteData = [
   {
     id: 1,
@@ -45,14 +45,31 @@ export const RouteData = [
         path: "Property-Edit",
         element: <PropertyEdit />,
       },
-<<<<<<< HEAD
-      // {
-      //   id: 6,
-      //   path: "Amenities",
-      //   element: <AmenitiesPop />,
-      // },
-=======
->>>>>>> 27ac21555805623af7afb3fbd7a06f81edb599fd
+      {
+        id: 7,
+        path: "PropertyClaim",
+        element: <PropertyClaim />,
+      },
+      {
+        id: 8,
+        path: "Brokerage",
+        element: <Brockrage />,
+      },
+      {
+        id: 9,
+        path: "Settled",
+        element: <BrockrageSettled />,
+      },
+      {
+        id: 10,
+        path: "profile",
+        element: <ProfilePage />,
+      },
+      {
+        id: 11,
+        path: "notification",
+        element: <NotificationDropdown />,
+      },
     ],
   },
 ];

@@ -74,7 +74,7 @@ const PastProjects = () => {
             },
         ]
     return (
-        <div className='container past-project_slider mt-5 shdow-sm rounded-4'>
+        <div className='container past-project_slider mt-5 shdow-sm rounded-4' data-aos='zoom-in'>
             <p className='partners-sections_headings'>Past Projects</p>
             <Slider {...settings}>
                 {projectSliderData.map((item) => (

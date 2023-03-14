@@ -1,11 +1,12 @@
 import { DashboardFooter } from "../../../broker/features";
 import Footer from "../../../builder/dashboard/Footer/Footer";
+import HowWork from "../../AboutUs/HowWork/HowWork";
 import Contact from "../../BrokerPage/contactform/Contact";
 import ChooseUs from "../../HomePage/chooseus/Chooseus";
 import Residency from "../../HomePage/residency/Residency";
 import Testimonial from "../../HomePage/testimonials/Testimonials";
 import './BuilderHome.css';
-export default function BrokerHome() {
+export default function BuilderHome() {
   return (
     <>
       <div className="banner position-relative">
@@ -42,6 +43,7 @@ your Property With Us</h2>
         {/* <ChooseUs />
         <Testimonial /> */}
       </div>
+      <HowWork/>
     </>
   );
 }

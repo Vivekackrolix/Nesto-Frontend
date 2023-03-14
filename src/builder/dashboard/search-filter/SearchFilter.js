@@ -1,12 +1,16 @@
 import { BsSearch, BsMic, BsGeoAlt } from "react-icons/bs";
 import { InputGroup, FormControl, Button, Form } from "react-bootstrap";
 import "./SearchFilter.css";
+import { RiAddFill } from "react-icons/ri";
 
 const SearchFilterBox = () => {
   return (
     <div className="row d-flex align-items-center mb-5 mt-4">
-      <div className="dashboard__wrapper__filter bg-white shadow-sm d-flex align-items-center col-11">
-        <div className="px-3 py-2">
+      <div
+        className="dashboard__wrapper__filter bg-white shadow-sm d-flex align-items-center col-10 "
+        style={{ flex: "1" }}
+      >
+        <div className="px-3 py-1">
           <Form.Select
             defaultValue="All residential"
             className="border-0 rounded-0 border-end"
@@ -33,8 +37,10 @@ const SearchFilterBox = () => {
           </Button>
         </div>
       </div>
-      <div className="col-1">
-        <Button className="rounded-circle">+</Button>
+      <div className="col-auto" style={{ gap: "2" }}>
+        <Button className="rounded-circle p-3">
+          <RiAddFill size={30} />
+        </Button>
       </div>
     </div>
   );
