@@ -18,8 +18,6 @@ import Header from "../header/Header";
 import builder from "../Images/builder.png";
 import loan from "../Images/loan.png";
 const Login = () => {
-  // email phone number validation
-
   const [inputValue, setInputValue] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -36,10 +34,9 @@ const Login = () => {
   };
 
   const handleInputChange = (event) => {
-    // debugger;
     const inputText = event.target.value;
     const emailPhoneRegex = /^[0-9\b]+$/;
-    // /^(?:\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b|\b(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})\b)?$/;
+
     const isMatch = emailPhoneRegex.test(inputText);
 
     setInputValue(inputText);

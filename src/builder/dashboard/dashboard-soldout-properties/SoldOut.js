@@ -1,4 +1,4 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../Images/propertyimage.png";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ const SoldOut = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Card
-        className="m-4"
+        className="m-3"
         style={{
           width: "22rem",
           boxShadow: " 0px 4.64761px 20.3333px rgba(0, 0, 0, 0.07)",
