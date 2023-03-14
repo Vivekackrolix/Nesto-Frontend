@@ -11,7 +11,7 @@ import home from "../Images/Home.png";
 
 const Header = () => {
   return (
-    <header className="py-3 login__header" style={{ background: "#ECF7FF" }}>
+    <header className="login__header">
       <Container>
         <Nav className="d-flex align-items-center">
           <Nav.Item>
@@ -40,15 +40,15 @@ const Header = () => {
               Brockerage
             </Nav.Item>
           </div>
-          <div className="d-flex col-3 ms-auto">
+          <div className="d-flex col-3 ms-auto align-items-center">
             <Nav.Item className="me-2  p-3">
-              <img src={eye} alt="eye" />
+              <img src="/assets/eye.png" alt="eye" className="eye" />
             </Nav.Item>
             <Nav.Item className="me-2 p-2">
-              <img src={bgImage} alt="profile" />
+              <img src="/assets/subscription.png" alt="subscription" className="subscription" />
             </Nav.Item>
             <Nav.Item className="me-2">
-              <img src={notification} alt="notification" />
+              <img src="/assets/notification.png" alt="notification" className="notification" />
             </Nav.Item>
             <Nav.Item className="me-2">
               <img src={profile} alt="profile" />
