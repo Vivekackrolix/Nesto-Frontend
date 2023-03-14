@@ -40,6 +40,10 @@ const BrokerageManagement = ({ data }) => {
                       type="claimApproved"
                     />
                   </Col>
+
+                  <Col lg={6} md={6} className="mb-3">
+                    <BrokerageManagementCard text="Assigned" type="assigned" />
+                  </Col>
                 </Row>
               </Container>
             </DashboardTabs>
