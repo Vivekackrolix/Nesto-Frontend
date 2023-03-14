@@ -5,9 +5,28 @@
 }
 
 .brokerage__management__card button {
-  background-color: #ffe1e1;
-  border: 1.72817px solid #fc5c67;
   font-weight: 400;
   font-size: 14px;
   color: #000000;
+}
+
+.brokerage__management__card .raise {
+  background-color: #ffe4d4;
+  border: 1.72817px solid #d64d00;
+}
+.brokerage__management__card .payment-received {
+  background-color: #eaf5e7;
+  border: 1.72817px solid #88c879;
+}
+.brokerage__management__card .claim-submitted {
+  background-color: #ffe4d4;
+  border: 1.72817px solid #d64d00;
+}
+.brokerage__management__card .paid {
+  background-color: #eaf5e7;
+  border: 1.72817px solid #88c879;
+}
+.brokerage__management__card .claim-approved {
+  background-color: #e2f3ff;
+  border: 1.72817px solid #278fd9;
 }
