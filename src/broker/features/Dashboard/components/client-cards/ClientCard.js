@@ -3,6 +3,7 @@ import { Card, Button, Row, Col, Container } from 'react-bootstrap';
 import { MdModeEditOutline, MdLocalPhone } from 'react-icons/md';
 import { SearchFilter } from '../../../../../components';
 import './ClientCard.css';
+import { Link } from 'react-router-dom';
 const clients = [
   {
     id: 1,
@@ -33,7 +34,7 @@ const clients = [
   },
 ];
 
-const ClientCards = () => {
+const ClientCards = ({ title, clientManagement, requirementDetails }) => {
   return (
     <>
       <section className="mt-3">
@@ -43,27 +44,74 @@ const ClientCards = () => {
               <SearchFilter addBtn />
             </Col>
             <Col xs={12}>
-              <h1 className="section-title mb-4">Client Management</h1>
+              <h1 className="section-title mb-4">{title}</h1>
             </Col>
-            {clients.map(client => (
-              <Col lg={4} md={6} className="mb-3" key={client.id}>
-                <Card className="client__card border-0">
-                  <Card.Header className="bg-white d-flex justify-content-between align-items-center border-0 pt-3 pb-0">
-                    <div className="fw-bold ">
-                      <span className="nes__dashboard__brok__client__name">
-                        {client.name}
-                      </span>{' '}
-                      <MdModeEditOutline className="ms-1" color="#278FD9" />
+
+            {/* client management */}
+            {requirementDetails && (
+              <Col xs={12} className="mb-3" key={clients.id}>
+                <Card className="client__card border-0 mb-4">
+                  <Card.Header className="bg-white d-flex justify-content-between align-items-center border-0 p-3">
+                    <div className="fw-bold d-flex flex-column">
+                      <span className="nes__dashboard__brok__client__name nes__dashboard__brok__client__name-title fw-bold">
+                        Jaclyn Steward
+                      </span>
+                      <span className="text-muted fw-light">
+                        Client ID:5858598543
+                      </span>
                     </div>
-                    <div className="d-flex align-items-center fw-bold">
+                    <div className="d-flex align-items-center fw-bold ms-auto">
                       <div>
                         <button className="me-1 rounded-circle p-0 d-inline-flex nes__dashboard__brok__client__phone">
                           <MdLocalPhone className="m-auto" size={10} />
                         </button>{' '}
                         <span className="nes__dashboard__brok__client__phone__text">
-                          {client.phone}
+                          +91-95968494590
                         </span>
                       </div>
+                    </div>
+                  </Card.Header>
+                </Card>
+              </Col>
+            )}
+            {clients.map(client => (
+              <Col lg={4} md={6} className="mb-3" key={client.id}>
+                <Card className="client__card border-0">
+                  <Card.Header className="bg-white d-flex justify-content-between align-items-center border-0 pt-3 pb-0">
+                    <div className="fw-bold ">
+                      {clientManagement && (
+                        <>
+                          <span className="nes__dashboard__brok__client__name">
+                            {client.name}
+                          </span>
+                          <MdModeEditOutline className="ms-1" color="#278FD9" />
+                        </>
+                      )}
+
+                      {requirementDetails && (
+                        <span className="nes__dashboard__brok__client__id">
+                          Requirement ID: 2322232323
+                        </span>
+                      )}
+                    </div>
+                    <div className="d-flex align-items-center fw-bold">
+                      {clientManagement && (
+                        <div>
+                          <button className="me-1 rounded-circle p-0 d-inline-flex nes__dashboard__brok__client__phone">
+                            <MdLocalPhone className="m-auto" size={10} />
+                          </button>{' '}
+                          <span className="nes__dashboard__brok__client__phone__text">
+                            {client.phone}
+                          </span>
+                        </div>
+                      )}
+
+                      {requirementDetails && (
+                        <Link className="client__Card__link">
+                          {' '}
+                          Related Search{' '}
+                        </Link>
+                      )}
                     </div>
                   </Card.Header>
                   <Card.Body>
@@ -95,9 +143,9 @@ const ClientCards = () => {
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer className="bg-transparent border-0 d-flex justify-content-center gap-3 py-3 px-lg-3 px-xl-5">
-                    <Button className="flex-fill btn-color-green rounded-pill">
+                    <div className="flex-fill follow-up rounded-pill d-flex justify-content-center align-items-center">
                       Follow Up
-                    </Button>
+                    </div>
                     <Button className="flex-fill btn-color-primary rounded-pill">
                       Visit Summary
                     </Button>

@@ -40,8 +40,12 @@ const DashboardPage = () => {
           {/* <BrokerView /> */}
           {/* <CustomerView /> */}
           {/* <PromotedProperty /> */}
+
           {/* Client Management */}
-          <ClientCards />
+          {/* <ClientCards title="Client Management" clientManagement /> */}
+
+          {/* requirements */}
+          <ClientCards title="Requirement Details" requirementDetails />
         </main>
         {/* Main content code end here */}
 
