@@ -10,6 +10,7 @@ import {
   SuccessModal,
   VisitAlertModal,
   PromotedProperty,
+  BrokerageManagement,
 } from '../features';
 import '../features/Dashboard/assets/styles/Dashboard.css';
 import ClientCards from '../features/Dashboard/components/client-cards/ClientCard';
@@ -50,11 +51,14 @@ const DashboardPage = () => {
           /> */}
 
           {/* requirements */}
-          <ClientCards
+          {/* <ClientCards
             title="Requirement Details"
             requirementDetails
             clientsData={clientsData}
-          />
+          /> */}
+
+          {/* Brokerage Management */}
+          <BrokerageManagement />
         </main>
         {/* Main content code end here */}
 
