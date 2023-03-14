@@ -12,27 +12,27 @@ import Heading from "../heading/Heading";
 // import "slick-carousel/slick/slick-theme.css";
 // import Heading from "../common/Heading";
 
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "red",borderRadius:"50%",padding:"1px" }}
-//       onClick={onClick}
-//     />
-//   );
-// }
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red",borderRadius:"50%",padding:"1px" }}
+      onClick={onClick}
+    />
+  );
+}
 
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "red",borderRadius:"50%",padding:"1px" }}
-//       onClick={onClick}
-//     />
-//   );
-// }
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red",borderRadius:"50%",padding:"1px" }}
+      onClick={onClick}
+    />
+  );
+}
 
 const review = [
     {
@@ -76,11 +76,10 @@ const Testimonial = () => {
         speed: 3000,
         autoplaySpeed: 3000,
         cssEase: "linear",
-        arrows: false,
-
+        arrows: true,
         loop: true,
         autoplay: true,
-        autoplaySpeed: 0,
+        autoplaySpeed: 2000,
         accessibility: true,
         cssEase: "linear",
         swipeToSlide: true,

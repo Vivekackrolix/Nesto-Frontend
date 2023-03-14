@@ -9,6 +9,7 @@ import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner'
 import TermsCondition from './TermsCondition/TermsCondition';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 import BlogListMain from './BlogList/BlogListMain'
+import BuilderHome from './BuilderPage/BuilderPageHome/BuilderHome';
 import BlogDetailMain from './BlogDetail.js/BlogDetailMain';
 import AboutUsMain from './AboutUs/AboutUsMain';
 import Faq from './Faq/Faq';
