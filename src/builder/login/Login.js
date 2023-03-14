@@ -59,13 +59,13 @@ const Login = () => {
       <Header />
 
       <Container className="container-md my-5">
-        <Row className="g-0 login__form">
+        <Row className="g-0 login__form login-shadow">
           <Col md={6}>
             <Image className="h-100" src={loginImage} fluid alt="login img" />
           </Col>
           <Col
             md={6}
-            className="p-5 shadow-sm d-flex flex-column justify-content-center"
+            className="p-5 d-flex flex-column justify-content-center"
           >
             <LoginUser />
 
@@ -77,6 +77,7 @@ const Login = () => {
                   required
                   type="text"
                   value={inputValue}
+                  maxLength="10"
                   onChange={handleInputChange}
                   placeholder="Enter your phone number"
                   isInvalid={showErrorMessage}
@@ -90,49 +91,50 @@ const Login = () => {
                 </Form.Control.Feedback>
               </InputGroup>
 
-              <div className="d-grid mt-5">
+              <div className="d-grid mt-3">
                 <Button
                   variant="primary"
                   size="md"
-                  className="rounded-pill border-0 bg-color-primary py-3"
+                  className="rounded-pill border-0 bg-color-primary py-2"
                   onClick={onContinueHandler}
                 >
                   Continue
                 </Button>
               </div>
             </Form>
-            <div className="d-flex align-items-center my-5">
+
+<div className="d-flex align-items-center my-4">
               <div className="divider flex-grow-1"></div>
               <p className="m-0 px-1">Or Login</p>
               <div className="divider flex-grow-1"></div>
             </div>
             <div className="d-flex justify-content-between">
-              <div className="d-grid mt-5">
+              <div className="d-grid mb-0">
                 <Button
                   variant="primary"
                   size="md"
-                  className="rounded-pill border-0 bg-color-primary py-2 wd-200"
+                  className="rounded-pill border-0 bg-color-primary py-2 px-5 btn-shadow"
                 >
                   <Image
                     src={builder}
                     fluid
                     className="rounded-circle mx-2 user-img"
-                    alt="profile"
+                    alt="builder"
                   />
-                  Builder
+                  Broker
                 </Button>
               </div>
-              <div className="d-grid mt-5">
+              <div className="d-grid mb-0">
                 <Button
                   variant="primary"
                   size="md"
-                  className="rounded-pill border-0 bg-color-primary py-2 wd-200"
+                  className="rounded-pill border-0 bg-color-primary py-2 px-5 btn-shadow"
                 >
                   <Image
                     src={loan}
                     fluid
                     className="rounded-circle mx-2 user-img"
-                    alt="profile"
+                    alt="broker"
                   />
                   Loan Agent
                 </Button>

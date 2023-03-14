@@ -81,7 +81,7 @@ const EnterOtp = ({ show, onHide }) => {
         className="text-text-muted text-center mb-4"
         style={{ lineHeight: "1.6" }}
       >
-        Enter the verification code we just sent on your email address.
+        Enter the verification code we just sent on your phone number.
       </p>
       <Form>
         {/* <OtpContent /> */}
