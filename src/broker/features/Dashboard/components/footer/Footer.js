@@ -1,4 +1,3 @@
-import { Container } from 'react-bootstrap';
 import CopyrightText from '../../../../../components/footer/CopyrightText';
 
 const Footer = () => {

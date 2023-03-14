@@ -14,6 +14,10 @@
   font-size: 14px;
 }
 
+.nes__dashboard__brok__client .text-muted {
+  color: #8b9199 !important;
+}
+
 .nes__dashboard__brok__client__phone {
   width: 24px;
   height: 24px;
