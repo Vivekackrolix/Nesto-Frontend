@@ -1,8 +1,15 @@
 .client__card {
-  background-color: #ffffff;
-  box-shadow: 0px 4.84631px 21.2026px rgba(0, 0, 0, 0.07);
   border-radius: 15.9418px;
+  background-color: #fff;
+  box-shadow: 0px 4.84631px 21.2026px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.client__card:hover {
+  box-shadow: 0px 4.84631px 21.2026px rgba(0, 0, 0, 0.09);
+  transform: scale(1.05);
+}
+
 .nes__dashboard__brok__client span {
   font-size: 14px;
 }
