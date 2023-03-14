@@ -30,26 +30,28 @@ const DashboardPage = () => {
       {/* <CustomerModal show={show} onHide={onHide} /> */}
       {/* popup modal code end here */}
 
-      {/* Header */}
-      <Header />
-      {/* Header code end here */}
+      <div className="nes__dashboard__brok__app d-flex flex-column min-vh-100">
+        {/* Header */}
+        <Header />
+        {/* Header code end here */}
 
-      {/* Main Content code start here */}
-      <main className="nes__broker__dashboard">
-        {/* <BrokerView /> */}
+        {/* Main Content code start here */}
+        <main className="nes__broker__dashboard">
+          {/* <BrokerView /> */}
 
-        {/* <CustomerView /> */}
+          {/* <CustomerView /> */}
 
-        {/* <PromotedProperty /> */}
+          {/* <PromotedProperty /> */}
 
-        {/* Client Management */}
-        <ClientCards />
-      </main>
-      {/* Main content code end here */}
+          {/* Client Management */}
+          <ClientCards />
+        </main>
+        {/* Main content code end here */}
 
-      {/* footer code start here */}
-      <Footer />
-      {/* footer code end here */}
+        {/* footer code start here */}
+        <Footer />
+        {/* footer code end here */}
+      </div>
     </>
   );
 };

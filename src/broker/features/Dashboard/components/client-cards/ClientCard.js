@@ -36,71 +36,78 @@ const clients = [
 const ClientCards = () => {
   return (
     <>
-      <Container className="nes__dashboard__brok__client">
-        <SearchFilter addBtn />
-        <Row>
-          {clients.map(client => (
-            <Col lg={4} md={6} className="mb-3" key={client.id}>
-              <Card className="client__card border-0">
-                <Card.Header className="bg-white d-flex justify-content-between align-items-center border-0 pt-3 pb-0">
-                  <div className="fw-bold ">
-                    <span className="nes__dashboard__brok__client__name">
-                      {client.name}
-                    </span>{' '}
-                    <MdModeEditOutline className="ms-1" color="#278FD9" />
-                  </div>
-                  <div className="d-flex align-items-center fw-bold">
-                    <div>
-                      <button className="me-1 rounded-circle p-0 d-inline-flex nes__dashboard__brok__client__phone">
-                        <MdLocalPhone className="m-auto" size={10} />
-                      </button>{' '}
-                      <span className="nes__dashboard__brok__client__phone__text">
-                        {client.phone}
-                      </span>
-                    </div>
-                  </div>
-                </Card.Header>
-                <Card.Body>
-                  <Card.Text className="mb-3 d-flex justify-content-between">
-                    <span className="fw-normal text-muted">
-                      Recent Requirement
-                    </span>{' '}
-                    <span className="fw-semibold">
-                      {client.recentRequirement}
-                    </span>
-                  </Card.Text>
-                  <Card.Text className="mb-3 d-flex justify-content-between">
-                    <span className="fw-normal text-muted">Budget</span>{' '}
-                    <span className="fw-semibold">{client.budget}</span>
-                  </Card.Text>
-                  <Card.Text className="mb-3 d-flex justify-content-between">
-                    <span className="fw-normal text-muted">
-                      Preferred Location
-                    </span>{' '}
-                    <span className="fw-semibold">
-                      {client.preferredLocation}
-                    </span>
-                  </Card.Text>
-                  <Card.Text className="d-flex justify-content-between">
-                    <span className="fw-normal text-muted">
-                      Recent Updated Visit
-                    </span>{' '}
-                    <span className="fw-semibold">{client.recentVisit}</span>
-                  </Card.Text>
-                </Card.Body>
-                <Card.Footer className="bg-transparent border-0 d-flex justify-content-center gap-3 py-3">
-                  <Button className="flex-fill btn-color-green rounded-pill">
-                    Follow Up
-                  </Button>
-                  <Button className="flex-fill btn-color-primary rounded-pill">
-                    Visit Summary
-                  </Button>
-                </Card.Footer>
-              </Card>
+      <section className="mt-3">
+        <Container className="nes__dashboard__brok__client">
+          <Row>
+            <Col xs={12}>
+              <SearchFilter addBtn />
             </Col>
-          ))}
-        </Row>
-      </Container>
+            <Col xs={12}>
+              <h1 className="section-title mb-4">Client Management</h1>
+            </Col>
+            {clients.map(client => (
+              <Col lg={4} md={6} className="mb-3" key={client.id}>
+                <Card className="client__card border-0">
+                  <Card.Header className="bg-white d-flex justify-content-between align-items-center border-0 pt-3 pb-0">
+                    <div className="fw-bold ">
+                      <span className="nes__dashboard__brok__client__name">
+                        {client.name}
+                      </span>{' '}
+                      <MdModeEditOutline className="ms-1" color="#278FD9" />
+                    </div>
+                    <div className="d-flex align-items-center fw-bold">
+                      <div>
+                        <button className="me-1 rounded-circle p-0 d-inline-flex nes__dashboard__brok__client__phone">
+                          <MdLocalPhone className="m-auto" size={10} />
+                        </button>{' '}
+                        <span className="nes__dashboard__brok__client__phone__text">
+                          {client.phone}
+                        </span>
+                      </div>
+                    </div>
+                  </Card.Header>
+                  <Card.Body>
+                    <Card.Text className="mb-3 d-flex justify-content-between">
+                      <span className="fw-normal text-muted">
+                        Recent Requirement
+                      </span>{' '}
+                      <span className="fw-semibold">
+                        {client.recentRequirement}
+                      </span>
+                    </Card.Text>
+                    <Card.Text className="mb-3 d-flex justify-content-between">
+                      <span className="fw-normal text-muted">Budget</span>{' '}
+                      <span className="fw-semibold">{client.budget}</span>
+                    </Card.Text>
+                    <Card.Text className="mb-3 d-flex justify-content-between">
+                      <span className="fw-normal text-muted">
+                        Preferred Location
+                      </span>{' '}
+                      <span className="fw-semibold">
+                        {client.preferredLocation}
+                      </span>
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-between">
+                      <span className="fw-normal text-muted">
+                        Recent Updated Visit
+                      </span>{' '}
+                      <span className="fw-semibold">{client.recentVisit}</span>
+                    </Card.Text>
+                  </Card.Body>
+                  <Card.Footer className="bg-transparent border-0 d-flex justify-content-center gap-3 py-3">
+                    <Button className="flex-fill btn-color-green rounded-pill">
+                      Follow Up
+                    </Button>
+                    <Button className="flex-fill btn-color-primary rounded-pill">
+                      Visit Summary
+                    </Button>
+                  </Card.Footer>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
     </>
   );
 };
