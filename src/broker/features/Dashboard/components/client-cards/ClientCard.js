@@ -1,18 +1,17 @@
 import React from 'react';
 import { Card, Button, Row, Col, Container } from 'react-bootstrap';
 import { MdModeEditOutline, MdLocalPhone } from 'react-icons/md';
-
 import { SearchFilter } from '../../../../../components';
 import './ClientCard.css';
 const clients = [
   {
     id: 1,
-    name: 'John Doe',
-    phone: '123-356-7890',
-    recentRequirement: 'Looking for a new car',
-    budget: '$30,000',
-    preferredLocation: 'New York, NY',
-    recentVisit: '2022-03-05',
+    name: 'Sameer Sharma',
+    phone: '+91-95968494590',
+    recentRequirement: '2 BHK, 3 BHK',
+    budget: '₹ 3.94 L - 6.01 Cr',
+    preferredLocation: 'Jakarta, Malang',
+    recentVisit: 'Sky Apartment I 10 Jan2023',
   },
   {
     id: 2,
@@ -37,51 +36,63 @@ const clients = [
 const ClientCards = () => {
   return (
     <>
-      <Container>
+      <Container className="nes__dashboard__brok__client">
         <SearchFilter addBtn />
         <Row>
           {clients.map(client => (
             <Col lg={4} md={6} className="mb-3" key={client.id}>
               <Card className="client__card border-0">
                 <Card.Header className="bg-white d-flex justify-content-between align-items-center border-0 pt-3 pb-0">
-                  <div className="fw-bold">
-                    {client.name} <MdModeEditOutline className="mr-2" />
+                  <div className="fw-bold ">
+                    <span className="nes__dashboard__brok__client__name">
+                      {client.name}
+                    </span>{' '}
+                    <MdModeEditOutline className="ms-1" color="#278FD9" />
                   </div>
                   <div className="d-flex align-items-center fw-bold">
                     <div>
-                      <MdLocalPhone /> {client.phone}
+                      <button className="me-1 rounded-circle p-0 d-inline-flex nes__dashboard__brok__client__phone">
+                        <MdLocalPhone className="m-auto" size={10} />
+                      </button>{' '}
+                      <span className="nes__dashboard__brok__client__phone__text">
+                        {client.phone}
+                      </span>
                     </div>
                   </div>
                 </Card.Header>
                 <Card.Body>
                   <Card.Text className="mb-3 d-flex justify-content-between">
-                    <span className="font-weight-bold text-muted">
+                    <span className="fw-normal text-muted">
                       Recent Requirement
                     </span>{' '}
-                    <span>{client.recentRequirement}</span>
+                    <span className="fw-semibold">
+                      {client.recentRequirement}
+                    </span>
                   </Card.Text>
                   <Card.Text className="mb-3 d-flex justify-content-between">
-                    <span className="font-weight-bold text-muted">Budget</span>{' '}
-                    <span>{client.budget}</span>
+                    <span className="fw-normal text-muted">Budget</span>{' '}
+                    <span className="fw-semibold">{client.budget}</span>
                   </Card.Text>
                   <Card.Text className="mb-3 d-flex justify-content-between">
-                    <span className="font-weight-bold text-muted">
+                    <span className="fw-normal text-muted">
                       Preferred Location
                     </span>{' '}
-                    <span>{client.preferredLocation}</span>
+                    <span className="fw-semibold">
+                      {client.preferredLocation}
+                    </span>
                   </Card.Text>
                   <Card.Text className="d-flex justify-content-between">
-                    <span className="font-weight-bold text-muted">
+                    <span className="fw-normal text-muted">
                       Recent Updated Visit
                     </span>{' '}
-                    <span>{client.preferredLocation}</span>
+                    <span className="fw-semibold">{client.recentVisit}</span>
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="bg-transparent border-0 d-flex justify-content-center gap-3 py-3">
-                  <Button className="btn-color-green rounded-pill">
+                  <Button className="flex-fill btn-color-green rounded-pill">
                     Follow Up
                   </Button>
-                  <Button className="btn-color-primary rounded-pill">
+                  <Button className="flex-fill btn-color-primary rounded-pill">
                     Visit Summary
                   </Button>
                 </Card.Footer>
