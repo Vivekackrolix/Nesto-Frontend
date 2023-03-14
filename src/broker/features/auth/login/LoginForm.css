@@ -23,11 +23,6 @@
   color: #ffffff;
 }
 
-.nes__login__form .btn-md {
-  font-size: 12px;
-  font-weight: normal;
-}
-
 .nes__login__form .figure-caption {
   font-weight: 350;
   font-size: 18px;
@@ -48,4 +43,12 @@
 
 .nes__dsa__login__img {
   border-radius: 18.0038px;
+}
+
+@media (min-width: 992px) {
+  .nes__login__form .btn-md {
+    font-size: 12px;
+    font-weight: normal;
+    width: min(100%, 218px) !important;
+  }
 }

@@ -1,5 +1,12 @@
+import { Container } from 'react-bootstrap';
+import CopyrightText from '../../../../../components/footer/CopyrightText';
+
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className="mt-auto">
+      <CopyrightText broker />
+    </footer>
+  );
 };
 
 export default Footer;

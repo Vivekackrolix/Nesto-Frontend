@@ -83,7 +83,7 @@ const Login = () => {
                   isValid={!showErrorMessage && inputValue !== ""}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Please your phone number.
+                  Please enter valid phone number.
                 </Form.Control.Feedback>
                 <Form.Control.Feedback type="valid">
                   Input is valid!

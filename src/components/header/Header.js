@@ -6,7 +6,7 @@ const Header = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <Navbar bg="light" expand="lg" className="login__header nes__header">
+    <Navbar expand="lg" className="shadow-sm py-3 dashboard__navbar" style={{ background: '#ECF7FF' }}>
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -21,7 +21,7 @@ const Header = () => {
             <NavDropdown
               title="Login"
               show={dropdown}
-              className="border-color-primary my-3 my-lg-0 me-3 p-0 btn btn-sm"
+              className="btn btn-outline-primary dropdown-toggle my-3 my-lg-0 me-3 p-0 btn-sm"
               onClick={() => setDropdown(!dropdown)}
             >
               <NavDropdown.Item href="#">Action</NavDropdown.Item>

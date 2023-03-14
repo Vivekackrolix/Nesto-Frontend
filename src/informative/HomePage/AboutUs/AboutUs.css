@@ -1,0 +1,16 @@
+.about-us-read-more {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: var(--color-white);
+    padding: 9px 34px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 8px;
+}
+
+.about-us-read-more:hover {
+    background: var(--primary-color);
+    color: var(--color-white);
+}
+
+/* Other Coming from (../AboutUs/AboutUsMain */
