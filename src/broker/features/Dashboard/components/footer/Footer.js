@@ -1,5 +1,11 @@
+import { Container } from 'react-bootstrap';
+
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className="mt-auto">
+      <Container>Footer</Container>
+    </footer>
+  );
 };
 
 export default Footer;
