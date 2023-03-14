@@ -2,8 +2,9 @@ import { Container, Button, Row, Col } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import { Link } from "react-router-dom";
 import Footer from "../../Footer/Footer";
-import DashboardHeader from "../../header/DashboardHeader";
+
 import VisitDetailItem from "./VisitDetailItem";
+import Header from "../../../header/Header";
 const VisitDetails = () => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   const tabelData = arr.map((itm) => (
@@ -11,7 +12,7 @@ const VisitDetails = () => {
   ));
   return (
     <>
-      <DashboardHeader />
+      <Header />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
         <h1> Visit Details</h1>

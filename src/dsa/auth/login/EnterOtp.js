@@ -1,8 +1,8 @@
-import { Form, Button } from 'react-bootstrap';
-import { useRef, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { RiTimerLine } from 'react-icons/ri';
-import { CustomModal } from '../../../components';
+import { Form, Button } from "react-bootstrap";
+import { useRef, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { RiTimerLine } from "react-icons/ri";
+import { CustomModal } from "../../../components";
 // import OtpContent from './OtpContent';
 
 const EnterOtp = ({ show, onHide }) => {
@@ -13,37 +13,37 @@ const EnterOtp = ({ show, onHide }) => {
 
   const handleOtpInputChange = (e, index) => {
     const otpInput = e.target;
-    otpInput.value = otpInput.value.replace(/[^0-9]/g, '');
+    otpInput.value = otpInput.value.replace(/[^0-9]/g, "");
 
     if (otpInput.value && otpInput.nextSibling) {
       otpInput.nextSibling.focus();
     }
 
-    if (index === 5 && otpInputs.current.every(input => input.value)) {
+    if (index === 5 && otpInputs.current.every((input) => input.value)) {
       // clearInterval(timerInterval);
       if (otpPassword) {
-        navigate('/dsa/home-dashboard');
+        navigate("/dsa/home-dashboard");
       }
     }
   };
 
   const handleKeyDown = (e, index) => {
-    if (e.key === 'Tab') {
+    if (e.key === "Tab") {
       e.preventDefault();
       otpInputs.current[index + 1]?.focus();
-    } else if (e.key === 'ArrowRight' && otpInputs.current[index + 1]) {
+    } else if (e.key === "ArrowRight" && otpInputs.current[index + 1]) {
       otpInputs.current[index + 1].focus();
-    } else if (e.key === 'ArrowLeft' && otpInputs.current[index - 1]) {
+    } else if (e.key === "ArrowLeft" && otpInputs.current[index - 1]) {
       otpInputs.current[index - 1].focus();
-    } else if (e.key === 'Backspace' && !otpInputs.current[index].value) {
+    } else if (e.key === "Backspace" && !otpInputs.current[index].value) {
       e.preventDefault();
       otpInputs.current[index - 1]?.focus();
     }
   };
 
   const resetOtpInputs = () => {
-    otpInputs.current.forEach(input => {
-      input.value = '';
+    otpInputs.current.forEach((input) => {
+      input.value = "";
     });
     otpInputs.current[0].focus();
   };
@@ -55,7 +55,7 @@ const EnterOtp = ({ show, onHide }) => {
   useEffect(() => {
     otpInputs.current[0]?.focus();
     const timerInterval = setInterval(() => {
-      setTimer(prevTimer => prevTimer - 1);
+      setTimer((prevTimer) => prevTimer - 1);
     }, 1000);
     return () => clearInterval(timerInterval);
   }, []);
@@ -79,7 +79,7 @@ const EnterOtp = ({ show, onHide }) => {
     >
       <p
         className="text-text-muted text-center mb-4"
-        style={{ lineHeight: '1.6' }}
+        style={{ lineHeight: "1.6" }}
       >
         Enter the verification code we just sent on your phone number.
       </p>
@@ -92,9 +92,9 @@ const EnterOtp = ({ show, onHide }) => {
                 key={index}
                 type="text"
                 maxLength={1}
-                onChange={e => handleOtpInputChange(e, index)}
-                onKeyDown={e => handleKeyDown(e, index)}
-                ref={ref => (otpInputs.current[index] = ref)}
+                onChange={(e) => handleOtpInputChange(e, index)}
+                onKeyDown={(e) => handleKeyDown(e, index)}
+                ref={(ref) => (otpInputs.current[index] = ref)}
               />
             ))}
           </div>
@@ -125,8 +125,8 @@ const EnterOtp = ({ show, onHide }) => {
             variant="primary"
             className="w-100 rounded-pill bg-color-primary"
             onClick={() => {
-              if (otpInputs.current.every(input => input.value)) {
-                navigate('/dsa/home-dashboard');
+              if (otpInputs.current.every((input) => input.value)) {
+                navigate("/dsa/home-dashboard");
               }
             }}
           >

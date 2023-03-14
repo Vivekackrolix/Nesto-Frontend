@@ -77,6 +77,7 @@ const BrokerView = () => {
       <ProductContainers
         sectionTitle="Promoted Property"
         productData={productData}
+        view="broker"
       />
 
       <HeroSection />
@@ -84,10 +85,12 @@ const BrokerView = () => {
       <ProductContainers
         sectionTitle="Recently Added"
         productData={productData}
+        view="broker"
       />
       <ProductContainers
         sectionTitle="Best Selling"
         productData={productData}
+        view="broker"
       />
     </Container>
   );

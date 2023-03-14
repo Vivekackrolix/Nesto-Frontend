@@ -29,13 +29,15 @@ a:focus {
   text-decoration: none !important;
 }
 
-.btn{
+.btn {
   --bs-btn-padding-y: 0.5rem;
 }
 
-.input-group > .form-control, .input-group > .form-select, .input-group > .form-floating{
-  background: #F8F8F8;
-  border: 1px solid #E8ECF4;
+.input-group > .form-control,
+.input-group > .form-select,
+.input-group > .form-floating {
+  background: #f8f8f8;
+  border: 1px solid #e8ecf4;
 }
 /* remove outline from button */
 button:focus,
@@ -118,6 +120,19 @@ button:active:focus {
   background-color: var(--primary-color-darker);
 }
 
+.btn.btn-color-green {
+  outline: none;
+  border: none;
+  color: #000000;
+  background-color: #eaf5e7;
+  border: 1.59418px solid #88c879;
+  border-radius: 159.418px;
+}
+
+/* .btn.btn-color-green:hover {
+  background-color: var(--primary-color-darker);
+} */
+
 .btn.btn-color-outline-primary {
   background: transparent;
   outline: none;
@@ -153,7 +168,7 @@ button:active:focus {
   border-radius: 100px;
 }
 
-.form-control{
+.form-control {
   padding: 0.5rem 0.75rem;
 }
 
@@ -213,6 +228,6 @@ button:active:focus {
   opacity: 0.5;
   margin: 8px 0;
 }
-.astric{
+.astric {
   color: #ff656f;
 }

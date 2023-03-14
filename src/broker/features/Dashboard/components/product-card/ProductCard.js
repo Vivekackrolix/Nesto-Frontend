@@ -13,6 +13,7 @@ const ProductCard = ({
   price,
   discount,
   visitAmount,
+  view,
 }) => {
   return (
     <Card
@@ -32,12 +33,22 @@ const ProductCard = ({
           alt="Product Image"
           className="nes__product__card__image"
         />
-        <Ribbon cssClass="ribbonStyle" text="Best Seller" />
-        <Ribbon cssClass="ribbonStyle2" text="5% Brokerage" />
+        {view === 'broker' && (
+          <>
+            <Ribbon cssClass="ribbonStyle" text="Best Seller" />
+            <Ribbon cssClass="ribbonStyle2" text="5% Brokerage" />
 
-        <Button className="nes__product__card__btndark px-4">
-          Ready To Move
-        </Button>
+            <Button className="nes__product__card__btndark px-4">
+              Ready To Move
+            </Button>
+          </>
+        )}
+
+        {view !== 'broker' && (
+          <Button className="nes__product__card__btndark px-4">
+            Ready To Move
+          </Button>
+        )}
       </div>
       <Card.Body className="px-0">
         <div className="px-4">
@@ -57,12 +68,14 @@ const ProductCard = ({
             ))}
           </Row>
         </div>
-        <div className="d-flex justify-content-end align-items-center my-2">
-          <Ribbon
-            cssClass="ribbonStyle3 d-inline-flex align-items-center"
-            text={`Get ₹ ${visitAmount} per Visit`}
-          />
-        </div>
+        {view === 'broker' && (
+          <div className="d-flex justify-content-end align-items-center my-2">
+            <Ribbon
+              cssClass="ribbonStyle3 d-inline-flex align-items-center"
+              text={`Get ₹ ${visitAmount} per Visit`}
+            />
+          </div>
+        )}
 
         <div className="px-4 nes__product__card__price d-flex flex-wrap align-items-center gap-2">
           <h4 className="d-inline-block font-weight-bold m-0">{price}</h4>

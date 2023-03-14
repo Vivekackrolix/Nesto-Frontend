@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import eye from "../Images/Eye.png";
 import notification from "../Images/notification.png";
 import client from "../Images/client.png";
-import brockerage from "../Images/brokrage.png";
+import Brokerage from "../Images/brokrage.png";
 import home from "../Images/Home.png";
 
 const Header = () => {
@@ -27,6 +27,7 @@ const Header = () => {
               as={Link}
               to="/builder/home-dashboard"
               className="d-flex align-items-center gap-2"
+              style={{ textDecoration: "none" }}
             >
               <img src={home} alt="home" />
               Home
@@ -36,8 +37,8 @@ const Header = () => {
               Client
             </Nav.Item>
             <Nav.Item className="d-flex align-items-center gap-2">
-              <img src={brockerage} alt="brockerage" />
-              Brockerage
+              <img src={Brokerage} alt="Brokerage" />
+              Brokerage
             </Nav.Item>
           </div>
           <div className="d-flex col-3 ms-auto align-items-center">
@@ -50,7 +51,11 @@ const Header = () => {
             <Nav.Item className="me-2">
               <img src="/assets/notification.png" alt="notification" className="notification" />
             </Nav.Item>
-            <Nav.Item className="me-2">
+            <Nav.Item
+              className="me-3 mx-1 my-2"
+              // as={Link}
+              // to="/builder/home-dashboard/profile"
+            >
               <img src={profile} alt="profile" />
             </Nav.Item>
           </div>
