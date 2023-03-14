@@ -1,7 +1,7 @@
 import { Card, Button, Row, Col } from 'react-bootstrap';
 import './BrokerageManagementCard.css';
 
-const BrokerageManagementCard = () => {
+const BrokerageManagementCard = ({ type, text }) => {
   return (
     <Card className="brokerage__management__card border-0">
       <Row className="g-0">
@@ -37,8 +37,17 @@ const BrokerageManagementCard = () => {
                 <Card.Text>Lorem Ipsum</Card.Text>
               </Col>
             </Row>
-            <Button variant="primary" className="mt-3 rounded-pill w-100">
-              Raise the brokerage claim
+            <Button
+              variant="primary"
+              className={`mt-3 rounded-pill w-100 ${
+                type === 'raise' || type === 'claimSubmitted'
+                  ? `raise claim-submitted`
+                  : type === 'paymentReceived' || type === 'paid'
+                  ? 'payment-received paid'
+                  : 'claim-approved'
+              }`}
+            >
+              {text}
             </Button>
           </Card.Body>
         </Col>
