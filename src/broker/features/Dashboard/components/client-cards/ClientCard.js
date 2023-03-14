@@ -107,7 +107,7 @@ const ClientCards = ({ title, clientManagement, requirementDetails }) => {
                       )}
 
                       {requirementDetails && (
-                        <Link className="client__Card__link">
+                        <Link className="client__Card__link text-decoration-underline">
                           {' '}
                           Related Search{' '}
                         </Link>
