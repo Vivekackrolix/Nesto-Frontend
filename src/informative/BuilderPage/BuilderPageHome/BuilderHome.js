@@ -1,21 +1,22 @@
 import { DashboardFooter } from "../../../broker/features";
 import Footer from "../../../builder/dashboard/Footer/Footer";
+import Contact from "../../BrokerPage/contactform/Contact";
 import ChooseUs from "../../HomePage/chooseus/Chooseus";
 import Residency from "../../HomePage/residency/Residency";
 import Testimonial from "../../HomePage/testimonials/Testimonials";
-import Contact from "../contactform/Contact";
-import "./BokerHome.css";
+import './BuilderHome.css';
 export default function BrokerHome() {
   return (
     <>
       <div className="banner position-relative">
-        <div className="pt-5 broker-banner">
+        <div className="pt-5 builder-banner">
           <div className="container test">
             <div className="">
-              <div className="col-lg-8 col-md-12 d-flex text-left">
+              <div className="col-lg-5 col-md-12 d-flex text-left">
                 <div>
                   <div className="banner-heading mt-5">
-                    <h2>Welcome to India's Largest Network Of Brokers</h2>
+                    <h2>Stop Searching, Start Listing
+your Property With Us</h2>
                   </div>
                   <div className="banner-desc mt-5">
                     <p>
@@ -30,9 +31,7 @@ export default function BrokerHome() {
                     </a>
                   </div>
                 </div>
-                <div className="broker-img">
-                  <img src="./assets/broker.png" alt="" />
-                </div>
+                
               </div>
             </div>
           </div>

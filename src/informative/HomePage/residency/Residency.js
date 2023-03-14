@@ -2,8 +2,9 @@ import './residency.css';
 export default function Residency(){
     return (
       <>
-        <div className="main">
-          <div className="container">
+        <div className="residency-main">
+          <div className="main"></div>
+          <div className="container residency-container">
             <div className="row">
               <div className="col-md-5">
                 <img src="./assets/residence.png" alt="" />
@@ -21,7 +22,11 @@ export default function Residency(){
                 </div>
               </div>
               <div className="col-md-7">
-                <img className='animation-img' src="./assets/animation.png" alt="" />
+                <img
+                  className="animation-img"
+                  src="./assets/animation.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>

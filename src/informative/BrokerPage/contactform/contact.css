@@ -1,0 +1,26 @@
+.submit-form {
+  background-color: white;
+  position: absolute !important;
+  z-index: 10;
+  top: 0;
+  border-radius: 8px;
+  /* padding: 30px 0; */
+  right: 0;
+  width: min(100%, 444px);
+}
+
+.form-input {
+  /* position: absolute; */
+  padding: 4px 12px;
+  background: #f8f8f8;
+  /* Border */
+
+  border: 1.13367px solid #e8ecf4 !important;
+  border-radius: 9.0694px;
+}
+
+/* .submit {
+  width: 375.25px;
+  padding: 14px 0;
+  border-radius: 22px;
+} */

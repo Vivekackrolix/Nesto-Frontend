@@ -1,4 +1,5 @@
 import BrokerHome from "../BrokerPage/BrokerHome/BrokerHome";
+import BuilderHome from "../BuilderPage/BuilderPageHome/BuilderHome";
 import ContactUs from "../ContactUs/ContactUs";
 import Banner from "../HomePage/Banner/Banner";
 import PartnersDetailsMain from "../PartnersDetailsMain";
@@ -35,5 +36,11 @@ export const RouteData = [
     page: 'Broker Page',
     path: '/broker-page',
     element: <BrokerHome/>
+  },
+  {
+    id: 17,
+    page: 'Builder Page',
+    path: '/builder-page',
+    element: <BuilderHome/>
   },
 ];

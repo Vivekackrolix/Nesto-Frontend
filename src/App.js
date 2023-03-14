@@ -9,6 +9,7 @@ import PartnerBanner from './informative/PartnersPage/Partnerbanner/partnerbanne
 import TermsCondition from './informative/TermsCondition/TermsCondition';
 import PrivacyPolicy from './informative/PrivacyPolicy/PrivacyPolicy';
 import BrokerHome from './informative/BrokerPage/BrokerHome/BrokerHome';
+import BuilderHome from './informative/BuilderPage/BuilderPageHome/BuilderHome';
 
 const components = {
   informativeHomeBanner: <Banner />,
@@ -21,10 +22,11 @@ const components = {
   broker: <BrokerWeb />,
   informativePrivacyPolicy: <PrivacyPolicy />,
   brokerHome: <BrokerHome />,
+  builderHome: <BuilderHome/>
 };
 
 const App = () => {
-  const websiteToLoad = 'informativeHomeBanner';
+  const websiteToLoad = 'builderHome';
   const ComponentToRender = components[websiteToLoad] || (
     <div>Website not found</div>
   );
