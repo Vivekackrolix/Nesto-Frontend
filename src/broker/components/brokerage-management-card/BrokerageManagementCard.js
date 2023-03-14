@@ -22,9 +22,11 @@ const BrokerageManagementCard = ({ type, text }) => {
               </span>{' '}
               <span className="text-muted m-0">12/12/2022</span>
             </Card.Title>
-            <Card.Text className="text-muted m-0 mb-3">
-              Sector-29,Gurugram
-            </Card.Text>
+            {type !== 'assigned' && (
+              <Card.Text className="text-muted m-0 mb-3">
+                Sector-29,Gurugram
+              </Card.Text>
+            )}
             <Row>
               <Col>
                 <Card.Text className="text-muted m-0">Builder Name</Card.Text>
