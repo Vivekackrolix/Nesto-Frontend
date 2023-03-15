@@ -15,7 +15,7 @@
 }
 .first-card__span-2 {
     display: block;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     padding-bottom: 6px;
     font-size: 21px;
     font-weight: 600;
@@ -23,7 +23,7 @@
 .first-card__span-3 {
     display: block;
     padding-bottom: 12px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     font-weight: 300;
 }
 .first-card__link {

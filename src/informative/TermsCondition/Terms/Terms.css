@@ -2,7 +2,7 @@
     margin-top: 10px;
     font-weight: 350;
     font-size: 18px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     display: block;
 }
 .t-c_box {
@@ -17,6 +17,6 @@
     line-height: 32px;
     font-weight: 350;
     font-size: 18px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     display: block; 
 }

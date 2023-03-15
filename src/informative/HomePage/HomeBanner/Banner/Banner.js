@@ -8,10 +8,10 @@ import MobileSlider from '../MobileSlider/MobileSlider'
 const Banner = () => {
     return (
         <>
-            <div className='banner'>
+            <div className='banner' style={{overflowX: 'hidden'}}>
                 <div className='banner-container-div'>
                     <div className='row'>
-                        <div className='col-lg-5 banner-col-5'>
+                        <div className='col-lg-5 banner-col-5' data-aos='fade-right'>
                             <div>
                                 <h4 className='banner-h4'>
                                     Professional Network For Real Estate Brokers
@@ -24,7 +24,7 @@ const Banner = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className='col-lg-7 desktop-col'>
+                        <div className='col-lg-7 desktop-col' data-aos='fade-left'>
                             <BannerSlider />
                         </div>
                         <div className='col-lg-7 mobile-col'>

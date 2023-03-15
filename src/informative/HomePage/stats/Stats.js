@@ -4,6 +4,7 @@
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
+import './Stats.css'
 
 const Stats = () => {
     const [counter1On, setCounter1On] = useState(false);
@@ -11,10 +12,10 @@ const Stats = () => {
     const [counter3On, setCounter3On] = useState(false);
     const [counter4On, setCounter4On] = useState(false);
     return (
-        <div className="row  py-4 bg-sky">
-            <div className="col-md-3 text-center py-6">
-                <img className="mx-auto w-12 py-4" src='./assets/stats1.png' />
-                <div className="text-bold ">
+        <div className="row stats-row">
+            <div className="col-md-3 stats-row-col">
+                <img className="stats-row-img" src='./assets/stats1.png' />
+                <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter1On(true)}
                         onExit={() => setCounter1On(false)}
@@ -31,13 +32,13 @@ const Stats = () => {
                         )}
                     </ScrollTrigger>
                 </div>
-                <p className="text-grey">
+                <p className="stats-row-p">
                     HOMES FOR SALE
                 </p>
             </div>
-            <div className="col-md-3 text-center py-6">
-            <img className="mx-auto w-12 py-4" src='./assets/stats2.png' />
-                <div className="text-bold">
+            <div className="col-md-3 stats-row-col">
+            <img className="stats-row-img" src='./assets/stats2.png' />
+                <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter2On(true)}
                         onExit={() => setCounter2On(false)}
@@ -53,13 +54,13 @@ const Stats = () => {
 
                     </ScrollTrigger>
                 </div>
-                <p className="text-grey">
+                <p className="stats-row-p">
                     RECENTLY SOLD
                 </p>
             </div>
-            <div className="col-md-3 text-center py-6">
-            <img className="mx-auto w-12 py-4" src='./assets/stats3.png' />
-                <div className="text-bold">
+            <div className="col-md-3 stats-row-col">
+            <img className="stats-row-img" src='./assets/stats3.png' />
+                <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter3On(true)}
                         onExit={() => setCounter3On(false)}
@@ -68,13 +69,13 @@ const Stats = () => {
 
                     </ScrollTrigger>
                 </div>
-                <p className="text-grey">
+                <p className="stats-row-p">
                     TOTAL SQ
                 </p>
             </div>
-            <div className="col-md-3 text-center py-6">
-            <img className="mx-auto w-12 py-4" src='./assets/stats4.png'/>
-                <div className="text-bold">
+            <div className="col-md-3 stats-row-col">
+            <img className="stats-row-img" src='./assets/stats4.png'/>
+                <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter4On(true)}
                         onExit={() => setCounter4On(false)}
@@ -82,7 +83,7 @@ const Stats = () => {
                         {counter4On && <CountUp start={0} end={30} suffix="%" duration={2} />}
                     </ScrollTrigger>
                 </div>
-                <p className="text-grey">
+                <p className="stats-row-p">
                     PRICE REDUCED
                 </p>
             </div>
