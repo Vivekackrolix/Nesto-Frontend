@@ -27,7 +27,7 @@ const HomeBanner = () => {
                 {/* Residency */}
                 <Residency />
                 {/* ChooseUs */}
-                {/* <ChooseUs /> */}
+                <ChooseUs />
                 {/* GetStarted */}
                 {/* <GetStarted /> */}
                 {/* News */}

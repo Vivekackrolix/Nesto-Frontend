@@ -9,7 +9,7 @@ const InformativeNavbar = () => {
   return (
     <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
       <Container className='nav-container'>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand className='nav-image' href="#home">
           <img
             src="/assets/nesto-logo.png"
             alt="logo"

@@ -10,9 +10,12 @@ import {
   SuccessModal,
   VisitAlertModal,
   PromotedProperty,
+  BrokerageManagement,
+  Claim,
 } from '../features';
 import '../features/Dashboard/assets/styles/Dashboard.css';
 import ClientCards from '../features/Dashboard/components/client-cards/ClientCard';
+import { clientsData } from '../data/Constant';
 
 const DashboardPage = () => {
   const [show, setShow] = useState(true);
@@ -23,8 +26,8 @@ const DashboardPage = () => {
     <>
       {/* popup modal */}
       {/* <ShareModal show={show} onHide={onHide} /> */}
-      {/* <ShareModal show={show} onHide={onHide} />
-        <BookAVisitModal show={show} onHide={onHide} /> */}
+      {/* <ShareModal show={show} onHide={onHide} /> */}
+      {/* <BookAVisitModal show={show} onHide={onHide} /> */}
       {/* <SuccessModal show={show} onHide={onHide} /> */}
       {/* <VisitAlertModal show={show} onHide={onHide} /> */}
       {/* <CustomerModal show={show} onHide={onHide} /> */}
@@ -38,13 +41,28 @@ const DashboardPage = () => {
         {/* Main Content code start here */}
         <main className="nes__broker__dashboard">
           {/* <BrokerView /> */}
-
           {/* <CustomerView /> */}
-
           {/* <PromotedProperty /> */}
 
           {/* Client Management */}
-          <ClientCards />
+          {/* <ClientCards
+            title="Client Management"
+            clientManagement
+            clientData={clientsData}
+          /> */}
+
+          {/* requirements */}
+          {/* <ClientCards
+            title="Requirement Details"
+            requirementDetails
+            clientsData={clientsData}
+          /> */}
+
+          {/* Brokerage Management */}
+          {/* <BrokerageManagement /> */}
+
+          {/* Claim */}
+          <Claim />
         </main>
         {/* Main content code end here */}
 

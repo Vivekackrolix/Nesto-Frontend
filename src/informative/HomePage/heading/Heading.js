@@ -1,16 +1,17 @@
 import React from 'react'
+import './Heading.css'
 
-const Heading = ({title,sub}) => {
+const Heading = ({ title, sub }) => {
   return (
     <>
-    <div className='text-center pt-5'>
-                <div className='text-orange '>
-                    <h1>{title}</h1>
-                </div>
-                <div className='text-bold pb-4'>
-                    <h1>{sub}</h1>
-                </div>
-            </div>
+      <div className='text-center pt-5'>
+        <div className='text-orange '>
+          <h3 className='sections-heading'>{title}</h3>
+        </div>
+        <div className='text-bold pb-4'>
+          <p className=''>{sub}</p>
+        </div>
+      </div>
     </>
   )
 }

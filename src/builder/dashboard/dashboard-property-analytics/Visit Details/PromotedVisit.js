@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Container, Button, Col, Row } from "react-bootstrap";
+import Header from "../../../header/Header";
 import Footer from "../../Footer/Footer";
-import DashboardHeader from "../../header/DashboardHeader";
+
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import PromotedVisitItem from "./PromotedVisitItem";
 const PromotedVisit = () => {
@@ -8,9 +10,10 @@ const PromotedVisit = () => {
   const tabelData = arr.map((itm) => (
     <PromotedVisitItem className={"mb-3 py-3 border rounded"} />
   ));
+
   return (
     <>
-      <DashboardHeader />
+      <Header />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
         <h1> Visit Details</h1>
@@ -21,14 +24,14 @@ const PromotedVisit = () => {
         >
           <button
             type="button"
-            className="w-50 rounded-pill col-2 btn btn-primary"
+            className="w-50 rounded-pill col-2 btn btn-secondary"
           >
             All Visits
           </button>
 
           <button
             type="button"
-            className="w-50 rounded-pill col-2 btn btn-secondary"
+            className="w-50 rounded-pill col-2 btn btn-primary"
           >
             Promoted Visits
           </button>

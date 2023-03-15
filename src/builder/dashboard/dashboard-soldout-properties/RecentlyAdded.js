@@ -2,6 +2,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../Images/propertyadded.png";
 import buld from "../../Images/buld.png";
 import subs from "../../Images/subs.png";
+import edit from "../../Images/editbutton.png";
 
 const RecentlyAdded = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
@@ -10,6 +11,7 @@ const RecentlyAdded = ({ data }) => {
         <Card.Img variant="top" src={propertyImage} />
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
+
           <Card.Text>
             <Row>
               <Col className="d-flex justify-content-between">
@@ -50,16 +52,17 @@ const RecentlyAdded = ({ data }) => {
             >
               <button
                 type="button"
-                className="btn btn-light rounded-pill"
+                className="btn btn-outline-primary rounded-pill"
                 style={{ color: "#278FD9" }}
               >
                 50 Visits
               </button>
               <button
                 type="button"
-                className="btn btn-light rounded-pill"
+                className="btn btn-outline-primary rounded-pill"
                 style={{ color: "#278FD9" }}
               >
+                <img src={edit} alt="" />
                 Edit
               </button>
             </div>

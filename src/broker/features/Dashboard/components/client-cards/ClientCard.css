@@ -14,6 +14,10 @@
   font-size: 14px;
 }
 
+.nes__dashboard__brok__client .text-muted {
+  color: #8b9199 !important;
+}
+
 .nes__dashboard__brok__client__phone {
   width: 24px;
   height: 24px;
@@ -29,6 +33,14 @@
   color: #000000;
 }
 
+.nes__dashboard__brok__client__name-title {
+  font-size: 22px !important;
+}
+
+.nes__dashboard__brok__client__id {
+  font-size: 16px !important;
+}
+
 .nes__dashboard__brok__client__phone__text {
   font-weight: 400;
   font-size: 16px !important;
@@ -39,4 +51,17 @@
   font-weight: 400;
   font-size: 24px;
   color: #000000;
+}
+
+.follow-up {
+  color: #000000;
+  background-color: #eaf5e7;
+  border: 1.59418px solid #88c879;
+  border-radius: 159.418px;
+}
+
+.client__Card__link {
+  font-weight: 400;
+  font-size: 14px;
+  color: #278fd9;
 }

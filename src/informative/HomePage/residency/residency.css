@@ -1,7 +1,7 @@
 .residency {
     background: url(../../../../public/assets/informative/aboutUsImg2.png);
     /* padding: 10rem 0; */
-    padding: 2% 0 0 0;
+    padding: 2% 0;
 }
 
 .residency-row {
@@ -69,7 +69,9 @@
     z-index: -10;
 }
 
-.animation-img {}
+.animation-cartoon-img {
+    /* width: 100%; */
+}
 
 .animation-div_box-2 {
     height: 100%;

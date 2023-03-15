@@ -1,3 +1,4 @@
+import React from 'react';
 import './residency.css';
 
 export default function Residency() {
@@ -22,25 +23,23 @@ export default function Residency() {
               </div>
             </div>
             <div className="col-lg-7 residency-col-2">
-              <div className='animation-div'>
+              {/* <div className='animation-div'>
                 <div className='animation-div_box-2'>
                   <img src='/assets/informative/animation-icon-1.png' className='animation-div_box-2-img-1' />
                   <img src="./assets/informative/animation-icon-1.png" className='animation-div_box-2-img-2' />
                   <img src="./assets/informative/animation-icon-1.png" className='animation-div_box-2-img-3' />
                   <img src="./assets/informative/animation-icon-1.png" className='animation-div_box-2-img-4' />
                 </div>
-                {/* <div className='animation-div_box-2'> */}
-                {/* </div> */}
 
                 <div className='animation-div_box-1'>
-                  <img src="./assets/informative/animation-cartoon.png" className='animation-img' />
+                  <img src="./assets/informative/animation-cartoon.png" className='animation-cartoon-img' />
                 </div>
-              </div>
+              </div> */}
+              
             </div>
           </div>
         </div>
       </div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </>
   );
 }
