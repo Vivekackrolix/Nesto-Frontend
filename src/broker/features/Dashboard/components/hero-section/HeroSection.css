@@ -33,3 +33,8 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.hero-caption-img-navigation {
+  bottom: 2rem;
+  left: 1.3rem;
+}
