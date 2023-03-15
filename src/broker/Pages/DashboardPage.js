@@ -11,6 +11,7 @@ import {
   VisitAlertModal,
   PromotedProperty,
   BrokerageManagement,
+  Claim,
 } from '../features';
 import '../features/Dashboard/assets/styles/Dashboard.css';
 import ClientCards from '../features/Dashboard/components/client-cards/ClientCard';
@@ -58,7 +59,10 @@ const DashboardPage = () => {
           /> */}
 
           {/* Brokerage Management */}
-          <BrokerageManagement />
+          {/* <BrokerageManagement /> */}
+
+          {/* Claim */}
+          <Claim />
         </main>
         {/* Main content code end here */}
 

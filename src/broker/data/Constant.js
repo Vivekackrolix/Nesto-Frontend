@@ -27,3 +27,30 @@ export const clientsData = [
     recentVisit: '2022-03-10',
   },
 ];
+
+//claim data
+export const claimData = {
+  visitID: '12324443',
+  visitDate: '2022-01-15',
+  builderName: 'ABC Builders',
+  customerName: 'John Doe',
+  unitType: 'Apartment',
+  unitNumber: 'A-102',
+  sellingPrice: '$250,000',
+  sellingDate: '2021-12-31',
+  // eligibleClaimID: '1253325271',
+  // propertyName: 'Sky Dandelions Flat',
+  // propertyLocation: 'Bakersfield, CA',
+};
+
+export const claimDataTitle = {
+  // eligibleClaimID: '1253325271',
+  visitID: 'Visit ID',
+  visitDate: 'Visit Date',
+  builderName: 'Builder Name',
+  customerName: 'Customer Name',
+  unitType: 'Unit Type',
+  unitNumber: 'Unit Type',
+  sellingPrice: 'Selling Price',
+  sellingDate: 'Selling Date',
+};
