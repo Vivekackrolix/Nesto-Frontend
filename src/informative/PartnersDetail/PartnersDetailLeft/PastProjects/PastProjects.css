@@ -3,7 +3,7 @@
 .past-project_slider .slick-next:before,
 .slick-prev:before {
     font-size: 30px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 .past-project_slider .past-project-slider_col-1 {
     width: 50%;
@@ -28,7 +28,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     background: var(--color-white);
     padding: 2px 6px;
     border-radius: 8px;
@@ -61,14 +61,14 @@
 }
 .past-project_slider .past-project_span-1 {
     font-weight: 700;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     font-size: 16px;
     display: block;
 }
 .past-project_slider .past-project_span-2 {
     font-weight: 300;
     font-size: 14px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     display: block;
     margin-top: 8px;
 }

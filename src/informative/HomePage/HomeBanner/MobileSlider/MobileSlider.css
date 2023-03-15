@@ -5,16 +5,16 @@
     display: flex;
     justify-content: end;
     text-align: right;
-    position: relative;
+    /* position: relative; */
 }
 .mobile-arrow {
     width: 100px;
     /* position: static; */
-    position: sticky;
-    top: 8%;
-    right: 30%;
-    margin-left: auto;
-    transform: rotate(-10deg);
+    /* position: sticky; */
+    /* top: 8%; */
+    /* right: 30%; */
+    /* margin-left: auto; */
+    /* transform: rotate(-10deg); */
 }
 .mobile-cartoon-img {
     width: 60%;
@@ -26,5 +26,13 @@
 .mobile-slider-img {
     width: 100%;
     z-index: -1 !important;
-    height: 550px;
+    /* height: 550px; */
+    height: 100%;
+}
+
+.mobile-slider_div .slick-dots li button:before {
+    content: '';
+    height: 5px;
+    border-radius: 5px;
+    background: var(--color-white);
 }

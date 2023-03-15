@@ -11,7 +11,7 @@
 }
 
 .how-heading-2 {
-    font-weight: 600;
+    font-weight: 900;
     font-size: 36px;
     display: block;
 }
@@ -27,7 +27,7 @@
     width: 70%;
     margin-left: auto;
     display: block;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 
 .how-col-1-span-2 {
@@ -36,7 +36,7 @@
     font-size: 16px;
     width: 70%;
     margin-left: auto;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     line-height: 28px;
 }
 

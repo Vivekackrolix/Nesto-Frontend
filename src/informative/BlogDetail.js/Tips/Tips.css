@@ -18,7 +18,7 @@
 .tips-header_heading {
     font-weight: 700;
     font-size: 41px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 
 .tips_box-1 {
@@ -33,13 +33,13 @@
 .tips_user-name {
     font-weight: 400;
     font-size: 16px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 
 .tips_user-date {
     font-weight: 400;
     font-size: 16px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 
 .tips_box-2 {
@@ -76,7 +76,7 @@
 .tips_box-5-heading {
     font-weight: 600;
     font-size: 34px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 
 .tips_box-5-line {
@@ -99,7 +99,7 @@
 .tips_box-6-span {
     font-weight: 600;
     font-size: 28px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     line-height: 38px;
     /* display: block; */
 }
@@ -126,7 +126,7 @@
 .recent-post_span3 {
     font-weight: 600;
     font-size: 28px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     /* line-height: 38px; */
 }
 .recent-post_span4 {
