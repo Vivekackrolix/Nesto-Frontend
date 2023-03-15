@@ -17,6 +17,7 @@ import '../../features/Dashboard/assets/styles/Dashboard.css';
 import ClientCards from '../../features/Dashboard/components/client-cards/ClientCard';
 import { clientsData } from '../../data/Constant';
 import PropertyDetails from './property-details/PropertyDetails';
+import ProfilePage from '../../dashboard-containers/broker-profile/Profile';
 
 const DashboardPage = () => {
   const [show, setShow] = useState(true);
@@ -66,7 +67,10 @@ const DashboardPage = () => {
           {/* <Claim /> */}
 
           {/* property details page */}
-          <PropertyDetails />
+          {/* <PropertyDetails /> */}
+
+          {/* Profile page */}
+          <ProfilePage />
         </main>
         {/* Main content code end here */}
 
