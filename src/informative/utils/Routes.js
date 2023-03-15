@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import BrokerHome from "../BrokerPage/BrokerHome/BrokerHome";
-import BuilderHome from "../BuilderPage/BuilderPageHome/BuilderHome";
-import ContactUs from "../ContactUs/ContactUs";
-import Banner from "../HomePage/Banner/Banner";
-import PartnersDetailsMain from "../PartnersDetailsMain";
-import PartnerBanner from "../PartnersPage/Partnerbanner/partnerbanner";
-=======
 import BrokerHome from '../BrokerPage/BrokerHome/BrokerHome';
 import ContactUs from '../ContactUs/ContactUs';
 import Banner from '../HomePage/Banner/Banner';
 import PartnersDetailsMain from '../PartnersDetailsMain';
 import PartnerBanner from '../PartnersPage/Partnerbanner/partnerbanner';
 import BlogList from '../BlogList/BlogListMain';
->>>>>>> 269cae43ca8a9faa15f1987a51857cd15e040675
 
 export const RouteData = [
   {
@@ -52,14 +43,4 @@ export const RouteData = [
     path: '/broker-page',
     element: <BrokerHome />,
   },
-<<<<<<< HEAD
-  {
-    id: 17,
-    page: 'Builder Page',
-    path: '/builder-page',
-    element: <BuilderHome/>
-  },
 ];
-=======
-];
->>>>>>> 269cae43ca8a9faa15f1987a51857cd15e040675
