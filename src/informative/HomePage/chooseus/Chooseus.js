@@ -35,10 +35,10 @@ export default function ChooseUs() {
           sub="Why Choose Us"
         />
 
-        <div className="row py-4 mb-4 gx-4 flex" data-aos='fade-up'>
+        <div className="row py-3 mb-4 flex" data-aos='fade-up'>
           {data.map((item) => {
             return (
-              <div className="col-lg-3 col-md-6 col-sm-6 text-center">
+              <div className="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
                 <div className="choose-card">
                   <div className="choose-icon-div">
                     <img src={item.img} className='choose-icon-img' />

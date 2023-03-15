@@ -1,7 +1,8 @@
 .residency {
     background: url(../../../../public/assets/informative/aboutUsImg2.png);
     /* padding: 10rem 0; */
-    padding: 2% 0;
+    padding: 8% 0 6% 0;
+    position: relative;
 }
 
 .residency-row {
@@ -11,7 +12,7 @@
 }
 
 .residency-col-1 {
-    padding-top: 6%;
+    /* padding-top: 6%; */
 }
 
 .col-1-box {
@@ -38,73 +39,37 @@
     color: var(--gray-color);
 }
 
-.residency-col-2 {
-    display: flex;
-    align-items: center;
-    /* padding: 8% 0 0 0; */
-    flex-direction: column;
-    justify-content: center;
-}
 
 /* //////////////////// */
+.residency-col-2 {
+    /* position: relative; */
+    position: absolute;
+    top: 10%;
+    right: -18%;
+}
+
 .animation-div {
-    /* background: #000; */
-    box-sizing: border-box;
-    /* position: relative; */
-    width: 100%;
-    height: 900px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    /* background-color: #aac9d0; */
-    /* overflow: hidden; */
-    /* padding: 50px; */
-    /* position: relative; */
+    width: 80%;
 }
 
-.animation-div_box-1 {
-    border: 2px solid var(--primary-color);
-    border-radius: 50%;
-    padding: 13% 20%;
-    z-index: -10;
+.animation-svg {}
+
+.animation-div-3 {
+    position: absolute;
+    top: 15%;
+    right: 38%;
 }
 
-.animation-cartoon-img {
-    /* width: 100%; */
+.animation-png {
+    animation: smooth-jumping 3s infinite;
 }
 
-.animation-div_box-2 {
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    position: relative;
-}
+@keyframes smooth-jumping {
+    0% {
+        transform: translateY(0px);
+    }
 
-.animation-div_box-2-img-1 {
-    position: absolute;
-    /* right: 100%; */
-    right: -290%;
-    bottom: 74%;
-    z-index: 10;
-}
-.animation-div_box-2-img-2 {
-    position: absolute;
-    /* right: 100%; */
-    right: -70%;
-    bottom: 40%;
-    z-index: 10;
-}
-.animation-div_box-2-img-3 {
-    position: absolute;
-    /* right: 100%; */
-    right: -310%;
-    bottom: 9%;
-    z-index: 10;
-}
-.animation-div_box-2-img-4 {
-    position: absolute;
-    /* right: 100%; */
-    right: -520%;
-    bottom: 38%;
-    z-index: 10;
+    50% {
+        transform: translateY(40px);
+    }
 }

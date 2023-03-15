@@ -7,7 +7,7 @@ export default function Residency() {
       <div className="residency">
         <div className="container">
           <div className="row residency-row">
-            <div className="col-lg-5 residency-col-1">
+            <div className="col-lg-5 residency-col-1" data-aos='fade-right'>
               <img src="./assets/residence.png" className='col-1-img' />
               <div className="col-1-box">
                 <span className='col-1-box-span_1'>The Perfect Residency</span>
@@ -23,19 +23,14 @@ export default function Residency() {
               </div>
             </div>
             <div className="col-lg-7 residency-col-2">
-              {/* <div className='animation-div'>
-                <div className='animation-div_box-2'>
-                  <img src='/assets/informative/animation-icon-1.png' className='animation-div_box-2-img-1' />
-                  <img src="./assets/informative/animation-icon-1.png" className='animation-div_box-2-img-2' />
-                  <img src="./assets/informative/animation-icon-1.png" className='animation-div_box-2-img-3' />
-                  <img src="./assets/informative/animation-icon-1.png" className='animation-div_box-2-img-4' />
+              <div className='animation-div'>
+                <div className='animation-div-2'>
+                  <img src='/assets/informative/animation.svg' className='animation-svg' />
                 </div>
-
-                <div className='animation-div_box-1'>
-                  <img src="./assets/informative/animation-cartoon.png" className='animation-cartoon-img' />
-                </div>
-              </div> */}
-              
+              </div>
+              <div className='animation-div-3'>
+                <img src='/assets/informative/animation-cartoon.png' className='animation-png' />
+              </div>
             </div>
           </div>
         </div>

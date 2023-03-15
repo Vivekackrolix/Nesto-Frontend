@@ -10,6 +10,7 @@ import Stats from '../stats/Stats';
 import Aos from 'aos';
 import Banner from './Banner/Banner';
 import HowWork from '../../AboutUs/HowWork/HowWork';
+import Footer from '../../../components/footer/Footer'
 
 const HomeBanner = () => {
     useEffect(() => {
@@ -20,7 +21,7 @@ const HomeBanner = () => {
             <div style={{overflowX: 'hidden'}}>
                 <InformativeNavbar />
                 {/* Banner */}
-                {/* <Banner /> */}
+                <Banner />
                 {/* About Us */}
                 <AboutUs />
                 {/* Stats */}
@@ -32,11 +33,13 @@ const HomeBanner = () => {
                 {/* How Nesto Work */}
                 <HowWork />
                 {/* GetStarted */}
-                {/* <GetStarted /> */}
+                <GetStarted />
                 {/* News */}
-                {/* <News /> */}
+                <News />
                 {/* Testimonials */}
                 <Testimonials />
+                {/* footer */}
+                <Footer />
             </div>
         </>
     )
