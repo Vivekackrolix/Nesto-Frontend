@@ -17,7 +17,7 @@ const AboutUsMain = () => {
             <div className="about-us-banner">
                 <span className='about-us-banner-heading' data-aos='zoom-in'>About Us</span>
             </div>
-            <AboutUsDesc /> 
+            <AboutUsDesc />
             {/* How Nesto Work */}
             <HowWork />
             {/* Footer */}

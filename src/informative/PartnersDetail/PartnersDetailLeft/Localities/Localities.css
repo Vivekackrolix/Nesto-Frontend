@@ -1,7 +1,7 @@
 .locality_slider .slick-next:before,
 .slick-prev:before {
     font-size: 30px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 
 .locality-slider_col-2 {

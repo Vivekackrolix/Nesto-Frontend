@@ -19,13 +19,13 @@ const HomeBanner = () => {
             <div style={{overflowX: 'hidden'}}>
                 <InformativeNavbar />
                 {/* Banner */}
-                <Banner />
+                {/* <Banner /> */}
                 {/* About Us */}
-                {/* <AboutUs /> */}
-                {/* Residency */}
-                {/* <Residency /> */}
+                <AboutUs />
                 {/* Stats */}
-                {/* <Stats /> */}
+                <Stats />
+                {/* Residency */}
+                <Residency />
                 {/* ChooseUs */}
                 {/* <ChooseUs /> */}
                 {/* GetStarted */}
