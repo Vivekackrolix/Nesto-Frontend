@@ -1,9 +1,10 @@
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Col, Row } from "react-bootstrap";
 import { RiStarSFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import sky from "../../Images/Sky.png";
-import building from "../../Images/building.png";
+// import building from "../../Images/building.png";
 import editbutton from "../../Images/editbutton.png";
+import buld from "../../Images/buld.png";
 
 const Danelions = () => {
   return (
@@ -34,12 +35,20 @@ const Danelions = () => {
               Luxury Apartment in Sector-29,Gurugram
             </p>
 
-            <div className="d-flex mx-2">
+            <div className="d-flex mx-3">
+              <h1>
+                <img src={buld} className="rounded " alt="bulding" />
+              </h1>
+              {/* <img src={building} className="rounded my-3 mx-2" alt="Sky" />
               <img src={building} className="rounded my-3 mx-2" alt="Sky" />
-              <img src={building} className="rounded my-3 mx-2" alt="Sky" />
-              <img src={building} className="rounded my-3 mx-2" alt="Sky" />
-              <img src={building} className="rounded my-3 mx-2" alt="Sky" />
+              <img src={building} className="rounded my-3 mx-2" alt="Sky" /> */}
             </div>
+            {/* <div className="d-flex mx-2">
+              <p className="rounded my-3 mx-2">1</p>
+              <p className="rounded my-3 mx-2">1</p>
+              <p className="rounded my-3 mx-2">1</p>
+              <p className="rounded my-3 mx-2">1</p>
+            </div> */}
           </div>
 
           <div className="ms-auto p-2  ">
@@ -52,7 +61,7 @@ const Danelions = () => {
             <Button
               //   variant="primary"
               type="button"
-              className=" d-flex rounded-pill col-5 btn btn-outline-primary btn-lg justify-content-center mx-5 gap-3"
+              className=" d-flex rounded-pill  btn btn-outline-primary btn-lg justify-content-center mx-3 gap-3"
               as={Link}
               to="/builder/home-dashboard/propertyedit"
             >

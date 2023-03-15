@@ -71,7 +71,7 @@ const PropertyEdit = () => {
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 "
           style={{ background: "#F8F8F8" }}
         >
-          <div className=" d-flex justify-content-between ">
+          <div className="p-2 d-flex justify-content-between ">
             <h4 style={{ fontFamily: "Bahnschrift" }}>Reet</h4>
           </div>
         </Container>
@@ -82,7 +82,7 @@ const PropertyEdit = () => {
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
           style={{ background: "#F8F8F8" }}
         >
-          <div className="p-3 d-flex justify-content-between">
+          <div className="p-2 d-flex justify-content-between">
             <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
             <img src={loc} className="rounded my-3" alt="loc" />
           </div>

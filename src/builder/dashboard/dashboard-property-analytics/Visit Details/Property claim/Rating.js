@@ -1,4 +1,4 @@
-import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
+import { Button, Container, Form, Modal } from "react-bootstrap";
 import { RiStarSFill } from "react-icons/ri";
 
 const Rating = (props) => {
