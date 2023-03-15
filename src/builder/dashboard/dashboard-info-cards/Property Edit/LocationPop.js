@@ -2,13 +2,6 @@ import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
 
 const LocationPop = (props) => {
-  // const [showModal, setShowModal] = useState(false);
-
-  // const handleSubmit = () => {
-  //   setShowModal((prev) => {
-  //     return (prev = true);
-  //   });
-  // };
   const submitHandler = () => {
     props.onChange((prev) => ({ ...prev, location: false, submit: true }));
   };
@@ -24,21 +17,6 @@ const LocationPop = (props) => {
             className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
             style={{ background: "#F8F8F8" }}
           >
-            {/* <div className="p-1 d-flex justify-around  dropdown">
-              <button type="button" class="btn btn-secondary">
-                Hospital (200 m)
-              </button>
-              <button
-                className="btn btn-secondary dropdown-toggle mx-2"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Add More
-              </button>
-            </div> */}
             <div
               className="btn-group"
               role="group"

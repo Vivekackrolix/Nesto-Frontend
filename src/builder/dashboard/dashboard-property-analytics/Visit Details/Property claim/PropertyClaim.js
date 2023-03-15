@@ -5,8 +5,25 @@ import claim from "../../../../Images/claim.png";
 import { GrDocumentPdf } from "react-icons/gr";
 import Footer from "../../../Footer/Footer";
 import Header from "../../../../header/Header";
+// import Rating from "./Rating";
+import { useState } from "react";
+import Payment from "./Payment";
+import { RiShowersFill } from "react-icons/ri";
 
 const PropertyClaim = () => {
+  const [show, setShow] = useState({
+    payment: false,
+    submit: false,
+  });
+  console.log(show);
+  const onLocationClick = () => {
+    setShow((prev) => ({ ...prev, payment: true }));
+  };
+  const onUpdate = () => {
+    debugger;
+    setShow((prev) => ({ ...prev, payment: false }));
+  };
+
   return (
     <>
       <Header />
@@ -212,12 +229,16 @@ const PropertyClaim = () => {
               </Col>
               <Col>
                 <h3>
-                  {" "}
                   <GrDocumentPdf />
                 </h3>
               </Col>
               <Col>
-                <h5 style={{ color: "#278FD9" }}>Pay Now</h5>
+                <h5 style={{ color: "#278FD9" }} onClick={onLocationClick}>
+                  Pay Now
+                  {show.payment && (
+                    <Payment show={show.payment} onChange={onUpdate} />
+                  )}
+                </h5>
               </Col>
             </Row>
             <hr />

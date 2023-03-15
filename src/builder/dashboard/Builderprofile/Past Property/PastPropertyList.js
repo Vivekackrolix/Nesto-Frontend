@@ -1,10 +1,10 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-import propertyImage from "../../Images/propertyadded.png";
-import buld from "../../Images/buld.png";
-import subs from "../../Images/subs.png";
-import edit from "../../Images/editbutton.png";
+import propertyImage from "../../../Images/propertyadded.png";
+import subs from "../../../Images/subs.png";
+import buld from "../../../Images/buld.png";
+import edit from "../../../Images/editbutton.png";
 
-const RecentlyAdded = ({ data }) => {
+const PastPropertyList = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Card className="m-4" style={{ width: "23rem" }}>
@@ -73,7 +73,7 @@ const RecentlyAdded = ({ data }) => {
   });
   return (
     <Container className="mt-5">
-      <div className="row justify-content-between">
+      {/* <div className="row justify-content-between">
         <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
           Recently Added
         </h3>
@@ -87,7 +87,7 @@ const RecentlyAdded = ({ data }) => {
         >
           View all
         </i>
-      </div>
+      </div> */}
       {/* <div className="mt-4">{propertyListing}</div> */}
       <div
         className="mt-4 row row-cols-2 justify-content-center"
@@ -98,5 +98,4 @@ const RecentlyAdded = ({ data }) => {
     </Container>
   );
 };
-
-export default RecentlyAdded;
+export default PastPropertyList;

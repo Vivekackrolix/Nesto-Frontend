@@ -20,17 +20,17 @@ import CardWrapper from "./card-wrapper/CardWrapper";
 import Support from "./support/Support";
 import DashboardHeader from "../header/DashboardHeader";
 import Footer from "../Footer/Footer";
+import PastProperty from "./Past Property/PastProperty";
 
 const tabs = [
   { title: "Personal Details", icon: <FiUser /> },
-  // { title: "Queries History", icon: <FiClipboard /> },
-  // { title: "Transaction History", icon: <FiClock /> },
+
   { title: "Transaction", icon: <FiClipboard /> },
   { title: "Manage Roles", icon: <FiClock /> },
-  // { title: "Past Properties", icon: <FiClock /> },
+  { title: "Past Properties", icon: <FiClock /> },
   { title: "Terms & Conditions", icon: <FiBookOpen /> },
   { title: "Support", icon: <FiHelpCircle /> },
-  { title: "Raise Query", icon: <FiPlus /> },
+  { title: "Raise Query", icon: <FiHelpCircle /> },
 ];
 
 const profileSidebarNavContent = [
@@ -43,6 +43,9 @@ const profileSidebarNavContent = [
   },
   {
     element: <QueriesHistory />,
+  },
+  {
+    element: <PastProperty />,
   },
 
   {

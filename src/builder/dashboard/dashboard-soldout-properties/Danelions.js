@@ -52,7 +52,7 @@ const Danelions = () => {
             <Button
               //   variant="primary"
               type="button"
-              className=" d-flex rounded-pill col-5 btn btn-light justify-content-center   mx-5 gap-2"
+              className=" d-flex rounded-pill col-5 btn btn-outline-primary btn-lg justify-content-center mx-5 gap-3"
               as={Link}
               to="/builder/home-dashboard/propertyedit"
             >
