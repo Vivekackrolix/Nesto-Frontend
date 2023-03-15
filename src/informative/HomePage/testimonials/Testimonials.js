@@ -50,16 +50,16 @@ const review = [
         testname: "Jacob William",
         desc: "Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte",
     },
-    {
-        id: 4,
-        testname: "Jacob William",
-        desc: "Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte",
-    },
-    {
-        id: 5,
-        testname: "Jacob William",
-        desc: "Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte",
-    },
+    // {
+    //     id: 4,
+    //     testname: "Jacob William",
+    //     desc: "Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte",
+    // },
+    // {
+    //     id: 5,
+    //     testname: "Jacob William",
+    //     desc: "Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte",
+    // },
     
     
 ];
@@ -79,7 +79,7 @@ const Testimonial = () => {
         arrows: true,
         loop: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 7000,
         accessibility: true,
         cssEase: "linear",
         swipeToSlide: true,
@@ -126,12 +126,12 @@ const Testimonial = () => {
     };
     return (
         <div className=" main-testimonial-body py-5">
-            <div className="inner-body  d-flex flex-row-reverse ">
+            <div className="quote-image  d-flex flex-row-reverse ">
                 {/* <Image src={quote} className="w-36 h-36 opacity-20" /> */}
 
                 <img src="./assets/quote.png" alt="" />
             </div>
-            <div className="pt-12 heading">
+            <div className="pt-5 heading">
             {/* <
                title="Our Testimonial"
                sub="What Our Customer Say About Us"
@@ -140,23 +140,23 @@ const Testimonial = () => {
                sub="What Our Customer Say About Us"
                />
             </div>
-            <div className="space-y-12 slider ">
-                <Slider {...settings} className="max-w-5xl mx-auto">
+            <div className=" slider ">
+                <Slider {...settings} className=" mx-auto">
                     {review.map((obj, e) => {
                         return (
-                            <div key={e} className="px-4 py-8">
-                                <div className="test-card    card outer border-1 border-[#1d1c1c] p-5 space-y-12 rounded-xl drop-shadow-sm shadow-lg  bg-white group hover:bg-primary">
-                                    <p className="text-sm text-black/50 group-hover:text-white">{obj.desc}</p>
-                                    <div className="d-flex gap-2 justify-end">
+                            <div key={e} className="px-4 py-5">
+                                <div className="test-card py-5 px-4 shadow  bg-white">
+                                    <p className="testimonial-desc">{obj.desc}</p>
+                                    <div className="d-flex mt-2 gap-2 justify-content-end">
                                         <div className="font-semibold group-hover:text-white">
-                                            <h2 className="text-sm"> {obj.testname}</h2>
-                                            <p className="text-black/50 text-xs">CEO of Google</p>
-                                            <div className="flex">
-                                                <FaStar fill="#FFB630" size={12} />
-                                                <FaStar fill="#FFB630" size={12} />
-                                                <FaStar fill="#FFB630" size={12} />
-                                                <FaStar fill="#FFB630" size={12} />
-                                                <AiOutlineStar color="#FFB630" size={14} />
+                                            <span className="test-name"> {obj.testname}</span>
+                                            <p className="test-company ">CEO of Google</p>
+                                            <div className="d-flex">
+                                                <FaStar fill="#FFB630" size={16} />
+                                                <FaStar fill="#FFB630" size={16} />
+                                                <FaStar fill="#FFB630" size={16} />
+                                                <FaStar fill="#FFB630" size={16} />
+                                                <AiOutlineStar color="#FFB630" size={18} />
                                             </div>
                                         </div>
                                         <img className="person-image" src="./assets/person.png" alt="" />
