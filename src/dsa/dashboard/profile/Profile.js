@@ -8,7 +8,6 @@ import {
   FiHelpCircle,
   FiPlus,
 } from 'react-icons/fi';
-import './Profile.css';
 import { RiArrowRightSLine, RiPencilFill } from 'react-icons/ri';
 import { BsBoxArrowRight } from 'react-icons/bs';
 import PersonalDetailsForm from './personal-details/PersonalDetailsForm';
@@ -18,6 +17,7 @@ import TermsConditions from './terms-and-conditions/TermsConditions';
 import RaiseQuery from './raise-query/RaiseQuery';
 import CardWrapper from './card-wrapper/CardWrapper';
 import Support from './support/Support';
+import './Profile.css';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
