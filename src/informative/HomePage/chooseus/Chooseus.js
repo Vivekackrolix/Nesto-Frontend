@@ -28,14 +28,14 @@ export default function ChooseUs() {
   ]
   return (
     <>
-      <div className="container">
+      <div className="container" style={{overflow: 'hidden'}}>
 
         <Heading
           title="Trusted by Millions"
           sub="Why Choose Us"
         />
 
-        <div className="row py-4 mb-4 gx-4 flex">
+        <div className="row py-4 mb-4 gx-4 flex" data-aos='fade-up'>
           {data.map((item) => {
             return (
               <div className="col-lg-3 col-md-6 col-sm-6 text-center">

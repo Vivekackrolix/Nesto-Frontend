@@ -6,9 +6,9 @@ const Heading = ({ title, sub }) => {
     <>
       <div className='text-center pt-5'>
         <div className='text-orange '>
-          <h3 className='sections-heading'>{title}</h3>
+          <h3 className='sections-heading' data-aos='fade-right'>{title}</h3>
         </div>
-        <div className='text-bold pb-4'>
+        <div className='text-bold pb-4' data-aos='fade-left'>
           <p className=''>{sub}</p>
         </div>
       </div>

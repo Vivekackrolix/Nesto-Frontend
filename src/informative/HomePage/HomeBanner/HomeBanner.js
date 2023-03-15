@@ -9,6 +9,7 @@ import Testimonials from '../testimonials/Testimonials';
 import Stats from '../stats/Stats';
 import Aos from 'aos';
 import Banner from './Banner/Banner';
+import HowWork from '../../AboutUs/HowWork/HowWork';
 
 const HomeBanner = () => {
     useEffect(() => {
@@ -28,12 +29,14 @@ const HomeBanner = () => {
                 <Residency />
                 {/* ChooseUs */}
                 <ChooseUs />
+                {/* How Nesto Work */}
+                <HowWork />
                 {/* GetStarted */}
                 {/* <GetStarted /> */}
                 {/* News */}
                 {/* <News /> */}
                 {/* Testimonials */}
-                {/* <Testimonials /> */}
+                <Testimonials />
             </div>
         </>
     )
