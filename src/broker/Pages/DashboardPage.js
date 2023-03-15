@@ -26,8 +26,8 @@ const DashboardPage = () => {
     <>
       {/* popup modal */}
       {/* <ShareModal show={show} onHide={onHide} /> */}
-      {/* <ShareModal show={show} onHide={onHide} />
-        <BookAVisitModal show={show} onHide={onHide} /> */}
+      {/* <ShareModal show={show} onHide={onHide} /> */}
+      {/* <BookAVisitModal show={show} onHide={onHide} /> */}
       {/* <SuccessModal show={show} onHide={onHide} /> */}
       {/* <VisitAlertModal show={show} onHide={onHide} /> */}
       {/* <CustomerModal show={show} onHide={onHide} /> */}
