@@ -1,6 +1,7 @@
 import { DashboardFooter } from "../../../broker/features";
 import Footer from "../../../builder/dashboard/Footer/Footer";
 import ChooseUs from "../../HomePage/chooseus/Chooseus";
+import News from "../../HomePage/news/News";
 import Residency from "../../HomePage/residency/Residency";
 import Testimonial from "../../HomePage/testimonials/Testimonials";
 import Contact from "../contactform/Contact";
@@ -8,7 +9,8 @@ import "./BokerHome.css";
 export default function BrokerHome() {
   return (
     <>
-      <div className="banner position-relative">
+    <div>
+      {/* <div className="banner position-relative">
         <div className="pt-5 broker-banner">
           <div className="container test">
             <div className="">
@@ -37,11 +39,12 @@ export default function BrokerHome() {
             </div>
           </div>
         </div>
-        <Contact className="contact-form" />
+        <Contact className="contact-form" /> */}
 
         {/* <Residency className="residence" /> */}
-        {/* <ChooseUs />
-        <Testimonial /> */}
+        {/* <ChooseUs /> */}
+        {/* <Testimonial /> */}
+        {/* <News/> */}
       </div>
     </>
   );
