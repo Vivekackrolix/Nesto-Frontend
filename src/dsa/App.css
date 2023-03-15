@@ -23,9 +23,10 @@ body {
   font-family: 'Bahnschrift';
 }
 
-a:hover,
+a, a:hover,
 a:focus {
   color: var(--primary-color);
+  text-decoration: none !important;
 }
 
 .btn {

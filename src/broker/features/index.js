@@ -16,3 +16,5 @@ export { default as ProductCard } from './Dashboard/components/product-card/Prod
 export { default as Ribbon } from './Dashboard/components/ribbon/Ribbon';
 export { default as SwiperSliderDashboard } from './Dashboard/components/swiper-slider-dashboard/SwiperSliderDashboard';
 export { default as Client } from './Dashboard/components/client-cards/ClientCard';
+export { default as BrokerageManagement } from './Dashboard/components/brokerage-management/BrokerageManagement';
+export { default as Claim } from './Dashboard/components/claim/Claim';

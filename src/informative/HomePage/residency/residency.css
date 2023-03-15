@@ -1,6 +1,16 @@
 .main{
     background-image: url('../../../../public/assets/blocks.png');
-    padding: 120px;
+    padding: 150px;
+    position: relative;
+    bottom: 90px;
+    max-height: 300px;
+}
+.residency-main{
+    max-height: 800px;
+}
+.residency-container{
+    position: relative;
+    bottom: 220px;
 }
 .animation-img{
     margin-left: 234px;

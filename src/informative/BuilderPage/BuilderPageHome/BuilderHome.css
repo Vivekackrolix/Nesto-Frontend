@@ -1,0 +1,10 @@
+.builder-banner{
+    background-color: #E0F2FF;
+    height: 595px;
+}
+@media only screen and (max-width: 900px) {
+.builder-banner{
+    background-color: #E0F2FF;
+    height: 400px;
+}
+}
