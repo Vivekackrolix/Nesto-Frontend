@@ -77,6 +77,7 @@ const Login = () => {
                   required
                   type="text"
                   value={inputValue}
+                  maxLength="10"
                   onChange={handleInputChange}
                   placeholder="Enter your phone number"
                   isInvalid={showErrorMessage}

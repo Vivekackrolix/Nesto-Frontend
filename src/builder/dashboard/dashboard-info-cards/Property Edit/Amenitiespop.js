@@ -18,7 +18,7 @@ const AmenitiesPop = (props) => {
   //   });
   // };
   const onSubmitHandler = () => {
-    debugger;
+    // debugger;
     console.log(props.show);
     props.onChange((prev) => ({ ...prev, amenities: false, submit: true }));
   };

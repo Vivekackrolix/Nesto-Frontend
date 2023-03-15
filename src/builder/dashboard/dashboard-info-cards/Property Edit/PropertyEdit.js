@@ -26,24 +26,6 @@ import edit from "../../../Images/edit.png";
 import SubmitPop from "./Submitpop";
 
 const PropertyEdit = () => {
-  // const [show, setShow] = useState(false);
-  // const [showLocationPop, setShowLocationPop] = useState(false);
-  // const [showSubmitPop, setShowSubmitPop] = useState(false);
-
-  // const onContinueHandler = () => {
-  //   setShow((prev) => {
-  //     console.log(prev);
-  //     return !prev;
-  //   });
-  // };
-
-  // const onSubmitHandler = () => {
-  //   setShowSubmitPop((prev) => !prev);
-  // };
-
-  // const handleSubmit = () => {
-  //   setShowLocationPop((prev) => !prev);
-  // };
   const [show, setShow] = useState({
     amenities: false,
     location: false,
@@ -86,10 +68,10 @@ const PropertyEdit = () => {
         <br></br>
         <h4 style={{ fontFamily: "Bahnschrift" }}>Name</h4>
         <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 "
           style={{ background: "#F8F8F8" }}
         >
-          <div className="p-3 d-flex justify-content-between ">
+          <div className=" d-flex justify-content-between ">
             <h4 style={{ fontFamily: "Bahnschrift" }}>Reet</h4>
           </div>
         </Container>
@@ -116,26 +98,6 @@ const PropertyEdit = () => {
           <div className="p-3 d-flex justify-content-between">
             <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
           </div>
-          {/* <div
-            className="dropdown dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 p-3 d-flex justify-content-between"
-            style={{ background: "#F8F8F8" }}
-          >
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown button
-            </button>
-            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a className="dropdown-item">Action</a>
-              <a className="dropdown-item">Another action</a>
-              <a className="dropdown-item">Something else here</a>
-            </div>
-          </div> */}
         </Container>
         <br></br>
         <br></br>
@@ -334,7 +296,7 @@ const PropertyEdit = () => {
           </Button>
         </div>
         <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3"
           style={{ boxShadow: "0px 6.86709px 30.0435px rgba(0, 0, 0, 0.07)" }}
         >
           <div className="p-4 d-flex justify-content-around">
@@ -383,12 +345,14 @@ const PropertyEdit = () => {
           <img src={brochure} className="rounded my-3 mx-4 " alt="Home" />
         </Container>
       </Container>
-      <div className="d-grid mt-5">
+      <div className="d-grid  mt-5">
         <Button
           variant="primary"
           size="sm"
-          className="w-70 rounded-pill border-0 bg-color-primary py-4 my-3 mx-5"
+          className="w-60 rounded-pill border-0 bg-color-primary py-4 my-3 mx-5"
           //   onClick={onContinueHandler}
+          // size="sm"
+          // className="w-70 rounded-pill border-0 bg-color-primary py-2 my-5 mx-5 col-5 "
         >
           Submit
         </Button>

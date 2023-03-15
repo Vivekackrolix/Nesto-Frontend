@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Button, Col, Row } from "react-bootstrap";
 import Header from "../../../header/Header";
 import Footer from "../../Footer/Footer";
@@ -9,6 +10,7 @@ const PromotedVisit = () => {
   const tabelData = arr.map((itm) => (
     <PromotedVisitItem className={"mb-3 py-3 border rounded"} />
   ));
+
   return (
     <>
       <Header />
