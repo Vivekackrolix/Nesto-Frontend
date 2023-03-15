@@ -12,10 +12,11 @@ import {
   PromotedProperty,
   BrokerageManagement,
   Claim,
-} from '../features';
-import '../features/Dashboard/assets/styles/Dashboard.css';
-import ClientCards from '../features/Dashboard/components/client-cards/ClientCard';
-import { clientsData } from '../data/Constant';
+} from '../../features';
+import '../../features/Dashboard/assets/styles/Dashboard.css';
+import ClientCards from '../../features/Dashboard/components/client-cards/ClientCard';
+import { clientsData } from '../../data/Constant';
+import PropertyDetails from './property-details/PropertyDetails';
 
 const DashboardPage = () => {
   const [show, setShow] = useState(true);
@@ -62,7 +63,10 @@ const DashboardPage = () => {
           {/* <BrokerageManagement /> */}
 
           {/* Claim */}
-          <Claim />
+          {/* <Claim /> */}
+
+          {/* property details page */}
+          <PropertyDetails />
         </main>
         {/* Main content code end here */}
 
