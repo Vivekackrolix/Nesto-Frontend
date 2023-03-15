@@ -6,32 +6,40 @@ import brocker from "../../Images/brocker.png";
 const SettledInvoice = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
-      <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3 gap-2">
-        <div className="d-flex justify-content-between">
-          <Row>
-            <Col>
+      <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3">
+        <div className="d-flex justify-content-between ">
+          {/* <Row> */}
+          <div className="d-flex flex-grow-1">
+            {/* <Col> */}
+            <div className="p-2 rounded">
               <img src={brocker} alt="" />
-            </Col>
-            <Col>
-              <Row>
-                <Row>Sky Danelions Apartment</Row>
-                <Row
-                  style={{
-                    opacity: 0.5,
-                    fontFamily: "Bahnschrift",
+            </div>
+            {/* </Col> */}
+            {/* <Col> */}
+            <div className="p-2">
+              <h5>Sky Danelions Apartment</h5>
+              <p
+                style={{
+                  opacity: 0.5,
+                  fontFamily: "Bahnschrift",
 
-                    textDecorationLine: "underline",
-                  }}
-                >
-                  Sector-29,Gurugram
-                </Row>
-              </Row>
-            </Col>
-            <Col style={{ color: "#8B9199" }}>12/12/2022</Col>
-          </Row>
+                  textDecorationLine: "underline",
+                }}
+              >
+                Sector-29,Gurugram
+              </p>
+            </div>
+            {/* </Col> */}
+            {/* <Col style={{ color: "#8B9199" }}> */}
+            <div className="ms-auto p-2" style={{ color: "#8B9199" }}>
+              12/12/2022
+              {/* </Col> */}
+            </div>
+          </div>
+          {/* </Row> */}
         </div>
 
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3">
           <Row>
             <Col>Invoice ID</Col>
             <Col>Invoice Amount</Col>
@@ -43,7 +51,10 @@ const SettledInvoice = ({ data }) => {
             <Col style={{ color: "#838383" }}>32245554778</Col>
             <Col style={{ color: "#838383" }}>Rs.3.94</Col>
             <Col>
-              <button type="button" class=" rounded-pill btn btn-success">
+              <button
+                type="button"
+                class=" rounded-pill btn btn-outline-success"
+              >
                 Settled
               </button>
             </Col>
@@ -58,7 +69,10 @@ const SettledInvoice = ({ data }) => {
             <Col style={{ color: "#838383" }}>32245554778</Col>
             <Col style={{ color: "#838383" }}>Rs.3.94</Col>
             <Col>
-              <button type="button" class="rounded-pill btn btn-success">
+              <button
+                type="button"
+                class="rounded-pill btn btn-outline-success"
+              >
                 Settled
               </button>
             </Col>

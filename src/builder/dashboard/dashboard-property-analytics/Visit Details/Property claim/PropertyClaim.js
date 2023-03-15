@@ -8,7 +8,7 @@ import Header from "../../../../header/Header";
 // import Rating from "./Rating";
 import { useState } from "react";
 import Payment from "./Payment";
-import { RiShowersFill } from "react-icons/ri";
+// import { RiShowersFill } from "react-icons/ri";
 
 const PropertyClaim = () => {
   const [show, setShow] = useState({
