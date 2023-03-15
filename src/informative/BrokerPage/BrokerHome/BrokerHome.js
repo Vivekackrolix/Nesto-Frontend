@@ -9,8 +9,8 @@ import "./BokerHome.css";
 export default function BrokerHome() {
   return (
     <>
-    <div>
-      {/* <div className="banner position-relative">
+      <div>
+        {/* <div className="banner position-relative">
         <div className="pt-5 broker-banner">
           <div className="container test">
             <div className="">
