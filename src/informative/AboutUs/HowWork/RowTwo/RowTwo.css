@@ -10,7 +10,7 @@
     font-size: 32px;
     line-height: 73px;
     display: block;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 
 .row-two-col-3-span-2 {
@@ -19,7 +19,7 @@
     font-size: 16px;
     width: 70%;
     margin: auto;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     line-height: 28px;
 }
 

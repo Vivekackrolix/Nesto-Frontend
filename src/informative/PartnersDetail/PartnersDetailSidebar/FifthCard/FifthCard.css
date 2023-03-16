@@ -13,7 +13,7 @@
     text-align: center;
     margin: auto;
     font-size: 2rem;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     font-weight: 600;
 }
 .partners-container .fifth-card__box-2 {
@@ -42,7 +42,7 @@
 }
 .partners-container .fifth-card__span-3 {
     font-size: 24px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 .partners-container .fifth-card__li {
     font-size: 24px;
