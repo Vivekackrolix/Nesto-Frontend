@@ -9,6 +9,7 @@ import Testimonials from '../testimonials/Testimonials';
 import Stats from '../stats/Stats';
 import Aos from 'aos';
 import Banner from './Banner/Banner';
+import OurPartner from '../OurPartner/OurPartner';
 
 const HomeBanner = () => {
     useEffect(() => {
@@ -28,12 +29,14 @@ const HomeBanner = () => {
                 {/* <Stats /> */}
                 {/* ChooseUs */}
                 {/* <ChooseUs /> */}
+                {/* Partners */}
+                <OurPartner/>
                 {/* GetStarted */}
                 {/* <GetStarted /> */}
                 {/* News */}
-                {/* <News /> */}
+                <News />
                 {/* Testimonials */}
-                {/* <Testimonials /> */}
+                <Testimonials />
             </div>
         </>
     )
