@@ -1,29 +1,46 @@
 import React from "react";
 import Slider from "react-slick";
 import Heading from "../../HomePage/heading/Heading";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import './OurPartner.css'
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "white", borderRadius: "50%", padding: "1px 0px" }}
-            onClick={onClick}
-        ></div>
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+        //   background: "black",
+          borderRadius: "50%",
+          padding: "1px 0px",
+        }}
+        onClick={onClick}
+      >
+        <img className="next-image" src="./assets/next.png" alt="" />
+      </div>
     );
 }
 
 function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "white", borderRadius: "50%", padding: "1px 0px" }}
-            onClick={onClick}
-        ></div>
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+        //   background: "black",
+          borderRadius: "50%",
+          padding: "1px 0px",
+        }}
+        onClick={onClick}
+      >
+        <img className="next-image" src="./assets/back.png" alt="" />
+      </div>
     );
 }
 
@@ -140,28 +157,29 @@ const OurPartner = () => {
         ],
     };
     return (
-        <div className="relative pb-16 pt-6 space-y-8">
-            <div className="">
-                <Heading
-                    title="Our Partners"
-                    sub="The Companies That Represent Us."
-                />
-            </div>
-            <div className="my-5 px-5 PartnerSlider">
-                <Slider {...settings} className="slider d-flex gap-2">
-                    {review.map((obj, e) => {
-                        return (
-                            <div className="px-4" key={e}>
-                                <img src={obj.img} className="partner-image " />
-                            </div>
-                        );
-                    })}
-                </Slider>
-            </div>
-            <div className="text-center">
-                <button className="view-all hover:shadow shadow-sm">View All</button>
-            </div>
+      <div className="relative pb-16 pt-6 space-y-8">
+        <div className="">
+          <Heading
+            title="Our Partners"
+            sub="The Companies That Represent Us."
+          />
         </div>
+        <div className="my-5 px-5 PartnerSlider d-flex">
+          <Slider {...settings} className="slider d-flex gap-2">
+            {review.map((obj, e) => {
+              return (
+                <div className="px-4" key={e}>
+                  <img src={obj.img} className="partner-image " />
+                </div>
+              );
+            })}
+          </Slider>
+          
+        </div>
+        <div className="text-center">
+          <a className="view-all ">View All</a>
+        </div>
+      </div>
     );
 };
 
