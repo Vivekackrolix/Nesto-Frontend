@@ -56,7 +56,7 @@ const Header = () => {
               // as={Link}
               // to="/builder/home-dashboard/profile"
             >
-              <img src={profile} alt="profile" className="profile"/>
+              <img src={profile} alt="profile" className="br-profile"/>
             </Nav.Item>
           </div>
         </Nav>
