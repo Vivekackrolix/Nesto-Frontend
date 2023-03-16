@@ -17,17 +17,23 @@
     color: #ECF7FF;
   }
   .notification{
-    width: 40px;
+    width: 2.1em;
+    height: 2em;
     background: #278fd9;
     padding: 7px 10px;
     border-radius: 50%;
   }
   .subscription{
-    width: 40px;
+    width: 2em;
+    height: 2em;
     background: #278fd9;
     padding: 6px;
     border-radius: 50%;
   }
   .eye{
-    width: 24px;
+    width: 22px;
+  }
+  .profile{
+    width: 34px;
+    height: 34px;
   }

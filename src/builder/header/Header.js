@@ -11,7 +11,7 @@ import home from "../Images/Home.png";
 
 const Header = () => {
   return (
-    <header className="login__header">
+    <header className="login__header py-2">
       <Container>
         <Nav className="d-flex align-items-center">
           <Nav.Item>
@@ -41,8 +41,8 @@ const Header = () => {
               Brokerage
             </Nav.Item>
           </div>
-          <div className="d-flex col-3 ms-auto align-items-center">
-            <Nav.Item className="me-2  p-3">
+          <div className="d-flex col-3 ms-auto align-items-center justify-content-end">
+            <Nav.Item className="p-3">
               <img src="/assets/eye.png" alt="eye" className="eye" />
             </Nav.Item>
             <Nav.Item className="me-2 p-2">
@@ -56,7 +56,7 @@ const Header = () => {
               // as={Link}
               // to="/builder/home-dashboard/profile"
             >
-              <img src={profile} alt="profile" />
+              <img src={profile} alt="profile" className="profile"/>
             </Nav.Item>
           </div>
         </Nav>

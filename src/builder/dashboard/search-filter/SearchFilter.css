@@ -13,9 +13,9 @@
 /* Set common styles for input placeholders */
 .dashboard__wrapper__filter input::placeholder {
   font-weight: 350;
-  font-size: 20px;
+  font-size: 1rem;
   color: #b3b4b8;
-  opacity: 0.3;
+  opacity: 0.75;
 }
 
 /* Set styles for specific vendor prefixes */
@@ -45,6 +45,11 @@ input::-ms-input-placeholder {
 }
 
 .voice-location-icons .bg-color-primary {
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding: 8px 16px;
+}
+.search-shadow{
+  box-shadow: 0px 6px 26px rgba(0, 0, 0, 0.07);
+}
+.btn-primary {
+  --bs-btn-bg: #278fd9;
 }

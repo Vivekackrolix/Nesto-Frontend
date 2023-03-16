@@ -4,7 +4,7 @@ import "./PropertyAnalytics.css";
 const PropertyInvoice = () => {
   return (
     <>
-      <h3>Property Invoice</h3>
+      <h3>Property Invoices</h3>
       <Container
         className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 "
         style={{ boxShadow: "0px 10.7036px 46.8282px rgba(0, 0, 0, 0.07)" }}
