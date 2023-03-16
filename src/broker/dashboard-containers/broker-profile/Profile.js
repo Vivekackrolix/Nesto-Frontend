@@ -19,6 +19,7 @@ import CardWrapper from './card-wrapper/CardWrapper';
 import Support from './support/Support';
 import Preferences from './preferences/Preferences';
 import Notification from './notification/Notification';
+import Refer from './refer/Refer';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -43,6 +44,14 @@ const profileSidebarNavContent = [
   {
     element: <Notification notification />,
     title: 'Notification',
+  },
+  {
+    element: <Refer />,
+    title: 'Refer & Earn',
+  },
+  {
+    element: <TermsConditions />,
+    title: 'Terms & Conditions',
   },
   {
     element: <Support />,
