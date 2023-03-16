@@ -50,6 +50,10 @@ const profileSidebarNavContent = [
     title: 'Refer & Earn',
   },
   {
+    element: <TermsConditions />,
+    title: 'Terms & Conditions',
+  },
+  {
     element: <Support />,
   },
   {
