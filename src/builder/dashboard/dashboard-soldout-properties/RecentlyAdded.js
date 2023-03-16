@@ -2,6 +2,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../Images/propertyadded.png";
 import build from "../../Images/build.png";
 import subs from "../../Images/subs.png";
+
 import { Link } from "react-router-dom";
 import { BsPencilFill } from 'react-icons/bs';
 import { RiVipCrownFill } from 'react-icons/ri';
@@ -14,6 +15,7 @@ const RecentlyAdded = ({ data }) => {
         <Card.Img variant="top" src={propertyImage} />
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
+
           <Card.Text>
             <Row>
               <Col md={10} sm={10}>

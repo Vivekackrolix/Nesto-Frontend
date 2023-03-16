@@ -12,7 +12,7 @@ const Payment = () => {
         <br></br>
         <h4>Brockrage 5%</h4>
         <p style={{ color: "#7D7F88" }}>
-          Platform charges & application taxes shall be deducted
+          Platform charges & applicable taxes shall be deducted
         </p>
 
         <br></br>
@@ -21,56 +21,56 @@ const Payment = () => {
       <br></br>
       <h3>Milestone</h3>
       <br></br>
-      <br></br>
+
       <div className="p-1 d-flex justify-content-between  rounded">
         <Container
           className="dashboard_wrapper_filter border border_light rounded container p-3 mx-5 "
           style={{ border: "2.94206px solid #E3E3E7" }}
         >
-          <Col>
-            <h4>Milestone 1</h4>
-            <Row>
-              <Col style={{ color: "#8B9199" }}>condition</Col>
-              <Col style={{ color: "#8B9199" }}>Brockrage%</Col>
-            </Row>
-            <Row>
-              <Col>10%</Col>
-              <Col>20%</Col>
-            </Row>
-          </Col>
+          <h4>Milestone 1</h4>
+          <div className="d-flex justify-content-between">
+            <span>
+              <h5 style={{ color: "#8B9199" }}>Condition</h5>
+              <h5>10%</h5>
+            </span>
+            <span>
+              <h5 style={{ color: "#8B9199" }}>Brokerage%</h5>
+              <h5>20%</h5>
+            </span>
+          </div>
         </Container>
         <Container
           className="dashboard_wrapper_filter border border_light rounded p-3 mx-5"
           style={{ border: "2.94206px solid #E3E3E7" }}
         >
-          <Col>
-            {" "}
-            <h4>Milestone 2</h4>
-            <Row>
-              <Col style={{ color: "#8B9199" }}>condition</Col>
-              <Col style={{ color: "#8B9199" }}>Brockrage%</Col>
-            </Row>
-            <Row>
-              <Col>10%</Col>
-              <Col>20%</Col>
-            </Row>
-          </Col>
+          {" "}
+          <h4>Milestone 2</h4>
+          <div className="d-flex justify-content-between">
+            <span>
+              <h5 style={{ color: "#8B9199" }}>Condition</h5>
+              <h5>10%</h5>
+            </span>
+            <span>
+              <h5 style={{ color: "#8B9199" }}>Brokerage%</h5>
+              <h5>20%</h5>
+            </span>
+          </div>
         </Container>
         <Container
           className="dashboard_wrapper_filter border border_light rounded p-3 mx-5"
           style={{ border: "2.94206px solid #E3E3E7" }}
         >
-          <Col>
-            <h4>Milestone 3</h4>
-            <Row>
-              <Col style={{ color: "#8B9199" }}>condition</Col>
-              <Col style={{ color: "#8B9199" }}>Brockrage%</Col>
-            </Row>
-            <Row>
-              <Col>10%</Col>
-              <Col>20%</Col>
-            </Row>
-          </Col>
+          <h4>Milestone 3</h4>
+          <div className="d-flex justify-content-between">
+            <span>
+              <h5 style={{ color: "#8B9199" }}>Condition</h5>
+              <h5>10%</h5>
+            </span>
+            <span>
+              <h5 style={{ color: "#8B9199" }}>Brokerage%</h5>
+              <h5>20%</h5>
+            </span>
+          </div>
         </Container>
       </div>
       <br></br>
@@ -103,7 +103,7 @@ const Payment = () => {
       <h3>Payment Plan</h3>
       <Container className="  border-light rounded shadow-sm ">
         <div className=" d-flex justify-content-around"></div>
-        <Table className="profile__transaction ">
+        <Table className=" table table-hover profile__transaction ">
           <thead>
             <tr>
               <th>Payment %</th>
@@ -162,7 +162,7 @@ const Payment = () => {
       <br></br>
 
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
-        <div className="p-4 d-flex justify-content-between">
+        <div className="p-3 d-flex justify-content-between">
           <h4>About the Builder</h4>
           <i style={{ color: "#FC5C67", textDecorationLine: "underline" }}>
             View Details

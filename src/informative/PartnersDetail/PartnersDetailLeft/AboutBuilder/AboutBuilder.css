@@ -14,7 +14,7 @@
     display: block;
     font-weight: 600;
     font-size: 24px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 .about-builder_span-3 {
     display: block;
@@ -23,7 +23,7 @@
     font-size: 16px;
     margin-top: 20px;
     line-height: 30px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 .about-builder_star {
     color: #ffb630;

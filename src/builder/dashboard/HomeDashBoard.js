@@ -5,7 +5,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import SearchFilterBox from "./search-filter/SearchFilter";
 import PropertyAnalytics from "./dashboard-property-analytics/PropertyAnalytics";
 import SoldOut from "./dashboard-soldout-properties/SoldOut";
-import homeImage from "../Images/homeimage.png";
+import homeImage from "../Images/summer.png";
 import PropertyInvoice from "./dashboard-property-analytics/PendindInvoice";
 import RecentPackage from "./dashboard-property-analytics/RecentPackage";
 import RecentlyAdded from "./dashboard-soldout-properties/RecentlyAdded";

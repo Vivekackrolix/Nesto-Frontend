@@ -1,3 +1,6 @@
+.home-page-about {
+    /* padding-bottom: 3%; */
+}
 .about-us-read-more {
     text-decoration: none;
     background: var(--primary-color);
@@ -7,8 +10,13 @@
     font-weight: 300;
     border-radius: 8px;
 }
-
 .about-us-read-more:hover {
+    background: var(--primary-color);
+    color: var(--color-white);
+}
+
+.about-us-read-more:focus,
+.about-us-read-more::after {
     background: var(--primary-color);
     color: var(--color-white);
 }

@@ -1,10 +1,10 @@
-import { Container, Col, Table, Button } from "react-bootstrap";
+import { Container, Table, Button, Form } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import brochure from "../../../Images/brochure.png";
 import DashboardHeader from "../../header/DashboardHeader";
 import Axis from "../../../Images/Axis.png";
 import HDFC from "../../../Images/HDFC.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useState } from "react";
 import AmenitiesPop from "./Amenitiespop";
 import LocationPop from "./LocationPop";
@@ -21,29 +21,15 @@ import img from "../../../Images/img.png";
 import loc from "../../../Images/loc.png";
 import FileUpload from "../../Fileupload/Fileupload";
 import blank from "../../../Images/blank.png";
-import { RiAddBoxFill } from "react-icons/ri";
+import { RiAddFill } from "react-icons/ri";
 import edit from "../../../Images/edit.png";
 import SubmitPop from "./Submitpop";
-
+import CreatableSelect from "react-select/creatable";
+const sort = [
+  { value: "Lorem Ipsum", label: "Lorem Ipsum" },
+  { value: "Lorem ipsum", label: "Lorem Ipsum" },
+];
 const PropertyEdit = () => {
-  // const [show, setShow] = useState(false);
-  // const [showLocationPop, setShowLocationPop] = useState(false);
-  // const [showSubmitPop, setShowSubmitPop] = useState(false);
-
-  // const onContinueHandler = () => {
-  //   setShow((prev) => {
-  //     console.log(prev);
-  //     return !prev;
-  //   });
-  // };
-
-  // const onSubmitHandler = () => {
-  //   setShowSubmitPop((prev) => !prev);
-  // };
-
-  // const handleSubmit = () => {
-  //   setShowLocationPop((prev) => !prev);
-  // };
   const [show, setShow] = useState({
     amenities: false,
     location: false,
@@ -58,6 +44,19 @@ const PropertyEdit = () => {
     setShow((prev) => ({ ...prev, location: true }));
   };
 
+  // const UploadAndDisplayImage = () => {
+  //   const [images, setImages] = useState([] as any);
+  //   const [imageURLS, setImageURLs] = useState([]);
+  //   useEffect(() => {
+  //     if (images.length < 1) return;
+  //     const newImageUrls: any = [];
+  //     images.forEach((image:any) => newImageUrls.push(URL.createObjectURL(image)));
+  //     setImageURLs(newImageUrls);
+  //   }, [images]);
+
+  //   function onImageChange(e: any) {
+  //     setImages([...e.target.files]);
+  //   }
   return (
     <>
       <DashboardHeader />
@@ -82,17 +81,32 @@ const PropertyEdit = () => {
             <FileUpload />
           </div>
         </div>
+        {/* <input type="file" multiple accept="image/*" onChange={onImageChange} />
+      {imageURLS.map((imageSrc) => (
+        <img src={img} alt="not fount" width={"250px"} />
+      ))} */}
         <br></br>
         <br></br>
-        <h4 style={{ fontFamily: "Bahnschrift" }}>Name</h4>
+        {/* <h4 style={{ fontFamily: "Bahnschrift" }}>Name</h4>
         <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 "
           style={{ background: "#F8F8F8" }}
         >
           <div className="p-3 d-flex justify-content-between ">
             <h4 style={{ fontFamily: "Bahnschrift" }}>Reet</h4>
-          </div>
-        </Container>
+          </div>{" "}
+        </Container> */}
+        <Form.Group className="mb-3">
+          <Form.Label>
+            <h5>Name</h5>
+          </Form.Label>
+          <Form.Control
+            size="lg"
+            className="rounded-0"
+            type="text"
+            placeholder="Reet"
+          />
+        </Form.Group>
         <br></br>
         <br></br>
         <h4 style={{ fontFamily: "Bahnschrift" }}>Location</h4>
@@ -100,14 +114,14 @@ const PropertyEdit = () => {
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
           style={{ background: "#F8F8F8" }}
         >
-          <div className="p-3 d-flex justify-content-between">
+          <div className="p-2 d-flex justify-content-between">
             <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
             <img src={loc} className="rounded my-3" alt="loc" />
           </div>
         </Container>
         <br></br>
         <br></br>
-        <h4 style={{ fontFamily: "Bahnschrift" }}>Property category</h4>
+        {/* <h4 style={{ fontFamily: "Bahnschrift" }}>Property category</h4>
         <br />
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm"
@@ -116,28 +130,23 @@ const PropertyEdit = () => {
           <div className="p-3 d-flex justify-content-between">
             <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
           </div>
-          {/* <div
-            className="dropdown dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 p-3 d-flex justify-content-between"
-            style={{ background: "#F8F8F8" }}
-          >
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown button
-            </button>
-            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a className="dropdown-item">Action</a>
-              <a className="dropdown-item">Another action</a>
-              <a className="dropdown-item">Something else here</a>
-            </div>
-          </div> */}
-        </Container>
-        <br></br>
+        </Container> */}
+        <Form className="profile__form">
+          <Form.Group className="mb-4" controlId="email">
+            <Form.Label>
+              <h4>Property Category</h4>
+            </Form.Label>
+            <CreatableSelect
+              size="lg"
+              isMulti
+              placeholder="Lorem Ipsum"
+              options={sort}
+              className="rounded-0 "
+              styles={{ background: "#F8F8F8" }}
+            />
+            <br />
+          </Form.Group>
+        </Form>
         <br></br>
         <div className="d-flex justify-content-between">
           <h3 style={{ fontFamily: "Bahnschrift" }}> Amenities</h3>
@@ -148,7 +157,7 @@ const PropertyEdit = () => {
             className="rounded-circle bg-color-primary p-3"
             onClick={onAmenitiesClick}
           >
-            <RiAddBoxFill size={20} />
+            <RiAddFill size={20} />
             <AmenitiesPop show={show} onChange={setShow} />
           </Button>
         </div>
@@ -197,7 +206,7 @@ const PropertyEdit = () => {
             className="rounded-circle  bg-color-primary p-3"
             onClick={onLocationClick}
           >
-            <RiAddBoxFill size={20} />
+            <RiAddFill size={20} />
             <LocationPop show={show.location} onChange={setShow} />
           </Button>
         </div>
@@ -271,56 +280,56 @@ const PropertyEdit = () => {
         <br></br>
         <br></br>
         <h3 style={{ fontFamily: "Bahnschrift" }}>Payment Plan</h3>
-        <div
+        {/* <div
           className="  border-light rounded shadow-sm "
           style={{ background: "#F8F8F8" }}
-        >
-          {/* <div
+        > */}
+        {/* <div
             className="p-2 d-flex justify-content-around"
             style={{ background: "#F8F8F8" }}
           ></div> */}
-          <Table
-            className="profile__transaction"
-            style={{ background: "#F8F8F8" }}
-          >
-            <thead>
-              <tr>
-                <th style={{ fontFamily: "Bahnschrift" }}>Payment %</th>
-                <th style={{ fontFamily: "Bahnschrift" }}>Milestone</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
-                <td style={{ fontFamily: "Bahnschrift" }}>
-                  Lorem Ipsum is simply dummy text of the printing and type
-                  setting industry
-                </td>
-              </tr>
-              <tr>
-                <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
-                <td style={{ fontFamily: "Bahnschrift" }}>
-                  Lorem Ipsum is simply dummy text of the printing and type
-                  setting industry
-                </td>
-              </tr>
-              <tr>
-                <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
-                <td style={{ fontFamily: "Bahnschrift" }}>
-                  Lorem Ipsum is simply dummy text of the printing and type
-                  setting industry
-                </td>
-              </tr>
-              <tr>
-                <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
-                <td style={{ fontFamily: "Bahnschrift" }}>
-                  Lorem Ipsum is simply dummy text of the printing and type
-                  setting industry
-                </td>
-              </tr>
-            </tbody>
-          </Table>
-        </div>
+        <Table
+          className=" table table-secondary profile__transaction table table-hover"
+          style={{ background: "#F8F8F8" }}
+        >
+          <thead>
+            <tr>
+              <th style={{ fontFamily: "Bahnschrift" }}>Payment %</th>
+              <th style={{ fontFamily: "Bahnschrift" }}>Milestone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
+              <td style={{ fontFamily: "Bahnschrift" }}>
+                Lorem Ipsum is simply dummy text of the printing and type
+                setting industry
+              </td>
+            </tr>
+            <tr>
+              <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
+              <td style={{ fontFamily: "Bahnschrift" }}>
+                Lorem Ipsum is simply dummy text of the printing and type
+                setting industry
+              </td>
+            </tr>
+            <tr>
+              <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
+              <td style={{ fontFamily: "Bahnschrift" }}>
+                Lorem Ipsum is simply dummy text of the printing and type
+                setting industry
+              </td>
+            </tr>
+            <tr>
+              <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
+              <td style={{ fontFamily: "Bahnschrift" }}>
+                Lorem Ipsum is simply dummy text of the printing and type
+                setting industry
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+        {/* </div> */}
         <br></br>
         <br></br>
         <div className="p-4 d-flex justify-content-between">
@@ -330,11 +339,11 @@ const PropertyEdit = () => {
             size="md"
             className="rounded-circle  bg-color-primary p-3"
           >
-            <RiAddBoxFill size={20} />
+            <RiAddFill size={20} />
           </Button>
         </div>
         <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
+          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3"
           style={{ boxShadow: "0px 6.86709px 30.0435px rgba(0, 0, 0, 0.07)" }}
         >
           <div className="p-4 d-flex justify-content-around">
@@ -383,12 +392,14 @@ const PropertyEdit = () => {
           <img src={brochure} className="rounded my-3 mx-4 " alt="Home" />
         </Container>
       </Container>
-      <div className="d-grid mt-5">
+      <div className="d-grid  mt-5">
         <Button
           variant="primary"
           size="sm"
-          className="w-70 rounded-pill border-0 bg-color-primary py-4 my-3 mx-5"
+          className="w-60 rounded-pill border-0 bg-color-primary py-4 my-3 mx-5"
           //   onClick={onContinueHandler}
+          // size="sm"
+          // className="w-70 rounded-pill border-0 bg-color-primary py-2 my-5 mx-5 col-5 "
         >
           Submit
         </Button>

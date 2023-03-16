@@ -7,14 +7,14 @@
 .info_title {
     font-weight: 600;
     font-size: 18px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
 }
 
 .info_span {
     line-height: 34px;
     font-weight: 500;
     font-size: 18px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -23,6 +23,6 @@
     line-height: 34px;
     font-weight: 350;
     font-size: 18px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     display: block;
 }

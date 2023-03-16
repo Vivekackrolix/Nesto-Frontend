@@ -10,6 +10,11 @@ import Stats from '../stats/Stats';
 import Aos from 'aos';
 import Banner from './Banner/Banner';
 
+import OurPartner from '../OurPartner/OurPartner';
+import HowWork from '../../AboutUs/HowWork/HowWork';
+import Footer from '../../../components/footer/Footer'
+
+
 const HomeBanner = () => {
     useEffect(() => {
         Aos.init({ duration: 1400 })
@@ -21,19 +26,31 @@ const HomeBanner = () => {
                 {/* Banner */}
                 <Banner />
                 {/* About Us */}
-                {/* <AboutUs /> */}
-                {/* Residency */}
-                {/* <Residency /> */}
+                <AboutUs />
                 {/* Stats */}
-                {/* <Stats /> */}
+                <Stats />
+                {/* Residency */}
+                <Residency />
                 {/* ChooseUs */}
+
                 {/* <ChooseUs /> */}
+                {/* Partners */}
+                <OurPartner/>
+
+                <ChooseUs />
+                {/* How Nesto Work */}
+                <HowWork />
+
                 {/* GetStarted */}
-                {/* <GetStarted /> */}
+                <GetStarted />
                 {/* News */}
-                {/* <News /> */}
+                <News />
                 {/* Testimonials */}
-                {/* <Testimonials /> */}
+                <Testimonials />
+
+                {/* footer */}
+                <Footer />
+
             </div>
         </>
     )

@@ -13,7 +13,7 @@
     line-height: 34px;
     font-weight: 350;
     font-size: 18px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     display: block;
 }
 .p-p_span2 {
@@ -21,7 +21,7 @@
     line-height: 34px;
     font-weight: 350;
     font-size: 18px;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     display: block;
 }
 @media(max-width: 998px) {

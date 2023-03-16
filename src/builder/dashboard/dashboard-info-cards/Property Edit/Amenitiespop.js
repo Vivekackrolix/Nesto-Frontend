@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Button, Container, Form, Modal } from "react-bootstrap";
+import { Button, Container, Form, FormGroup, Modal } from "react-bootstrap";
+import CreatableSelect from "react-select/creatable";
 // import { useNavigate } from "react-router-dom";
 
 // const AmenitiesPop = ({ show }) => {
@@ -9,6 +10,10 @@ import { Button, Container, Form, Modal } from "react-bootstrap";
 
 //     navigate(`/`);
 //   };
+const sort = [
+  { value: "3 Beds", label: "3 Beds" },
+  { value: "2 Bathrooms", label: "2 Bathrooms" },
+];
 const AmenitiesPop = (props) => {
   // const [showModal, setShowModal] = useState(false);
 
@@ -18,7 +23,7 @@ const AmenitiesPop = (props) => {
   //   });
   // };
   const onSubmitHandler = () => {
-    debugger;
+    // debugger;
     console.log(props.show);
     props.onChange((prev) => ({ ...prev, amenities: false, submit: true }));
   };
@@ -26,59 +31,47 @@ const AmenitiesPop = (props) => {
 
   return (
     <>
-      <Modal show={props.show.amenities}>
+      <Modal
+        show={props.show.amenities}
+        onHide={() => {
+          props.onSubmitHandler(false);
+        }}
+      >
         <Modal.Header>
-          <Modal.Title>Amenities</Modal.Title>
+          <Modal.Title className="d-flex justify-content-center">
+            Amenities
+          </Modal.Title>
         </Modal.Header>
         {/* <Form onSubmit={handleSubmit}> */}
-        <Form.Group className="mb-3">
-          <Form.Label>Add Amenities</Form.Label>
-          <Container
-            className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-            style={{ background: "#F8F8F8" }}
+        <Container className="pt-2  dashboard__wrapper">
+          <Form className="profile__form ">
+            <Form.Group className="mb-4" controlId="email">
+              <Form.Label>
+                <h5>Add Amenities</h5>
+              </Form.Label>
+              <CreatableSelect
+                isMulti
+                placeholder="Property Manager"
+                options={sort}
+                className="rounded-0"
+                styles={{ background: "#F8F8F8" }}
+              />
+              <br />
+            </Form.Group>
+          </Form>
+        </Container>
+
+        <div className="d-flex justify-content-center align-items-center my-4">
+          <Button
+            type="submit"
+            variant="primary"
+            className="w-50 rounded-pill bg-color-primary"
+            onClick={onSubmitHandler}
           >
-            <div
-              className="btn-group"
-              role="group"
-              aria-label="Button group with nested dropdown"
-            >
-              <button type="button" className="btn btn-secondary">
-                3 Beds
-              </button>
-              <button type="button" className="btn btn-secondary">
-                2 Bathrooms
-              </button>
-
-              <div className="btn-group" role="group">
-                <button
-                  id="btnGroupDrop1"
-                  type="button"
-                  className="btn btn-secondary dropdown-toggle"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Add more
-                </button>
-                <div className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  {/* <a className="dropdown-item" href="#">Dropdown link</a>
-      <a className="dropdown-item" href="#">Dropdown link</a> */}
-                </div>
-              </div>
-            </div>
-          </Container>
-
-          <div className="d-flex justify-content-center align-items-center my-4">
-            <Button
-              type="submit"
-              variant="primary"
-              className="w-50 rounded-pill bg-color-primary"
-              onClick={onSubmitHandler}
-            >
-              Submit
-            </Button>
-          </div>
-        </Form.Group>
+            Submit
+          </Button>
+        </div>
+        {/* </Form.Group> */}
         {/* </Form> */}
       </Modal>
     </>

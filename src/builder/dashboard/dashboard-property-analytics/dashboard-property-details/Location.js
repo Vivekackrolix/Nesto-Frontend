@@ -19,7 +19,8 @@ const Location = () => {
               <img src={market} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>
-              Mini Market<br></br>200m
+              Mini Market<br></br>
+              <span style={{ opacity: "0.5" }}>200m</span>
             </span>
           </div>
           <div className="text-center d-flex flex-column">
@@ -27,7 +28,8 @@ const Location = () => {
               <img src={canteen} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>
-              Canteen<br></br>200m
+              Canteen<br></br>
+              <span style={{ opacity: "0.5" }}>200m</span>
             </span>
           </div>
           <div className="text-center d-flex flex-column">
@@ -35,7 +37,8 @@ const Location = () => {
               <img src={hospital} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>
-              Hospital<br></br>200m
+              Hospital<br></br>
+              <span style={{ opacity: "0.5" }}>200m</span>
             </span>
           </div>
           <div className="text-center d-flex flex-column">
@@ -43,7 +46,8 @@ const Location = () => {
               <img src={station} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>
-              Station <br></br> 200m
+              Station <br></br>
+              <span style={{ opacity: "0.5" }}> 200m</span>
             </span>
           </div>
         </div>

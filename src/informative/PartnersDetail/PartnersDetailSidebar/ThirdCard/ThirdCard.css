@@ -8,14 +8,14 @@
     height: 160px;
 }
 .third-card__p-1 {
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     font-size: 28px;
     line-height: 38px;
     padding-bottom: 15px;
     font-weight: 300;
 }
 .third-card__span-1 {
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     font-weight: 600;
 }
 .third-card__link {
@@ -29,7 +29,7 @@
 }
 .third-card__span-2 {
     display: block;
-    color: var(--cold-steel-color);
+    color: var(--cold-black-color);
     padding-top: 8px;
     font-weight: 300;
 }

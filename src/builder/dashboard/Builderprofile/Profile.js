@@ -7,7 +7,11 @@ import {
   FiBookOpen,
   FiHelpCircle,
   FiPlus,
+  FiUserCheck,
 } from "react-icons/fi";
+import { BiTransferAlt } from "react-icons/bi";
+import { HiOutlineUserGroup } from "react-icons/hi";
+import { CgNotes } from "react-icons/cg";
 import "./Profile.css";
 import { RiArrowRightSLine, RiPencilFill } from "react-icons/ri";
 import { BsBoxArrowRight } from "react-icons/bs";
@@ -20,17 +24,18 @@ import CardWrapper from "./card-wrapper/CardWrapper";
 import Support from "./support/Support";
 import DashboardHeader from "../header/DashboardHeader";
 import Footer from "../Footer/Footer";
+import PastProperty from "./Past Property/PastProperty";
+import { MdSupportAgent } from "react-icons/md";
 
 const tabs = [
-  { title: "Personal Details", icon: <FiUser /> },
-  // { title: "Queries History", icon: <FiClipboard /> },
-  // { title: "Transaction History", icon: <FiClock /> },
-  { title: "Transaction", icon: <FiClipboard /> },
-  { title: "Manage Roles", icon: <FiClock /> },
-  // { title: "Past Properties", icon: <FiClock /> },
-  { title: "Terms & Conditions", icon: <FiBookOpen /> },
-  { title: "Support", icon: <FiHelpCircle /> },
-  { title: "Raise Query", icon: <FiPlus /> },
+  { title: "Personal Details", icon: <FiUser color="#000000" /> },
+
+  { title: "Transaction", icon: <BiTransferAlt color="#000000" /> },
+  { title: "Manage Roles", icon: <HiOutlineUserGroup color="#000000" /> },
+  { title: "Past Properties", icon: <FiClock color="#000000" /> },
+  { title: "Terms & Conditions", icon: <CgNotes color="#000000" /> },
+  { title: "Support", icon: <MdSupportAgent color="#000000" /> },
+  { title: "Raise Query", icon: <FiHelpCircle color="#000000" /> },
 ];
 
 const profileSidebarNavContent = [
@@ -43,6 +48,9 @@ const profileSidebarNavContent = [
   },
   {
     element: <QueriesHistory />,
+  },
+  {
+    element: <PastProperty />,
   },
 
   {
@@ -105,13 +113,14 @@ const ProfilePage = () => {
                       >
                         <div className="d-flex align-items-center gap-2">
                           <div className="profile__sidebar__wrapper__icon shadow bg-white d-flex justify-content-center align-items-center">
-                            <img
+                            {/* <img
                               src={`/assets/profile-page/profile-icon-${
                                 index + 1
                               }.svg`}
                               alt="profile icon"
                               className="img-fluid"
-                            />
+                            /> */}
+                            {tab.icon}
                           </div>
 
                           {tab.title}
