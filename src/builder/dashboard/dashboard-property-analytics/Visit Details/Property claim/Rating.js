@@ -1,81 +1,163 @@
+import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
-import { RiStarSFill } from "react-icons/ri";
-
+// import { RiStarSFill } from "react-icons/ri";
+import "./Rating.css";
 const Rating = (props) => {
+  const [rating, setRating] = useState(0);
+  const [over, setOver] = useState(0);
+  const [hover, setHover] = useState(0);
+
   const submitHandler = () => {
     props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
   };
-  //   const placeholder = "Write a Review";
+
   return (
     <>
-      <Modal show={props.show} onHide={submitHandler}>
+      <Modal
+        size="sm"
+        show={props.show}
+        onHide={submitHandler}
+        // onHide={() => {
+        //   props.submitHandler(false);
+        // }}
+      >
         <Modal.Header className="justify-content-center">
           <Modal.Title>Rating</Modal.Title>
         </Modal.Header>
         <br />
-        <Form.Group className="mb-3">
-          <Form.Label className="d-flex justify-content-between">
-            Over All Rating
-            {Array.from({ length: 5 }, (_, index) => (
-              <RiStarSFill color="#FFB630" />
-            ))}
-          </Form.Label>
-          <br />
-          <Form.Label className="d-flex justify-content-between">
-            Builder Behaviour{" "}
-            {Array.from({ length: 5 }, (_, index) => (
-              <RiStarSFill color="#FFB630" />
-            ))}
-          </Form.Label>
-          <br />
-          <Form.Label className="d-flex justify-content-between">
-            Builder Punctuality{" "}
-            {Array.from({ length: 5 }, (_, index) => (
-              <RiStarSFill color="#FFB630" />
-            ))}
-          </Form.Label>
-          <br />
-          <Form.Label className="d-flex justify-content-between">
-            Builder Clealiness{" "}
-            {Array.from({ length: 5 }, (_, index) => (
-              <RiStarSFill color="#FFB630" />
-            ))}
-          </Form.Label>
-          <br />
-          <Form.Label className="d-flex justify-content-between">
-            Rate the Satisfaction{" "}
-            {Array.from({ length: 5 }, (_, index) => (
-              <RiStarSFill color="#FFB630" />
-            ))}
-          </Form.Label>
-          <br />
+        <Container className=" dashboard__wrapper">
+          <Form.Group className="mb-3">
+            <Form.Label className="d-flex justify-content-between">
+              Over All Rating
+              {/* {Array.from({ length: 5 }, (_, index) => (
+                <RiStarSFill color="#FFB630" />
+              ))} */}
+              <div className="star-rating">
+                {[...Array(5)].map((star, index) => {
+                  index += 1;
+                  return (
+                    <button
+                      type="button"
+                      key={index}
+                      className={index <= (hover || rating) ? "on" : "off"}
+                      onClick={() => setRating(index)}
+                      onMouseEnter={() => setHover(index)}
+                      onMouseLeave={() => setHover(rating)}
+                    >
+                      <span className="star">&#9733; </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </Form.Label>
+            <br />
+            <Form.Label className="d-flex justify-content-between">
+              Builder Behaviour{" "}
+              <div className="star-rating">
+                {[...Array(5)].map((star, index) => {
+                  index += 1;
+                  return (
+                    <button
+                      type="button"
+                      key={index}
+                      className={index <= (hover || rating) ? "on" : "off"}
+                      onClick={() => setRating(index)}
+                      onMouseEnter={() => setHover(index)}
+                      onMouseLeave={() => setHover(rating)}
+                    >
+                      <span className="star">&#9733; </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </Form.Label>
+            <br />
+            <Form.Label className="d-flex justify-content-between">
+              Builder Punctuality{" "}
+              <div className="star-rating">
+                {[...Array(5)].map((star, index) => {
+                  index += 1;
+                  return (
+                    <button
+                      type="button"
+                      key={index}
+                      className={index <= (hover || rating) ? "on" : "off"}
+                      onClick={() => setRating(index)}
+                      onMouseEnter={() => setHover(index)}
+                      onMouseLeave={() => setHover(rating)}
+                    >
+                      <span className="star">&#9733; </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </Form.Label>
+            <br />
+            <Form.Label className="d-flex justify-content-between">
+              Builder Clealiness{" "}
+              <div className="star-rating">
+                {[...Array(5)].map((star, index) => {
+                  index += 1;
+                  return (
+                    <button
+                      type="button"
+                      key={index}
+                      className={index <= (hover || rating) ? "on" : "off"}
+                      onClick={() => setRating(index)}
+                      onMouseEnter={() => setHover(index)}
+                      onMouseLeave={() => setHover(rating)}
+                    >
+                      <span className="star">&#9733; </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </Form.Label>
 
-          <Container
-            className="dashboard__wrapper__filter border border-light"
-            style={{
-              background: "#F8F8F8",
-              width: "497.81px",
-              height: " 223.31px",
-              left: "340.04px",
-              top: "646.76px",
-            }}
-            // placeholder="Write a Review"
-          >
-            {/* <form action="">
-              <input type="text" placeholder={placeholder} />
-            </form> */}
-          </Container>
+            <br />
+            <Form.Label className="d-flex justify-content-between">
+              Rate the Satisfaction{" "}
+              <div className="star-rating">
+                {[...Array(5)].map((star, index) => {
+                  index += 1;
+                  return (
+                    <button
+                      type="button"
+                      key={index}
+                      className={index <= (hover || rating) ? "on" : "off"}
+                      onClick={() => setRating(index)}
+                      onMouseEnter={() => setHover(index)}
+                      onMouseLeave={() => setHover(rating)}
+                    >
+                      <span className="star">&#9733; </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </Form.Label>
+            <br />
 
-          <div className="d-flex justify-content-center align-items-center my-4">
-            <Button
-              variant="primary"
-              className="w-50 rounded-pill bg-color-primary"
-              onClick={submitHandler}
-            >
-              Submit
-            </Button>
-          </div>
-        </Form.Group>
+            <Form.Control
+              className="rounded-0 d-flex justify-content-start"
+              type="text"
+              placeholder="Lorem Ipsum"
+              style={{
+                fontFamily: "Bahnschrift",
+                height: "241px",
+              }}
+            />
+
+            <div className="d-flex justify-content-center align-items-center my-4">
+              <Button
+                variant="primary"
+                className="w-100 rounded-pill bg-color-primary"
+                onClick={submitHandler}
+              >
+                Submit
+              </Button>
+            </div>
+          </Form.Group>
+        </Container>
       </Modal>
     </>
   );

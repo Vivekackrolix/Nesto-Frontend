@@ -1,11 +1,11 @@
-import React, { useState, Children } from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
-import './DashboardTabs.css';
+import React, { useState, Children } from "react";
+import { Tabs, Tab } from "react-bootstrap";
+import "./DashboardTabs.css";
 
 const DashboardTabs = ({ children, tabsKey, activeState }) => {
   const [key, setKey] = useState(activeState);
 
-  const filteredChildren = Children.toArray(children).filter(child => {
+  const filteredChildren = Children.toArray(children).filter((child) => {
     const { props } = child;
     return props.tabKey === key;
   });
@@ -14,7 +14,7 @@ const DashboardTabs = ({ children, tabsKey, activeState }) => {
     <Tabs
       id="dashboard-tabs"
       activeKey={key}
-      onSelect={k => setKey(k)}
+      onSelect={(k) => setKey(k)}
       className="mb-3 p-5 rounded flex-column flex-sm-row"
     >
       {tabsKey.map((item, index) => (
