@@ -18,6 +18,7 @@ import RaiseQuery from './raise-query/RaiseQuery';
 import CardWrapper from './card-wrapper/CardWrapper';
 import Support from './support/Support';
 import Preferences from './preferences/Preferences';
+import Notification from './notification/Notification';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -40,8 +41,8 @@ const profileSidebarNavContent = [
     title: 'Preferences',
   },
   {
-    element: <TermsConditions />,
-    title: 'Terms & Conditions',
+    element: <Notification notification />,
+    title: 'Notification',
   },
   {
     element: <Support />,
