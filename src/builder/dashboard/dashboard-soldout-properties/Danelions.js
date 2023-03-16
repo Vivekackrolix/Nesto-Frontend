@@ -5,8 +5,12 @@ import sky from "../../Images/Sky.png";
 // import building from "../../Images/building.png";
 import editbutton from "../../Images/editbutton.png";
 import buld from "../../Images/buld.png";
+import { useState } from "react";
 
 const Danelions = () => {
+  const [rating, setRating] = useState(0);
+  // const [over, setOver] = useState(0);
+  const [hover, setHover] = useState(0);
   return (
     <>
       <Container
@@ -28,9 +32,26 @@ const Danelions = () => {
           </div>
           <div className="p-2">
             <h3>Sky Danelions Apartment</h3>
-            {Array.from({ length: 5 }, (_, index) => (
+            {/* {Array.from({ length: 5 }, (_, index) => (
               <RiStarSFill color="#FFB630" />
-            ))}
+            ))} */}
+            <div className="star-rating">
+              {[...Array(5)].map((star, index) => {
+                index += 1;
+                return (
+                  <button
+                    type="button"
+                    key={index}
+                    className={index <= (hover || rating) ? "on" : "off"}
+                    onClick={() => setRating(index)}
+                    onMouseEnter={() => setHover(index)}
+                    onMouseLeave={() => setHover(rating)}
+                  >
+                    <span className="star">&#9733; </span>
+                  </button>
+                );
+              })}
+            </div>
             <p style={{ color: "#7D7F88" }}>
               Luxury Apartment in Sector-29,Gurugram
             </p>

@@ -7,6 +7,9 @@ import Rating from "./Property claim/Rating";
 import Report from "./Property claim/Report";
 
 const PromotedVisitItem = (props) => {
+  const [rating, setRating] = useState(0);
+
+  const [hover, setHover] = useState(0);
   const [abuse, setAbuse] = useState(false);
   const [show, setShow] = useState({
     rating: false,
@@ -35,9 +38,26 @@ const PromotedVisitItem = (props) => {
       </Col>
 
       <Col onClick={onLocationClick}>
-        {Array.from({ length: 5 }, (_, index) => (
+        {/* {Array.from({ length: 5 }, (_, index) => (
           <RiStarSFill color="#FFB630" />
-        ))}
+        ))} */}
+        <div className="star-rating">
+          {[...Array(5)].map((star, index) => {
+            index += 1;
+            return (
+              <button
+                type="button"
+                key={index}
+                className={index <= (hover || rating) ? "on" : "off"}
+                onClick={() => setRating(index)}
+                onMouseEnter={() => setHover(index)}
+                onMouseLeave={() => setHover(rating)}
+              >
+                <span className="star">&#9733; </span>
+              </button>
+            );
+          })}
+        </div>
         <Rating show={show.rating} onChange={setShow} />
       </Col>
     </Row>

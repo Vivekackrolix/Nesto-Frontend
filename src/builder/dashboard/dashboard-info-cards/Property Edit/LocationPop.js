@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
-
+import CreatableSelect from "react-select/creatable";
+const sort = [
+  { value: "Hospital (200 m)", label: "Hospital (200 m)" },
+  { value: "Canteen (200 m)", label: "Canteen (200 m)" },
+];
 const LocationPop = (props) => {
   const submitHandler = () => {
     props.onChange((prev) => ({ ...prev, location: false, submit: true }));
@@ -11,54 +15,33 @@ const LocationPop = (props) => {
         <Modal.Header>
           <Modal.Title>Location Advantages</Modal.Title>
         </Modal.Header>
-        <Form.Group className="mb-3">
-          <Form.Label>Add Location</Form.Label>
-          <Container
-            className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-            style={{ background: "#F8F8F8" }}
+        <Container className="pt-2  dashboard__wrapper">
+          <Form className="profile__form ">
+            <Form.Group className="mb-4" controlId="email">
+              <Form.Label>
+                <h5>Add Locations</h5>
+              </Form.Label>
+              <CreatableSelect
+                isMulti
+                placeholder="Property Manager"
+                options={sort}
+                className="rounded-0"
+                styles={{ background: "#F8F8F8" }}
+              />
+              <br />
+            </Form.Group>
+          </Form>
+        </Container>
+
+        <div className="d-flex justify-content-center align-items-center my-4">
+          <Button
+            variant="primary"
+            className="w-50 rounded-pill bg-color-primary"
+            onClick={submitHandler}
           >
-            <div
-              className="btn-group"
-              role="group"
-              aria-label="Button group with nested dropdown"
-            >
-              <button
-                type="button"
-                className="btn btn-secondary"
-                style={{ background: "#EFEFEF" }}
-              >
-                Hospital(200m)
-              </button>
-
-              <div className="btn-group" role="group">
-                <button
-                  id="btnGroupDrop1"
-                  type="button"
-                  className="btn btn-secondary dropdown-toggle"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Add more
-                </button>
-                <div
-                  className="dropdown-menu"
-                  aria-labelledby="btnGroupDrop1"
-                ></div>
-              </div>
-            </div>
-          </Container>
-
-          <div className="d-flex justify-content-center align-items-center my-4">
-            <Button
-              variant="primary"
-              className="w-50 rounded-pill bg-color-primary"
-              onClick={submitHandler}
-            >
-              Submit
-            </Button>
-          </div>
-        </Form.Group>
+            Submit
+          </Button>
+        </div>
       </Modal>
     </>
   );
