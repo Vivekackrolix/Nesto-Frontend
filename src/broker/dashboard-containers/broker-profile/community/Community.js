@@ -1,4 +1,6 @@
+import { useSelector } from 'react-redux';
 import SearchFilter from '../../../../components/search-filter/SearchFilter';
+import MyQuestionsMyAnswersBtn from './my-questions-my-answers/MyQuestionsMyAnswersBtn';
 import UserInfoAndControlsCard from './user-info-and-controls/UserInfoAndControlsCard';
 
 const userInfoAndControlsCardData = [
@@ -26,9 +28,11 @@ const userInfoAndControlsCardData = [
 ];
 
 const Community = () => {
+  const { myQuestionsMyAnswers } = useSelector(state => state.community);
   return (
     <div className="support__community">
       <SearchFilter addBtn />
+      <MyQuestionsMyAnswersBtn />
       {userInfoAndControlsCardData.map((user, index) => (
         <UserInfoAndControlsCard {...user} key={index} />
       ))}
