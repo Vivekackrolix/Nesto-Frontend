@@ -9,10 +9,10 @@ import Testimonials from '../testimonials/Testimonials';
 import Stats from '../stats/Stats';
 import Aos from 'aos';
 import Banner from './Banner/Banner';
-
 import OurPartner from '../OurPartner/OurPartner';
 import HowWork from '../../AboutUs/HowWork/HowWork';
 import Footer from '../../../components/footer/Footer'
+import HomeVideo from '../HomeVideo/HomeVideo';
 
 
 const HomeBanner = () => {
@@ -21,36 +21,20 @@ const HomeBanner = () => {
     }, [])
     return (
         <>
-            <div style={{overflowX: 'hidden'}}>
+            <div style={{ overflowX: 'hidden' }}>
                 <InformativeNavbar />
-                {/* Banner */}
                 <Banner />
-                {/* About Us */}
                 <AboutUs />
-                {/* Stats */}
                 <Stats />
-                {/* Residency */}
                 <Residency />
-                {/* ChooseUs */}
-
-                {/* <ChooseUs /> */}
-                {/* Partners */}
-                <OurPartner/>
-
+                <HomeVideo />
                 <ChooseUs />
-                {/* How Nesto Work */}
                 <HowWork />
-
-                {/* GetStarted */}
+                <OurPartner />
                 <GetStarted />
-                {/* News */}
                 <News />
-                {/* Testimonials */}
                 <Testimonials />
-
-                {/* footer */}
                 <Footer />
-
             </div>
         </>
     )

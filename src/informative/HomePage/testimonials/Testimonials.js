@@ -131,11 +131,13 @@ const Testimonial = () => {
                                                         <span className="test-name justify-content-end"> {obj.testname}</span>
                                                         <span className="test-company justify-content-end">CEO of Google</span>
                                                         <div className="d-flex justify-content-end">
-                                                            <FaStar fill="#FFB630" size={16} />
-                                                            <FaStar fill="#FFB630" size={16} />
-                                                            <FaStar fill="#FFB630" size={16} />
-                                                            <FaStar fill="#FFB630" size={16} />
-                                                            <AiOutlineStar color="#FFB630" size={18} />
+                                                            {Array.from({ length: 5 }, (_, index) => {
+                                                                if (index < 4) {
+                                                                    return <FaStar key={index} fill="#FFB630" size={16} />;
+                                                                }
+                                                                return <AiOutlineStar color="#FFB630" size={18} />
+                                                            })}
+
                                                         </div>
                                                     </div>
                                                     <img className="person-image" src="./assets/person.png" alt="" />
