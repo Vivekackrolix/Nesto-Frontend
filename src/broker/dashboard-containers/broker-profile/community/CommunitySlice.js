@@ -4,6 +4,7 @@ export const communitySlice = createSlice({
   name: 'community',
   initialState: {
     myQuestionsMyAnswers: false,
+    questionDetails: false,
     popup: {
       isOpen: false,
       message: '',
@@ -28,6 +29,10 @@ export const communitySlice = createSlice({
     hideMyQuestionsMyAnswers: state => {
       state.myQuestionsMyAnswers = false;
     },
+
+    showQuestionDetailsPage: state => {
+      state.questionDetails = true;
+    },
   },
 });
 
@@ -36,6 +41,7 @@ export const {
   closePopup,
   showMyQuestionsMyAnswers,
   hideMyQuestionsMyAnswers,
+  showQuestionDetailsPage,
 } = communitySlice.actions;
 
 export default communitySlice.reducer;
