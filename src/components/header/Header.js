@@ -1,12 +1,16 @@
-import { useState } from 'react';
-import { IoMdArrowDropdown } from 'react-icons/io';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import './Header.css';
+import { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import "./Header.css";
 const Header = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <Navbar expand="lg" className="shadow-sm py-3 dashboard__navbar" style={{ background: '#ECF7FF' }}>
+    <Navbar
+      expand="lg"
+      className="shadow-sm py-3 dashboard__navbar"
+      style={{ background: "#ECF7FF" }}
+    >
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -15,6 +19,7 @@ const Header = () => {
             className="login__header__img me-auto"
           />
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto d-flex align-items-center">

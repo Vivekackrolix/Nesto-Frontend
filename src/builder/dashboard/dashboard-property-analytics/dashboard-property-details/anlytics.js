@@ -59,40 +59,6 @@ const Anlytics = () => {
         </div>
       </Container>
       <br></br>
-      <br></br>
-      <h3 style={{ fontFamily: "Bahnschrift" }}>Floor Plane & Pricing</h3>
-      <p style={{ fontFamily: "Bahnschrift" }}>in Arocon Rainbow</p>
-      <div
-        className="d-flex rounded-pill gap-4 p-2    col"
-        style={{ fontFamily: "Bahnschrift" }}
-      >
-        <button type="button" className="btn btn-primary rounded-pill">
-          All
-        </button>
-        <button type="button" className="btn btn-light rounded-pill">
-          2 BHK
-        </button>
-        <button type="button" className="btn btn-light rounded-pill">
-          3 BHK
-        </button>
-        <button type="button" className="btn btn-light rounded-pill">
-          4 BHK
-        </button>
-        <button type="button" className="btn btn-light rounded-pill">
-          5 BHK
-        </button>
-        <button type="button" className="btn btn-light rounded-pill">
-          6 BHK
-        </button>
-        <button type="button" className="btn btn-light rounded-pill">
-          7 BHK
-        </button>
-      </div>
-      <div className="d-flex">
-        <img src={Two} className="rounded my-3" alt="2-BHK" />
-        <img src={Three} className="rounded my-3" alt="3-BHK" />
-        <img src={Three} className="rounded my-3" alt="3-BHK" />
-      </div>
     </>
   );
 };
