@@ -7,12 +7,12 @@ export default function Partner(){
         <div className="container my-4">
           <div className="row flex gx-5">
             <div className="col-md-4  text-center">
-              <div className="shadow py-5 partner-card">
+              <div className="shadow py-5 partner-card" >
                 <div>
                   <img className="logo-img" src="./assets/logo.png" alt="" />
                 </div>
-                <div className="text-bold mt-0">
-                  <h3>Puri Construction</h3>
+                <div className="mt-0">
+                  <span className='partner-heading'>Puri Construction</span>
                 </div>
                 <div>
                   <p className="listing">134 properties listed</p>
@@ -31,8 +31,8 @@ export default function Partner(){
                 <div>
                   <img className="logo-img" src="./assets/logo.png" alt="" />
                 </div>
-                <div className="text-bold mt-0">
-                  <h3>Puri Construction</h3>
+                <div className=" mt-0">
+                  <span className='partner-heading'>Puri Construction</span>
                 </div>
                 <div>
                   <p className="listing">134 properties listed</p>
@@ -51,8 +51,9 @@ export default function Partner(){
                 <div>
                   <img className="logo-img" src="./assets/logo.png" alt="" />
                 </div>
-                <div className="text-bold mt-0">
-                  <h3>Puri Construction</h3>
+                <div className="mt-0">
+                                <span className='partner-heading'>Puri Construction</span>
+
                 </div>
                 <div>
                   <p className="listing">134 properties listed</p>

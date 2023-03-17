@@ -3,8 +3,19 @@ max-width: 133px;
 max-height: 133px;
 }
 .listing{
-    color: #278FD9;
+color: #278FD9;
+font-style: normal;
+font-weight: 350;
+font-size: 20.64px;
 }
-.partner-card{
-    
+.partner-card:hover{
+ transform: scale(1.05);
+ border: 1px solid var(--primary-color);
+}
+.partner-heading{
+font-style: normal;
+font-weight: 700;
+font-size: 28.65px;
+text-align: center;
+color: #282431;
 }
