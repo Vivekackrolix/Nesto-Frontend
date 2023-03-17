@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import Heading from "../../HomePage/heading/Heading";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import './OurPartner.css'
 
 function SampleNextArrow(props) {
@@ -157,15 +156,15 @@ const OurPartner = () => {
         ],
     };
     return (
-      <div className="relative pb-16 pt-6 space-y-8">
+      <div className="our-partner">
         <div className="">
           <Heading
             title="Our Partners"
             sub="The Companies That Represent Us."
           />
         </div>
-        <div className="my-5 px-5 PartnerSlider d-flex">
-          <Slider {...settings} className="slider d-flex gap-2">
+        <div className="my-5 px-5 d-flex">
+          <Slider {...settings} className="partner-slider d-flex gap-2">
             {review.map((obj, e) => {
               return (
                 <div className="px-4" key={e}>
