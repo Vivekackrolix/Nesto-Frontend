@@ -1,60 +1,56 @@
-/* .building-image{
-    height: 500px;
-    width: 500px;
-} */
-body {
-    font-family: Bahnschrift;
+.partners {
+    background: var(--lite-skyblue);
     overflow-x: hidden;
+    position: relative !important;
+    margin-bottom: 8%;
 }
 
-.banner-body {
-    background-color: #E0F2FF;
-    overflow-x: hidden;
+.partners-row {
+    display: flex;
+    align-items: center;
 }
 
-.image-div {
-    /* position: absolute; */
+.partners-col-1 {
+    padding-left: 9%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-image {
-    position: relative;
-    left: 50px;
+.partners-col-2 {
+    background: url(../../../../public/assets/informative/partnerbuilding.png);
+    height: 600px;
+    background-size: cover;
+    background-position: center;
 }
 
-.banner-heading {
-    font-family: Bahnschrift;
-    line-height: 47.5px;
-    color: black;
+.partners-h4 {
     font-weight: 700;
-    padding-right: 50px;
+    font-size: 33px;
+    line-height: 50px;
 }
 
-.banner-content {
-    text-align: left;
-    padding: 150px 70px;
-
-}
-
-.banner-description {
-    line-height: 25.7px;
+.partners-p {
     font-weight: 300;
-    font-size: 15.19px;
-    padding: 30px 5px;
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--silver-surfer);
+    width: 70%;
+    margin-bottom: 24px;
 }
 
-.banner-button {
-    background-color: #278FD9;
-    color: #ffff;
-    padding: 8px 20px;
-    border-radius: 6px;
+.partners-link {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: var(--color-white);
+    padding: 9px 45px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 8px;
 }
 
-
-
-.scan {
-    margin-left: 50px;
-}
-
-.dot-curve {
-    position: relative;
+.partners-link:hover {
+    background: var(--primary-color);
+    color: var(--color-white);
 }

@@ -5,16 +5,16 @@ import CopyrightText from './CopyrightText';
 import './Footer.css';
 
 const footerLinks = [
-  { companyInfo: ['About us', 'Category', 'FAQ', 'Blog', 'Contact Us'] },
-  {
-    quickLink: [
-      'Terms & Condition',
-      'Terms of Use',
-      'Privacy Policy',
-      'Help',
-      'Support',
-    ],
-  },
+  { companyInfo: [{ link: 'About us', to: '/about-us' }, { link: 'Category', to: '/' }, { link: 'FAQ', to: '/faq' }, { link: 'Blog', to: '/blog-list' }, { link: 'Contact us', to: '/contact-us' }] },
+  // {
+  //   quickLink: [
+  //     'Terms & Condition',
+  //     'Terms of Use',
+  //     'Privacy Policy',
+  //     'Help',
+  //     'Support',
+  //   ],
+  { quickLink: [{ link: 'Terms & Condition', to: '/terms-condition' }, { link: 'Terms of Use', to: '/' }, { link: 'Privacy Policy', to: '/privacy-policy' }, { link: 'Help', to: '/' }, { link: 'Support', to: '/contact-us' }] },
 ];
 
 const Footer = () => {
@@ -34,22 +34,23 @@ const Footer = () => {
           <Col sm={12} lg={3}>
             <h5 className="fw-bold mt-sm-5 my-4 my-lg-0">Company Info</h5>
             <ul className="list-unstyled text-white mt-3">
-              {footerLinks[0].companyInfo.map((ftLink, index) => (
+              {footerLinks[0].companyInfo.map(({ link, to }, index) => (
                 <li key={index}>
-                  <Link className="fw-light" to="/">
-                    {ftLink}
+                  <Link className="fw-light" to={to}>
+                    {link}
                   </Link>
                 </li>
               ))}
             </ul>
           </Col>
+
           <Col sm={12} lg={3}>
             <h5 className="fw-bold">Quick Link</h5>
             <ul className="list-unstyled mt-3">
-              {footerLinks[1].quickLink.map((ftLink, index) => (
+              {footerLinks[1].quickLink.map(({link, to}, index) => (
                 <li key={index}>
-                  <Link className="fw-light" to="/">
-                    {ftLink}
+                  <Link className="fw-light" to={to}>
+                    {link}
                   </Link>
                 </li>
               ))}
