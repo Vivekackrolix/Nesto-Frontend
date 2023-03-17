@@ -27,6 +27,7 @@ const HomeBanner = () => {
                 <Stats />
                 <Residency />
                 <ChooseUs />
+                <HomeVideo/>
                 <HowWork />
                 <OurPartner />
                 <GetStarted />
