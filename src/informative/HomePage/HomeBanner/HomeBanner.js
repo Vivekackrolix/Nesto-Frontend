@@ -12,7 +12,6 @@ import Banner from './Banner/Banner';
 import OurPartner from '../OurPartner/OurPartner';
 import HowWork from '../../AboutUs/HowWork/HowWork';
 import Footer from '../../../components/footer/Footer'
-import HomeVideo from '../HomeVideo/HomeVideo';
 
 
 const HomeBanner = () => {

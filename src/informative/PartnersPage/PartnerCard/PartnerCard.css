@@ -1,0 +1,36 @@
+.partner-card {
+    margin: 20px auto 55px auto;
+}
+
+.partner-card-div {
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 2px rgba(191, 191, 191, .2);
+    text-align: center;
+    padding: 40px 0;
+    margin: 0 2% 10% 2%;
+    transform: scale(1);
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+.partner-card-div:hover {
+    transform: scale(1.05);
+}
+
+.partner-card-heading {
+    font-weight: 700;
+    font-size: 28px;
+    display: block;
+    margin-top: 12px;
+}
+
+.partner-card-span {
+    font-weight: 350;
+    font-size: 21px;
+    color: var(--primary-color);
+    margin-top: 6px;
+    display: block;
+}
+
+.partner-star-div {
+    margin-top: 19px;
+}
