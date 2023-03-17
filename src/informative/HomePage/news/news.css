@@ -1,47 +1,71 @@
-.top-body{
-    background-image: url('../../../../public/assets/blocks.png');
+.news {
+    background-image: url('../../../../public/assets/informative/aboutUsImg2.png');
+    background-size: cover;
+    padding-top: 3%;
 }
-.news-heading{
-    font-family: 'Bahnschrift';
-        font-style: normal;
-        font-weight: 350;
-        font-size: 23.45px;
-        line-height: 30px;
-        /* or 129% */
-    
-    
-        color: #282431;
+
+.news-container {
+    margin: 23px auto 120px auto;
 }
-.news-desc{
-    font-family: 'Bahnschrift';
-        font-style: normal;
-        font-weight: 350;
-        font-size: 14.2647px;
-        line-height: 23px;
-        /* or 161% */
-    
-    
-        color: #282431;
-    
-        opacity: 0.5;
-}
-.news-image{
-    max-width: 100%;
-}
-.news-box{
-    max-width: 380px;
+
+.news-box {
+    width: 100%;
+    /* padding-bottom: 20px; */
     border-radius: 8px;
+    box-shadow: 0px 0px 15px 2px rgba(191, 191, 191, .2);
 }
-.date{
+
+.news-image {
+    width: 100%;
+}
+
+.news-box-2 {
+    padding: 18px 20px 30px 20px;
+    margin-bottom: 30px;
+}
+
+.news-date {
+    display: flex;
+    align-items: end;
+}
+.date-icon {
+    font-size: 22px;
+    color: var(--cold-black-color);
+}
+.news-date-span {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--cold-black-color);
+    margin-left: 2px;
+}
+
+.news-heading {
     font-family: 'Bahnschrift';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 12.4277px;
-        line-height: 30px;
-        /* or 244% */
-    
-    
-        color: #282431;
-    
-        opacity: 0.8;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 24px;
+    padding-top: 14px;
+    line-height: 32px;
+    color: var(--cold-black-color);
+}
+
+.news-desc {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--gray-color);
+    line-height: 24px;
+    margin-bottom: 23px;
+}
+
+.news-btn {
+    background: var(--color-white);
+    border: 1px solid var(--primary-color);
+    padding: 10px 28px;
+    font-weight: 350;
+    border-radius: 6px;
+    transition: all .3s ease-in;
+}
+.news-btn:hover {
+    color: var(--color-white);
+    background: var(--primary-color);
 }

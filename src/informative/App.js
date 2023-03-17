@@ -14,10 +14,12 @@ import BlogDetailMain from './BlogDetail.js/BlogDetailMain';
 import AboutUsMain from './AboutUs/AboutUsMain';
 import Faq from './Faq/Faq';
 import HomeBanner from './HomePage/HomeBanner/HomeBanner';
+import ScrollToTop from '../dsa/components/ScrollToTop';
 
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path='/partners/details' element={<PartnersDetailsMain />} />
         <Route path='/contact-us' element={<ContactUsMain />} />

@@ -52,7 +52,7 @@ const AboutUs = () => {
                                 work for us in more than 70 countries all over the</span>
                         </div>
                         <div className='mt-5 mb-2'>
-                            <Link to='/' className='about-us-read-more'>Read More</Link>
+                            <Link to='/about-us' className='about-us-read-more'>Read More</Link>
                         </div>
                     </div>
                 </div>

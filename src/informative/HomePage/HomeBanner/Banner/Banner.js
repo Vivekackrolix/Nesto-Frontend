@@ -19,7 +19,7 @@ const Banner = () => {
                                 <hr className='banner-hr' />
                                 <p className='banner-p'>Broker Network app is a suite of services specifically designed for Indian real
                                     estate brokers and developers to maximize their business.</p>
-                                <Link to='/' className='banner-link'>
+                                <Link to='/contact-us' className='banner-link'>
                                     Join Us
                                 </Link>
                             </div>
