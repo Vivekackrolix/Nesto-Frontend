@@ -1,24 +1,23 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../Images/propertyimage.png";
 import { Link } from "react-router-dom";
+import "./SoldOut.css";
 
 const SoldOut = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
-      <Card
-        className="m-3"
+      <Col md={3}
+        className="card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0"
         style={{
-          width: "22rem",
-          boxShadow: " 0px 4.64761px 20.3333px rgba(0, 0, 0, 0.07)",
-          borderRadius: "17.4597px",
+          width: "21.75rem"
         }}
       >
-        <Card.Img className="w-100" variant="" src={propertyImage} />
+        <Card.Img className="w-100" variant="top" src={propertyImage} />
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
-          <Card.Text>
-            <Row>
-              <Row>
+          
+            <div>
+              <div>
                 {" "}
                 <Link
                   style={{
@@ -27,16 +26,16 @@ const SoldOut = ({ data }) => {
                     fontSize: "1.4em",
                     textDecoration: "none",
                   }}
-                  to="/builder/home-dashboard/sold"
+                  to="/builder/home-dashboard/description"
                 >
                   Sky Danelions Apartment
                 </Link>
-              </Row>
-              <Row style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
+              </div>
+              <div style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
                 Farmhouse in Sector 63 Gurgaon
-              </Row>
-            </Row>
-            <Row className="pt-3">
+              </div>
+            </div>
+            <Row className="p-2">
               <Col>
                 <Row style={{ opacity: 0.5 }}>Unit Type</Row>
                 <Row>2BHK</Row>
@@ -50,7 +49,7 @@ const SoldOut = ({ data }) => {
                 <Row>₹ 3.94 Cr</Row>
               </Col>
             </Row>
-            <Row className="pt-3">
+            <Row className="p-2">
               <Col>
                 <Row style={{ opacity: 0.5 }}>Client Name</Row>
                 <Row>Lorem Ipsum</Row>
@@ -64,9 +63,9 @@ const SoldOut = ({ data }) => {
                 <Row>10/11/22</Row>
               </Col>
             </Row>
-          </Card.Text>
+          
         </Card.Body>
-      </Card>
+      </Col>
     );
   });
   return (
@@ -87,7 +86,7 @@ const SoldOut = ({ data }) => {
         </i>
       </div>
       {/* <div className="mt-4">{propertyListing}</div> */}
-      <div className="mt-4 row row-cols-2 justify-content-center">
+      <div className="mt-2 row justify-content-around">
         {propertyListing}
       </div>
     </Container>

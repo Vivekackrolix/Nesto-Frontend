@@ -58,7 +58,7 @@ const LoginForm = () => {
                 placeholder="Enter your phone number"
               />
               <Form.Control.Feedback type="invalid">
-                Please enter a valid email address or phone number.
+                Please enter a valid phone number.
               </Form.Control.Feedback>
               <Form.Control.Feedback type="valid">
                 Input is valid!

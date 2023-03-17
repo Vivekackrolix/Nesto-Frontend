@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 import { currencyConverter } from "../helper/currencyConverter";
 
 const RangeSlider = () => {
-  const [values, setValues] = useState([0, 160]);
+  const [values, setValues] = useState([0, 200]);
 
   const handleChange = (newValues) => {
     setValues(newValues);
@@ -12,12 +12,14 @@ const RangeSlider = () => {
 
   return (
     <Form.Group controlId="rangeSlider" className="mb-4">
-      <Form.Label className="mb-4">Loan Range</Form.Label>
+      <Form.Label className="mb-4">
+        <h5>Price Range</h5>
+      </Form.Label>
       <Range
         values={values}
         step={1}
         min={0}
-        max={160}
+        max={200}
         onChange={handleChange}
         renderTrack={({ props, children }) => (
           <div

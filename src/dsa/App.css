@@ -23,7 +23,8 @@ body {
   font-family: 'Bahnschrift';
 }
 
-a, a:hover,
+a,
+a:hover,
 a:focus {
   color: var(--primary-color);
   text-decoration: none !important;
@@ -215,7 +216,7 @@ button:active:focus {
 .text-bold {
   color: #000000;
   font-weight: 700;
-  line-height: 2.4px;
+  /* line-height: 2.4px; */
   font-size: 44.26px;
   margin-top: 15px;
 }
@@ -230,4 +231,9 @@ button:active:focus {
 }
 .astric {
   color: #ff656f;
+}
+
+.custom__card__shadow {
+  box-shadow: 0px 4.05785px 17.7531px rgba(0, 0, 0, 0.07);
+  border-radius: 13.3482px;
 }

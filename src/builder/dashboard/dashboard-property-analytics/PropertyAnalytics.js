@@ -7,11 +7,7 @@ const PropertyAnalytics = () => {
     <>
       <h3 style={{ fontFamily: "Bahnschrift" }}>Property Analytics</h3>
       <Container
-        className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-        style={{
-          boxShadow: "0px 10.7036px 46.8282px rgba(0, 0, 0, 0.07)",
-          borderRadius: "26px",
-        }}
+        className="dashboard__wrapper__filter border border-light rounded-4 shadow-sm mt-2"
       >
         <div className="p-4 d-flex justify-content-around">
           <div className="text-center d-flex flex-column">

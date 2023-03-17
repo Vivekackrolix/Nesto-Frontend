@@ -16,111 +16,112 @@ const Payment = (props) => {
 
   return (
     <>
-      <Modal show={props.show}>
+      <Modal
+        // size="lg"
+        show={props.show}
+        // onHide={() => {
+        //   props.onChange(false);
+        // }}
+      >
         <Modal.Header className="justify-content-center">
           <Modal.Title>Payment Using Below Details</Modal.Title>
         </Modal.Header>
         <br />
-        {/* <Form.Label className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"> */}
-        <h5>Pay to Account</h5>
-        <br />
-        <Form.Group className="mb-3">
-          <h5 style={{ fontFamily: "Bahnschrift" }}>Bank Name</h5>
-          <Container
-            className="dashboard__wrapper__filter"
-            style={{ background: "#F8F8F8" }}
-          >
-            <div className="p-2 d-flex justify-content-between ">
-              <h5 style={{ fontFamily: "Bahnschrift" }}>HDFC</h5>
-            </div>
-          </Container>
+        <Container className=" dashboard__wrapper">
+          {/* <Form.Label className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"> */}
+          <h5>Pay to Account</h5>
           <br />
-          <h5 style={{ fontFamily: "Bahnschrift" }}>Account No.</h5>
-          <Container
-            className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-            style={{ background: "#F8F8F8" }}
-          >
-            <div className="p-2 d-flex justify-content-between ">
-              <h5 style={{ fontFamily: "Bahnschrift" }}>3343263623</h5>
-            </div>
-          </Container>
-          <br />
-          <h5 style={{ fontFamily: "Bahnschrift" }}>IFSC Code</h5>
-          <Container
-            className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-            style={{ background: "#F8F8F8" }}
-          >
-            <div className="p-2 d-flex justify-content-between ">
-              <h5 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h5>
-            </div>
-          </Container>
-          <br />
-          <h5 style={{ fontFamily: "Bahnschrift" }}>Recipient Name</h5>
-          <Container
-            className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-            style={{ background: "#F8F8F8" }}
-          >
-            <div className="p-2 d-flex justify-content-between ">
-              <h5 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h5>
-            </div>
-          </Container>
-          <br />
-          {moreOption && (
-            <>
-              <h5 style={{ fontFamily: "Bahnschrift" }}>Transaction Date*</h5>
-              <Container
-                className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-                style={{ background: "#F8F8F8" }}
-              >
-                <div className="p-2 d-flex justify-content-between ">
-                  <h5 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h5>
-                </div>
-              </Container>
-              <br />
-
-              <h5 style={{ fontFamily: "Bahnschrift" }}>Transaction ID*</h5>
-              <Container
-                className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-                style={{ background: "#F8F8F8" }}
-              >
-                <div className="p-2 d-flex justify-content-between ">
-                  <h5 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h5>
-                </div>
-              </Container>
-              <br />
-              <h5 style={{ fontFamily: "Bahnschrift" }}>Transaction Amount*</h5>
-              <Container
-                className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-                style={{ background: "#F8F8F8" }}
-              >
-                <div className="p-2 d-flex justify-content-between ">
-                  <h5 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h5>
-                </div>
-              </Container>
-              <br />
-            </>
-          )}
-          <div className="d-flex justify-content-center align-items-center my-4">
-            {!moreOption && (
-              <Button
-                variant="primary"
-                className="w-50 rounded-pill bg-color-primary"
-                onClick={update}
-              >
-                Update Payment Status
-              </Button>
-            )}
+          <Form.Group className="mb-3">
+            <Form.Label>
+              <h5> Bank Name</h5>
+            </Form.Label>
+            <Form.Control
+              className="rounded-0"
+              type="text"
+              placeholder="HDFC"
+            />
+            <br />
+            <Form.Label>
+              <h5>Account No.</h5>
+            </Form.Label>
+            <Form.Control
+              className="rounded-0"
+              type="text"
+              placeholder="3343263623"
+            />{" "}
+            <br />
+            <Form.Label>
+              <h5>IFSC Code</h5>
+            </Form.Label>
+            <Form.Control
+              className="rounded-0"
+              type="text"
+              placeholder="Lorem Ipsum"
+            />
+            <br />
+            <Form.Label>
+              <h5>Recipient Name</h5>
+            </Form.Label>
+            <Form.Control
+              className="rounded-0"
+              type="text"
+              placeholder="Lorem Ipsum"
+            />
+            <br />
             {moreOption && (
-              <Button
-                variant="primary"
-                className="w-50 rounded-pill bg-color-primary"
-                onClick={submitHandler}
-              >
-                Update
-              </Button>
+              <>
+                <Form.Label>
+                  <h5>Transaction Date*</h5>
+                </Form.Label>
+                <Form.Control
+                  className="rounded-0"
+                  type="text"
+                  placeholder="Lorem Ipsum"
+                />
+                <br />
+
+                <Form.Label>
+                  <h5>Transaction ID*</h5>
+                </Form.Label>
+                <Form.Control
+                  className="rounded-0"
+                  type="text"
+                  placeholder="Lorem Ipsum"
+                />
+                <br />
+                <Form.Label>
+                  <h5>Transaction Amount*</h5>
+                </Form.Label>
+                <Form.Control
+                  className="rounded-0"
+                  type="text"
+                  placeholder="Lorem Ipsum"
+                />
+                <br />
+              </>
             )}
-          </div>
-        </Form.Group>
+            <div className="d-flex justify-content-center align-items-center my-4">
+              {!moreOption && (
+                <Button
+                  variant="primary"
+                  className="w-100 rounded-pill bg-color-primary"
+                  onClick={update}
+                >
+                  Update Payment Status
+                </Button>
+              )}
+              {moreOption && (
+                <Button
+                  variant="primary"
+                  className="w-100 rounded-pill bg-color-primary"
+                  onClick={submitHandler}
+                >
+                  Update
+                </Button>
+              )}
+            </div>
+          </Form.Group>
+        </Container>
       </Modal>
     </>
   );

@@ -64,7 +64,7 @@ const App = () => {
         />
         <Route
           exact
-          path="/builder/home-dashboard/sold"
+          path="/builder/home-dashboard/description"
           element={<SoldPage />}
         />
         <Route exact path="/builder/home-dashboard" element={<HomeDashBoard />}>
