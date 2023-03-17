@@ -58,3 +58,8 @@ body {
 .dot-curve {
     position: relative;
 }
+.search-box{
+    padding: 0 60px;
+    position: relative;
+    bottom: 50px;
+}
