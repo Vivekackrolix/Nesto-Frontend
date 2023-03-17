@@ -5,7 +5,7 @@ import BrokerHome from './BrokerPage/BrokerHome/BrokerHome';
 
 import ContactUsMain from './ContactUs/ContactUsMain';
 // import Banner from './HomePage/Banner/Banner';
-import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner'
+import PartnerBanner from './PartnersPage/PartnerBanner/PartnerBanner'
 import TermsCondition from './TermsCondition/TermsCondition';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 import BlogListMain from './BlogList/BlogListMain'
