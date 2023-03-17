@@ -1,12 +1,12 @@
-import { Form, Button } from 'react-bootstrap';
-import DashboardTabs from '../dashboard-tabs/DashboardTabs';
+import { Form, Button } from "react-bootstrap";
+import DashboardTabs from "../dashboard-tabs/DashboardTabs";
 // import CreatableSelect from "react-select/creatable";
-import FileUpload from '../file-upload/FileUpload';
+import FileUpload from "../file-upload/FileUpload";
 // const options = [
 //   { value: "sector 28", label: "Sector 28" },
 //   { value: "hDFC Bank", label: "HDFC Bank" },
 // ];
-const tabKey2 = ['Personal Info', 'Bank Info'];
+const tabKey2 = ["Personal Info", "Bank Info"];
 
 // personal info
 const PersonalInfo = () => {

@@ -7,81 +7,93 @@ const SettledInvoice = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3">
-        <div className="d-flex justify-content-between ">
-          {/* <Row> */}
-          <div className="d-flex flex-grow-1">
-            {/* <Col> */}
-            <div className="p-2 rounded">
-              <img src={brocker} alt="" />
-            </div>
-            {/* </Col> */}
-            {/* <Col> */}
-            <div className="p-2">
-              <h5>Sky Danelions Apartment</h5>
-              <p
-                style={{
-                  opacity: 0.5,
-                  fontFamily: "Bahnschrift",
+        <div className="d-flex ">
+          {/* <div className="d-flex flex-grow-1"> */}
+          <img src={brocker} alt="" />
+          {/* <div className="p-2 rounded"></div> */}{" "}
+          <div className="d-flex flex-column ">
+            <div className="d-flex  justify-content-between">
+              <span className="mr-auto p-2">
+                <h5>Sky Danelions Apartment</h5>
+                <p
+                  style={{
+                    opacity: 0.5,
+                    fontFamily: "Bahnschrift",
 
-                  textDecorationLine: "underline",
-                }}
-              >
-                Sector-29,Gurugram
-              </p>
+                    textDecorationLine: "underline",
+                  }}
+                >
+                  Sector-29,Gurugram
+                </p>
+              </span>
+              <span className="p-2" style={{ color: "#8B9199" }}>
+                12/12/2022
+              </span>
             </div>
-            {/* </Col> */}
-            {/* <Col style={{ color: "#8B9199" }}> */}
-            <div className="ms-auto p-2" style={{ color: "#8B9199" }}>
-              12/12/2022
-              {/* </Col> */}
+            <div className="d-flex justify-content-between">
+              <span className="p-2">
+                <p className="" style={{ color: "#8B9199" }}>
+                  Broker Name
+                </p>
+                <p>Lorem Ipsum</p>
+              </span>
+              <span className="p-2 ">
+                <p className="" style={{ color: "#8B9199" }}>
+                  Unit Number
+                </p>
+                <p>32322132</p>
+              </span>
+              <span className="p-2">
+                <p className="" style={{ color: "#8B9199" }}>
+                  Claimed Amount
+                </p>
+                <p>RS.3.94 L</p>
+              </span>
             </div>
           </div>
-          {/* </Row> */}
         </div>
 
-        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3">
-          <Row>
-            <Col>Invoice ID</Col>
-            <Col>Invoice Amount</Col>
-            <Col>Status</Col>
-            <Col>View Invoice</Col>
-          </Row>
+        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-2">
+          <div className="d-flex justify-content-around">
+            <h5>Invoice ID</h5>
+            <h5>Invoice Amount</h5>
+            <h5>Status</h5>
+            <h5>View Invoice</h5>
+          </div>
           <hr />
-          <Row>
-            <Col style={{ color: "#838383" }}>32245554778</Col>
-            <Col style={{ color: "#838383" }}>Rs.3.94</Col>
-            <Col>
+          <div className="d-flex justify-content-around">
+            <p style={{ color: "#838383" }}>32245554778</p>
+            <p style={{ color: "#838383" }}>Rs.3.94</p>
+            <h5>
               <button
                 type="button"
                 class=" rounded-pill btn btn-outline-success"
               >
                 Settled
               </button>
-            </Col>
-            <Col>
-              <h3>
-                <GrDocumentPdf />
-              </h3>
-            </Col>
-          </Row>
+            </h5>
+
+            <h2>
+              <GrDocumentPdf />
+            </h2>
+          </div>
           <hr />
-          <Row>
-            <Col style={{ color: "#838383" }}>32245554778</Col>
-            <Col style={{ color: "#838383" }}>Rs.3.94</Col>
-            <Col>
+          <div className="d-flex justify-content-around">
+            <p style={{ color: "#838383" }}>32245554778</p>
+            <p style={{ color: "#838383" }}>Rs.3.94</p>
+            <h5>
               <button
                 type="button"
-                class="rounded-pill btn btn-outline-success"
+                class=" rounded-pill btn btn-outline-success"
               >
                 Settled
               </button>
-            </Col>
-            <Col>
-              <h3>
-                <GrDocumentPdf />
-              </h3>
-            </Col>
-          </Row>
+            </h5>
+
+            <h2>
+              <GrDocumentPdf />
+            </h2>
+          </div>
         </Container>
       </Container>
     );
