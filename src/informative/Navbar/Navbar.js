@@ -5,9 +5,9 @@ import { AiFillAndroid } from 'react-icons/ai'
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { FaICursor } from 'react-icons/fa';
+
 const InformativeNavbar = () => {
   const [dropdown, setDropdown] = useState(false);
-
   return (
     <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
       <Container className='nav-container'>

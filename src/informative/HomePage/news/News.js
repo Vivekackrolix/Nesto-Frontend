@@ -32,7 +32,7 @@ export default function News() {
           <div className="row">
             {data.map((item) => {
               return (
-                <div className="col-lg-4 text-left">
+                <div className="col-lg-4 col-md-6 text-left">
                   <div className="news-box">
                     <div>
                       <img src={item.img} className="news-image" />

@@ -2,7 +2,6 @@
     background: var(--lite-skyblue);
     height: 100%;
     position: relative;
-    /* overflow-x: hidden; */
 }
 
 .banner-container-div {
@@ -79,7 +78,7 @@
 }
 
 @media(min-width: 993px) {
-    .mobile-col {
+    /* .mobile-col {
         display: none;
-    }
+    } */
 }

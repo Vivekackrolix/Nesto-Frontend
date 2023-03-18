@@ -1,6 +1,13 @@
 .home-page-about {
-    /* padding-bottom: 3%; */
+    /* padding-top: 3%; */
+    background: url(../../../../public/assets/informative/aboutUsImg2.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6% 0 0 0;
 }
+
 .about-us-read-more {
     text-decoration: none;
     background: var(--primary-color);
@@ -13,6 +20,7 @@
     width: fit-content;
     margin-top: 30px;
 }
+
 .about-us-read-more:hover {
     background: var(--primary-color);
     color: var(--color-white);
