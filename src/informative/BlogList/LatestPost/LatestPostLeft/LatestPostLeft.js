@@ -48,7 +48,7 @@ const LatestPostLeft = () => {
         },
     ]
     return (
-        <div className='latest-post-left'>
+        <div className='latest-post-left' style={{overflowX: 'hidden'}}>
             <div data-aos='fade-right'>
                 <span className='latest-left_heading'>Latest Post</span>
                 <span className='latest-left_para'>Don't miss the trending news</span>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const AboutUsDesc = () => {
     return (
         <div className='about-us_box1'>
-            <div className='container' style={{ overflowX: 'hidden' }}>
+            <div className='container'>
                 <div className='row'>
                     <div className='col-lg-6' data-aos='fade-right'>
                         <img className='about-us_box1-img' src='/assets/informative/device.png' />

@@ -4,8 +4,14 @@
 }
 
 .get-started_row {
+    /* height: 300px; */
+}
+
+.get-started_col-1 {
+    padding-top: 45px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .get-started_heading {
@@ -34,6 +40,16 @@
     color: var(--color-white);
 }
 
+.get-started_col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* padding-top: 45px; */
+}
+
 .get-started_img {
-    padding-top: 45px;
+    /* margin-right: auto; */
+    margin: auto;
+    width: 80%;
+    /* background: #000; */
 }

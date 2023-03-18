@@ -50,7 +50,7 @@ const LatestPostRight = () => {
   ]
   return (
     <>
-      <div className='latest-post-right'>
+      <div className='latest-post-right' style={{overflowX: 'hidden'}}>
         <div className='latest-left_input-box' data-aos='fade-left'>
           <input
             type='text'

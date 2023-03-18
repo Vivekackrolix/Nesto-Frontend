@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const AboutUs = () => {
     return (
-        <div className='about-us_box1 home-page-about'>
+        <div className='home-page-about'>
             <div className='container' style={{ overflow: 'hidden' }}>
                 <div className='row'>
                     <div className='col-lg-6' data-aos='fade-right'>

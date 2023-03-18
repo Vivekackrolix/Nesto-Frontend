@@ -13,7 +13,7 @@ const Stats = () => {
     const [counter4On, setCounter4On] = useState(false);
     return (
         <div className="row stats-row">
-            <div className="col-md-3 stats-row-col">
+            <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
                 <img className="stats-row-img" src='./assets/stats1.png' />
                 <div className="stats-row-count">
                     <ScrollTrigger
@@ -36,8 +36,8 @@ const Stats = () => {
                     HOMES FOR SALE
                 </p>
             </div>
-            <div className="col-md-3 stats-row-col">
-            <img className="stats-row-img" src='./assets/stats2.png' />
+            <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
+                <img className="stats-row-img" src='./assets/stats2.png' />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter2On(true)}
@@ -58,8 +58,8 @@ const Stats = () => {
                     RECENTLY SOLD
                 </p>
             </div>
-            <div className="col-md-3 stats-row-col">
-            <img className="stats-row-img" src='./assets/stats3.png' />
+            <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
+                <img className="stats-row-img" src='./assets/stats3.png' />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter3On(true)}
@@ -73,8 +73,8 @@ const Stats = () => {
                     TOTAL SQ
                 </p>
             </div>
-            <div className="col-md-3 stats-row-col">
-            <img className="stats-row-img" src='./assets/stats4.png'/>
+            <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
+                <img className="stats-row-img" src='./assets/stats4.png' />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter4On(true)}
@@ -91,4 +91,4 @@ const Stats = () => {
     );
 };
 
-export default Stats;
+export default Stats

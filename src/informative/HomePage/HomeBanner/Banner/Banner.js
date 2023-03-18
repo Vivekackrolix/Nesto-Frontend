@@ -27,9 +27,9 @@ const Banner = () => {
                         <div className='col-lg-7 desktop-col' data-aos='fade-left'>
                             <BannerSlider />
                         </div>
-                        <div className='col-lg-7 mobile-col'>
+                        {/* <div className='col-lg-7 mobile-col'>
                             <MobileSlider />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <TextSlider />

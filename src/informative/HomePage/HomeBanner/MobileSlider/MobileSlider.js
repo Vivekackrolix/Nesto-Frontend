@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from "react-slick";
 import './MobileSlider.css'
+import MobileTextSlider from '../MobileTextSlider/MobileTextSlider'
 // import { baseUrl } from "./config";
 
 const MobileSlider = () => {
@@ -42,6 +43,7 @@ const MobileSlider = () => {
                     </Slider>
                 </div>
             </div>
+            <MobileTextSlider />
         </>
     )
 }
