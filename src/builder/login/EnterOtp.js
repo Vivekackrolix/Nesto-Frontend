@@ -38,6 +38,7 @@ const EnterOtp = ({ show, onHide, phone }) => {
       // console.log(response);
       if (response.data.code === 200) {
         console.log("CORRECT OTP");
+        localStorage.setItem("phone", phone);
         navigate("/builder/home-dashboard");
       } else {
         console.log("INCORRECT OTP");

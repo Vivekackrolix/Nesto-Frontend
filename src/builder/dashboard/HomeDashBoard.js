@@ -11,11 +11,16 @@ import RecentPackage from "./dashboard-property-analytics/RecentPackage";
 import RecentlyAdded from "./dashboard-soldout-properties/RecentlyAdded";
 import Header from "../header/Header";
 import Footer from "./Footer/Footer";
+import { useEffect } from "react";
+import { getBuilderDetail } from "../redux/https-requests/builderDetail-http";
 
 const dashboardInfoCardsData = [];
 
 const HomeDashBoard = () => {
   const location = useLocation();
+  useEffect(() => {
+    getBuilderDetail();
+  });
 
   return (
     <>
@@ -24,7 +29,7 @@ const HomeDashBoard = () => {
 
       <Container className="pt-2 pb-4 dashboard__wrapper">
         <Row className="gx-4 dashboard-cards align-items-center">
-        <img src={homeImage} className="rounded my-3" alt="Home" />
+          <img src={homeImage} className="rounded my-3" alt="Home" />
           {dashboardInfoCardsData.map((cardItem, index) => (
             <Col md={6} lg={3} className="mb-4" key={index}>
               <ContentCard
@@ -34,9 +39,9 @@ const HomeDashBoard = () => {
                 path={cardItem.path}
               />
             </Col>
-          ))}          
+          ))}
         </Row>
-        
+
         <SearchFilterBox />
         <PropertyAnalytics />
         <SoldOut data={[1, 2, 3, 4, 5, 6]} />
