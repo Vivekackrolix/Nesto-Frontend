@@ -4,7 +4,6 @@ import { RiStarSFill } from "react-icons/ri";
 
 const VisitDetailItem = (props) => {
   const [rating, setRating] = useState(0);
-
   const [hover, setHover] = useState(0);
   return (
     <Row className={props.className}>

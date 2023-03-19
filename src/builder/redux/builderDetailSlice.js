@@ -1,12 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {};
+const initialState = { details: [], phone: localStorage.getItem("phone") };
 
 const builderDetailSlice = createSlice({
   name: "BuilderDetail",
   initialState,
   reducers: {
-    add(state, action) {},
+    setDetails(state, action) {
+      debugger;
+      state.details = action.payload.details;
+    },
   },
 });
 

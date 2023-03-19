@@ -13,14 +13,18 @@ import Header from "../header/Header";
 import Footer from "./Footer/Footer";
 import { useEffect } from "react";
 import { getBuilderDetail } from "../redux/https-requests/builderDetail-http";
+import { useDispatch, useSelector } from "react-redux";
 
 const dashboardInfoCardsData = [];
 
 const HomeDashBoard = () => {
   const location = useLocation();
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.builderDetail.details);
+  console.log(data);
   useEffect(() => {
-    getBuilderDetail();
-  });
+    dispatch(getBuilderDetail());
+  }, [dispatch]);
 
   return (
     <>
