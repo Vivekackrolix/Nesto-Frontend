@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useMutation } from '@tanstack/react-query';
 import {
   Container,
   Row,
@@ -11,30 +12,26 @@ import {
 } from 'react-bootstrap';
 import EnterOtp from './EnterOtp';
 import { useNavigate } from 'react-router-dom';
+import { Header } from '../../../../components';
+import { sendOtp } from '../../../services/brokerApi';
+import './Register.css';
 
-// Login Query Hooks
-import {
-  useSendOtpMutation,
-  useVerifyOtpMutation,
-} from '../../../hooks/LoginQuery';
-
-import './LoginForm.css';
-
-const LoginForm = () => {
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [otp, setOtp] = useState('');
-  const [isOtpSent, setIsOtpSent] = useState(false);
-
-  const {
-    sendOtpResponse,
+const RegisterForm = () => {
+  const { isLoading, isError, error, isSuccess, mutate, data } = useMutation(
     sendOtp,
-    isLoading: isSendingOtp,
-    isSuccess: isSendOtpSuccess,
-    isSendOtpError,
-    error,
-  } = useSendOtpMutation();
+    {
+      onSuccess: () => {
+        console.log('OTP sent successfully!');
+      },
+      onError: err => {
+        console.error('Error sending OTP:', err);
+      },
+    }
+  );
 
-  // const navigate = useNavigate();
+  const [enterOtpModal, setEnterOtpModal] = useState(false);
+  const navigate = useNavigate();
+  const [inputValue, setInputValue] = useState('');
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const handleInputChange = event => {
@@ -43,7 +40,7 @@ const LoginForm = () => {
       /^(?:\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b|\b(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})\b)?$/;
     const isMatch = emailPhoneRegex.test(inputText);
 
-    setPhoneNumber(inputText);
+    setInputValue(inputText);
 
     if (isMatch) {
       setShowErrorMessage(false);
@@ -56,22 +53,27 @@ const LoginForm = () => {
     }
   };
 
-  const handleSendOtp = e => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     if (!showErrorMessage) {
       // my api integration
-      sendOtp(phoneNumber);
+      mutate(inputValue);
     }
   };
+
+  const onHide = () => {
+    setEnterOtpModal(false);
+  };
+  if (isSuccess) {
+    console.log(data);
+  }
 
   return (
     <>
       {/* modal */}
-      {/* {isSuccess && <EnterOtp show={true} onHide={onHide} />} */}
-      {isSendOtpSuccess && (
-        <EnterOtp show={true} phoneNumber={sendOtpResponse.data.phoneNumber} />
-      )}
+      {isSuccess && <EnterOtp show={true} onHide={onHide} />}
+      {/* <Header /> */}
 
       <Container fluid="lg" className="container-md my-5 login-shadow">
         <Row className="g-0 login__form">
@@ -105,7 +107,7 @@ const LoginForm = () => {
                 </Col>
               </Row>
             </div>
-            <Form onSubmit={handleSendOtp}>
+            <Form onSubmit={handleSubmit}>
               <Form.Group>
                 <Form.Label className="fw-dark mt-4">
                   Phone Number<span class="astric">*</span>
@@ -118,12 +120,12 @@ const LoginForm = () => {
                   className="rounded-2"
                   required
                   type="text"
-                  value={phoneNumber}
+                  value={inputValue}
                   maxLength="10"
                   placeholder="Enter your phone number"
                   onChange={handleInputChange}
                   isInvalid={showErrorMessage}
-                  isValid={!showErrorMessage && phoneNumber !== ''}
+                  isValid={!showErrorMessage && inputValue !== ''}
                 />
                 <Form.Control.Feedback type="invalid">
                   Please enter a valid phone number.
@@ -135,13 +137,13 @@ const LoginForm = () => {
 
               <div className="d-grid mt-3">
                 <Button
-                  disabled={isSendingOtp}
+                  disabled={isLoading}
                   type="submit"
                   variant="primary"
                   size="md"
                   className="rounded-pill border-0 bg-color-primary"
                 >
-                  {isSendingOtp ? `loading` : 'Send Otp'}
+                  {isLoading ? `loading` : 'Send Otp'}
                 </Button>
               </div>
             </Form>
@@ -189,4 +191,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
