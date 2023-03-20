@@ -1,5 +1,5 @@
 import { Header } from '../features';
-import LoginForm from '../features/auth/login/LoginForm';
+import { LoginForm } from '../features/auth';
 
 const Login = () => {
   return (
