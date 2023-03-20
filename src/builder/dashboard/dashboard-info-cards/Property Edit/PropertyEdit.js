@@ -1,4 +1,4 @@
-import { Container, Table, Button, Form } from "react-bootstrap";
+import { Container, Table, Button, Form, Row } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import brochure from "../../../Images/brochure.png";
 import DashboardHeader from "../../header/DashboardHeader";
@@ -66,21 +66,23 @@ const PropertyEdit = () => {
         <br></br>
         <h3 style={{ fontFamily: "Bahnschrift" }}> Images</h3>
         <br></br>
-        <div
-          className="d-flex gap-4"
-          style={{ border: "5.72244px solid #FFFFFF" }}
-        >
-          <img src={img} className="rounded my-3 mx-3" alt="img" />
-          <img src={img} className="rounded my-3" alt="img" />
-          <img src={img} className="rounded my-3" alt="img" />
-          <img src={img} className="rounded my-3" alt="img" />
-          <img src={img} className="rounded my-3" alt="img" />
-          <img src={img} className="rounded my-3" alt="img" />
-          <img src={blank} className="rounded my-3" alt="img" />
-          <div className="rounded my-3">
-            <FileUpload />
+        <Row className="gx-4 dashboard-cards align-items-center">
+          <div
+            className="d-flex gap-2"
+            style={{ border: "5.72244px solid #FFFFFF" }}
+          >
+            <img src={img} className="rounded my-3 mx-3" alt="img" />
+            <img src={img} className="rounded my-3  " alt="img" />
+            <img src={img} className="rounded my-3" alt="img" />
+            <img src={img} className="rounded my-3" alt="img" />
+            <img src={img} className="rounded my-3" alt="img" />
+            <img src={img} className="rounded my-3" alt="img" />
+            <img src={blank} className="rounded my-3" alt="img" />
+            <div className="rounded my-3">
+              <FileUpload />
+            </div>
           </div>
-        </div>
+        </Row>
         {/* <input type="file" multiple accept="image/*" onChange={onImageChange} />
       {imageURLS.map((imageSrc) => (
         <img src={img} alt="not fount" width={"250px"} />
@@ -385,12 +387,14 @@ const PropertyEdit = () => {
           <img src={edit} alt="" />
         </div>
         <br />
-        <Container
+        {/* <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm  "
           style={{ background: "#F8F8F8" }}
-        >
+        > */}
+        <Row className="gx-4 dashboard-cards align-items-center">
           <img src={brochure} className="rounded my-3 mx-4 " alt="Home" />
-        </Container>
+        </Row>
+        {/* </Container> */}
       </Container>
       <div className="d-grid  mt-5">
         <Button

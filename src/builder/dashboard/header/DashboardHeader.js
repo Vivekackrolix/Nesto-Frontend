@@ -8,6 +8,7 @@ import notification from "../../Images/notification.png";
 import property from "../../Images/property.png";
 import Brokerage from "../../Images/brokrage.png";
 import home from "../../Images/Home.png";
+import NotificationDropdown from "../Builderprofile/notification/NotificationDropdown";
 
 const DashboardHeader = () => {
   return (
@@ -59,18 +60,19 @@ const DashboardHeader = () => {
                 className="subscription"
               />
             </Nav.Item>
-            <Nav.Item
+            {/* <Nav.Item
               className="p-2"
               as={Link}
               to="/builder/home-dashboard/notification"
-            >
-              {/* <img src={notification} alt="notification" /> */}
-              <img
+            > */}
+            {/* <img src={notification} alt="notification" /> */}
+            {/* <img
                 src="/assets/notification.png"
                 alt="notification"
                 className="notification"
-              />
-            </Nav.Item>
+              /> */}
+            <NotificationDropdown notification={3} />
+            {/* </Nav.Item> */}
             <Nav.Item
               className="me-3 mx-1 my-2"
               as={Link}
