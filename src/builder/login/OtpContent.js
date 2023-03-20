@@ -8,9 +8,12 @@ const OtpContent = () => {
     <>
       <Form.Group className="mb-3">
         {/* <Form.Label style={{ fontFamily: "Bahnschrift" }}>OTP</Form.Label> */}
-        <p className="text-text-muted text-center mb-4" style={{ lineHeight: "1.6" }}>
-        Enter the verification code we just sent on your phone number.
-      </p>
+        <p
+          className="text-text-muted text-center mb-4"
+          style={{ lineHeight: "1.6" }}
+        >
+          Enter the verification code we just sent on your phone number.
+        </p>
         <div className="d-flex justify-content-between align-items-center gap-4 mb-3">
           <Form.Control className="rounded" type="text" maxLength={1} />
           <Form.Control className="rounded" type="text" maxLength={1} />
