@@ -15,3 +15,4 @@ export const loginSlice = createSlice({
 
 export const { setNewUserPhoneNumber } = loginSlice.actions;
 export default loginSlice.reducer;
+//
