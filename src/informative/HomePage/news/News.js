@@ -1,90 +1,61 @@
+import { Link } from "react-router-dom";
+import "./News.css";
 import Heading from "../heading/Heading";
-import "./news.css";
+import { CiCalendar } from 'react-icons/ci'
+
 export default function News() {
+  const data = [
+    {
+      img: '/assets/informative/news.png',
+      date: '05 Dec 2022',
+      heading: 'New Apartment Nice in the Best Canadian Cities',
+      desc: 'Duis mattis laoreet neque, et ornare neque sollicitudin at. Proin sagittis dolor sed ...'
+    },
+    {
+      img: '/assets/informative/news.png',
+      date: '05 Dec 2022',
+      heading: 'New Apartment Nice in the Best Canadian Cities',
+      desc: 'Duis mattis laoreet neque, et ornare neque sollicitudin at. Proin sagittis dolor sed ...'
+    },
+    {
+      img: '/assets/informative/news.png',
+      date: '05 Dec 2022',
+      heading: 'New Apartment Nice in the Best Canadian Cities',
+      desc: 'Duis mattis laoreet neque, et ornare neque sollicitudin at. Proin sagittis dolor sed ...'
+    },
+  ]
   return (
     <>
-      <div class="top-body pb-3">
+      <div class="news">
         <Heading title="Blogs & News" sub="Latest Blogs and News" />
-      </div>
-      <div className="container">
-        <div className="row  mb-5 gx-3">
-          <div className="col-md-4 text-left">
-            <div className="shadow news-box pb-4">
-              <div className="news-image">
-                <img src="./assets/news.png" alt="" />
-              </div>
-              <div className="date mx-3 my-2">
-                <p>05 Dec 2022</p>
-              </div>
-              <div className="">
-                <h2 className="news-heading mx-3">
-                  New Apartment Nice in the Best Canadian Cities
-                </h2>
-              </div>
-              <div>
-                <p className="news-desc mx-3">
-                  Duis mattis laoreet neque, et ornare neque sollicitudin at.
-                  Proin sagittis dolor sed ...
-                </p>
-              </div>
-              <div>
-                <a href="" className="btn mx-3 btn-color-primary">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 text-left">
-            <div className="shadow news-box pb-4">
-              <div className="news-image">
-                <img src="./assets/news.png" alt="" />
-              </div>
-              <div className="date mx-3 my-2">
-                <p>05 Dec 2022</p>
-              </div>
-              <div className="">
-                <h2 className="news-heading mx-3">
-                  New Apartment Nice in the Best Canadian Cities
-                </h2>
-              </div>
-              <div>
-                <p className="news-desc mx-3">
-                  Duis mattis laoreet neque, et ornare neque sollicitudin at.
-                  Proin sagittis dolor sed ...
-                </p>
-              </div>
-              <div>
-                <a href="" className="btn mx-3 btn-color-primary">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 text-left">
-            <div className="shadow news-box pb-4">
-              <div className="news-image">
-                <img src="./assets/news.png" alt="" />
-              </div>
-              <div className="date mx-3 my-2">
-                <p>05 Dec 2022</p>
-              </div>
-              <div className="">
-                <h2 className="news-heading mx-3">
-                  New Apartment Nice in the Best Canadian Cities
-                </h2>
-              </div>
-              <div>
-                <p className="news-desc mx-3">
-                  Duis mattis laoreet neque, et ornare neque sollicitudin at.
-                  Proin sagittis dolor sed ...
-                </p>
-              </div>
-              <div>
-                <a href="" className="btn mx-3 btn-color-primary">
-                  Read More
-                </a>
-              </div>
-            </div>
+        <div className="container news-container" data-aos='fade-up'>
+          <div className="row">
+            {data.map((item) => {
+              return (
+                <div className="col-lg-4 col-md-6 text-left">
+                  <div className="news-box">
+                    <div>
+                      <img src={item.img} className="news-image" />
+                    </div>
+                    <div className="news-box-2">
+                      <div className="news-date">
+                        <span><CiCalendar className="date-icon" /></span>
+                        <span className="news-date-span"> {item.date}</span>
+                      </div>
+                      <div className="">
+                        <h2 className="news-heading">{item.heading}</h2>
+                      </div>
+                      <div>
+                        <p className="news-desc">{item.desc}</p>
+                      </div>
+                      <Link to='/blog-list' className="news-btn" >
+                        Read More
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>

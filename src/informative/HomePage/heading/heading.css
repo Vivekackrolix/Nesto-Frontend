@@ -2,15 +2,8 @@
     background-color: #ECF7FF;
 }
 
-.text-bold {
-    color: #000000;
-    font-weight: 700;
-    font-size: 44.26px;
-    margin-top: 15px;
-}
-
 .text-grey {
-    color: #282431;
+    color: var(--cold-black-color);
     font-weight: 400;
     font-size: 26.57px;
     line-height: 87.41px;
@@ -20,16 +13,13 @@
 }
 
 .desc {
-
     font-style: normal;
     font-weight: 350;
     font-size: 17.75px;
     line-height: 31px;
     /* or 176% */
     text-align: left;
-
-    color: #282431;
-
+    color: var(--cold-black-color);
     opacity: 0.5;
 }
 
@@ -39,10 +29,8 @@
     font-size: 26.1051px;
     line-height: 56px;
     /* identical to box height, or 214% */
-
     text-transform: uppercase;
-
-    color: #FC5C67;
+    color: var(--carnation-color);
 }
 
 
@@ -51,5 +39,15 @@
 .sections-heading {
     font-weight: 600;
     font-size: 28px;
-    line-height: 60px;
+    text-transform: uppercase;
+    color: var(--carnation-color);
+    display: block;
+}
+.sections-sub-heading {
+    text-transform: capitalize;
+    font-weight: 900;
+    color: var(--cold-black-color);
+    font-weight: 700;
+    display: block;
+    font-size: 44.26px;
 }

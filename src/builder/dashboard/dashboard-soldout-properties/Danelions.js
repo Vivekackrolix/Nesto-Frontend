@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import sky from "../../Images/Sky.png";
 // import building from "../../Images/building.png";
 import editbutton from "../../Images/editbutton.png";
-import buld from "../../Images/buld.png";
+import build from "../../Images/build.png";
 import { useState } from "react";
 
 const Danelions = () => {
@@ -14,20 +14,14 @@ const Danelions = () => {
   return (
     <>
       <Container
-        className="pt-1   dashboard__wrapper border border-light rounded shadow-sm"
+        className="dashboard__wrapper border border-light rounded shadow-sm"
         style={{
           boxShadow: "0px 7.86258px 44.4353px rgba(0, 0, 0, 0.07)",
           boxSizing: "border-box",
         }}
       >
         <div className="d-flex ">
-          <div
-          // style={{
-          //   border: "1.20506px solid #EBECF0",
-          //   filter:
-          //     "drop-shadow(0px 7.77264px 44.3583px rgba(0, 0, 0, 0.07))",
-          // }}
-          >
+          <div>
             <img src={sky} className="rounded my-3" alt="Sky" />
           </div>
           <div className="p-2">
@@ -56,20 +50,24 @@ const Danelions = () => {
               Luxury Apartment in Sector-29,Gurugram
             </p>
 
-            <div className="d-flex mx-3">
-              <h1>
-                <img src={buld} className="rounded " alt="bulding" />
-              </h1>
-              {/* <img src={building} className="rounded my-3 mx-2" alt="Sky" />
-              <img src={building} className="rounded my-3 mx-2" alt="Sky" />
-              <img src={building} className="rounded my-3 mx-2" alt="Sky" /> */}
-            </div>
-            {/* <div className="d-flex mx-2">
-              <p className="rounded my-3 mx-2">1</p>
-              <p className="rounded my-3 mx-2">1</p>
-              <p className="rounded my-3 mx-2">1</p>
-              <p className="rounded my-3 mx-2">1</p>
-            </div> */}
+            <Row>
+              <Col md={3} sm={3} className="text-center">
+                <img src={build} alt="build" className="build-icon" />
+                <p style={{ opacity: 0.5 }}>2BHK</p>
+              </Col>
+              <Col md={3} sm={3} className="text-center">
+                <img src={build} alt="build" className="build-icon" />
+                <p style={{ opacity: 0.5 }}>3BHK</p>
+              </Col>
+              <Col md={3} sm={3} className="text-center">
+                <img src={build} alt="build" className="build-icon" />
+                <p style={{ opacity: 0.5 }}>4BHK</p>
+              </Col>
+              <Col md={3} sm={3} className="text-center">
+                <img src={build} alt="build" className="build-icon" />
+                <p style={{ opacity: 0.5 }}>5BHK</p>
+              </Col>
+            </Row>
           </div>
 
           <div className="ms-auto p-2  ">

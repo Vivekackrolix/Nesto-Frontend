@@ -15,6 +15,44 @@
     color: #ffffff;
 }
 
+.broker-btn {
+    transition: all .3s ease-in;
+}
+
+.broker-btn:hover .broker-link {
+    color: var(--color-white);
+}
+
+.broker-link {
+    color: var(--primary-color);
+    transition: all .3s ease-in;
+    font-size: 14px;
+}
+
+.list-link {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: var(--primary-color);
+    color: var(--color-white);
+    font-weight: 400;
+    font-size: 14px;
+    transition: all .3s ease-in;
+}
+
+.list-link:hover {
+    background: var(--color-white);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.list-link:active,
+.list-link:focus {
+    background: var(--color-white);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
 @media (max-width: 992px) {
     /* .nes__header .navbar-nav {
       display: flex;
@@ -22,29 +60,34 @@
     } */
 }
 
-.profile-button{
+.profile-button {
     color: #278FD9;
     padding-left: 0;
     border-radius: 30px;
 }
-.profile-button:hover{
+
+.profile-button:hover {
     color: white;
-    background-color:#278FD9 ;
+    background-color: #278FD9;
 }
-.download-button{
+
+.download-button {
     background-color: #FC5C67;
     border: none;
     color: white;
 }
-.nav-container{
+
+.nav-container {
     margin-right: 0 !important;
 }
-.download{
+
+.download {
     margin-left: 22px;
     position: relative;
     left: 14px;
 }
-.nav-image{
+
+.nav-image {
     position: relative;
     right: 100px;
 }

@@ -41,6 +41,7 @@ const PromotedVisitItem = (props) => {
         {/* {Array.from({ length: 5 }, (_, index) => (
           <RiStarSFill color="#FFB630" />
         ))} */}
+
         <div className="star-rating">
           {[...Array(5)].map((star, index) => {
             index += 1;
