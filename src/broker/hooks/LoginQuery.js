@@ -2,14 +2,19 @@ import { useMutation } from '@tanstack/react-query';
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setNewUserPhoneNumber } from '../features/auth/login/loginSlice';
+import NotRegisteredModal from '../features/auth/login/NotRegisteredModal';
 
 const SEND_OTP_ENDPOINT = 'http://13.234.136.165:3000/api/v1/broker/sendOtp';
 const VERIFY_OTP_ENDPOINT =
   'http://13.234.136.165:3000/api/v1/broker/verifyOtp';
 
+const REGISTER_NAME_ENDPOINT = `http://13.234.136.165:3000/api/v1/broker/registerName`;
+
 export const useSendOtpMutation = () => {
   const [sendOtpResponse, setSendOtpResponse] = useState(null);
-
+  const dispatch = useDispatch();
   const {
     mutate,
     isLoading: isSendingOtp,
@@ -22,6 +27,7 @@ export const useSendOtpMutation = () => {
     {
       onSuccess: data => {
         setSendOtpResponse(data);
+        dispatch(setNewUserPhoneNumber(data.phoneNumber));
       },
     }
   );
@@ -44,6 +50,7 @@ export const useSendOtpMutation = () => {
 
 export const useVerifyOtpMutation = () => {
   const [verifyOtpResponse, setVerifyOtpResponse] = useState(null);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
     mutate,
@@ -61,7 +68,9 @@ export const useVerifyOtpMutation = () => {
         setVerifyOtpResponse(data);
         const userStatus = data.data.status;
         if (userStatus === 'newuser') {
-          navigate('/broker/register');
+          dispatch(setNewUserPhoneNumber(data.data.phone));
+
+          // navigate('/broker/register');
           return;
         }
 
@@ -77,7 +86,7 @@ export const useVerifyOtpMutation = () => {
     mutate({ phoneNumber, otp });
   };
 
-  console.log(verifyOtpResponse);
+  // console.log(verifyOtpResponse);
 
   return {
     verifyOtp,
@@ -85,6 +94,50 @@ export const useVerifyOtpMutation = () => {
     isLoading: isVerifyOtp,
     isSuccess: isVerifyOtpSuccess,
     isVerifyOtpError,
+    error,
+  };
+};
+
+export const useRegisterMutation = () => {
+  const navigate = useNavigate();
+  const [registerResponse, setRegisterResponse] = useState(null);
+
+  const {
+    mutate,
+    isLoading: isLoadingRegister,
+    isSuccess: isRegisterSuccess,
+    isError: isRegisterError,
+    error,
+  } = useMutation(
+    ({ name, phoneNumber }) =>
+      axios
+        .post(REGISTER_NAME_ENDPOINT, { name, phoneNumber })
+        .then(res => res.data),
+    {
+      onSuccess: data => {
+        setRegisterResponse(data);
+
+        console.log(data);
+        if (data.data.token) {
+          console.log(data.token);
+          navigate('/broker/dashboard');
+        }
+      },
+    }
+  );
+
+  const register = ({ name, phoneNumber }) => {
+    mutate({ name, phoneNumber });
+  };
+
+  console.log(registerResponse);
+
+  return {
+    register,
+    registerResponse,
+    isLoading: isLoadingRegister,
+    isSuccess: isRegisterSuccess,
+    isRegisterError,
     error,
   };
 };

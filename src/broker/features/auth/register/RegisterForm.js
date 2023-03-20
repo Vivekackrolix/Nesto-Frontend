@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useMutation } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
 import {
   Container,
   Row,
@@ -10,69 +12,39 @@ import {
   InputGroup,
   Figure,
 } from 'react-bootstrap';
-import EnterOtp from './EnterOtp';
-import { useNavigate } from 'react-router-dom';
-import { Header } from '../../../../components';
-import { sendOtp } from '../../../services/brokerApi';
+import { useRegisterMutation } from '../../../hooks/LoginQuery';
 import './Register.css';
 
 const RegisterForm = () => {
-  const { isLoading, isError, error, isSuccess, mutate, data } = useMutation(
-    sendOtp,
-    {
-      onSuccess: () => {
-        console.log('OTP sent successfully!');
-      },
-      onError: err => {
-        console.error('Error sending OTP:', err);
-      },
-    }
-  );
+  const { phoneNumber } = useSelector(state => state.login);
+  const [username, setUsername] = useState('');
 
-  const [enterOtpModal, setEnterOtpModal] = useState(false);
+  const {
+    register,
+    registerResponse,
+    isLoading: isLoadingRegister,
+    isSuccess: isRegisterSuccess,
+    isRegisterError,
+    error,
+  } = useRegisterMutation();
+
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState('');
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
 
+  // const [showErrorMessage, setShowErrorMessage] = useState(false);
   const handleInputChange = event => {
-    const inputText = event.target.value;
-    const emailPhoneRegex =
-      /^(?:\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b|\b(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})\b)?$/;
-    const isMatch = emailPhoneRegex.test(inputText);
-
-    setInputValue(inputText);
-
-    if (isMatch) {
-      setShowErrorMessage(false);
-      event.target.classList.remove('is-invalid');
-      event.target.classList.add('is-valid');
-    } else {
-      setShowErrorMessage(true);
-      event.target.classList.remove('is-valid');
-      event.target.classList.add('is-invalid');
+    const username = event.target.value;
+    if (username) {
+      setUsername(username);
     }
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-
-    if (!showErrorMessage) {
-      // my api integration
-      mutate(inputValue);
-    }
+    register({ name: username, phoneNumber: phoneNumber, referalCode: '' });
   };
-
-  const onHide = () => {
-    setEnterOtpModal(false);
-  };
-  if (isSuccess) {
-    console.log(data);
-  }
 
   return (
     <>
-      {/* modal */}
-      {isSuccess && <EnterOtp show={true} onHide={onHide} />}
       {/* <Header /> */}
 
       <Container fluid="lg" className="container-md my-5 login-shadow">
@@ -91,41 +63,22 @@ const RegisterForm = () => {
           >
             <div className="mt-4">
               <h2 className="fw-bold text-center mb-3">
-                Welcome Back! <br></br>Glad to see you, Again!
+                Hello! Register to get started
               </h2>
-              <Row className="justify-content-center align-items-center">
-                <Col xs="auto" className="d-flex align-items-center gap-2">
-                  <Image
-                    src="/assets/profile.svg"
-                    fluid
-                    className="rounded user-img"
-                    alt="profile"
-                  />
-                  <Figure.Caption className="text-center mb-0">
-                    Login As Loan Agent
-                  </Figure.Caption>
-                </Col>
-              </Row>
             </div>
             <Form onSubmit={handleSubmit}>
-              <Form.Group>
-                <Form.Label className="fw-dark mt-4">
-                  Phone Number<span class="astric">*</span>
-                </Form.Label>
-              </Form.Group>
-
-              <InputGroup className="mb-0">
+              <InputGroup className="mb-0 mt-3">
                 <Form.Control
-                  name="emailPhone"
+                  name="username"
                   className="rounded-2"
                   required
                   type="text"
-                  value={inputValue}
+                  value={username}
                   maxLength="10"
-                  placeholder="Enter your phone number"
+                  placeholder="Name"
                   onChange={handleInputChange}
-                  isInvalid={showErrorMessage}
-                  isValid={!showErrorMessage && inputValue !== ''}
+                  // isInvalid={showErrorMessage}
+                  // isValid={!showErrorMessage && inputValue !== ''}
                 />
                 <Form.Control.Feedback type="invalid">
                   Please enter a valid phone number.
@@ -135,15 +88,41 @@ const RegisterForm = () => {
                 </Form.Control.Feedback>
               </InputGroup>
 
+              <InputGroup className="mb-0 mt-3">
+                <Form.Control
+                  name="emailPhone"
+                  className="rounded-2"
+                  required
+                  type="text"
+                  readOnly
+                  value={phoneNumber}
+                  maxLength="10"
+                  placeholder="Enter your phone number"
+                  onChange={handleInputChange}
+                  // isInvalid={showErrorMessage}
+                  // isValid={!showErrorMessage && inputValue !== ''}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please enter a valid phone number.
+                </Form.Control.Feedback>
+                <Form.Control.Feedback type="valid">
+                  Valid Phone Number!
+                </Form.Control.Feedback>
+              </InputGroup>
+
+              <div className="text-center mt-3">
+                I agree to the Terms of Service and Privacy Policy
+              </div>
+
               <div className="d-grid mt-3">
                 <Button
-                  disabled={isLoading}
+                  disabled={isLoadingRegister}
                   type="submit"
                   variant="primary"
                   size="md"
                   className="rounded-pill border-0 bg-color-primary"
                 >
-                  {isLoading ? `loading` : 'Send Otp'}
+                  {isLoadingRegister ? `loading` : 'Continue'}
                 </Button>
               </div>
             </Form>
