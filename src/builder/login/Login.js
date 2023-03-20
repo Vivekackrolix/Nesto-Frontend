@@ -17,17 +17,23 @@ import loginImage from "../Images/Rectangle-34624401.png";
 import Header from "../header/Header";
 import builder from "../Images/builder.png";
 import loan from "../Images/loan.png";
+import axios from "axios";
 const Login = () => {
   const [inputValue, setInputValue] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const [showModal, setShowModal] = useState(false);
 
-  const onContinueHandler = () => {
+  const onContinueHandler = async () => {
     if (inputValue.length === 10) {
       setShowModal((prev) => {
         return (prev = true);
       });
+      const response = await axios.post(
+        "http://13.234.136.165:3000/api/v1/builder/sendOtp",
+        { phoneNumber: inputValue }
+      );
+      console.log(response);
     } else {
       console.log("Error");
     }
@@ -54,7 +60,7 @@ const Login = () => {
 
   return (
     <>
-      {showModal && <EnterOtp show={true} />}
+      {showModal && <EnterOtp phone={inputValue} show={true} />}
 
       <Header />
 
@@ -63,10 +69,7 @@ const Login = () => {
           <Col md={6}>
             <Image className="h-100" src={loginImage} fluid alt="login img" />
           </Col>
-          <Col
-            md={6}
-            className="p-5 d-flex flex-column justify-content-center"
-          >
+          <Col md={6} className="p-5 d-flex flex-column justify-content-center">
             <LoginUser />
 
             <Form>
@@ -103,7 +106,7 @@ const Login = () => {
               </div>
             </Form>
 
-<div className="d-flex align-items-center my-4">
+            <div className="d-flex align-items-center my-4">
               <div className="divider flex-grow-1"></div>
               <p className="m-0 px-1">Or Login</p>
               <div className="divider flex-grow-1"></div>
