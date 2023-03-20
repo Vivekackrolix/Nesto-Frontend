@@ -111,7 +111,7 @@ const Login = () => {
             <Form onSubmit={handleSubmit}>
               <Form.Group>
                 <Form.Label className="fw-dark mt-4">
-                  Phone Number<span class="astric">*</span>
+                  Phone Number<span className="astric">*</span>
                 </Form.Label>
               </Form.Group>
 

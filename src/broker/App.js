@@ -6,7 +6,6 @@ import Login from './Pages/Login';
 import DashboardPage from './Pages/dashboard/DashboardPage';
 import Register from './Pages/Register';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-
 const queryClient = new QueryClient();
 
 const App = () => {

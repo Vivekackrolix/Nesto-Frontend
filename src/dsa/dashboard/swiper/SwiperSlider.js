@@ -71,7 +71,7 @@ const Slider = () => {
           {items.map(item => (
             <SwiperSlide key={item.id}>
               <Card className="h-100 border-0 shadow-sm swiper__card p-3">
-                <div class="ribbon">
+                <div className="ribbon">
                   <span>{tabKey[item.id]} </span>
                 </div>
 

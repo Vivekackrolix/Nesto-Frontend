@@ -13,9 +13,9 @@ const ProductContainers = ({ sectionTitle, productData, view }) => {
         >
           <h2 className="nes__product__section__title">{sectionTitle}</h2>
           {view === 'promoted' && (
-            <div class="form-check form-switch">
+            <div className="form-check form-switch">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"

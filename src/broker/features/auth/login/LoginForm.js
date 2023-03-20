@@ -11,8 +11,7 @@ import {
 } from 'react-bootstrap';
 import EnterOtp from './EnterOtp';
 import { useNavigate } from 'react-router-dom';
-
-// Login Query Hooks
+import { useSelector } from 'react-redux';
 import {
   useSendOtpMutation,
   useVerifyOtpMutation,
@@ -24,7 +23,7 @@ const LoginForm = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [otp, setOtp] = useState('');
   const [isOtpSent, setIsOtpSent] = useState(false);
-
+  const [showEnterOtpModal, setShowEnterOtpModal] = useState(true);
   const {
     sendOtpResponse,
     sendOtp,
@@ -65,6 +64,10 @@ const LoginForm = () => {
     }
   };
 
+  const onHide = () => {
+    setShowEnterOtpModal(false);
+  };
+
   return (
     <>
       {/* modal */}
@@ -100,19 +103,13 @@ const LoginForm = () => {
                     alt="profile"
                   />
                   <Figure.Caption className="text-center mb-0">
-                    Login As Loan Agent
+                    Login as a Broker
                   </Figure.Caption>
                 </Col>
               </Row>
             </div>
             <Form onSubmit={handleSendOtp}>
-              <Form.Group>
-                <Form.Label className="fw-dark mt-4">
-                  Phone Number<span class="astric">*</span>
-                </Form.Label>
-              </Form.Group>
-
-              <InputGroup className="mb-0">
+              <InputGroup className="mb-0 mt-5">
                 <Form.Control
                   name="emailPhone"
                   className="rounded-2"
@@ -141,7 +138,20 @@ const LoginForm = () => {
                   size="md"
                   className="rounded-pill border-0 bg-color-primary"
                 >
-                  {isSendingOtp ? `loading` : 'Send Otp'}
+                  {isSendingOtp ? (
+                    <>
+                      <span>
+                        <span
+                          className="spinner-border spinner-border-sm"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                        Loading...
+                      </span>
+                    </>
+                  ) : (
+                    'Continue'
+                  )}
                 </Button>
               </div>
             </Form>

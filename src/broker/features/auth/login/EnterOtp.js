@@ -119,7 +119,20 @@ const EnterOtp = ({ show, onHide, phoneNumber }) => {
             variant="primary"
             className="w-100 rounded-pill bg-color-primary"
           >
-            Verify
+            {isVerifyOtp ? (
+              <>
+                <span>
+                  <span
+                    className="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Verify...
+                </span>
+              </>
+            ) : (
+              'Continue'
+            )}
           </Button>
         </Form.Group>
       </Form>
