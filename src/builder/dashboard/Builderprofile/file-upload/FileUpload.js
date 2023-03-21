@@ -17,7 +17,7 @@ const FileUpload = () => {
   };
 
   return (
-    <Container fluid="lg" className="profile-upload">
+    <Container fluid="lg" className="profile-upload p-0">
       <Row>
         <Col className="d-flex flex-wrap gap-3">
           {!!files.length > 0 && (

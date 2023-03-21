@@ -174,13 +174,13 @@ button:active:focus {
 }
 
 .btn-rounded {
-  width: 221px;
-  padding: 11.1518px 13.3822px;
+  width: 220px;
+  padding: 10px 12px;
 }
 
 .card-link {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--carnation-color);
 }
 

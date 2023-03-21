@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+import { Form, Button, Col } from "react-bootstrap";
+=======
 import { useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { getBuilderDetail } from "../../../redux/https-requests/builderDetail-http";
+>>>>>>> 2b6ede295a7bc37e6b7570073f52b676b8f3233a
 // import CreatableSelect from "react-select/creatable";
 
 import FileUpload from "../file-upload/FileUpload";
@@ -22,17 +26,63 @@ const PersonalDetailsForm = () => {
   }, [dispatch]);
   return (
     <>
-      <h2 style={{ fontWeight: "Bold", color: " #000000" }}>
+      <h3>
         Personal Details
-      </h2>
+      </h3>
       <br />
-      <Form className="profile__form ps-2">
-        <Form.Group className="mb-4" controlId="companyName">
-          <Form.Label>Company Name</Form.Label>
-          <Form.Control className="rounded-0" type="text" placeholder="DLF" />
-        </Form.Group>
+      <Form className="profile__form row">
+        <Col md={6} sm={12}>
+          <Form.Group className="mb-3" controlId="companyName">
+            <Form.Label>Company Name</Form.Label>
+            <Form.Control className="rounded-2" type="text" placeholder="DLF" />
+          </Form.Group>
+        </Col>
+        <Col md={6} sm={12}>
+          <Form.Group className="mb-3" controlId="email">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              className="rounded-2"
+              type="email"
+              placeholder="jack.s@gmail.com"
+              value={builderData.email}
+            />
+          </Form.Group>
+        </Col>
 
-        <Form.Group className="mb-4" controlId="email">
+        <Col md={6} sm={12}>
+          <Form.Group className="mb-3" controlId="phoneNumber">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control
+              className="rounded-2"
+              type="tel"
+              placeholder="4857788898"
+              value={builderData.phoneNumber}
+            />
+          </Form.Group>
+        </Col>
+
+        <Col md={6} sm={12}>
+          <Form.Group className="mb-3" controlId="address">
+            <Form.Label>Address</Form.Label>
+            <Form.Control
+              className="rounded-2"
+              type="text"
+              placeholder="Sector 13,Karnal"
+            />
+          </Form.Group>
+        </Col>
+
+        <Col md={6} sm={12}>
+          <Form.Group className="mb-3" controlId="address">
+            <Form.Label>Company Type</Form.Label>
+            <Form.Control
+              className="rounded-2"
+              type="text"
+              placeholder="WD3 12 3321D"
+            />
+          </Form.Group>
+        </Col>
+        {/* <Form.Group className="mb-4" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
             className="rounded-0"
@@ -40,9 +90,9 @@ const PersonalDetailsForm = () => {
             placeholder="jack.s@gmail.com"
             value={builderData.email}
           />
-        </Form.Group>
+        </Form.Group> */}
 
-        <Form.Group className="mb-4" controlId="phoneNumber">
+        {/* <Form.Group className="mb-4" controlId="phoneNumber">
           <Form.Label>Phone Number</Form.Label>
           <Form.Control
             className="rounded-0"
@@ -50,8 +100,8 @@ const PersonalDetailsForm = () => {
             placeholder="4857788898"
             value={builderData.phoneNumber}
           />
-        </Form.Group>
-
+        </Form.Group> */}
+{/* 
         <Form.Group className="mb-4" controlId="address">
           <Form.Label>Address</Form.Label>
           <Form.Control
@@ -85,11 +135,36 @@ const PersonalDetailsForm = () => {
             placeholder="WD3 12 3321D"
           />
         </Form.Group>
-        <Form.Label>Upload Documents</Form.Label>
+        <Form.Label>Upload Documents</Form.Label> */}
 
-        <FileUpload />
+        <Col md={6} sm={12}>
+          <Form.Group className="mb-3" controlId="address">
+            <Form.Label>GST</Form.Label>
+            <Form.Control
+              className="rounded-2"
+              type="text"
+              placeholder="WD3 12 3321D"
+              value={builderData.gst}
+            />
+          </Form.Group>
+        </Col>
 
-        <div className="d-flex gap-4 mt-5">
+        <Col md={12} sm={12}>
+          <Form.Group className="mb-3" controlId="address">
+            <Form.Label>PAN of the Company</Form.Label>
+            <Form.Control
+              className="rounded-2"
+              type="text"
+              placeholder="WD3 12 3321D"
+            />
+          </Form.Group>
+        </Col>
+        <Col md={12} sm={12}>
+          <Form.Label className="mb-0">Upload Documents</Form.Label>
+          <FileUpload />
+        </Col>
+
+        <div className="d-flex gap-4 mt-2">
           <Button className="btn-color-outline-primary rounded-100 btn-rounded">
             Cancel
           </Button>

@@ -179,7 +179,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                     lg={4}
                     className="d-grid bg-transparent px-3 card__paynow__invoice"
                   >
-                    <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                    <Button className="ms-0 start-0 download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                       Download Invoice
                       <Image
                         src="/assets/upload-icon.svg"
@@ -214,7 +214,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                     {payment !== 'Paid' ? (
                       payment === 'Pending' ? (
                         <>
-                          <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                          <Button className="ms-0 start-0 download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                             Download Invoice
                             <Image
                               src="/assets/upload-icon.svg"
@@ -228,7 +228,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                         </>
                       ) : payment === 'Processing' ? (
                         <>
-                          <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100 mb-2">
+                          <Button className="ms-0 start-0 download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100 mb-2">
                             Download Invoice
                             <Image                          
                               src="/assets/upload-icon.svg"
@@ -239,7 +239,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                         </>
                       ) : (
                         <>
-                          <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                          <Button className="ms-0 start-0 download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                             Download Invoice
                             <Image
                               src="/assets/upload-icon.svg"
@@ -253,7 +253,7 @@ const DashboardChildCard = ({ cardType, status, payment }) => {
                         </>
                       )
                     ) : (
-                      <Button className="download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
+                      <Button className="ms-0 start-0 download d-flex align-items-center justify-content-center gap-2 btn-color-outline-primary rounded-100">
                         Download Invoice
                         <Image
                           src="/assets/upload-icon.svg"

@@ -3,6 +3,11 @@ import "./TransactionHistory.css";
 
 const TransactionHistory = () => {
   return (
+    <>
+    <h3 style={{marginBottom: "15px" }}>
+        Transactions
+      </h3>
+    
     <Table
       className="profile__transaction"
       style={{ border: "1.39082px solid #E9E9E9" }}
@@ -54,6 +59,7 @@ const TransactionHistory = () => {
         </tr>
       </tbody>
     </Table>
+    </>
   );
 };
 

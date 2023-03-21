@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Tab, Nav, Button, Image } from "react-bootstrap";
-import {
-  FiUser,
-  FiClock,
-  FiClipboard,
-  FiBookOpen,
-  FiHelpCircle,
-  FiPlus,
-  FiUserCheck,
-} from "react-icons/fi";
+import { FiUser, FiClock, FiHelpCircle } from "react-icons/fi";
 import { BiTransferAlt } from "react-icons/bi";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { CgNotes } from "react-icons/cg";
@@ -46,7 +38,6 @@ const profileSidebarNavContent = [
   },
   {
     element: <TransactionHistory />,
-    title: "Transactions",
   },
   {
     element: <QueriesHistory />,
@@ -108,7 +99,7 @@ const ProfilePage = () => {
                     </div>
                   </div>
                   <h4 className="mt-3">{builderData.name}</h4>
-                  <p className="text-muted">Builder ID:BL679887665</p>
+                  <p className="text-muted mb-0">Builder ID:BL679887665</p>
                 </div>
                 {/* profile img code end here */}
 
@@ -122,13 +113,6 @@ const ProfilePage = () => {
                       >
                         <div className="d-flex align-items-center gap-2">
                           <div className="profile__sidebar__wrapper__icon shadow bg-white d-flex justify-content-center align-items-center">
-                            {/* <img
-                              src={`/assets/profile-page/profile-icon-${
-                                index + 1
-                              }.svg`}
-                              alt="profile icon"
-                              className="img-fluid"
-                            /> */}
                             {tab.icon}
                           </div>
 

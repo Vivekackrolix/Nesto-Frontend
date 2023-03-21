@@ -1,6 +1,7 @@
 .profile__sidebar__wrapper {
   background: #ecf7ff;
-  border-radius: 25.0257px;
+  border-radius: 25px;
+  box-shadow: inset 0px 0px 20px #adddff;
 }
 
 .profile__sidebar__wrapper__icon {
@@ -8,18 +9,18 @@
   height: 33.95px;
   background: #fdfdfd;
   border: 0.424322px solid #e3e3e7;
-  box-shadow: 0px 3.39458px 13.5783px rgba(69, 69, 69, 0.15) !important;
-  border-radius: 8.48645px;
+  box-shadow: 0px 4px 14px rgba(69, 69, 69, 0.15) !important;
+  border-radius: 8;
 }
 
 .profile__sidebar__wrapper .nav {
   background: #ffffff;
-  border-radius: 25.0257px;
+  border-radius: 10px;
 }
 
 .profile__sidebar__wrapper .nav-link {
   color: #000000 !important;
-  padding: 15px 20px !important;
+  padding: 10px 20px !important;
 }
 .profile__sidebar__wrapper .nav-link {
   border-bottom: 0.481264px solid #ebecf0;
@@ -32,7 +33,7 @@
 .profile__sidebar__wrapper .nav-link.active,
 .profile__sidebar__wrapper .nav-item.show .nav-link {
   background-color: #278fd9 !important;
-  border-radius: 25.0257px;
+  border-radius: 10px;
   border: none !important;
   letter-spacing: 0.01em !important;
   color: #ffffff !important;
@@ -60,13 +61,14 @@
 .profile__sidebar__wrapper p {
   font-weight: 350;
   font-size: 13.023px;
-  color: #282431;
+  color: #282431 !important;
   opacity: 0.5;
 }
 
 .profile__image img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
 }
 
 .profile__image__overlay {
@@ -92,13 +94,12 @@
 }
 
 .profile__sidebar__wrapper__signout {
-  padding: 15px 20px !important;
+  padding: 10px 20px !important;
   background: #ffffff;
-  border: 0.962528px solid #278fd9;
-  border-radius: 12.5129px;
+  border: 2px solid #278fd9;
+  border-radius: 10px;
   font-weight: 400;
-  font-size: 16.4525px;
-  letter-spacing: 0.02em;
+  font-size: 14px;
   color: #278fd9;
 }
 
@@ -112,9 +113,14 @@
 .profile__form input,
 .profile__form select {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   color: #000000;
-  padding: 14.2345px;
+  padding: 10px;
   background: #f8f8f8;
-  border-radius: 10.6759px;
+  border: 1px solid #e9e9e9;
+}
+.profile__main.card h3{
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 0; 
 }
