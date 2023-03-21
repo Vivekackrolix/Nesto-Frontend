@@ -31,13 +31,13 @@ const NotRegister = (props) => {
             <br />
             {/* <Modal.Title style={{ color: "#838BA1" }}> */}
             <h4
-              className="d-flex justify-content-between"
+              className="d-flex justify-content-center"
               style={{ color: "#838BA1" }}
             >
               You are not register with us!
             </h4>
             <h4
-              className="d-flex justify-content-between"
+              className="d-flex justify-content-center"
               style={{ color: "#838BA1" }}
             >
               Please share your intent

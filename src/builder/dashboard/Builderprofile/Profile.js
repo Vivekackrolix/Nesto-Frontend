@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Tab, Nav, Button, Image } from "react-bootstrap";
 import {
   FiUser,
@@ -26,6 +26,8 @@ import DashboardHeader from "../header/DashboardHeader";
 import Footer from "../Footer/Footer";
 import PastProperty from "./Past Property/PastProperty";
 import { MdSupportAgent } from "react-icons/md";
+import { useSelector, useDispatch } from "react-redux";
+import { getBuilderDetail } from "../../redux/https-requests/builderDetail-http";
 
 const tabs = [
   { title: "Personal Details", icon: <FiUser color="#000000" /> },
@@ -68,6 +70,13 @@ const profileSidebarNavContent = [
 
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const dispatch = useDispatch();
+  const builderData = useSelector(
+    (state) => state.builderDetail.details[0]
+  ) || { name: "" };
+  useEffect(() => {
+    dispatch(getBuilderDetail());
+  }, [dispatch]);
 
   const handleTabChange = (index) => {
     setActiveTab(index);
@@ -98,7 +107,7 @@ const ProfilePage = () => {
                       <RiPencilFill />
                     </div>
                   </div>
-                  <h4 className="mt-3">Vinit Sharma</h4>
+                  <h4 className="mt-3">{builderData.name}</h4>
                   <p className="text-muted">Builder ID:BL679887665</p>
                 </div>
                 {/* profile img code end here */}

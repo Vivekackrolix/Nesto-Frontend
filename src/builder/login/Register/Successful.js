@@ -30,13 +30,13 @@ const Successful = (props) => {
             <br />
             {/* <Modal.Title style={{ color: "#838BA1" }}> */}
             <h4
-              className="d-flex justify-content-between"
+              className=" d-flex row justify-content-center"
               style={{ color: "#838BA1" }}
             >
               Your requirement is submitted!
             </h4>
             <h4
-              className="d-flex justify-content-between"
+              className=" d-flex row justify-content-center"
               style={{ color: "#838BA1" }}
             >
               Nestohub team will contact you soon
