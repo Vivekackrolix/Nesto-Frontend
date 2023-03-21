@@ -10,7 +10,7 @@ const InformativeNavbar = () => {
   const [dropdown, setDropdown] = useState(false);
   return (
     <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
-      <Container className='nav-container'>
+      {/* <Container className='nav-container'> error testing */}
         <Link to='/' className='navbar-brand nav-image'>
           <img
             src="/assets/nesto-logo.png"
