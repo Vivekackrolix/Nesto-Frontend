@@ -4,7 +4,7 @@ import PartnersDetailsMain from './PartnersDetail/PartnersDetailsMain';
 import BrokerHome from './BrokerPage/BrokerHome/BrokerHome';
 
 import ContactUsMain from './ContactUs/ContactUsMain';
-import PartnerBanner from './PartnersPage/Partnerbanner/PartnerBanner'
+import PartnerBanner from './PartnersPage/PartnerBanner/PartnerBanner'
 import TermsCondition from './TermsCondition/TermsCondition';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 import BlogListMain from './BlogList/BlogListMain'

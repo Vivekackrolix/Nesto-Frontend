@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Heading from '../heading/Heading';
+import Heading from '../Heading/Heading';
 import './chooseus.css';
 
 export default function ChooseUs() {
