@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./News.css";
-import Heading from "../heading/Heading";
+import Heading from "../Heading/Heading";
 import { CiCalendar } from 'react-icons/ci'
 
 export default function News() {

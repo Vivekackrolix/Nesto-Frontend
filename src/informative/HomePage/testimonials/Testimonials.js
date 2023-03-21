@@ -6,7 +6,7 @@ import './testimonials.css'
 // import quote from "../../public/assets/quote.png"
 import { FaStar } from "react-icons/fa";
 import { AiOutlineStar } from "react-icons/ai";
-import Heading from "../heading/Heading";
+import Heading from "../Heading/Heading";
 // import Heading from "./common/Heading";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
