@@ -6,9 +6,10 @@ import CustomModal from "../../components/common/CustomModal";
 // import OtpContent from './OtpContent';
 import axios from "axios";
 
-const EnterOtp = ({ show, onHide, phone }) => {
+const EnterOtp = ({ show, onHide, phone, setRegister }) => {
   const otpInputs = useRef([]);
   const [otpPassword, setOtpPassword] = useState(false);
+
   const navigate = useNavigate();
   const [timer, setTimer] = useState(30);
 
@@ -31,6 +32,7 @@ const EnterOtp = ({ show, onHide, phone }) => {
       otp = otp + element.value;
     });
     try {
+      debugger;
       const response = await axios.post(
         "http://13.234.136.165:3000/api/v1/builder/verifyOtp",
         { phoneNumber: phone, otp: otp }
@@ -39,7 +41,13 @@ const EnterOtp = ({ show, onHide, phone }) => {
       if (response.data.code === 200) {
         console.log("CORRECT OTP");
         localStorage.setItem("phone", phone);
-        navigate("/builder/home-dashboard");
+        if (response.data.data.status === "newuser") {
+          // navigate("/builder/register");
+          setRegister(true);
+          onHide(false);
+        } else {
+          navigate("/builder/home-dashboard");
+        }
       } else {
         console.log("INCORRECT OTP");
       }

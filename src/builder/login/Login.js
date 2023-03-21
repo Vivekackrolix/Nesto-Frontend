@@ -18,11 +18,12 @@ import Header from "../header/Header";
 import builder from "../Images/builder.png";
 import loan from "../Images/loan.png";
 import axios from "axios";
+import NotRegister from "./Register/NotRegister";
 const Login = () => {
   const [inputValue, setInputValue] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
-
   const [showModal, setShowModal] = useState(false);
+  const [register, setRegister] = useState(false);
 
   const onContinueHandler = async () => {
     if (inputValue.length === 10) {
@@ -60,8 +61,15 @@ const Login = () => {
 
   return (
     <>
-      {showModal && <EnterOtp phone={inputValue} show={true} />}
-
+      {showModal && (
+        <EnterOtp
+          phone={inputValue}
+          show={true}
+          setRegister={setRegister}
+          onHide={setShowModal}
+        />
+      )}
+      {register && <NotRegister show={true} />}
       <Header />
 
       <Container className="container-md my-5">
