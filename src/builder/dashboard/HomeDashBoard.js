@@ -14,6 +14,7 @@ import Footer from "./Footer/Footer";
 import { useEffect } from "react";
 import { getBuilderDetail } from "../redux/https-requests/builderDetail-http";
 import { useDispatch, useSelector } from "react-redux";
+import RecentlyAddedProperty from "./dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
 
 const dashboardInfoCardsData = [];
 
@@ -50,6 +51,7 @@ const HomeDashBoard = () => {
         <PropertyAnalytics />
         <SoldOut data={[1, 2, 3, 4, 5, 6]} />
         <RecentlyAdded data={[1, 2, 3, 4, 5, 6]} />
+
         <RecentPackage />
         <PropertyInvoice />
       </Container>

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
+// import CustomModal from "../../../../../components/common/CustomModal";
+import { useNavigate } from "react-router-dom";
 // import { RiStarSFill } from "react-icons/ri";
 import "./Rating.css";
 const Rating = (props) => {
@@ -14,9 +16,12 @@ const Rating = (props) => {
   const [hover4, setHover4] = useState(0);
   const [rating5, setRating5] = useState(0);
   const [hover5, setHover5] = useState(0);
-
+  const [close, setClose] = useState(false);
+  const handleClose = () => setClose(false);
+  const navigate = useNavigate();
   const submitHandler = () => {
-    props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
+    // props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
+    navigate("/builder/home-dashboard/promoted");
   };
 
   return (
@@ -24,14 +29,23 @@ const Rating = (props) => {
       <Modal
         size="sm"
         show={props.show}
-        onHide={submitHandler}
-        // onHide={() => {
-        //   props.submitHandler(false);
-        // }}
+        onHide={handleClose}
+        onClick={() => setClose(!close)}
       >
-        <Modal.Header className="justify-content-center">
+        <Modal.Header className="justify-content-center" closeButton>
           <Modal.Title>Rating</Modal.Title>
         </Modal.Header>
+        {/* <CustomModal
+        title="Rating"
+        show={props.show}
+        border
+        closeBtn
+        onHide={() => {
+          props.onHide(false);
+        }}
+        cssClassName="nes__dashboard__modal"
+        modalHeader
+      > */}
         <br />
         <Container className=" dashboard__wrapper">
           <Form.Group className="mb-3">
@@ -168,6 +182,7 @@ const Rating = (props) => {
           </Form.Group>
         </Container>
       </Modal>
+      {/* </CustomModal> */}
     </>
   );
 };

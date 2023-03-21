@@ -1,14 +1,16 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import propertyImage from "../../Images/propertyadded.png";
-import build from "../../Images/build.png";
-import subs from "../../Images/subs.png";
+import propertyImage from "../../../Images/propertyadded.png";
+import build from "../../../Images/build.png";
+// import subs from "../../Images/subs.png";
 
 import { Link } from "react-router-dom";
 import { BsPencilFill } from "react-icons/bs";
 import { RiVipCrownFill } from "react-icons/ri";
-import RecentlyAddedProperty from "./dashboard-tabs/RecentlyAddedProperty";
+import DashboardHeader from "../../header/DashboardHeader";
+import SearchFilterBox from "../../search-filter/SearchFilter";
+import Footer from "../../Footer/Footer";
 
-const RecentlyAdded = ({ data }) => {
+const RecentlyAddedProperty = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Col
@@ -142,30 +144,34 @@ const RecentlyAdded = ({ data }) => {
     );
   });
   return (
-    <Container className="mt-5">
-      <div className="row justify-content-between">
-        <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
-          Recently Added
-        </h3>
-        <Button
-          className="col-1"
-          style={{
-            color: "#FC5C67",
-            fontFamily: "Bahnschrift",
-            textDecorationLine: "underline",
-          }}
-          as={Link}
-          to="/builder/home-dashboard/recentlyadded"
-        >
-          View all
-        </Button>
-      </div>
-      {/* <div className="mt-4">{propertyListing}</div> */}
-      <div className="mt-2 mb-5 row row-cols-2 justify-content-around">
-        {propertyListing}
-      </div>
-    </Container>
+    <>
+      <DashboardHeader />
+      <Container className="mt-5">
+        <SearchFilterBox />
+
+        <div className="row justify-content-between">
+          <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
+            Recently Added
+          </h3>
+          {/* <i
+            className="col-1"
+            style={{
+              color: "#FC5C67",
+              fontFamily: "Bahnschrift",
+              textDecorationLine: "underline",
+            }}
+          >
+            View all
+          </i> */}
+        </div>
+        {/* <div className="mt-4">{propertyListing}</div> */}
+        <div className="mt-2 mb-5 row row-cols-2 justify-content-around">
+          {propertyListing}
+        </div>
+      </Container>
+      <Footer />
+    </>
   );
 };
 
-export default RecentlyAdded;
+export default RecentlyAddedProperty;
