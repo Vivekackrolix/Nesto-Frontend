@@ -19,6 +19,8 @@ import NotificationDropdown from "./dashboard/Builderprofile/notification/Notifi
 import { Provider } from "react-redux";
 import store from "./redux";
 import RegisterLogin from "./login/Register/RegisterLogin";
+import RecentlyAddedProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
+import RecentlySoldOutProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlySoldOutProperty";
 
 const App = () => {
   return (
@@ -35,6 +37,20 @@ const App = () => {
             exact
             path="/builder/home-dashboard/promoted"
             element={<PromotedVisit />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/recentlyadded"
+            element={
+              <RecentlyAddedProperty data={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
+            }
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/recentlysold"
+            element={
+              <RecentlySoldOutProperty data={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
+            }
           />
           <Route
             exact

@@ -12,6 +12,8 @@ import Brockrage from "../dashboard/Brokerage/Brokerage";
 import SettledInvoice from "../dashboard/Brokerage/SettledInvoice";
 import BrockrageSettled from "../dashboard/Brokerage/BrokerageSettled";
 import NotificationDropdown from "../dashboard/Builderprofile/notification/NotificationDropdown";
+import RecentlyAddedProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
+import RecentlySoldOutProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlySoldOutProperty";
 export const RouteData = [
   {
     id: 1,
@@ -69,6 +71,16 @@ export const RouteData = [
         id: 11,
         path: "notification",
         element: <NotificationDropdown />,
+      },
+      {
+        id: 12,
+        path: "RecentlyAdded",
+        element: <RecentlyAddedProperty />,
+      },
+      {
+        id: 13,
+        path: "RecentlySoldOut",
+        element: <RecentlySoldOutProperty />,
       },
     ],
   },

@@ -1,9 +1,12 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import propertyImage from "../../Images/propertyimage.png";
+import { Card, Col, Container, Row } from "react-bootstrap";
+import propertyImage from "../../../Images/propertyimage.png";
 import { Link } from "react-router-dom";
-import "./SoldOut.css";
+import DashboardHeader from "../../header/DashboardHeader";
+import SearchFilterBox from "../../search-filter/SearchFilter";
+import Footer from "../../Footer/Footer";
+// import "./SoldOut.css";
 
-const SoldOut = ({ data }) => {
+const RecentlySoldOutProperty = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Col
@@ -69,28 +72,31 @@ const SoldOut = ({ data }) => {
     );
   });
   return (
-    <Container className="mt-5">
-      <div className="row justify-content-between">
-        <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
-          Recently Sold Out Property
-        </h3>
-        <Button
+    <>
+      <DashboardHeader />
+      <Container className="mt-5">
+        <SearchFilterBox />
+        <div className="row justify-content-between">
+          <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
+            Recently Sold Out Property
+          </h3>
+          {/* <i
           className="col-1"
           style={{
             color: "#FC5C67",
             fontFamily: "Bahnschrift",
             textDecorationLine: "underline",
           }}
-          as={Link}
-          to="/builder/home-dashboard/recentlysold"
         >
           View all
-        </Button>
-      </div>
-      {/* <div className="mt-4">{propertyListing}</div> */}
-      <div className="mt-2 row justify-content-around">{propertyListing}</div>
-    </Container>
+        </i> */}
+        </div>
+        {/* <div className="mt-4">{propertyListing}</div> */}
+        <div className="mt-2 row justify-content-around">{propertyListing}</div>
+      </Container>
+      <Footer />
+    </>
   );
 };
 
-export default SoldOut;
+export default RecentlySoldOutProperty;
