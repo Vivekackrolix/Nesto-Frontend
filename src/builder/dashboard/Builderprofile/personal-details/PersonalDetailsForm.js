@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import { Form, Button, Col } from "react-bootstrap";
-=======
 import { useEffect } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { getBuilderDetail } from "../../../redux/https-requests/builderDetail-http";
->>>>>>> 2b6ede295a7bc37e6b7570073f52b676b8f3233a
 // import CreatableSelect from "react-select/creatable";
 
 import FileUpload from "../file-upload/FileUpload";
