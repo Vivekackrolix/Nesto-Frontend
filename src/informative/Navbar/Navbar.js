@@ -12,7 +12,7 @@ const InformativeNavbar = () => {
     <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
       <Container className='nav-container'>
         <Link to='/' className='navbar-brand nav-image'>
-          <img  
+          <img
             src="/assets/nesto-logo.png"
             alt="logo"
             className="login__header__img me-auto"
@@ -20,27 +20,24 @@ const InformativeNavbar = () => {
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto d-flex align-items-center">
-            <NavDropdown
-              title="Login"
-              show={dropdown}
-              className="border-color-primary text-blue my-3 my-lg-0 me-3 p-0 btn btn-sm"
-              onClick={() => setDropdown(!dropdown)}
-            >
-              <NavDropdown.Item href="#" className=''>Action</NavDropdown.Item>
-              <NavDropdown.Item href="#">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#">Something else here</NavDropdown.Item>
-            </NavDropdown>
+          <Nav className="ms-auto d-flex align-items-center gap-5">
             <Nav.Item>
-              <button className="broker-btn btn border-color-primary mx-4 profile-button py-0 btn-sm">
+              <div className='login-div'>
+                <Link to='/' className='login-link'>Login</Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="broker-link-div">
                 <span>
                   <img src="./assets/profle.png" alt="" />
                 </span>
-                <Link to='/broker-page' className="broker-link mx-2">Join as a broker</Link>
-              </button>
+                <Link to='/broker-page' className="broker-link">Join as a broker</Link>
+              </div>
             </Nav.Item>
             <Nav.Item>
-              <Link to='/' className='list-link'>List your Property</Link>
+              <div className='list-property-div'>
+                <Link to='/' className='list-property-link'>List your Property</Link>
+              </div>
             </Nav.Item>
             <Nav.Item className="download">
               <button className="download-button d-flex mb-3 p-4 mb-lg-0 btn-lg">

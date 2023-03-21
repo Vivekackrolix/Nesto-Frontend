@@ -15,44 +15,6 @@
     color: #ffffff;
 }
 
-.broker-btn {
-    transition: all .3s ease-in;
-}
-
-.broker-btn:hover .broker-link {
-    color: var(--color-white);
-}
-
-.broker-link {
-    color: var(--primary-color);
-    transition: all .3s ease-in;
-    font-size: 14px;
-}
-
-.list-link {
-    padding: 10px 18px;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    background: var(--primary-color);
-    color: var(--color-white);
-    font-weight: 400;
-    font-size: 14px;
-    transition: all .3s ease-in;
-}
-
-.list-link:hover {
-    background: var(--color-white);
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.list-link:active,
-.list-link:focus {
-    background: var(--color-white);
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
 @media (max-width: 992px) {
     /* .nes__header .navbar-nav {
       display: flex;
@@ -82,7 +44,7 @@
 }
 
 .download {
-    margin-left: 22px;
+    /* margin-left: 22px; */
     position: relative;
     left: 14px;
 }
@@ -90,4 +52,40 @@
 .nav-image {
     position: relative;
     right: 100px;
+}
+
+
+/* =====================
+===================== */
+.login-link {
+    color: var(--primary-color);
+    font-size: 16px;
+    border: 1px solid var(--primary-color);
+    padding: 10px 30px;
+    font-weight: 350;
+    border-radius: 8px;
+    background: var(--color-white);
+    transition: all .3s ease-in;
+}
+
+.login-link:hover {
+    background: var(--primary-color);
+    color: var(--color-white);
+}
+.broker-link-div {
+    /* background: var(--primary-color); */
+}
+.list-property-link {
+    color: var(--color-white);
+    font-size: 16px;
+    border: 1px solid var(--primary-color);
+    padding: 10px 30px;
+    font-weight: 350;
+    border-radius: 8px;
+    background: var(--primary-color);
+    transition: all .3s ease-in;
+}
+.list-property-link:hover {
+    background: var(--color-white);
+    color: var(--primary-color);
 }
