@@ -6,11 +6,11 @@ const Heading = ({ title, sub }) => {
     <>
       <div className="text-center pt-5">
         <div className="">
-          <span className="sections-heading" data-aos="fade-right">
+          <span className="sections-heading" data-aos="fade-up">
             {title}
           </span>
         </div>
-        <div className="sections-sub-heading" data-aos="fade-left">
+        <div className="sections-sub-heading" data-aos="fade-up">
           <p className="">{sub}</p>
         </div>
       </div>

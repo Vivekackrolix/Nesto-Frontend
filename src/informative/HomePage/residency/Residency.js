@@ -1,5 +1,5 @@
 import React from 'react';
-import './residency.css';
+import './Residency.css';
 
 export default function Residency() {
   return (
