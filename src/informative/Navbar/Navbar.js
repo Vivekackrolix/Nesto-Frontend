@@ -12,7 +12,7 @@ const InformativeNavbar = () => {
     <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
       <Container className='nav-container'>
         <Link to='/' className='navbar-brand nav-image'>
-          <img
+          <img  
             src="/assets/nesto-logo.png"
             alt="logo"
             className="login__header__img me-auto"
@@ -22,7 +22,7 @@ const InformativeNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto d-flex align-items-center">
             <NavDropdown
-              title="Login ▾"
+              title="Login"
               show={dropdown}
               className="border-color-primary text-blue my-3 my-lg-0 me-3 p-0 btn btn-sm"
               onClick={() => setDropdown(!dropdown)}
