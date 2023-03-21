@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import Heading from "../../HomePage/Heading/Heading";
+import Heading from "../Heading/Heading";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './OurPartner.css'

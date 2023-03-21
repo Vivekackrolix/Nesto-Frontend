@@ -4,6 +4,7 @@ import ChooseUs from "../../HomePage/ChooseUs/Chooseus";
 import News from "../../HomePage/News/News";
 import Residency from "../../HomePage/Residency/Residency";
 import Testimonial from "../../HomePage/Testimonials/Testimonials";
+
 import Contact from "../contactform/Contact";
 import "./BokerHome.css";
 export default function BrokerHome() {
