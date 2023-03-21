@@ -1,6 +1,4 @@
-// import DashboardChildCard from "../dashboard-card-big/DashboardChildCard";
 import DashboardTabs from "../dashboard-tabs/DashboardTabs";
-
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import { Col, Container, Row } from "react-bootstrap";
 import ManageRole from "./ManageRole";
@@ -14,7 +12,7 @@ const QueriesHistory = () => {
   ));
   return (
     <>
-      <h2>Manage Roles</h2>
+      <h3>Manage Roles</h3>
       <br />
       <SearchFilterBox />
       <DashboardTabs tabsKey={tabKey2} activeState={tabKey2[0]}></DashboardTabs>

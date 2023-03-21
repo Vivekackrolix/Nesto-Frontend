@@ -19,7 +19,7 @@ const CopyrightText = () => {
                 &nbsp;Nesto Hub&nbsp;
               </span>{' '}
               | All Rights Reserved | Design & Develop by
-              <span className="text-white fw-bold"> &nbsp;Bizzeonline </span>
+              <a href='https://bizzeonline.com' target={'_blank'} className="text-white fw-bold"> &nbsp;Bizzeonline </a>
             </span>
           </Col>
           <Col
