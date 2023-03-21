@@ -1,7 +1,7 @@
 import { DashboardFooter } from "../../../broker/features";
 import Footer from "../../../builder/dashboard/Footer/Footer";
 import ChooseUs from "../../HomePage/chooseus/Chooseus";
-import News from "../../HomePage/news/News";
+import News from "../../HomePage/News/News";
 import Residency from "../../HomePage/residency/Residency";
 import Testimonial from "../../HomePage/testimonials/Testimonials";
 import Contact from "../contactform/Contact";

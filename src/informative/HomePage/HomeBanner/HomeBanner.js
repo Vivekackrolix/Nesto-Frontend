@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import InformativeNavbar from '../../Navbar/Navbar';
 import Residency from '../residency/Residency';
 import GetStarted from '../getStarted/GetStarted';
-import News from '../news/News';
+import News from '../News/News';
 import AboutUs from '../AboutUs/AboutUs';
 import ChooseUs from '../chooseus/Chooseus';
 import Testimonials from '../testimonials/Testimonials';
