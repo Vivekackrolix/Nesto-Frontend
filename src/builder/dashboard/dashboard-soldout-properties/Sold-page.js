@@ -10,14 +10,19 @@ import Amenities from "../dashboard-property-analytics/dashboard-property-detail
 import Payment from "../dashboard-property-analytics/dashboard-property-details/Payment";
 import Danelions from "./Danelions";
 import Footer from "../Footer/Footer";
+import Floor from "../dashboard-property-analytics/dashboard-property-details/Floor";
 
 const SoldPage = () => {
   return (
     <>
       <DashboardHeader />
-      <Container className="pt-5 pb-4 dashboard__wrapper">
+      <Container className="pt-2 pb-4 dashboard__wrapper">
         <SearchFilterBox />
-        <img src={homeImage} className="rounded my-3" alt="Home" />
+        <h2>Property Details</h2>
+        {/* <img src={homeImage} className="rounded my-3" alt="Home" /> */}
+        <Row className="gx-4 dashboard-cards align-items-center">
+          <img src={homeImage} className="rounded my-3" alt="Home" />
+        </Row>
         <div
           className="d-flex gap-2"
           style={{ color: "#7D7F88", border: "none", outline: "none" }}
@@ -40,17 +45,22 @@ const SoldPage = () => {
         <br></br>
         <Danelions />
         <Anlytics />
+        <Floor />
         <Amenities />
         <Col>
           <Location />
-          <img src={map} className="rounded my-3" alt="Home" />
+          <Row className="gx-4 dashboard-cards align-items-center">
+            <img src={map} className="rounded my-3" alt="Home" />
+          </Row>
         </Col>
         <Col>
           <Payment />
         </Col>
         <Col>
           <h2 style={{ fontFamily: "Bahnschrift" }}> View offical brochure</h2>
-          <img src={brochure} className="rounded my-3" alt="Home" />
+          <Row className="gx-4 dashboard-cards align-items-center">
+            <img src={brochure} className="rounded my-3" alt="Home" />
+          </Row>
         </Col>
         <Col>
           <h2 style={{ fontFamily: "Bahnschrift" }}> Terms & Conditions</h2>

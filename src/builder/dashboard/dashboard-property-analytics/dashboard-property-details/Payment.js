@@ -1,10 +1,61 @@
 import { Col, Container, Row, Table } from "react-bootstrap";
 import Axis from "../../../Images/Axis.png";
 import HDFC from "../../../Images/HDFC.png";
+import dlf from "../../../Images/dlf.png";
 
 const Payment = () => {
   return (
     <>
+      <div className=" d-flex justify-content-around rounded">
+        <div className=" border border_light rounded container mx-4">
+          <div className="d-flex bd-highlight mb-3">
+            <div className="me-auto p-1 bd-highlight">
+              {" "}
+              <img src={dlf} alt="" />
+            </div>
+            <span className="me-auto p-2 bd-highlight">
+              <h4>DLF Tower</h4>
+
+              <h6 style={{ color: "#8B9199" }}>Shivaji Nagar</h6>
+
+              <h6 style={{ color: "#8B9199" }}>0.06 KM distance</h6>
+            </span>
+          </div>
+        </div>
+
+        <div className=" border border_light rounded container mx-4">
+          <div className="d-flex bd-highlight mb-3">
+            <div className="me-auto p-1 bd-highlight">
+              {" "}
+              <img src={dlf} alt="" />
+            </div>
+            <span className="me-auto p-2 bd-highlight">
+              <h4>DLF Tower</h4>
+
+              <h6 style={{ color: "#8B9199" }}>Shivaji Nagar</h6>
+
+              <h6 style={{ color: "#8B9199" }}>0.06 KM distance</h6>
+            </span>
+          </div>
+        </div>
+
+        <div className=" border border_light rounded container mx-4">
+          <div className="d-flex bd-highlight mb-3">
+            <div className="me-auto p-1 bd-highlight">
+              {" "}
+              <img src={dlf} alt="" />
+            </div>
+            <span className="me-auto p-2 bd-highlight">
+              <h4>DLF Tower</h4>
+
+              <h6 style={{ color: "#8B9199" }}>Shivaji Nagar</h6>
+
+              <h6 style={{ color: "#8B9199" }}>0.06 KM distance</h6>
+            </span>
+          </div>
+        </div>
+      </div>
+
       <br></br>
       <br></br>
       <h3>Brockrage Payout plan</h3>
@@ -17,6 +68,7 @@ const Payment = () => {
 
         <br></br>
       </Container>
+
       <br></br>
       <br></br>
       <h3>Milestone</h3>

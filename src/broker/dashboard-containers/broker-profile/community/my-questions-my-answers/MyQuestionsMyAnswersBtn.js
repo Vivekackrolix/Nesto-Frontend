@@ -4,7 +4,6 @@ import {
   showMyQuestionsMyAnswers,
   hideMyQuestionsMyAnswers,
 } from '../CommunitySlice';
-import { SearchFilter } from '../../../../../components';
 
 const MyQuestionsMyAnswersBtn = () => {
   const dispatch = useDispatch();

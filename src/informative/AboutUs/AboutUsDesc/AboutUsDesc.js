@@ -1,11 +1,10 @@
 import React from 'react'
-import './AboutUsDesc.css'
 import { Link } from 'react-router-dom'
 
 const AboutUsDesc = () => {
     return (
         <div className='about-us_box1'>
-            <div className='container' style={{ overflowX: 'hidden' }}>
+            <div className='container'>
                 <div className='row'>
                     <div className='col-lg-6' data-aos='fade-right'>
                         <img className='about-us_box1-img' src='/assets/informative/device.png' />
@@ -42,8 +41,8 @@ const AboutUsDesc = () => {
                     </div>
                     <div className='col-lg-6' data-aos='fade-left'>
                         <div className='about-us_box2'>
-                            <span className='about-us_box-span1'>ABOUT US</span>
-                            <span className='about-us_box-span2'>Dream Living Spaces Setting New Build</span>
+                            <span className='sections-heading'>ABOUT US</span>
+                            <span className='sections-sub-heading'>Dream Living Spaces Setting New Build</span>
                             <span className='about-us_box-span3'>Over 39,000 people work for us in more than 70 countries all
                                 over the This breadth of global coverage, combined with
                                 specialist services. Over 39,000 people work for us in more

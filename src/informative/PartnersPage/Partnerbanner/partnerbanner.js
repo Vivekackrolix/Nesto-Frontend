@@ -1,51 +1,40 @@
+import React from "react";
+import "./PartnerBanner.css";
+import SearchBar from "../SearchBar/SearchBar";
+import Footer from "../../../components/footer/Footer";
+import InformativeNavbar from "../../Navbar/Navbar";
+import { Link } from "react-router-dom";
+import PartnerCard from "../PartnerCard/PartnerCard";
 
-import { Footer, Header } from '../../../components';
-import InformativeNavbar from '../../Navbar/Navbar';
-import Partner from '../partners/partner';
-import './partnerbanner.css'
-
-
-export default function PartnerBanner() {
+const PartnerBanner = () => {
   return (
     <>
-      <InformativeNavbar/>
-      <div className="banner-body">
-        <div className="row">
-          <div className="col-md-7">
-            <div className="banner-content">
-              <h3 className="banner-heading px-5">
-                Our Partners, The Companies That
-                Represent Us.
-              </h3>
-              <p className="banner-description px-5">
-                Borem ipsum dolor sit amet conse ctetur adipisicing elit sed do eiusmod Eorem ipsum dolor sit amet conse ctetur.
+      <InformativeNavbar />
+      <div className="partners">
+        <div className="row partners-row">
+          <div className="col-lg-6 partners-col-1">
+            <div>
+              <h4 className="partners-h4">
+                Our Partners, The Companies That Represent Us.
+              </h4>
+              <hr className="banner-hr" />
+              <p className="partners-p">
+                Borem ipsum dolor sit amet conse ctetur adipisicing elit sed do
+                eiusmod Eorem ipsum dolor sit amet conse ctetur.
               </p>
-              <div>
-                <a href="#" className="banner-button text-decoration-none mx-5">
-                  Contact us
-                </a>
-              </div>
+              <Link to="/" className="partners-link">
+                Contact Us
+              </Link>
             </div>
           </div>
-          <div className="col-md-5 d-flex image-div">
-            {/* <img className='dot-curve' src="dotted-curve" alt="" /> */}
-
-            <img
-              className="building-image"
-              src="./assets/partnerbuilding.png"
-              alt=""
-            />
-          </div>
+          <div className="col-lg-6 partners-col-2"></div>
         </div>
       </div>
-      <Partner />
-      <Partner />
-      <Partner />
-      <Partner />
-      <Partner />
-
-
-
+      <SearchBar />
+      <PartnerCard />
+      <Footer />
     </>
   );
-}
+};
+
+export default PartnerBanner;

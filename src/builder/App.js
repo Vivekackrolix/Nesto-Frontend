@@ -16,64 +16,78 @@ import SettledInvoice from "./dashboard/Brokerage/SettledInvoice";
 import BrockrageSettled from "./dashboard/Brokerage/BrokerageSettled";
 import ProfilePage from "./dashboard/Builderprofile/Profile";
 import NotificationDropdown from "./dashboard/Builderprofile/notification/NotificationDropdown";
+import { Provider } from "react-redux";
+import store from "./redux";
+import RegisterLogin from "./login/Register/RegisterLogin";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/builder/login" element={<Login />} />
-        <Route
-          exact
-          path="/builder/home-dashboard/promoted"
-          element={<PromotedVisit />}
-        />
-        <Route
-          exact
-          path="/builder/home-dashboard/visit"
-          element={<VisitDetails />}
-        />
-        <Route
-          exact
-          path="/builder/home-dashboard/promoted/claim"
-          element={<PropertyClaim />}
-        />
-        <Route
-          exact
-          path="/builder/home-dashboard/Brokerage/settled"
-          element={<BrockrageSettled />}
-        />
-        <Route
-          exact
-          path="/builder/home-dashboard/Brokerage"
-          element={<Brockrage />}
-        />
-        <Route
-          exact
-          path="/builder/home-dashboard/notification"
-          element={<NotificationDropdown />}
-        />
-        <Route
-          exact
-          path="/builder/home-dashboard/profile"
-          element={<ProfilePage />}
-        />
-        <Route
-          exact
-          path="/builder/home-dashboard/propertyedit"
-          element={<PropertyEdit />}
-        />
-        <Route
-          exact
-          path="/builder/home-dashboard/description"
-          element={<SoldPage />}
-        />
-        <Route exact path="/builder/home-dashboard" element={<HomeDashBoard />}>
-          <Route exact path="property" element={<Property />} />
-          <Route exact spath="HOME" />
-          <Route exact bpath="Brockrage" />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/builder/login" element={<Login />} />
+          <Route
+            exact
+            path="/builder/register"
+            element={<RegisterLogin />}
+          />{" "}
+          <Route
+            exact
+            path="/builder/home-dashboard/promoted"
+            element={<PromotedVisit />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/visit"
+            element={<VisitDetails />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/promoted/claim"
+            element={<PropertyClaim />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/Brokerage/settled"
+            element={<BrockrageSettled />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/Brokerage"
+            element={<Brockrage />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/notification"
+            element={<NotificationDropdown />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/profile"
+            element={<ProfilePage />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/propertyedit"
+            element={<PropertyEdit />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/description"
+            element={<SoldPage />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard"
+            element={<HomeDashBoard />}
+          >
+            <Route exact path="property" element={<Property />} />
+            <Route exact spath="HOME" />
+            <Route exact bpath="Brockrage" />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 };
 

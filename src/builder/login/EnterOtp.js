@@ -4,12 +4,57 @@ import { useNavigate } from "react-router-dom";
 import { RiTimerLine } from "react-icons/ri";
 import CustomModal from "../../components/common/CustomModal";
 // import OtpContent from './OtpContent';
+import axios from "axios";
 
-const EnterOtp = ({ show, onHide }) => {
+const EnterOtp = ({ show, onHide, phone, setRegister }) => {
   const otpInputs = useRef([]);
   const [otpPassword, setOtpPassword] = useState(false);
+
   const navigate = useNavigate();
   const [timer, setTimer] = useState(30);
+
+  const resendOTP = async () => {
+    resetOtpInputs();
+    startTimer();
+    debugger;
+    const response = await axios.post(
+      "http://13.234.136.165:3000/api/v1/builder/resendOtp",
+      {
+        phoneNumber: phone,
+      }
+    );
+    console.log(response);
+  };
+
+  const validateOTP = async () => {
+    let otp = "";
+    otpInputs.current.forEach((element) => {
+      otp = otp + element.value;
+    });
+    try {
+      debugger;
+      const response = await axios.post(
+        "http://13.234.136.165:3000/api/v1/builder/verifyOtp",
+        { phoneNumber: phone, otp: otp }
+      );
+      // console.log(response);
+      if (response.data.code === 200) {
+        console.log("CORRECT OTP");
+        localStorage.setItem("phone", phone);
+        if (response.data.data.status === "newuser") {
+          // navigate("/builder/register");
+          setRegister(true);
+          onHide(false);
+        } else {
+          navigate("/builder/home-dashboard");
+        }
+      } else {
+        console.log("INCORRECT OTP");
+      }
+    } catch (err) {
+      console.log("Catch: INCORRECT OTP");
+    }
+  };
 
   const handleOtpInputChange = (e, index) => {
     const otpInput = e.target;
@@ -68,7 +113,6 @@ const EnterOtp = ({ show, onHide }) => {
   }, [timer]);
 
   return (
-    
     <CustomModal
       title="OTP Verification"
       show={show}
@@ -112,10 +156,11 @@ const EnterOtp = ({ show, onHide }) => {
                 <Button
                   color="Resend"
                   variant="transparent"
-                  onClick={() => {
-                    resetOtpInputs();
-                    startTimer();
-                  }}
+                  // onClick={() => {
+                  //   resetOtpInputs();
+                  //   startTimer();
+                  // }}
+                  onClick={resendOTP}
                 >
                   Resend
                 </Button>
@@ -125,11 +170,12 @@ const EnterOtp = ({ show, onHide }) => {
           <Button
             variant="primary"
             className="w-100 rounded-pill bg-color-primary"
-            onClick={() => {
-              if (otpInputs.current.every((input) => input.value)) {
-                navigate("/builder/home-dashboard");
-              }
-            }}
+            // onClick={() => {
+            //   if (otpInputs.current.every((input) => input.value)) {
+            // navigate("/builder/home-dashboard");
+            //   }
+            // }}
+            onClick={validateOTP}
           >
             Verify
           </Button>

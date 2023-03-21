@@ -29,9 +29,9 @@ const VisitDetails = () => {
           </button>
 
           <Button
-            variant="primary"
+            variant="secondary"
             type="button"
-            className=" w-50 rounded-pill col-2 btn btn-secondary "
+            className=" w-50 rounded-pill col-2 "
             as={Link}
             to="/builder/home-dashboard/promoted"
           >

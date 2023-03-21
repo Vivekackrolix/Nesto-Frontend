@@ -27,10 +27,12 @@ const ArticleNews = () => {
     ]
     return (
         <>
-            <div className='container article-news' data-aos='zoom-in'>
+            <div className='container article-news' data-aos='zoom-in' style={{overflowX: 'hidden'}}>
                 <div className='article-news_head-box'>
                     <h3 className='article-news_heading'>Articles & News</h3>
                     <span className='article-news_para'>Get the Latest News, Updates and Tips</span>
+                    {/* <h3 className='sections-heading'>Articles & News</h3>
+                    <span className='sections-sub-heading'>Get the Latest News, Updates and Tips</span> */}
                 </div>
                 <div className='row article-news_row my-5'>
                     {data.map((item) => {

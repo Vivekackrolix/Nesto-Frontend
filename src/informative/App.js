@@ -4,8 +4,7 @@ import PartnersDetailsMain from './PartnersDetail/PartnersDetailsMain';
 import BrokerHome from './BrokerPage/BrokerHome/BrokerHome';
 
 import ContactUsMain from './ContactUs/ContactUsMain';
-// import Banner from './HomePage/Banner/Banner';
-import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner'
+import PartnerBanner from './PartnersPage/Partnerbanner/PartnerBanner'
 import TermsCondition from './TermsCondition/TermsCondition';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 import BlogListMain from './BlogList/BlogListMain'
@@ -14,10 +13,12 @@ import BlogDetailMain from './BlogDetail.js/BlogDetailMain';
 import AboutUsMain from './AboutUs/AboutUsMain';
 import Faq from './Faq/Faq';
 import HomeBanner from './HomePage/HomeBanner/HomeBanner';
+import ScrollToTop from '../dsa/components/ScrollToTop';
 
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path='/partners/details' element={<PartnersDetailsMain />} />
         <Route path='/contact-us' element={<ContactUsMain />} />

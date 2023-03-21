@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const AboutUs = () => {
     return (
-        <div className='about-us_box1 home-page-about'>
+        <div className='home-page-about'>
             <div className='container' style={{ overflow: 'hidden' }}>
                 <div className='row'>
                     <div className='col-lg-6' data-aos='fade-right'>
@@ -42,8 +42,8 @@ const AboutUs = () => {
                     </div>
                     <div className='col-lg-6' data-aos='fade-left'>
                         <div className='about-us_box2'>
-                            <span className='about-us_box-span1'>ABOUT US</span>
-                            <span className='about-us_box-span2'>Dream Living Spaces Setting New Build</span>
+                            <span className='about-us_box-span1 sections-heading'>ABOUT US</span>
+                            <span className='about-us_box-span2 sections-sub-heading'>dream Living Spaces Setting New Build</span>
                             <span className='about-us_box-span3'>Over 39,000 people work for us in more than 70 countries all
                                 over the This breadth of global coverage, combined with
                                 specialist services. Over 39,000 people work for us in more
@@ -51,8 +51,8 @@ const AboutUs = () => {
                                 coverage, combined with specialist services.Over 39,000 people
                                 work for us in more than 70 countries all over the</span>
                         </div>
-                        <div className='mt-5 mb-2'>
-                            <Link to='/' className='about-us-read-more'>Read More</Link>
+                        <div className=''>
+                            <Link to='/about-us' className='about-us-read-more'>Read More</Link>
                         </div>
                     </div>
                 </div>

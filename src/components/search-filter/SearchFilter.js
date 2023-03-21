@@ -1,8 +1,8 @@
-import { BsSearch, BsMic, BsGeoAlt } from "react-icons/bs";
-import { InputGroup, FormControl, Button, Form } from "react-bootstrap";
-import "./SearchFilter.css";
-import { IoMdAdd } from "react-icons/io";
-import { useState } from "react";
+import { BsSearch, BsMic, BsGeoAlt } from 'react-icons/bs';
+import { InputGroup, FormControl, Button, Form } from 'react-bootstrap';
+import './SearchFilter.css';
+import { IoMdAdd } from 'react-icons/io';
+import { useState } from 'react';
 
 const SearchFilterBox = ({ addBtn }) => {
   return (

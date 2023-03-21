@@ -80,7 +80,7 @@ const Tips = () => {
     ]
     return (
         <>
-            <div className='container tips-container' data-aos='fade-up'>
+            <div className='container tips-container' data-aos='fade-up' style={{overflowX: 'hidden'}}>
                 <div className='tips-header'>
                     <div className='tips-header_box text-center'>
                         <span className='tips-header_heading'>
@@ -181,7 +181,7 @@ const Tips = () => {
             </div>
             {/* RecentPost */}
             {/* Css coming from BlogList/LatestPostLeft/LatestPostLeft.css*/}
-            <div className='container mb-5'>
+            <div className='container mb-5' style={{overflowX: 'hidden'}}>
                 <div className='row'>
                     <div className='recent-post_box'>
                         <div data-aos='fade-right'>

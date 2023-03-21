@@ -8,10 +8,11 @@ import notification from "../../Images/notification.png";
 import property from "../../Images/property.png";
 import Brokerage from "../../Images/brokrage.png";
 import home from "../../Images/Home.png";
+import NotificationDropdown from "../Builderprofile/notification/NotificationDropdown";
 
 const DashboardHeader = () => {
   return (
-    <header className="py-3 login__header" style={{ background: "#ECF7FF" }}>
+    <header className="py-2 login__header" style={{ background: "#ECF7FF" }}>
       <Container>
         <Nav className="d-flex align-items-center">
           <Nav.Item>
@@ -48,17 +49,30 @@ const DashboardHeader = () => {
               Brokerage
             </Nav.Item>
           </div>
-          <div className="d-flex col-2 ms-auto">
-            <Nav.Item className="me-2 p-2">
+          <div className="d-flex col-3 ms-auto align-items-center justify-content-end">
+            {/* <Nav.Item className="p-3">
               <img src={bgImage} alt="profile" />
+            </Nav.Item> */}
+            <Nav.Item className="p-3">
+              <img
+                src="/assets/subscription.png"
+                alt="subscription"
+                className="subscription"
+              />
             </Nav.Item>
-            <Nav.Item
-              className="me-2"
+            {/* <Nav.Item
+              className="p-2"
               as={Link}
               to="/builder/home-dashboard/notification"
-            >
-              <img src={notification} alt="notification" />
-            </Nav.Item>
+            > */}
+            {/* <img src={notification} alt="notification" /> */}
+            {/* <img
+                src="/assets/notification.png"
+                alt="notification"
+                className="notification"
+              /> */}
+            <NotificationDropdown notification={3} />
+            {/* </Nav.Item> */}
             <Nav.Item
               className="me-3 mx-1 my-2"
               as={Link}

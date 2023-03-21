@@ -1,8 +1,10 @@
 .how-box {
-    margin: 6% 0 3% 0;
+    margin-top: 3%;
     text-align: center;
 }
-
+.how-container {
+    margin: 30px auto;
+}
 .how-heading-1 {
     font-weight: 500;
     display: block;

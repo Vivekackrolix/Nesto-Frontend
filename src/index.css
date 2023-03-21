@@ -17,6 +17,7 @@
   /* divider */
   --divider: #d3d3d3;
 }
+
 /* Custom Scroll-bar */
 html::-webkit-scrollbar {
   width: 5px;
@@ -41,6 +42,7 @@ html::-webkit-scrollbar-thumb {
 :root {
   font-family: 'Bahnschrift';
 }
+
 /*
 body {
   font-family: 'Poppins', sans-serif;
@@ -48,15 +50,18 @@ body {
 
 ::placeholder {
   color: #c6c6c6 !important;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: #c6c6c6 !important;
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #c6c6c6 !important;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
- color: #c6c6c6 !important;
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #c6c6c6 !important;
 }
 
 .btn.btn-color-outline-primary {
@@ -71,9 +76,11 @@ body {
   background-color: var(--primary-color);
   color: #ffffff;
 }
+
 ::placeholder {
   color: #8391a1;
 }
+
 .btn-shadow {
   box-shadow: 2px 10px 22px #278fd973;
 }
@@ -92,4 +99,23 @@ body {
 
 p{
   margin-bottom: 0.5rem;
+}
+
+
+/* Sections Headings */
+.sections-heading {
+  font-weight: 600;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: var(--carnation-color);
+  display: block;
+}
+
+.sections-sub-heading {
+  text-transform: capitalize;
+  font-weight: 900;
+  color: var(--cold-black-color);
+  font-weight: 700;
+  display: block;
+  font-size: 44.26px;
 }

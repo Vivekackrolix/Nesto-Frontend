@@ -12,12 +12,12 @@ const NotificationDropdown = ({ notification }) => {
         className="p-0 d-flex justify-content-center align-items-center position-relative"
       >
         <FiBell size={20} />
-        {notification /* <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        {notification /* <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
           99+
-          <span class="visually-hidden">unread messages</span>
+          <span className="visually-hidden">unread messages</span>
         </span> */ && (
-          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-            <span class="visually-hidden">New alerts</span>
+          <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+            <span className="visually-hidden">New alerts</span>
           </span>
         )}
       </Dropdown.Toggle>
@@ -38,7 +38,7 @@ const NotificationDropdown = ({ notification }) => {
 
         {!notification && 'No new notification'}
 
-        <div class="bg-white d-flex justify-content-center align-items-center my-2 view-all">
+        <div className="bg-white d-flex justify-content-center align-items-center my-2 view-all">
           <Link className="text-decoration-none"> View All</Link>
         </div>
       </Dropdown.Menu>
