@@ -6,9 +6,9 @@ import RowFour from './RowFour/RowFour'
 const HowWork = () => {
     return (
         <>
-            <div className="how-box" style={{overflowX: 'hidden'}}>
-                <span className='sections-heading' data-aos='fade-left'>How Nesto Works</span>
-                <span className='sections-sub-heading' data-aos='fade-right'>We are Offering The Best Real Estate Property</span>
+            <div className="how-box">
+                <span className='sections-heading' data-aos='fade-up'>How Nesto Works</span>
+                <span className='sections-sub-heading' data-aos='fade-up'>We are Offering The Best Real Estate Property</span>
             </div>
             <div className='container how-container' style={{overflowX: 'hidden'}}>
                 <div className='row pt-4'>

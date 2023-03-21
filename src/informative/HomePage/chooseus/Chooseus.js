@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Heading from '../Heading/Heading';
-import './chooseus.css';
+import './ChooseUs.css';
 
 export default function ChooseUs() {
   const data = [

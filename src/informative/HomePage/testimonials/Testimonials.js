@@ -1,16 +1,10 @@
 // import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
-import './testimonials.css'
-// import testimonialimage from "../../public/assets/testimonialimage.png";
-// import quote from "../../public/assets/quote.png"
+import './Testimonials.css'
 import { FaStar } from "react-icons/fa";
 import { AiOutlineStar } from "react-icons/ai";
 import Heading from "../Heading/Heading";
-// import Heading from "./common/Heading";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Heading from "../common/Heading";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
