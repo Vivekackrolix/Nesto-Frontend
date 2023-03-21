@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import { getBuilderDetail } from "../../../redux/https-requests/builderDetail-http";
 // import CreatableSelect from "react-select/creatable";
 
 import FileUpload from "../file-upload/FileUpload";
@@ -9,6 +12,14 @@ import FileUpload from "../file-upload/FileUpload";
 // ];
 
 const PersonalDetailsForm = () => {
+  const dispatch = useDispatch();
+  const builderData = useSelector(
+    (state) => state.builderDetail.details[0]
+  ) || { email: "", phoneNumber: "", gst: "" };
+
+  useEffect(() => {
+    dispatch(getBuilderDetail());
+  }, [dispatch]);
   return (
     <>
       <h2 style={{ fontWeight: "Bold", color: " #000000" }}>
@@ -27,6 +38,7 @@ const PersonalDetailsForm = () => {
             className="rounded-0"
             type="email"
             placeholder="jack.s@gmail.com"
+            value={builderData.email}
           />
         </Form.Group>
 
@@ -36,6 +48,7 @@ const PersonalDetailsForm = () => {
             className="rounded-0"
             type="tel"
             placeholder="4857788898"
+            value={builderData.phoneNumber}
           />
         </Form.Group>
 
@@ -61,6 +74,7 @@ const PersonalDetailsForm = () => {
             className="rounded-0"
             type="text"
             placeholder="WD3 12 3321D"
+            value={builderData.gst}
           />
         </Form.Group>
         <Form.Group className="mb-4" controlId="address">

@@ -85,7 +85,9 @@ const RegisterLogin = (props) => {
                   type="text"
                   value={inputName}
                   onChange={handleNameChange}
+                  placeholder="Name"
                 />
+
                 {/* <Form.Control.Feedback type="invalid">
                   Please enter valid Name.
                 </Form.Control.Feedback>
@@ -93,6 +95,7 @@ const RegisterLogin = (props) => {
                   Input is valid!
                 </Form.Control.Feedback> */}
               </InputGroup>
+              <br />
               <InputGroup className="mb-0">
                 <Form.Control
                   name="phone"
@@ -103,6 +106,7 @@ const RegisterLogin = (props) => {
                   maxLength="10"
                   onChange={handleInputChange}
                   placeholder="Enter your phone number"
+
                   //   isInvalid={showErrorMessage}
                   //   isValid={!showErrorMessage && inputValue !== ""}
                 />
@@ -113,6 +117,7 @@ const RegisterLogin = (props) => {
                   Input is valid!
                 </Form.Control.Feedback>
               </InputGroup>
+              <br />
               <InputGroup className="mb-0">
                 <Form.Control
                   name="Referral"
@@ -121,6 +126,7 @@ const RegisterLogin = (props) => {
                   type="text"
                   value={referral}
                   onChange={handleReferralChange}
+                  placeholder="Enter Referral Code"
                 />
                 {/* <Form.Control.Feedback type="invalid">
                   Please enter valid Name.
@@ -129,6 +135,7 @@ const RegisterLogin = (props) => {
                   Input is valid!
                 </Form.Control.Feedback> */}
               </InputGroup>
+              <br />
 
               <div className="d-grid mt-3">
                 <Button

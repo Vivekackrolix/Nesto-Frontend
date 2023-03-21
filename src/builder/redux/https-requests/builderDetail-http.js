@@ -25,8 +25,8 @@ export const getBuilderDetail = () => {
         console.log("Permission not available");
       } else {
         const builderData = data.data.filter(
-          //   (itm) => itm.phoneNumber === localStorage.getItem("phone")
-          (itm) => itm._id === "64107bce7b4c4240671aeb94"
+          (itm) => itm.phoneNumber === localStorage.getItem("phone")
+          // (itm) => itm._id === "64107bce7b4c4240671aeb94"
         );
         // console.log(builderData);
         dispatch(builderDetailActions.setDetails({ details: builderData }));
