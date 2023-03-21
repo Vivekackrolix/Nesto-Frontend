@@ -18,6 +18,7 @@ import ProfilePage from "./dashboard/Builderprofile/Profile";
 import NotificationDropdown from "./dashboard/Builderprofile/notification/NotificationDropdown";
 import { Provider } from "react-redux";
 import store from "./redux";
+import RegisterLogin from "./login/Register/RegisterLogin";
 
 const App = () => {
   return (
@@ -25,6 +26,11 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route exact path="/builder/login" element={<Login />} />
+          <Route
+            exact
+            path="/builder/register"
+            element={<RegisterLogin />}
+          />{" "}
           <Route
             exact
             path="/builder/home-dashboard/promoted"

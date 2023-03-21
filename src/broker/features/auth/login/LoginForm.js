@@ -1,131 +1,201 @@
-import React from 'react';
+import { useState } from 'react';
 import {
-  Button,
-  Col,
   Container,
-  Figure,
+  Row,
+  Col,
   Form,
+  Button,
   Image,
   InputGroup,
-  Row,
+  Figure,
 } from 'react-bootstrap';
-import loanAgentImg from '../assets/images/loan-agent.svg';
-import builderImg from '../assets/images/builder.svg';
-import { Link } from 'react-router-dom';
+import EnterOtp from './EnterOtp';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import {
+  useSendOtpMutation,
+  useVerifyOtpMutation,
+} from '../../../hooks/LoginQuery';
+
 import './LoginForm.css';
 
 const LoginForm = () => {
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [otp, setOtp] = useState('');
+  const [isOtpSent, setIsOtpSent] = useState(false);
+  const [showEnterOtpModal, setShowEnterOtpModal] = useState(true);
+  const {
+    sendOtpResponse,
+    sendOtp,
+    isLoading: isSendingOtp,
+    isSuccess: isSendOtpSuccess,
+    isSendOtpError,
+    error,
+  } = useSendOtpMutation();
+
+  // const navigate = useNavigate();
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
+
+  const handleInputChange = event => {
+    const inputText = event.target.value;
+    const emailPhoneRegex =
+      /^(?:\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b|\b(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})\b)?$/;
+    const isMatch = emailPhoneRegex.test(inputText);
+
+    setPhoneNumber(inputText);
+
+    if (isMatch) {
+      setShowErrorMessage(false);
+      event.target.classList.remove('is-invalid');
+      event.target.classList.add('is-valid');
+    } else {
+      setShowErrorMessage(true);
+      event.target.classList.remove('is-valid');
+      event.target.classList.add('is-invalid');
+    }
+  };
+
+  const handleSendOtp = e => {
+    e.preventDefault();
+
+    if (!showErrorMessage) {
+      // my api integration
+      sendOtp(phoneNumber);
+    }
+  };
+
+  const onHide = () => {
+    setShowEnterOtpModal(false);
+  };
+
   return (
-    <Container fluid="lg" className=" my-5 nes__login__form">
-      <Row className="g-0 nes__login__form__row">
-        <Col xs={12} lg={6} className="d-none d-md-block">
-          <Image
-            className="h-100 nes__dsa__login__img"
-            src="/assets/dsa/login-page.jpg"
-            fluid
-            alt="login img"
-          />
-        </Col>
-        <Col
-          xs={12}
-          lg={6}
-          className="p-2 p-lg-5 nes__dsa__login__formwrapper d-flex flex-column justify-content-center"
-        >
-          <Row className="justify-content-center align-items-center">
-            <Col xs={12}>
-              <h1>Welcome back! Glad to see you, Again!</h1>
-            </Col>
-            <Col xs="auto" className="d-flex align-items-center gap-2 my-5">
-              <Image
-                src="/assets/profile.svg"
-                fluid
-                className="rounded user-img"
-                alt="profile"
-              />
-              <Figure.Caption className="text-center mb-0">
-                Login as a Broker
-              </Figure.Caption>
-            </Col>
-          </Row>
+    <>
+      {/* modal */}
+      {/* {isSuccess && <EnterOtp show={true} onHide={onHide} />} */}
+      {isSendOtpSuccess && (
+        <EnterOtp show={true} phoneNumber={sendOtpResponse.data.phoneNumber} />
+      )}
 
-          <Form className="px-3">
-            <InputGroup className="mb-0">
-              <Form.Control
-                size={`lg`}
-                name="emailPhone"
-                required
-                type="text"
-                placeholder="Enter your phone number"
-              />
-              <Form.Control.Feedback type="invalid">
-                Please enter a valid phone number.
-              </Form.Control.Feedback>
-              <Form.Control.Feedback type="valid">
-                Input is valid!
-              </Form.Control.Feedback>
-            </InputGroup>
-
-            <div className="d-grid mt-5">
-              <Button
-                type="submit"
-                variant="primary"
-                size="lg"
-                className="py-3 rounded-pill bg-color-primary"
-              >
-                Continue
-              </Button>
+      <Container fluid="lg" className="container-md my-5 login-shadow">
+        <Row className="g-0 login__form">
+          <Col md={6} className="d-none d-md-block">
+            <Image
+              className="h-100 nes__dsa__login__img"
+              src="/assets/dsa/login-page.jpg"
+              fluid
+              alt="login img"
+            />
+          </Col>
+          <Col
+            md={6}
+            className="px-4 nes__dsa__login__formwrapper d-flex flex-column justify-content-center"
+          >
+            <div className="mt-4">
+              <h2 className="fw-bold text-center mb-3">
+                Welcome Back! <br></br>Glad to see you, Again!
+              </h2>
+              <Row className="justify-content-center align-items-center">
+                <Col xs="auto" className="d-flex align-items-center gap-2">
+                  <Image
+                    src="/assets/profile.svg"
+                    fluid
+                    className="rounded user-img"
+                    alt="profile"
+                  />
+                  <Figure.Caption className="text-center mb-0">
+                    Login as a Broker
+                  </Figure.Caption>
+                </Col>
+              </Row>
             </div>
-          </Form>
-          <div className="d-flex align-items-center my-5">
-            <div className="divider flex-grow-1"></div>
-            <p className="m-0 px-1">Or Login</p>
-            <div className="divider flex-grow-1"></div>
-          </div>
-          <Row className="g-lg-2 g-4">
-            <Col xs={12} md={6}>
-              <Button
-                as={Link}
-                to="/builder/login"
-                type="submit"
-                variant="primary"
-                size="md"
-                className="w-100 py-2 rounded-pill bg-color-primary d-flex shadow"
-              >
-                <div className="m-auto d-flex gap-2 align-items-center m-auto">
-                  <div className="nes__login__form__btnimg d-flex rounded-circle">
-                    <img
-                      src={builderImg}
-                      alt="builder img"
-                      className="m-auto"
-                    />
-                  </div>
+            <Form onSubmit={handleSendOtp}>
+              <InputGroup className="mb-0 mt-5">
+                <Form.Control
+                  name="emailPhone"
+                  className="rounded-2"
+                  required
+                  type="text"
+                  value={phoneNumber}
+                  maxLength="10"
+                  placeholder="Enter your phone number"
+                  onChange={handleInputChange}
+                  isInvalid={showErrorMessage}
+                  isValid={!showErrorMessage && phoneNumber !== ''}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please enter a valid phone number.
+                </Form.Control.Feedback>
+                <Form.Control.Feedback type="valid">
+                  Valid Phone Number!
+                </Form.Control.Feedback>
+              </InputGroup>
+
+              <div className="d-grid mt-3">
+                <Button
+                  disabled={isSendingOtp}
+                  type="submit"
+                  variant="primary"
+                  size="md"
+                  className="rounded-pill border-0 bg-color-primary"
+                >
+                  {isSendingOtp ? (
+                    <>
+                      <span>
+                        <span
+                          className="spinner-border spinner-border-sm"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                        Loading...
+                      </span>
+                    </>
+                  ) : (
+                    'Continue'
+                  )}
+                </Button>
+              </div>
+            </Form>
+            <div className="d-flex align-items-center my-4">
+              <div className="divider flex-grow-1"></div>
+              <p className="m-0 px-1">Or Login</p>
+              <div className="divider flex-grow-1"></div>
+            </div>
+            <div className="d-flex justify-content-between">
+              <div className="d-grid mb-5">
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="rounded-pill border-0 bg-color-primary py-2 wd-200 px-5 btn-shadow"
+                >
+                  <Image
+                    src="/assets/profile.svg"
+                    fluid
+                    className="rounded-circle mx-2 user-img"
+                    alt="builder"
+                  />
                   Builder
-                </div>
-              </Button>
-            </Col>
-            <Col xs={12} md={6} className="d-flex justify-content-end">
-              <Button
-                type="submit"
-                variant="primary"
-                size="md"
-                className="w-100 py-2 rounded-pill bg-color-primary d-flex shadow"
-              >
-                <div className="m-auto d-flex gap-2 align-items-center m-auto">
-                  <div className="nes__login__form__btnimg d-flex rounded-circle">
-                    <img
-                      src={loanAgentImg}
-                      alt="loan agent img"
-                      className="m-auto"
-                    />
-                  </div>
-                  Loan Agent
-                </div>
-              </Button>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
+                </Button>
+              </div>
+              <div className="d-grid mb-5">
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="rounded-pill border-0 bg-color-primary py-2 wd-200 px-5 btn-shadow"
+                >
+                  <Image
+                    src="/assets/profile.svg"
+                    fluid
+                    className="rounded-circle mx-2 user-img"
+                    alt="broker"
+                  />
+                  Broker
+                </Button>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 

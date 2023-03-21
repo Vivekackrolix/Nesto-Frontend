@@ -147,7 +147,8 @@ const Rating = (props) => {
 
             <Form.Control
               className="rounded-0 d-flex justify-content-start"
-              type="text"
+              // type="text"
+              as="textarea"
               placeholder="Lorem Ipsum"
               style={{
                 fontFamily: "Bahnschrift",

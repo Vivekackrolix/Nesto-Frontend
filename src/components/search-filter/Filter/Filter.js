@@ -1,29 +1,29 @@
-import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
-import RangeSlider from "../../../builder/dashboard/Builderprofile/range-slider/RangeSlider";
+import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap';
+import RangeSlider from '../../../builder/dashboard/Builderprofile/range-slider/RangeSlider';
 
-import CreatableSelect from "react-select/creatable";
+import CreatableSelect from 'react-select/creatable';
 
 const options = [
-  { value: "Gurugram, Haryana", label: "Gurugram, Haryana" },
-  { value: "Noida, Uttar Pradesh", label: "Noida, Uttar Pradesh" },
+  { value: 'Gurugram, Haryana', label: 'Gurugram, Haryana' },
+  { value: 'Noida, Uttar Pradesh', label: 'Noida, Uttar Pradesh' },
 ];
 const unit = [
-  { value: "2 BHK", label: "2 BHK" },
-  { value: "3 BHK", label: "3 BHK" },
+  { value: '2 BHK', label: '2 BHK' },
+  { value: '3 BHK', label: '3 BHK' },
 ];
 const builder = [
-  { value: "Lorem Ipsum", label: "Lorem Ipsum" },
-  { value: "Lorem ipsum", label: "Lorem ipsum" },
+  { value: 'Lorem Ipsum', label: 'Lorem Ipsum' },
+  { value: 'Lorem ipsum', label: 'Lorem ipsum' },
 ];
 const sort = [
-  { value: "Lorem Ipsum", label: "Lorem Ipsum" },
-  { value: "Lorem ipsum", label: "Lorem Ipsum" },
+  { value: 'Lorem Ipsum', label: 'Lorem Ipsum' },
+  { value: 'Lorem ipsum', label: 'Lorem Ipsum' },
 ];
 const property = [
-  { value: "Commercial", label: "Commercial" },
-  { value: "Residential", label: "Residential" },
+  { value: 'Commercial', label: 'Commercial' },
+  { value: 'Residential', label: 'Residential' },
 ];
-const Filter = (props) => {
+const Filter = props => {
   return (
     <>
       <Modal
@@ -72,28 +72,28 @@ const Filter = (props) => {
               <div className="d-flex justify-content-between">
                 <button
                   type="button"
-                  class="btn btn-light btn-lg rounded-circle "
+                  className="btn btn-light btn-lg rounded-circle "
                 >
                   1
                 </button>
 
                 <button
                   type="button"
-                  class="btn btn-light btn-lg rounded-circle"
+                  className="btn btn-light btn-lg rounded-circle"
                 >
                   2
                 </button>
 
                 <button
                   type="button"
-                  class="btn btn-light btn-lg rounded-circle"
+                  className="btn btn-light btn-lg rounded-circle"
                 >
                   3
                 </button>
 
                 <button
                   type="button"
-                  class="btn btn-light btn-lg rounded-circle"
+                  className="btn btn-light btn-lg rounded-circle"
                 >
                   4
                 </button>
@@ -172,17 +172,17 @@ const Filter = (props) => {
 
               <div className="d-flex justify-content-around">
                 <h6>
-                  <button type="button" class="btn btn-primary btn-sm">
+                  <button type="button" className="btn btn-primary btn-sm">
                     Under Construction
                   </button>
                 </h6>
                 <h6>
-                  <button type="button" class="btn btn-light btn-sm">
+                  <button type="button" className="btn btn-light btn-sm">
                     Ready to Move
                   </button>
                 </h6>
                 <h6>
-                  <button type="button" class="btn btn-light btn-sm">
+                  <button type="button" className="btn btn-light btn-sm">
                     Possession Soon
                   </button>
                 </h6>
