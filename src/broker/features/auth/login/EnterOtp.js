@@ -48,7 +48,7 @@ const EnterOtp = ({ show, onHide, phoneNumber }) => {
     });
     otpInputs.current[0].focus();
   };
-  //
+
   const handleSubmit = e => {
     e.preventDefault();
     verifyOtp({
