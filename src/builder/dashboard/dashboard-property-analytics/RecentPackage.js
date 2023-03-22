@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import { Button, Col, Row } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const RecentPackage = () => {
   return (
@@ -35,7 +36,7 @@ const RecentPackage = () => {
             </ListGroup>
           </Col>
           <Col md={6} className="p-4 text-center">
-            <div style={{borderLeft: "1px solid #d4d4d4"}}>
+            <div style={{ borderLeft: "1px solid #d4d4d4" }}>
               <h5
                 style={{
                   color: "#0070C0",
@@ -51,6 +52,8 @@ const RecentPackage = () => {
                   variant="transparent"
                   size="lg"
                   className="rounded-2 px-4 py-2 border border-primary wd-120 "
+                  as={Link}
+                  to="/builder/home-dashboard/subscription"
                 >
                   Renew
                 </Button>
@@ -58,6 +61,8 @@ const RecentPackage = () => {
                   variant="primary"
                   size="lg"
                   className="rounded-2 border-0 bg-color-primary px-4 py-2 wd-120"
+                  as={Link}
+                  to="/builder/home-dashboard/subscription"
                 >
                   Upgrade
                 </Button>

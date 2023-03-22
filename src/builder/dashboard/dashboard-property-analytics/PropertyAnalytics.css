@@ -17,6 +17,12 @@ h3, .h3 {
 .plan{
   background: #D8D9DB;
 }
+.plang{
+  background: #FFE089;
+}
+.planp{
+  background: #C3C9B2;
+}
 .list-group-item {
   padding: 0.25rem;
   border: none; 
