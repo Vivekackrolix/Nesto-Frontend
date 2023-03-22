@@ -1,12 +1,12 @@
 import { DashboardFooter } from "../../../broker/features";
 import Footer from "../../../builder/dashboard/Footer/Footer";
-import ChooseUs from "../../HomePage/ChooseUs/Chooseus";
+import ChooseUs from "../../HomePage/ChooseUs/ChooseUs";
 import News from "../../HomePage/News/News";
 import Residency from "../../HomePage/Residency/Residency";
 import Testimonial from "../../HomePage/Testimonials/Testimonials";
 
 import Contact from "../contactform/Contact";
-import "./BokerHome.css";
+import "./BrokerHome.css";
 export default function BrokerHome() {
   return (
     <>
@@ -23,8 +23,8 @@ export default function BrokerHome() {
                     <div className="banner-desc mt-5">
                       <p>
                         Broker Network app is a suite of services specifically
-                        designed for Indian real estate brokers and developers to
-                        maximize their business.
+                        designed for Indian real estate brokers and developers
+                        to maximize their business.
                       </p>
                     </div>
                     <div className="my-4">
