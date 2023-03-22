@@ -2,10 +2,10 @@ import { DashboardFooter } from "../../../broker/features";
 import Footer from "../../../builder/dashboard/Footer/Footer";
 import HowWork from "../../AboutUs/HowWork/HowWork";
 import Contact from "../../BrokerPage/contactform/Contact";
-import ChooseUs from "../../HomePage/ChooseUs/Chooseus";
+import ChooseUs from "../../HomePage/ChooseUs/ChooseUs";
 import Residency from "../../HomePage/Residency/Residency";
 import Testimonial from "../../HomePage/Testimonials/Testimonials";
-import './BuilderHome.css';
+import "./BuilderHome.css";
 export default function BuilderHome() {
   return (
     <>
@@ -16,8 +16,7 @@ export default function BuilderHome() {
               <div className="col-lg-5 col-md-12 d-flex text-left">
                 <div>
                   <div className="banner-heading mt-5">
-                    <h2>Stop Searching, Start Listing
-your Property With Us</h2>
+                    <h2>Stop Searching, Start Listing your Property With Us</h2>
                   </div>
                   <div className="banner-desc mt-5">
                     <p>
@@ -32,7 +31,6 @@ your Property With Us</h2>
                     </a>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -43,7 +41,7 @@ your Property With Us</h2>
         {/* <ChooseUs />
         <Testimonial /> */}
       </div>
-      <HowWork/>
+      <HowWork />
     </>
   );
 }
