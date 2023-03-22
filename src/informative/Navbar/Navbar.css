@@ -15,12 +15,6 @@
     color: #ffffff;
 }
 
-@media (max-width: 992px) {
-    /* .nes__header .navbar-nav {
-      display: flex;
-      flex-direction: column;
-    } */
-}
 
 .profile-button {
     color: #278FD9;
@@ -33,14 +27,18 @@
     background-color: #278FD9;
 }
 
-.download-button {
-    background-color: #FC5C67;
-    border: none;
-    color: white;
-}
 
 .nav-container {
     margin-right: 0 !important;
+}
+
+.download-button {
+    background-color: #FC5C67;
+    border: none;
+    color: var(--color-white);
+}
+.download-button:hover {
+    color: var(--color-white);
 }
 
 .download {
@@ -72,9 +70,16 @@
     background: var(--primary-color);
     color: var(--color-white);
 }
+
 .broker-link-div {
-    /* background: var(--primary-color); */
+    display: flex;
+    align-items: center;
 }
+
+.broker-link {
+    margin-left: 6px;
+}
+
 .list-property-link {
     color: var(--color-white);
     font-size: 16px;
@@ -85,7 +90,10 @@
     background: var(--primary-color);
     transition: all .3s ease-in;
 }
+
 .list-property-link:hover {
     background: var(--color-white);
     color: var(--primary-color);
 }
+
+@media (max-width: 992px) {}

@@ -1,0 +1,26 @@
+import React from 'react';
+import CustomModal from '../../../../components/common/CustomModal';
+import { Link } from 'react-router-dom';
+import './SuccessfulLogin.css';
+
+const SuccessfulLogin = ({ show, onHide }) => {
+  return (
+    <CustomModal show={show} closeBtn modalHeader size="md" onHide={onHide}>
+      <div className="successful-login">
+        <img
+          src="./assets/informative/success.png"
+          className="successful-login-img"
+        />
+        <div>
+          <span className="successful-login-heading">Successful</span>
+          <span className="successful-login-sub-heading">
+            Your requirement is submitted! Nestohub team will contact you soon.
+          </span>
+          <button className="reffrel-register-btn">Back to Login</button>
+        </div>
+      </div>
+    </CustomModal>
+  );
+};
+
+export default SuccessfulLogin;
