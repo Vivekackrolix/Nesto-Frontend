@@ -1,0 +1,67 @@
+.list-property-heading {
+    font-size: 34px;
+    font-weight: 900;
+    text-align: center;
+    display: block;
+}
+
+.list-property {
+    padding: 10px 0 20px 0;
+    text-align: center;
+}
+
+.list-property-div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    padding: 10px 0;
+}
+
+.list-property-input-div {
+    margin-top: 10px;
+}
+
+.list-property-input {
+    border: 2px solid #E8ECF4;
+    background: #F8F8F8;
+    width: 100%;
+    padding: 14px 4px 14px 21px;
+    font-size: 18px;
+    border-radius: 8px !important;
+}
+
+.list-property-input:active,
+.list-property-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+input.list-property-input::placeholder {
+    color: var(--cold-black-color) !important;
+}
+
+select.list-property-input {
+    color: var(--gray-color) !important;
+    font-weight: 350;
+    font-size: 18px;
+}
+
+.list-property-input:not(:first-child) {
+    margin-top: 30px;
+}
+
+.list-property-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 350;
+    margin-top: 30px;
+    background: var(--primary-color);
+    color: var(--color-white) !important;
+    border-radius: 10rem !important;
+    border: 1px solid var(--primary-color);
+}

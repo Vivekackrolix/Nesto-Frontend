@@ -1,0 +1,35 @@
+.not-register {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.not-register-img {
+    width: 60%;
+}
+
+.not-register-heading {
+    font-weight: 700;
+    font-size: 48px;
+    display: block;
+}
+
+.not-register-sub-heading {
+    font-size: 18px;
+    color: var(--silver-surfer);
+    width: 80%;
+    line-height: 30px;
+    display: block;
+    margin: auto;
+}
+
+.not-register-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 350;
+    margin-top: 30px;
+    background: var(--primary-color);
+    color: var(--color-white) !important;
+    border-radius: 10rem !important;
+    border: 1px solid var(--primary-color);
+}
