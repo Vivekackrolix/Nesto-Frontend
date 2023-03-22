@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import { Button, Col, Row } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const RecentPackage = () => {
   return (
@@ -9,7 +10,11 @@ const RecentPackage = () => {
       <h3>Recent Package</h3>
       <Container className="shadow-recent mt-2 mb-5 rounded">
         <Row>
-          <Col md={3} className="plan rounded-start" style={{padding: "50px"}}>
+          <Col
+            md={3}
+            className="plan rounded-start"
+            style={{ padding: "50px" }}
+          >
             <h5 className="fw-bold">Silver Plan</h5>
             <p style={{ opacity: "0.6" }}>The perfect all-rounder</p>
             <p className="fw-bold">₹ 99/per-month</p>
@@ -35,7 +40,7 @@ const RecentPackage = () => {
             </ListGroup>
           </Col>
           <Col md={6} className="p-4 text-center">
-            <div style={{borderLeft: "1px solid #d4d4d4"}}>
+            <div style={{ borderLeft: "1px solid #d4d4d4" }}>
               <h5
                 style={{
                   color: "#0070C0",
@@ -51,6 +56,8 @@ const RecentPackage = () => {
                   variant="primary"
                   size="lg"
                   className=" border-0 bg-color-primary py-1 wd-120 "
+                  as={Link}
+                  to="/builder/home-dashboard/subscription"
                 >
                   Renew
                 </Button>
@@ -58,6 +65,8 @@ const RecentPackage = () => {
                   variant="primary"
                   size="lg"
                   className=" border-0 bg-color-primary py-1 wd-120"
+                  as={Link}
+                  to="/builder/home-dashboard/subscription"
                 >
                   Upgrade
                 </Button>
