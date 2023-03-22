@@ -1,12 +1,12 @@
-import { DashboardFooter } from "../../../broker/features";
-import Footer from "../../../builder/dashboard/Footer/Footer";
-import ChooseUs from "../../HomePage/ChooseUs/ChooseUs";
-import News from "../../HomePage/News/News";
-import Residency from "../../HomePage/Residency/Residency";
-import Testimonial from "../../HomePage/Testimonials/Testimonials";
+import { DashboardFooter } from '../../../broker/features';
+import Footer from '../../../builder/dashboard/Footer/Footer';
+import ChooseUs from '../../HomePage/chooseus/Chooseus';
+import News from '../../HomePage/news/News';
+import Residency from '../../HomePage/residency/Residency';
+import Testimonial from '../../HomePage/testimonials/Testimonials';
 
-import Contact from "../contactform/Contact";
-import "./BrokerHome.css";
+import Contact from '../contactform/Contact';
+import './BrokerHome.css';
 export default function BrokerHome() {
   return (
     <>
