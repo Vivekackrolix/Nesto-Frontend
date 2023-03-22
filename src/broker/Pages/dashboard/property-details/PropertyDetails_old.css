@@ -1,0 +1,11 @@
+.broker__property__details__availability__left div,
+.broker__property__details__availability__right {
+  background-color: #efefef;
+  border-radius: 6.72833px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13.4567px;
+  text-align: center;
+  color: #7d7f88;
+}

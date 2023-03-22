@@ -130,6 +130,12 @@ const LoginForm = () => {
                 </Form.Control.Feedback>
               </InputGroup>
 
+              {isSendOtpError && (
+                <div className="text-danger">
+                  Network Error please try again
+                </div>
+              )}
+
               <div className="d-grid mt-3">
                 <Button
                   disabled={isSendingOtp}

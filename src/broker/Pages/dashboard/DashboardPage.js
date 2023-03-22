@@ -16,7 +16,6 @@ import {
 import '../../features/Dashboard/assets/styles/Dashboard.css';
 import ClientCards from '../../features/Dashboard/components/client-cards/ClientCard';
 import { clientsData } from '../../data/Constant';
-import PropertyDetails from './property-details/PropertyDetails';
 import ProfilePage from '../../dashboard-containers/broker-profile/Profile';
 
 const DashboardPage = () => {
