@@ -41,7 +41,7 @@ const DashboardPage = () => {
 
         {/* Main Content code start here */}
         <main className="nes__broker__dashboard">
-          <BrokerView /> 
+          <BrokerView />
           {/* <CustomerView /> */}
           {/* <PromotedProperty /> */}
 
