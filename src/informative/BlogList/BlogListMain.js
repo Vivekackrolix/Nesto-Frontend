@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import InformativeNavbar from '../Navbar/Navbar'
-import Footer from '../../components/footer/Footer'
 import './BlogListMain.css'
 import ArticleNews from './ArticleNews/ArticleNews';
 import ListProperty from '../PartnersDetail/ListProperty/ListProperty'
 import LatestPost from './LatestPost/LatestPost';
 import Aos from 'aos';
+import InformativeFooter from '../InformativeFooter/InformativeFooter'
 
 export default function BlogListMain() {
     useEffect(() => {
@@ -29,7 +29,7 @@ export default function BlogListMain() {
                 <LatestPost />
                 <br /><br /><br /><br />
             </div>
-            <Footer />
+            <InformativeFooter />
         </>
     );
 }

@@ -3,6 +3,7 @@ import Footer from '../../../components/footer/Footer'
 import './Tips.css'
 import { Link } from 'react-router-dom'
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from 'react-icons/bs'
+import InformativeFooter from '../../InformativeFooter/InformativeFooter'
 
 const Tips = () => {
     const liData = [
@@ -222,7 +223,7 @@ const Tips = () => {
             </div>
             {/* RecentPostEnd */}
             {/* ================= */}
-            <Footer />
+            <InformativeFooter />
         </>
     )
 }

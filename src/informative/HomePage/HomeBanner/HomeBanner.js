@@ -11,7 +11,8 @@ import Aos from 'aos';
 import Banner from './Banner/Banner';
 import OurPartner from '../OurPartner/OurPartner';
 import HowWork from '../../AboutUs/HowWork/HowWork';
-import Footer from '../../../components/footer/Footer';
+import HomeVideo from '../HomeVideo/HomeVideo'
+import InformativeFooter from '../../InformativeFooter/InformativeFooter'
 
 const HomeBanner = () => {
   useEffect(() => {
@@ -26,12 +27,13 @@ const HomeBanner = () => {
         <Stats />
         <Residency />
         <ChooseUs />
+        <HomeVideo />
         <HowWork />
         <OurPartner />
         <GetStarted />
         <News />
         <Testimonials />
-        <Footer />
+        <InformativeFooter />
       </div>
     </>
   );

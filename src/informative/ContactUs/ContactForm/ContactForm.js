@@ -9,8 +9,8 @@ const ContactForm = () => {
     return (
         <>
             <div className='contact-form' data-aos='zoom-in'>
-                <div className='container contact-form_container'>
-                    <h3 className='contact-form_heading'>Reach Us</h3>
+                <div className='contact-form_container'>
+                    <h3 className='contact-form_heading'>Write to us</h3>
                     <form>
                         <div className='row'>
                             <div className='col-lg-6 contact-form_col'>
@@ -68,15 +68,15 @@ const ContactForm = () => {
                                 </label>
                             </div>
                             <div className='mt-5'>
-                                <button type='submit' className='contact-form_button'>Get Quote Now</button>
+                                <button type='submit' className='contact-form_button'>Send</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div className='contact-form_map-box' data-aos='fade-up'>
+            {/* <div className='contact-form_map-box' data-aos='fade-up'>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d112029.38052577531!2d77.16536319999999!3d28.6621696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1678211260881!5m2!1sen!2sin" width="100%" height="550"></iframe>
-            </div>
+            </div> */}
         </>
     )
 }
