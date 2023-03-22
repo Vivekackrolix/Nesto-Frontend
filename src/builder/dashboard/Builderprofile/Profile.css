@@ -1,20 +1,20 @@
 .profile__sidebar__wrapper {
   background: #ecf7ff;
-  border-radius: 25.0257px;
+  border-radius: 25px;
 }
 
 .profile__sidebar__wrapper__icon {
-  width: 33.95px;
-  height: 33.95px;
+  width: 34px;
+  height: 34px;
   background: #fdfdfd;
-  border: 0.424322px solid #e3e3e7;
-  box-shadow: 0px 3.39458px 13.5783px rgba(69, 69, 69, 0.15) !important;
-  border-radius: 8.48645px;
+  border: 1px solid #e3e3e7;
+  box-shadow: 0px 3px 12px rgba(69, 69, 69, 0.15) !important;
+  border-radius: 8px;
 }
 
 .profile__sidebar__wrapper .nav {
   background: #ffffff;
-  border-radius: 25.0257px;
+  border-radius: 25px;
 }
 
 .profile__sidebar__wrapper .nav-link {
@@ -22,7 +22,7 @@
   padding: 15px 20px !important;
 }
 .profile__sidebar__wrapper .nav-link {
-  border-bottom: 0.481264px solid #ebecf0;
+  border-bottom: 1px solid #ebecf0;
 }
 .profile__sidebar__wrapper .nav-link.active,
 .profile__sidebar__wrapper .nav-item:last-child .nav-link {
@@ -32,7 +32,7 @@
 .profile__sidebar__wrapper .nav-link.active,
 .profile__sidebar__wrapper .nav-item.show .nav-link {
   background-color: #278fd9 !important;
-  border-radius: 25.0257px;
+  border-radius: 25px;
   border: none !important;
   letter-spacing: 0.01em !important;
   color: #ffffff !important;
@@ -42,7 +42,7 @@
   display: flex;
   color: #000000 !important;
   font-weight: 400;
-  font-size: 13.5783px;
+  font-size: 14px;
   letter-spacing: 0.02em;
 }
 
@@ -53,20 +53,21 @@
 
 .profile__sidebar__wrapper h4 {
   font-weight: 400;
-  font-size: 18.7982px;
+  font-size: 18px;
   color: #282431;
 }
 
 .profile__sidebar__wrapper p {
-  font-weight: 350;
-  font-size: 13.023px;
+  font-weight: 400;
+  font-size: 13px;
   color: #282431;
   opacity: 0.5;
 }
 
 .profile__image img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
 }
 
 .profile__image__overlay {
@@ -77,8 +78,6 @@
   transform: translate(50%, 50%);
   background-color: #278fd9;
   color: #fff;
-  /* width: 30px;
-  height: 30px; */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -94,10 +93,10 @@
 .profile__sidebar__wrapper__signout {
   padding: 15px 20px !important;
   background: #ffffff;
-  border: 0.962528px solid #278fd9;
-  border-radius: 12.5129px;
+  border: 1px solid #278fd9;
+  border-radius: 12px;
   font-weight: 400;
-  font-size: 16.4525px;
+  font-size: 16px;
   letter-spacing: 0.02em;
   color: #278fd9;
 }
@@ -110,10 +109,10 @@
 }
 
 .profile__form input {
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 14px;
   color: #000000;
-  padding: 14.2345px;
+  padding: 14px;
   background: #f8f8f8;
-  border-radius: 10.6759px;
+  border-radius: 10px;
 }

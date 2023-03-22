@@ -109,8 +109,9 @@ const RecentlyAddedProperty = ({ data }) => {
             </Row>
             <div className="d-flex justify-content-end gap-2 mt-2">
               <Button
+                variant="transparent"
                 type="button"
-                className="btn btn-transparent rounded-pill px-4 py-2 border border-primary"
+                className="rounded-pill px-4 py-2 border border-primary"
                 style={{ color: "#278FD9", fontSize: "14px" }}
                 as={Link}
                 to="/builder/home-dashboard/visit"
@@ -118,9 +119,9 @@ const RecentlyAddedProperty = ({ data }) => {
                 50 Visits
               </Button>
               <Button
+                variant="transparent"
                 type="button"
-                className="btn btn-transparent primary rounded-pill px-4 py-2 border border-primary"
-                style={{ color: "#278FD9", fontSize: "14px" }}
+                className="primary rounded-pill px-4 py-2 border border-primary"
                 as={Link}
                 to="/builder/home-dashboard/propertyedit"
               >
@@ -150,7 +151,7 @@ const RecentlyAddedProperty = ({ data }) => {
         <SearchFilterBox />
 
         <div className="row justify-content-between">
-          <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
+          <h3 className="col-4 heading">
             Recently Added
           </h3>
           {/* <i

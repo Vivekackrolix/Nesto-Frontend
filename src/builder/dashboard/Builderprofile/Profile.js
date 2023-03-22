@@ -48,7 +48,6 @@ const profileSidebarNavContent = [
 
   {
     element: <TermsConditions />,
-    title: "Terms & Conditions",
   },
   {
     element: <Support />,

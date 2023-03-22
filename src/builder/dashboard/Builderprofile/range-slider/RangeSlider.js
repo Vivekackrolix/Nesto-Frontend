@@ -12,8 +12,7 @@ const RangeSlider = () => {
 
   return (
     <Form.Group controlId="rangeSlider" className="mb-4">
-      <Form.Label className="mb-4">
-        <h5>Price Range</h5>
+      <Form.Label className="mb-4">Price Range
       </Form.Label>
       <Range
         values={values}
@@ -26,10 +25,11 @@ const RangeSlider = () => {
             {...props}
             style={{
               ...props.style,
-              height: "6px",
+              height: "4px",
               width: "100%",
               backgroundColor: "#ddd",
               borderRadius: "3px",
+              marginBottom: "0.5rem"
             }}
           >
             {children}
@@ -40,8 +40,8 @@ const RangeSlider = () => {
             {...props}
             style={{
               ...props.style,
-              height: "20px",
-              width: "20px",
+              height: "12px",
+              width: "12px",
               backgroundColor: "#278FD9",
               borderRadius: "50%",
               boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
