@@ -1,10 +1,10 @@
 import React from 'react';
 import './partnerbanner.css';
 import SearchBar from '../SearchBar/SearchBar';
-import Footer from '../../../components/footer/Footer';
 import InformativeNavbar from '../../Navbar/Navbar';
 import { Link } from 'react-router-dom';
 import PartnerCard from '../PartnerCard/PartnerCard';
+import InformativeFooter from './../../InformativeFooter/InformativeFooter';
 
 const PartnerBanner = () => {
   return (
@@ -32,7 +32,7 @@ const PartnerBanner = () => {
       </div>
       <SearchBar />
       <PartnerCard />
-      <Footer />
+      <InformativeFooter />
     </>
   );
 };

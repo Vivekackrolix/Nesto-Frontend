@@ -15,6 +15,7 @@ const BlogDetailMain = () => {
                 {/* BannerImage */}
             </div>
             <Tips />
+            
         </>
     )
 }

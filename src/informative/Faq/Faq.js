@@ -5,6 +5,7 @@ import Aos from 'aos'
 import './Faq.css'
 import { VscCircleLargeFilled } from 'react-icons/vsc'
 import {MdArrowForwardIos} from 'react-icons/md'
+import InformativeFooter from '../InformativeFooter/InformativeFooter'
 
 const Faq = () => {
     useEffect(() => {
@@ -55,7 +56,7 @@ const Faq = () => {
                 </div>
             </div>
             {/* Footer */}
-            <Footer />
+            <InformativeFooter />
         </>
     )
 }

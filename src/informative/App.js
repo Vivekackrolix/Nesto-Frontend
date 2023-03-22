@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PartnersDetailsMain from './PartnersDetail/PartnersDetailsMain';
 import BrokerHome from './BrokerPage/BrokerHome/BrokerHome';
-
-import ContactUsMain from './ContactUs/ContactUsMain';
+import ContactUsMain from './ContactUsOld/ContactUsMain';
 import TermsCondition from './TermsCondition/TermsCondition';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 import BlogListMain from './BlogList/BlogListMain';
@@ -13,6 +12,8 @@ import AboutUsMain from './AboutUs/AboutUsMain';
 import Faq from './Faq/Faq';
 import HomeBanner from './HomePage/HomeBanner/HomeBanner';
 import ScrollToTop from '../dsa/components/ScrollToTop';
+import ContactUs from './ContactUs/ContactUs';
+import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner';
 
 const App = () => {
   return (
@@ -20,9 +21,9 @@ const App = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/partners/details" element={<PartnersDetailsMain />} />
-        <Route path="/contact-us" element={<ContactUsMain />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/" element={<HomeBanner />} />
-        <Route path="/partner-page" element={<partnerbanner />} />
+        <Route path="/partner-page" element={<PartnerBanner />} />
         <Route path="/broker-page" element={<BrokerHome />} />
         <Route path="/terms-condition" element={<TermsCondition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
