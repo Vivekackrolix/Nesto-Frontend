@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { RiTimerLine } from 'react-icons/ri';
 import { CustomModal } from '../../../../components';
 import { useVerifyOtpMutation } from '../../../hooks/LoginQuery';
-
+import NotRegisteredModal from './NotRegisteredModal';
 const EnterOtp = ({ show, onHide, phoneNumber }) => {
   const otpInputs = useRef([]);
   const [otpPassword, setOtpPassword] = useState(false);
@@ -62,81 +62,92 @@ const EnterOtp = ({ show, onHide, phoneNumber }) => {
   }, []);
 
   return (
-    <CustomModal
-      title="OTP Verification"
-      show={show}
-      border
-      closeBtn
-      onHide={onHide}
-      cssClassName="nes__dashboard__modal"
-      modalHeader
-    >
-      <p
-        className="text-text-muted text-center mb-4"
-        style={{ lineHeight: '1.6' }}
-      >
-        Enter the verification code we just sent on your phone number.
-      </p>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3">
-          <div className="d-flex justify-content-between align-items-center gap-4 mb-3">
-            {[...Array(6)].map((_, index) => (
-              <Form.Control
-                key={index}
-                type="text"
-                maxLength={1}
-                onChange={e => handleOtpInputChange(e, index)}
-                onKeyDown={e => handleKeyDown(e, index)}
-                ref={ref => (otpInputs.current[index] = ref)}
-              />
-            ))}
-          </div>
-          <div className="d-flex justify-content-center align-items-center my-4">
-            <Form.Text className="text-muted me-3">
-              <div className="d-flex align-items-center justify-content-center gap-1">
-                <RiTimerLine color="#278FD9" />
-                <span className="otp-timer">
-                  {/* {timer >= 10 ? `00:${timer}` : `00:0${timer}`} */}
-                </span>
-              </div>
-              <div className="d-flex align-items-center">
-                <span>Didn't received code?</span>
-                <Button
-                  color="Resend"
-                  variant="transparent"
-                  // onClick={() => {
-                  //   resetOtpInputs();
-                  //   startTimer();
-                  // }}
-                >
-                  Resend
-                </Button>
-              </div>
-            </Form.Text>
-          </div>
-          <Button
-            type="submit"
-            variant="primary"
-            className="w-100 rounded-pill bg-color-primary"
+    <>
+      {!verifyOtpResponse?.data?.status ? (
+        <CustomModal
+          title="OTP Verification"
+          show={show}
+          border
+          closeBtn
+          onHide={onHide}
+          cssClassName="nes__dashboard__modal"
+          modalHeader
+        >
+          <p
+            className="text-text-muted text-center mb-4"
+            style={{ lineHeight: '1.6' }}
           >
-            {isVerifyOtp ? (
-              <>
-                <span>
-                  <span
-                    className="spinner-border spinner-border-sm"
-                    role="status"
-                    aria-hidden="true"
-                  ></span>
-                  Verify...
-                </span>
-              </>
+            Enter the verification code we just sent on your phone number.
+            {verifyOtpResponse?.data?.status ? (
+              'hello'
             ) : (
-              'Continue'
+              <div>{verifyOtpResponse.message}</div>
             )}
-          </Button>
-        </Form.Group>
-      </Form>
-    </CustomModal>
+          </p>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <div className="d-flex justify-content-between align-items-center gap-4 mb-3">
+                {[...Array(6)].map((_, index) => (
+                  <Form.Control
+                    key={index}
+                    type="text"
+                    maxLength={1}
+                    onChange={e => handleOtpInputChange(e, index)}
+                    onKeyDown={e => handleKeyDown(e, index)}
+                    ref={ref => (otpInputs.current[index] = ref)}
+                  />
+                ))}
+              </div>
+              <div className="d-flex justify-content-center align-items-center my-4">
+                <Form.Text className="text-muted me-3">
+                  <div className="d-flex align-items-center justify-content-center gap-1">
+                    <RiTimerLine color="#278FD9" />
+                    <span className="otp-timer">
+                      {/* {timer >= 10 ? `00:${timer}` : `00:0${timer}`} */}
+                    </span>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <span>Didn't received code?</span>
+                    <Button
+                      color="Resend"
+                      variant="transparent"
+                      // onClick={() => {
+                      //   resetOtpInputs();
+                      //   startTimer();
+                      // }}
+                    >
+                      Resend
+                    </Button>
+                  </div>
+                </Form.Text>
+              </div>
+              <Button
+                type="submit"
+                variant="primary"
+                className="w-100 rounded-pill bg-color-primary"
+              >
+                {isVerifyOtp ? (
+                  <>
+                    <span>
+                      <span
+                        className="spinner-border spinner-border-sm"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      Verify...
+                    </span>
+                  </>
+                ) : (
+                  'Continue'
+                )}
+              </Button>
+            </Form.Group>
+          </Form>
+        </CustomModal>
+      ) : (
+        <NotRegisteredModal show={true} />
+      )}
+    </>
   );
 };
 
