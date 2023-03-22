@@ -18,10 +18,12 @@ const SoldPage = () => {
       <DashboardHeader />
       <Container className="pt-2 pb-4 dashboard__wrapper">
         <SearchFilterBox />
-        <h2>Property Details</h2>
+        
         {/* <img src={homeImage} className="rounded my-3" alt="Home" /> */}
         <Row className="gx-4 dashboard-cards align-items-center">
-          <img src={homeImage} className="rounded my-3" alt="Home" />
+          <Col md={12}>
+          <h3>Property Details</h3>
+            <img src={homeImage} className="rounded w-100" alt="Home" /></Col>          
         </Row>
         <div
           className="d-flex gap-2"

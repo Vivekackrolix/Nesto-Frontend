@@ -1,7 +1,6 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../Images/propertyadded.png";
 import build from "../../Images/build.png";
-import subs from "../../Images/subs.png";
 
 import { Link } from "react-router-dom";
 import { BsPencilFill } from "react-icons/bs";
@@ -12,16 +11,16 @@ const RecentlyAdded = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Col
-        md={3}
-        className="card mb-4 shadow-sm rounded-4 p-0 border-0"
-        style={{ width: "21.75rem" }}
+        md={3} sm={12}
+        className="card mb-4 shadow-sm rounded-4 p-0 border-0 w-100"
+        style={{ maxWidth: "21.5rem" }}
       >
         <Card.Img variant="top" src={propertyImage} />
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
 
           <Card.Text>
-            <Row>
+            <Row className="pb-2">
               <Col md={10} sm={10}>
                 <div>
                   {" "}
@@ -71,24 +70,7 @@ const RecentlyAdded = ({ data }) => {
                 <img src={build} alt="build" className="build-icon" />
                 <p style={{ opacity: 0.5 }}>5BHK</p>
               </Col>
-            </Row>
-            {/* <Row>
-              {/* <Col className="d-flex justify-content-between">
-                <p>Sky Danelions Apartment</p>
-                <img src={subs} alt="" />
-              </Col>
-              <Row style={{ opacity: 0.5 }}>
-                Luxury Apartment in Sector-29,Gurugram
-              </Row> */}
-
-            {/* <br></br>
-              <br></br>
-
-              <Row>
-                <img src={build} alt="" />
-              </Row> 
-              <br></br>
-            </Row> */}
+            </Row>            
 
             <Row className="align-items-center">
               <Col
@@ -102,14 +84,14 @@ const RecentlyAdded = ({ data }) => {
                 Rs.3.94-6.01 Cr
               </Col>
               <Col md={7} style={{ color: "#7D7F88", fontSize: "0.8em" }}>
-                Book now & get 5% discount
+                Book now & get upto 5% discount
               </Col>
             </Row>
             <div className="d-flex justify-content-end gap-2 mt-2">
               <Button
                 type="button"
-                className="btn btn-transparent rounded-pill px-4 py-2 border border-primary"
-                style={{ color: "#278FD9", fontSize: "14px" }}
+                variant="transparent"
+                className="rounded-pill px-4 py-2 border border-primary"
                 as={Link}
                 to="/builder/home-dashboard/visit"
               >
@@ -117,14 +99,15 @@ const RecentlyAdded = ({ data }) => {
               </Button>
               <Button
                 type="button"
-                className="btn btn-transparent primary rounded-pill px-4 py-2 border border-primary"
-                style={{ color: "#278FD9", fontSize: "14px" }}
+                variant="transparent"
+                className="rounded-pill px-4 py-2 border border-primary"
                 as={Link}
                 to="/builder/home-dashboard/propertyedit"
               >
                 <BsPencilFill
                   style={{
-                    width: "0.9em",
+                    width: "0.95rem",
+                    height: "0.95rem",
                     color: "#fff",
                     background: "#278fd9",
                     padding: "2px",
@@ -144,23 +127,18 @@ const RecentlyAdded = ({ data }) => {
   return (
     <Container className="mt-5">
       <div className="row justify-content-between">
-        <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
+        <h3 className="col-8 heading">
           Recently Added
         </h3>
-        <Button
-          className="col-1"
-          style={{
-            color: "#FC5C67",
-            fontFamily: "Bahnschrift",
-            textDecorationLine: "underline",
-          }}
+        <a
+          className="col-4 text-end w-auto"
           as={Link}
-          to="/builder/home-dashboard/recentlyadded"
+          href="/builder/home-dashboard/recentlyadded"
+          style={{color: "#FC5C67"}}
         >
           View all
-        </Button>
+        </a>
       </div>
-      {/* <div className="mt-4">{propertyListing}</div> */}
       <div className="mt-2 mb-5 row row-cols-2 justify-content-around">
         {propertyListing}
       </div>

@@ -1,0 +1,55 @@
+.login-as-broker {
+    padding: 10px 0 20px 0;
+    text-align: center;
+}
+
+.login-as-broker-div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    padding: 10px 0;
+}
+
+.login-as-broker-text {
+    color: var(--silver-surfer);
+    font-weight: 350;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.login-as-broker-input-div {
+    margin-top: 30px;
+}
+
+.login-as-broker-input {
+    border: 2px solid #E8ECF4;
+    background: #F8F8F8;
+    width: 100%;
+    padding: 14px 4px 14px 21px;
+    border-radius: 8px !important;
+}
+
+.login-as-broker-input:active,
+.login-as-broker-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.login-as-broker-input::placeholder {
+    color: var(--cold-black-color) !important;
+}
+
+.login-as-broker-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 350;
+    margin-top: 30px;
+    background: var(--primary-color);
+    color: var(--color-white) !important;
+    border-radius: 10rem !important;
+    border: 1px solid var(--primary-color);
+}

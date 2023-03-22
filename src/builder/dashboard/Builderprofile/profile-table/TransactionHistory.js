@@ -4,7 +4,7 @@ import "./TransactionHistory.css";
 const TransactionHistory = () => {
   return (
     <>
-    <h3 style={{marginBottom: "15px" }}>
+    <h3 className="mb-2">
         Transactions
       </h3>
     
