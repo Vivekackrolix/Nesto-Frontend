@@ -4,7 +4,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setNewUserPhoneNumber } from '../features/auth/login/loginSlice';
-import NotRegisteredModal from '../features/auth/login/NotRegisteredModal';
 
 const SEND_OTP_ENDPOINT = 'http://13.234.136.165:3000/api/v1/broker/sendOtp';
 const VERIFY_OTP_ENDPOINT =
@@ -28,6 +27,10 @@ export const useSendOtpMutation = () => {
       onSuccess: data => {
         setSendOtpResponse(data);
         dispatch(setNewUserPhoneNumber(data.phoneNumber));
+      },
+      onError: error => {
+        console.log(error.message);
+        console.log('not working');
       },
     }
   );
@@ -86,7 +89,7 @@ export const useVerifyOtpMutation = () => {
     mutate({ phoneNumber, otp });
   };
 
-  // console.log(verifyOtpResponse);
+  console.log(verifyOtpResponse);
 
   return {
     verifyOtp,
