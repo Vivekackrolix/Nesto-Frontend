@@ -21,6 +21,7 @@ import store from "./redux";
 import RegisterLogin from "./login/Register/RegisterLogin";
 import RecentlyAddedProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
 import RecentlySoldOutProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlySoldOutProperty";
+import Subscription from "./dashboard/dashboard-soldout-properties/Subscription/Subscription";
 
 const App = () => {
   return (
@@ -37,6 +38,11 @@ const App = () => {
             exact
             path="/builder/home-dashboard/promoted"
             element={<PromotedVisit />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/subscription"
+            element={<Subscription />}
           />
           <Route
             exact

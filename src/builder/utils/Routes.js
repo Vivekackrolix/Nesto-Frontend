@@ -14,6 +14,7 @@ import BrockrageSettled from "../dashboard/Brokerage/BrokerageSettled";
 import NotificationDropdown from "../dashboard/Builderprofile/notification/NotificationDropdown";
 import RecentlyAddedProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
 import RecentlySoldOutProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlySoldOutProperty";
+import Subscription from "../dashboard/dashboard-soldout-properties/Subscription/Subscription";
 export const RouteData = [
   {
     id: 1,
@@ -81,6 +82,11 @@ export const RouteData = [
         id: 13,
         path: "RecentlySoldOut",
         element: <RecentlySoldOutProperty />,
+      },
+      {
+        id: 14,
+        path: "Subscription",
+        element: <Subscription />,
       },
     ],
   },
