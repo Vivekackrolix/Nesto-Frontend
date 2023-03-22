@@ -1,15 +1,73 @@
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./PropertyAnalytics.css";
 
 const PropertyInvoice = () => {
   return (
     <>
-      <h3>Property Invoices</h3>
+      <h3 className="heading">Property Invoices</h3>
       <Container
-        className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 "
+        className="dashboard__wrapper__filter border border-light rounded shadow-sm "
         style={{ boxShadow: "0px 10.7036px 46.8282px rgba(0, 0, 0, 0.07)" }}
       >
-        <div className="p-4 d-flex justify-content-around">
+        <Row className="p-4 align-items-center text-center">
+          <Col md={3} sm={6} className="d-grid my-2">
+          <span
+              style={{
+                color: "#278FD9",
+                fontWeight: "bold",
+                fontSize: "1.4em",
+              }}
+            >
+              10
+            </span>
+            <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
+              Pending <br></br> Invoice
+            </span>
+          </Col>
+          <Col md={3} sm={6} className="d-grid my-2">
+          <span
+              style={{
+                color: "#278FD9",
+                fontWeight: "bold",
+                fontSize: "1.4em",
+              }}
+            >
+              ₹ 99 L
+            </span>
+            <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
+              Pending <br></br> Amount
+            </span>
+          </Col>
+          <Col md={3} sm={6} className="d-grid my-2">
+          <span
+              style={{
+                color: "#278FD9",
+                fontWeight: "bold",
+                fontSize: "1.4em",
+              }}
+            >
+              10 Days
+            </span>
+            <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
+              Pending <br></br> Since
+            </span>
+          </Col>
+          <Col md={3} sm={6} className="d-grid my-2">
+          <span
+              style={{
+                color: "#278FD9",
+                fontWeight: "bold",
+                fontSize: "1.4em",
+              }}
+            >
+              10 Days
+            </span>
+            <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
+              Average <br></br> Payout Time
+            </span>
+          </Col>
+        </Row>  
+        {/* <div className="p-4 d-flex justify-content-around">
           <div className="text-center d-flex flex-column">
             <span
               style={{
@@ -66,7 +124,7 @@ const PropertyInvoice = () => {
               Average <br></br> Payout Time
             </span>
           </div>
-        </div>
+        </div> */}
       </Container>
     </>
   );

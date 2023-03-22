@@ -79,6 +79,7 @@ const Danelions = () => {
 
             <Button
               //   variant="primary"
+              variant="transparent"
               type="button"
               className=" d-flex rounded-pill  btn btn-outline-primary btn-lg justify-content-center mx-3 gap-3"
               as={Link}

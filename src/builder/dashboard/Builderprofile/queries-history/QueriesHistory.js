@@ -13,14 +13,13 @@ const QueriesHistory = () => {
   return (
     <>
       <h3>Manage Roles</h3>
-      <br />
       <SearchFilterBox />
       <DashboardTabs tabsKey={tabKey2} activeState={tabKey2[0]}></DashboardTabs>
       {/* <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
         <DashboardChildCard cardType="acceptedLoanQueries" />
       </DashboardTabs> */}
 
-      <Container className="dashboard__wrapper__filter mt-5">
+      <Container className="dashboard__wrapper__filter">
         <Row>
           <Col>Assigned To</Col>
           <Col>Phone Number</Col>

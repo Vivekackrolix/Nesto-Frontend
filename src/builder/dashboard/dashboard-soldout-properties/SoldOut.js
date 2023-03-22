@@ -7,17 +7,17 @@ const SoldOut = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Col
-        md={3}
-        className="card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0"
+        md={3} sm={12}
+        className="card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0 w-100"
         style={{
-          width: "21.75rem",
+          maxWidth: "21.5rem",
         }}
       >
         <Card.Img className="w-100" variant="top" src={propertyImage} />
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
 
-          <div>
+          <div className="pb-2">
             <div>
               {" "}
               <Link
@@ -71,21 +71,17 @@ const SoldOut = ({ data }) => {
   return (
     <Container className="mt-5">
       <div className="row justify-content-between">
-        <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
+        <h3 className="col-8 heading">
           Recently Sold Out Property
         </h3>
-        <Button
-          className="col-1"
-          style={{
-            color: "#FC5C67",
-            fontFamily: "Bahnschrift",
-            textDecorationLine: "underline",
-          }}
+        <a
+          className="col-4 text-end w-auto"
           as={Link}
-          to="/builder/home-dashboard/recentlysold"
+          href="/builder/home-dashboard/recentlysold"
+          style={{color: "#FC5C67"}}
         >
           View all
-        </Button>
+        </a>
       </div>
       {/* <div className="mt-4">{propertyListing}</div> */}
       <div className="mt-2 row justify-content-around">{propertyListing}</div>

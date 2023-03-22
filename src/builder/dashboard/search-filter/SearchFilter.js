@@ -9,7 +9,7 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 const SearchFilterBox = () => {
   const [showFilter, setShowFilter] = useState(false);
   return (
-    <div className="row d-flex align-items-center mb-5 mt-4">
+    <div className="row d-flex align-items-center mb-5 mt-2">
       <div
         className="dashboard__wrapper__filter bg-white search-shadow d-flex align-items-center col-10 p-0 rounded-2 me-3"
         style={{ flex: "1" }}

@@ -1,33 +1,37 @@
-import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap';
-import RangeSlider from '../../../builder/dashboard/Builderprofile/range-slider/RangeSlider';
+import { Button, Col, Form, Modal } from "react-bootstrap";
+import RangeSlider from "../../../builder/dashboard/Builderprofile/range-slider/RangeSlider";
 
-import CreatableSelect from 'react-select/creatable';
+import CreatableSelect from "react-select/creatable";
 
 const options = [
-  { value: 'Gurugram, Haryana', label: 'Gurugram, Haryana' },
-  { value: 'Noida, Uttar Pradesh', label: 'Noida, Uttar Pradesh' },
+  { value: "Gurugram, Haryana", label: "Gurugram, Haryana" },
+  { value: "Noida, Uttar Pradesh", label: "Noida, Uttar Pradesh" },
 ];
 const unit = [
-  { value: '2 BHK', label: '2 BHK' },
-  { value: '3 BHK', label: '3 BHK' },
+  { value: "2 BHK", label: "2 BHK" },
+  { value: "3 BHK", label: "3 BHK" },
 ];
 const builder = [
-  { value: 'Lorem Ipsum', label: 'Lorem Ipsum' },
-  { value: 'Lorem ipsum', label: 'Lorem ipsum' },
+  { value: "Lorem Ipsum", label: "Lorem Ipsum" },
+  { value: "Lorem ipsum", label: "Lorem ipsum" },
 ];
 const sort = [
-  { value: 'Lorem Ipsum', label: 'Lorem Ipsum' },
-  { value: 'Lorem ipsum', label: 'Lorem Ipsum' },
+  { value: "Featured First", label: "Featured First" },
+  { value: "Recent First", label: "Recent First" },
+  { value: "Price: low to high", label: "Price: low to high" },
+  { value: "Price: high to low", label: "Price: high to low" },
+  { value: "Sort by A-Z", label: "Sort by A-Z" },
+  { value: "Sort by Z-A", label: "Sort by Z-A" },
 ];
 const property = [
-  { value: 'Commercial', label: 'Commercial' },
-  { value: 'Residential', label: 'Residential' },
+  { value: "Commercial", label: "Commercial" },
+  { value: "Residential", label: "Residential" },
 ];
-const Filter = props => {
+const Filter = (props) => {
   return (
     <>
       <Modal
-        size="xl"
+        size="lg"
         show={props.show}
         onHide={() => {
           props.onChange(false);
@@ -35,171 +39,172 @@ const Filter = props => {
         animation={false}
         className=" p-3 ml-3"
       >
-        <Container className="pt-5 pb-4 dashboard__wrapper ">
-          <Row className="gap-4">
-            <Col>
-              <Form className="profile__form ps-2">
-                <Form.Group className="mb-4" controlId="email">
-                  <Form.Label>
-                    <h5>Sort By</h5>
-                  </Form.Label>
+        <Modal.Header closeButton>
+          <h5 className="mb-0">Filter Properties As Per Your Requirement</h5>
+        </Modal.Header>
+        <Modal.Body>
+          <Form className="profile__form pb-4 row">
+            <Col md={6} sm={12}>
+              <Form.Group className="mb-4" controlId="email">
+                <Form.Label>Sort By</Form.Label>
 
-                  <CreatableSelect
-                    isMulti
-                    placeholder="Select"
-                    options={sort}
-                    // styles={{ background: "#F8F8F8" }}
-                  />
-                </Form.Group>
+                <CreatableSelect isMulti placeholder="Select" options={sort} />
+              </Form.Group>
+            </Col>
+            <Col md={6} sm={12}>
+              <Form.Group className="mb-4">
+                <Form.Label>Location</Form.Label>
 
-                <Form.Group className="mb-4" controlId="phoneNumber">
-                  <Form.Label>
-                    <h5>Property Type</h5>
-                  </Form.Label>
+                <CreatableSelect
+                  isMulti
+                  placeholder="Add location"
+                  options={options}
+                />
+              </Form.Group>
+            </Col>
+            <Col md={6} sm={12}>
+              <Form.Group className="mb-4" controlId="phoneNumber">
+                <Form.Label>Property Type</Form.Label>
 
-                  <CreatableSelect
-                    isMulti
-                    placeholder="Add more"
-                    options={property}
-                  />
-                </Form.Group>
-              </Form>
-
+                <CreatableSelect
+                  isMulti
+                  placeholder="Add property type"
+                  options={property}
+                />
+              </Form.Group>
+            </Col>
+            <Col md={6} sm={12}>
+              <Form.Group className="mb-4">
+                <Form.Label>Unit Type</Form.Label>
+                <CreatableSelect
+                  isMulti
+                  placeholder="Add unit type"
+                  options={unit}
+                />
+              </Form.Group>
+            </Col>
+            <Col md={6} sm={12}>
               <RangeSlider title="range" min="40" max="160" />
-
-              <h5> Ratings</h5>
-
-              <div className="d-flex justify-content-between">
-                <button
-                  type="button"
-                  className="btn btn-light btn-lg rounded-circle "
-                >
-                  1
-                </button>
-
-                <button
-                  type="button"
-                  className="btn btn-light btn-lg rounded-circle"
-                >
-                  2
-                </button>
-
-                <button
-                  type="button"
-                  className="btn btn-light btn-lg rounded-circle"
-                >
-                  3
-                </button>
-
-                <button
-                  type="button"
-                  className="btn btn-light btn-lg rounded-circle"
-                >
-                  4
-                </button>
-
-                <button
-                  type="button"
-                  className="btn btn-primary btn-lg rounded-circle"
-                >
-                  5
-                </button>
-              </div>
-
-              <br />
-              <h5>Show Only</h5>
-
-              <h6>
-                <button
-                  type="button"
-                  className="btn bounded btn-outline-dark"
-                ></button>
-                Properties with Discount and Offers
-              </h6>
-
-              <h6>
-                <button
-                  type="button"
-                  className="btn bounded btn-outline-dark"
-                ></button>
-                Exclusive Properties
-              </h6>
-
-              <h6>
-                <button
-                  type="button"
-                  className="btn bounded btn-outline-dark"
-                ></button>
-                Promoted Properties
-              </h6>
             </Col>
-            <Col>
-              <Form className="profile__form">
-                <Form.Group className="mb-4">
-                  <Form.Label>
-                    <h5>Location</h5>
-                  </Form.Label>
+            <Col md={6} sm={12}>
+              <Form.Group className="mb-4">
+                <Form.Label>Builders</Form.Label>
+                <CreatableSelect
+                  isMulti
+                  placeholder="Add builders"
+                  options={builder}
+                />
+              </Form.Group>
+            </Col>
+            <Col md={6} sm={12}>
+              <Form.Group className="mb-4">
+                <Form.Label> Ratings</Form.Label>
 
-                  <CreatableSelect
-                    isMulti
-                    placeholder="Add more"
-                    options={options}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-4">
-                  <Form.Label>
-                    <h5>Unit Type</h5>
-                  </Form.Label>
-                  <CreatableSelect
-                    isMulti
-                    placeholder="Add more"
-                    options={unit}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-4">
-                  <Form.Label>
-                    <h5>Builders</h5>
-                  </Form.Label>
-                  <CreatableSelect
-                    isMulti
-                    placeholder="Add more"
-                    options={builder}
-                  />
-                </Form.Group>
-              </Form>
+                <div className="d-flex">
+                  <button
+                    type="button"
+                    className="btn btn-light btn-lg rounded-circle me-2"
+                  >
+                    1
+                  </button>
 
-              <h5>Construction Status</h5>
+                  <button
+                    type="button"
+                    className="btn btn-light btn-lg rounded-circle me-2"
+                  >
+                    2
+                  </button>
 
-              <div className="d-flex justify-content-around">
-                <h6>
-                  <button type="button" className="btn btn-primary btn-sm">
-                    Under Construction
+                  <button
+                    type="button"
+                    className="btn btn-light btn-lg rounded-circle me-2"
+                  >
+                    3
                   </button>
-                </h6>
-                <h6>
-                  <button type="button" className="btn btn-light btn-sm">
-                    Ready to Move
+
+                  <button
+                    type="button"
+                    className="btn btn-light btn-lg rounded-circle me-2"
+                  >
+                    4
                   </button>
-                </h6>
-                <h6>
-                  <button type="button" className="btn btn-light btn-sm">
-                    Possession Soon
+
+                  <button
+                    type="button"
+                    className="btn btn-primary btn-lg rounded-circle me-2"
+                  >
+                    5
                   </button>
-                </h6>
+                </div>
+              </Form.Group>
+            </Col>
+            <Col md={6} sm={12}>
+              <Form.Group className="mb-4">
+                <Form.Label>Construction Status</Form.Label>
+
+                <div className="d-flex justify-content-around">
+                  <h6>
+                    <button type="button" className="btn btn-primary btn-sm">
+                      Under Construction
+                    </button>
+                  </h6>
+                  <h6>
+                    <button type="button" className="btn btn-light btn-sm">
+                      Ready to Move
+                    </button>
+                  </h6>
+                  <h6>
+                    <button type="button" className="btn btn-light btn-sm">
+                      Possession Soon
+                    </button>
+                  </h6>
+                </div>
+              </Form.Group>
+            </Col>
+            <Col md={12} sm={12}>
+              <Form.Group>
+                <Form.Label>Show Only</Form.Label>
+                <Form.Check
+                  type={"checkbox"}
+                  id={"discountOffer"}
+                  className="mb-2"
+                >
+                  <Form.Check.Input type={"checkbox"} isValid />
+                  <Form.Check.Label>
+                    Properties with Discount and Offers
+                  </Form.Check.Label>
+                </Form.Check>
+                <Form.Check
+                  type={"checkbox"}
+                  id={"exclusiveProperties"}
+                  className="mb-2"
+                >
+                  <Form.Check.Input type={"checkbox"} isValid />
+                  <Form.Check.Label>Exclusive Properties</Form.Check.Label>
+                </Form.Check>
+                <Form.Check
+                  type={"checkbox"}
+                  id={"promotedProperties"}
+                  className="mb-2"
+                >
+                  <Form.Check.Input type={"checkbox"} isValid />
+                  <Form.Check.Label>Promoted Properties</Form.Check.Label>
+                </Form.Check>
+              </Form.Group>
+            </Col>
+            <Col md={12} sm={12}>
+              <div className="d-flex justify-content-center mt-1">
+                <Button
+                  variant="primary"
+                  size="sm"
+                  className="rounded-pill border-0 bg-color-primary py-2 px-5"
+                >
+                  Apply Filters
+                </Button>
               </div>
             </Col>
-          </Row>
-        </Container>
-
-        <div className="d-flex justify-content-center mt-1">
-          <Button
-            variant="primary"
-            size="sm"
-            className="w-50 rounded-pill border-0 bg-color-primary py-3 my-5"
-          >
-            Apply Filters
-          </Button>
-        </div>
+          </Form>
+        </Modal.Body>
       </Modal>
     </>
   );
