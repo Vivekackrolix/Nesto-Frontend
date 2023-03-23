@@ -1,7 +1,6 @@
-
 import React from 'react';
-import Heading from '../Heading/Heading';
-import './ChooseUs.css';
+import Heading from '../heading/Heading';
+import './chooseus.css';
 
 export default function ChooseUs() {
   const data = [
@@ -25,33 +24,28 @@ export default function ChooseUs() {
       title: 'See Neighborhoods',
       desc: 'With over 1 million+ homes for sale available on the website, Trulia can match you with a house you will want to call home.',
     },
-  ]
+  ];
   return (
     <>
       <div className="container" style={{ overflow: 'hidden' }}>
-
-        <Heading
-          title="Trusted by Millions"
-          sub="Why Choose Us"
-        />
-
-        <div className="row p-3 mb-5 flex" data-aos='fade-up'>
-          {data.map((item) => {
+        <Heading title="Trusted by Millions" sub="Why Choose Us" />
+        <div className="row choose-row" data-aos="fade-up">
+          {data.map(item => {
             return (
-              <div className="col-lg-3 col-md-6 col-sm-6 choose-col">
+              <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
                 <div className="choose-card">
-                  <div className='choose-icon-div'>
-                    <img src={item.img} className='choose-icon-img' />
+                  <div className="choose-icon-div">
+                    <img src={item.img} className="choose-icon-img" />
                   </div>
                   <div className="">
                     <h5 className="card-heading">{item.title}</h5>
                   </div>
                   <div className="">
-                    <span className='card-desc'>{item.desc}</span>
+                    <span className="card-desc">{item.desc}</span>
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>

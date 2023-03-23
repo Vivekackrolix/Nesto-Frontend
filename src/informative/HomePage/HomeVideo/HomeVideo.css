@@ -1,18 +1,26 @@
-.play-button{
-    position: absolute;
-    top: 40%;
-    right: 47%;
+.video-main {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
 }
-.video-main{
-    position: relative;
+
+.w-full {
+  width: 100%;
 }
-video::-webkit-media-controls-panel {
-display: none !important;
-opacity: 1 !important;
+
+.play-button {
+  position: absolute;
+  top: 45%;
+  right: 47%;
 }
-.w-full{
-    width: 100%;
+.home-video {
+  width: 100%;
 }
+.video-main video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+
 @media screen and (max-width: 680px) {
   .play-button {
     top: 22%;

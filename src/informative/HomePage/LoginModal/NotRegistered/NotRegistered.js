@@ -16,7 +16,9 @@ const NotRegistered = ({ show, onHide }) => {
                     <span className="not-register-sub-heading">
                         You are not registered with us! Please contact with Nestohub team.
                     </span>
-                    <button className="not-register-btn">Back to Login</button>
+                    <Link to='/contact-us'>
+                        <button className="not-register-btn">Contact Us</button>
+                    </Link>
                 </div>
             </div>
         </CustomModal>

@@ -1,0 +1,13 @@
+.refer ul {
+  list-style-type: circle;
+}
+
+.refer ul li {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+
+.refer ul li:not(:first-child) {
+  margin-top: 1rem;
+}

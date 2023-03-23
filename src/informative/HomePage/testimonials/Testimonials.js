@@ -1,12 +1,10 @@
 // import Image from "next/image";
-import React from "react";
-import Slider from "react-slick";
-import "./Testimonials.css";
-import { FaStar } from "react-icons/fa";
-import { AiOutlineStar } from "react-icons/ai";
-import Heading from "../Heading/Heading";
-
-// comment for testing
+import React from 'react';
+import Slider from 'react-slick';
+import './testimonials.css';
+import { FaStar } from 'react-icons/fa';
+import { AiOutlineStar } from 'react-icons/ai';
+import Heading from '../heading/Heading';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -15,10 +13,10 @@ function SampleNextArrow(props) {
       className={className}
       style={{
         ...style,
-        display: "block",
-        background: "red",
-        borderRadius: "50%",
-        padding: "1px",
+        display: 'block',
+        background: 'red',
+        borderRadius: '50%',
+        padding: '1px',
       }}
       onClick={onClick}
     />
@@ -32,10 +30,10 @@ function SamplePrevArrow(props) {
       className={className}
       style={{
         ...style,
-        display: "block",
-        background: "red",
-        borderRadius: "50%",
-        padding: "1px",
+        display: 'block',
+        background: 'red',
+        borderRadius: '50%',
+        padding: '1px',
       }}
       onClick={onClick}
     />
@@ -45,18 +43,18 @@ function SamplePrevArrow(props) {
 const review = [
   {
     id: 1,
-    testname: "Jacob William",
-    desc: "Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte",
+    testname: 'Jacob William',
+    desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
   },
   {
     id: 2,
-    testname: "Jacob William",
-    desc: "Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte",
+    testname: 'Jacob William',
+    desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
   },
   {
     id: 3,
-    testname: "Jacob William",
-    desc: "Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte",
+    testname: 'Jacob William',
+    desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
   },
 ];
 
@@ -68,13 +66,13 @@ const Testimonial = () => {
     slidesToScroll: 1,
     speed: 3000,
     autoplaySpeed: 3000,
-    cssEase: "linear",
+    cssEase: 'linear',
     arrows: true,
     loop: true,
     autoplay: true,
     autoplaySpeed: 7000,
     accessibility: true,
-    cssEase: "linear",
+    cssEase: 'linear',
     swipeToSlide: true,
     responsive: [
       {
@@ -89,7 +87,7 @@ const Testimonial = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           arrows: false,
@@ -139,7 +137,7 @@ const Testimonial = () => {
                         <div className="d-flex mt-4 gap-3 justify-content-end">
                           <div className="card-box">
                             <span className="test-name justify-content-end">
-                              {" "}
+                              {' '}
                               {obj.testname}
                             </span>
                             <span className="test-company justify-content-end">

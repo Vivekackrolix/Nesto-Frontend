@@ -17,6 +17,7 @@
 }
 
 .login-modal-broker-link {
+    cursor: pointer;
     background: var(--primary-color);
     width: 100%;
     margin: auto;
