@@ -1,6 +1,7 @@
 .video-main {
   position: relative;
   cursor: pointer;
+  width: 100%;
 }
 
 .w-full {
@@ -12,7 +13,9 @@
   top: 45%;
   right: 47%;
 }
-
+.home-video {
+  width: 100%;
+}
 .video-main video::-webkit-media-controls-panel {
   display: none !important;
 }

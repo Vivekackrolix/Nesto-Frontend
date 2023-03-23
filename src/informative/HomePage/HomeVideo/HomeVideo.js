@@ -12,11 +12,10 @@ const Video = () => {
 
     return (
         <>
-            <br /><br />
-            <div className="w-full video-main" data-aos='fade-up'>
-                {play ? <img className="play-button" src="/assets/informative/nestoplay.png" /> : ""}
+            <div className="video-main" data-aos='fade-up'>
+                {play ? <img className="play-button" src="/assets/informative/videoPlay.svg" /> : ""}
                 <video onPlay={handleClick} onPause={handlePause} controls className="home-video">
-                    <source src={"/assets/dummyVideo.mp4"} />
+                    <source src={"/assets/dummyVideo.mp4"} style={{ width: '100%' }} />
                 </video>
             </div>
             <br /><br /><br />
