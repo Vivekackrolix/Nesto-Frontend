@@ -1,5 +1,5 @@
-import { Card } from 'react-bootstrap';
-import './TermsConditions.css';
+import { Card } from "react-bootstrap";
+import "./TermsConditions.css";
 
 const TermsConditions = () => {
   return (

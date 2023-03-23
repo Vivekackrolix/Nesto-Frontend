@@ -76,7 +76,6 @@ const ProfilePage = () => {
     <>
       <DashboardHeader />
       <br />
-
       <Container fluid="lg" className="profile mb-5">
         <Row className="gy-5 gx-lg-5">
           <Col
