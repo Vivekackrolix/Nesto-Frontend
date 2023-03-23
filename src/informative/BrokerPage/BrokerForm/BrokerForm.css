@@ -5,7 +5,6 @@
 }
 
 .broker-banner-col-3-div {
-    height: 400px;
     background: var(--color-white);
     padding: 30px 20px;
     z-index: 10;
@@ -65,4 +64,14 @@
     border-radius: 10rem;
     color: var(--color-white);
     padding: 12px 0;
+}
+
+/* mediaQueri */
+@media(max-width: 992px) {
+    .broker-banner-col-3 {
+        padding: 30px;
+    }
+    .broker-banner-col-3-div {
+        border-radius: 10px;
+    }
 }
