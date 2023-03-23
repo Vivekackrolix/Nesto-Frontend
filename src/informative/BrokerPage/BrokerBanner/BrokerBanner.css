@@ -1,12 +1,12 @@
-.builder-banner {
+.broker-banner {
     background: var(--lite-skyblue);
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative !important;
     /* z-index: 0 !important; */
     /* margin-bottom: 8%; */
 }
 
-.builder-banner-row {
+.broker-banner-row {
     /* display: flex; */
     /* z-index: 0; */
     /* height: auto; */
@@ -14,7 +14,7 @@
     /* align-items: end; */
 }
 
-.builder-banner-col-1 {
+.broker-banner-col-1 {
     padding-left: 9%;
     height: 100%;
     display: flex;
@@ -23,21 +23,14 @@
     height: 540px;
 }
 
-.partners-col-2 {
-    background: url(../../../../public/assets/informative/partnerbuilding.png);
-    height: 600px;
-    background-size: cover;
-    background-position: center;
-}
-
-.builder-banner-h4 {
+.broker-banner-h4 {
     font-weight: 700;
     font-size: 33px;
     line-height: 50px;
     /* width: 70%; */
 }
 
-.builder-banner-p {
+.broker-banner-p {
     font-weight: 300;
     font-size: 15px;
     line-height: 26px;
@@ -46,7 +39,7 @@
     margin-bottom: 24px;
 }
 
-.builder-banner-link {
+.broker-banner-link {
     text-decoration: none;
     background: var(--primary-color);
     color: var(--color-white);
@@ -58,20 +51,39 @@
     transition: all .25s ease-in;
 }
 
-.builder-banner-link:hover {
+.broker-banner-link:hover {
     background: none;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
+
 /* =============== col-2
 ===================== */
-.builder-banner-col-2 {
+.broker-banner-col-2 {
     display: flex;
     align-items: end;
     justify-content: flex-start;
 }
-.builder-banner-cartoon {
+
+.broker-banner-cartoon {
     width: 100%;
 }
+
 /* ================= col-3 
 ========================*/
+
+
+
+
+
+/* mediaQueri */
+@media(max-width: 992px) {
+    .broker-banner-col-1 {
+        height: auto;
+        padding: 40px 20px 20px 6%;
+    }
+
+    .broker-banner-col-2 {
+        display: none;
+    }
+}
