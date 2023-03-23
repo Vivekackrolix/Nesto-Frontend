@@ -20,6 +20,8 @@ import CardWrapper from "./card-wrapper/CardWrapper";
 import Preferences from "./preferences/Preferences";
 import Notification from "./notification/Notification";
 import Refer from "./refer/Refer";
+import PropertyManagement from "../property/PropertyManagement";
+import PropertyManagementNew from "../property/PropertyManagementNew";
 
 // const tabs = [
 //   { title: "Personal Details", icon: <FiUser /> },
@@ -54,7 +56,7 @@ const tabs = [
   },
   {
     title: "Subscription Management",
-    icon: "/assets/DashboardImg/subscription 1.png",
+    icon: "/assets/DashboardImg/subscriptions.png",
   },
   {
     title: "Loan Agent",
@@ -80,41 +82,59 @@ const tabs = [
 const profileSidebarNavContent = [
   {
     element: <PersonalDetailsForm />,
+    title: "test",
   },
   {
-    element: <Preferences />,
-    title: "Preferences",
+    element: <PersonalDetailsForm />,
+    title: "test",
   },
   {
-    element: <Notification notification />,
-    title: "Notification",
+    element: <PersonalDetailsForm />,
+    title: "test",
   },
   {
-    element: <Refer />,
-    title: "Refer & Earn",
+    element: <PersonalDetailsForm />,
+    title: "test",
   },
   {
-    element: <TermsConditions />,
-    title: "Terms & Conditions",
+    element: <PropertyManagementNew />,
+    // title: "Property Listing",
   },
   {
-    // element: <Support />,
+    element: <PersonalDetailsForm />,
+    title: "test",
   },
   {
-    element: <RaiseQuery />,
-    title: "Your Recent Queries",
+    element: <PersonalDetailsForm />,
+    title: "test",
   },
   {
-    element: <RaiseQuery />,
-    title: "Your Recent Queries",
+    element: <PersonalDetailsForm />,
+    title: "test",
   },
   {
-    element: <RaiseQuery />,
-    title: "Your Recent Queries",
+    element: <PersonalDetailsForm />,
+    title: "test",
   },
   {
-    element: <RaiseQuery />,
-    title: "Your Recent Queries",
+    element: <PersonalDetailsForm />,
+    title: "test",
+  },
+  {
+    element: <PersonalDetailsForm />,
+    title: "test",
+  },
+  {
+    element: <PersonalDetailsForm />,
+    title: "test",
+  },
+  {
+    element: <PersonalDetailsForm />,
+    title: "test",
+  },
+  {
+    element: <PersonalDetailsForm />,
+    title: "test",
   },
 ];
 
@@ -136,7 +156,7 @@ const ProfilePage = () => {
           >
             <aside className="d-flex flex-column h-100 justify-content-between py-4">
               <div>
-                <Nav className="flex-column mt-4">
+                <Nav className="flex-column mt-2">
                   {tabs.map((tab, index) => (
                     <Nav.Item key={index}>
                       <Nav.Link

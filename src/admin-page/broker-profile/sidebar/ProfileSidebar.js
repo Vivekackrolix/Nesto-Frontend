@@ -1,16 +1,16 @@
-import { Image, Nav } from 'react-bootstrap';
-import { RiPencilFill } from 'react-icons/ri';
-import ProfileNavItem from '../profile-nav-item/ProfileNavItem';
-import { Button } from 'bootstrap';
-import { BsBoxArrowRight } from 'react-icons/bs';
+import { Image, Nav } from "react-bootstrap";
+import { RiPencilFill } from "react-icons/ri";
+import ProfileNavItem from "../profile-nav-item/ProfileNavItem";
+import { Button } from "bootstrap";
+import { BsBoxArrowRight } from "react-icons/bs";
 
 const tabs = [
-  { title: 'Personal Details' },
-  { title: 'Queries History' },
-  { title: 'Transaction History' },
-  { title: 'Terms & Conditions' },
-  { title: 'Support' },
-  { title: 'Raise Query' },
+  { title: "Personal Details" },
+  { title: "Queries History" },
+  { title: "Transaction History" },
+  { title: "Terms & Conditions" },
+  { title: "Support" },
+  { title: "Raise Query" },
 ];
 
 const ProfileSidebar = () => {
