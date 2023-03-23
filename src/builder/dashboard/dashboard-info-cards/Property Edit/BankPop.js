@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
-const sort = [
-  { value: "Hospital (200 m)", label: "Hospital (200 m)" },
-  { value: "Canteen (200 m)", label: "Canteen (200 m)" },
+const bank = [
+  { value: "AXIS", label: "AXIS " },
+  { value: "HDFC ", label: "HDFC " },
 ];
-const LocationPop = (props) => {
+const BankPop = (props) => {
   const onSubmitHandler = () => {
     props.onHide(false);
     props.onSubmit(true);
@@ -19,18 +19,18 @@ const LocationPop = (props) => {
         }}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Location Advantages</Modal.Title>
+          <Modal.Title>Add Bank</Modal.Title>
         </Modal.Header>
         <Container className="pt-2  dashboard__wrapper">
           <Form className="profile__form ">
             <Form.Group className="mb-4" controlId="email">
               <Form.Label>
-                <h5>Add Locations</h5>
+                <h5>Add Bank</h5>
               </Form.Label>
               <CreatableSelect
                 isMulti
-                placeholder="Add Location"
-                options={sort}
+                placeholder="Add Bank"
+                options={bank}
                 className="rounded-0"
                 styles={{ background: "#F8F8F8" }}
               />
@@ -52,4 +52,4 @@ const LocationPop = (props) => {
     </>
   );
 };
-export default LocationPop;
+export default BankPop;

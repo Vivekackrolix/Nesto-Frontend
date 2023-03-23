@@ -25,6 +25,7 @@ import { RiAddFill } from "react-icons/ri";
 import edit from "../../../Images/edit.png";
 import SubmitPop from "./Submitpop";
 import CreatableSelect from "react-select/creatable";
+import BankPop from "./BankPop";
 const sort = [
   { value: "Lorem Ipsum", label: "Lorem Ipsum" },
   { value: "Lorem ipsum", label: "Lorem Ipsum" },
@@ -39,12 +40,16 @@ const PropertyEdit = () => {
   const [showAmenities, setShowAmenities] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
   const [showSubmit, setShowSubmit] = useState(false);
+  const [showBank, setShowBank] = useState(false);
 
   const onAmenitiesClick = () => {
     setShowAmenities(true);
   };
   const onLocationClick = () => {
     setShowLocation(true);
+  };
+  const onBankClick = () => {
+    setShowBank(true);
   };
 
   // const UploadAndDisplayImage = () => {
@@ -348,13 +353,20 @@ const PropertyEdit = () => {
         <br></br>
         <div className="p-4 d-flex justify-content-between">
           <h3 style={{ fontFamily: "Bahnschrift" }}>Loan Approved By</h3>
+          <SubmitPop show={showSubmit} onHide={setShowSubmit} />
           <Button
             variant="primary"
             size="md"
             className="rounded-circle  bg-color-primary p-3"
+            onClick={onBankClick}
           >
             <RiAddFill size={20} />
           </Button>
+          <BankPop
+            onSubmit={setShowSubmit}
+            show={showBank}
+            onHide={setShowBank}
+          />
         </div>
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3"

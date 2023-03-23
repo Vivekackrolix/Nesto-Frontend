@@ -21,19 +21,20 @@ const SubmitPop = (props) => {
           />
         </h6>
         <br />
-        <div className=" d-flex row justify-content-center">
-          <h2 className="d-flex justify-content-center">Request Submitted</h2>
-          <br />
-          {/* <Modal.Title style={{ color: "#838BA1" }}> */}
-          <h4
-            className="d-flex justify-content-between"
-            style={{ color: "#838BA1" }}
-          >
+        {/* <div className=" d-flex row justify-content-center"> */}
+        <h2 className="d-flex justify-content-center">Request Submitted</h2>
+        <br />
+        {/* <Modal.Title style={{ color: "#838BA1" }}> */}
+        <span className="d-flex justify-content-center">
+          <h4 style={{ color: "#838BA1" }}>
             Changes suggested by you will be live.Post review by Nestohub team
           </h4>
-          <br />
-          {/* </Modal.Title> */}
-        </div>
+
+          {/* <h4 style={{ color: "#838BA1" }}></h4> */}
+        </span>
+        <br />
+        {/* </Modal.Title> */}
+        {/* </div> */}
 
         <div className="d-flex justify-content-center mt-2 pt-2 ms-2">
           <Button
