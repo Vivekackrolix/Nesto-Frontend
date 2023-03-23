@@ -18,7 +18,7 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
     startTimer();
     debugger;
     const response = await axios.post(
-      "http://13.234.136.165:3000/api/v1/builder/resendOtp",
+      "http://13.233.149.97:3000/api/v1/builder/resendOtp",
       {
         phoneNumber: phone,
       }
@@ -34,7 +34,7 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
     try {
       debugger;
       const response = await axios.post(
-        "http://13.234.136.165:3000/api/v1/builder/verifyOtp",
+        "http://13.233.149.97:3000/api/v1/builder/verifyOtp",
         { phoneNumber: phone, otp: otp }
       );
       // console.log(response);

@@ -72,9 +72,10 @@ const Subscription = () => {
                   <p>Per Month</p>
                   <span className="p-2 d-flex justify-content-center">
                     <Button
-                      variant="transparant"
+                      type="button"
+                      variant="transparent"
                       size="lg"
-                      className=" border-0 btn btn-outline-primary py-1 wd-80"
+                      className="rounded-2 px-4 py-2 border border-primary wd-120 "
                     >
                       Buy Now
                     </Button>
@@ -145,9 +146,10 @@ const Subscription = () => {
                   <p>Per Month</p>
                   <span className="p-2 d-flex justify-content-center">
                     <Button
-                      variant="transparant"
+                      type="button"
+                      variant="transparent"
                       size="lg"
-                      className=" border-0 btn btn-outline-primary py-1 wd-80"
+                      className="rounded-2 px-4 py-2 border border-primary wd-120 "
                     >
                       Buy Now
                     </Button>
@@ -222,9 +224,10 @@ const Subscription = () => {
                   <p>Per Month</p>
                   <span className="p-2 d-flex justify-content-center">
                     <Button
-                      variant="transparant"
+                      type="button"
+                      variant="transparent"
                       size="lg"
-                      className=" border-0 btn btn-outline-primary py-1 wd-80"
+                      className="rounded-2 px-4 py-2 border border-primary wd-120 "
                     >
                       Buy Now
                     </Button>
@@ -301,18 +304,18 @@ const Subscription = () => {
                 <p>(12/24 Visits Left)</p>
                 <span className="p-3 gap-4 d-flex justify-content-center">
                   <Button
-                    variant="primary"
+                    type="button"
+                    variant="transparent"
                     size="lg"
-                    className=" border-0 bg-color-primary py-1 wd-120 "
+                    className="rounded-2 px-4 py-2 border border-primary wd-120 "
                   >
                     Renew
                   </Button>
                   <Button
-                    variant="primary"
+                    type="button"
+                    variant="transparent"
                     size="lg"
-                    className=" border-0 bg-color-primary py-1 wd-120"
-                    //   as={Link}
-                    //   to="/builder/home-dashboard/subscription"
+                    className="rounded-2 px-4 py-2 border border-primary wd-120 "
                   >
                     Upgrade
                   </Button>
@@ -386,18 +389,18 @@ const Subscription = () => {
                 <p>(12/24 Visits Left)</p>
                 <span className="p-3 gap-4 d-flex justify-content-center">
                   <Button
-                    variant="primary"
+                    type="button"
+                    variant="transparent"
                     size="lg"
-                    className=" border-0 bg-color-primary py-1 wd-120 "
+                    className="rounded-2 px-4 py-2 border border-primary wd-120 "
                   >
                     Renew
                   </Button>
                   <Button
-                    variant="primary"
+                    type="button"
+                    variant="transparent"
                     size="lg"
-                    className=" border-0 bg-color-primary py-1 wd-120"
-                    //   as={Link}
-                    //   to="/builder/home-dashboard/subscription"
+                    className="rounded-2 px-4 py-2 border border-primary wd-120 "
                   >
                     Upgrade
                   </Button>

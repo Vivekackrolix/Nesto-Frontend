@@ -11,17 +11,9 @@ import Payment from "./Payment";
 // import { RiShowersFill } from "react-icons/ri";
 
 const PropertyClaim = () => {
-  const [show, setShow] = useState({
-    payment: false,
-    submit: false,
-  });
-  console.log(show);
-  const onLocationClick = () => {
-    setShow((prev) => ({ ...prev, payment: true }));
-  };
-  const onUpdate = () => {
-    debugger;
-    setShow((prev) => ({ ...prev, payment: false }));
+  const [showPayment, setShowPayment] = useState(false);
+  const onPayClick = () => {
+    setShowPayment((prev) => !prev);
   };
 
   return (
@@ -208,11 +200,11 @@ const PropertyClaim = () => {
                 <GrDocumentPdf />
               </h3>
 
-              <h5 style={{ color: "#278FD9" }} onClick={onLocationClick}>
+              <Payment show={showPayment} onHide={onPayClick} />
+              <h5 style={{ color: "#278FD9" }} onClick={onPayClick}>
                 Pay Now
-                {show.payment && (
-                  <Payment show={show.payment} onChange={onUpdate} />
-                )}
+                {/* {show.payment && ( */}
+                {/* )} */}
               </h5>
             </div>
             <hr />
@@ -302,12 +294,9 @@ const PropertyClaim = () => {
               <h3>
                 <GrDocumentPdf />
               </h3>
-
-              <h5 style={{ color: "#278FD9" }} onClick={onLocationClick}>
+              <Payment show={showPayment} onHide={onPayClick} />
+              <h5 style={{ color: "#278FD9" }} onClick={onPayClick}>
                 Pay Now
-                {show.payment && (
-                  <Payment show={show.payment} onChange={onUpdate} />
-                )}
               </h5>
             </div>
             <hr />
@@ -398,11 +387,9 @@ const PropertyClaim = () => {
                 <GrDocumentPdf />
               </h3>
 
-              <h5 style={{ color: "#278FD9" }} onClick={onLocationClick}>
+              <Payment show={showPayment} onHide={onPayClick} />
+              <h5 style={{ color: "#278FD9" }} onClick={onPayClick}>
                 Pay Now
-                {show.payment && (
-                  <Payment show={show.payment} onChange={onUpdate} />
-                )}
               </h5>
             </div>
             <hr />

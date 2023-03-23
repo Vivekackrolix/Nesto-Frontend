@@ -4,10 +4,7 @@ import submit from "../../../Images/submit.png";
 
 const SubmitPop = (props) => {
   // const navigate = useNavigate();
-  const submitHandler = () => {
-    props.onChange((prev) => ({ ...prev, submit: false }));
-    // navigate("/builder/home-dashboard/propertyedit");
-  };
+
   return (
     <Modal show={props.show}>
       <Container className="pt-5 pb-4 py-2 dashboard__wrapper">
@@ -43,7 +40,9 @@ const SubmitPop = (props) => {
             type="submit"
             variant="primary"
             className="w-100 rounded-pill bg-color-primary py-3 my-2 mx-3 col-5"
-            onClick={submitHandler}
+            onClick={() => {
+              props.onHide(false);
+            }}
           >
             Done
           </Button>

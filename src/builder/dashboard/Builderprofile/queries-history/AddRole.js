@@ -1,12 +1,12 @@
 import { Button, Container, Form, Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 
-// const sort = [
+// const finance = [
 //   { value: "Finance Manager", label: "Finance Manager" },
-//   { value: "Lorem ipsum", label: "Lorem Ipsum" },
+//   { value: "Property Manager", label: "Property Manager" },
 // ];
 // const property = [
 //   { value: "Commercial", label: "Commercial" },
@@ -19,18 +19,11 @@ const AddRole = (props) => {
   const [mail, setMail] = useState("");
   const [number, setNumber] = useState("");
   const [property, setProperty] = useState("");
-  // const navigate = useNavigate();
-  // debugger;
-  // const response = await axios.post(
-  //   "http://13.234.136.165:3000/api/v1/roles/addRoles"
+  const navigate = useNavigate();
 
-  //   // {  addRole:input.value.data}
-  // );
-  // console.log(response);
   const submitHandler = async () => {
-    debugger;
     const formData = {
-      add: "Finance Manager",
+      add: [],
       name,
       email: mail,
       mobileNumber: number,
@@ -38,7 +31,7 @@ const AddRole = (props) => {
     };
     console.log(formData);
     const response = await axios.post(
-      "http://13.234.136.165:3000/api/v1/roles/addRoles",
+      "http://13.233.149.97:3000/api/v1/roles/addRoles",
 
       formData,
       {
@@ -49,7 +42,8 @@ const AddRole = (props) => {
       }
     );
     console.log(response);
-    props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
+    // props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
+    navigate("/builder/home-dashboard/profile");
   };
   return (
     <>
@@ -72,7 +66,8 @@ const AddRole = (props) => {
               <CreatableSelect
                 // isMulti
                 placeholder="Property Manager"
-                options={add}
+                value={add}
+                // options={finance}
                 className="rounded-0"
                 styles={{ background: "#F8F8F8" }}
                 onChange={(e) => {
@@ -114,6 +109,7 @@ const AddRole = (props) => {
                 className="rounded-0"
                 type="tel"
                 placeholder="Lorem Ipsum"
+                maxLength="10"
                 value={number}
                 onChange={(e) => {
                   setNumber(e.target.value);
@@ -127,7 +123,7 @@ const AddRole = (props) => {
               <CreatableSelect
                 // isMulti
                 placeholder="Property Manager"
-                options={property}
+                value={property}
                 className="rounded-0"
                 styles={{ background: "#F8F8F8" }}
                 onChange={(e) => {
@@ -142,9 +138,9 @@ const AddRole = (props) => {
             variant="primary"
             className="w-50 rounded-pill bg-color-primary"
             onClick={submitHandler}
-            //   onClick={(submitHandler) => {
-            //     navigate("/builder/home-dashboard/profile");
-            //   }}
+            // onClick={(submitHandler) => {
+            //   navigate("/builder/home-dashboard/profile");
+            // }}
           >
             Add
           </Button>
