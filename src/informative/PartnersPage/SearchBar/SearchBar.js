@@ -19,9 +19,10 @@ const SearchBar = ({ addBtn }) => {
                     <div className="px-3 py-2 voice-location-icons order-last d-flex align-items-center">
                         <MdLocationSearching className="rounded-circle me-3 p-1" size={20} />
                         <BsMic className="rounded-circle me-2 p-1" size={14} />
-                        <Button variant="primary" className="px-4 ms-2 bg-color-primary">
+                        {/* <Button variant="primary" className="px-4 ms-2 bg-color-primary">
                             Search
-                        </Button>
+                        </Button> */}
+                        <button className='partner-container_search'>Search</button>
                         {addBtn && (
                             <Button className="nes__add__btn rounded-circle p-0 d-flex ms-2">
                                 <IoMdAdd color="#fff" size={25} className="m-auto" />
