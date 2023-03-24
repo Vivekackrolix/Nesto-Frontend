@@ -10,6 +10,7 @@ const BankPop = (props) => {
     props.onHide(false);
     props.onSubmit(true);
   };
+
   return (
     <>
       <Modal

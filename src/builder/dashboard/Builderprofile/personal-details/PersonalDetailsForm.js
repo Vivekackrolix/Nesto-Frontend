@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-
 import { getBuilderDetail } from "../../../redux/https-requests/builderDetail-http";
 // import CreatableSelect from "react-select/creatable";
 
@@ -23,7 +22,9 @@ const PersonalDetailsForm = () => {
   }, [dispatch]);
   return (
     <>
-      <h3>Personal Details</h3>
+      <h3>
+        Personal Details
+      </h3>
       <br />
       <Form className="profile__form row">
         <Col md={6} sm={12}>
@@ -96,7 +97,7 @@ const PersonalDetailsForm = () => {
             value={builderData.phoneNumber}
           />
         </Form.Group> */}
-        {/* 
+{/* 
         <Form.Group className="mb-4" controlId="address">
           <Form.Label>Address</Form.Label>
           <Form.Control
