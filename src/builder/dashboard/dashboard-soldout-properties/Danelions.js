@@ -1,10 +1,9 @@
 import { Container, Button, Col, Row } from "react-bootstrap";
-import { RiStarSFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import sky from "../../Images/Sky.png";
-// import building from "../../Images/building.png";
 import editbutton from "../../Images/editbutton.png";
 import build from "../../Images/build.png";
+import { BsPencilFill } from "react-icons/bs";
 import { useState } from "react";
 
 const Danelions = () => {
@@ -14,11 +13,7 @@ const Danelions = () => {
   return (
     <>
       <Container
-        className="dashboard__wrapper border border-light rounded shadow-sm"
-        style={{
-          boxShadow: "0px 7.86258px 44.4353px rgba(0, 0, 0, 0.07)",
-          boxSizing: "border-box",
-        }}
+        className="dashboard__wrapper border border-light rounded shadow-sm mt-2"         
       >
         <div className="d-flex ">
           <div>
@@ -78,14 +73,23 @@ const Danelions = () => {
             <br></br>
 
             <Button
-              //   variant="primary"
               variant="transparent"
               type="button"
-              className=" d-flex rounded-pill  btn btn-outline-primary btn-lg justify-content-center mx-3 gap-3"
+              className="rounded-pill border-primary btn-lg justify-content-center px-4 mx-3 gap-3 py-1"
               as={Link}
               to="/builder/home-dashboard/propertyedit"
             >
-              <img src={editbutton} alt="" />
+              <BsPencilFill
+                  style={{
+                    width: "1.25rem",
+                    height: "1.25rem",
+                    color: "#fff",
+                    background: "#278fd9",
+                    padding: "4px",
+                    borderRadius: "50%",
+                    marginRight: "8px",
+                  }}
+                />
               Edit
             </Button>
           </div>
