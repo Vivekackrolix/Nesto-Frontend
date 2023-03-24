@@ -53,7 +53,7 @@ const Slider = () => {
         <span className="swiper-subtitle">in Arocon Rainbow</span>
       </div>
       <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
-        <SwiperMain data={items} slidesPerView="3" spaceBetween="30">
+        <SwiperMain swiperData={items} slidesPerView="3" spaceBetween="30">
           <Card className="h-100 border-0 shadow-sm swiper__card p-3">
             <div className="ribbon">
               {/* <span>{tabKey[item.id]} </span> */}
