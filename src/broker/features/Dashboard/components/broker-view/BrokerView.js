@@ -1,68 +1,31 @@
+import { useGetAllPropertyQuery } from '../../../../hooks/LoginQuery';
 import { Container } from 'react-bootstrap';
 import HeroSection from '../hero-section/HeroSection';
 import SmallCardSection from '../small-card-section/SmallCardSection';
 import productImg from '../../assets/images/product-img.png';
 import { ProductContainers } from '../../../../dashboard-containers';
 import SwiperSliderDashboard from '../swiper-slider-dashboard/SwiperSliderDashboard';
-import './BrokerView.css';
 import { SearchFilter } from '../../../../../components';
+
+import './BrokerView.css';
+import { useAuth } from '../../../../services/api';
 const BrokerView = () => {
-  const productData = [
-    {
-      imageUrl: productImg,
-      title: 'Sky Dandelions Apartment',
-      location: 'Luxury Apartment in Sector-29, Gurugram',
-      bhk: [1, 2, 3, 4],
-      price: '₹ 3.94 - 6.01 Cr',
-      discount: 'Book now & get 5% discount',
-      visitAmount: '500',
-    },
-    {
-      imageUrl: productImg,
-      title: 'Sky Dandelions Apartment',
-      location: 'Luxury Apartment in Sector-29, Gurugram',
-      bhk: [1, 2, 3, 4],
-      price: '₹ 3.94 - 6.01 Cr',
-      discount: 'Book now & get 5% discount',
-      visitAmount: '500',
-    },
-    {
-      imageUrl: productImg,
-      title: 'Sky Dandelions Apartment',
-      location: 'Luxury Apartment in Sector-29, Gurugram',
-      bhk: [1, 2, 3, 4],
-      price: '₹ 3.94 - 6.01 Cr',
-      discount: 'Book now & get 5% discount',
-      visitAmount: '500',
-    },
-    {
-      imageUrl: productImg,
-      title: 'Sky Dandelions Apartment',
-      location: 'Luxury Apartment in Sector-29, Gurugram',
-      bhk: [1, 2, 3, 4],
-      price: '₹ 3.94 - 6.01 Cr',
-      discount: 'Book now & get 5% discount',
-      visitAmount: '500',
-    },
-    {
-      imageUrl: productImg,
-      title: 'Sky Dandelions Apartment',
-      location: 'Luxury Apartment in Sector-29, Gurugram',
-      bhk: [1, 2, 3, 4],
-      price: '₹ 3.94 - 6.01 Cr',
-      discount: 'Book now & get 5% discount',
-      visitAmount: '500',
-    },
-    {
-      imageUrl: productImg,
-      title: 'Sky Dandelions Apartment',
-      location: 'Luxury Apartment in Sector-29, Gurugram',
-      bhk: [1, 2, 3, 4],
-      price: '₹ 3.94 - 6.01 Cr',
-      discount: 'Book now & get 5% discount',
-      visitAmount: '500',
-    },
-  ];
+  useAuth();
+  const {
+    getAllPropertyIsLoading,
+    getAllPropertyIsError,
+    getAllPropertyResponse,
+    getAllPropertyError,
+    getAllpropertyIsSuccess,
+  } = useGetAllPropertyQuery();
+
+  if (getAllPropertyIsLoading) {
+    return <div>Loading</div>;
+  }
+
+  if (getAllPropertyIsError) {
+    return <div>somthing goes wrong</div>;
+  }
 
   return (
     <Container fluid="lg">
@@ -74,24 +37,26 @@ const BrokerView = () => {
       <section className="mt-5">
         <SwiperSliderDashboard />
       </section>
-      <ProductContainers
-        sectionTitle="Promoted Property"
-        productData={productData}
-        view="broker"
-      />
 
+      {getAllPropertyResponse && (
+        <ProductContainers
+          sectionTitle="Promoted Property"
+          propertyData={getAllPropertyResponse}
+          view="broker"
+        />
+      )}
       <HeroSection />
 
-      <ProductContainers
+      {/* <ProductContainers
         sectionTitle="Recently Added"
-        productData={productData}
+        productData={getAllPropertyResponse}
         view="broker"
-      />
-      <ProductContainers
+      /> */}
+      {/* <ProductContainers
         sectionTitle="Best Selling"
-        productData={productData}
+        productData={getAllPropertyResponse}
         view="broker"
-      />
+      /> */}
     </Container>
   );
 };

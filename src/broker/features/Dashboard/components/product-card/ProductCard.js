@@ -6,13 +6,20 @@ import { RiBuilding2Fill } from 'react-icons/ri';
 import './ProductCard.css';
 
 const ProductCard = ({
-  imageUrl,
-  title,
+  images,
+  name,
   location,
-  bhk,
-  price,
-  discount,
-  visitAmount,
+  unitType,
+  minPrice,
+  maxPrice,
+  discountDescription,
+  brokerageValue,
+  // title,
+  // location,
+  // bhk,
+  // price,
+  // discount,
+  // visitAmount,
   view,
 }) => {
   return (
@@ -29,14 +36,16 @@ const ProductCard = ({
       <div className="position-relative">
         <Card.Img
           variant="top"
-          src={imageUrl}
+          src={images[0]}
           alt="Product Image"
           className="nes__product__card__image"
         />
         {view === 'broker' && (
           <>
             <Ribbon cssClass="ribbonStyle" text="Best Seller" />
-            <Ribbon cssClass="ribbonStyle2" text="5% Brokerage" />
+            {brokerageValue && (
+              <Ribbon cssClass="ribbonStyle2" text={`${brokerageValue}`} />
+            )}
 
             <Button className="nes__product__card__btndark px-4">
               Ready To Move
@@ -52,18 +61,18 @@ const ProductCard = ({
       </div>
       <Card.Body className="px-0">
         <div className="px-4">
-          <Card.Title className="nes__product__card__title">{title}</Card.Title>
+          <Card.Title className="nes__product__card__title">{name}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted nes__product__card__subtitle">
             {location}
           </Card.Subtitle>
           <Row className="my-3 nes__product__card__icons gx-5">
-            {bhk.map((item, index) => (
+            {unitType.map((item, index) => (
               <Col
                 key={index}
                 className="col-auto d-flex flex-column justify-content-center align-items-center"
               >
                 <RiBuilding2Fill color="#939197" />
-                <span>{item} BHK</span>
+                <span>{item}</span>
               </Col>
             ))}
           </Row>
@@ -72,14 +81,17 @@ const ProductCard = ({
           <div className="d-flex justify-content-end align-items-center my-2">
             <Ribbon
               cssClass="ribbonStyle3 d-inline-flex align-items-center"
-              text={`Get ₹ ${visitAmount} per Visit`}
+              // text={`Get ₹ ${visitAmount} per Visit`}
+              text={`Get ₹ 500 per Visit`}
             />
           </div>
         )}
 
         <div className="px-4 nes__product__card__price d-flex flex-wrap align-items-center gap-2">
-          <h4 className="d-inline-block font-weight-bold m-0">{price}</h4>
-          <span className="d-inline-block text-muted m-0">{discount}</span>
+          <h4 className="d-inline-block font-weight-bold m-0">{`${minPrice} - ${maxPrice}`}</h4>
+          <span className="d-inline-block text-muted m-0">
+            {`Book now & get ${discountDescription} discount`}
+          </span>
         </div>
       </Card.Body>
       <Card.Footer className="d-flex justify-content-end border-0 bg-white pt-0">
