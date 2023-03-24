@@ -62,6 +62,12 @@ const PropertyDescription = () => {
             </Card.Body>
           </Card>
         </SwiperMain>
+        <ViewDetailsCard title="About The Project" link="View Details" bg />
+        <div className="nes__dashboard__banks">
+          <ViewDetailsCard title="Loan Approved By" link="View All" img />
+        </div>
+        <ViewDetailsCard title="View official brochure" media />
+        <ViewDetailsCard title="Terms & Conditions" link="View Details" />
       </Container>
     </section>
   );

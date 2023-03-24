@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdsa=self.webpackChunkdsa||[]).push([[60],{9060:function(e,n,s){s.r(n);var t=s(1087),a=s(7689),u=s(184);n.default=function(){return(0,u.jsx)(t.VK,{children:(0,u.jsx)(a.Z5,{children:(0,u.jsx)(a.AW,{path:"/nesto/admin",element:"test"})})})}}}]);
+//# sourceMappingURL=60.606bd340.chunk.js.map

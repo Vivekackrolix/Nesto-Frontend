@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   BookAVisitModal,
   BrokerView,
@@ -17,12 +18,19 @@ import '../../features/Dashboard/assets/styles/Dashboard.css';
 import ClientCards from '../../features/Dashboard/components/client-cards/ClientCard';
 import { clientsData } from '../../data/Constant';
 import ProfilePage from '../../dashboard-containers/broker-profile/Profile';
+import { setToken } from '../../store/authSlice';
+import { setAuthToken } from '../../services/api';
 
 const DashboardPage = () => {
-  const [show, setShow] = useState(true);
-  const onHide = () => {
-    setShow(false);
-  };
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    console.log(token);
+    if (token) {
+      dispatch(setToken(token));
+      setAuthToken(token);
+    }
+  }, [dispatch]);
   return (
     <>
       {/* popup modal */}
@@ -41,7 +49,7 @@ const DashboardPage = () => {
 
         {/* Main Content code start here */}
         <main className="nes__broker__dashboard">
-          <BrokerView /> 
+          <BrokerView />
           {/* <CustomerView /> */}
           {/* <PromotedProperty /> */}
 
@@ -69,7 +77,7 @@ const DashboardPage = () => {
           {/* <PropertyDetails /> */}
 
           {/* Profile page */}
-          {/* <ProfilePage /> */}
+          <ProfilePage />
         </main>
         {/* Main content code end here */}
 

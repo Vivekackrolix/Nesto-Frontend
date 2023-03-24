@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Button, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Header from "../../../header/Header";
 import Footer from "../../Footer/Footer";
 
@@ -25,6 +26,8 @@ const PromotedVisit = () => {
           <button
             type="button"
             className="w-50 rounded-pill col-2 btn btn-secondary"
+            as={Link}
+            to="/builder/home-dashboard/visit"
           >
             All Visits
           </button>
