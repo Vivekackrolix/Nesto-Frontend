@@ -43,7 +43,7 @@ const PropertyDescription = () => {
 
         <SwiperSlider />
 
-        <SwiperMain data={data} slidesPerView="3" spaceBetween="10">
+        <SwiperMain swiperData={data} slidesPerView="3" spaceBetween="10">
           <Card className="media-card">
             <Card.Body>
               <div className="nes__broker__swiper__item__media d-flex align-items-center  gap-3">
