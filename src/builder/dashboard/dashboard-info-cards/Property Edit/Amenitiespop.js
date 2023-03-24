@@ -23,21 +23,20 @@ const AmenitiesPop = (props) => {
   //   });
   // };
   const onSubmitHandler = () => {
-    // debugger;
-    console.log(props.show);
-    props.onChange((prev) => ({ ...prev, amenities: false, submit: true }));
+    props.onHide(false);
+    props.onSubmit(true);
   };
   console.log(props.show);
 
   return (
     <>
       <Modal
-        show={props.show.amenities}
+        show={props.show}
         onHide={() => {
-          props.onSubmitHandler(false);
+          props.onHide(false);
         }}
       >
-        <Modal.Header>
+        <Modal.Header closeButton>
           <Modal.Title className="d-flex justify-content-center">
             Amenities
           </Modal.Title>

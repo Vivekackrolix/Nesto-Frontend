@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Tab, Nav, Button, Image } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Container, Row, Col, Tab, Nav, Button, Image } from "react-bootstrap";
 import {
   FiUser,
   FiClock,
@@ -7,25 +7,25 @@ import {
   FiBookOpen,
   FiHelpCircle,
   FiPlus,
-} from 'react-icons/fi';
-import { RiArrowRightSLine, RiPencilFill } from 'react-icons/ri';
-import { BsBoxArrowRight } from 'react-icons/bs';
-import PersonalDetailsForm from './personal-details/PersonalDetailsForm';
-import QueriesHistory from './queries-history/QueriesHistory';
-import TransactionHistory from './profile-table/TransactionHistory';
-import TermsConditions from './terms-and-conditions/TermsConditions';
-import RaiseQuery from './raise-query/RaiseQuery';
-import CardWrapper from './card-wrapper/CardWrapper';
-import Support from './support/Support';
-import './Profile.css';
+} from "react-icons/fi";
+import { RiArrowRightSLine, RiPencilFill } from "react-icons/ri";
+import { BsBoxArrowRight } from "react-icons/bs";
+import PersonalDetailsForm from "./personal-details/PersonalDetailsForm";
+import QueriesHistory from "./queries-history/QueriesHistory";
+import TransactionHistory from "./profile-table/TransactionHistory";
+import TermsConditions from "./terms-and-conditions/TermsConditions";
+import RaiseQuery from "./raise-query/RaiseQuery";
+import CardWrapper from "./card-wrapper/CardWrapper";
+import Support from "./support/Support";
+import "./Profile.css";
 
 const tabs = [
-  { title: 'Personal Details', icon: <FiUser /> },
-  { title: 'Queries History', icon: <FiClipboard /> },
-  { title: 'Transaction History', icon: <FiClock /> },
-  { title: 'Terms & Conditions', icon: <FiBookOpen /> },
-  { title: 'Support', icon: <FiHelpCircle /> },
-  { title: 'Raise Query', icon: <FiPlus /> },
+  { title: "Personal Details", icon: <FiUser /> },
+  { title: "Queries History", icon: <FiClipboard /> },
+  { title: "Transaction History", icon: <FiClock /> },
+  { title: "Terms & Conditions", icon: <FiBookOpen /> },
+  { title: "Support", icon: <FiHelpCircle /> },
+  { title: "Raise Query", icon: <FiPlus /> },
 ];
 
 const profileSidebarNavContent = [
@@ -37,25 +37,25 @@ const profileSidebarNavContent = [
   },
   {
     element: <TransactionHistory />,
-    title: 'Transactions',
+    title: "Transactions",
   },
   {
     element: <TermsConditions />,
-    title: 'Terms & Conditions',
+    title: "Terms & Conditions",
   },
   {
     element: <Support />,
   },
   {
     element: <RaiseQuery />,
-    title: 'Your Recent Queries',
+    title: "Your Recent Queries",
   },
 ];
 
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabChange = index => {
+  const handleTabChange = (index) => {
     setActiveTab(index);
   };
 

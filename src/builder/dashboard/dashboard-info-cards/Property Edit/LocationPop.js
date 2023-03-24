@@ -6,13 +6,19 @@ const sort = [
   { value: "Canteen (200 m)", label: "Canteen (200 m)" },
 ];
 const LocationPop = (props) => {
-  const submitHandler = () => {
-    props.onChange((prev) => ({ ...prev, location: false, submit: true }));
+  const onSubmitHandler = () => {
+    props.onHide(false);
+    props.onSubmit(true);
   };
   return (
     <>
-      <Modal show={props.show}>
-        <Modal.Header>
+      <Modal
+        show={props.show}
+        onHide={() => {
+          props.onHide(false);
+        }}
+      >
+        <Modal.Header closeButton>
           <Modal.Title>Location Advantages</Modal.Title>
         </Modal.Header>
         <Container className="pt-2  dashboard__wrapper">
@@ -23,7 +29,7 @@ const LocationPop = (props) => {
               </Form.Label>
               <CreatableSelect
                 isMulti
-                placeholder="Property Manager"
+                placeholder="Add Location"
                 options={sort}
                 className="rounded-0"
                 styles={{ background: "#F8F8F8" }}
@@ -37,7 +43,7 @@ const LocationPop = (props) => {
           <Button
             variant="primary"
             className="w-50 rounded-pill bg-color-primary"
-            onClick={submitHandler}
+            onClick={onSubmitHandler}
           >
             Submit
           </Button>

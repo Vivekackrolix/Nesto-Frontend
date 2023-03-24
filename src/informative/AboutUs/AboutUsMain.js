@@ -6,6 +6,7 @@ import Footer from '../../components/footer/Footer'
 import HowWork from './HowWork/HowWork'
 import Aos from 'aos'
 import AboutUsDesc from './AboutUsDesc/AboutUsDesc'
+import InformativeFooter from '../InformativeFooter/InformativeFooter'
 
 const AboutUsMain = () => {
     useEffect(() => {
@@ -21,7 +22,7 @@ const AboutUsMain = () => {
             {/* How Nesto Work */}
             <HowWork />
             {/* Footer */}
-            <Footer />
+            <InformativeFooter />
         </>
     )
 }

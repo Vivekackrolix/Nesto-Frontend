@@ -29,11 +29,10 @@ export default function ChooseUs() {
     <>
       <div className="container" style={{ overflow: 'hidden' }}>
         <Heading title="Trusted by Millions" sub="Why Choose Us" />
-
-        <div className="row p-3 mb-5 flex" data-aos="fade-up">
+        <div className="row choose-row" data-aos="fade-up">
           {data.map(item => {
             return (
-              <div className="col-lg-3 col-md-6 col-sm-6 choose-col">
+              <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
                 <div className="choose-card">
                   <div className="choose-icon-div">
                     <img src={item.img} className="choose-icon-img" />

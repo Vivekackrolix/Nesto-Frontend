@@ -6,20 +6,11 @@ import './Footer.css';
 
 const footerLinks = [
   { companyInfo: [{ link: 'About us', to: '/about-us' }, { link: 'Category', to: '/' }, { link: 'FAQ', to: '/faq' }, { link: 'Blog', to: '/blog-list' }, { link: 'Contact us', to: '/contact-us' }] },
-  // {
-  //   quickLink: [
-  //     'Terms & Condition',
-  //     'Terms of Use',
-  //     'Privacy Policy',
-  //     'Help',
-  //     'Support',
-  //   ],
   { quickLink: [{ link: 'Terms & Condition', to: '/terms-condition' }, { link: 'Terms of Use', to: '/' }, { link: 'Privacy Policy', to: '/privacy-policy' }, { link: 'Help', to: '/' }, { link: 'Support', to: '/contact-us' }] },
 ];
 
 const Footer = () => {
   return (
-    // bg-color-primary
     <footer className="bg-primary mt-5 login__footer mt-auto">
       <Container className="py-5">
         <Row className="gy-sm-2 gx-lg-4">

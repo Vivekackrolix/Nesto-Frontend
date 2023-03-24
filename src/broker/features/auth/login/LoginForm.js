@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSendOtpMutation } from '../../../hooks/LoginQuery';
 import {
   Container,
   Row,
@@ -10,32 +11,23 @@ import {
   Figure,
 } from 'react-bootstrap';
 import EnterOtp from './EnterOtp';
-import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import {
-  useSendOtpMutation,
-  useVerifyOtpMutation,
-} from '../../../hooks/LoginQuery';
-
 import './LoginForm.css';
 
 const LoginForm = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [otp, setOtp] = useState('');
-  const [isOtpSent, setIsOtpSent] = useState(false);
-  const [showEnterOtpModal, setShowEnterOtpModal] = useState(true);
+
   const {
-    sendOtpResponse,
     sendOtp,
-    isLoading: isSendingOtp,
-    isSuccess: isSendOtpSuccess,
+    isSendingOtp,
+    isSendOtpSuccess,
+    isSendOtpIsError,
     isSendOtpError,
-    error,
+    sendOtpResponse,
   } = useSendOtpMutation();
 
   // const navigate = useNavigate();
   const [showErrorMessage, setShowErrorMessage] = useState(false);
-
+  console.log(`sendotp response =>  ${sendOtpResponse}`);
   const handleInputChange = event => {
     const inputText = event.target.value;
     const emailPhoneRegex =
@@ -64,17 +56,9 @@ const LoginForm = () => {
     }
   };
 
-  const onHide = () => {
-    setShowEnterOtpModal(false);
-  };
-
   return (
     <>
-      {/* modal */}
-      {/* {isSuccess && <EnterOtp show={true} onHide={onHide} />} */}
-      {isSendOtpSuccess && (
-        <EnterOtp show={true} phoneNumber={sendOtpResponse.data.phoneNumber} />
-      )}
+      {isSendOtpSuccess && <EnterOtp show={true} phoneNumber={phoneNumber} />}
 
       <Container fluid="lg" className="container-md my-5 login-shadow">
         <Row className="g-0 login__form">
