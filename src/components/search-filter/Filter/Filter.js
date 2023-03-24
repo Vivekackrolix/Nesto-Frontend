@@ -198,6 +198,9 @@ const Filter = (props) => {
                   variant="primary"
                   size="sm"
                   className="rounded-pill border-0 bg-color-primary py-2 px-5"
+                  onClick={() => {
+                    props.onHide(false);
+                  }}
                 >
                   Apply Filters
                 </Button>

@@ -5,6 +5,7 @@ import { RiAddFill } from "react-icons/ri";
 import { useState } from "react";
 import Filter from "../../../components/search-filter/Filter/Filter";
 import { MdOutlineArrowDropDown } from "react-icons/md";
+import Dropdown from "react-bootstrap/Dropdown";
 
 const SearchFilterBox = () => {
   const [showFilter, setShowFilter] = useState(false);
@@ -15,18 +16,6 @@ const SearchFilterBox = () => {
         style={{ flex: "1" }}
       >
         <div className="px-3 py-1">
-          {/*<Form.Select
-            defaultValue="All residential"
-            className="border-0 rounded-0 border-end"
-            onClick={() => {
-              setShowFilter(true);
-            }}
-          >
-            <option>Filter</option>
-             <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option> 
-          </Form.Select>*/}
           <button
             onClick={() => {
               setShowFilter(true);
@@ -43,7 +32,11 @@ const SearchFilterBox = () => {
             <InputGroup.Text className="border-0 bg-transparent">
               <BsSearch color="#B3B4B8" />
             </InputGroup.Text>
-            <FormControl placeholder="Search" className="border-0" style={{background: "#fff"}}/>
+            <FormControl
+              placeholder="Search"
+              className="border-0"
+              style={{ background: "#fff" }}
+            />
           </InputGroup>
         </div>
         <div className="px-3 my-1 voice-location-icons">
@@ -55,9 +48,28 @@ const SearchFilterBox = () => {
         </div>
       </div>
       <div className="col-auto" style={{ gap: "2" }}>
-        <Button className="rounded-circle p-2" style={{ boxShadow: "0px 6px 26px rgba(0, 0, 0, 0.25)"}}>
-          <RiAddFill size={30} />
-        </Button>
+        <Dropdown>
+          <Dropdown.Toggle
+            variant="primary"
+            id="dropdown-basic"
+            className="rounded-circle p-2"
+            style={{ boxShadow: "0px 6px 26px rgba(0, 0, 0, 0.25)" }}
+          >
+            <RiAddFill size={30} />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Raise Dispute</Dropdown.Item>
+            <hr />
+            <Dropdown.Item href="#/action-2">Request Property</Dropdown.Item>
+            {/* <Dropdown.Item href="#/action-3">Something else</Dropdown.Item> */}
+          </Dropdown.Menu>
+          {/* <Button
+          className="rounded-circle p-2"
+          style={{ boxShadow: "0px 6px 26px rgba(0, 0, 0, 0.25)" }}
+        > */}
+          {/* <RiAddFill size={30} /> */}
+          {/* </Button> */}
+        </Dropdown>
       </div>
       <div>
         <Filter show={showFilter} onChange={setShowFilter} />

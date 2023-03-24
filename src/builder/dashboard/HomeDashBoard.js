@@ -9,12 +9,13 @@ import homeImage from "../Images/summer.png";
 import PropertyInvoice from "./dashboard-property-analytics/PendindInvoice";
 import RecentPackage from "./dashboard-property-analytics/RecentPackage";
 import RecentlyAdded from "./dashboard-soldout-properties/RecentlyAdded";
-import Header from "../header/Header";
+// import Header from "../header/Header";
 import Footer from "./Footer/Footer";
 import { useEffect } from "react";
 import { getBuilderDetail } from "../redux/https-requests/builderDetail-http";
 import { useDispatch, useSelector } from "react-redux";
-import RecentlyAddedProperty from "./dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
+// import RecentlyAddedProperty from "./dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
+import Charts from "./property/Charts";
 
 const dashboardInfoCardsData = [];
 
@@ -29,8 +30,8 @@ const HomeDashBoard = () => {
 
   return (
     <>
-      {/* <DashboardHeader /> */}
-      <Header />
+      <DashboardHeader />
+      {/* <Header /> */}
 
       <Container className="pt-2 pb-4 dashboard__wrapper">
         <Row className="gx-4 dashboard-cards align-items-center">
@@ -54,6 +55,7 @@ const HomeDashBoard = () => {
 
         <RecentPackage />
         <PropertyInvoice />
+        {/* <Charts /> */}
       </Container>
       <Outlet />
       <Footer />

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './TotalRevenue.css'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import TotalRevenueChart from './TotalRevenueChart/TotalRevenueChart'
+import RecentCustomer from '../RecentCustomer/RecentCustomer'
 
 const TotalRevenue = () => {
   return (
@@ -33,6 +34,7 @@ const TotalRevenue = () => {
           </div>
           <TotalRevenueChart />
         </div>
+        <RecentCustomer />
       </div>
     </>
   )

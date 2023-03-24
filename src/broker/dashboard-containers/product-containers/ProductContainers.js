@@ -3,7 +3,7 @@ import { ProductCard } from '../../features';
 import { Link } from 'react-router-dom';
 import './ProductContainers.css';
 
-const ProductContainers = ({ sectionTitle, productData, view }) => {
+const ProductContainers = ({ sectionTitle, propertyData, view }) => {
   return (
     <section className="nes__product__section mt-5">
       <Row className="gy-3">
@@ -27,10 +27,13 @@ const ProductContainers = ({ sectionTitle, productData, view }) => {
             <Link className="nes__product__section__view">View All</Link>
           )}
         </Col>
-        {!!productData.length &&
-          productData.map((product, index) => (
+
+        {/* <ProductCard {...property} view={view} /> */}
+
+        {propertyData &&
+          propertyData.map((property, index) => (
             <Col key={index} xs={12} sm={6} md={4} className="mb-4">
-              <ProductCard {...product} view={view} />
+              <ProductCard {...property} view={view} />
             </Col>
           ))}
       </Row>

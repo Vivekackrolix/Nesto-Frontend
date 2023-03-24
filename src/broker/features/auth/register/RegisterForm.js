@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import {
   Container,
@@ -18,19 +17,17 @@ import './Register.css';
 const RegisterForm = () => {
   const { phoneNumber } = useSelector(state => state.login);
   const [username, setUsername] = useState('');
+  console.log(phoneNumber);
 
   const {
     register,
     registerResponse,
-    isLoading: isLoadingRegister,
-    isSuccess: isRegisterSuccess,
+    isLoadingRegister,
+    isRegisterSuccess,
+    isRegisterIsError,
     isRegisterError,
-    error,
   } = useRegisterMutation();
 
-  const navigate = useNavigate();
-
-  // const [showErrorMessage, setShowErrorMessage] = useState(false);
   const handleInputChange = event => {
     const username = event.target.value;
     if (username) {
@@ -40,13 +37,11 @@ const RegisterForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    register({ name: username, phoneNumber: phoneNumber, referalCode: '' });
+    register({ name: username, phoneNumber: phoneNumber });
   };
 
   return (
     <>
-      {/* <Header /> */}
-
       <Container fluid="lg" className="container-md my-5 login-shadow">
         <Row className="g-0 login__form">
           <Col md={6} className="d-none d-md-block">
