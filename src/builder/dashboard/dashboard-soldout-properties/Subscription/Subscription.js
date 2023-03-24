@@ -29,14 +29,22 @@ const Subscription = () => {
   }, []);
 
   const plans = data.map((itm) => {
-    console.log(itm.colour);
+    // console.log(itm.colour);
+
     return (
       <div className="col">
         <div className="shadow-recent mt-2 rounded-3">
+          <div
+            className="rounded shadow-sm"
+            style={{ backgroundColor: "#278FD9" }}
+          >
+            <h3 style={{ color: "#FFFFFF" }}>Recommended</h3>
+          </div>
           <div class="card mb-4 rounded shadow-sm">
-            <div class={`card-header py-3 ${itm.colour}`}>
+            <div class={`card-header py-4 ${itm.colour}`}>
+              {/* <div className='card-header py-3 '"{itm.colour}" */}
               <h5 className="fw-bold">{itm.name}</h5>
-              <p style={{ opacity: "0.6" }}>The perfect all-rounder</p>
+              <p style={{ opacity: "0.6" }}>{itm.description}</p>
             </div>
           </div>
 
@@ -44,19 +52,23 @@ const Subscription = () => {
             <ListGroup as="ul">
               <ListGroup.Item as="li">
                 <AiFillCheckCircle size={20} color="#51CC5D" className="me-2" />
-                {itm.numberOfVisit}
+                Lorem Ipsum Dummy
+                {/* {itm.numberOfVisit} */}
               </ListGroup.Item>
               <ListGroup.Item as="li">
                 <AiFillCheckCircle size={20} color="#51CC5D" className="me-2" />
-                {itm.numberOfproperty}
+                Lorem Ipsum Dummy
+                {/* {itm.numberOfproperty} */}
               </ListGroup.Item>
               <ListGroup.Item as="li">
                 <AiFillCheckCircle size={20} color="#51CC5D" className="me-2" />
-                {itm.planValidityInDays}
+                {/* {itm.planValidityInDays} */}
+                Lorem Ipsum Dummy
               </ListGroup.Item>
               <ListGroup.Item as="li">
                 <AiFillCheckCircle size={20} color="#51CC5D" className="me-2" />
-                {itm.totalCount}
+                {/* {itm.totalCount} */}
+                Lorem Ipsum Dummy
               </ListGroup.Item>
             </ListGroup>
           </div>
@@ -70,7 +82,7 @@ const Subscription = () => {
                   fontSize: "1.4em",
                 }}
               >
-                $ {itm.costPerMonth}
+                {itm.costPerMonth}
               </h5>
               <p>Per Month</p>
               <span className="p-2 d-flex justify-content-center">

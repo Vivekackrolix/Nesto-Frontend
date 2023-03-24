@@ -12,6 +12,10 @@ import { useState } from "react";
 //   { value: "Commercial", label: "Commercial" },
 //   { value: "Residential", label: "Residential" },
 // ];
+// const add =
+// [  {value:"Financial Manager", label:"Financial Manager" },
+//   {value:"Property Manager", label:"Property Manager"}],
+// [itm.formData];
 
 const AddRole = (props) => {
   const [add, setAdd] = useState("");
