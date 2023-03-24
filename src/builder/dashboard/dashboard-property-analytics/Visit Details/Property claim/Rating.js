@@ -16,36 +16,33 @@ const Rating = (props) => {
   const [hover4, setHover4] = useState(0);
   const [rating5, setRating5] = useState(0);
   const [hover5, setHover5] = useState(0);
-  const [close, setClose] = useState(false);
-  const handleClose = () => setClose(false);
-  const navigate = useNavigate();
-  const submitHandler = () => {
-    // props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
-    navigate("/builder/home-dashboard/promoted");
-  };
+  // const [close, setClose] = useState(false);
+  const [show, setShow] = useState(false);
+  // const handleClose = () => setClose(false);
+  // const navigate = useNavigate();
+  const handleClose = () => setShow(false);
+  // const submitHandler = () => {
+
+  // debugger;
+  // props.onHide(true);
+  // props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
+  // navigate("/builder/home-dashboard/promoted");
+  // };
 
   return (
     <>
       <Modal
         size="sm"
         show={props.show}
+        // show={show}
         onHide={handleClose}
-        onClick={() => setClose(!close)}
+        // onHide={handleClose}
+        // onClick={() => setClose(!close)}
       >
         <Modal.Header className="justify-content-center" closeButton>
           <Modal.Title>Rating</Modal.Title>
         </Modal.Header>
-        {/* <CustomModal
-        title="Rating"
-        show={props.show}
-        border
-        closeBtn
-        onHide={() => {
-          props.onHide(false);
-        }}
-        cssClassName="nes__dashboard__modal"
-        modalHeader
-      > */}
+
         <br />
         <Container className=" dashboard__wrapper">
           <Form.Group className="mb-3">
@@ -162,6 +159,7 @@ const Rating = (props) => {
             <Form.Control
               className="rounded-0 d-flex justify-content-start"
               // type="text"
+
               as="textarea"
               placeholder="Lorem Ipsum"
               style={{
@@ -174,7 +172,11 @@ const Rating = (props) => {
               <Button
                 variant="primary"
                 className="w-100 rounded-pill bg-color-primary"
-                onClick={submitHandler}
+                // onClick={submitHandler}
+                onClick={handleClose}
+                // onClick={() => {
+                // props.onHide(false);
+                // }}
               >
                 Submit
               </Button>

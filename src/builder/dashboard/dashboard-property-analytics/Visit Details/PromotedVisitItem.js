@@ -7,21 +7,29 @@ import Rating from "./Property claim/Rating";
 import Report from "./Property claim/Report";
 
 const PromotedVisitItem = (props) => {
+  const [report, setReport] = useState(false);
   const [rating, setRating] = useState(0);
 
   const [hover, setHover] = useState(0);
-  const [abuse, setAbuse] = useState(false);
-  const [show, setShow] = useState({
-    rating: false,
-    submit: true,
-  });
-  console.log(show);
-  const onLocationClick = () => {
-    setShow((prev) => ({ ...prev, rating: true }));
-  };
+  const [review, setReview] = useState(false);
+  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState({
+  //   rating: false,
+  //   submit: true,
+  // });
+  // console.log(show);
   const onReport = () => {
-    setAbuse((prev) => ({ ...prev, report: true }));
+    setReport(true);
   };
+  const onRating = () => {
+    setReview(true);
+  };
+  // const onLocationClick = () => {
+  //   setShow((prev) => ({ ...prev, rating: true }));
+  // };
+  // const onReport = () => {
+  //   setAbuse((prev) => ({ ...prev, report: true }));
+  // };
 
   return (
     <Row className={props.className}>
@@ -34,10 +42,10 @@ const PromotedVisitItem = (props) => {
       </Col>
       <Col onClick={onReport}>
         <img src={bot} alt="" />
-        <Report show={abuse.report} onChange={setAbuse} />
+        <Report show={report} onHide={setReport} />
       </Col>
 
-      <Col onClick={onLocationClick}>
+      <Col onClick={onRating}>
         {/* {Array.from({ length: 5 }, (_, index) => (
           <RiStarSFill color="#FFB630" />
         ))} */}
@@ -59,7 +67,7 @@ const PromotedVisitItem = (props) => {
             );
           })}
         </div>
-        <Rating show={show.rating} onChange={setShow} />
+        <Rating show={review} onHide={setReview} />
       </Col>
     </Row>
   );
