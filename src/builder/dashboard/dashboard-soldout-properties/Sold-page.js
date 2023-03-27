@@ -11,7 +11,7 @@ import Payment from "../dashboard-property-analytics/dashboard-property-details/
 import Danelions from "./Danelions";
 import Footer from "../Footer/Footer";
 import Floor from "../dashboard-property-analytics/dashboard-property-details/Floor";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
