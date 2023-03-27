@@ -55,9 +55,8 @@ const SoldPage = () => {
         {/* <img src={homeImage} className="rounded my-3" alt="Home" /> */}
         <Row className="gx-4 dashboard-cards align-items-center">
           <Col md={12}>
-            <h3 className="m-0">Property Details</h3>
-            <img src={homeImage} className="rounded w-100 my-3" alt="Home" />
-          </Col>
+          <h3 className="m-0 heading">Property Details</h3>
+            <img src={homeImage} className="rounded w-100 my-3" alt="Home" /></Col>          
         </Row>
         <div
           className="d-flex gap-2 mb-4"
@@ -71,23 +70,24 @@ const SoldPage = () => {
         <Anlytics />
         <Floor />
         <Amenities />
-        <Col>
+        <Row>
+        <Col md={12}>
           <Location />
           <Row className="gx-4 dashboard-cards align-items-center">
             <img src={map} className="rounded my-3" alt="Home" />
           </Row>
         </Col>
-        <Col>
+        <Col md={12}>
           <Payment />
         </Col>
-        <Col>
-          <h2 style={{ fontFamily: "Bahnschrift" }}> View offical brochure</h2>
+        <Col md={12}>
+          <h3 className="heading"> View offical brochure</h3>
           <Row className="gx-4 dashboard-cards align-items-center">
             <img src={brochure} className="rounded my-3" alt="Home" />
           </Row>
         </Col>
-        <Col>
-          <h2 style={{ fontFamily: "Bahnschrift" }}> Terms & Conditions</h2>
+        <Col md={12}>
+          <h3 className="heading"> Terms & Conditions</h3>
           <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
             <div className="p-4 d-flex justify-content-between">
               <p style={{ color: "#7D7F88", fontFamily: "Bahnschrift" }}>
@@ -136,6 +136,8 @@ const SoldPage = () => {
             </div>
           </Container>
         </Col>
+        </Row>
+        
       </Container>
       <Footer />
     </>

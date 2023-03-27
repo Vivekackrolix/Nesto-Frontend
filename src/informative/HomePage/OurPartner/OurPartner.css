@@ -10,16 +10,21 @@
 
 .partner-image {
   width: 100%;
-  height: 100px;
+  height: 90px;
+  object-fit: contain;
+  box-shadow: 0 0 6px #e9e9e9;
+  border-radius: 5px 15px;
+  padding: 8px;
+  margin-top: 5px;
 }
 
 .our-partner_link {
   background-color: var(--carnation-color);
-  border-radius: 28px;
+  border-radius: var(--bs-border-radius-lg);
   padding: 10px 42px;
   border: none;
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 16px;
   color: var(--color-white);
   transition: all .3s ease-in;
 }
@@ -36,4 +41,22 @@
 .next-image {
   height: 20px;
   width: 20px;
+}
+.our-partner .slick-list::before{
+  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 175px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.our-partner .slick-list::after{
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100% );
+  content: "";
+  height: 175px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  z-index: 2;
 }
