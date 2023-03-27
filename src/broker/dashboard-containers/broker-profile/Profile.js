@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Tab, Nav, Button, Image } from 'react-bootstrap';
 import {
   FiUser,
@@ -20,6 +20,9 @@ import Support from './support/Support';
 import Preferences from './preferences/Preferences';
 import Notification from './notification/Notification';
 import Refer from './refer/Refer';
+import { useDispatch, useSelector } from 'react-redux';
+import { setBrokerID } from '../../store/authSlice';
+import { useGetBrokerById } from '../../hooks/LoginQuery';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -76,10 +79,42 @@ const profileSidebarNavContent = [
 
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const brokerID = useSelector(state => state.auth.brokerID);
+  const dispatch = useDispatch();
+  const {
+    getBrokerByIdIsLoading,
+    getBrokerByIdIsError,
+    getBrokerByIdResponse,
+    getBrokerByIdError,
+    getBrokerByIdIsSuccess,
+  } = useGetBrokerById(brokerID);
 
   const handleTabChange = index => {
     setActiveTab(index);
   };
+
+  useEffect(() => {
+    const brokerID = localStorage.getItem('brokerID');
+
+    if (brokerID) {
+      dispatch(setBrokerID(brokerID));
+    }
+  }, [dispatch]);
+
+  if (getBrokerByIdIsLoading) {
+    return (
+      <>
+        <span>Loading</span>
+      </>
+    );
+  }
+  if (getBrokerByIdIsError) {
+    return (
+      <>
+        <span>Error</span>
+      </>
+    );
+  }
 
   return (
     <>
@@ -89,7 +124,7 @@ const ProfilePage = () => {
             <Col
               md={5}
               lg={3}
-              className="profile__sidebar__wrapper align-self-start"
+              className="profile-sidebar profile__sidebar__wrapper align-self-start"
             >
               <aside className="d-flex flex-column h-100 justify-content-between py-4">
                 <div>
@@ -104,8 +139,10 @@ const ProfilePage = () => {
                         <RiPencilFill />
                       </div>
                     </div>
-                    <h4 className="mt-3">Vinit Sharma</h4>
-                    <p className="text-muted">34562344432</p>
+                    <h4 className="mt-3">{getBrokerByIdResponse[0]?.name}</h4>
+                    <p className="text-muted">
+                      {getBrokerByIdResponse[0]?._id}
+                    </p>
                   </div>
                   {/* profile img code end here */}
 
@@ -138,7 +175,7 @@ const ProfilePage = () => {
                   </Nav>
                 </div>
                 <div className="mt-4 d-grid">
-                  <Button className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout">
+                  <Button variant="transparent" className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout">
                     <BsBoxArrowRight className="icon" size={24} /> Sign Out
                   </Button>
                 </div>
@@ -152,7 +189,12 @@ const ProfilePage = () => {
                       <CardWrapper
                         title={profileSidebarNavContent[index]?.title}
                       >
-                        {profileSidebarNavContent[index]?.element}
+                        {React.cloneElement(
+                          profileSidebarNavContent[index]?.element,
+                          {
+                            getBrokerByIdResponse: getBrokerByIdResponse[0],
+                          }
+                        )}
                       </CardWrapper>
                     </Tab.Pane>
                   ))}

@@ -25,13 +25,7 @@ const RecentlyAdded = ({ data }) => {
               <Col md={10} sm={10}>
                 <div>
                   {" "}
-                  <Link
-                    style={{
-                      color: "#252B5C",
-                      fontWeight: "bold",
-                      fontSize: "1.4em",
-                      textDecoration: "none",
-                    }}
+                  <Link className="recent-heading"
                     to="/builder/home-dashboard/description"
                   >
                     Sky Danelions Apartment
@@ -139,7 +133,7 @@ const RecentlyAdded = ({ data }) => {
           View all
         </a>
       </div>
-      <div className="mt-2 mb-5 row row-cols-2 justify-content-around">
+      <div className="mt-2 mb-5 row row-cols-2 w-100 justify-content-between ms-0">
         {propertyListing}
       </div>
     </Container>

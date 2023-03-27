@@ -16,12 +16,21 @@
 }
 
 .news-image {
-    width: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.news-box{
+    position: relative;
+    overflow: hidden;
 }
 
+.text-left .news-box a .news-image:hover{
+    transform: scale(1.05);
+}
 .news-box-2 {
     padding: 18px 20px 30px 20px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .news-date {
@@ -42,11 +51,14 @@
 .news-heading {
     font-family: 'Bahnschrift';
     font-style: normal;
-    font-weight: 350;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 20px;
     padding-top: 14px;
-    line-height: 32px;
+    line-height: 28px;
     color: var(--cold-black-color);
+}
+.news-heading:hover{
+    color: var(--primary-color);
 }
 
 .news-desc {

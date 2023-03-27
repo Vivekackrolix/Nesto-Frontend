@@ -59,8 +59,9 @@ const Anlytics = () => {
   return (
     <>
       <br></br>
-      <h3 style={{ fontFamily: "Bahnschrift" }}>Property Analytics</h3>
-      <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+      <br></br>
+      <h3 className="heading">Property Analytics</h3>
+      <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-2">
         {/* {plans} */}
         <div className="p-4 d-flex justify-content-around">
           <div className="text-center d-flex flex-column">

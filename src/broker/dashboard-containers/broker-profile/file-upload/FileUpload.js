@@ -32,33 +32,33 @@ const FileUpload = () => {
               ))}
             </ul>
           )}
-          <Form
+          {/* <Form
             className="position-relative"
             onDragOver={event => event.preventDefault()}
             onDrop={handleDrop}
-          >
-            <Form.Group controlId="formFileMultiple" className="mb-3">
-              <Form.Control
-                type="file"
-                multiple
-                onChange={handleFileInputChange}
+          > */}
+          <Form.Group controlId="formFileMultiple" className="mb-3">
+            <Form.Control
+              type="file"
+              multiple
+              onChange={handleFileInputChange}
+            />
+            <div className="drag-drop-text">
+              <img
+                src="/assets/upload-icon.svg"
+                alt="upload img"
+                className="img-fluid mb-2"
               />
-              <div className="drag-drop-text">
-                <img
-                  src="/assets/upload-icon.svg"
-                  alt="upload img"
-                  className="img-fluid mb-2"
-                />
-                <div className="d-flex align-items-center gap-1">
-                  <span className="drag-drop-text-span fw-bold">
-                    Drag and drop files or
-                  </span>{' '}
-                  <span className="upload-link color-blue fw-bold">browse</span>
-                </div>
-                <p>Supported formats: JPEG, PNG</p>
+              <div className="d-flex align-items-center gap-1">
+                <span className="drag-drop-text-span fw-bold">
+                  Drag and drop files or
+                </span>{' '}
+                <span className="upload-link color-blue fw-bold">browse</span>
               </div>
-            </Form.Group>
-          </Form>
+              <p>Supported formats: JPEG, PNG</p>
+            </div>
+          </Form.Group>
+          {/* </Form> */}
         </Col>
       </Row>
     </Container>

@@ -5,7 +5,6 @@ import {
 import { Container } from 'react-bootstrap';
 import HeroSection from '../hero-section/HeroSection';
 import SmallCardSection from '../small-card-section/SmallCardSection';
-import productImg from '../../assets/images/product-img.png';
 import { ProductContainers } from '../../../../dashboard-containers';
 import SwiperSliderDashboard from '../swiper-slider-dashboard/SwiperSliderDashboard';
 import { SearchFilter } from '../../../../../components';
@@ -28,7 +27,7 @@ const BrokerView = () => {
     getAllBannerError,
     getAllBannerIsSuccess,
   } = useGetAllBanner();
-  console.log(getAllBannerResponse);
+
   return (
     <Container fluid="lg">
       {getAllBannerIsLoading && 'loading Banner'}

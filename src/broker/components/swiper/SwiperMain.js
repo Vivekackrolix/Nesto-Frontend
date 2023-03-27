@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper';
+import { Navigation, Autoplay, Pagination } from 'swiper';
 import { Card, Container } from 'react-bootstrap';
-import 'swiper/swiper-bundle.css';
-// Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/bundle';
+
 import 'swiper/css/navigation';
 
 // swiper styles
@@ -13,12 +13,12 @@ import React from 'react';
 const SwiperMain = ({ swiperData, slidesPerView, spaceBetween, children }) => {
   return (
     <Swiper
-      modules={[Navigation, Autoplay]}
+      modules={[Navigation, Autoplay, Pagination]}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       navigation
+      pagination={{ clickable: true }}
       autoplay={{ delay: 3000 }}
-      // autoplay={{ delay: 3000, disableOnInteraction: false }}
       className="mt-0 mb-5"
     >
       {swiperData
@@ -27,7 +27,7 @@ const SwiperMain = ({ swiperData, slidesPerView, spaceBetween, children }) => {
               {React.cloneElement(children, { swiperDataItem: swiperDataItem })}
             </SwiperSlide>
           ))
-        : 'null'}
+        : null}
     </Swiper>
   );
 };

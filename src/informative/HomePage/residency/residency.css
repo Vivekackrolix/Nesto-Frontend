@@ -25,15 +25,15 @@
 
 .col-1-box-span_1 {
     font-weight: 700;
-    font-size: 46px;
+    font-size: 40px;
     display: block;
     color: var(--cold-black-color);
 }
 
 .col-1-box-span_2 {
-    font-weight: 350;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 31px;
+    line-height: 24px;
     display: block;
     padding-top: 10px;
     color: var(--gray-color);

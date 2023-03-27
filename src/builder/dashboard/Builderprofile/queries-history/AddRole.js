@@ -3,7 +3,6 @@ import CreatableSelect from "react-select/creatable";
 // import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
-
 // const finance = [
 //   { value: "Finance Manager", label: "Finance Manager" },
 //   { value: "Property Manager", label: "Property Manager" },
@@ -16,7 +15,6 @@ import { useState } from "react";
 // [  {value:"Financial Manager", label:"Financial Manager" },
 //   {value:"Property Manager", label:"Property Manager"}],
 // [itm.formData];
-
 const AddRole = (props) => {
   const [add, setAdd] = useState("");
   const [name, setName] = useState("");
@@ -24,7 +22,6 @@ const AddRole = (props) => {
   const [number, setNumber] = useState("");
   const [property, setProperty] = useState("");
   // const navigate = useNavigate();
-
   const submitHandler = async () => {
     const formData = {
       add: [],
@@ -36,7 +33,6 @@ const AddRole = (props) => {
     console.log(formData);
     const response = await axios.put(
       "http://13.233.149.97:3000/api/v1/roles/updateRoles",
-
       formData,
       {
         headers: {
@@ -49,7 +45,6 @@ const AddRole = (props) => {
     // props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
     // navigate("/builder/home-dashboard/profile");
   };
-
   return (
     <>
       <Modal
