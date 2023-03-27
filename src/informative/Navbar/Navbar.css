@@ -1,3 +1,6 @@
+.login__header {
+    background: #fff !important;
+}
 .login__header__img {
     width: 170px;
 }

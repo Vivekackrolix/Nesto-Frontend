@@ -3,6 +3,7 @@ import './AdminDashboard.css'
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import TotalRevenue from './TotalRevenue/TotalRevenue'
+import PropertyReferrals from './PropertyReferrals/PropertyReferrals';
 
 const AdminDashboard = () => {
   const data = [
@@ -59,6 +60,7 @@ const AdminDashboard = () => {
           )
         })}
         <TotalRevenue />
+        <PropertyReferrals />
       </div>
     </div>
   )
