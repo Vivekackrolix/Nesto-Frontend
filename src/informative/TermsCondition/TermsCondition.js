@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import Terms from './Terms/Terms';
 import './TermsCondition.css'
 import Aos from 'aos';
+import { Link } from 'react-router-dom';
 
 const TermsCondition = () => {
     useEffect(() => {
@@ -14,7 +15,7 @@ const TermsCondition = () => {
                 <Navbar expand="lg" bg='light' className="t-c_navbar">
                     <Container>
                         <Navbar.Brand href="#home">
-                            <img src="/assets/nesto-logo.png" className="t-c_brand-img" />
+                            <Link to='/'> <img src="/assets/nesto-logo.png" className="t-c_brand-img" /></Link>
                         </Navbar.Brand>
                     </Container>
                 </Navbar>

@@ -65,7 +65,7 @@ const RecentPackage = () => {
 
                 <Button
                   type="button"
-                  variant="transparent"
+                  variant="primary"
                   size="lg"
                   className="rounded-2 px-4 py-2 border border-primary wd-120 "
                   as={Link}

@@ -55,28 +55,16 @@ const SoldPage = () => {
         {/* <img src={homeImage} className="rounded my-3" alt="Home" /> */}
         <Row className="gx-4 dashboard-cards align-items-center">
           <Col md={12}>
-            <h3>Property Details</h3>
-            <img src={homeImage} className="rounded w-100" alt="Home" />
+            <h3 className="m-0">Property Details</h3>
+            <img src={homeImage} className="rounded w-100 my-3" alt="Home" />
           </Col>
         </Row>
         <div
-          className="d-flex gap-2"
+          className="d-flex gap-2 mb-4"
           style={{ color: "#7D7F88", border: "none", outline: "none" }}
         >
-          <button
-            type="button"
-            // className="btn btn-secondary"
-            style={{ color: "#7D7F88", border: "none", outline: "none" }}
-          >
-            Under Constructions
-          </button>
-          <button
-            type="button"
-            // className="btn btn-secondary"
-            style={{ color: "#7D7F88", border: "none", outline: "none" }}
-          >
-            Possession in Dec,2023
-          </button>
+          <span className="prop-tag me-2">Under Construction</span>
+          <span className="prop-tag">Possession in Dec,2023</span>
         </div>
         <br></br>
         <Danelions data={property} />
