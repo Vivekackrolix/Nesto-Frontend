@@ -25,23 +25,31 @@ import { RiAddFill } from "react-icons/ri";
 import edit from "../../../Images/edit.png";
 import SubmitPop from "./Submitpop";
 import CreatableSelect from "react-select/creatable";
+import BankPop from "./BankPop";
 const sort = [
   { value: "Lorem Ipsum", label: "Lorem Ipsum" },
   { value: "Lorem ipsum", label: "Lorem Ipsum" },
 ];
 const PropertyEdit = () => {
-  const [show, setShow] = useState({
-    amenities: false,
-    location: false,
-    submit: false,
-  });
-  console.log(show);
+  // const [show, setShow] = useState({
+  //   amenities: false,
+  //   location: false,
+  //   submit: false,
+  // });
+  // console.log(show);
+  const [showAmenities, setShowAmenities] = useState(false);
+  const [showLocation, setShowLocation] = useState(false);
+  const [showSubmit, setShowSubmit] = useState(false);
+  const [showBank, setShowBank] = useState(false);
 
   const onAmenitiesClick = () => {
-    setShow((prev) => ({ ...prev, amenities: true }));
+    setShowAmenities(true);
   };
   const onLocationClick = () => {
-    setShow((prev) => ({ ...prev, location: true }));
+    setShowLocation(true);
+  };
+  const onBankClick = () => {
+    setShowBank(true);
   };
 
   // const UploadAndDisplayImage = () => {
@@ -152,7 +160,7 @@ const PropertyEdit = () => {
         <br></br>
         <div className="d-flex justify-content-between">
           <h3 style={{ fontFamily: "Bahnschrift" }}> Amenities</h3>
-          <SubmitPop show={show.submit} onChange={setShow} />
+          <SubmitPop show={showSubmit} onHide={setShowSubmit} />
           <Button
             variant="primary"
             size="sm"
@@ -160,8 +168,12 @@ const PropertyEdit = () => {
             onClick={onAmenitiesClick}
           >
             <RiAddFill size={20} />
-            <AmenitiesPop show={show} onChange={setShow} />
           </Button>
+          <AmenitiesPop
+            onSubmit={setShowSubmit}
+            show={showAmenities}
+            onHide={setShowAmenities}
+          />
         </div>
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
@@ -202,6 +214,7 @@ const PropertyEdit = () => {
         <br></br>
         <div className="d-flex justify-content-between">
           <h3 style={{ fontFamily: "Bahnschrift" }}>Location Advantage</h3>
+          <SubmitPop show={showSubmit} onHide={setShowSubmit} />
           <Button
             variant="primary"
             size="sm"
@@ -209,8 +222,12 @@ const PropertyEdit = () => {
             onClick={onLocationClick}
           >
             <RiAddFill size={20} />
-            <LocationPop show={show.location} onChange={setShow} />
           </Button>
+          <LocationPop
+            onSubmit={setShowSubmit}
+            show={showLocation}
+            onHide={setShowLocation}
+          />
         </div>
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
           <div
@@ -336,13 +353,20 @@ const PropertyEdit = () => {
         <br></br>
         <div className="p-4 d-flex justify-content-between">
           <h3 style={{ fontFamily: "Bahnschrift" }}>Loan Approved By</h3>
+          <SubmitPop show={showSubmit} onHide={setShowSubmit} />
           <Button
             variant="primary"
             size="md"
             className="rounded-circle  bg-color-primary p-3"
+            onClick={onBankClick}
           >
             <RiAddFill size={20} />
           </Button>
+          <BankPop
+            onSubmit={setShowSubmit}
+            show={showBank}
+            onHide={setShowBank}
+          />
         </div>
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3"

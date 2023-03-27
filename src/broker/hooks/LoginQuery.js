@@ -1,78 +1,67 @@
-import { useMutation } from '@tanstack/react-query';
-import { useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { setAuthToken } from '../services/api';
+import { getAPI, postAPI, putAPI } from '../services/requests';
+import { apiEndpoints } from '../config/apiEndpoints';
+
 import { setNewUserPhoneNumber } from '../features/auth/login/loginSlice';
 
-const SEND_OTP_ENDPOINT = 'http://13.233.149.97:3000/api/v1/broker/sendOtp';
-const VERIFY_OTP_ENDPOINT = 'http://13.233.149.97:3000/api/v1/broker/verifyOtp';
-
-const REGISTER_NAME_ENDPOINT = `http://13.233.149.97:3000/api/v1/broker/registerName`;
-
 export const useSendOtpMutation = () => {
-  const [sendOtpResponse, setSendOtpResponse] = useState(null);
   const dispatch = useDispatch();
+
   const {
-    mutate,
+    mutate: sendOtp,
     isLoading: isSendingOtp,
     isSuccess: isSendOtpSuccess,
-    isError: isSendOtpError,
-    error,
+    isError: isSendOtpIsError,
+    error: isSendOtpError,
+    data: sendOtpResponse,
   } = useMutation(
-    phoneNumber =>
-      axios.post(SEND_OTP_ENDPOINT, { phoneNumber }).then(res => res.data),
+    phoneNumber => postAPI(apiEndpoints.sendOtp, { phoneNumber }),
     {
       onSuccess: data => {
-        setSendOtpResponse(data);
+        console.log(data);
         dispatch(setNewUserPhoneNumber(data.phoneNumber));
-      },
-      onError: error => {
-        console.log(error.message);
-        console.log('not working');
       },
     }
   );
-
-  const sendOtp = phoneNumber => {
-    mutate(phoneNumber);
-  };
-
   console.log(sendOtpResponse);
-
   return {
     sendOtp,
-    sendOtpResponse,
-    isLoading: isSendingOtp,
-    isSuccess: isSendOtpSuccess,
+    isSendingOtp,
+    isSendOtpSuccess,
+    isSendOtpIsError,
     isSendOtpError,
-    error,
+    sendOtpResponse,
   };
 };
 
+// // verify
 export const useVerifyOtpMutation = () => {
-  const [verifyOtpResponse, setVerifyOtpResponse] = useState(null);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
-    mutate,
+    mutate: verifyOtp,
     isLoading: isVerifyOtp,
     isSuccess: isVerifyOtpSuccess,
-    isError: isVerifyOtpError,
-    error,
+    isError: isVerifyOtpIsError,
+    data: verifyOtpResponse,
+    error: isVerifyOtpError,
   } = useMutation(
     ({ phoneNumber, otp }) =>
-      axios
-        .post(VERIFY_OTP_ENDPOINT, { phoneNumber, otp })
-        .then(res => res.data),
+      postAPI(apiEndpoints.verifyOtp, { phoneNumber, otp }),
     {
       onSuccess: data => {
-        setVerifyOtpResponse(data);
-        const userStatus = data.data.status;
-        if (userStatus === 'newuser') {
-          dispatch(setNewUserPhoneNumber(data.data.phone));
+        console.log(data);
 
-          // navigate('/broker/register');
+        const userStatus = data?.status;
+        if (userStatus === 'newuser') {
+          dispatch(setNewUserPhoneNumber(data?.phoneNumber));
+          console.log(userStatus);
+          console.log(data);
+          // return;
+          navigate('/broker/register');
           return;
         }
 
@@ -81,65 +70,109 @@ export const useVerifyOtpMutation = () => {
           return;
         }
       },
+      onError: error => {
+        console.log('something goes wrong');
+      },
     }
   );
 
-  const verifyOtp = ({ phoneNumber, otp }) => {
-    mutate({ phoneNumber, otp });
-  };
-
-  console.log(verifyOtpResponse);
-
   return {
     verifyOtp,
+    isVerifyOtp,
+    isVerifyOtpSuccess,
+    isVerifyOtpIsError,
     verifyOtpResponse,
-    isLoading: isVerifyOtp,
-    isSuccess: isVerifyOtpSuccess,
     isVerifyOtpError,
-    error,
   };
 };
 
+// register
 export const useRegisterMutation = () => {
   const navigate = useNavigate();
-  const [registerResponse, setRegisterResponse] = useState(null);
 
   const {
-    mutate,
+    mutate: register,
+    data: registerResponse,
     isLoading: isLoadingRegister,
     isSuccess: isRegisterSuccess,
-    isError: isRegisterError,
-    error,
+    isError: isRegisterIsError,
+    error: isRegisterError,
   } = useMutation(
     ({ name, phoneNumber }) =>
-      axios
-        .post(REGISTER_NAME_ENDPOINT, { name, phoneNumber })
-        .then(res => res.data),
+      postAPI(apiEndpoints.registerName, { name, phoneNumber }),
     {
       onSuccess: data => {
-        setRegisterResponse(data);
-
-        console.log(data);
-        if (data.data.token) {
-          console.log(data.token);
+        if (data?.token) {
+          console.log(data);
+          console.log(data?.phoneNumber);
+          console.log(data?.token);
+          setAuthToken(data?.token);
+          localStorage.setItem('authToken', data?.token);
+          // localStorage.setItem('user', JSON.stringify(data));
+          // return
+          // localStorage.setItem('user', data);
           navigate('/broker/dashboard');
         }
       },
     }
   );
 
-  const register = ({ name, phoneNumber }) => {
-    mutate({ name, phoneNumber });
-  };
-
-  console.log(registerResponse);
-
   return {
     register,
     registerResponse,
-    isLoading: isLoadingRegister,
-    isSuccess: isRegisterSuccess,
+    isLoadingRegister,
+    isRegisterSuccess,
+    isRegisterIsError,
     isRegisterError,
-    error,
+  };
+};
+// get all properties
+export const useGetAllPropertyQuery = () => {
+  const {
+    isLoading: getAllPropertyIsLoading,
+    isError: getAllPropertyIsError,
+    data: getAllPropertyResponse,
+    error: getAllPropertyError,
+    isSuccess: getAllpropertyIsSuccess,
+  } = useQuery(['getAllproperty'], () => getAPI(apiEndpoints.getAllproperty), {
+    retry: 1,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    onError: error => console.log(error),
+    onSuccess: data => console.log(data),
+  });
+  console.log(getAllPropertyResponse);
+  return {
+    getAllPropertyIsLoading,
+    getAllPropertyIsError,
+    getAllPropertyResponse,
+    getAllPropertyError,
+    getAllpropertyIsSuccess,
+  };
+};
+
+// get all banner
+export const useGetAllBanner = () => {
+  const {
+    isLoading: getAllBannerIsLoading,
+    isError: getAllBannerIsError,
+    data: getAllBannerResponse,
+    error: getAllBannerError,
+    isSuccess: getAllBannerIsSuccess,
+  } = useQuery(['getAllBanner'], () => getAPI(apiEndpoints.getAllBanner), {
+    retry: 1,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    onError: error => console.log(error),
+    onSuccess: data => console.log(data),
+  });
+  console.log('banner');
+  console.log(getAllBannerResponse);
+  return {
+    getAllBannerIsLoading,
+    getAllBannerIsError,
+    getAllBannerResponse,
+    getAllBannerError,
+    getAllBannerIsSuccess,
   };
 };

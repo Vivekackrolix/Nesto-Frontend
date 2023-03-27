@@ -2,23 +2,58 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../../Images/propertyadded.png";
 import build from "../../../Images/build.png";
 // import subs from "../../Images/subs.png";
-
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { BsPencilFill } from "react-icons/bs";
 import { RiVipCrownFill } from "react-icons/ri";
 import DashboardHeader from "../../header/DashboardHeader";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import Footer from "../../Footer/Footer";
+import { useEffect } from "react";
+import axios from "axios";
+import { recentlyAddedPropertyActions } from "../../../redux/recentlyAddedPropertySlice";
 
-const RecentlyAddedProperty = ({ data }) => {
+// const RecentlyAddedProperty = ({ data }) => {
+const RecentlyAddedProperty = (props) => {
+  const data = useSelector((state) => state.addedPropertyDetails.properties);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const getAddedProperties = async () => {
+      debugger;
+      const response = await axios.get(
+        "http://13.233.149.97:3000/api/v1/property/getAllproperty",
+        {
+          headers: {
+            Authorization:
+              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+      console.log(response.data);
+      dispatch(
+        recentlyAddedPropertyActions.setAddedPropertyDetails({
+          data: response.data.data,
+        })
+      );
+    };
+    getAddedProperties();
+  }, []);
   const propertyListing = data.map((itm, index) => {
     return (
       <Col
         md={3}
         className="card mb-4 shadow-sm rounded-4 p-0 border-0"
         style={{ width: "21.75rem" }}
+        id={itm._id}
+        key={itm._id}
       >
-        <Card.Img variant="top" src={propertyImage} />
+        <Card.Img
+          variant="top"
+          src={propertyImage}
+          // src={itm.images}
+        />
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
 
@@ -36,11 +71,13 @@ const RecentlyAddedProperty = ({ data }) => {
                     }}
                     to="/builder/home-dashboard/description"
                   >
-                    Sky Danelions Apartment
+                    {/* {itm.propertyId === null ? "no data Name" : itm._id.name} */}
+                    {itm.name}
                   </Link>
                 </div>
                 <p style={{ opacity: 0.5 }}>
-                  Luxury Apartment in Sector-29,Gurugram
+                  {/* {itm.propertyId === null ? "no data" : itm._id.location} */}
+                  {itm.location}
                 </p>
               </Col>
               <Col md={2} sm={2}>
@@ -74,23 +111,6 @@ const RecentlyAddedProperty = ({ data }) => {
                 <p style={{ opacity: 0.5 }}>5BHK</p>
               </Col>
             </Row>
-            {/* <Row>
-              {/* <Col className="d-flex justify-content-between">
-                <p>Sky Danelions Apartment</p>
-                <img src={subs} alt="" />
-              </Col>
-              <Row style={{ opacity: 0.5 }}>
-                Luxury Apartment in Sector-29,Gurugram
-              </Row> */}
-
-            {/* <br></br>
-              <br></br>
-
-              <Row>
-                <img src={build} alt="" />
-              </Row> 
-              <br></br>
-            </Row> */}
 
             <Row className="align-items-center">
               <Col
@@ -101,10 +121,10 @@ const RecentlyAddedProperty = ({ data }) => {
                   fontWeight: "bold",
                 }}
               >
-                Rs.3.94-6.01 Cr
+                {itm.minPrice}-{itm.maxPrice}
               </Col>
               <Col md={7} style={{ color: "#7D7F88", fontSize: "0.8em" }}>
-                Book now & get 5% discount
+                Book now & get {itm.discountDescription} discount
               </Col>
             </Row>
             <div className="d-flex justify-content-end gap-2 mt-2">
@@ -151,9 +171,7 @@ const RecentlyAddedProperty = ({ data }) => {
         <SearchFilterBox />
 
         <div className="row justify-content-between">
-          <h3 className="col-4 heading">
-            Recently Added
-          </h3>
+          <h3 className="col-4 heading">Recently Added</h3>
           {/* <i
             className="col-1"
             style={{

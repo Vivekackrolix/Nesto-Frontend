@@ -62,11 +62,12 @@ const RecentPackage = () => {
                 >
                   Renew
                 </Button>
+
                 <Button
                   type="button"
-                  variant="transparent"
+                  variant="primary"
                   size="lg"
-                  className="rounded-2 border-0 bg-color-primary px-4 py-2 wd-120"
+                  className="rounded-2 px-4 py-2 border border-primary wd-120 "
                   as={Link}
                   to="/builder/home-dashboard/subscription"
                 >

@@ -4,9 +4,40 @@ import { Link } from "react-router-dom";
 import DashboardHeader from "../../header/DashboardHeader";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import Footer from "../../Footer/Footer";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import axios from "axios";
+import { recentlySoldPropertyActions } from "../../../redux/recentlySoldPropertySlice";
 // import "./SoldOut.css";
 
-const RecentlySoldOutProperty = ({ data }) => {
+const RecentlySoldOutProperty = (props) => {
+  const data = useSelector((state) => state.soldPropertyDetail.properties);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const getBoughtProperties = async () => {
+      debugger;
+      const response = await axios.get(
+        "http://13.233.149.97:3000/api/v1/boughtProperty/getAllBoughtProperty",
+        {
+          headers: {
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+
+      console.log(response.data);
+      dispatch(
+        recentlySoldPropertyActions.setSoldPropertyDetails({
+          data: response.data.data,
+        })
+      );
+    };
+
+    getBoughtProperties();
+  }, []);
+
   const propertyListing = data.map((itm, index) => {
     return (
       <Col
@@ -15,11 +46,11 @@ const RecentlySoldOutProperty = ({ data }) => {
         style={{
           width: "21.75rem",
         }}
+        id={itm._id}
+        key={itm._id}
       >
         <Card.Img className="w-100" variant="top" src={propertyImage} />
         <Card.Body>
-          {/* <Card.Title></Card.Title> */}
-
           <div>
             <div>
               {" "}
@@ -32,39 +63,41 @@ const RecentlySoldOutProperty = ({ data }) => {
                 }}
                 to="/builder/home-dashboard/description"
               >
-                Sky Danelions Apartment
+                {itm.propertyId === null ? "no data Name" : itm.propertyId.name}
+                {/* {itm.propertyId.companyName} */}
               </Link>
             </div>
             <div style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
-              Farmhouse in Sector 63 Gurgaon
+              {itm.propertyId === null ? "no data" : itm.propertyId.location}
             </div>
           </div>
           <Row className="p-2">
             <Col>
               <Row style={{ opacity: 0.5 }}>Unit Type</Row>
-              <Row>2BHK</Row>
+              <Row>{itm.unitType}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Unit Number</Row>
-              <Row>123456789</Row>
+              <Row>{itm.unitNumber}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Price</Row>
-              <Row>₹ 3.94 Cr</Row>
+              <Row>₹ {itm.sellingPrice}</Row>
             </Col>
           </Row>
           <Row className="p-2">
             <Col>
               <Row style={{ opacity: 0.5 }}>Client Name</Row>
-              <Row>Lorem Ipsum</Row>
+              <Row>{itm.customerId.clientName}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Broker ID</Row>
-              <Row>1234456</Row>
+              <Row>{itm.brokerId.referalCode}</Row>
+              <Row>{itm.brokerId._id}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Date</Row>
-              <Row>10/11/22</Row>
+              <Row>{itm.bookingDate}</Row>
             </Col>
           </Row>
         </Card.Body>
@@ -80,18 +113,8 @@ const RecentlySoldOutProperty = ({ data }) => {
           <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
             Recently Sold Out Property
           </h3>
-          {/* <i
-          className="col-1"
-          style={{
-            color: "#FC5C67",
-            fontFamily: "Bahnschrift",
-            textDecorationLine: "underline",
-          }}
-        >
-          View all
-        </i> */}
         </div>
-        {/* <div className="mt-4">{propertyListing}</div> */}
+
         <div className="mt-2 row justify-content-around">{propertyListing}</div>
       </Container>
       <Footer />

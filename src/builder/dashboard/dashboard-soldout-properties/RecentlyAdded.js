@@ -11,7 +11,8 @@ const RecentlyAdded = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Col
-        md={3} sm={12}
+        md={3}
+        sm={12}
         className="card mb-4 shadow-sm rounded-4 p-0 border-0 w-100"
         style={{ maxWidth: "21.5rem" }}
       >
@@ -70,7 +71,7 @@ const RecentlyAdded = ({ data }) => {
                 <img src={build} alt="build" className="build-icon" />
                 <p style={{ opacity: 0.5 }}>5BHK</p>
               </Col>
-            </Row>            
+            </Row>
 
             <Row className="align-items-center">
               <Col
@@ -97,6 +98,7 @@ const RecentlyAdded = ({ data }) => {
               >
                 50 Visits
               </Button>
+
               <Button
                 type="button"
                 variant="transparent"
@@ -127,14 +129,12 @@ const RecentlyAdded = ({ data }) => {
   return (
     <Container className="mt-5">
       <div className="row justify-content-between">
-        <h3 className="col-8 heading">
-          Recently Added
-        </h3>
+        <h3 className="col-8 heading">Recently Added</h3>
         <a
           className="col-4 text-end w-auto"
           as={Link}
           href="/builder/home-dashboard/recentlyadded"
-          style={{color: "#FC5C67"}}
+          style={{ color: "#FC5C67" }}
         >
           View all
         </a>

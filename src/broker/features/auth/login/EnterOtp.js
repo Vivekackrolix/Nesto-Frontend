@@ -1,23 +1,22 @@
-import { Form, Button } from 'react-bootstrap';
+import { useVerifyOtpMutation } from '../../../hooks/LoginQuery';
 import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
 import { RiTimerLine } from 'react-icons/ri';
 import { CustomModal } from '../../../../components';
-import { useVerifyOtpMutation } from '../../../hooks/LoginQuery';
 import NotRegisteredModal from './NotRegisteredModal';
+
 const EnterOtp = ({ show, onHide, phoneNumber }) => {
   const otpInputs = useRef([]);
-  const [otpPassword, setOtpPassword] = useState(false);
+
   const {
     verifyOtp,
+    isVerifyOtp,
+    isVerifyOtpSuccess,
+    isVerifyOtpIsError,
     verifyOtpResponse,
-    isLoading: isVerifyOtp,
-    isSuccess: isVerifyOtpSuccess,
     isVerifyOtpError,
-    error,
   } = useVerifyOtpMutation();
-
-  const navigate = useNavigate();
 
   const handleOtpInputChange = (e, index) => {
     const otpInput = e.target;
@@ -81,7 +80,7 @@ const EnterOtp = ({ show, onHide, phoneNumber }) => {
             {verifyOtpResponse?.data?.status ? (
               'hello'
             ) : (
-              <div>{verifyOtpResponse.message}</div>
+              <div>{verifyOtpResponse?.message}</div>
             )}
           </p>
           <Form onSubmit={handleSubmit}>

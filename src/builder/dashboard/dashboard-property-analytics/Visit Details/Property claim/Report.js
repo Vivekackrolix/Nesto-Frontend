@@ -6,17 +6,19 @@ const sort = [
 ];
 const Report = (props) => {
   const submitHandler = () => {
-    props.onChange((prev) => ({ ...prev, repost: false, submit: true }));
+    // props.onChange((prev) => ({ ...prev, repost: false, submit: true }));
+    props.onHide(false);
+    // props.onSubmit(true);
   };
   return (
     <>
       <Modal
         show={props.show}
         onHide={() => {
-          props.onChange(false);
+          props.onHide(false);
         }}
       >
-        <Modal.Header className="justify-content-center">
+        <Modal.Header className="justify-content-center" closeButton>
           <Modal.Title>Report Abuse</Modal.Title>
         </Modal.Header>
         <br />
@@ -44,7 +46,7 @@ const Report = (props) => {
               > */}
               <Form.Control
                 className="rounded-0 d-flex justify-content-start"
-                type="text"
+                as="textarea"
                 placeholder="Lorem Ipsum"
                 style={{
                   fontFamily: "Bahnschrift",
