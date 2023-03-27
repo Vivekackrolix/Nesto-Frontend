@@ -23,6 +23,8 @@ import Refer from './refer/Refer';
 import { useDispatch, useSelector } from 'react-redux';
 import { setBrokerID } from '../../store/authSlice';
 import { useGetBrokerById } from '../../hooks/LoginQuery';
+import ErrorMessage from '../../Common/error-message/ErrorMessage';
+import LoadingSpinner from '../../Common/loading-spinner/LoadingSpinner';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -104,14 +106,14 @@ const ProfilePage = () => {
   if (getBrokerByIdIsLoading) {
     return (
       <>
-        <span>Loading</span>
+        <LoadingSpinner />
       </>
     );
   }
   if (getBrokerByIdIsError) {
     return (
       <>
-        <span>Error</span>
+        <ErrorMessage />
       </>
     );
   }
@@ -175,7 +177,10 @@ const ProfilePage = () => {
                   </Nav>
                 </div>
                 <div className="mt-4 d-grid">
-                  <Button variant="transparent" className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout">
+                  <Button
+                    variant="transparent"
+                    className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout"
+                  >
                     <BsBoxArrowRight className="icon" size={24} /> Sign Out
                   </Button>
                 </div>
