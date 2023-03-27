@@ -89,7 +89,7 @@ const ProfilePage = () => {
             <Col
               md={5}
               lg={3}
-              className="profile__sidebar__wrapper align-self-start"
+              className="profile-sidebar profile__sidebar__wrapper align-self-start"
             >
               <aside className="d-flex flex-column h-100 justify-content-between py-4">
                 <div>
@@ -138,7 +138,7 @@ const ProfilePage = () => {
                   </Nav>
                 </div>
                 <div className="mt-4 d-grid">
-                  <Button className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout">
+                  <Button variant="transparent" className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout">
                     <BsBoxArrowRight className="icon" size={24} /> Sign Out
                   </Button>
                 </div>

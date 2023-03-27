@@ -67,10 +67,9 @@
 
 .about-us_box-span3 {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     display: block;
-    line-height: 32px;
-    width: 75%;
+    line-height: 25px;
     color: var(--silver-surfer);
 }
 

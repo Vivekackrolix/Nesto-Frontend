@@ -1,7 +1,7 @@
-.profile__sidebar__wrapper {
+.profile-sidebar.profile__sidebar__wrapper {
   background: #ecf7ff;
   border-radius: 25px;
-  box-shadow: inset 0px 0px 20px #adddff;
+  box-shadow: inset 0px 0px 20px #adddff !important;
 }
 
 .profile__sidebar__wrapper__icon {
@@ -113,7 +113,7 @@
   font-weight: 400;
   font-size: 14px;
   color: #000000;
-  padding: 10px;
+  padding: 8px;
   background: #f8f8f8;
   border: 1px solid #e9e9e9;
 }

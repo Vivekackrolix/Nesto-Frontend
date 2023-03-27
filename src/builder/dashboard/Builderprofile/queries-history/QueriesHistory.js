@@ -15,9 +15,6 @@ const QueriesHistory = () => {
       <h3>Manage Roles</h3>
       <SearchFilterBox />
       <DashboardTabs tabsKey={tabKey2} activeState={tabKey2[0]}></DashboardTabs>
-      {/* <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
-        <DashboardChildCard cardType="acceptedLoanQueries" />
-      </DashboardTabs> */}
 
       <Container className="dashboard__wrapper__filter">
         <Row>

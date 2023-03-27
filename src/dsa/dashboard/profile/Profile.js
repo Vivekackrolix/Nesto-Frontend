@@ -65,7 +65,7 @@ const ProfilePage = () => {
         <Col
           md={5}
           lg={3}
-          className="profile__sidebar__wrapper align-self-start"
+          className="profile-sidebar profile__sidebar__wrapper align-self-start"
         >
           <aside className="d-flex flex-column h-100 justify-content-between py-4">
             <div>

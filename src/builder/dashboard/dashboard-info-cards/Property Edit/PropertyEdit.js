@@ -22,6 +22,7 @@ import loc from "../../../Images/loc.png";
 import FileUpload from "../../Fileupload/Fileupload";
 import blank from "../../../Images/blank.png";
 import { RiAddFill } from "react-icons/ri";
+import { BsPencilFill } from "react-icons/bs";
 import edit from "../../../Images/edit.png";
 import SubmitPop from "./Submitpop";
 import CreatableSelect from "react-select/creatable";
@@ -70,9 +71,9 @@ const PropertyEdit = () => {
       <DashboardHeader />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
-        <h2 style={{ fontFamily: "Bahnschrift" }}>Property Edit</h2> <br></br>
+        <h3 className="heading">Property Edit</h3> <br></br>
         <br></br>
-        <h3 style={{ fontFamily: "Bahnschrift" }}> Images</h3>
+        <h3> Images</h3>
         <br></br>
         <Row className="gx-4 dashboard-cards align-items-center">
           <div
@@ -91,21 +92,8 @@ const PropertyEdit = () => {
             </div>
           </div>
         </Row>
-        {/* <input type="file" multiple accept="image/*" onChange={onImageChange} />
-      {imageURLS.map((imageSrc) => (
-        <img src={img} alt="not fount" width={"250px"} />
-      ))} */}
         <br></br>
         <br></br>
-        {/* <h4 style={{ fontFamily: "Bahnschrift" }}>Name</h4>
-        <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 "
-          style={{ background: "#F8F8F8" }}
-        >
-          <div className="p-3 d-flex justify-content-between ">
-            <h4 style={{ fontFamily: "Bahnschrift" }}>Reet</h4>
-          </div>{" "}
-        </Container> */}
         <Form.Group className="mb-3">
           <Form.Label>
             <h5>Name</h5>
@@ -119,32 +107,22 @@ const PropertyEdit = () => {
         </Form.Group>
         <br></br>
         <br></br>
-        <h4 style={{ fontFamily: "Bahnschrift" }}>Location</h4>
+        <h4>Location</h4>
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
           style={{ background: "#F8F8F8" }}
         >
           <div className="p-2 d-flex justify-content-between">
-            <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
+            <h4>Lorem Ipsum</h4>
             <img src={loc} className="rounded my-3" alt="loc" />
           </div>
         </Container>
         <br></br>
         <br></br>
-        {/* <h4 style={{ fontFamily: "Bahnschrift" }}>Property category</h4>
-        <br />
-        <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm"
-          style={{ background: "#F8F8F8" }}
-        >
-          <div className="p-3 d-flex justify-content-between">
-            <h4 style={{ fontFamily: "Bahnschrift" }}>Lorem Ipsum</h4>
-          </div>
-        </Container> */}
         <Form className="profile__form">
           <Form.Group className="mb-4" controlId="email">
             <Form.Label>
-              <h4>Property Category</h4>
+              <h3 className="heading">Property Category</h3>
             </Form.Label>
             <CreatableSelect
               size="lg"
@@ -159,7 +137,7 @@ const PropertyEdit = () => {
         </Form>
         <br></br>
         <div className="d-flex justify-content-between">
-          <h3 style={{ fontFamily: "Bahnschrift" }}> Amenities</h3>
+          <h3 className="heading"> Amenities</h3>
           <SubmitPop show={showSubmit} onHide={setShowSubmit} />
           <Button
             variant="primary"
@@ -187,33 +165,33 @@ const PropertyEdit = () => {
               <span>
                 <img src={sqft} className="rounded my-3" alt="Search" />
               </span>
-              <span style={{ fontFamily: "Bahnschrift" }}>2110 Sqft</span>
+              <span>2110 Sqft</span>
             </div>
             <div className="text-center d-flex flex-column">
               <span>
                 <img src={beds} className="rounded my-3" alt="Search" />
               </span>
-              <span style={{ fontFamily: "Bahnschrift" }}>3 Beds</span>
+              <span>3 Beds</span>
             </div>
             <div className="text-center d-flex flex-column">
               <span>
                 <img src={bath} className="rounded my-3" alt="Search" />
               </span>
 
-              <span style={{ fontFamily: "Bahnschrift" }}>1 Bath</span>
+              <span>1 Bath</span>
             </div>
             <div className="text-center d-flex flex-column">
               <span>
                 <img src={garage} className="rounded my-3" alt="Search" />
               </span>
-              <span style={{ fontFamily: "Bahnschrift" }}>1 Garages</span>
+              <span>1 Garages</span>
             </div>
           </div>
         </Container>
         <br></br>
         <br></br>
         <div className="d-flex justify-content-between">
-          <h3 style={{ fontFamily: "Bahnschrift" }}>Location Advantage</h3>
+          <h3 className="heading">Location Advantage</h3>
           <SubmitPop show={showSubmit} onHide={setShowSubmit} />
           <Button
             variant="primary"
@@ -238,7 +216,7 @@ const PropertyEdit = () => {
               <span>
                 <img src={market} className="rounded my-3" alt="Search" />
               </span>
-              <span style={{ fontFamily: "Bahnschrift" }}>
+              <span>
                 Mini Market
                 <br />
                 200m
@@ -248,7 +226,7 @@ const PropertyEdit = () => {
               <span>
                 <img src={canteen} className="rounded my-3" alt="Search" />
               </span>
-              <span style={{ fontFamily: "Bahnschrift" }}>
+              <span>
                 Canteen<br></br>200m
               </span>
             </div>
@@ -257,7 +235,7 @@ const PropertyEdit = () => {
                 <img src={hospital} className="rounded my-3" alt="Search" />
               </span>
 
-              <span style={{ fontFamily: "Bahnschrift" }}>
+              <span>
                 Hospital <br></br> 200m
               </span>
             </div>
@@ -265,7 +243,7 @@ const PropertyEdit = () => {
               <span>
                 <img src={station} className="rounded my-3" alt="Search" />
               </span>
-              <span style={{ fontFamily: "Bahnschrift" }}>
+              <span>
                 Station <br></br> 200m
               </span>
             </div>
@@ -273,18 +251,11 @@ const PropertyEdit = () => {
         </Container>
         <br></br>
         <br></br>
-        <h3 style={{ fontFamily: "Bahnschrift" }}>About the Project</h3>
+        <h3 className="heading">About the Project</h3>
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-          style={{ background: "#F8F8F8" }}
         >
-          <p
-            style={{
-              color: "#000000",
-              alignitems: "cente",
-              fontFamily: "Bahnschrift",
-            }}
-          >
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -298,50 +269,42 @@ const PropertyEdit = () => {
         </Container>
         <br></br>
         <br></br>
-        <h3 style={{ fontFamily: "Bahnschrift" }}>Payment Plan</h3>
-        {/* <div
-          className="  border-light rounded shadow-sm "
-          style={{ background: "#F8F8F8" }}
-        > */}
-        {/* <div
-            className="p-2 d-flex justify-content-around"
-            style={{ background: "#F8F8F8" }}
-          ></div> */}
+        <h3 className="heading">Payment Plan</h3>
         <Table
-          className=" table table-secondary profile__transaction table table-hover"
+          className=" table table-secondary profile__transaction table"
           style={{ background: "#F8F8F8" }}
         >
           <thead>
             <tr>
-              <th style={{ fontFamily: "Bahnschrift" }}>Payment %</th>
-              <th style={{ fontFamily: "Bahnschrift" }}>Milestone</th>
+              <th>Payment %</th>
+              <th>Milestone</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
-              <td style={{ fontFamily: "Bahnschrift" }}>
+              <td>10%</td>
+              <td>
                 Lorem Ipsum is simply dummy text of the printing and type
                 setting industry
               </td>
             </tr>
             <tr>
-              <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
-              <td style={{ fontFamily: "Bahnschrift" }}>
+              <td>10%</td>
+              <td>
                 Lorem Ipsum is simply dummy text of the printing and type
                 setting industry
               </td>
             </tr>
             <tr>
-              <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
-              <td style={{ fontFamily: "Bahnschrift" }}>
+              <td>10%</td>
+              <td>
                 Lorem Ipsum is simply dummy text of the printing and type
                 setting industry
               </td>
             </tr>
             <tr>
-              <td style={{ fontFamily: "Bahnschrift" }}>10%</td>
-              <td style={{ fontFamily: "Bahnschrift" }}>
+              <td>10%</td>
+              <td>
                 Lorem Ipsum is simply dummy text of the printing and type
                 setting industry
               </td>
@@ -352,7 +315,7 @@ const PropertyEdit = () => {
         <br></br>
         <br></br>
         <div className="p-4 d-flex justify-content-between">
-          <h3 style={{ fontFamily: "Bahnschrift" }}>Loan Approved By</h3>
+          <h3 className="heading">Loan Approved By</h3>
           <SubmitPop show={showSubmit} onHide={setShowSubmit} />
           <Button
             variant="primary"
@@ -370,7 +333,6 @@ const PropertyEdit = () => {
         </div>
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3"
-          style={{ boxShadow: "0px 6.86709px 30.0435px rgba(0, 0, 0, 0.07)" }}
         >
           <div className="p-4 d-flex justify-content-around">
             <img src={Axis} className="rounded my-3" alt="Home" />
@@ -381,18 +343,12 @@ const PropertyEdit = () => {
         </Container>
         <br></br>
         <br></br>
-        <h3 style={{ fontFamily: "Bahnschrift" }}>About the Builder</h3>
+        <h3 className="heading">About the Builder</h3>
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4 "
           style={{ background: "#F8F8F8" }}
         >
-          <p
-            style={{
-              color: "#000000",
-              alignitems: "cente",
-              fontFamily: "Bahnschrift",
-            }}
-          >
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -407,27 +363,30 @@ const PropertyEdit = () => {
         <br></br>
         <br></br>
         <div className="d-flex justify-content-between">
-          <h3 style={{ fontFamily: "Bahnschrift" }}> View official brochure</h3>
-          <img src={edit} alt="" />
+          <h3 className="heading"> View Official Brochure</h3>
+          <BsPencilFill
+                  style={{
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    color: "#fff",
+                    background: "#278fd9",
+                    padding: "8px",
+                    borderRadius: "50%",
+                    marginRight: "4px",
+                    marginBottom: "5px",
+                  }}
+                />
         </div>
         <br />
-        {/* <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm  "
-          style={{ background: "#F8F8F8" }}
-        > */}
-        <Row className="gx-4 dashboard-cards align-items-center">
-          <img src={brochure} className="rounded my-3 mx-4 " alt="Home" />
-        </Row>
-        {/* </Container> */}
+        <div className="gx-4 dashboard-cards align-items-center">
+          <img src={brochure} className="rounded my-3 w-100" alt="Home" />
+        </div>
       </Container>
-      <div className="d-grid  mt-5">
+      <div className="container text-center">
         <Button
           variant="primary"
           size="sm"
-          className="w-60 rounded-pill border-0 bg-color-primary py-4 my-3 mx-5"
-          //   onClick={onContinueHandler}
-          // size="sm"
-          // className="w-70 rounded-pill border-0 bg-color-primary py-2 my-5 mx-5 col-5 "
+          className="rounded-pill border-0 py-2 px-5 my-3"
         >
           Submit
         </Button>

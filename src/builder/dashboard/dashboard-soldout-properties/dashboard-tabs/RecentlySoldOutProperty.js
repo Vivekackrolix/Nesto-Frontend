@@ -54,13 +54,7 @@ const RecentlySoldOutProperty = (props) => {
           <div>
             <div>
               {" "}
-              <Link
-                style={{
-                  color: "black",
-                  fontWeight: "bold",
-                  fontSize: "1.4em",
-                  textDecoration: "none",
-                }}
+              <Link  className="sold-heading"
                 to="/builder/home-dashboard/description"
               >
                 {itm.propertyId === null ? "no data Name" : itm.propertyId.name}
@@ -115,7 +109,7 @@ const RecentlySoldOutProperty = (props) => {
           </h3>
         </div>
 
-        <div className="mt-2 row justify-content-around">{propertyListing}</div>
+        <div className="mt-2 row w-100 justify-content-between ms-0">{propertyListing}</div>
       </Container>
       <Footer />
     </>

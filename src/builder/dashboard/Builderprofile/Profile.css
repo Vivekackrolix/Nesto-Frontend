@@ -1,5 +1,5 @@
-.profile__sidebar__wrapper {
-  background: #ecf7ff;
+.profile-sidebar.profile__sidebar__wrapper {
+  background: #ecf7ff !important;
   border-radius: 25px;
 }
 

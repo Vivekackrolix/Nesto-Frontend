@@ -6,7 +6,7 @@ const AboutUs = () => {
     return (
         <div className='home-page-about'>
             <div className='container' style={{ overflow: 'hidden' }}>
-                <div className='row'>
+                <div className='row align-items-center'>
                     <div className='col-lg-6' data-aos='fade-right'>
                         <img className='about-us_box1-img' src='/assets/informative/device.png' />
                         <div className='about-us_box1_btn-div'>

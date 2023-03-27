@@ -4,8 +4,6 @@ import Sold from "../../../Images/sold.png";
 import visit from "../../../Images/visits.png";
 import view from "../../../Images/views.png";
 import Share from "../../../Images/share.png";
-import Two from "../../../Images/2BHK.png";
-import Three from "../../../Images/3BHK.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -37,8 +35,9 @@ const Anlytics = () => {
   return (
     <>
       <br></br>
-      <h3 style={{ fontFamily: "Bahnschrift" }}>Property Analytics</h3>
-      <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+      <br></br>
+      <h3 className="heading">Property Analytics</h3>
+      <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-2">
         {/* {plans} */}
         <div className="p-4 d-flex justify-content-around">
           <div className="text-center d-flex flex-column">
