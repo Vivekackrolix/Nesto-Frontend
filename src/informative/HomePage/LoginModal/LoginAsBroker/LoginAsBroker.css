@@ -12,22 +12,32 @@
     border-radius: 10rem;
     padding: 10px 0;
 }
-
+.login-as-broker-img {
+    width: 34px;
+}
 .login-as-broker-text {
     color: var(--silver-surfer);
     font-weight: 350;
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 10px;
 }
 
 .login-as-broker-input-div {
-    margin-top: 30px;
+    margin-top: 20px;
+    text-align: left;
 }
 
+.login-as-broker-label {
+    font-size: 16px;
+    margin-bottom: .2rem;
+    color: var(--silver-surfer);
+    font-weight: 350;
+}
 .login-as-broker-input {
     border: 2px solid #E8ECF4;
     background: #F8F8F8;
     width: 100%;
+    font-size: 16px;
     padding: 14px 4px 14px 21px;
     border-radius: 8px !important;
 }

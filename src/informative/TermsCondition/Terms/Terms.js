@@ -6,7 +6,7 @@ const Terms = () => {
         <>
             {/* First===================
             ======================== */}
-            <div data-aos='fade-left'>
+            <div data-aos='fade-up'>
                 <span className='t-c_span'>
                     I. Defined Terms:
                 </span>
@@ -52,7 +52,7 @@ const Terms = () => {
             </div>
             {/* Second===========
             ================= */}
-            <div data-aos='fade-right'>
+            <div data-aos='fade-up'>
                 <span className='t-c_span'>
                     II. Term:
                 </span>
@@ -60,7 +60,7 @@ const Terms = () => {
             </div>
             {/* Third===============
             ==================== */}
-            <div data-aos='fade-left'>
+            <div data-aos='fade-up'>
                 <span className='t-c_span'>
                     III. Services:
                 </span>
@@ -91,7 +91,7 @@ const Terms = () => {
             </div>
             {/* Fourth=================
             ======================= */}
-            <div data-aos='fade-right'>
+            <div data-aos='fade-up'>
                 <span className='t-c_span'>
                     IV. Eligibility:
                 </span>
@@ -99,7 +99,7 @@ const Terms = () => {
             </div>
             {/* Fifth=================
             ====================== */}
-            <div data-aos='fade-left'>
+            <div data-aos='fade-up'>
                 <span className='t-c_span'>
                     V. PG Listing and PG Platform:
                 </span>
@@ -132,7 +132,7 @@ const Terms = () => {
             </div>
             {/* Sixth====
             ========= */}
-            <div data-aos='fade-right'>
+            <div data-aos='fade-up'>
                 <span className='t-c_span'>
                     VI. Subscription Fees:
                 </span>
@@ -153,7 +153,7 @@ const Terms = () => {
             </div>
             {/* Seventh====
             =========== */}
-            <div data-aos='fade-left'>
+            <div data-aos='fade-up'>
                 <span className='t-c_span'>
                     VII. Payment & Refund clause:
                 </span>
@@ -182,7 +182,7 @@ const Terms = () => {
             </div>
             {/* Eighth====
             ========== */}
-            <div data-aos='fade-right'>
+            <div data-aos='fade-up'>
                 <span className='t-c_span'>
                     Owners Services:
                 </span>

@@ -70,7 +70,7 @@ const LatestPostLeft = () => {
                                         </span>
                                     </div>
                                     <div>
-                                        <Link to='/' className='left-col_link'>
+                                        <Link to='/blog-detail' className='left-col_link'>
                                             <span>Read More</span>
                                         </Link>
                                     </div>
