@@ -28,7 +28,7 @@ const Requirement = (props) => {
       description: description,
     };
     const response = await axios.post(
-      "http://13.234.136.165:3000/api/v1/builder/addShareYourIntern",
+      "http://13.233.149.97:3000/api/v1/builder/addShareYourIntern",
       formData
     );
     console.log(response);

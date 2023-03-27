@@ -52,8 +52,8 @@ const PropertyClaim = () => {
               <h5>12324443</h5>
             </span>
             <span>
-              <h5 style={{ color: "#8B9199" }}>Visit ID</h5>
-              <h5>12324443</h5>
+              <h5 style={{ color: "#8B9199" }}>Visit Date</h5>
+              <h5>20 Nov 2022</h5>
             </span>
             <span>
               <h5 style={{ color: "#8B9199" }}>Client Name</h5>

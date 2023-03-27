@@ -17,9 +17,9 @@ const setAuthToken = token => {
 };
 
 const useAuth = () => {
-  const token = useSelector(state => state.auth.token);
+  const token = useSelector(state => state.auth.token) || [];
 
-  if (token.length) {
+  if (token) {
     setAuthToken(token);
   }
 

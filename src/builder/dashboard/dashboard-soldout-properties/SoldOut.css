@@ -11,3 +11,12 @@
 .build-icon{
     width: 24px;
 }
+.prop-tag{
+    background: #EFEFEF;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+.py-1{
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+}

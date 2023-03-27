@@ -8,8 +8,9 @@ import 'swiper/css/navigation';
 
 // swiper styles
 import './SwiperSlider.css';
+import React from 'react';
 
-const SwiperMain = ({ data, slidesPerView, spaceBetween, children }) => {
+const SwiperMain = ({ swiperData, slidesPerView, spaceBetween, children }) => {
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
@@ -20,9 +21,13 @@ const SwiperMain = ({ data, slidesPerView, spaceBetween, children }) => {
       // autoplay={{ delay: 3000, disableOnInteraction: false }}
       className="mt-0 mb-5"
     >
-      {data.map(item => (
-        <SwiperSlide key={item.id}>{children}</SwiperSlide>
-      ))}
+      {swiperData
+        ? swiperData.map(swiperDataItem => (
+            <SwiperSlide key={swiperDataItem?._id}>
+              {React.cloneElement(children, { swiperDataItem: swiperDataItem })}
+            </SwiperSlide>
+          ))
+        : 'null'}
     </Swiper>
   );
 };
