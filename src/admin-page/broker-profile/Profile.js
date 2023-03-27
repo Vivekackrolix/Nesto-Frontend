@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Tab, Nav, Button, Image } from "react-bootstrap";
-import "./Profile.css";
-import PersonalDetailsForm from "./personal-details/PersonalDetailsForm";
+import {
+  FiUser,
+  FiClock,
+  FiClipboard,
+  FiBookOpen,
+  FiHelpCircle,
+  FiPlus,
+} from "react-icons/fi";
+import { RiArrowRightSLine, RiPencilFill } from "react-icons/ri";
+import { BsBoxArrowRight } from "react-icons/bs";
+
 import CardWrapper from "./card-wrapper/CardWrapper";
-// import Support from "./support/Support";
+
+import PropertyManagement from "../property/PropertyManagement";
 import PropertyManagementNew from "../property/PropertyManagementNew";
-import DashboardTabs from './../../dsa/dashboard/dashboard-tabs/DashboardTabs';
-import DashboardChildCard from './../../dsa/dashboard/dashboard-card-big/DashboardChildCard';
-import AdminDashboard from "./AdminDashboard/AdminDashboard";
+import "./Profile.css";
 
 // const tabs = [
 //   { title: "Personal Details", icon: <FiUser /> },
@@ -67,18 +75,19 @@ const tabs = [
 
 const profileSidebarNavContent = [
   {
-    element: <AdminDashboard />,
-  },
-  {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
+    title: "test",
+  },
+  {
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
@@ -86,39 +95,39 @@ const profileSidebarNavContent = [
     // title: "Property Listing",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
   {
-    element: <PersonalDetailsForm />,
+    element: <PropertyManagementNew />,
     title: "test",
   },
 ];
@@ -152,6 +161,9 @@ const ProfilePage = () => {
                         <div className="d-flex align-items-center gap-2">
                           <div className="profile__sidebar__wrapper__icon shadow bg-white d-flex justify-content-center align-items-center">
                             <img
+                              // src={`/assets/profile-page/profile-icon-${
+                              //   index + 1
+                              // }.svg`}
                               src={tab.icon}
                               alt="profile icon"
                               className="img-fluid"
@@ -186,4 +198,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage
+export default ProfilePage;
