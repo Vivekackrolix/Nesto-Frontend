@@ -17,7 +17,6 @@ import './Register.css';
 const RegisterForm = () => {
   const { phoneNumber } = useSelector(state => state.login);
   const [username, setUsername] = useState('');
-  console.log(phoneNumber);
 
   const {
     register,

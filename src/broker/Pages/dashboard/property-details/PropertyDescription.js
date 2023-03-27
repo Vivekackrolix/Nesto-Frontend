@@ -4,7 +4,10 @@ import IconsCard from './IconsCard';
 import ViewDetailsCard from './ViewDetailsCard';
 import { SwiperSlider } from '../../../components';
 import SwiperMain from '../../../components/swiper/SwiperMain';
+import CurrentlyComparing from './currently-comparing/CurrentlyComparing';
+import RatingReviewCard from '../../../components/rating-review/RatingReviewCard';
 import './PropertyDescription.css';
+
 const data = [
   {
     id: 0,
@@ -67,7 +70,10 @@ const PropertyDescription = () => {
           <ViewDetailsCard title="Loan Approved By" link="View All" img />
         </div>
         <ViewDetailsCard title="View official brochure" media />
-        <ViewDetailsCard title="Terms & Conditions" link="View Details" />
+        <ViewDetailsCard title="Terms &b Conditions" link="View Details" />
+        {/* <CustomLineChart lineChartData={ lineCharData } /> */}
+        <CurrentlyComparing />
+        <RatingReviewCard />
       </Container>
     </section>
   );

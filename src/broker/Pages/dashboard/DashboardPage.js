@@ -18,17 +18,19 @@ import '../../features/Dashboard/assets/styles/Dashboard.css';
 import ClientCards from '../../features/Dashboard/components/client-cards/ClientCard';
 import { clientsData } from '../../data/Constant';
 import ProfilePage from '../../dashboard-containers/broker-profile/Profile';
-import { setToken } from '../../store/authSlice';
+import { setToken, setBrokerID } from '../../store/authSlice';
 import { setAuthToken } from '../../services/api';
 
 const DashboardPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const token = localStorage.getItem('authToken');
-    console.log(token);
-    if (token) {
+    const brokerID = localStorage.getItem('brokerID');
+
+    if (token && brokerID) {
       dispatch(setToken(token));
       setAuthToken(token);
+      dispatch(setBrokerID(brokerID));
     }
   }, [dispatch]);
   return (
@@ -36,20 +38,16 @@ const DashboardPage = () => {
       {/* popup modal */}
       {/* <ShareModal show={show} onHide={onHide} /> */}
       {/* <ShareModal show={show} onHide={onHide} /> */}
-      {/* <BookAVisitModal show={show} onHide={onHide} /> */}
+      {/* <BookAVisitModal show={true} /> */}
       {/* <SuccessModal show={show} onHide={onHide} /> */}
       {/* <VisitAlertModal show={show} onHide={onHide} /> */}
       {/* <CustomerModal show={show} onHide={onHide} /> */}
       {/* popup modal code end here */}
 
       <div className="nes__dashboard__brok__app d-flex flex-column min-vh-100">
-        {/* Header */}
-        <Header />
-        {/* Header code end here */}
-
         {/* Main Content code start here */}
         <main className="nes__broker__dashboard">
-          <BrokerView />
+          {/* <BrokerView /> */}
           {/* <CustomerView /> */}
           {/* <PromotedProperty /> */}
 
@@ -80,10 +78,6 @@ const DashboardPage = () => {
           <ProfilePage />
         </main>
         {/* Main content code end here */}
-
-        {/* footer code start here */}
-        <Footer />
-        {/* footer code end here */}
       </div>
     </>
   );

@@ -1,15 +1,15 @@
-import { Form, Button } from "react-bootstrap";
-import DashboardTabs from "../dashboard-tabs/DashboardTabs";
+import { Form, Button } from 'react-bootstrap';
+import DashboardTabs from '../dashboard-tabs/DashboardTabs';
 // import CreatableSelect from "react-select/creatable";
-import FileUpload from "../file-upload/FileUpload";
+import FileUpload from '../file-upload/FileUpload';
 // const options = [
 //   { value: "sector 28", label: "Sector 28" },
 //   { value: "hDFC Bank", label: "HDFC Bank" },
 // ];
-const tabKey2 = ["Personal Info", "Bank Info"];
+const tabKey2 = ['Personal Info', 'Bank Info'];
 
 // personal info
-const PersonalInfo = () => {
+const PersonalInfo = ({ getBrokerByIdResponse }) => {
   return (
     <Form className="profile__form ps-2">
       <Form.Group className="mb-4" controlId="email">
@@ -17,7 +17,9 @@ const PersonalInfo = () => {
         <Form.Control
           className="rounded-0"
           type="email"
-          placeholder="jack.s@gmail.com"
+          placeholder="enter you email"
+          value={getBrokerByIdResponse.email ?? ''}
+          onChange={() => {}}
         />
       </Form.Group>
 
@@ -26,7 +28,9 @@ const PersonalInfo = () => {
         <Form.Control
           className="rounded-0"
           type="tel"
-          placeholder="4857788898"
+          placeholder="enter you phone number"
+          value={getBrokerByIdResponse.phoneNumber ?? ''}
+          onChange={() => {}}
         />
       </Form.Group>
 
@@ -35,7 +39,9 @@ const PersonalInfo = () => {
         <Form.Control
           className="rounded-0"
           type="text"
-          placeholder="Sector 13,Karnal"
+          placeholder="enter your address"
+          value={getBrokerByIdResponse.address ?? ''}
+          onChange={() => {}}
         />
       </Form.Group>
       <Form.Group className="mb-4" controlId="address">
@@ -43,7 +49,9 @@ const PersonalInfo = () => {
         <Form.Control
           className="rounded-0"
           type="text"
-          placeholder="WD3 12 3321D"
+          placeholder="pan number"
+          value={getBrokerByIdResponse.panNumber ?? ''}
+          onChange={() => {}}
         />
       </Form.Group>
 
@@ -52,7 +60,9 @@ const PersonalInfo = () => {
         <Form.Control
           className="rounded-0"
           type="text"
-          placeholder="WD3 12 3321D"
+          placeholder="rera register number"
+          value={getBrokerByIdResponse.reraRegistrationNumber ?? ''}
+          onChange={() => {}}
         />
       </Form.Group>
       <Form.Label>Upload Documents</Form.Label>
@@ -71,17 +81,18 @@ const PersonalInfo = () => {
   );
 };
 
-const BankInfo = () => {
+const BankInfo = ({ getBrokerByIdResponse }) => {
   return (
     <Form className="profile__form ps-2">
       <Form.Group className="mb-4">
         <Form.Label>Bank Name</Form.Label>
-        <Form.Select className="form-control-sm rounded-0">
-          <option>HDFC</option>
-          <option>HDFC</option>
-          <option>HDFC</option>
-          <option>HDFC</option>
-        </Form.Select>
+        <Form.Control
+          className="rounded-0"
+          type="text"
+          placeholder="Bank Name"
+          value={getBrokerByIdResponse.bankName ?? ''}
+          onChange={() => {}}
+        />
       </Form.Group>
 
       <Form.Group className="mb-4" controlId="phoneNumber">
@@ -89,7 +100,9 @@ const BankInfo = () => {
         <Form.Control
           className="rounded-0"
           type="tel"
-          placeholder="48577888980000000"
+          placeholder="account number"
+          value={getBrokerByIdResponse.accountNumber ?? ''}
+          onChange={() => {}}
         />
       </Form.Group>
       <Form.Group className="mb-4" controlId="phoneNumber">
@@ -97,7 +110,9 @@ const BankInfo = () => {
         <Form.Control
           className="rounded-0"
           type="tel"
-          placeholder="48577888980000000"
+          placeholder="confirm account number"
+          value={getBrokerByIdResponse.accountNumber ?? ''}
+          onChange={() => {}}
         />
       </Form.Group>
       <Form.Group className="mb-4" controlId="phoneNumber">
@@ -105,7 +120,9 @@ const BankInfo = () => {
         <Form.Control
           className="rounded-0"
           type="tel"
-          placeholder="HD01FC0023"
+          placeholder="IFSC CODE"
+          value={getBrokerByIdResponse.ifscCode ?? ''}
+          onChange={() => {}}
         />
       </Form.Group>
 
@@ -121,12 +138,18 @@ const BankInfo = () => {
   );
 };
 
-const PersonalDetailsForm = () => {
+const PersonalDetailsForm = ({ getBrokerByIdResponse }) => {
   return (
     <>
       <DashboardTabs tabsKey={tabKey2} activeState={tabKey2[0]}>
-        <PersonalInfo tabKey={tabKey2[0]} />
-        <BankInfo tabKey={tabKey2[1]} />
+        <PersonalInfo
+          tabKey={tabKey2[0]}
+          getBrokerByIdResponse={getBrokerByIdResponse}
+        />
+        <BankInfo
+          tabKey={tabKey2[1]}
+          getBrokerByIdResponse={getBrokerByIdResponse}
+        />
       </DashboardTabs>
     </>
   );

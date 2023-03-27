@@ -38,8 +38,8 @@ const InformativeFooter = () => {
                                         <img src='/assets/informative/ContactMail.svg' className='footer-mail-img' />
                                     </div>
                                     <div>
-                                        <Link to='/'><span className='footer-mail-span'>info@webmail.com</span></Link>
-                                        <Link to='/'><span className='footer-mail-span'>jobs@webexample.com</span></Link>
+                                        <Link to='/'><span className='footer-mail-span'>info@nestohub.com</span></Link>
+                                        <Link to='/'><span className='footer-mail-span'>jobs@nestohub.com</span></Link>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ const InformativeFooter = () => {
                 </div>
             </div>
                 <div className='informative-footer_rights'>
-                    <p className='informative-footer_rights_p'>© 2022 Nesto Hub | All Rights Reserved | Design & Develop by Bizzeonline </p>
+                    <p className='informative-footer_rights_p'>© 2023 Nesto Hub | All Rights Reserved | Design & Develop by Bizzeonline </p>
                 </div>
         </>
     )

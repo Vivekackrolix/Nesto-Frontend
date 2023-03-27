@@ -2,7 +2,6 @@ import { Container, Button, Col, Row } from "react-bootstrap";
 import { RiStarSFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import sky from "../../Images/Sky.png";
-import editbutton from "../../Images/editbutton.png";
 import build from "../../Images/build.png";
 import { BsPencilFill } from "react-icons/bs";
 import { useState } from "react";
@@ -14,18 +13,15 @@ const Danelions = ({ data }) => {
   return (
     <>
       <Container
-        className="dashboard__wrapper border border-light rounded shadow-sm mt-2"         
+        className="dashboard__wrapper border border-light rounded shadow-sm my-2"         
       >
-        <div className="d-flex ">
-          <div>
-            <img src={sky} className="rounded my-3" alt="Sky" />
-          </div>
-          <div className="p-2">
-            <h3>Sky Danelions Apartment</h3>
-            {/* {Array.from({ length: 5 }, (_, index) => (
-              <RiStarSFill color="#FFB630" />
-            ))} */}
-            <div className="star-rating">
+        <Row className="align-items-center">
+          <Col md={3} sm={12}>
+            <img src={sky} className="rounded" alt="Sky" />
+          </Col>
+          <Col md={4} sm={12}>
+          <h3 className="heading">Sky Danelions Apartment</h3>
+          <div className="star-rating">
               {[...Array(5)].map((star, index) => {
                 index += 1;
                 return (
@@ -46,7 +42,7 @@ const Danelions = ({ data }) => {
               Luxury Apartment in Sector-29,Gurugram
             </p>
 
-            <Row>
+            <Row className="mt-3">
               <Col md={3} sm={3} className="text-center">
                 <img src={build} alt="build" className="build-icon" />
                 <p style={{ opacity: 0.5 }}>2BHK</p>
@@ -64,19 +60,18 @@ const Danelions = ({ data }) => {
                 <p style={{ opacity: 0.5 }}>5BHK</p>
               </Col>
             </Row>
-          </div>
-
-          <div className="ms-auto p-2  ">
-            <h4 style={{ text: "bold", fontFamily: "Bahnschrift" }}>
+          </Col>
+          <Col md={5} sm={12} className="text-center">          
+            <h4 className="heading">
               Rs. 3.94L - 6.01Cr
             </h4>
-            <p style={{ color: "#7D7F88" }}>Book now & get 5% Discount</p>
+            <p style={{ color: "#7D7F88"}}>Book now & get 5% Discount</p>
             <br></br>
 
             <Button
               variant="transparent"
               type="button"
-              className="rounded-pill border-primary btn-lg justify-content-center px-4 mx-3 gap-3 py-1"
+              className="rounded-pill border-primary btn-lg justify-content-center px-4 gap-3 py-1"
               as={Link}
               to="/builder/home-dashboard/propertyedit"
             >
@@ -93,8 +88,8 @@ const Danelions = ({ data }) => {
                 />
               Edit
             </Button>
-          </div>
-        </div>
+          </Col>
+        </Row>        
       </Container>
     </>
   );

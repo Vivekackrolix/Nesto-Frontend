@@ -1,4 +1,4 @@
-.profile__sidebar__wrapper {
+.profile-sidebar.profile__sidebar__wrapper {
   background: #ecf7ff;
   border-radius: 25.0257px;
 }
@@ -6,7 +6,6 @@
 .profile__sidebar__wrapper__icon {
   width: 33.95px;
   height: 33.95px;
-  background: #fdfdfd;
   border: 0.424322px solid #e3e3e7;
   box-shadow: 0px 3.39458px 13.5783px rgba(69, 69, 69, 0.15) !important;
   border-radius: 8.48645px;

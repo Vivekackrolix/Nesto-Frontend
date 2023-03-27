@@ -66,6 +66,9 @@ export const useVerifyOtpMutation = () => {
         }
 
         if (userStatus === 'olduser') {
+          console.log(data);
+          localStorage.setItem('authToken', data?.token);
+          localStorage.setItem('brokerID', data?._id);
           navigate('/broker/dashboard');
           return;
         }
@@ -103,14 +106,9 @@ export const useRegisterMutation = () => {
     {
       onSuccess: data => {
         if (data?.token) {
-          console.log(data);
-          console.log(data?.phoneNumber);
-          console.log(data?.token);
           setAuthToken(data?.token);
           localStorage.setItem('authToken', data?.token);
-          // localStorage.setItem('user', JSON.stringify(data));
-          // return
-          // localStorage.setItem('user', data);
+          localStorage.setItem('brokerID', data?._id);
           navigate('/broker/dashboard');
         }
       },
@@ -174,5 +172,152 @@ export const useGetAllBanner = () => {
     getAllBannerResponse,
     getAllBannerError,
     getAllBannerIsSuccess,
+  };
+};
+
+// useBookVisit
+
+export const useAddVisitMutation = () => {
+  // const dispatch = useDispatch();
+
+  const {
+    mutate: addVisit,
+    isLoading: isAddVisitLoading,
+    isSuccess: isAddVisitSuccess,
+    isError: isAddIsError,
+    error: isAddVisitError,
+    data: isAddVisitResponse,
+  } = useMutation(payload => postAPI(apiEndpoints.addVisit, payload), {
+    onSuccess: data => {
+      console.log('test');
+      console.log(data);
+    },
+  });
+  console.log(isAddVisitResponse);
+  return {
+    addVisit,
+    isAddVisitLoading,
+    isAddVisitSuccess,
+    isAddIsError,
+    isAddVisitError,
+    isAddVisitResponse,
+  };
+};
+
+//profile page
+export const useGetBrokerById = brokerID => {
+  const {
+    isLoading: getBrokerByIdIsLoading,
+    isError: getBrokerByIdIsError,
+    data: getBrokerByIdResponse,
+    error: getBrokerByIdError,
+    isSuccess: getBrokerByIdIsSuccess,
+  } = useQuery(
+    ['getBrokerById', brokerID],
+    () => getAPI(`${apiEndpoints.getBrokerById}?id=${brokerID}`),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: true,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+      enabled: !!brokerID,
+    }
+  );
+  console.log(getBrokerByIdResponse);
+
+  return {
+    getBrokerByIdIsLoading,
+    getBrokerByIdIsError,
+    getBrokerByIdResponse,
+    getBrokerByIdError,
+    getBrokerByIdIsSuccess,
+  };
+};
+
+// get all terms and conditions
+export const useGetAllTermsAndConditionsBroker = () => {
+  const {
+    isLoading: getAllTermsAndConditionsBrokerIsLoading,
+    isError: getAllTermsAndConditionsBrokerIsError,
+    data: getAllTermsAndConditionsBrokerResponse,
+    error: getAllTermsAndConditionsBrokerError,
+    isSuccess: getAllTermsAndConditionsBrokerIsSuccess,
+  } = useQuery(
+    ['getAllTermsAndConditionsBroker'],
+    () => getAPI(apiEndpoints.getAllTermsAndConditionsBroker),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+    }
+  );
+  console.log(getAllTermsAndConditionsBrokerResponse);
+  return {
+    getAllTermsAndConditionsBrokerIsLoading,
+    getAllTermsAndConditionsBrokerIsError,
+    getAllTermsAndConditionsBrokerResponse,
+    getAllTermsAndConditionsBrokerError,
+    getAllTermsAndConditionsBrokerIsSuccess,
+  };
+};
+
+// get all faq and support
+export const useGetAllFaqAndSupport = type => {
+  const {
+    isLoading: getAllFaqAndSupportIsLoading,
+    isError: getAllFaqAndSupportIsError,
+    data: getAllFaqAndSupportResponse,
+    error: getAllFaqAndSupportError,
+    isSuccess: getAllFaqAndSupportIsSuccess,
+  } = useQuery(
+    ['getAllFaqAndSupport', type],
+    () => getAPI(`${apiEndpoints.getAllFaqAndSupport}?for=broker&type=${type}`),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+    }
+  );
+  console.log(getAllFaqAndSupportResponse);
+  return {
+    getAllFaqAndSupportIsLoading,
+    getAllFaqAndSupportIsError,
+    getAllFaqAndSupportResponse,
+    getAllFaqAndSupportError,
+    getAllFaqAndSupportIsSuccess,
+  };
+};
+
+// get all questions
+export const useGetAllCommunitySupportQuestions = () => {
+  const {
+    isLoading: getAllCommunitySupportQuestionsIsLoading,
+    isError: getAllCommunitySupportQuestionsIsError,
+    data: getAllCommunitySupportQuestionsResponse,
+    error: getAllCommunitySupportQuestionsError,
+    isSuccess: getAllCommunitySupportQuestionsIsSuccess,
+  } = useQuery(
+    ['getAllCommunitySupportQuestions'],
+    () => getAPI(apiEndpoints.getAllCommunitySupportQuestions),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+    }
+  );
+  console.log(getAllCommunitySupportQuestionsResponse);
+  return {
+    getAllCommunitySupportQuestionsIsLoading,
+    getAllCommunitySupportQuestionsIsError,
+    getAllCommunitySupportQuestionsResponse,
+    getAllCommunitySupportQuestionsError,
+    getAllCommunitySupportQuestionsIsSuccess,
   };
 };
