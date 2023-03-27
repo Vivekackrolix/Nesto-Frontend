@@ -4,36 +4,58 @@ import Sold from "../../../Images/sold.png";
 import visit from "../../../Images/visits.png";
 import view from "../../../Images/views.png";
 import Share from "../../../Images/share.png";
-import Two from "../../../Images/2BHK.png";
-import Three from "../../../Images/3BHK.png";
+// import Two from "../../../Images/2BHK.png";
+// import Three from "../../../Images/3BHK.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Anlytics = () => {
-  // const [data, setData] = useState([]); //Later use redux
-  // useEffect(() => {
-  //   const getSubscription = async () => {
-  //     const response = await axios.get(
-  //       "http://13.233.149.97:3000/api/v1/subscription/getAllSubscription",
-  //       // formData,
-  //       {
-  //         headers: {
-  //           Authorization:
-  //             // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-  //             "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-  //         },
-  //       }
-  //     );
-  //     debugger;
-  //     console.log(response.data.data);
-  //     setData(response.data.data);
-  //   };
+  const [data, setData] = useState({}); //Later use redux
+  useEffect(() => {
+    const getAnlytics = async () => {
+      const response = await axios.get(
+        "http://13.233.149.97:3000/api/v1/property/getPropertiesAnalyticsForIndividualProperty?builderId=641069056532f2569479fc9d&propertyId=640ee6a8cbe2f98daaa8813f",
+        // formData,
+        {
+          headers: {
+            Authorization:
+              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+      // debugger;
 
-  //   getSubscription();
-  // }, []);
+      // console.log(response.data);
+      setData(response.data.data);
+    };
 
-  // const plans = data.map((itm) => {
-  // console.log(itm.colour);
+    getAnlytics();
+  }, []);
+
+  const [data1, setData1] = useState([]); //Later use redux
+  useEffect(() => {
+    const getAnlyticsA = async () => {
+      const response = await axios.get(
+        "http://13.233.149.97:3000/api/v1/property/getPropertyById?id=641bf437067c659dc0be278c",
+        // formData,
+        {
+          headers: {
+            Authorization:
+              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+      // debugger;
+
+      // console.log(response.data);
+      setData1(response.data.data);
+    };
+
+    getAnlyticsA();
+  }, []);
+
   return (
     <>
       <br></br>
@@ -46,7 +68,8 @@ const Anlytics = () => {
               <img src={Sold} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>
-              2<br></br>Sold
+              {data.soldProperties}
+              <br></br>Sold
             </span>
           </div>
           <div className="text-center d-flex flex-column">
@@ -55,7 +78,8 @@ const Anlytics = () => {
             </span>
 
             <span style={{ fontFamily: "Bahnschrift" }}>
-              20<br></br>Visits
+              {data.numberOfvisit}
+              <br></br>Visits
             </span>
           </div>
           <div className="text-center d-flex flex-column">
@@ -64,7 +88,8 @@ const Anlytics = () => {
             </span>
 
             <span style={{ fontFamily: "Bahnschrift" }}>
-              200 <br></br> Search
+              {data1.length === 0 ? "Calling API" : data1[0].searchCount}
+              <br></br> Search
             </span>
           </div>
           <div className="text-center d-flex flex-column">
@@ -72,7 +97,8 @@ const Anlytics = () => {
               <img src={view} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>
-              100 <br></br> Views
+              {data1.length === 0 ? "Calling API" : data1[0].viewsCount}
+              <br></br> Views
             </span>
           </div>{" "}
           <div className="text-center d-flex flex-column">
@@ -80,7 +106,8 @@ const Anlytics = () => {
               <img src={Share} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>
-              40 <br></br> Shared
+              {data.shareCount}
+              <br></br> Shared
             </span>
           </div>
         </div>

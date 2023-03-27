@@ -61,7 +61,7 @@ const RecentlySoldOutProperty = (props) => {
                   fontSize: "1.4em",
                   textDecoration: "none",
                 }}
-                to="/builder/home-dashboard/description"
+                to={`/builder/home-dashboard/description/${itm._id}`}
               >
                 {itm.propertyId === null ? "no data Name" : itm.propertyId.name}
                 {/* {itm.propertyId.companyName} */}
@@ -94,6 +94,7 @@ const RecentlySoldOutProperty = (props) => {
               <Row style={{ opacity: 0.5 }}>Broker ID</Row>
               <Row>{itm.brokerId.referalCode}</Row>
               <Row>{itm.brokerId._id}</Row>
+              {/* <Row>{itm.brokerId}</Row> */}
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Date</Row>

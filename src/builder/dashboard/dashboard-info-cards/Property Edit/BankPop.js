@@ -1,11 +1,37 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
-const bank = [
-  { value: "AXIS", label: "AXIS " },
-  { value: "HDFC ", label: "HDFC " },
-];
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+// const bank = [
+//   { value: "AXIS", label: "AXIS " },
+//   { value: "HDFC ", label: "HDFC " },
+// ];
 const BankPop = (props) => {
+  const [data, setData] = useState({}); //Later use redux
+  useEffect(() => {
+    const Bank = async () => {
+      const response = await axios.post(
+        "http://13.233.149.97:3000/api/v1/bank/addBank",
+        // formData,
+        {
+          headers: {
+            Authorization:
+              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+      debugger;
+
+      console.log(response.data);
+      setData(response.data.data);
+    };
+
+    Bank();
+  }, []);
+
   const onSubmitHandler = () => {
     props.onHide(false);
     props.onSubmit(true);
@@ -29,9 +55,10 @@ const BankPop = (props) => {
                 <h5>Add Bank</h5>
               </Form.Label>
               <CreatableSelect
-                isMulti
+                // isMulti
                 placeholder="Add Bank"
-                options={bank}
+                // options={bank}
+                value={data.name}
                 className="rounded-0"
                 styles={{ background: "#F8F8F8" }}
               />
