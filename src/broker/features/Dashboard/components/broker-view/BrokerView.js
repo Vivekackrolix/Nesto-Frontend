@@ -1,4 +1,7 @@
-import { useGetAllPropertyQuery } from '../../../../hooks/LoginQuery';
+import {
+  useGetAllPropertyQuery,
+  useGetAllBanner,
+} from '../../../../hooks/LoginQuery';
 import { Container } from 'react-bootstrap';
 import HeroSection from '../hero-section/HeroSection';
 import SmallCardSection from '../small-card-section/SmallCardSection';
@@ -18,18 +21,19 @@ const BrokerView = () => {
     getAllPropertyError,
     getAllpropertyIsSuccess,
   } = useGetAllPropertyQuery();
-
-  if (getAllPropertyIsLoading) {
-    return <div>Loading</div>;
-  }
-
-  if (getAllPropertyIsError) {
-    return <div>somthing goes wrong</div>;
-  }
-
+  const {
+    getAllBannerIsLoading,
+    getAllBannerIsError,
+    getAllBannerResponse,
+    getAllBannerError,
+    getAllBannerIsSuccess,
+  } = useGetAllBanner();
+  console.log(getAllBannerResponse);
   return (
     <Container fluid="lg">
-      <HeroSection />
+      {getAllBannerIsLoading && 'loading Banner'}
+      {getAllBannerError && 'Something goes wrong'}
+      <HeroSection bannerData={getAllBannerResponse} details />
       <SmallCardSection />
       <section className="mt-3">
         <SearchFilter addBtn />
@@ -37,6 +41,8 @@ const BrokerView = () => {
       <section className="mt-5">
         <SwiperSliderDashboard />
       </section>
+      {getAllPropertyIsLoading && 'loading property'}
+      {getAllPropertyIsError && 'Something Goes Wrong'}
 
       {getAllPropertyResponse && (
         <ProductContainers

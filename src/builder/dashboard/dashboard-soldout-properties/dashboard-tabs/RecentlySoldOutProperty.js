@@ -88,6 +88,7 @@ const RecentlySoldOutProperty = (props) => {
               <Row style={{ opacity: 0.5 }}>Broker ID</Row>
               <Row>{itm.brokerId.referalCode}</Row>
               <Row>{itm.brokerId._id}</Row>
+              {/* <Row>{itm.brokerId}</Row> */}
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Date</Row>

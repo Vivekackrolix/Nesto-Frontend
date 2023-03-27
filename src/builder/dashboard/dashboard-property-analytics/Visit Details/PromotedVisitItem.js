@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import { Col, Row } from "react-bootstrap";
 import { RiStarSFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
@@ -13,23 +14,33 @@ const PromotedVisitItem = (props) => {
   const [hover, setHover] = useState(0);
   const [review, setReview] = useState(false);
   const [show, setShow] = useState(false);
-  // const [show, setShow] = useState({
-  //   rating: false,
-  //   submit: true,
-  // });
-  // console.log(show);
+
+  const [data, setData] = useState({}); //Later use redux
+  useEffect(() => {
+    const getPromoted = async () => {
+      const response = await axios.get(
+        "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
+
+        {
+          headers: {
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+
+      setData(response.data.data);
+    };
+
+    getPromoted();
+  }, []);
+
   const onReport = () => {
     setReport(true);
   };
   const onRating = () => {
     setReview(true);
   };
-  // const onLocationClick = () => {
-  //   setShow((prev) => ({ ...prev, rating: true }));
-  // };
-  // const onReport = () => {
-  //   setAbuse((prev) => ({ ...prev, report: true }));
-  // };
 
   return (
     <Row className={props.className}>
@@ -40,16 +51,12 @@ const PromotedVisitItem = (props) => {
       <Col as={Link} to="/builder/home-dashboard/promoted/claim">
         Bought
       </Col>
-      <Col onClick={onReport}>
-        <img src={bot} alt="" />
+      <Col>
+        <img src={bot} alt="" onClick={onReport} />
         <Report show={report} onHide={setReport} />
       </Col>
 
-      <Col onClick={onRating}>
-        {/* {Array.from({ length: 5 }, (_, index) => (
-          <RiStarSFill color="#FFB630" />
-        ))} */}
-
+      <Col>
         <div className="star-rating">
           {[...Array(5)].map((star, index) => {
             index += 1;
@@ -58,7 +65,10 @@ const PromotedVisitItem = (props) => {
                 type="button"
                 key={index}
                 className={index <= (hover || rating) ? "on" : "off"}
-                onClick={() => setRating(index)}
+                onClick={() => {
+                  setRating(index);
+                  onRating();
+                }}
                 onMouseEnter={() => setHover(index)}
                 onMouseLeave={() => setHover(rating)}
               >

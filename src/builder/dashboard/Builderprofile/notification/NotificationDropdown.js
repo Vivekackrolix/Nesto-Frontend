@@ -1,23 +1,26 @@
 import { Dropdown, Button } from "react-bootstrap";
-import { FiBell } from "react-icons/fi";
+// import { FiBell } from "react-icons/fi";
+import { BsFillBellFill } from "react-icons/bs";
 import ShadowCard from "../shadow-card/ShadowCard";
 import "./NotificationDropdown.css";
 import { Link } from "react-router-dom";
 const NotificationDropdown = ({ notification }) => {
   return (
-    <Dropdown align="end" drop="down" className="notification">
+    <Dropdown align="center" drop="down" className="notification">
       <Dropdown.Toggle
         as={Button}
         variant="link"
-        className="p-0 d-flex justify-content-center align-items-center position-relative"
+        // className="p-0 d-flex justify-content-center align-items-center position-relative"
+        className="p-1 rounded-circle  align-items-center justify-content-center"
       >
-        <FiBell size={20} />
+        <BsFillBellFill size={20} />
+        {/* <FiBell size={20} /> */}
         {notification /* <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
           99+
           <span class="visually-hidden">unread messages</span>
         </span> */ && (
           <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-            <span class="visually-hidden">New alerts</span>
+            <span class="visually-hidden">3</span>
           </span>
         )}
       </Dropdown.Toggle>

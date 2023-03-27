@@ -47,9 +47,7 @@ const App = () => {
           <Route
             exact
             path="/builder/home-dashboard/recentlyadded"
-            element={
-              <RecentlyAddedProperty data={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
-            }
+            element={<RecentlyAddedProperty />}
           />
           <Route
             exact
@@ -93,7 +91,7 @@ const App = () => {
           />
           <Route
             exact
-            path="/builder/home-dashboard/description"
+            path="/builder/home-dashboard/description/:propertyId"
             element={<SoldPage />}
           />
           <Route

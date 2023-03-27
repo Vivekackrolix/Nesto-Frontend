@@ -6,7 +6,7 @@ import build from "../../Images/build.png";
 import { BsPencilFill } from "react-icons/bs";
 import { useState } from "react";
 
-const Danelions = () => {
+const Danelions = ({ data }) => {
   const [rating, setRating] = useState(0);
   // const [over, setOver] = useState(0);
   const [hover, setHover] = useState(0);

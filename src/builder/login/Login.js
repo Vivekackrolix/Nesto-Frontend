@@ -14,7 +14,8 @@ import EnterOtp from "./EnterOtp";
 
 import "./Login.css";
 import loginImage from "../Images/Rectangle-34624401.png";
-import Header from "../header/Header";
+// import Header from "../header/Header";
+import Header from "../../broker/features/Dashboard/components/header/Header";
 import builder from "../Images/builder.png";
 import loan from "../Images/loan.png";
 import axios from "axios";
@@ -70,6 +71,7 @@ const Login = () => {
         />
       )}
       {register && <NotRegister show={true} />}
+      {/* <Header /> */}
       <Header />
 
       <Container className="container-md my-5">
