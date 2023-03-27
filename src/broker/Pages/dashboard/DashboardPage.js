@@ -45,9 +45,10 @@ const DashboardPage = () => {
       {/* popup modal code end here */}
 
       <div className="nes__dashboard__brok__app d-flex flex-column min-vh-100">
+        <Header />
         {/* Main Content code start here */}
         <main className="nes__broker__dashboard">
-          {/* <BrokerView /> */}
+          <BrokerView />
           {/* <CustomerView /> */}
           {/* <PromotedProperty /> */}
 
@@ -75,9 +76,10 @@ const DashboardPage = () => {
           {/* <PropertyDetails /> */}
 
           {/* Profile page */}
-          <ProfilePage />
+          {/* <ProfilePage /> */}
         </main>
         {/* Main content code end here */}
+        <Footer />
       </div>
     </>
   );
