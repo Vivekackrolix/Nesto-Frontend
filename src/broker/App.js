@@ -22,7 +22,7 @@ const App = () => {
       <PersistGate loading={null} persistor={persistor}>
         <QueryClientProvider client={queryClient}>
           <BrowserRouter>
-            <Header />
+            {/* <Header /> */}
             <Routes>
               <Route path="/broker/login" element={<Login />} />
               <Route path="/broker/register" element={<Register />} />
@@ -32,7 +32,7 @@ const App = () => {
                 element={<PropertyDescription />}
               />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
           </BrowserRouter>
         </QueryClientProvider>
       </PersistGate>
