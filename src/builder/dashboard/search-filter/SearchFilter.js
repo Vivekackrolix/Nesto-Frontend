@@ -39,7 +39,8 @@ const SearchFilterBox = () => {
             />
           </InputGroup>
         </div>
-        <div className="px-3 my-1 voice-location-icons">
+
+        <div className="px-3 py-2 voice-location-icons order-last d-flex align-items-center">
           <BsGeoAlt className="rounded-circle me-2 p-2" size={16} />
           <BsMic className="rounded-circle me-2 p-2" size={16} />
           <Button variant="primary" className="ms-2 bg-color-primary">
@@ -61,14 +62,7 @@ const SearchFilterBox = () => {
             <Dropdown.Item href="#/action-1">Raise Dispute</Dropdown.Item>
             <hr />
             <Dropdown.Item href="#/action-2">Request Property</Dropdown.Item>
-            {/* <Dropdown.Item href="#/action-3">Something else</Dropdown.Item> */}
           </Dropdown.Menu>
-          {/* <Button
-          className="rounded-circle p-2"
-          style={{ boxShadow: "0px 6px 26px rgba(0, 0, 0, 0.25)" }}
-        > */}
-          {/* <RiAddFill size={30} /> */}
-          {/* </Button> */}
         </Dropdown>
       </div>
       <div>

@@ -26,6 +26,7 @@ const Payment = (props) => {
       // transactionDate: transactionDate,
       // transactionId: transactionDate,
       // transactionAmount: transactionAmount,
+
       bankName,
       accountNumber,
       ifscCode,

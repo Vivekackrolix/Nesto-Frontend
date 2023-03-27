@@ -46,17 +46,25 @@ const Header = () => {
               <img src="/assets/eye.png" alt="eye" className="eye" />
             </Nav.Item>
             <Nav.Item className="me-2 p-2">
-              <img src="/assets/subscription.png" alt="subscription" className="subscription" />
+              <img
+                src="/assets/subscription.png"
+                alt="subscription"
+                className="subscription"
+              />
             </Nav.Item>
             <Nav.Item className="me-2">
-              <img src="/assets/notification.png" alt="notification" className="notification" />
+              <img
+                src="/assets/notification.png"
+                alt="notification"
+                className="notification"
+              />
             </Nav.Item>
             <Nav.Item
               className="me-3 mx-1 my-2"
               // as={Link}
               // to="/builder/home-dashboard/profile"
             >
-              <img src={profile} alt="profile" className="br-profile"/>
+              <img src={profile} alt="profile" className="br-profile" />
             </Nav.Item>
           </div>
         </Nav>

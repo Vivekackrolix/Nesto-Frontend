@@ -17,6 +17,10 @@ const DashboardTabs = ({ children, tabsKey, activeState }) => {
             <div className="bg-white p-3">{children}</div>
           </Tab>
         ))}
+      {/* {tabsKey &&
+        tabsKey.map((itm, index) => (
+          <Tab eventKey={itm} title={itm} key={index}></Tab>
+        ))} */}
     </Tabs>
   );
 };

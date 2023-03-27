@@ -20,6 +20,7 @@ const PropertyAnalytics = () => {
         }
       );
       debugger;
+
       console.log(response.data);
       setData(response.data.data);
     };

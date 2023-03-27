@@ -1,15 +1,36 @@
 import { Button, Container, Form, Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
-const sort = [
-  { value: "Lorem Ipsum", label: "Lorem Ipsum" },
-  { value: "Lorem ipsum", label: "Lorem Ipsum" },
-];
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+// const reason = [
+//   { value: {data.reason}, label: {data.reason} },
+
+// ];
 const Report = (props) => {
-  const submitHandler = () => {
-    // props.onChange((prev) => ({ ...prev, repost: false, submit: true }));
-    props.onHide(false);
-    // props.onSubmit(true);
+  const [reason, setReason] = useState({});
+  const [comments, setComments] = useState({});
+
+  const submitHandler = async () => {
+    const formData = {
+      reason: {},
+      comments: {},
+    };
+    console.log(formData);
+    debugger;
+    const response = await axios.post(
+      "http://13.233.149.97:3000/api/v1/raiseDispute/addRaiseDispute",
+      formData,
+      {
+        headers: {
+          Authorization:
+            "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNjkwNTY1MzJmMjU2OTQ3OWZjOWQiLCJpYXQiOjE2Nzg3OTc1ODMsImV4cCI6MTY4NjU3MzU4M30.8QjZtAmk342PMxa0CvGdqfp36BWk6lJ4QFyN6f1MO_A",
+        },
+      }
+    );
+    console.log(response.data);
   };
+
   return (
     <>
       <Modal
@@ -32,7 +53,12 @@ const Report = (props) => {
               <CreatableSelect
                 isMulti
                 placeholder="Choose"
-                options={sort}
+                // options={reason}
+                value={reason}
+                onChange={(e) => {
+                  console.log(e.target.value);
+                  setReason(e.target.value);
+                }}
                 className="rounded-0"
                 styles={{ background: "#F8F8F8" }}
               />
@@ -40,29 +66,21 @@ const Report = (props) => {
               <Form.Label>
                 <h5>Any Comment</h5>
               </Form.Label>
-              {/* <Container
-                className="dashboard__wrapper__filter border border-light rounded shadow-sm"
-                style={{ background: "#F8F8F8" }}
-              > */}
+
               <Form.Control
                 className="rounded-0 d-flex justify-content-start"
                 as="textarea"
                 placeholder="Lorem Ipsum"
+                value={comments}
+                onChange={(e) => {
+                  console.log(e.target.value);
+                  setComments(e.target.value);
+                }}
                 style={{
                   fontFamily: "Bahnschrift",
                   height: "241px",
                 }}
               />
-              {/* <div
-                  className="p-2 d-flex justify-content-between "
-                  style={{
-                    fontFamily: "Bahnschrift",
-
-                    height: "341px",
-                  }}
-                ></div> */}
-              {/* </Container> */}
-              <br />
             </Form.Group>
           </Form>
         </Container>
@@ -80,4 +98,5 @@ const Report = (props) => {
     </>
   );
 };
+
 export default Report;

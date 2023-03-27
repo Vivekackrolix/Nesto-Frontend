@@ -2,10 +2,35 @@ import { Container, Button, Row, Col } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import { Link } from "react-router-dom";
 import Footer from "../../Footer/Footer";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 import VisitDetailItem from "./VisitDetailItem";
 import Header from "../../../header/Header";
+import DashboardTabs from "../../Builderprofile/dashboard-tabs/DashboardTabs";
 const VisitDetails = () => {
+  const [data, setData] = useState({}); //Later use redux
+  useEffect(() => {
+    const getVisit = async () => {
+      const response = await axios.get(
+        "http://13.233.149.97:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
+
+        {
+          headers: {
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+      debugger;
+
+      console.log(response.data);
+      setData(response.data.data);
+    };
+
+    getVisit();
+  }, []);
+  // const tabKey2 = ["All Visits", "Promoted Visits"];
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   const tabelData = arr.map((itm) => (
     <VisitDetailItem className={"mb-3 py-3 border rounded"} />
@@ -15,6 +40,10 @@ const VisitDetails = () => {
       <Header />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
+        {/* <DashboardTabs
+          tabsKey={tabKey2}
+          activeState={tabKey2[0]}
+        ></DashboardTabs> */}
         <h1> Visit Details</h1>
         <div
           className="w-100 btn-group rounded-pill col-2  justify-content-center  py-2 mx-3 row"
@@ -48,7 +77,7 @@ const VisitDetails = () => {
                   fontSize: "1.4em",
                 }}
               >
-                10
+                {data.pendingVisit}
               </span>
               <span style={{ opacity: 0.5 }}>Pending</span>
             </div>
@@ -60,7 +89,7 @@ const VisitDetails = () => {
                   fontSize: "1.4em",
                 }}
               >
-                5
+                {data.completedVisit}
               </span>
               <span style={{ opacity: 0.5 }}>Completed</span>
             </div>
@@ -72,7 +101,7 @@ const VisitDetails = () => {
                   fontSize: "1.4em",
                 }}
               >
-                6
+                {data.followUpVisit}
               </span>
               <span style={{ opacity: 0.5 }}>Follow Up</span>
             </div>
@@ -84,7 +113,7 @@ const VisitDetails = () => {
                   fontSize: "1.4em",
                 }}
               >
-                3
+                {data.negotiationVisit}
               </span>
               <span style={{ opacity: 0.5 }}>Negotiation</span>
             </div>
@@ -96,7 +125,7 @@ const VisitDetails = () => {
                   fontSize: "1.4em",
                 }}
               >
-                1
+                {data.boughtVisit}
               </span>
               <span style={{ opacity: 0.5 }}>Brought</span>
             </div>

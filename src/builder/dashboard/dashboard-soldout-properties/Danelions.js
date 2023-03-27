@@ -7,7 +7,7 @@ import editbutton from "../../Images/editbutton.png";
 import build from "../../Images/build.png";
 import { useState } from "react";
 
-const Danelions = () => {
+const Danelions = ({ data }) => {
   const [rating, setRating] = useState(0);
   // const [over, setOver] = useState(0);
   const [hover, setHover] = useState(0);

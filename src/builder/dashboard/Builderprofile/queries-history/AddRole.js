@@ -23,7 +23,7 @@ const AddRole = (props) => {
   const [mail, setMail] = useState("");
   const [number, setNumber] = useState("");
   const [property, setProperty] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const submitHandler = async () => {
     const formData = {
@@ -34,8 +34,8 @@ const AddRole = (props) => {
       selectProperties: [],
     };
     console.log(formData);
-    const response = await axios.post(
-      "http://13.233.149.97:3000/api/v1/roles/addRoles",
+    const response = await axios.put(
+      "http://13.233.149.97:3000/api/v1/roles/updateRoles",
 
       formData,
       {
@@ -47,17 +47,18 @@ const AddRole = (props) => {
     );
     console.log(response);
     // props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
-    navigate("/builder/home-dashboard/profile");
+    // navigate("/builder/home-dashboard/profile");
   };
+
   return (
     <>
       <Modal
         show={props.show}
         onHide={() => {
-          props.onChange(false);
+          props.onHide(false);
         }}
       >
-        <Modal.Header className="justify-content-center">
+        <Modal.Header className="justify-content-center" closeButton>
           <Modal.Title>Add Role</Modal.Title>
         </Modal.Header>
         <br />
@@ -142,9 +143,6 @@ const AddRole = (props) => {
             variant="primary"
             className="w-50 rounded-pill bg-color-primary"
             onClick={submitHandler}
-            // onClick={(submitHandler) => {
-            //   navigate("/builder/home-dashboard/profile");
-            // }}
           >
             Add
           </Button>
