@@ -20,13 +20,7 @@ const SoldOut = ({ data }) => {
           <div className="pb-2">
             <div>
               {" "}
-              <Link
-                style={{
-                  color: "black",
-                  fontWeight: "bold",
-                  fontSize: "1.4em",
-                  textDecoration: "none",
-                }}
+              <Link className="sold-heading"
                 to="/builder/home-dashboard/description"
               >
                 Sky Danelions Apartment
@@ -84,7 +78,7 @@ const SoldOut = ({ data }) => {
         </a>
       </div>
       {/* <div className="mt-4">{propertyListing}</div> */}
-      <div className="mt-2 row justify-content-around">{propertyListing}</div>
+      <div className="mt-2 row w-100 justify-content-between ms-0">{propertyListing}</div>
     </Container>
   );
 };

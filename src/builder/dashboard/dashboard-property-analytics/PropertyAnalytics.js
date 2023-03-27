@@ -20,6 +20,7 @@ const PropertyAnalytics = () => {
         }
       );
       debugger;
+
       console.log(response.data);
       setData(response.data.data);
     };
@@ -38,7 +39,6 @@ const PropertyAnalytics = () => {
             <span
               style={{
                 color: "#278FD9",
-
                 fontWeight: "bold",
                 fontSize: "1.4em",
               }}

@@ -30,14 +30,6 @@
     background-color: #ECF7FF;
 }
 
-/* .text-bold {
-    color: #000000;
-    font-weight: 700;
-    line-height: 2.4px;
-    font-size: 44.26px;
-    margin-top: 15px;
-} */
-
 .text-grey {
     color: #282431;
     font-weight: 400;
@@ -49,16 +41,13 @@
 }
 
 .desc {
-
     font-style: normal;
-    font-weight: 350;
-    font-size: 17.75px;
+    font-weight: 400;
+    font-size: 15px;
     line-height: 31px;
     /* or 176% */
     text-align: left;
-
     color: #282431;
-
     opacity: 0.5;
 }
 
@@ -87,11 +76,6 @@
     transition: all .3s ease-in-out;
 }
 
-/* .test-card:hover {
-    background-color: #1d1c1c !important;
-    transform: scale(1.1);
-} */
-
 .test-card:hover {
     transform: translateX(1rem) !important;
     transition-duration: 300ms !important;
@@ -100,11 +84,11 @@
 
 .testimonial-desc {
     font-weight: 300;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 15px;
+    line-height: 25px;
     color: var(--gray-color);
     padding-right: 10px;
-    /* text-align: justify; */
+    text-align: justify;
 }
 
 .test-name {

@@ -34,9 +34,9 @@ export default function News() {
               return (
                 <div className="col-lg-4 col-md-6 text-left">
                   <div className="news-box">
-                    <div>
+                    <Link to="/blog-list">
                       <img src={item.img} className="news-image" />
-                    </div>
+                    </Link>
                     <div className="news-box-2">
                       <div className="news-date">
                         <span>
@@ -45,7 +45,7 @@ export default function News() {
                         <span className="news-date-span"> {item.date}</span>
                       </div>
                       <div className="">
-                        <h2 className="news-heading">{item.heading}</h2>
+                        <Link to="/blog-list" className="news-heading">{item.heading}</Link>
                       </div>
                       <div>
                         <p className="news-desc">{item.desc}</p>

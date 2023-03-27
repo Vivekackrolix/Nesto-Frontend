@@ -78,60 +78,6 @@ const PersonalDetailsForm = () => {
             />
           </Form.Group>
         </Col>
-        {/* <Form.Group className="mb-4" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            className="rounded-0"
-            type="email"
-            placeholder="jack.s@gmail.com"
-            value={builderData.email}
-          />
-        </Form.Group> */}
-
-        {/* <Form.Group className="mb-4" controlId="phoneNumber">
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control
-            className="rounded-0"
-            type="tel"
-            placeholder="4857788898"
-            value={builderData.phoneNumber}
-          />
-        </Form.Group> */}
-{/* 
-        <Form.Group className="mb-4" controlId="address">
-          <Form.Label>Address</Form.Label>
-          <Form.Control
-            className="rounded-0"
-            type="text"
-            placeholder="Sector 13,Karnal"
-          />
-        </Form.Group>
-        <Form.Group className="mb-4" controlId="address">
-          <Form.Label>Company Type</Form.Label>
-          <Form.Control
-            className="rounded-0"
-            type="text"
-            placeholder="WD3 12 3321D"
-          />
-        </Form.Group>
-        <Form.Group className="mb-4" controlId="address">
-          <Form.Label>GST</Form.Label>
-          <Form.Control
-            className="rounded-0"
-            type="text"
-            placeholder="WD3 12 3321D"
-            value={builderData.gst}
-          />
-        </Form.Group>
-        <Form.Group className="mb-4" controlId="address">
-          <Form.Label>PAN of the Company</Form.Label>
-          <Form.Control
-            className="rounded-0"
-            type="text"
-            placeholder="WD3 12 3321D"
-          />
-        </Form.Group>
-        <Form.Label>Upload Documents</Form.Label> */}
 
         <Col md={6} sm={12}>
           <Form.Group className="mb-3" controlId="address">
@@ -161,10 +107,10 @@ const PersonalDetailsForm = () => {
         </Col>
 
         <div className="d-flex gap-4 mt-2">
-          <Button className="btn-color-outline-primary rounded-100 btn-rounded">
+          <Button variant="transparent" className="btn-color-outline-primary rounded-100 btn-rounded">
             Cancel
           </Button>
-          <Button className="btn-color-primary rounded-100 btn-rounded">
+          <Button variant="primary" className="btn-color-primary rounded-100 btn-rounded">
             Save
           </Button>
         </div>

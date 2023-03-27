@@ -14,14 +14,14 @@
   color: black;
   font-size: 13px;
 }
-.heading {
+/* .heading {
   color: #bababa !important;
   font-size: 10x;
   font-weight: 400 !important;
   text-transform: uppercase;
   font-weight: 100 !important;
-}
-.admin-sidebar :hover {
+} */
+.admin-sidebar:hover {
   background-color: #f9fafc;
 }
 
@@ -203,11 +203,5 @@
   background-color: #edf2f6;
   border: none;
   font-size: 12px;
-  border-radius: 5px;
-}
-.add-property-btn {
-  background-color: #278fd9;
-  color: white;
-  padding: 5px 50px;
   border-radius: 5px;
 }

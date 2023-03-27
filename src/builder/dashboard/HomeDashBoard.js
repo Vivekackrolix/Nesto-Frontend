@@ -3,6 +3,7 @@ import ContentCard from './dashboard-info-cards/DashboardInfoCards';
 import DashboardHeader from './header/DashboardHeader';
 import { Outlet, useLocation } from 'react-router-dom';
 import SearchFilterBox from './search-filter/SearchFilter';
+// import SearchFilterBox from "../../components/search-filter/SearchFilter";
 import PropertyAnalytics from './dashboard-property-analytics/PropertyAnalytics';
 import SoldOut from './dashboard-soldout-properties/SoldOut';
 import homeImage from '../Images/summer.png';
@@ -49,6 +50,7 @@ const HomeDashBoard = () => {
         </Row>
 
         <SearchFilterBox />
+        {/* <SearchFilterBox addBtn /> */}
         <PropertyAnalytics />
         <SoldOut data={[1, 2, 3, 4, 5, 6]} />
         <RecentlyAdded data={[1, 2, 3, 4, 5, 6]} />

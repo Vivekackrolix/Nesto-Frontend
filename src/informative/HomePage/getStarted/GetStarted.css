@@ -15,11 +15,12 @@
 }
 
 .get-started_heading {
-    font-weight: 700;
-    font-size: 38px;
+    font-weight: 900;
+    font-size: 40px;
     line-height: 50px;
     display: block;
-    width: 90%;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 3px #bbbbbb;
 }
 
 .get-started_btn {

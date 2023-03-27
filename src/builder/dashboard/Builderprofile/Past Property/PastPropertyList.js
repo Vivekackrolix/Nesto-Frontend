@@ -134,7 +134,7 @@ const PastPropertyList = (props) => {
 
   useEffect(() => {
     const getBoughtProperties = async () => {
-      debugger;
+      // debugger;
       const response = await axios.get(
         "http://13.233.149.97:3000/api/v1/boughtProperty/getAllBoughtProperty",
         {

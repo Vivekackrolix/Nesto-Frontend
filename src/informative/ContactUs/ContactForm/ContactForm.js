@@ -67,7 +67,7 @@ const ContactForm = () => {
                                     Save my name, email, and website in this browser for the next time I comment.
                                 </label>
                             </div>
-                            <div className='mt-5'>
+                            <div className='mt-3'>
                                 <button type='submit' className='contact-form_button'>Send</button>
                             </div>
                         </div>
