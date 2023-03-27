@@ -1,28 +1,28 @@
-import { Col, Container, Row } from "react-bootstrap";
-import ContentCard from "./dashboard-info-cards/DashboardInfoCards";
-import DashboardHeader from "./header/DashboardHeader";
-import { Outlet, useLocation } from "react-router-dom";
-import SearchFilterBox from "./search-filter/SearchFilter";
-import PropertyAnalytics from "./dashboard-property-analytics/PropertyAnalytics";
-import SoldOut from "./dashboard-soldout-properties/SoldOut";
-import homeImage from "../Images/summer.png";
-import PropertyInvoice from "./dashboard-property-analytics/PendindInvoice";
-import RecentPackage from "./dashboard-property-analytics/RecentPackage";
-import RecentlyAdded from "./dashboard-soldout-properties/RecentlyAdded";
+import { Col, Container, Row } from 'react-bootstrap';
+import ContentCard from './dashboard-info-cards/DashboardInfoCards';
+import DashboardHeader from './header/DashboardHeader';
+import { Outlet, useLocation } from 'react-router-dom';
+import SearchFilterBox from './search-filter/SearchFilter';
+import PropertyAnalytics from './dashboard-property-analytics/PropertyAnalytics';
+import SoldOut from './dashboard-soldout-properties/SoldOut';
+import homeImage from '../Images/summer.png';
+import PropertyInvoice from './dashboard-property-analytics/PendindInvoice';
+import RecentPackage from './dashboard-property-analytics/RecentPackage';
+import RecentlyAdded from './dashboard-soldout-properties/RecentlyAdded';
 // import Header from "../header/Header";
-import Footer from "./Footer/Footer";
-import { useEffect } from "react";
-import { getBuilderDetail } from "../redux/https-requests/builderDetail-http";
-import { useDispatch, useSelector } from "react-redux";
+import Footer from './Footer/Footer';
+import { useEffect } from 'react';
+import { getBuilderDetail } from '../redux/https-requests/builderDetail-http';
+import { useDispatch, useSelector } from 'react-redux';
 // import RecentlyAddedProperty from "./dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
-import Charts from "./property/Charts";
+import Charts from './property/Charts';
 
 const dashboardInfoCardsData = [];
 
 const HomeDashBoard = () => {
   const location = useLocation();
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.builderDetail.details);
+  const data = useSelector(state => state.builderDetail.details);
   console.log(data);
   useEffect(() => {
     dispatch(getBuilderDetail());

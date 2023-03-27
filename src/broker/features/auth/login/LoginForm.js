@@ -27,7 +27,7 @@ const LoginForm = () => {
 
   // const navigate = useNavigate();
   const [showErrorMessage, setShowErrorMessage] = useState(false);
-  console.log(`sendotp response =>  ${sendOtpResponse}`);
+
   const handleInputChange = event => {
     const inputText = event.target.value;
     const emailPhoneRegex =
@@ -136,7 +136,8 @@ const LoginForm = () => {
                           role="status"
                           aria-hidden="true"
                         ></span>
-                        Loading...
+                        {'  '}
+                        Sending OTP...
                       </span>
                     </>
                   ) : (

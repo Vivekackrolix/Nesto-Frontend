@@ -12,6 +12,7 @@ import Register from './Pages/Register';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import PropertyDescription from './Pages/dashboard/property-details/PropertyDescription';
 import { setAuthToken } from './services/api';
+import { Footer, Header } from './features';
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => {
       <PersistGate loading={null} persistor={persistor}>
         <QueryClientProvider client={queryClient}>
           <BrowserRouter>
+            <Header />
             <Routes>
               <Route path="/broker/login" element={<Login />} />
               <Route path="/broker/register" element={<Register />} />
@@ -30,6 +32,7 @@ const App = () => {
                 element={<PropertyDescription />}
               />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </QueryClientProvider>
       </PersistGate>
