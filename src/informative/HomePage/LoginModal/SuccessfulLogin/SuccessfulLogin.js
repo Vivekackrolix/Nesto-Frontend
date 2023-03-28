@@ -10,6 +10,7 @@ const SuccessfulLogin = ({ show, onHide }) => {
         <img
           src="./assets/informative/success.png"
           className="successful-login-img"
+          alt='success'
         />
         <div>
           <span className="successful-login-heading">Successful</span>

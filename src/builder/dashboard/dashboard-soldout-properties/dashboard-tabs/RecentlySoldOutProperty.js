@@ -41,7 +41,7 @@ const RecentlySoldOutProperty = (props) => {
   const propertyListing = data.map((itm, index) => {
     return (
       <Col
-        md={3}
+        md={3} sm={12}
         className="card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0"
         style={{
           width: "21.75rem",
@@ -104,11 +104,11 @@ const RecentlySoldOutProperty = (props) => {
       <DashboardHeader />
       <Container className="mt-5">
         <SearchFilterBox />
-        <div className="row justify-content-between">
-          <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
-            Recently Sold Out Property
-          </h3>
-        </div>
+        <Row className="justify-content-between">
+          <Col md={12}>
+            <h3 className="heading">Recently Sold Out Property</h3>
+          </Col>
+        </Row>
 
         <div className="mt-2 row w-100 justify-content-between ms-0">{propertyListing}</div>
       </Container>

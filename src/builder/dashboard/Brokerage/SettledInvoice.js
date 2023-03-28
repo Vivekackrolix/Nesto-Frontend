@@ -9,7 +9,7 @@ const SettledInvoice = ({ data }) => {
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3">
         <div className="d-flex ">
           {/* <div className="d-flex flex-grow-1"> */}
-          <img src={brocker} alt="" />
+          <img src={brocker} alt="broker" />
           {/* <div className="p-2 rounded"></div> */}{' '}
           <div className="d-flex flex-column ">
             <div className="d-flex  justify-content-between">

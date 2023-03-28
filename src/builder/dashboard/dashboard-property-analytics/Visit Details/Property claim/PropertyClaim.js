@@ -40,7 +40,7 @@ const PropertyClaim = () => {
               <h3>Sky Dandelions Flat</h3>
             </div>
             <h6 className="d-flex justify-content-end">
-              <img src={claim} alt="" />
+              <img src={claim} alt="claim" />
             </h6>
           </div>
 

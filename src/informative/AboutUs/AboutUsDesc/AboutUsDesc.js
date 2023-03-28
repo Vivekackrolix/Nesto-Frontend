@@ -7,13 +7,13 @@ const AboutUsDesc = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-lg-6' data-aos='fade-right'>
-                        <img className='about-us_box1-img' src='/assets/informative/device.png' />
+                        <img className='about-us_box1-img' src='/assets/informative/device.png' alt='about' />
                         <div className='about-us_box1_btn-div'>
                             <div className='d-flex gap-4'>
                                 <div>
                                     <Link to='/' className='about-us_box1_btn d-flex align-items-center'>
                                         <div>
-                                            <img src='/assets/google-play.png' className='second-card__icon' />
+                                            <img src='/assets/google-play.png' className='second-card__icon' alt='google-play' />
                                         </div>
                                         <div className='d-flex flex-column'>
                                             <span className='about-us_box1_icon-span-1'>GET IT ON</span>
@@ -24,7 +24,7 @@ const AboutUsDesc = () => {
                                 <div>
                                     <Link to='/' className='about-us_box1_btn d-flex align-items-center'>
                                         <div>
-                                            <img src='/assets/apple.png' className='second-card__icon' />
+                                            <img src='/assets/apple.png' className='second-card__icon' alt='apple' />
                                         </div>
                                         <div className='d-flex flex-column'>
                                             <span className='about-us_box1_icon-span-1'>Download on the</span>
@@ -33,7 +33,7 @@ const AboutUsDesc = () => {
                                     </Link>
                                 </div>
                                 <div className='text-center'>
-                                    <img src='/assets/informative/scan.png' />
+                                    <img src='/assets/informative/scan.png' alt='scan' />
                                     <span className='about-us_box1_icon-span-3'>Scan Me</span>
                                 </div>
                             </div>

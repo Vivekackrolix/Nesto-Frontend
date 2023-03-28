@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomModal from '../../../../components/common/CustomModal'
 import './LoginAsBroker.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const LoginAsBroker = ({ show, onHide }) => {
     return (
@@ -10,7 +10,7 @@ const LoginAsBroker = ({ show, onHide }) => {
                 <div className="login-as-broker-div">
                     <div>
                         <span>
-                            <img src="./assets/informative/profile.png" className='login-as-broker-img' />
+                            <img src="./assets/informative/profile.png" alt='profile' className='login-as-broker-img' />
                         </span>
                     </div>
                     <div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './ReviewCard.css'
 import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const ReviewCard = () => {
     const [showMore, setShowMore] = useState(false)
@@ -66,7 +66,7 @@ const ReviewCard = () => {
                             <div className='d-flex shadow-sm p-0 rounded-3'>
                                 <div className='col-lg-6 reviews_slider-col'>
                                     <div className='reviews_slider-box1'>
-                                        <img src='/assets/informative/userRating1.png' className='reviews_slider-userImg' />
+                                        <img src='/assets/informative/userRating1.png' alt='rating' className='reviews_slider-userImg' />
                                     </div>
                                     <div className='reviews_slider-box2'>
                                         <span className='reviews_slider-span1'>{item.review}</span>

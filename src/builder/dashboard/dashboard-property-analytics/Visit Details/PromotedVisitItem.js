@@ -3,7 +3,8 @@ import axios from "axios";
 import { Col, Row } from "react-bootstrap";
 import { RiStarSFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import bot from "../../../Images/bot.png";
+import { FaHeadset } from "react-icons/fa";
+// import bot from "../../../Images/bot.png";
 import Rating from "./Property claim/Rating";
 import Report from "./Property claim/Report";
 
@@ -52,7 +53,7 @@ const PromotedVisitItem = (props) => {
         Bought
       </Col>
       <Col>
-        <img src={bot} alt="" onClick={onReport} />
+        <FaHeadset size="20" className="cursor"  onClick={onReport}  />
         <Report show={report} onHide={setReport} />
       </Col>
 

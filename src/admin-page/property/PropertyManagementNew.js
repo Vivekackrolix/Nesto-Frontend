@@ -103,7 +103,7 @@ const PropertyManagementNew = () => {
                 <div className="d-flex gap-2  justify-content-center align-items-center">
                   <input type="checkbox" name="" id="" />
                   <span>
-                    # <img src="/assets/column-sorting.png" alt="" />
+                     <img src="/assets/column-sorting.png" alt="prop-sort" />
                   </span>
                 </div>
               </th>

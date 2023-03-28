@@ -125,12 +125,11 @@ const RecentlyAdded = ({ data }) => {
       <div className="row justify-content-between">
         <h3 className="col-8 heading">Recently Added</h3>
         <a
-          className="col-4 text-end w-auto"
+          className="col-4 text-danger text-end w-auto"
           as={Link}
-          href="/builder/home-dashboard/recentlyadded"
-          style={{ color: "#FC5C67" }}
+          href="/builder/home-dashboard/recentlyadded"          
         >
-          View all
+          View All
         </a>
       </div>
       <div className="mt-2 mb-5 row row-cols-2 w-100 justify-content-between ms-0">

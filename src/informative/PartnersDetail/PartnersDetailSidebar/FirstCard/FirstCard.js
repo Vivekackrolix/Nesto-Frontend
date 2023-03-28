@@ -15,7 +15,7 @@ const FirstCard = () => {
                     <Link to='/' className='first-card__link'>Check Now <FaLongArrowAltRight /> </Link>
                 </div>
                 <div style={{ width: '40%' }}>
-                    <img src='/assets/exploreImg.png' className='first-card__img' />
+                    <img src='/assets/exploreImg.png' alt='explore-img' className='first-card__img' />
                 </div>
             </div>
         </>

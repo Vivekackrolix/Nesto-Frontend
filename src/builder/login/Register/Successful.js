@@ -17,7 +17,7 @@ const Successful = (props) => {
           <h6 className="  d-flex justify-content-center">
             <img
               src={submit}
-              alt=""
+              alt="submit"
               style={{
                 width: "121.99px",
                 height: "121.99px",

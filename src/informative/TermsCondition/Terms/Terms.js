@@ -13,39 +13,39 @@ const Terms = () => {
                 <span className='t-c_span2'>Unless otherwise specified, the capitalized words shall have the meanings as defined herein below:</span>
                 <div className='t-c_box'>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>"Agreement" shall mean and include the completed application form, its attachment(s) and the terms and conditions stated herein. It shall be deemed to have been executed at New Delhi.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>"Company": is defined as Magicbricks Realty Services Limited ("the Company") an existing Company under the Companies Act, 1956 and having its corporate office at Times Centre (Digital Content Production Facility), FC - 6, (Third Floor), Sector 16 A, Film City, NOIDA - 201301 U.P., along with its unit for the Company's website Magicbricks.com.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>"Date of Commencement" is the date indicating the acceptance of the application by the User to the service. It shall be specified by the Company in its notice to You either through e-mail or conventional mail.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>"Date of Termination" is the date of expiry mentioned in the notice or/and the letter of termination.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>Magicbricks.com" is defined as the internet website of the Company at www.magicbricks.com</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>"My Subscriptions" contains time to time information and description of the Services for the User provided by the Company in writing or contained in the website Magicbricks.com.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>"Registration Data" is the database of all the particulars and information supplied by the User on initial application and subscription, including but without limiting to the User's name, telephone number, mailing address, account and email address.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>"User" is defined as an individual or corporate subscriber for the Services and the signatory, whose particulars are contained in the application form and includes his successors and permitted assignees. "User" or "You" also includes any person who access or avail this Site of the Company for the purpose of hosting, publishing, sharing, transacting, displaying or uploading information or views and includes other persons jointly participating in using the Site of the Company.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'> Words referring to masculine include the feminine and the singular include the plural and vice versa as the context admits or requires; and Words importing persons includes individuals, bodies corporate and unincorporated.</li>
                     </div>
                 </div>
@@ -138,15 +138,15 @@ const Terms = () => {
                 </span>
                 <div className='t-c_box'>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>The applicable rate of the Subscription Fees for the Service provided shall be such as mentioned in the "My Subscriptions" page or as may be prescribed by the Company from time to time.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>Liability for the Subscription Fees shall accrue from the Date of Commencement.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'> All individual Users who access or make posting of information on the Site for the purpose of buying property shall be exempted from the application of this clause.</li>
                     </div>
                 </div>
@@ -159,23 +159,23 @@ const Terms = () => {
                 </span>
                 <div className='t-c_box'>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'> For all services bought, 50% of the order amount would be towards the activation/administration fees & the rest 50% would be refunded on pro-rata basis, considering the usages of the services. Customer agrees that the refund process would take at least 21 days after the complete documentation has been received by the Finance team for processing such refund.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>Where Subscription Fees accrues it shall be payable at or within such time as stated in the invoice(s) issued by the Company to the User.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>The Subscription Fees shall be paid by the User on demand. In case the user disputes the same for any reason whatsoever, he shall make the payment towards the Subscription Fees accrued subject to the decision of the Company on the dispute. In the event of Company's deciding the dispute in the User's favour, the Company shall refund to the User any excess amount paid by the User free of interest.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>Any delay in the payment by the User of any sums due under this Agreement, the Company shall have the right to charge interest on the outstanding amount from the date the payment became due until the date of final payment by the User.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>Payments made to the Company through IOS app shall not be refundable under any circumstances, including but not limited to the termination of this Agreement for whatever reason.</li>
                     </div>
                 </div>
@@ -188,31 +188,31 @@ const Terms = () => {
                 </span>
                 <div className='t-c_box'>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>The Owners Service once subscribed shall be non-refundable, however, Company may refund the amount in the event a property is not linked with the package so bought. In such an event 50% of the order amount would be towards the activation/administration fees and shall be forfeited & the rest 50% would be refunded on pro-rata basis.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>If it is brought to the notice of the Company that the User is not the Owner of the property, instead is a Builder/Agent, in such an event the listing would be deactivated without any notification and the amount paid shall be forfeited.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>The company presents a trial package for 7 days in exchange for the corresponding premium services for only Rs. 129. Whereby, according to the terms and conditions outlined below, the owner may benefit from premium services after subscribing to any premium pack, including (i) the Silver Pack, (ii) Gold Pack, (iii) Diamond Pack, and (iv) Titanium Pack for the following seven days;</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>The Company presents this offer as a trail pack of 7 days for the owner(s) who can avail the benefits of premium features inter alia against the subscribed Premium Pack in just Rs. 129/- only.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>The remaining balance for the subscribed pack will be automatically deducted from the user's account after 7 days, inter alia when the trial period has expired. The user may, however, revoke the aforementioned trial agreement at any moment while it is still in effect.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'>If the user chooses to subscribe to the complete pack post trial period via auto mandate process, the Company will not accept any requests for cancellation or refunds related to the subscribed package for any reason. However, if the user requests to cancel before the auto debit mandate period, the Company will grant the request and reimburse any amounts that have already been deducted.</li>
                     </div>
                     <div className='d-flex gap-3 align-items-center mt-3'>
-                        <img src='/assets/informative/square-dot.png' className='t-c_span_dot' />
+                        <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                         <li className='t-c_li'> The Company retains the right to change any of the terms & conditions. Additionally, the Company's decision shall be final in the event that a disagreement occurs about the nature of the service, pricing, cancellation of a subscription pack, refunds against a subscription pack, etc. within the offer time and thereafter.</li>
                     </div>
 

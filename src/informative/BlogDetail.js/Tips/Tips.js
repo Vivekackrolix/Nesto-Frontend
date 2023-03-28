@@ -90,7 +90,7 @@ const Tips = () => {
                         </span>
                         <div className='tips_box-1'>
                             <div>
-                                <img className='tips_user-img' src='/assets/informative/articleImg4.png' />
+                                <img className='tips_user-img' src='/assets/informative/articleImg4.png' alt='article' />
                                 <span className='tips_user-name'> Sarah Harding</span>
                             </div>
                             <div>
@@ -110,7 +110,7 @@ const Tips = () => {
                             </span>
                         </div>
                         <div className='tips_box-4' data-aos='zoom-in'>
-                            <img className='tips_box-4-img' src='/assets/informative/tipsImg.png' />
+                            <img className='tips_box-4-img' src='/assets/informative/tipsImg.png' alt='tips' />
                         </div>
                         <div className='tips_box-3'>
                             <span className='tips_box-2-span'>
@@ -131,7 +131,7 @@ const Tips = () => {
                             return (
                                 <>
                                     <div className='d-flex gap-3 align-items-center mt-3'>
-                                        <img src='/assets/informative/line.png' className='tips_box-5-line' data-aos='fade-right' />
+                                        <img src='/assets/informative/line.png' className='tips_box-5-line' data-aos='fade-right' alt='line' />
                                         <li className='tips_box-5-li' data-aos='fade-right'>{item.para}</li>
                                     </div>
                                 </>
@@ -198,14 +198,14 @@ const Tips = () => {
                         return (
                             <div className='col-lg-4 left-col mt-4' data-aos='fade-right'>
                                 <div className='left-col_box'>
-                                    <img className='left-col_img' src='/assets/informative/latest-news1.png' />
+                                    <img className='left-col_img' src='/assets/informative/latest-news1.png' alt='news' />
                                     <p className='left-col_date'>{item.date}</p>
                                     <p className='left-col_para'>{item.para1}</p>
                                     <p className='left-col_para-2'>{item.para2}</p>
                                     <div className='d-flex align-items-center justify-content-between mt-4'>
                                         <div>
                                             <span>
-                                                <img src={item.userImg} />
+                                                <img src={item.userImg} alt='user' />
                                                 <span> {item.name}</span>
                                             </span>
                                         </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Localities.css'
 import Slider from 'react-slick';
-import { MdOutlineStarOutline, MdOutlineStarPurple500 } from 'react-icons/md';
-import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai'
+// import { MdOutlineStarOutline, MdOutlineStarPurple500 } from 'react-icons/md';
+// import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai'
 
 const PastProjects = () => {
     var settings = {
@@ -65,7 +65,7 @@ const PastProjects = () => {
                         <div className='row p-2'>
                             <div className='col-lg-6 shadow-sm rounded-3 p-4 locality-slider_col-2 gap-4'>
                                 <div className=''>
-                                    <img src={item.img} className='locality-slider_img' />
+                                    <img src={item.img} className='locality-slider_img' alt='locality-slider' />
                                 </div>
                                 <div className=''>
                                     <span className='locality-slider_span-1'>{item.localities}</span>

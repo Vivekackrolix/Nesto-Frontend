@@ -52,7 +52,7 @@ const InformativeNavbar = () => {
                 <div className="broker-link-div">
                   <div>
                     <span>
-                      <img src="./assets/profle.png" alt="" />
+                      <img src="./assets/profle.png" alt="profile" />
                     </span>
                   </div>
                   <div>

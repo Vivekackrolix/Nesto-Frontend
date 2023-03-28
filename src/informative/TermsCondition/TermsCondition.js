@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Container, Navbar } from 'react-bootstrap';
 import Terms from './Terms/Terms';
 import './TermsCondition.css'
@@ -15,7 +15,7 @@ const TermsCondition = () => {
                 <Navbar expand="lg" bg='light' className="t-c_navbar">
                     <Container>
                         <Navbar.Brand href="#home">
-                            <Link to='/'> <img src="/assets/nesto-logo.png" className="t-c_brand-img" /></Link>
+                            <Link to='/'> <img src="/assets/nesto-logo.png" className="t-c_brand-img" alt='nesto-logo' /></Link>
                         </Navbar.Brand>
                     </Container>
                 </Navbar>

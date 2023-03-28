@@ -84,7 +84,7 @@ const PastProjects = () => {
                                 <div className='col-lg-6 past-project-slider_col-1'>
                                     <div className='h-100'>
                                         <span className='past-project-slider_tag'>{item.tag}</span>
-                                        <img src={item.img} className='past-project-slider_img' />
+                                        <img src={item.img} className='past-project-slider_img' alt='slider' />
                                         <span
                                             className='past-project-slider_icon1'
                                             onClick={heartChange}
