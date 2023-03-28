@@ -10,7 +10,6 @@ import 'swiper/css/navigation';
 import './SwiperSliderNew.css';
 
 const SwiperSliderNew = ({ swiperData, navigation, pagination }) => {
-  console.log(swiperData);
   return (
     <>
       <div className="nes__swiper__slider__new">

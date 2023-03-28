@@ -2,7 +2,14 @@ import { Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './ViewDetailsCard.css';
 
-const ViewDetailsCard = ({ title, link, bg, media, img }) => {
+const ViewDetailsCard = ({
+  title,
+  link,
+  bg,
+  media,
+  img,
+  propertyDescription,
+}) => {
   return (
     <Card
       className={`border-0 shadow-sm property__details__text mb-5 ${
@@ -46,14 +53,8 @@ const ViewDetailsCard = ({ title, link, bg, media, img }) => {
             ))}
           </Row>
         )}
-        {!media && !img && (
-          <Card.Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s
-          </Card.Text>
+        {!media && !img && propertyDescription && (
+          <Card.Text>{propertyDescription}</Card.Text>
         )}
         {media && (
           <div className="video-wrapper">
