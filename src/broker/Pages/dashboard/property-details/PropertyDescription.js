@@ -13,24 +13,6 @@ import LoadingSpinner from '../../../Common/loading-spinner/LoadingSpinner';
 import ErrorMessage from '../../../Common/error-message/ErrorMessage';
 import PropertyDetailsCard from './PropertyDetailsCard';
 
-const data = [
-  {
-    id: 0,
-  },
-  {
-    id: 1,
-  },
-  {
-    id: 2,
-  },
-  {
-    id: 3,
-  },
-  {
-    id: 4,
-  },
-];
-
 const PropertyDescription = () => {
   const { id } = useParams();
   const {
@@ -60,10 +42,12 @@ const PropertyDescription = () => {
       brokerageValue,
       isRera,
       amenities,
+      isBestSelling,
       propertyDescription,
+      floorPlanAndPricing,
       ...propertyDetailsCard
     } = property;
-
+    console.log(property);
     return (
       <>
         <Header />
@@ -81,10 +65,14 @@ const PropertyDescription = () => {
                   <Container>
                     <div className="hero-caption d-flex flex-column justify-content-center justify-content-sm-start ms-sm-5">
                       {isRera && <Ribbon cssClass="ribbonStyle2" text="RERA" />}
-                      <Ribbon cssClass="ribbonStyle" text="Best Seller" />
+                      {isBestSelling && (
+                        <Ribbon cssClass="ribbonStyle" text="Best Seller" />
+                      )}
                       <Ribbon
                         cssClass="ribbonStyle2 rounded-pill mt-5 py-1 px-3"
-                        text={`${brokerageValue} ${brokerageType} Brokerage`}
+                        text={`${brokerageValue}${
+                          brokerageType === 'percentage' && '%'
+                        } Brokerage`}
                       />
                       <div className="hero-caption-img-navigation position-absolute">
                         <Image
@@ -130,17 +118,17 @@ const PropertyDescription = () => {
                 />
               </div>
               <div className="nes__dashboard__smallicons">
-                <IconsCard
+                {/* <IconsCard
                   length={4}
                   title="Location Advantages"
                   col={4}
                   iconTitle
-                />
+                /> */}
               </div>
 
-              <SwiperSlider />
+              <SwiperSlider floorPlansAndPricing={floorPlanAndPricing} />
 
-              <SwiperMain swiperData={data} slidesPerView="3" spaceBetween="10">
+              {/* <SwiperMain swiperData={data} slidesPerView="3" spaceBetween="10">
                 <Card className="media-card">
                   <Card.Body>
                     <div className="nes__broker__swiper__item__media d-flex align-items-center  gap-3">
@@ -158,7 +146,7 @@ const PropertyDescription = () => {
                     </div>
                   </Card.Body>
                 </Card>
-              </SwiperMain>
+              </SwiperMain> */}
               <ViewDetailsCard
                 title="About The Project"
                 link="View Details"

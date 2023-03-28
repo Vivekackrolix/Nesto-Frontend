@@ -55,7 +55,7 @@ const SwiperSliderDashboard = () => {
                 name,
                 minPrice,
                 propertyDescription,
-                amenities: { iconUrl },
+                amenities,
               },
             },
             index
@@ -88,21 +88,16 @@ const SwiperSliderDashboard = () => {
                       </p>
 
                       <div className="nes__broker__swiper__item__icons d-flex flex-wrap gap-4">
-                        <div className="nes__broker__swiper__item__icons__icon d-flex align-items-center gap-2">
-                          <CiRuler />
-                          {/* <span>{slide.area}</span> */}
-                        </div>
-                        <div className="nes__broker__swiper__item__icons__icon d-flex align-items-center gap-2">
-                          <IoBedSharp />
-                          {/* <span>{slide.beds}</span> */}
-                        </div>
-                        <div className="nes__broker__swiper__item__icons__icon d-flex align-items-center gap-2">
-                          <BiBath />
-                          {/* <span>{slide.baths}</span> */}
-                        </div>
+                        {amenities.map(({ iconUrl, name, _id }, index) => (
+                          <div
+                            className="nes__broker__swiper__item__icons__icon d-flex align-items-center gap-2"
+                            key={_id}
+                          >
+                            <Image width={20} fluid src={iconUrl} alt={name} />
+                            <span>{name}</span>
+                          </div>
+                        ))}
                       </div>
-
-                      {iconUrl && iconUrl.map((iconItem, index) => <BiBath />)}
                     </div>
                   </Col>
                 </Row>

@@ -9,7 +9,35 @@ import 'swiper/css/navigation';
 // import './SwiperSlider.css';
 import './SwiperSliderNew.css';
 
-const SwiperSliderNew = ({ swiperData, navigation, pagination }) => {
+function PromotionalBanner(props) {
+  return (
+    <div
+      className="nes__swiper__slider__new__slide hero-section nes__hero d-flex flex-column justify-content-center mt-5"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${props.swiperDataItem.image[0]})`,
+      }}
+    >
+      <Container>
+        <div className="hero-caption d-flex flex-column justify-content-center justify-content-sm-start ms-sm-5">
+          <h1 className="d-flex flex-column text-white">
+            {props.swiperDataItem.title}
+          </h1>
+          <p className="nes__swiper__slider__new__slide__description">
+            {props.swiperDataItem.description}
+          </p>
+          {/* <p className="mt-5">{description}</p> */}
+        </div>
+      </Container>
+    </div>
+  );
+}
+
+const SwiperSliderNew = ({
+  swiperData,
+  navigation,
+  pagination,
+  promotionalBanner,
+}) => {
   return (
     <>
       <div className="nes__swiper__slider__new">
@@ -26,24 +54,7 @@ const SwiperSliderNew = ({ swiperData, navigation, pagination }) => {
           {swiperData
             ? swiperData.map(swiperDataItem => (
                 <SwiperSlide key={swiperDataItem?._id}>
-                  <div
-                    className="nes__swiper__slider__new__slide hero-section nes__hero d-flex flex-column justify-content-center mt-5"
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${swiperDataItem.image[0]})`,
-                    }}
-                  >
-                    <Container>
-                      <div className="hero-caption d-flex flex-column justify-content-center justify-content-sm-start ms-sm-5">
-                        <h1 className="d-flex flex-column text-white">
-                          {swiperDataItem.title}
-                        </h1>
-                        <p className="nes__swiper__slider__new__slide__description">
-                          {swiperDataItem.description}
-                        </p>
-                        {/* <p className="mt-5">{description}</p> */}
-                      </div>
-                    </Container>
-                  </div>
+                  <PromotionalBanner swiperDataItem={swiperDataItem} />
                 </SwiperSlide>
               ))
             : null}

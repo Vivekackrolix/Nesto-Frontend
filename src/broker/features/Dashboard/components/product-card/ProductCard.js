@@ -20,9 +20,11 @@ const ProductCard = ({
   maxPrice,
   discountDescription,
   brokerageValue,
+  brokerageType,
   view,
   navigation,
   pagination,
+  isBestSelling,
 }) => {
   return (
     <Card
@@ -61,9 +63,16 @@ const ProductCard = ({
               : null}
             {view === 'broker' && (
               <>
-                <Ribbon cssClass="ribbonStyle" text="Best Seller" />
+                {isBestSelling && (
+                  <Ribbon cssClass="ribbonStyle" text="Best Seller" />
+                )}
                 {brokerageValue && (
-                  <Ribbon cssClass="ribbonStyle2" text={`${brokerageValue}`} />
+                  <Ribbon
+                    cssClass="ribbonStyle2"
+                    text={`${brokerageValue}${
+                      brokerageType === `percentage` && '%'
+                    } Brokerage`}
+                  />
                 )}
 
                 <Button className="nes__product__card__btndark px-4">
