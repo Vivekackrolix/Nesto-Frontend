@@ -1,7 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper';
 import { useParams } from 'react-router-dom';
-import { Card, Col, Container, Image, Row } from 'react-bootstrap';
+import {
+  Button,
+  Card,
+  Col,
+  Container,
+  Image,
+  Row,
+  Table,
+} from 'react-bootstrap';
 import { Footer, Header, Ribbon } from '../../../features';
 
 import ViewDetailsCard from './ViewDetailsCard';
@@ -17,6 +25,7 @@ import 'swiper/css';
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 import './PropertyDescription.css';
+import React from 'react';
 
 const PropertyDescription = () => {
   const { id } = useParams();
@@ -51,6 +60,7 @@ const PropertyDescription = () => {
       locationAdvantages,
       propertyAdvertiseMentDetails,
       loanApprovedByIds,
+      paymentPlan,
       builderId: { description: aboutTheBuilder },
       ...propertyDetailsCard
     } = property;
@@ -237,6 +247,25 @@ const PropertyDescription = () => {
                 propertyDescription={propertyDescription}
                 bg
               />
+
+              {/* payment plan */}
+              <Table bordered>
+                <thead>
+                  <tr>
+                    <th>Payment %</th>
+                    <th>Milestone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {paymentPlan.map(({ payment, milestone }, index) => (
+                    <tr key={index}>
+                      <td>{payment}</td>
+                      <td>{milestone}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+              {/* payment plan code end here */}
 
               <div className="nes__dashboard__banks">
                 <ViewDetailsCard

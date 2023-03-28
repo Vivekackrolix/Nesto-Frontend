@@ -126,7 +126,7 @@ const ProductCard = ({
         <div className="px-4 nes__product__card__price d-flex flex-wrap align-items-center gap-2">
           <h4 className="d-inline-block font-weight-bold m-0">{`${minPrice} - ${maxPrice}`}</h4>
           <span className="d-inline-block text-muted m-0">
-            {`Book now & get ${discountDescription} discount`}
+            {`${discountDescription}`}
           </span>
         </div>
       </Card.Body>

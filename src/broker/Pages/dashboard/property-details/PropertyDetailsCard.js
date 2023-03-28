@@ -83,7 +83,7 @@ const PropertyDetailsCard = ({ propertyDetailsCard }) => {
               <div className="px-4 nes__product__card__price d-flex flex-column justify-content-center align-items-center gap-2">
                 <h4 className="d-inline-block font-weight-bold m-0">{`${propertyDetailsCard.minPrice} - ${propertyDetailsCard.maxPrice}`}</h4>
                 <span className="d-inline-block text-muted m-0">
-                  {`Book now & get ${propertyDetailsCard.discountDescription} discount`}
+                  {`${propertyDetailsCard.discountDescription}`}
                 </span>
                 <Button className="btn-color-outline-primary rounded-pill px-4 mt-3">
                   Book a visit
