@@ -9,7 +9,8 @@ const PropertyAnalytics = () => {
   useEffect(() => {
     const getSubscription = async () => {
       const response = await axios.get(
-        "http://13.233.149.97:3000/api/v1/builder/getPropertyAnalytics?id=64107bce7b4c4240671aeb94",
+        // "http://13.233.149.97:3000/api/v1/builder/getPropertyAnalytics?id=64107bce7b4c4240671aeb94",
+        "http://localhost:3000/api/v1/builder/getPropertyAnalytics?id=64107bce7b4c4240671aeb94",
         // formData,
         {
           headers: {

@@ -32,7 +32,8 @@ const Login = () => {
         return (prev = true);
       });
       const response = await axios.post(
-        "http://13.233.149.97:3000/api/v1/builder/sendOtp",
+        // "http://13.233.149.97:3000/api/v1/builder/sendOtp",
+        "http://localhost:3000/api/v1/builder/sendOtp",
         { phoneNumber: inputValue }
       );
       console.log(response);

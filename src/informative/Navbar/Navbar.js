@@ -21,12 +21,12 @@ const InformativeNavbar = () => {
   };
   return (
     <>
-      <LoginModal show={show} onHide={onHide} />
+      {/* <LoginModal show={show} onHide={onHide} /> */}
       {/* <LoginAsBroker show={show} onHide={onHide} /> */}
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
       {/* <SuccessfulLogin show={show} onHide={onHide} /> */}
       {/* <ListProperty show={show} onHide={onHide} /> */}
-      {/* <NotRegistered show={show} onHide={onHide} /> */}
+      <NotRegistered show={show} onHide={onHide} />
       <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
         <Container className="nav-container">
           <Link to="/" className="navbar-brand nav-image">
@@ -42,9 +42,9 @@ const InformativeNavbar = () => {
               {/* Login btn */}
               <Nav.Item>
                 <div className="login-div">
-                  <Link to="/" className="login-link" onClick={showLoginModal}>
+                  <button className="login-link" onClick={showLoginModal}>
                     Login
-                  </Link>
+                  </button>
                 </div>
               </Nav.Item>
               {/* Join as a broker btn */}
@@ -56,7 +56,7 @@ const InformativeNavbar = () => {
                     </span>
                   </div>
                   <div>
-                    <Link to="/broker-page" className="broker-link">
+                    <Link to='/broker-page' className="informative-navbar-broker-link">
                       Join as a broker
                     </Link>
                   </div>
@@ -65,9 +65,9 @@ const InformativeNavbar = () => {
               {/* List your Property btn */}
               <Nav.Item>
                 <div className="list-property-div">
-                  <Link to="/" className="list-property-link">
+                  <button className="list-property-link" onClick={showLoginModal}>
                     List your Property
-                  </Link>
+                  </button>
                 </div>
               </Nav.Item>
               {/* Download btn */}

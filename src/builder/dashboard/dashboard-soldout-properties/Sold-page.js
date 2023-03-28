@@ -11,7 +11,7 @@ import Payment from "../dashboard-property-analytics/dashboard-property-details/
 import Danelions from "./Danelions";
 import Footer from "../Footer/Footer";
 import Floor from "../dashboard-property-analytics/dashboard-property-details/Floor";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -32,7 +32,8 @@ const SoldPage = () => {
     const getPropertyById = async () => {
       debugger;
       const response = await axios.get(
-        `http://13.233.149.97:3000/api/v1/boughtProperty/getBoughtPropertyById?id=${params.propertyId}`,
+        // `http://13.233.149.97:3000/api/v1/boughtProperty/getBoughtPropertyById?id=${params.propertyId}`,
+        `http://localhost:3000/api/v1/property/getPropertyById?id=${params.propertyId}`,
         {
           headers: {
             Authorization:
@@ -55,8 +56,9 @@ const SoldPage = () => {
         {/* <img src={homeImage} className="rounded my-3" alt="Home" /> */}
         <Row className="gx-4 dashboard-cards align-items-center">
           <Col md={12}>
-          <h3 className="m-0 heading">Property Details</h3>
-            <img src={homeImage} className="rounded w-100 my-3" alt="Home" /></Col>          
+            <h3 className="m-0 heading">Property Details</h3>
+            <img src={homeImage} className="rounded w-100 my-3" alt="Home" />
+          </Col>
         </Row>
         <div
           className="d-flex gap-2 mb-4"
@@ -71,73 +73,75 @@ const SoldPage = () => {
         <Floor />
         <Amenities />
         <Row>
-        <Col md={12}>
-          <Location />
-          <Row className="gx-4 dashboard-cards align-items-center">
-            <img src={map} className="rounded my-3" alt="Home" />
-          </Row>
-        </Col>
-        <Col md={12}>
-          <Payment />
-        </Col>
-        <Col md={12}>
-          <h3 className="heading"> View offical brochure</h3>
-          <Row className="gx-4 dashboard-cards align-items-center">
-            <img src={brochure} className="rounded my-3" alt="Home" />
-          </Row>
-        </Col>
-        <Col md={12}>
-          <h3 className="heading"> Terms & Conditions</h3>
-          <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
-            <div className="p-4 d-flex justify-content-between">
-              <p style={{ color: "#7D7F88", fontFamily: "Bahnschrift" }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum <br></br>
-                <br></br>Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more
-                recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem Ipsum <br></br>
-                <br></br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum<br></br>
-                <br></br> Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more
-                recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem Ipsum
-              </p>
-            </div>
-          </Container>
-        </Col>
+          <Col md={12}>
+            <Location />
+            <Row className="gx-4 dashboard-cards align-items-center">
+              <img src={map} className="rounded my-3" alt="Home" />
+            </Row>
+          </Col>
+          <Col md={12}>
+            <Payment />
+          </Col>
+          <Col md={12}>
+            <h3 className="heading"> View offical brochure</h3>
+            <Row className="gx-4 dashboard-cards align-items-center">
+              <img src={brochure} className="rounded my-3" alt="Home" />
+            </Row>
+          </Col>
+          <Col md={12}>
+            <h3 className="heading"> Terms & Conditions</h3>
+            <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+              <div className="p-4 d-flex justify-content-between">
+                <p style={{ color: "#7D7F88", fontFamily: "Bahnschrift" }}>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum{" "}
+                  <br></br>
+                  <br></br>Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum{" "}
+                  <br></br>
+                  <br></br>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum
+                  <br></br>
+                  <br></br> Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum
+                </p>
+              </div>
+            </Container>
+          </Col>
         </Row>
-        
       </Container>
       <Footer />
     </>

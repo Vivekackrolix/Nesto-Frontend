@@ -19,14 +19,6 @@ const Payment = (props) => {
   };
   const submitHandler = async () => {
     const formData = {
-      // bankName: bankName,
-      // accountNumber: accountNumber,
-      // ifscCode: ifscCode,
-      // recipientName: recipientName,
-      // transactionDate: transactionDate,
-      // transactionId: transactionDate,
-      // transactionAmount: transactionAmount,
-
       bankName,
       accountNumber,
       ifscCode,
@@ -49,18 +41,14 @@ const Payment = (props) => {
     );
 
     console.log(response);
-    // props.onChange((prev) => ({ ...prev, payment: false, submit: true }));
+
     navigate("/builder/home-dashboard/promoted/claim");
-    // if (response.data) {
-    //   props.onHide(false);
-    //   props.onSucess(true);
-    // }
   };
-  // console.log(props.state);
+
   return (
     <>
       <Modal
-        // size="lg"
+        // size="sm"
         show={props.show}
         onHide={() => {
           props.onHide();
