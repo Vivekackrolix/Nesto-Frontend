@@ -11,6 +11,8 @@ const ViewDetailsCard = ({
   propertyDescription,
   loanApprovedByIds,
   aboutTheBuilder,
+  termAndCondition,
+  brochureUrl,
 }) => {
   return (
     <Card
@@ -52,15 +54,9 @@ const ViewDetailsCard = ({
         {!media && !img && aboutTheBuilder && (
           <Card.Text>{aboutTheBuilder}</Card.Text>
         )}
-        {media && (
-          <div className="video-wrapper">
-            <video
-              className="w-100"
-              src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_5mb.mp4"
-              controls
-            />
-          </div>
-        )}
+        {media && <Card.Img src={brochureUrl} />}
+
+        {termAndCondition && <Card.Text>{termAndCondition}</Card.Text>}
       </Card.Body>
     </Card>
   );

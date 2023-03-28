@@ -61,7 +61,9 @@ const PropertyDescription = () => {
       propertyAdvertiseMentDetails,
       loanApprovedByIds,
       paymentPlan,
-      builderId: { description: aboutTheBuilder },
+      termAndCondition,
+      brochureUrl,
+      builderId: { description: aboutTheBuilder, rating },
       ...propertyDetailsCard
     } = property;
 
@@ -283,14 +285,19 @@ const PropertyDescription = () => {
                 bg
               />
 
-              <ViewDetailsCard title="View official brochure" media />
               <ViewDetailsCard
-                title="Terms &b Conditions"
+                title="View official brochure"
+                media
+                brochureUrl={brochureUrl}
+              />
+              <ViewDetailsCard
+                title="Terms & Conditions"
                 link="View Details"
+                termAndCondition={termAndCondition}
               />
               {/* <CustomLineChart lineChartData={ lineCharData } /> */}
               <CurrentlyComparing />
-              <RatingReviewCard />
+              <RatingReviewCard rating={rating} />
             </Container>
           </section>
         )}
