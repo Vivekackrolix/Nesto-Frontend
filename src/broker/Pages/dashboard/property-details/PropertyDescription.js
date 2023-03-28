@@ -1,17 +1,22 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper';
 import { useParams } from 'react-router-dom';
 import { Card, Col, Container, Image, Row } from 'react-bootstrap';
-import { Footer, Header, HeroSection, Ribbon } from '../../../features';
-import IconsCard from './IconsCard';
+import { Footer, Header, Ribbon } from '../../../features';
+
 import ViewDetailsCard from './ViewDetailsCard';
 import { SwiperSlider } from '../../../components';
-import SwiperMain from '../../../components/swiper/SwiperMain';
 import CurrentlyComparing from './currently-comparing/CurrentlyComparing';
 import RatingReviewCard from '../../../components/rating-review/RatingReviewCard';
-import './PropertyDescription.css';
 import { useGetPropertyById } from '../../../hooks/LoginQuery';
 import LoadingSpinner from '../../../Common/loading-spinner/LoadingSpinner';
 import ErrorMessage from '../../../Common/error-message/ErrorMessage';
 import PropertyDetailsCard from './PropertyDetailsCard';
+
+import 'swiper/css';
+import 'swiper/css/bundle';
+import 'swiper/css/navigation';
+import './PropertyDescription.css';
 
 const PropertyDescription = () => {
   const { id } = useParams();
@@ -33,8 +38,6 @@ const PropertyDescription = () => {
   }
 
   if (getPropertyByIdIsSuccess) {
-    console.log(getPropertyByIdResponse);
-
     const [property] = getPropertyByIdResponse;
     const {
       thumbnail,
@@ -45,11 +48,11 @@ const PropertyDescription = () => {
       isBestSelling,
       propertyDescription,
       floorPlanAndPricing,
+      locationAdvantages,
+      propertyAdvertiseMentDetails,
       ...propertyDetailsCard
     } = property;
-    console.log('Amenities');
-    console.log(amenities);
-    console.log('Amenities');
+
     return (
       <>
         <Header />
@@ -147,35 +150,90 @@ const PropertyDescription = () => {
                 {/* amenities code end here */}
               </div>
               <div className="nes__dashboard__smallicons">
-                {/* <IconsCard
-                  length={4}
-                  title="Location Advantages"
-                  col={4}
-                  iconTitle
-                /> */}
+                <Card className="border-0 shadow-none bg-transparent property__details__iconcard mb-4">
+                  <Card.Header className="bg-transparent border-0 mt-3 px-0">
+                    <Card.Title className="fw-bold">
+                      Location Advantages
+                    </Card.Title>
+                  </Card.Header>
+                  <Card.Body className="border rounded">
+                    <Row className="g-4">
+                      {!!locationAdvantages.length &&
+                        locationAdvantages.map(
+                          ({ iconUrl, name, distance, _id }) => (
+                            <Col
+                              key={_id}
+                              style={{ flex: `0 0 calc(100% / ${4})` }}
+                              className="d-flex justify-content-center align-items-center"
+                            >
+                              <div className="d-flex flex-column gap-1 justify-content-center align-items-center">
+                                <img
+                                  src={iconUrl}
+                                  alt={{ name }}
+                                  className="img-fluid mb-2"
+                                />
+
+                                <span className="property__details__iconcard__icontitle">
+                                  {name}
+                                </span>
+
+                                <span className="property__details__iconcard__iconsubtitle">
+                                  {distance}
+                                </span>
+                              </div>
+                            </Col>
+                          )
+                        )}
+                    </Row>
+                  </Card.Body>
+                </Card>
               </div>
 
               <SwiperSlider floorPlansAndPricing={floorPlanAndPricing} />
 
-              {/* <SwiperMain swiperData={data} slidesPerView="3" spaceBetween="10">
-                <Card className="media-card">
-                  <Card.Body>
-                    <div className="nes__broker__swiper__item__media d-flex align-items-center  gap-3">
-                      <img
-                        src="/assets/broker/property-img.png"
-                        alt="Property"
-                        className="h-100
+              {/* map  */}
+              <div className="w-100">
+                <Image fluid src="/assets/broker/map-image.png" alt="map" />
+              </div>
+              {/* map code end here */}
+
+              {/* property advertisement details */}
+              <Swiper
+                modules={[Navigation, Autoplay]}
+                spaceBetween={30}
+                slidesPerView={2}
+                navigation
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000 }}
+                className="mt-5 mb-5"
+              >
+                {!!propertyAdvertiseMentDetails.length &&
+                  propertyAdvertiseMentDetails.map(
+                    ({ iconUrl, _id, name, location, distance }) => (
+                      <SwiperSlide key={_id}>
+                        <Card className="media-card">
+                          <Card.Body>
+                            <div className="nes__broker__swiper__item__media d-flex align-items-center  gap-3">
+                              <img
+                                src={iconUrl}
+                                alt="Property"
+                                className="h-100
                   "
-                      />
-                      <div className="nes__broker__swiper__item__media__body">
-                        <h5 className="m-0">DLF Tower</h5>
-                        <p className="m-0">Shivaji Nagar</p>
-                        <p className="m-0">0.06 KM distance</p>
-                      </div>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </SwiperMain> */}
+                              />
+                              <div className="nes__broker__swiper__item__media__body">
+                                <h5 className="m-0">{name}</h5>
+                                <p className="m-0">{location}</p>
+                                <p className="m-0">{distance}</p>
+                              </div>
+                            </div>
+                          </Card.Body>
+                        </Card>
+                      </SwiperSlide>
+                    )
+                  )}
+              </Swiper>
+              {/* property advertisement details code end here */}
+
               <ViewDetailsCard
                 title="About The Project"
                 link="View Details"

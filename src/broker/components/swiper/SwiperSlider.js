@@ -13,8 +13,6 @@ import SwiperMain from './SwiperMain';
 const tabKey = ['All', '2BHK ', ' 3BHK', '4BHK', '5BHK'];
 
 const Slider = ({ floorPlansAndPricing }) => {
-  console.log('asdsadfasfd');
-  console.log(floorPlansAndPricing);
   return (
     <Container fluid="lg" className="mt-5">
       <div className="mb-4 mt-5">
