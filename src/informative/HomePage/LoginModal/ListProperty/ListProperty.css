@@ -1,12 +1,12 @@
 .list-property-heading {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 900;
     text-align: center;
     display: block;
 }
 
 .list-property {
-    padding: 10px 0 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -20,17 +20,14 @@
     padding: 10px 0;
 }
 
-.list-property-input-div {
-    margin-top: 10px;
-}
-
 .list-property-input {
     border: 2px solid #E8ECF4;
     background: #F8F8F8;
     width: 100%;
-    padding: 14px 4px 14px 21px;
+    padding: 10px 4px 10px 21px;
     font-size: 18px;
     border-radius: 8px !important;
+    margin-top: 4px;
 }
 
 .list-property-input:active,
@@ -51,7 +48,7 @@ select.list-property-input {
 }
 
 .list-property-input:not(:first-child) {
-    margin-top: 30px;
+    /* margin-top: 24px; */
 }
 
 .list-property-btn {
@@ -59,9 +56,21 @@ select.list-property-input {
     padding: 12px 0;
     font-size: 18px;
     font-weight: 350;
-    margin-top: 30px;
+    margin-top: 24px;
     background: var(--primary-color);
     color: var(--color-white) !important;
     border-radius: 10rem !important;
     border: 1px solid var(--primary-color);
+}
+
+
+/* Styling for labels */
+.list-property-input-div {
+    text-align: left;
+    margin-bottom: 18px;
+}
+.list-property-input-label {
+    font-size: 16px;
+    color: var(--silver-surfer);
+    font-weight: 350;
 }

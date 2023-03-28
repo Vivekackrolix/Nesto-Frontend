@@ -19,17 +19,23 @@ const ReffrelRegister = ({ show, onHide }) => {
       <div className="reffrel-register">
         <div className="reffrel-register-input-div">
           <form>
+            <div className='mt-1'>
+              <label for='reffrel-register-input-1' className='reffrel-register-input-label'>Name</label>
+              <input
+                type="text"
+                placeholder="Enter Name"
+                className="reffrel-register-input"
+                required
+                id='reffrel-register-input-1'
+              />
+            </div>
+            <label for='reffrel-register-input-2' className='reffrel-register-input-label mt-4'>Referral Code</label>
             <input
-              type="text"
-              placeholder="Name"
-              className="reffrel-register-input"
-              required
-            />
-            <input
-              type="number"
+              type="tel"
               placeholder="Enter Referral Code"
               className="reffrel-register-input"
               required
+              id='reffrel-register-input-2'
             />
             {/* css coming from (contactUs.css) */}
             <div className="d-flex align-items-center gap-2 mt-4">

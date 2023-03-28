@@ -19,7 +19,8 @@ const LoginAsBroker = ({ show, onHide }) => {
                 </div>
                 <div className='login-as-broker-input-div'>
                     <form>
-                        <input type='number' placeholder='Mobile Number' className='login-as-broker-input' required />
+                        <label for='login-as-broker-input' className='login-as-broker-label'>Mobile Number</label>
+                        <input type='tel' placeholder='Mobile Number' className='login-as-broker-input' required id='login-as-broker-input' />
                         <input type='submit' className='login-as-broker-btn' />
                     </form>
                 </div>

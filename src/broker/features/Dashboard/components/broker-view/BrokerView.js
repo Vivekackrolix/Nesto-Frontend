@@ -11,6 +11,9 @@ import { SearchFilter } from '../../../../../components';
 
 import './BrokerView.css';
 import { useAuth } from '../../../../services/api';
+import LoadingSpinner from '../../../../Common/loading-spinner/LoadingSpinner';
+import ErrorMessage from '../../../../Common/error-message/ErrorMessage';
+import SwiperSliderNew from '../swiper-slider-new/SwiperSliderNew';
 const BrokerView = () => {
   useAuth();
   const {
@@ -30,9 +33,9 @@ const BrokerView = () => {
 
   return (
     <Container fluid="lg">
-      {getAllBannerIsLoading && 'loading Banner'}
-      {getAllBannerError && 'Something goes wrong'}
-      <HeroSection bannerData={getAllBannerResponse} details />
+      {getAllBannerIsLoading && <LoadingSpinner />}
+      {getAllBannerError && <ErrorMessage />}
+      <SwiperSliderNew swiperData={getAllBannerResponse} pagination />
       <SmallCardSection />
       <section className="mt-3">
         <SearchFilter addBtn />
@@ -40,8 +43,8 @@ const BrokerView = () => {
       <section className="mt-5">
         <SwiperSliderDashboard />
       </section>
-      {getAllPropertyIsLoading && 'loading property'}
-      {getAllPropertyIsError && 'Something Goes Wrong'}
+      {getAllPropertyIsLoading && <LoadingSpinner />}
+      {getAllPropertyIsError && <ErrorMessage />}
 
       {getAllPropertyResponse && (
         <ProductContainers
