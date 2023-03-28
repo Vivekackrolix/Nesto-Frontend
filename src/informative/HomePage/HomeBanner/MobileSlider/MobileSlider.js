@@ -21,24 +21,24 @@ const MobileSlider = () => {
                 <div className='mobile-slider_div'>
                     <Slider {...settings}>
                         <div className='mobile-slider_div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='mobile-arrow' />
-                            <img src='/assets/informative/Mobilecartoon.png' className='mobile-cartoon-img' />
-                            <img src="/assets/informative/homeSlider-1.png" className='mobile-slider-img' />
+                            <img src='/assets/informative/curve-arrow.png' className='mobile-arrow' alt='arrow' />
+                            <img src='/assets/informative/Mobilecartoon.png' className='mobile-cartoon-img' alt='mobile-cartoon' />
+                            <img src="/assets/informative/homeSlider-1.png" className='mobile-slider-img' alt='slider' />
                         </div>
                         <div className='mobile-slider_div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='mobile-arrow' />
-                            <img src='/assets/informative/Mobilecartoon.png' className='mobile-cartoon-img' />
-                            <img src="/assets/informative/homeSlider-2.jpg" className='mobile-slider-img' />
+                            <img src='/assets/informative/curve-arrow.png' className='mobile-arrow' alt='arrow' />
+                            <img src='/assets/informative/Mobilecartoon.png' className='mobile-cartoon-img' alt='mobile' />
+                            <img src="/assets/informative/homeSlider-2.jpg" className='mobile-slider-img' alt='slider' />
                         </div>
                         <div className='mobile-slider_div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='mobile-arrow' />
-                            <img src='/assets/informative/Mobilecartoon.png' className='mobile-cartoon-img' />
-                            <img src="/assets/informative/homeSlider-3.jpg" className='mobile-slider-img' />
+                            <img src='/assets/informative/curve-arrow.png' className='mobile-arrow' alt='arrow' />
+                            <img src='/assets/informative/Mobilecartoon.png' className='mobile-cartoon-img' alt='cartoon' />
+                            <img src="/assets/informative/homeSlider-3.jpg" className='mobile-slider-img' alt='slider' />
                         </div>
                         <div className='mobile-slider_div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='mobile-arrow' />
-                            <img src='/assets/informative/Mobilecartoon.png' className='mobile-cartoon-img' />
-                            <img src="/assets/informative/homeSlider-4.jpeg" className='mobile-slider-img' />
+                            <img src='/assets/informative/curve-arrow.png' className='mobile-arrow' alt='arrow' />
+                            <img src='/assets/informative/Mobilecartoon.png' className='mobile-cartoon-img' alt='cartoon' />
+                            <img src="/assets/informative/homeSlider-4.jpeg" className='mobile-slider-img' alt='slider' />
                         </div>
                     </Slider>
                 </div>

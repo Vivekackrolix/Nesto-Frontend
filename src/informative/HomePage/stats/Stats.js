@@ -14,7 +14,7 @@ const Stats = () => {
     return (
         <div className="row stats-row">
             <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
-                <img className="stats-row-img" src='./assets/stats1.png' />
+                <img className="stats-row-img" src='./assets/stats1.png' alt="animation" />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter1On(true)}
@@ -37,7 +37,7 @@ const Stats = () => {
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
-                <img className="stats-row-img" src='./assets/stats2.png' />
+                <img className="stats-row-img" src='./assets/stats2.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter2On(true)}
@@ -59,7 +59,7 @@ const Stats = () => {
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
-                <img className="stats-row-img" src='./assets/stats3.png' />
+                <img className="stats-row-img" src='./assets/stats3.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter3On(true)}
@@ -74,7 +74,7 @@ const Stats = () => {
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
-                <img className="stats-row-img" src='./assets/stats4.png' />
+                <img className="stats-row-img" src='./assets/stats4.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter4On(true)}

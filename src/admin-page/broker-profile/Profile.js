@@ -16,6 +16,7 @@ import CardWrapper from "./card-wrapper/CardWrapper";
 import PropertyManagement from "../property/PropertyManagement";
 import PropertyManagementNew from "../property/PropertyManagementNew";
 import "./Profile.css";
+import AdminDashboard from "./AdminDashboard/AdminDashboard";
 
 // const tabs = [
 //   { title: "Personal Details", icon: <FiUser /> },
@@ -75,7 +76,7 @@ const tabs = [
 
 const profileSidebarNavContent = [
   {
-    element: <PropertyManagementNew />,
+    element: <AdminDashboard />,
     title: "test",
   },
   {
@@ -160,10 +161,7 @@ const ProfilePage = () => {
                       >
                         <div className="d-flex align-items-center gap-2">
                           <div className="profile__sidebar__wrapper__icon shadow bg-white d-flex justify-content-center align-items-center">
-                            <img
-                              // src={`/assets/profile-page/profile-icon-${
-                              //   index + 1
-                              // }.svg`}
+                            <img                              
                               src={tab.icon}
                               alt="profile icon"
                               className="img-fluid"

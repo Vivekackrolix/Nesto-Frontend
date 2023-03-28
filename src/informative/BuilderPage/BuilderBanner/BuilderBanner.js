@@ -24,7 +24,7 @@ const BuilderBanner = () => {
             </div>
           </div>
           <div className="col-lg-2 builder-banner-col-2" data-aos='zoom-in'>
-            <img src='/assets/informative/builderCartoon.svg' className='builder-banner-cartoon' />
+            <img src='/assets/informative/builderCartoon.svg' alt='builder' className='builder-banner-cartoon' />
           </div>
           <div className='col-lg-4 builder-banner-col-4' data-aos='fade-up'>
             <div className='builder-banner-col-4-div'>

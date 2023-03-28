@@ -11,7 +11,7 @@ const Payment = () => {
           <div className="d-flex bd-highlight mb-3">
             <div className="me-auto p-1 bd-highlight">
               {" "}
-              <img src={dlf} alt="" />
+              <img src={dlf} alt="property" />
             </div>
             <span className="me-auto p-2 bd-highlight">
               <h4>DLF Tower</h4>
@@ -27,7 +27,7 @@ const Payment = () => {
           <div className="d-flex bd-highlight mb-3">
             <div className="me-auto p-1 bd-highlight">
               {" "}
-              <img src={dlf} alt="" />
+              <img src={dlf} alt="property" />
             </div>
             <span className="me-auto p-2 bd-highlight">
               <h4>DLF Tower</h4>
@@ -43,7 +43,7 @@ const Payment = () => {
           <div className="d-flex bd-highlight mb-3">
             <div className="me-auto p-1 bd-highlight">
               {" "}
-              <img src={dlf} alt="" />
+              <img src={dlf} alt="property" />
             </div>
             <span className="me-auto p-2 bd-highlight">
               <h4>DLF Tower</h4>

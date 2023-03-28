@@ -20,7 +20,7 @@ function SampleNextArrow(props) {
       }}
       onClick={onClick}
     >
-      <img className="next-image" src="./assets/next.png" alt="" />
+      <img className="next-image" src="./assets/next.png" alt="next-image" />
     </div>
   );
 }
@@ -39,7 +39,7 @@ function SamplePrevArrow(props) {
       }}
       onClick={onClick}
     >
-      <img className="next-image" src="./assets/back.png" alt="" />
+      <img className="next-image" src="./assets/back.png" alt="next-image" />
     </div>
   );
 }
@@ -165,7 +165,7 @@ const OurPartner = () => {
           {review.map((obj, e) => {
             return (
               <div className="px-4" key={e}>
-                <img src={obj.img} className="partner-image" />
+                <img src={obj.img} className="partner-image" alt='partner' />
               </div>
             );
           })}

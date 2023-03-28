@@ -10,7 +10,7 @@ const AboutBuilder = () => {
             <div className='about-builder_box'>
                 <div className='d-flex align-items-center gap-3'>
                     <div className=''>
-                        <img src='/assets/informative/builder1.png' />
+                        <img src='/assets/informative/builder1.png' alt='builder' />
                     </div>
                     <div>
                         <span className='about-builder_span-2'>Sky Dandelions Apartment</span>

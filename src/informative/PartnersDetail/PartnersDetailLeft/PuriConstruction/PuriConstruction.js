@@ -6,7 +6,7 @@ const PuriConstruction = () => {
     return (
         <div className='mt-5 col-lg-12 d-flex justify-content-start gap-2 align-items-center' data-aos='fade-right'>
             <div>
-                <img src='/assets/profile-card-img.png' />
+                <img src='/assets/profile-card-img.png' alt='profile-card' />
             </div>
             <div>
                 <div className=''>

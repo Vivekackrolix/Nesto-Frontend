@@ -8,7 +8,7 @@ export default function Residency() {
         <div className="container">
           <div className="row residency-row">
             <div className="col-lg-5 residency-col-1" data-aos="fade-right">
-              <img src="./assets/residence.png" className="col-1-img" />
+              <img src="./assets/residence.png" alt='residence' className="col-1-img" />
               <div className="col-1-box">
                 <span className="col-1-box-span_1">The Perfect Residency</span>
                 <span className="col-1-box-span_2">
@@ -28,6 +28,7 @@ export default function Residency() {
                   <img
                     src="/assets/informative/animation.svg"
                     className="animation-svg"
+                    alt='animation'
                   />
                 </div>
               </div>
@@ -35,6 +36,7 @@ export default function Residency() {
                 <img
                   src="/assets/informative/animation-cartoon.png"
                   className="animation-png"
+                  alt='animation'
                 />
               </div>
             </div>

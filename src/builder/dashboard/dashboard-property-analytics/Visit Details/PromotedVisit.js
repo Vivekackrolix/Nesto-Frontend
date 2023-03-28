@@ -42,7 +42,7 @@ const PromotedVisit = () => {
       <Header />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
-        <h1> Visit Details</h1>
+        <h3 className="heading"> Visit Details</h3>
         <div
           className="w-100 btn-group rounded-pill col-2  justify-content-center  py-2 mx-3 row"
           role="group"

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import React, { useEffect } from 'react'
+import { Container, Navbar } from 'react-bootstrap';
 import Information from './Information/Information';
 import './PrivacyPolicy.css'
 import Aos from 'aos';
@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
                 <Navbar expand="lg" bg='light' className="t-c_navbar">
                     <Container>
                         <Navbar.Brand href="#home">
-                            <Link to='/'><img src="/assets/nesto-logo.png" className="t-c_brand-img" /></Link>
+                            <Link to='/'><img src="/assets/nesto-logo.png" alt='nesto-logo' className="t-c_brand-img" /></Link>
                         </Navbar.Brand>
                     </Container>
                 </Navbar>
