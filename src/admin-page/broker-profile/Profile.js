@@ -16,6 +16,7 @@ import CardWrapper from "./card-wrapper/CardWrapper";
 import PropertyManagement from "../property/PropertyManagement";
 import PropertyManagementNew from "../property/PropertyManagementNew";
 import "./Profile.css";
+import AdminDashboard from "./AdminDashboard/AdminDashboard";
 
 // const tabs = [
 //   { title: "Personal Details", icon: <FiUser /> },
@@ -75,7 +76,7 @@ const tabs = [
 
 const profileSidebarNavContent = [
   {
-    element: <PropertyManagementNew />,
+    element: <AdminDashboard />,
     title: "test",
   },
   {

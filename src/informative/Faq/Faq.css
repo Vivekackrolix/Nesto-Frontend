@@ -30,11 +30,8 @@
 .faq-col_box-1 {
     width: 110%;
     z-index: 10;
-    /* padding: ; */
     background: var(--color-white);
-    /* border: .1px solid var(--gray-color); */
     box-shadow: 0 0 10px -5px rgba(0, 0, 0, .2);
-    /* padding: 10px 20px 10px 20px; */
 }
 
 .faq-span {
@@ -106,13 +103,17 @@
     }
 }
 
-@media (max-width: 1200px) and (min-width: 509px) {
-    .faq-span-3 {
-        /* display: block;
-        padding: 10px 0 0 0;
-        cursor: pointer;
-        font-size: 10px;
-        font-weight: 400;
-        color: var(--gray-color); */
+@media (max-width: 992px) {
+    .faq-col_box-1 {
+        width: 100%;
+        z-index: 10;
+        background: var(--color-white);
+        box-shadow: 0 0 10px -5px rgba(0, 0, 0, .2);
+    }
+    .faq-col-2 {
+        z-index: 1;
+        box-shadow: 0 0 14px 0 rgba(0, 0, 0, .065);
+        padding: 40px 30px 30px 30px;
+        border-radius: 14px;
     }
 }
