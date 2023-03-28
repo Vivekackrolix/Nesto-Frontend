@@ -63,7 +63,7 @@ const PropertyDescription = () => {
       paymentPlan,
       termAndCondition,
       brochureUrl,
-      builderId: { description: aboutTheBuilder },
+      builderId: { description: aboutTheBuilder, rating },
       ...propertyDetailsCard
     } = property;
 
@@ -297,7 +297,7 @@ const PropertyDescription = () => {
               />
               {/* <CustomLineChart lineChartData={ lineCharData } /> */}
               <CurrentlyComparing />
-              <RatingReviewCard />
+              <RatingReviewCard rating={rating} />
             </Container>
           </section>
         )}
