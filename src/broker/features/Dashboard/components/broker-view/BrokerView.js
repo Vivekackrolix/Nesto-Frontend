@@ -35,7 +35,11 @@ const BrokerView = () => {
     <Container fluid="lg">
       {getAllBannerIsLoading && <LoadingSpinner />}
       {getAllBannerError && <ErrorMessage />}
-      <SwiperSliderNew swiperData={getAllBannerResponse} pagination />
+      <SwiperSliderNew
+        swiperData={getAllBannerResponse}
+        pagination
+        promotionalBanner
+      />
       <SmallCardSection />
       <section className="mt-3">
         <SearchFilter addBtn />
