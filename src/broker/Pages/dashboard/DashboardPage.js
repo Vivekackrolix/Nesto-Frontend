@@ -72,9 +72,6 @@ const DashboardPage = () => {
           {/* Claim */}
           {/* <Claim /> */}
 
-          {/* property details page */}
-          {/* <PropertyDetails /> */}
-
           {/* Profile page */}
           {/* <ProfilePage /> */}
         </main>

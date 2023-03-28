@@ -1,5 +1,7 @@
 .nes__product__card .card-img-top {
-  border-radius: 13.9236px !important;
+  border-radius: 14px !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .nes__product .card {
@@ -18,6 +20,7 @@
   position: absolute;
   bottom: 7px;
   left: 7px;
+  z-index: 99999;
 }
 
 .nes__product__card__title {
@@ -52,6 +55,10 @@
   font-size: 10px;
   letter-spacing: 0.01em;
   color: #7d7f88;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fe5e6a; /* replace with your desired color */
 }
 
 /* .nes__product__card__image {

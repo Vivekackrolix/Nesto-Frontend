@@ -1,5 +1,6 @@
 /* Ribbon */
 .ribbonStyle {
+  z-index: 9999;
   position: absolute;
   top: 7px;
   z-index: 10;
@@ -62,6 +63,7 @@
   background: #278fd9;
   top: 7px;
   left: 0;
+  z-index: 9999;
 }
 
 /* ribbon style 2 code end here */

@@ -1,11 +1,17 @@
-import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay, Pagination } from 'swiper';
 import { Card, Button, Row, Col } from 'react-bootstrap';
 import { MdShare } from 'react-icons/md';
-import Ribbon from '../ribbon/Ribbon';
 import { RiBuilding2Fill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
+import Ribbon from '../ribbon/Ribbon';
+import 'swiper/css';
+import 'swiper/css/bundle';
+import 'swiper/css/navigation';
 import './ProductCard.css';
 
 const ProductCard = ({
+  _id,
   images,
   name,
   location,
@@ -14,13 +20,9 @@ const ProductCard = ({
   maxPrice,
   discountDescription,
   brokerageValue,
-  // title,
-  // location,
-  // bhk,
-  // price,
-  // discount,
-  // visitAmount,
   view,
+  navigation,
+  pagination,
 }) => {
   return (
     <Card
@@ -30,38 +32,63 @@ const ProductCard = ({
       style={{
         background: '#FFFFFF',
         boxShadow: '0px 3.71188px 16.2395px rgba(0, 0, 0, 0.07)',
-        borderRadius: '13.9444px',
+        borderRadius: '14px',
       }}
     >
       <div className="position-relative">
-        <Card.Img
-          variant="top"
-          src={images[0]}
-          alt="Product Image"
-          className="nes__product__card__image"
-        />
-        {view === 'broker' && (
-          <>
-            <Ribbon cssClass="ribbonStyle" text="Best Seller" />
-            {brokerageValue && (
-              <Ribbon cssClass="ribbonStyle2" text={`${brokerageValue}`} />
+        {/* swiper image code start */}
+        <div className="nes__swiper__slider__new">
+          <Swiper
+            modules={[Navigation, Autoplay, Pagination]}
+            slidesPerView={1}
+            navigation={!!navigation}
+            pagination={pagination ? { clickable: true } : false}
+            autoplay={{ delay: 3000 }}
+            centeredSlides={true}
+            className="mt-0 mb-5 position-relative"
+          >
+            {images
+              ? images.map((imagesItem, index) => (
+                  <SwiperSlide key={index}>
+                    <Card.Img
+                      variant="top"
+                      src={imagesItem}
+                      alt="Product Image"
+                      className="nes__product__card__image"
+                    />
+                  </SwiperSlide>
+                ))
+              : null}
+            {view === 'broker' && (
+              <>
+                <Ribbon cssClass="ribbonStyle" text="Best Seller" />
+                {brokerageValue && (
+                  <Ribbon cssClass="ribbonStyle2" text={`${brokerageValue}`} />
+                )}
+
+                <Button className="nes__product__card__btndark px-4">
+                  Ready To Move
+                </Button>
+              </>
             )}
-
-            <Button className="nes__product__card__btndark px-4">
-              Ready To Move
-            </Button>
-          </>
-        )}
-
-        {view !== 'broker' && (
-          <Button className="nes__product__card__btndark px-4">
-            Ready To Move
-          </Button>
-        )}
+            {view !== 'broker' && (
+              <Button className="nes__product__card__btndark px-4">
+                Ready To Move
+              </Button>
+            )}
+          </Swiper>
+        </div>
+        {/* swiper image code end here */}
       </div>
       <Card.Body className="px-0">
         <div className="px-4">
-          <Card.Title className="nes__product__card__title">{name}</Card.Title>
+          <Card.Title
+            as={Link}
+            to={`/broker/property-details/${_id}`}
+            className="nes__product__card__title"
+          >
+            {name}
+          </Card.Title>
           <Card.Subtitle className="mb-2 text-muted nes__product__card__subtitle">
             {location}
           </Card.Subtitle>

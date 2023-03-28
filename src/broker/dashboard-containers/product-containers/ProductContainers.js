@@ -33,7 +33,7 @@ const ProductContainers = ({ sectionTitle, propertyData, view }) => {
         {propertyData &&
           propertyData.map((property, index) => (
             <Col key={index} xs={12} sm={6} md={4} className="mb-4">
-              <ProductCard {...property} view={view} />
+              <ProductCard {...property} view={view} pagination />
             </Col>
           ))}
       </Row>
