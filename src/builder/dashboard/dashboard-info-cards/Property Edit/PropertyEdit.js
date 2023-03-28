@@ -4,7 +4,6 @@ import brochure from "../../../Images/brochure.png";
 import DashboardHeader from "../../header/DashboardHeader";
 import Axis from "../../../Images/Axis.png";
 import HDFC from "../../../Images/HDFC.png";
-// import { Link } from "react-router-dom";
 import { useState } from "react";
 import AmenitiesPop from "./Amenitiespop";
 import LocationPop from "./LocationPop";
@@ -18,12 +17,12 @@ import canteen from "../../../Images/canteen.png";
 import hospital from "../../../Images/hospital.png";
 import station from "../../../Images/station.png";
 import img from "../../../Images/img.png";
-import loc from "../../../Images/loc.png";
+// import loc from "../../../Images/loc.png";
 import FileUpload from "../../Fileupload/Fileupload";
 import blank from "../../../Images/blank.png";
 import { RiAddFill } from "react-icons/ri";
 import { BsPencilFill } from "react-icons/bs";
-import edit from "../../../Images/edit.png";
+// import edit from "../../../Images/edit.png";
 import SubmitPop from "./Submitpop";
 import CreatableSelect from "react-select/creatable";
 import BankPop from "./BankPop";
@@ -32,12 +31,6 @@ const sort = [
   { value: "Lorem ipsum", label: "Lorem Ipsum" },
 ];
 const PropertyEdit = () => {
-  // const [show, setShow] = useState({
-  //   amenities: false,
-  //   location: false,
-  //   submit: false,
-  // });
-  // console.log(show);
   const [showAmenities, setShowAmenities] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
   const [showSubmit, setShowSubmit] = useState(false);
@@ -53,19 +46,6 @@ const PropertyEdit = () => {
     setShowBank(true);
   };
 
-  // const UploadAndDisplayImage = () => {
-  //   const [images, setImages] = useState([] as any);
-  //   const [imageURLS, setImageURLs] = useState([]);
-  //   useEffect(() => {
-  //     if (images.length < 1) return;
-  //     const newImageUrls: any = [];
-  //     images.forEach((image:any) => newImageUrls.push(URL.createObjectURL(image)));
-  //     setImageURLs(newImageUrls);
-  //   }, [images]);
-
-  //   function onImageChange(e: any) {
-  //     setImages([...e.target.files]);
-  //   }
   return (
     <>
       <DashboardHeader />
@@ -107,7 +87,7 @@ const PropertyEdit = () => {
         </Form.Group>
         <br></br>
         <br></br>
-        <h4>Location</h4>
+        {/* <h4>Location</h4>
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
           style={{ background: "#F8F8F8" }}
@@ -116,7 +96,19 @@ const PropertyEdit = () => {
             <h4>Lorem Ipsum</h4>
             <img src={loc} className="rounded my-3" alt="loc" />
           </div>
-        </Container>
+        </Container> */}
+        <Form.Group className="mb-3">
+          <Form.Label>
+            <h5>Location</h5>
+          </Form.Label>
+          <Form.Control
+            size="lg"
+            className="rounded-0"
+            type="text"
+            placeholder="Lorem Ipsum"
+            // <Form.Img src={loc} className="rounded my-3" alt="loc" />
+          />
+        </Form.Group>
         <br></br>
         <br></br>
         <Form className="profile__form">
@@ -252,9 +244,7 @@ const PropertyEdit = () => {
         <br></br>
         <br></br>
         <h3 className="heading">About the Project</h3>
-        <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-        >
+        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -331,9 +321,7 @@ const PropertyEdit = () => {
             onHide={setShowBank}
           />
         </div>
-        <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3"
-        >
+        <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3">
           <div className="p-4 d-flex justify-content-around">
             <img src={Axis} className="rounded my-3" alt="Home" />
             <img src={HDFC} className="rounded my-3" alt="Home" />
@@ -364,20 +352,24 @@ const PropertyEdit = () => {
         <br></br>
         <div className="d-flex justify-content-between">
           <h3 className="heading"> View Official Brochure</h3>
-          <BsPencilFill
-                  style={{
-                    width: "2.5rem",
-                    height: "2.5rem",
-                    color: "#fff",
-                    background: "#278fd9",
-                    padding: "8px",
-                    borderRadius: "50%",
-                    marginRight: "4px",
-                    marginBottom: "5px",
-                  }}
-                />
+          <span>
+            <button>
+              <BsPencilFill
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  color: "#fff",
+                  background: "#278fd9",
+                  padding: "8px",
+                  borderRadius: "50%",
+                  marginRight: "4px",
+                  marginBottom: "5px",
+                }}
+              />
+            </button>
+          </span>
         </div>
-        <br />
+        {/* <br /> */}
         <div className="gx-4 dashboard-cards align-items-center">
           <img src={brochure} className="rounded my-3 w-100" alt="Home" />
         </div>

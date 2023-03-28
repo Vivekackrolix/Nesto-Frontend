@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import { IconContext } from "react-icons/lib";
+// import { IconContext } from "react-icons/lib";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import AddRole from "./AddRole";
 import { BsPencilFill } from "react-icons/bs";
@@ -21,7 +21,6 @@ const ManageRole = (props) => {
         {
           headers: {
             Authorization:
-              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
               "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
           },
         }
@@ -56,18 +55,18 @@ const ManageRole = (props) => {
           <Col onClick={onRole} role="button">
             {" "}
             <BsPencilFill
-                  style={{
-                    width: "0.95rem",
-                    height: "0.95rem",
-                    color: "#fff",
-                    background: "#278fd9",
-                    padding: "2px",
-                    borderRadius: "50%",
-                    marginRight: "4px",
-                    marginBottom: "5px",
-                  }}
-                />
-            <AddRole show={role.role} onChange={setRole} />
+              style={{
+                width: "0.95rem",
+                height: "0.95rem",
+                color: "#fff",
+                background: "#278fd9",
+                padding: "2px",
+                borderRadius: "50%",
+                marginRight: "4px",
+                marginBottom: "5px",
+              }}
+            />
+            <AddRole show={role} onChange={setRole} />
           </Col>
           <Col>
             {visible && (

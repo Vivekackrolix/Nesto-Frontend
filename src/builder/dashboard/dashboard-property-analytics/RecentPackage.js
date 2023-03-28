@@ -3,8 +3,30 @@ import { Button, Col, Row } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const RecentPackage = () => {
+  const [data, setData] = useState([]); //Later use redux
+  useEffect(() => {
+    const getSubscription = async () => {
+      const response = await axios.get(
+        "http://localhost:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
+        // formData,
+        {
+          headers: {
+            Authorization:
+              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+      setData(response.data.data);
+    };
+
+    getSubscription();
+  }, []);
+
   return (
     <>
       <h3 className="heading">Recent Package</h3>
@@ -16,6 +38,7 @@ const RecentPackage = () => {
             style={{ padding: "40px" }}
           >
             <h4 className="fw-bold">Silver Plan</h4>
+            {/* <h4 className="fw-bold">{data.planId.name}</h4> */}
             <p style={{ opacity: "0.6" }}>The perfect all-rounder</p>
             <p className="fw-bold">₹ 99/per-month</p>
           </Col>

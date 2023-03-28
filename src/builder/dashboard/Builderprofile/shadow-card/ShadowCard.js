@@ -1,5 +1,5 @@
-import Card from 'react-bootstrap/Card';
-import './ShadowCard.css';
+import Card from "react-bootstrap/Card";
+import "./ShadowCard.css";
 
 function ShadowCard({ itemLength, title, text }) {
   return (

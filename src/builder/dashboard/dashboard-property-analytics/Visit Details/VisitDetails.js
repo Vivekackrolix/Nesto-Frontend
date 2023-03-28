@@ -7,13 +7,14 @@ import axios from "axios";
 
 import VisitDetailItem from "./VisitDetailItem";
 import Header from "../../../header/Header";
-import DashboardTabs from "../../Builderprofile/dashboard-tabs/DashboardTabs";
+// import DashboardTabs from "../../Builderprofile/dashboard-tabs/DashboardTabs";
 const VisitDetails = () => {
   const [data, setData] = useState({}); //Later use redux
   useEffect(() => {
     const getVisit = async () => {
       const response = await axios.get(
-        "http://13.233.149.97:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
+        // "http://13.233.149.97:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
+        "http://localhost:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
 
         {
           headers: {
