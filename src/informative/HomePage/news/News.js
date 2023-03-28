@@ -35,7 +35,7 @@ export default function News() {
                 <div className="col-lg-4 col-md-6 text-left">
                   <div className="news-box">
                     <Link to="/blog-list">
-                      <img src={item.img} className="news-image" />
+                      <img src={item.img} className="news-image" alt='news-image' />
                     </Link>
                     <div className="news-box-2">
                       <div className="news-date">

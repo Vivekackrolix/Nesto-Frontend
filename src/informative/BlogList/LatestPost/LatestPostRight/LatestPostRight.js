@@ -68,13 +68,13 @@ const LatestPostRight = () => {
                 return (
                   <div className='latest-left_box-2 gap-3'>
                     <div className='latest-left_box-3'>
-                      <img className='latest-left_img-1' src={item.img} />
+                      <img className='latest-left_img-1' src={item.img} alt='latest' />
                     </div>
                     <div className='latest-left_box-4'>
                       <span className='latest-left_span-2'>{item.para}</span>
                       <div className='mt-1'>
                         <span>
-                          <img src={item.userImg} className='latest-left_img-2' />
+                          <img src={item.userImg} className='latest-left_img-2' alt='latest' />
                           <span className='latest-left_span-3'> {item.name}</span>
                         </span>
                       </div>

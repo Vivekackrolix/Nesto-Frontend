@@ -23,19 +23,19 @@ const FifthCard = () => {
                     <span className='fifth-card__span-3'>Here's why NestoHub:</span>
                     <div className='fifth-card__box-4 mt-5'>
                         <div className='d-flex gap-3 align-items-center pb-5'>
-                            <img src='/assets/informative/square-dot.png' className='fifth-card__dot' />
+                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='fifth-card__dot' />
                             <li className='fifth-card__li'>Get Access to 4 Lakh + Buyers</li>
                         </div>
                         <div className='d-flex gap-3 align-items-center pb-5'>
-                            <img src='/assets/informative/square-dot.png' className='fifth-card__dot' />
+                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='fifth-card__dot' />
                             <li className='fifth-card__li'>Sell Faster with Premium Service</li>
                         </div>
                         <div className='d-flex gap-3 align-items-center pb-5'>
-                            <img src='/assets/informative/square-dot.png' className='fifth-card__dot' />
+                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='fifth-card__dot' />
                             <li className='fifth-card__li'>Find only Genuine Leads</li>
                         </div>
                         <div className='d-flex gap-3 align-items-center pb-5'>
-                            <img src='/assets/informative/square-dot.png' className='fifth-card__dot' />
+                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='fifth-card__dot' />
                             <li className='fifth-card__li'>Get Expert advice on Market Trends & insights</li>
                         </div>
                     </div>

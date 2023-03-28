@@ -116,7 +116,7 @@ const Testimonial = () => {
     <>
       <div className=" main-testimonial-body py-5">
         <div className="quote-image d-flex flex-row-reverse ">
-          <img src="./assets/quote.png" alt="" />
+          <img src="./assets/quote.png" alt="quote" />
         </div>
         <div className="heading">
           <Heading
@@ -163,7 +163,7 @@ const Testimonial = () => {
                           <img
                             className="person-image"
                             src="./assets/person.png"
-                            alt=""
+                            alt="person"
                           />
                           {/* <Image src={testimonialimage} className="w-16 h-16" /> */}
                         </div>

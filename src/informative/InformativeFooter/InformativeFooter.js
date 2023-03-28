@@ -10,13 +10,13 @@ const InformativeFooter = () => {
                     <div className='container-fluid'>
                         <div className='row'>
                             <div className='col-lg-3 footer-col-1'>
-                                <img src='/assets/informative/informative-footer-logo.svg' className='informative-footer_logo' />
+                                <img src='/assets/informative/informative-footer-logo.svg' alt='footer-logo' className='informative-footer_logo' />
                                 <span className='footer-col-1-span'>We’re reimagining how you buy, sell and rent. It’s now easier to get into a place you love. So let’s do this, together.</span>
                                 <div className='informative-footer-icons-div'>
-                                    <img src='/assets/informative/footerSocialIcon4.svg' className='footer-col-1-icons' />
-                                    <img src='/assets/informative/footerSocialIcon3.svg' className='footer-col-1-icons' />
-                                    <img src='/assets/informative/footerSocialIcon2.svg' className='footer-col-1-icons' />
-                                    <img src='/assets/informative/footerSocialIcon1.svg' className='footer-col-1-icons' />
+                                    <img src='/assets/informative/footerSocialIcon4.svg' alt='social' className='footer-col-1-icons' />
+                                    <img src='/assets/informative/footerSocialIcon3.svg' alt='social' className='footer-col-1-icons' />
+                                    <img src='/assets/informative/footerSocialIcon2.svg' alt='social' className='footer-col-1-icons' />
+                                    <img src='/assets/informative/footerSocialIcon1.svg' alt='social' className='footer-col-1-icons' />
                                 </div>
                             </div>
                             <div className='col-lg-3 footer-col-2'>
@@ -35,7 +35,7 @@ const InformativeFooter = () => {
                                 <span className='footer-col-1-span'>Duis mattis laoreet neque, et ornare neque sollicitudin at. Proin sagittis dolor sed...</span>
                                 <div className='footer-mail-div gap-3'>
                                     <div className=''>
-                                        <img src='/assets/informative/ContactMail.svg' className='footer-mail-img' />
+                                        <img src='/assets/informative/ContactMail.svg' alt='footer-mail' className='footer-mail-img' />
                                     </div>
                                     <div>
                                         <Link to='/'><span className='footer-mail-span'>info@nestohub.com</span></Link>

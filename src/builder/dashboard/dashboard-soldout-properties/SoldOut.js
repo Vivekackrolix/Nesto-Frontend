@@ -69,12 +69,11 @@ const SoldOut = ({ data }) => {
           Recently Sold Out Property
         </h3>
         <a
-          className="col-4 text-end w-auto"
+          className="col-4 text-danger text-end w-auto"
           as={Link}
           href="/builder/home-dashboard/recentlysold"
-          style={{color: "#FC5C67"}}
         >
-          View all
+          View All
         </a>
       </div>
       {/* <div className="mt-4">{propertyListing}</div> */}

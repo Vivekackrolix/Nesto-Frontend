@@ -21,24 +21,24 @@ const BannerSlider = () => {
                 <div className='slider-div'>
                     <Slider {...settings}>
                         <div className='d-flex slider-div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
-                            <img src='/assets/informative/cartoon.png' className='cartoon_img' />
-                            <img src="/assets/informative/homeSlider-1.png" className='slider-img' />
+                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' alt='arrow'/>
+                            <img src='/assets/informative/cartoon.png' className='cartoon_img' alt='arrow' />
+                            <img src="/assets/informative/homeSlider-1.png" className='slider-img' alt='slider-img' />
                         </div>
                         <div className='d-flex slider-div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
-                            <img src='/assets/informative/cartoon.png' className='cartoon_img' />
-                            <img src="/assets/informative/homeSlider-2.jpg" className='slider-img' />
+                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' alt='arrow' />
+                            <img src='/assets/informative/cartoon.png' className='cartoon_img' alt='cartoon' />
+                            <img src="/assets/informative/homeSlider-2.jpg" className='slider-img' alt='slider' />
                         </div>
                         <div className='d-flex slider-div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
-                            <img src='/assets/informative/cartoon.png' className='cartoon_img' />
-                            <img src="/assets/informative/homeSlider-3.jpg" className='slider-img' />
+                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' alt='arrow' />
+                            <img src='/assets/informative/cartoon.png' className='cartoon_img' alt='cartoon' />
+                            <img src="/assets/informative/homeSlider-3.jpg" className='slider-img' alt='slider' />
                         </div>
                         <div className='d-flex slider-div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
-                            <img src='/assets/informative/cartoon.png' className='cartoon_img' />
-                            <img src="/assets/informative/homeSlider-4.jpeg" className='slider-img' />
+                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' alt='arrow' />
+                            <img src='/assets/informative/cartoon.png' className='cartoon_img' alt='cartoon' />
+                            <img src="/assets/informative/homeSlider-4.jpeg" className='slider-img' alt='slider' />
                         </div>
                     </Slider>
                 </div>

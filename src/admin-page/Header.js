@@ -80,7 +80,7 @@ export default function Header() {
                 as={Link}
                 to="/builder/home-dashboard/profile"
               >
-                {/* <img src={profile} alt="profile" /> */}
+               
               </Nav.Item>
             </div>
           </Nav>

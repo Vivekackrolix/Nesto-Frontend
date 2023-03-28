@@ -103,7 +103,7 @@ const PartnerCard = () => {
                         <div className="col-md-4">
                             <div className="partner-card-div" >
                                 <div className="">
-                                    <img className="partner-card-img-div" src={item.img} />
+                                    <img className="partner-card-img-div" src={item.img} alt='partner-card' />
                                     <span className='partner-card-heading'>{item.heading}</span>
                                     <span className="partner-card-span">{item.subHeading}</span>
                                     <div className="flex partner-star-div">

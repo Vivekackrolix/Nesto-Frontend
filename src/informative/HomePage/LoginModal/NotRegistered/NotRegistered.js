@@ -10,6 +10,7 @@ const NotRegistered = ({ show, onHide }) => {
                 <img
                     src="./assets/informative/notRegister.gif"
                     className="not-register-img"
+                    alt='not-register'
                 />
                 <div>
                     <span className="not-register-heading">Not Registered</span>
