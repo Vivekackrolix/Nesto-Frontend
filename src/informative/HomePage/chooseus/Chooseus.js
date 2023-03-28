@@ -35,7 +35,7 @@ export default function ChooseUs() {
               <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
                 <div className="choose-card">
                   <div className="choose-icon-div">
-                    <img src={item.img} className="choose-icon-img" />
+                    <img src={item.img} className="choose-icon-img" alt='choose' />
                   </div>
                   <div className="">
                     <h5 className="card-heading">{item.title}</h5>

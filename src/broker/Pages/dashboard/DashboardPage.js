@@ -67,7 +67,7 @@ const DashboardPage = () => {
           /> */}
 
           {/* Brokerage Management */}
-          {/* <BrokerageManagement /> */}
+          {/* <BrokerageManagement />
 
           {/* Claim */}
           {/* <Claim /> */}

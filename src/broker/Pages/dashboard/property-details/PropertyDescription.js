@@ -53,8 +53,7 @@ const PropertyDescription = () => {
                 <img
                   src="/assets/broker/property-img.png"
                   alt="Property"
-                  className="h-100
-                  "
+                  className="h-100"
                 />
                 <div className="nes__broker__swiper__item__media__body">
                   <h5 className="m-0">DLF Tower</h5>

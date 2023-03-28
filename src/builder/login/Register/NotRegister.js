@@ -16,7 +16,7 @@ const NotRegister = (props) => {
           <h6 className="  d-flex justify-content-center">
             <img
               src={notregs}
-              alt=""
+              alt="notregs"
               style={{
                 width: "121.99px",
                 height: "121.99px",

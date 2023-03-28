@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import './SearchBar.css'
-import { BsSearch, BsMic, BsGeoAlt } from "react-icons/bs";
+import { BsSearch, BsMic } from "react-icons/bs";
 import { MdLocationSearching } from 'react-icons/md'
-import { InputGroup, FormControl, Button, Form } from "react-bootstrap";
+import { InputGroup, FormControl, Button} from "react-bootstrap";
 import { IoMdAdd } from "react-icons/io";
 
 const SearchBar = ({ addBtn }) => {

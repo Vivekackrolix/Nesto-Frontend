@@ -12,7 +12,7 @@ const ListProperty = () => {
                 </Link>
             </div>
             <div className='col-lg-5 listing-container_col-2'>
-                <img src='/assets/informative/listing1.png' className='listing-container_img' />
+                <img src='/assets/informative/listing1.png' alt='listing' className='listing-container_img' />
             </div>
         </div>
     )

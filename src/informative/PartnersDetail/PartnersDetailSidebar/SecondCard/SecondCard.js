@@ -14,7 +14,7 @@ const SecondCard = ({url}) => {
                         <div className='d-flex gap-2 second-card__btn-div'>
                             <Link to='/' className='second-card__btn d-flex align-items-center rounded-3'>
                                 <div>
-                                    <img src='/assets/google-play.png' className='second-card__icon' />
+                                    <img src='/assets/google-play.png' alt='gooogle-play' className='second-card__icon' />
                                 </div>
                                 <div className='d-flex flex-column'>
                                     <span className='second-card__icon-span-1'>GET IT ON</span>
@@ -23,7 +23,7 @@ const SecondCard = ({url}) => {
                             </Link>
                             <Link to='/' className='second-card__btn d-flex align-items-center rounded-3'>
                                 <div>
-                                    <img src='/assets/apple.png' className='second-card__icon' />
+                                    <img src='/assets/apple.png' alt='apple' className='second-card__icon' />
                                 </div>
                                 <div className='d-flex flex-column'>
                                     <span className='second-card__icon-span-1'>Download on the</span>
@@ -32,7 +32,7 @@ const SecondCard = ({url}) => {
                             </Link>
                         </div>
                         <div className='second-card__box-2' data-aos="flip-left">
-                            <img src={url} className='second-card__img-1' />
+                            <img src={url} className='second-card__img-1' alt='secont-card' />
                         </div>
                     </div>
                 </div>

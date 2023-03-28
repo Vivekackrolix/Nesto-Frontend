@@ -16,7 +16,7 @@ const PastPropertyList = ({ data }) => {
             <Row>
               <Col className="d-flex justify-content-between">
                 <Row>Sky Danelions Apartment</Row>
-                <img src={subs} alt="" />
+                <img src={subs} alt="property" />
               </Col>
               <Row style={{ opacity: 0.5 }}>
                 Luxury Apartment in Sector-29,Gurugram
@@ -26,7 +26,7 @@ const PastPropertyList = ({ data }) => {
               <br></br>
 
               <Row>
-                <img src={buld} alt="" />
+                <img src={buld} alt="build" />
               </Row>
               <br></br>
             </Row>
@@ -62,7 +62,7 @@ const PastPropertyList = ({ data }) => {
                 className="btn btn-outline-primary rounded-pill"
                 style={{ color: "#278FD9" }}
               >
-                <img src={edit} alt="" />
+                <img src={edit} alt="edit" />
                 Edit
               </button>
             </div>

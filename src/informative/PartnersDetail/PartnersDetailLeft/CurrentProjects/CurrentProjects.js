@@ -84,7 +84,7 @@ const CurrentProjects = () => {
                                 <div className='col-lg-6 current-project-slider_col-1'>
                                     <div className='h-100'>
                                         <span className='current-project-slider_tag'>{item.tag}</span>
-                                        <img src={item.img} className='current-project-slider_img' />
+                                        <img src={item.img} className='current-project-slider_img' alt='project-slider'/>
                                         <span
                                             className='current-project-slider_icon1'
                                             onClick={heartChange}

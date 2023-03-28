@@ -45,7 +45,7 @@ const ArticleNews = () => {
                                     <div className='article-news_box-5'>
                                         <div className=''>
                                             <span className='article-news_span-2'>
-                                                <img src={item.img} /> {item.name}
+                                                <img src={item.img} alt='article' /> {item.name}
                                             </span>
                                         </div>
                                         <div className='pb-1'>

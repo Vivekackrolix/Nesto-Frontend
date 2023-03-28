@@ -1,7 +1,7 @@
 import React from 'react';
 import CustomModal from '../../../components/common/CustomModal';
 import './LoginModal.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const LoginModal = ({ show, onHide }) => {
   return (
@@ -25,6 +25,7 @@ const LoginModal = ({ show, onHide }) => {
               <img
                 src="./assets/informative/profile.png"
                 className="login-modal-img"
+                alt='login-modal'
               />
             </span>
           </div>
@@ -39,6 +40,7 @@ const LoginModal = ({ show, onHide }) => {
               <img
                 src="./assets/informative/profile.png"
                 className="login-modal-img"
+                alt='login-modal'
               />
             </span>
           </div>
@@ -53,6 +55,7 @@ const LoginModal = ({ show, onHide }) => {
               <img
                 src="./assets/informative/profile.png"
                 className="login-modal-img"
+                alt='login-modal'
               />
             </span>
           </div>
