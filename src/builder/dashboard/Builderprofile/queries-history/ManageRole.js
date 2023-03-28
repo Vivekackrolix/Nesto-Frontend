@@ -55,18 +55,18 @@ const ManageRole = (props) => {
           <Col onClick={onRole} role="button">
             {" "}
             <BsPencilFill
-                  style={{
-                    width: "0.95rem",
-                    height: "0.95rem",
-                    color: "#fff",
-                    background: "#278fd9",
-                    padding: "2px",
-                    borderRadius: "50%",
-                    marginRight: "4px",
-                    marginBottom: "5px",
-                  }}
-                />
-            <AddRole show={role.role} onChange={setRole} />
+              style={{
+                width: "0.95rem",
+                height: "0.95rem",
+                color: "#fff",
+                background: "#278fd9",
+                padding: "2px",
+                borderRadius: "50%",
+                marginRight: "4px",
+                marginBottom: "5px",
+              }}
+            />
+            <AddRole show={role} onChange={setRole} />
           </Col>
           <Col>
             {visible && (

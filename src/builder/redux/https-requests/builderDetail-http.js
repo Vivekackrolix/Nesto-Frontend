@@ -6,7 +6,7 @@ export const getBuilderDetail = () => {
     //HTTP REQ
     const getData = async () => {
       const response = await axios.get(
-        "http://13.234.136.165:3000/api/v1/builder/getAllBuilder",
+        "http://localhost:3000/api/v1/builder/getAllBuilder",
         {
           headers: {
             Authorization:
@@ -14,7 +14,7 @@ export const getBuilderDetail = () => {
           },
         }
       );
-
+      console.log(response.data);
       return response.data;
     };
 

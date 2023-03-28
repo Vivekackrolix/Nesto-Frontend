@@ -18,7 +18,8 @@ const RecentlySoldOutProperty = (props) => {
     const getBoughtProperties = async () => {
       debugger;
       const response = await axios.get(
-        "http://13.233.149.97:3000/api/v1/boughtProperty/getAllBoughtProperty",
+        // "http://13.233.149.97:3000/api/v1/boughtProperty/getAllBoughtProperty",
+        "http://localhost:3000/api/v1/boughtProperty/getAllBoughtProperty",
         {
           headers: {
             Authorization:
@@ -54,8 +55,9 @@ const RecentlySoldOutProperty = (props) => {
           <div>
             <div>
               {" "}
-              <Link  className="sold-heading"
-                to="/builder/home-dashboard/description"
+              <Link
+                className="sold-heading"
+                to={`/builder/home-dashboard/description/${itm.propertyId._id}`}
               >
                 {itm.propertyId === null ? "no data Name" : itm.propertyId.name}
                 {/* {itm.propertyId.companyName} */}
@@ -110,7 +112,9 @@ const RecentlySoldOutProperty = (props) => {
           </h3>
         </div>
 
-        <div className="mt-2 row w-100 justify-content-between ms-0">{propertyListing}</div>
+        <div className="mt-2 row w-100 justify-content-between ms-0">
+          {propertyListing}
+        </div>
       </Container>
       <Footer />
     </>

@@ -1,12 +1,12 @@
 import "./DashboardHeader.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import profile from "../../Images/Profile.png";
-import bgImage from "../../Images/bg-image.png";
+// import bgImage from "../../Images/bg-image.png";
 import { Link } from "react-router-dom";
-import { BsFillBellFill } from "react-icons/bs";
+// import { BsFillBellFill } from "react-icons/bs";
 import { GiWallet } from "react-icons/gi";
 
-import notification from "../../Images/notification.png";
+// import notification from "../../Images/notification.png";
 
 import property from "../../Images/property.png";
 import Brokerage from "../../Images/brokrage.png";
@@ -50,7 +50,8 @@ const DashboardHeader = () => {
                 Brokerage
               </Nav.Item>
             </Nav>
-            <Nav className="mx-auto gap-2 ">
+            {/* <Nav className="mx-auto gap-2 "> */}
+            <Nav className="d-flex col-3 ms-auto align-items-center justify-content-end gap-2">
               <Nav.Item>
                 <div className="nes__navbar__right__circle rounded-circle d-flex align-items-center justify-content-center">
                   <GiWallet />

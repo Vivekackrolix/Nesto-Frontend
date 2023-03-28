@@ -1,15 +1,17 @@
 import AccordionCard from "../accordion/AccordionCard";
-// import ShadowCard from "../shadow-card/ShadowCard";
+import ShadowCard from "../shadow-card/ShadowCard";
 import "./RaiseQuery.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Form } from "react-bootstrap";
 
 const RaiseQuery = () => {
-  const [data, setData] = useState({}); //Later use redux
+  const [queryData, setQueryData] = useState([]); //Later use redux
   useEffect(() => {
     const getQuery = async () => {
       const response = await axios.get(
-        "http://13.233.149.97:3000/api/v1/raiseQuery/getAllRaiseQuery",
+        // "http://13.233.149.97:3000/api/v1/raiseQuery/getAllRaiseQuery",
+        "http://localhost:3000/api/v1/raiseQuery/getAllRaiseQuery",
 
         {
           headers: {
@@ -21,15 +23,38 @@ const RaiseQuery = () => {
       debugger;
 
       console.log(response.data);
-      setData(response.data.data);
+      setQueryData(response.data.data);
     };
 
     getQuery();
   }, []);
 
-  // const recentQuery = data.map((itm, index) => {
-  //   return <></>;
-  // });
+  const recentQuery = queryData.map((data, index) => {
+    return (
+      // <Form.Group className="mb-3">
+      //   <Form.Label>
+      //     <h5>{data.subject}</h5>
+      //   </Form.Label>
+      //   <Form.Control
+      //     size="lg"
+      //     className="rounded-0"
+      //     type="text"
+      //     placeholder={data.description}
+      //   />
+      // </Form.Group>
+      // <div>
+      <ShadowCard
+        itemLength={queryData.length}
+        // itemLength={data.totalCount}
+        // title="Loreum ipsum dolor sit amet, consectetur elit"
+        title={data.subject}
+        // text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        //  labore et dolore magna aliqua. Ut."
+        text={data.description}
+      />
+      // </div>
+    );
+  });
   return (
     <>
       {/* <ShadowCard
@@ -41,6 +66,11 @@ const RaiseQuery = () => {
         //  labore et dolore magna aliqua. Ut."
         text={data.description}
       /> */}
+
+      <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        {recentQuery}
+      </div>
+
       <div className="mt-5 mb-3 chat-text">Chat With Us</div>
       {/* <div className="mt-2 row justify-content-around">{recentQuery}</div> */}
       <AccordionCard itemLength={1} accordionTitle="Contact 24×7 Help" />

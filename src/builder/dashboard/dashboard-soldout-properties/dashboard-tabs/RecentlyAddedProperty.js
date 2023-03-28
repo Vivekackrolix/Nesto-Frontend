@@ -22,7 +22,8 @@ const RecentlyAddedProperty = (props) => {
     const getAddedProperties = async () => {
       debugger;
       const response = await axios.get(
-        "http://13.233.149.97:3000/api/v1/property/getAllproperty",
+        // "http://13.233.149.97:3000/api/v1/property/getAllproperty",
+        "http://localhost:3000/api/v1/property/getAllproperty",
         {
           headers: {
             Authorization:
@@ -62,7 +63,8 @@ const RecentlyAddedProperty = (props) => {
               <Col md={10} sm={10}>
                 <div>
                   {" "}
-                  <Link className="recent-heading"
+                  <Link
+                    className="recent-heading"
                     to="/builder/home-dashboard/description"
                   >
                     {/* {itm.propertyId === null ? "no data Name" : itm._id.name} */}

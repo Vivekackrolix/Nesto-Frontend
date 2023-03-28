@@ -5,10 +5,9 @@ import claim from "../../../../Images/claim.png";
 import { GrDocumentPdf } from "react-icons/gr";
 import Footer from "../../../Footer/Footer";
 import Header from "../../../../header/Header";
-// import Rating from "./Rating";
+
 import { useState } from "react";
 import Payment from "./Payment";
-// import { RiShowersFill } from "react-icons/ri";
 
 const PropertyClaim = () => {
   const [showPayment, setShowPayment] = useState(false);
@@ -105,8 +104,6 @@ const PropertyClaim = () => {
         <br />
         <h3>Brokerage plan</h3>
 
-        {/* <br /> */}
-
         <Container
           className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
           style={{
@@ -124,7 +121,6 @@ const PropertyClaim = () => {
             <span>
               <h6 style={{ color: "#8B9199" }}>Builder Form</h6>
               <h1>
-                {" "}
                 <GrDocumentPdf />
               </h1>
             </span>
@@ -203,8 +199,6 @@ const PropertyClaim = () => {
               <Payment show={showPayment} onHide={onPayClick} />
               <h5 style={{ color: "#278FD9" }} onClick={onPayClick}>
                 Pay Now
-                {/* {show.payment && ( */}
-                {/* )} */}
               </h5>
             </div>
             <hr />
@@ -221,7 +215,6 @@ const PropertyClaim = () => {
               </button>
 
               <h3>
-                {" "}
                 <GrDocumentPdf />
               </h3>
 
@@ -313,7 +306,6 @@ const PropertyClaim = () => {
               </button>
 
               <h3>
-                {" "}
                 <GrDocumentPdf />
               </h3>
 
@@ -406,7 +398,6 @@ const PropertyClaim = () => {
               </button>
 
               <h3>
-                {" "}
                 <GrDocumentPdf />
               </h3>
 
