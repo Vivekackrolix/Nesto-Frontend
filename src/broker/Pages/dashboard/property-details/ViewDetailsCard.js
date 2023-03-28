@@ -9,6 +9,8 @@ const ViewDetailsCard = ({
   media,
   img,
   propertyDescription,
+  loanApprovedByIds,
+  aboutTheBuilder,
 }) => {
   return (
     <Card
@@ -31,30 +33,24 @@ const ViewDetailsCard = ({
           img ? `shadow-sm border-0` : ''
         }`}
       >
-        {/* {media && (
-          <div className="video-overlay">
-            <h2>Sky Apartment Brochure</h2>
-          </div>
-        )} */}
         {img && (
           <Row>
-            {Array.from({ length: 4 }, (_, index) => (
+            {loanApprovedByIds.map(({ _id, name, image }) => (
               <Col
-                key={index}
+                key={_id}
                 md={3}
                 className="d-flex justify-content-center align-items-center"
               >
-                <img
-                  src="/assets/bank-img1.png"
-                  className="img-fluid"
-                  alt="bank img"
-                />
+                <img src={image} className="img-fluid" alt={name} />
               </Col>
             ))}
           </Row>
         )}
         {!media && !img && propertyDescription && (
           <Card.Text>{propertyDescription}</Card.Text>
+        )}
+        {!media && !img && aboutTheBuilder && (
+          <Card.Text>{aboutTheBuilder}</Card.Text>
         )}
         {media && (
           <div className="video-wrapper">

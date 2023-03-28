@@ -50,6 +50,8 @@ const PropertyDescription = () => {
       floorPlanAndPricing,
       locationAdvantages,
       propertyAdvertiseMentDetails,
+      loanApprovedByIds,
+      builderId: { description: aboutTheBuilder },
       ...propertyDetailsCard
     } = property;
 
@@ -108,11 +110,6 @@ const PropertyDescription = () => {
               {/* hero sectiob details code end here */}
               <PropertyDetailsCard propertyDetailsCard={propertyDetailsCard} />
 
-              <ViewDetailsCard
-                title="Description"
-                propertyDescription={propertyDescription}
-                bg
-              />
               <div className="nes__dashboard__largeicons">
                 {/* amenities */}
                 <Card className="border-0 shadow-none bg-transparent property__details__iconcard mb-4">
@@ -237,11 +234,26 @@ const PropertyDescription = () => {
               <ViewDetailsCard
                 title="About The Project"
                 link="View Details"
+                propertyDescription={propertyDescription}
                 bg
               />
+
               <div className="nes__dashboard__banks">
-                <ViewDetailsCard title="Loan Approved By" link="View All" img />
+                <ViewDetailsCard
+                  title="Loan Approved By"
+                  link="View All"
+                  img
+                  loanApprovedByIds={loanApprovedByIds}
+                />
               </div>
+
+              <ViewDetailsCard
+                title="About the Builder"
+                link="View Details"
+                aboutTheBuilder={aboutTheBuilder}
+                bg
+              />
+
               <ViewDetailsCard title="View official brochure" media />
               <ViewDetailsCard
                 title="Terms &b Conditions"
