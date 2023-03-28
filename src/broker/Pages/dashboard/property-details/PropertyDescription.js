@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { Card, Container, Image } from 'react-bootstrap';
+import { Card, Col, Container, Image, Row } from 'react-bootstrap';
 import { Footer, Header, HeroSection, Ribbon } from '../../../features';
 import IconsCard from './IconsCard';
 import ViewDetailsCard from './ViewDetailsCard';
@@ -47,7 +47,9 @@ const PropertyDescription = () => {
       floorPlanAndPricing,
       ...propertyDetailsCard
     } = property;
-    console.log(property);
+    console.log('Amenities');
+    console.log(amenities);
+    console.log('Amenities');
     return (
       <>
         <Header />
@@ -109,13 +111,40 @@ const PropertyDescription = () => {
                 bg
               />
               <div className="nes__dashboard__largeicons">
-                <IconsCard
-                  propertyAmenities={amenities}
-                  length={10}
-                  title="Project Amenities"
-                  iconTitle={false}
-                  col={5}
-                />
+                {/* amenities */}
+                <Card className="border-0 shadow-none bg-transparent property__details__iconcard mb-4">
+                  <Card.Header className="bg-transparent border-0 mt-3 px-0">
+                    <Card.Title className="fw-bold">
+                      Project Amenities
+                    </Card.Title>
+                  </Card.Header>
+                  <Card.Body className="border rounded">
+                    <Row className="g-4">
+                      {!!amenities.length &&
+                        amenities.map(({ iconUrl, _id, name }) => (
+                          <Col
+                            style={{ flex: `0 0 calc(100% / ${5})` }}
+                            key={_id}
+                            className="d-flex justify-content-center align-items-center"
+                          >
+                            <div className="d-flex flex-column gap-1 justify-content-center align-items-center">
+                              <img
+                                width={20}
+                                src={iconUrl}
+                                alt={{ name }}
+                                className="img-fluid mb-2"
+                              />
+
+                              <span className="property__details__iconcard__iconsubtitle">
+                                {name}
+                              </span>
+                            </div>
+                          </Col>
+                        ))}
+                    </Row>
+                  </Card.Body>
+                </Card>
+                {/* amenities code end here */}
               </div>
               <div className="nes__dashboard__smallicons">
                 {/* <IconsCard
