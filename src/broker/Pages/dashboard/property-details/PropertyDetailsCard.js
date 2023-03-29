@@ -6,7 +6,7 @@ import { RiBuilding2Fill } from 'react-icons/ri';
 
 const Availability = ({ propertyDetailsCard }) => {
   return (
-    <div className="broker__property__details__availability d-flex justify-content-between mt-3">
+    <div className="broker__property__details__availability d-flex justify-content-between mt-4 mb-5">
       <div className="broker__property__details__availability__left d-flex gap-2">
         <div className="py-1 px-3">Under Constructions</div>
         <div className="py-1 px-3">{propertyDetailsCard.possessionDate}</div>
@@ -30,13 +30,9 @@ const Rating = ({ propertyDetailsCard }) => {
 
 const PropertyDetailsCard = ({ propertyDetailsCard }) => {
   return (
-    <section className="mt-5 broker__property__details">
+    <section className="mt-3 broker__property__details">
       <Container>
-        <HeroSection details />
         <Availability propertyDetailsCard={propertyDetailsCard} />
-
-        {/* property details description card */}
-
         <Card
           bg="white"
           border="0"

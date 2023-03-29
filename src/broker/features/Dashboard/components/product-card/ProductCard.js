@@ -45,7 +45,6 @@ const ProductCard = ({
             slidesPerView={1}
             navigation={!!navigation}
             pagination={pagination ? { clickable: true } : false}
-            autoplay={{ delay: 3000 }}
             centeredSlides={true}
             className="mt-0 mb-5 position-relative"
           >
