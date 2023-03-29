@@ -8,6 +8,7 @@ import Register from './Pages/Register';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import PropertyDescription from './Pages/dashboard/property-details/PropertyDescription';
+import ScrollToTop from './Common/scroll-to-top/ScrollToTop';
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => {
       <PersistGate loading={null} persistor={persistor}>
         <QueryClientProvider client={queryClient}>
           <BrowserRouter>
+            <ScrollToTop />
             {/* <Header /> */}
             <Routes>
               <Route path="/broker/login" element={<Login />} />
