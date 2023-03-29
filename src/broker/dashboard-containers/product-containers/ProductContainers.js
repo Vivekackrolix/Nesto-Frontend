@@ -41,7 +41,7 @@ const PropertySection = props => {
   );
 };
 
-const ProductContainers = ({ propertyData, view }) => {
+const ProductContainers = ({ propertyData, view, children }) => {
   return (
     <>
       <PropertySection
@@ -52,6 +52,7 @@ const ProductContainers = ({ propertyData, view }) => {
           .slice(0, 6)}
         view={view}
       />
+      {children}
       <PropertySection
         sectionTitle="Recently Added"
         propertyData={propertyData}

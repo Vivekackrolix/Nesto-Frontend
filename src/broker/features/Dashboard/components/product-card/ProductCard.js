@@ -52,12 +52,14 @@ const ProductCard = ({
             {images
               ? images.map((imagesItem, index) => (
                   <SwiperSlide key={index}>
-                    <Card.Img
-                      variant="top"
-                      src={imagesItem}
-                      alt="Product Image"
-                      className="nes__product__card__image"
-                    />
+                    <Link to={`/broker/property-details/${_id}`}>
+                      <Card.Img
+                        variant="top"
+                        src={imagesItem}
+                        alt="Product Image"
+                        className="nes__product__card__image"
+                      />
+                    </Link>
                   </SwiperSlide>
                 ))
               : null}

@@ -1,9 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper';
 import { Image, Row, Col } from 'react-bootstrap';
-import { CiRuler } from 'react-icons/ci';
-import { BiBath } from 'react-icons/bi';
-import { IoBedSharp } from 'react-icons/io5';
 import { IoLocationSharp } from 'react-icons/io5';
 
 // Import Swiper styles
