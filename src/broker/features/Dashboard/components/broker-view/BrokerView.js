@@ -52,7 +52,6 @@ const BrokerView = () => {
 
       {getAllPropertyResponse && (
         <ProductContainers
-          sectionTitle="Promoted Property"
           propertyData={getAllPropertyResponse}
           view="broker"
         />

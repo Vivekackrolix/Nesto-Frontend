@@ -98,7 +98,7 @@ const ProductCard = ({
           >
             {name}
           </Card.Title>
-          <Card.Subtitle className="mb-2 text-muted nes__product__card__subtitle">
+          <Card.Subtitle className="mt-1 mb-2 text-muted nes__product__card__subtitle">
             {location}
           </Card.Subtitle>
           <Row className="my-3 nes__product__card__icons gx-5">

@@ -1,15 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper';
 import { useParams } from 'react-router-dom';
-import {
-  Button,
-  Card,
-  Col,
-  Container,
-  Image,
-  Row,
-  Table,
-} from 'react-bootstrap';
+import { Card, Col, Container, Image, Row, Table } from 'react-bootstrap';
 import { Footer, Header, Ribbon } from '../../../features';
 
 import ViewDetailsCard from './ViewDetailsCard';
@@ -78,7 +70,9 @@ const PropertyDescription = () => {
                 <div
                   className="hero-section nes__hero d-flex flex-column justify-content-center"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${thumbnail})`,
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${
+                      thumbnail ? thumbnail : ''
+                    })`,
                   }}
                 >
                   <Container>
