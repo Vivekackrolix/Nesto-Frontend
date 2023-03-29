@@ -1,12 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, Pagination } from 'swiper';
-import { Card, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import 'swiper/css';
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
-
-// swiper styles
-// import './SwiperSlider.css';
 import './SwiperSliderNew.css';
 
 function PromotionalBanner(props) {
@@ -14,7 +11,7 @@ function PromotionalBanner(props) {
     <div
       className="nes__swiper__slider__new__slide hero-section nes__hero d-flex flex-column justify-content-center mt-5"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${props.swiperDataItem.image[0]})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${props.swiperDataItem.image})`,
       }}
     >
       <Container>
@@ -25,19 +22,13 @@ function PromotionalBanner(props) {
           <p className="nes__swiper__slider__new__slide__description">
             {props.swiperDataItem.description}
           </p>
-          {/* <p className="mt-5">{description}</p> */}
         </div>
       </Container>
     </div>
   );
 }
 
-const SwiperSliderNew = ({
-  swiperData,
-  navigation,
-  pagination,
-  promotionalBanner,
-}) => {
+const SwiperSliderNew = ({ swiperData, navigation, pagination }) => {
   return (
     <>
       <div className="nes__swiper__slider__new">
