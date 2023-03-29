@@ -19,7 +19,6 @@ const App = () => {
         <QueryClientProvider client={queryClient}>
           <BrowserRouter>
             <ScrollToTop />
-            {/* <Header /> */}
             <Routes>
               <Route path="/broker/login" element={<Login />} />
               <Route path="/broker/register" element={<Register />} />
