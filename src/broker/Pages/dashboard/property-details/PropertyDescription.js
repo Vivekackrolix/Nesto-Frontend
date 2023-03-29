@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper';
 import { useParams } from 'react-router-dom';
 import { Card, Col, Container, Image, Row, Table } from 'react-bootstrap';
-import { Footer, Header, Ribbon } from '../../../features';
+import { Footer, Header, Ribbon, SmallCardSection } from '../../../features';
 
 import ViewDetailsCard from './ViewDetailsCard';
 import { SwiperSlider } from '../../../components';
@@ -12,12 +12,12 @@ import { useGetPropertyById } from '../../../hooks/LoginQuery';
 import LoadingSpinner from '../../../Common/loading-spinner/LoadingSpinner';
 import ErrorMessage from '../../../Common/error-message/ErrorMessage';
 import PropertyDetailsCard from './PropertyDetailsCard';
+import SearchFilterBox from '../../../../components/search-filter/SearchFilter';
 
 import 'swiper/css';
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 import './PropertyDescription.css';
-import React from 'react';
 
 const PropertyDescription = () => {
   const { id } = useParams();
@@ -62,11 +62,14 @@ const PropertyDescription = () => {
     return (
       <>
         <Header />
+        <SmallCardSection />
+        <SearchFilterBox />
         {getPropertyByIdIsSuccess && (
-          <section className="mt-5 broker__property__details">
+          <section className="broker__property__details">
             <Container>
               {/* <HeroSection details /> */}
-              <section className="mt-5">
+              <section className="mt-3">
+                <h1 className="broker__section__title">Property Details</h1>
                 <div
                   className="hero-section nes__hero d-flex flex-column justify-content-center"
                   style={{
