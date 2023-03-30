@@ -12,4 +12,7 @@ export const apiEndpoints = {
     '/v1/communitySupportQuestions/getAllCommunitySupportQuestions?pageSize=1&pageNo=1',
   getAllCommunitySupportAnswers:
     'http://13.233.149.97:3000/api/v1/communitySupportAnswers/getAllCommunitySupportAnswers?communitySupportQuestionsId=6411b84888986c905fa7e1e7&pageSize=2&pageNo=1',
+  getAllPropertyCategory: '/v1/propertyCategory/getAllPropertyCategory',
+  getAllPromotionBanner: '/v1/promotionBanner/getAllPromotionBanner',
+  getPropertyById: '/v1/property/getPropertyById',
 };

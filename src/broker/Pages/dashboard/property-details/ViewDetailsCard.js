@@ -2,7 +2,18 @@ import { Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './ViewDetailsCard.css';
 
-const ViewDetailsCard = ({ title, link, bg, media, img }) => {
+const ViewDetailsCard = ({
+  title,
+  link,
+  bg,
+  media,
+  img,
+  propertyDescription,
+  loanApprovedByIds,
+  aboutTheBuilder,
+  termAndCondition,
+  brochureUrl,
+}) => {
   return (
     <Card
       className={`border-0 shadow-sm property__details__text mb-5 ${
@@ -24,46 +35,28 @@ const ViewDetailsCard = ({ title, link, bg, media, img }) => {
           img ? `shadow-sm border-0` : ''
         }`}
       >
-        {/* {media && (
-          <div className="video-overlay">
-            <h2>Sky Apartment Brochure</h2>
-          </div>
-        )} */}
         {img && (
           <Row>
-            {Array.from({ length: 4 }, (_, index) => (
+            {loanApprovedByIds.map(({ _id, name, image }) => (
               <Col
-                key={index}
+                key={_id}
                 md={3}
                 className="d-flex justify-content-center align-items-center"
               >
-                <img
-                  src="/assets/bank-img1.png"
-                  className="img-fluid"
-                  alt="bank img"
-                />
+                <img src={image} className="img-fluid" alt={name} />
               </Col>
             ))}
           </Row>
         )}
-        {!media && !img && (
-          <Card.Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s
-          </Card.Text>
+        {!media && !img && propertyDescription && (
+          <Card.Text>{propertyDescription}</Card.Text>
         )}
-        {media && (
-          <div className="video-wrapper">
-            <video
-              className="w-100"
-              src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_5mb.mp4"
-              controls
-            />
-          </div>
+        {!media && !img && aboutTheBuilder && (
+          <Card.Text>{aboutTheBuilder}</Card.Text>
         )}
+        {media && <Card.Img src={brochureUrl} />}
+
+        {termAndCondition && <Card.Text>{termAndCondition}</Card.Text>}
       </Card.Body>
     </Card>
   );

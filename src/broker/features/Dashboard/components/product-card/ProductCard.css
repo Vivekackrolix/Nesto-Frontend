@@ -1,5 +1,7 @@
 .nes__product__card .card-img-top {
-  border-radius: 13.9236px !important;
+  border-radius: 14px !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .nes__product .card {
@@ -18,12 +20,12 @@
   position: absolute;
   bottom: 7px;
   left: 7px;
+  z-index: 99999;
 }
 
 .nes__product__card__title {
   font-weight: 700;
   font-size: 18.03px;
-  line-height: 25px;
   letter-spacing: 0.03em;
   color: #252b5c;
 }
@@ -54,14 +56,10 @@
   color: #7d7f88;
 }
 
-/* .nes__product__card__image {
-  transition: transform 0.2s ease-in-out;
+.swiper-pagination-bullet-active {
+  background-color: #fe5e6a; /* replace with your desired color */
 }
 
-.position-relative:hover .nes__product__card__image {
-  transform: scale(1.1);
+.nes__product__card .swiper {
+  margin-bottom: 0px !important;
 }
-
-.position-relative:hover .ribbonStyle {
-  transform: scale(1.1);
-} */

@@ -1,9 +1,8 @@
-import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 
 // const iconText = ['2110 Sqft', '3 Beds', '1 Baths', '1 Garages', '1 Balcony'];
 
-const IconsCard = ({ length, title, col, iconTitle }) => {
+const IconsCard = ({ length, title, col, iconTitle, propertyAmenities }) => {
   return (
     <Card className="border-0 shadow-none bg-transparent property__details__iconcard mb-4">
       <Card.Header className="bg-transparent border-0 mt-3 px-0">
@@ -11,31 +10,25 @@ const IconsCard = ({ length, title, col, iconTitle }) => {
       </Card.Header>
       <Card.Body className="border rounded">
         <Row className="g-4">
-          {Array.from({ length }, (_, index) => (
+          {propertyAmenities.map(({ iconUrl, name, _id }) => {
             <Col
               style={{ flex: `0 0 calc(100% / ${col})` }}
-              key={index}
+              key={_id}
               className="d-flex justify-content-center align-items-center"
             >
               <div className="d-flex flex-column gap-1 justify-content-center align-items-center">
-                <img
-                  src={`/assets/card-icon-${
-                    index + 1 > 5 ? index + 1 - 5 : index + 1
-                  }.svg`}
-                  alt={`icon ${index}`}
-                  className="img-fluid mb-2"
-                />
+                <img src={iconUrl} alt={{ name }} className="img-fluid mb-2" />
                 {iconTitle && (
                   <span className="property__details__iconcard__icontitle">
                     Mini Market
                   </span>
                 )}
                 <span className="property__details__iconcard__iconsubtitle">
-                  3 Beds
+                  {name}
                 </span>
               </div>
-            </Col>
-          ))}
+            </Col>;
+          })}
         </Row>
       </Card.Body>
     </Card>
