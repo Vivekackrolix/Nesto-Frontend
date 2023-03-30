@@ -55,7 +55,7 @@ const HomeDashBoard = () => {
         <SoldOut data={[1, 2, 3, 4, 5, 6]} />
         <RecentlyAdded data={[1, 2, 3, 4, 5, 6]} />
 
-        {/* <RecentPackage /> */}
+        <RecentPackage />
         <PropertyInvoice />
         {/* <Charts /> */}
       </Container>

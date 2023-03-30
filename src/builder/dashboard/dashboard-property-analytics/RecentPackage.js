@@ -41,7 +41,7 @@ const RecentPackage = () => {
             style={{ padding: "40px" }}
           >
             <h4 className="fw-bold">
-              {data[0].planId.name}
+              {data.length === 0 ? "Api call" : data[0].planId.name}
               {/* {data.length === 0 ? "Api call" : data[0].planId.name} */}
             </h4>
             {/* <h4 className="fw-bold">{data.planId.name}</h4> */}
@@ -102,7 +102,8 @@ const RecentPackage = () => {
 
                 <Button
                   type="button"
-                  variant="primary"
+                  // variant="primary"
+                  variant="transparent"
                   size="lg"
                   className="rounded-2 px-4 py-2 border border-primary wd-120 "
                   as={Link}

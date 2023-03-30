@@ -19,15 +19,39 @@ const AllVisits = () => {
       );
       debugger;
 
-      console.log(response.data);
+      console.log(response.data.data);
       setData(response.data.data);
     };
 
     getVisit();
   }, []);
-  // const tabKey2 = ["All Visits", "Promoted Visits"];
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-  const tabelData = arr.map((itm) => (
+
+  const [data1, setData1] = useState([]); //Later use redux
+  useEffect(() => {
+    const getVisit = async () => {
+      const response = await axios.get(
+        // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
+        // "http://localhost:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
+        "http://localhost:3000/api/v1/visit/getAllVisit",
+        // formData,
+        {
+          headers: {
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+      debugger;
+
+      console.log(response.data.data);
+      setData1(response.data.data);
+    };
+
+    getVisit();
+  }, []);
+
+  // const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  const tabelData = data1.map((itm, index) => (
     <VisitDetailItem className={"mb-3 py-3 border rounded"} />
   ));
 
