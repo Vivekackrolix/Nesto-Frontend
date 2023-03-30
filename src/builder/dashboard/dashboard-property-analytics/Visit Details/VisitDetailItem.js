@@ -10,7 +10,8 @@ const VisitDetailItem = (props) => {
     const getVisit = async () => {
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-        "http://localhost:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
+        // "http://localhost:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
+        "http://localhost:3000/api/v1/visit/getAllVisit",
         // formData,
         {
           headers: {
@@ -21,8 +22,8 @@ const VisitDetailItem = (props) => {
       );
       debugger;
 
-      console.log(response.data);
-      setData(response.data.data);
+      console.log(response.data.data);
+      setData(response.data.data[0]);
     };
 
     getVisit();
@@ -32,9 +33,10 @@ const VisitDetailItem = (props) => {
   const [hover, setHover] = useState(0);
   return (
     <Row className={props.className}>
-      <Col>{data._id}</Col>
-      {/* <Col>{data._id.brokerId.name}</Col> */}
+      {/* <Col>{data._id}</Col> */}
+      {/* <Col>{data.brokerId._id }</Col> */}
       <Col>{data.date}</Col>
+      <Col>{data.name}</Col>
       <Col>{data.visitStatus}</Col>
       <Col>{data.clientName}</Col>
       <Col>

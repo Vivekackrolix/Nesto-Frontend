@@ -29,7 +29,7 @@ const TransactionHistory = () => {
 
   const paymentData = data.map((itm) => (
     <tr>
-      <td>123</td>
+      <td>{itm.boughtPropertyId}</td>
       <td>{itm.transactionId}</td>
       <td>{itm.transactionDate}</td>
       <td>{itm.transactionAmount}</td>

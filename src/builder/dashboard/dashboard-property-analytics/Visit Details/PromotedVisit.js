@@ -25,7 +25,7 @@ const PromotedVisit = () => {
       );
       debugger;
 
-      console.log(response.data);
+      console.log(response.data.data);
       setData(response.data.data);
     };
 

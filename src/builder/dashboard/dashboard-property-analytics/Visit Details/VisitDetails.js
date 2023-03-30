@@ -7,10 +7,9 @@ import Footer from "../../Footer/Footer";
 
 // import VisitDetailItem from "./VisitDetailItem";
 import Header from "../../../header/Header";
-import AllVisits from './AllVisits';
-import PromotedVisits from './PromotedVisits';
+import AllVisits from "./AllVisits";
+import PromotedVisits from "./PromotedVisits";
 const VisitDetails = () => {
-
   return (
     <>
       <Header />
@@ -25,14 +24,13 @@ const VisitDetails = () => {
           fill
         >
           <Tab eventKey="visits" title="All Visits">
-          <AllVisits />
+            <AllVisits />
           </Tab>
 
           <Tab eventKey="promoted" title="Promoted Visits">
-          <PromotedVisits />
+            <PromotedVisits />
           </Tab>
         </Tabs>
-
       </Container>
       <Footer />
     </>
