@@ -2,6 +2,7 @@ import { Container, Button, Col, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import VisitDetailItem from "./VisitDetailItem";
+import PromotedVisitItem from "./PromotedVisitItem";
 
 const AllVisits = () => {
   const [data, setData] = useState({}); //Later use redux

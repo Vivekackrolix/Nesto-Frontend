@@ -12,13 +12,11 @@ const PromotedVisit = () => {
   useEffect(() => {
     const getVisit = async () => {
       const response = await axios.get(
-        // "http://13.233.149.97:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
         "http://localhost:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
-        // formData,
+
         {
           headers: {
             Authorization:
-              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
               "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
           },
         }
@@ -26,7 +24,6 @@ const PromotedVisit = () => {
       // debugger;
 
       // console.log(response.data.data);
-
       setData(response.data.data);
     };
 
@@ -36,7 +33,7 @@ const PromotedVisit = () => {
   const [data1, setData1] = useState([]); //Later use redux
   const [filterData, setFilterData] = useState([]);
   useEffect(() => {
-    const getPromoted = async () => {
+    const getVisit = async () => {
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
         // "http://localhost:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
@@ -56,7 +53,7 @@ const PromotedVisit = () => {
       setFilterData(response.data.data);
     };
 
-    getPromoted();
+    getVisit();
   }, []);
 
   const onPendingClick = () => {
@@ -99,29 +96,7 @@ const PromotedVisit = () => {
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
         <h3 className="heading"> Visit Details</h3>
-        {/* <div
-          className="w-100 btn-group rounded-pill col-2  justify-content-center  py-2 mx-3 row"
-          role="group"
-          aria-label="Basic example"
-        >
-          <Button
-            type="button"
-            variant="transparent"
-            className="w-50 rounded-pill col-2 btn btn-secondary"
-            as={Link}
-            to="/builder/home-dashboard/visit"
-            style={{ color: "#FFFFFF" }}
-          >
-            All Visits
-          </Button>
 
-          <button
-            type="button"
-            className="w-50 rounded-pill col-2 btn btn-primary"
-          >
-            Promoted Visits
-          </button>
-        </div> */}
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
           <div className="p-4 d-flex justify-content-around">
             <div className="text-center d-flex flex-column">
