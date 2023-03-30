@@ -9,7 +9,8 @@ const TransactionHistory = () => {
     const getVisit = async () => {
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-        "http://localhost:3000/api/v1/payment/getPaymentById?id=6411a9cf52af4e7966b5d5e2",
+        // "http://localhost:3000/api/v1/payment/getPaymentById?id=6411a9cf52af4e7966b5d5e2",
+        "http://localhost:3000/api/v1/payment/getAllPayment",
         // formData,
         {
           headers: {

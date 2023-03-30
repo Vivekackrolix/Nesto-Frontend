@@ -1,9 +1,9 @@
 // import DashboardTabs from "../dashboard-tabs/DashboardTabs";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import { Col, Container, Row, Tab, Tabs } from "react-bootstrap";
-import ManageRole from "./ManageRole";
-import Finance from "./Finance";
-import PropertyManager from "./ManageRole";
+// import ManageRole from "./ManageRole";
+// import Finance from "./Finance";
+// import PropertyManager from "./ManageRole";
 import Property from "./Property";
 import FinanceProperty from "./FinanceProperty";
 

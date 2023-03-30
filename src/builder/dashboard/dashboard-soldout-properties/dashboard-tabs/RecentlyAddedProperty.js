@@ -117,7 +117,7 @@ const RecentlyAddedProperty = (props) => {
                 {itm.minPrice}-{itm.maxPrice}
               </Col>
               <Col md={7} style={{ color: "#7D7F88", fontSize: "0.8em" }}>
-                Book now & get {itm.discountDescription} discount
+                {itm.discountDescription}
               </Col>
             </Row>
             <div className="d-flex justify-content-end gap-2 mt-2">

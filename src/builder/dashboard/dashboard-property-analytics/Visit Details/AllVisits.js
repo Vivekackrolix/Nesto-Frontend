@@ -17,9 +17,9 @@ const AllVisits = () => {
           },
         }
       );
-      debugger;
+      // debugger;
 
-      console.log(response.data.data);
+      // console.log(response.data.data);
       setData(response.data.data);
     };
 
@@ -27,6 +27,7 @@ const AllVisits = () => {
   }, []);
 
   const [data1, setData1] = useState([]); //Later use redux
+  const [filterData, setFilterData] = useState([]);
   useEffect(() => {
     const getVisit = async () => {
       const response = await axios.get(
@@ -41,18 +42,48 @@ const AllVisits = () => {
           },
         }
       );
-      debugger;
+      // debugger;
 
-      console.log(response.data.data);
+      // console.log(response.data.data);
       setData1(response.data.data);
+      setFilterData(response.data.data);
     };
 
     getVisit();
   }, []);
 
-  // const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-  const tabelData = data1.map((itm, index) => (
-    <VisitDetailItem className={"mb-3 py-3 border rounded"} />
+  const onPendingClick = () => {
+    const pendingData = data1.filter((itm) => itm.visitStatus === "pending");
+    setFilterData(pendingData);
+  };
+
+  const onCompletedClick = () => {
+    // console.log(e);
+    const pendingData = data1.filter((itm) => itm.visitStatus === "completed");
+    setFilterData(pendingData);
+  };
+
+  const onBoughtClick = () => {
+    // console.log(e);
+    const pendingData = data1.filter((itm) => itm.visitStatus === "bought");
+    setFilterData(pendingData);
+  };
+
+  const onFollowupClick = () => {
+    // console.log(e);
+    const pendingData = data1.filter((itm) => itm.visitStatus === "followup");
+    setFilterData(pendingData);
+  };
+
+  const onNegotiationClick = () => {
+    // console.log(e);
+    const pendingData = data1.filter(
+      (itm) => itm.visitStatus === "negotiation"
+    );
+    setFilterData(pendingData);
+  };
+  const tabelData = filterData.map((itm, index) => (
+    <VisitDetailItem itm={itm} className={"mb-3 py-3 border rounded"} />
   ));
 
   return (
@@ -61,6 +92,7 @@ const AllVisits = () => {
         <div className="p-4 d-flex justify-content-around">
           <div className="text-center d-flex flex-column">
             <span
+              onClick={onPendingClick}
               style={{
                 color: "black",
                 fontWeight: "bold",
@@ -81,10 +113,13 @@ const AllVisits = () => {
             >
               {data.completedVisit}
             </span>
-            <span style={{ opacity: 0.5 }}>Completed</span>
+            <span onClick={onCompletedClick} style={{ opacity: 0.5 }}>
+              Completed
+            </span>
           </div>
           <div className="text-center d-flex flex-column">
             <span
+              onClick={onFollowupClick}
               style={{
                 color: "black",
                 fontWeight: "bold",
@@ -97,6 +132,7 @@ const AllVisits = () => {
           </div>
           <div className="text-center d-flex flex-column">
             <span
+              onClick={onNegotiationClick}
               style={{
                 color: "black",
                 fontWeight: "bold",
@@ -109,6 +145,7 @@ const AllVisits = () => {
           </div>
           <div className="text-center d-flex flex-column">
             <span
+              onClick={onBoughtClick}
               style={{
                 color: "black",
                 fontWeight: "bold",
@@ -117,7 +154,7 @@ const AllVisits = () => {
             >
               {data.boughtVisit}
             </span>
-            <span style={{ opacity: 0.5 }}>Brought</span>
+            <span style={{ opacity: 0.5 }}>Bought</span>
           </div>
         </div>
       </Container>
