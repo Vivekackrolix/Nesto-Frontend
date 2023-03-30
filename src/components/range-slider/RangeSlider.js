@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { Range } from "react-range";
-import { Form } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Range } from 'react-range';
+import { Form } from 'react-bootstrap';
 // import { currencyConverter } from '../../helper/currencyConverter';
-import { currencyConverter } from "../../helper/currencyConverter";
+import { currencyConverter } from '../../helper/currencyConverter';
 
-const RangeSlider = ({ title, min, max }) => {
-  const [values, setValues] = useState([0, 160]);
-
-  const handleChange = (newValues) => {
+const RangeSlider = ({ title, min, max, setValues, values }) => {
+  const handleChange = newValues => {
     setValues(newValues);
   };
 
@@ -28,10 +26,10 @@ const RangeSlider = ({ title, min, max }) => {
             {...props}
             style={{
               ...props.style,
-              height: "6px",
-              width: "100%",
-              backgroundColor: "#ddd",
-              borderRadius: "3px",
+              height: '6px',
+              width: '100%',
+              backgroundColor: '#ddd',
+              borderRadius: '3px',
             }}
           >
             {children}
@@ -42,11 +40,11 @@ const RangeSlider = ({ title, min, max }) => {
             {...props}
             style={{
               ...props.style,
-              height: "20px",
-              width: "20px",
-              backgroundColor: "#278FD9",
-              borderRadius: "50%",
-              boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
+              height: '20px',
+              width: '20px',
+              backgroundColor: '#278FD9',
+              borderRadius: '50%',
+              boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)',
             }}
           />
         )}

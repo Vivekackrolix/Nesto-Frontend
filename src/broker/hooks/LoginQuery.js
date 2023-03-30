@@ -200,7 +200,6 @@ export const useGetAllBanner = () => {
 };
 
 // useBookVisit
-
 export const useAddVisitMutation = () => {
   // const dispatch = useDispatch();
 
@@ -222,6 +221,38 @@ export const useAddVisitMutation = () => {
     isAddIsError,
     isAddVisitError,
     isAddVisitResponse,
+  };
+};
+
+// // verify
+export const useVisitVerifyOtpMutation = () => {
+  const {
+    mutate: visitVerifyOtp,
+    isLoading: isVisitVerifyOtpLoading,
+    isSuccess: isVisitVerifyOtpSuccess,
+    isError: isVisitVerifyOtpIsError,
+    data: visitVerifyOtpResponse,
+    error: isVisitVerifyOtpError,
+  } = useMutation(
+    ({ otp, visitId }) =>
+      postAPI(apiEndpoints.visitVerifyOtp, { otp, visitId }),
+    {
+      onSuccess: data => {
+        console.log(data);
+      },
+      onError: error => {
+        console.log('something goes wrong');
+      },
+    }
+  );
+
+  return {
+    visitVerifyOtp,
+    isVisitVerifyOtpLoading,
+    isVisitVerifyOtpSuccess,
+    isVisitVerifyOtpIsError,
+    visitVerifyOtpResponse,
+    isVisitVerifyOtpError,
   };
 };
 

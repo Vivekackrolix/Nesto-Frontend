@@ -1,8 +1,9 @@
 import { RiCheckLine } from 'react-icons/ri';
 import { CustomModal } from '../../../../../components';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const SuccessModal = ({ show, onHide }) => {
+const SuccessModal = ({ show, onHide, path }) => {
   return (
     <CustomModal
       show={show}
@@ -22,9 +23,21 @@ const SuccessModal = ({ show, onHide }) => {
           Lorem ipsum is placeholder text commonly used in the graphic, print
         </p>
 
-        <Button className="mt-2 btn-color-primary rounded-pill btn-rounded w-100">
-          Done
-        </Button>
+        {!path && (
+          <Button className="mt-2 btn-color-primary rounded-pill btn-rounded w-100">
+            Done
+          </Button>
+        )}
+
+        {path && (
+          <Button
+            as={Link}
+            to={path}
+            className="mt-2 btn-color-primary rounded-pill btn-rounded w-100"
+          >
+            Done
+          </Button>
+        )}
       </div>
     </CustomModal>
   );
