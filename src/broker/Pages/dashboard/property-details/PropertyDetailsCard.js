@@ -1,8 +1,7 @@
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
-import { HeroSection } from '../../../features';
 import { AiFillStar } from 'react-icons/ai';
-import './PropertyDetailsCard.css';
 import { RiBuilding2Fill } from 'react-icons/ri';
+import './PropertyDetailsCard.css';
 
 const Availability = ({ propertyDetailsCard }) => {
   return (
@@ -33,24 +32,15 @@ const PropertyDetailsCard = ({ propertyDetailsCard }) => {
     <section className="mt-3 broker__property__details">
       <Container>
         <Availability propertyDetailsCard={propertyDetailsCard} />
-        <Card
-          bg="white"
-          border="0"
-          className="custom-card nes__product__card"
-          style={{
-            background: '#FFFFFF',
-            boxShadow: '0px 3.71188px 16.2395px rgba(0, 0, 0, 0.07)',
-            borderRadius: '14px',
-          }}
-        >
-          <Card.Body className="px-0 d-flex">
-            <Col className="col-auto">
+        <Card bg="white" border="0" className="broker__property__details__card">
+          <Card.Body className="d-flex">
+            <Col className="col-auto align-self-start">
               <img
-                fluid
+                rounded
                 src={propertyDetailsCard.propertyLogo}
                 alt="Profile"
-                width={100}
-                height={100}
+                width={90}
+                height={90}
               />
             </Col>
             <Col className="flex-fill">
@@ -75,7 +65,7 @@ const PropertyDetailsCard = ({ propertyDetailsCard }) => {
               </div>
             </Col>
 
-            <Col className="flex-fill">
+            <Col className="flex-fill d-flex justify-content-end">
               <div className="px-4 nes__product__card__price d-flex flex-column justify-content-center align-items-center gap-2">
                 <h4 className="d-inline-block font-weight-bold m-0">{`${propertyDetailsCard.minPrice} - ${propertyDetailsCard.maxPrice}`}</h4>
                 <span className="d-inline-block text-muted m-0">

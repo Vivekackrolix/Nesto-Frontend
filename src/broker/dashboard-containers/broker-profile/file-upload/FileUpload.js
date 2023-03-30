@@ -32,16 +32,13 @@ const FileUpload = () => {
               ))}
             </ul>
           )}
-          {/* <Form
-            className="position-relative"
-            onDragOver={event => event.preventDefault()}
-            onDrop={handleDrop}
-          > */}
+
           <Form.Group controlId="formFileMultiple" className="mb-3">
             <Form.Control
               type="file"
               multiple
               onChange={handleFileInputChange}
+              className="h-auto"
             />
             <div className="drag-drop-text">
               <img
