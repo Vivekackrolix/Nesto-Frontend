@@ -1,6 +1,6 @@
 import CreatableSelect from 'react-select/creatable';
 // import RangeSlider from '../../range-slider/RangeSlider';
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Button, Col, Form, InputGroup, Row } from 'react-bootstrap';
 import { CustomModal } from '../../../../../components';
 import RangeSlider from '../../../../../components/range-slider/RangeSlider';
 import DashboardTabs from '../../../../../components/dashboard-tabs/DashboardTabs';
@@ -9,8 +9,9 @@ import { useState } from 'react';
 
 const followUpTime = ['Morning Slots', 'Afternoon Slots', 'Evening Slots'];
 
-const timeSlots = ['9PM', '10AM', '11AM', '1PM', '2PM', '3PM  '];
-
+const morningSlots = ['9AM', '10AM', '11AM'];
+const afternoonSlots = ['1PM', '2PM', '3PM'];
+const eveningSlots = ['4PM', '5PM', '6PM'];
 const tabKey = ['Old', 'New'];
 
 const BookAVisitModal = ({ show, onHide }) => {
@@ -39,7 +40,7 @@ const BookAVisitModal = ({ show, onHide }) => {
     minPrice: '80K',
     maxPrice: '200K',
     date: '01-12-2022',
-    chooseSlot: '1PM',
+    timeSlot: null,
     customerId: '64119b48d3024a8939e3dfcf',
     builderId: '64107bce7b4c4240671aeb94',
     brokerId: '64115c5a377e99eee7cd1a50',
@@ -64,6 +65,7 @@ const BookAVisitModal = ({ show, onHide }) => {
 
   const handleChange = event => {
     const { name, value } = event.target;
+    console.log(value);
     setVisitData({ ...visitData, [name]: value });
   };
 
@@ -91,6 +93,10 @@ const BookAVisitModal = ({ show, onHide }) => {
     addVisit(visitData);
   };
 
+  if (isAddVisitSuccess) {
+    console.log(isAddVisitResponse);
+  }
+
   return (
     <CustomModal
       show={show}
@@ -100,39 +106,42 @@ const BookAVisitModal = ({ show, onHide }) => {
       onHide={onHide}
       cssClassName="nes__dashboard__modal"
       size="lg"
+      modalHeader
     >
       <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
         <Form
           className="profile__form ps-2 py-3 custom__modal__form"
           onSubmit={e => e.preventDefault()}
         >
-          <Form.Group className="mb-4" controlId="companyName">
-            <Form.Label>
-              Client Name<span className="text-dark">*</span>
-            </Form.Label>
-            <Form.Control
-              className="rounded-0 border-0"
-              type="text"
-              placeholder="Enter client name"
-              name="clientName"
-              onChange={handleChange}
-              value={visitData.clientName}
-            />
-          </Form.Group>
+          <InputGroup className="gap-3 mb-4">
+            <Form.Group className="flex-grow-1" controlId="companyName">
+              <Form.Label>
+                Client Name<span className="text-dark">*</span>
+              </Form.Label>
+              <Form.Control
+                className="rounded-0 border-0"
+                type="text"
+                placeholder="Enter client name"
+                name="clientName"
+                onChange={handleChange}
+                value={visitData.clientName}
+              />
+            </Form.Group>
 
-          <Form.Group className="mb-4" controlId="phoneNumber">
-            <Form.Label>
-              Phone Number<span className="text-dark">*</span>
-            </Form.Label>
-            <Form.Control
-              className="rounded-0 border-0"
-              type="tel"
-              placeholder="Enter phone number"
-              name="phoneNumber"
-              onChange={handleChange}
-              value={visitData.phoneNumber}
-            />
-          </Form.Group>
+            <Form.Group className="flex-grow-1" controlId="phoneNumber">
+              <Form.Label>
+                Phone Number<span className="text-dark">*</span>
+              </Form.Label>
+              <Form.Control
+                className="rounded-0 border-0"
+                type="tel"
+                placeholder="Enter phone number"
+                name="phoneNumber"
+                onChange={handleChange}
+                value={visitData.phoneNumber}
+              />
+            </Form.Group>
+          </InputGroup>
 
           <Form.Group className="mb-4" controlId="email">
             <Form.Label>
@@ -148,30 +157,32 @@ const BookAVisitModal = ({ show, onHide }) => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-4">
-            <Form.Label>
-              Unit Type<span className="text-dark">*</span>
-            </Form.Label>
-            <CreatableSelect
-              isMulti
-              options={options}
-              placeholder="Add more"
-              name="unitType"
-              onChange={handleUnitTypeChange}
-            />
-          </Form.Group>
+          <InputGroup className="mb-4 gap-3">
+            <Form.Group className="flex-grow-1">
+              <Form.Label>
+                Unit Type<span className="text-dark">*</span>
+              </Form.Label>
+              <CreatableSelect
+                isMulti
+                options={options}
+                placeholder="Add more"
+                name="unitType"
+                onChange={handleUnitTypeChange}
+              />
+            </Form.Group>
 
-          <Form.Group className="mb-4">
-            <Form.Label>
-              Preferred Location<span className="text-dark">*</span>
-            </Form.Label>
-            <CreatableSelect
-              isMulti
-              placeholder="Add more"
-              options={options}
-              name="preferredLocation"
-            />
-          </Form.Group>
+            <Form.Group className="flex-grow-1">
+              <Form.Label>
+                Preferred Location<span className="text-dark">*</span>
+              </Form.Label>
+              <CreatableSelect
+                isMulti
+                placeholder="Add more"
+                options={options}
+                name="preferredLocation"
+              />
+            </Form.Group>
+          </InputGroup>
 
           <Form.Group className="mb-4" controlId="email">
             <Form.Label>
@@ -210,32 +221,76 @@ const BookAVisitModal = ({ show, onHide }) => {
               Choose Slot<span className="text-dark">*</span>
             </Form.Label>
           </Form.Group>
-          <Row className="mb-3 g-3">
-            {followUpTime.map((item, index) => (
-              <Col key={index} xs={12}>
-                <Form.Label>{item}</Form.Label>
+          <div>
+            <Form.Group className="mb-1">
+              <Form.Label>
+                Choose Slot<span className="text-dark">*</span>
+              </Form.Label>
+            </Form.Group>
+            <Row className="mb-3 g-3">
+              <Col xs={12}>
+                <Form.Label>Morning</Form.Label>
                 <Row className="mb-3 mb-md-0">
-                  {Array.from({ length: 3 }, (_, index) => (
-                    <Col key={index} className="my-2 my-lg-0" md={4} xs={12}>
-                      <Form.Select
-                        className="form-control-sm"
-                        name="chooseSlot"
-                        value={visitData.chooseSlot}
-                        onChange={handleChange}
-                      >
-                        <option>Choose time slot</option>
-                        {timeSlots.map(timeSlot => (
-                          <option key={timeSlot} value={timeSlot}>
-                            {timeSlot}
-                          </option>
-                        ))}
-                      </Form.Select>
+                  {morningSlots.map(slot => (
+                    <Col key={slot} className="my-2 my-lg-0" md={4} xs={12}>
+                      <Form.Label htmlFor={`${slot}`}>
+                        <Form.Check
+                          type="radio"
+                          id={slot}
+                          name="timeSlot"
+                          value={slot}
+                          checked={visitData.timeSlot === slot}
+                          onChange={handleChange}
+                        />
+                        {slot}
+                      </Form.Label>
                     </Col>
                   ))}
                 </Row>
               </Col>
-            ))}
-          </Row>
+              <Col xs={12}>
+                <Form.Label>Afternoon</Form.Label>
+                <Row className="mb-3 mb-md-0">
+                  {afternoonSlots.map(slot => (
+                    <Col key={slot} className="my-2 my-lg-0" md={4} xs={12}>
+                      <Form.Label htmlFor={`${slot}`}>
+                        <Form.Check
+                          type="radio"
+                          id={slot}
+                          name="timeSlot"
+                          value={slot}
+                          checked={visitData.timeSlot === slot}
+                          onChange={handleChange}
+                        />
+                        {slot}
+                      </Form.Label>
+                    </Col>
+                  ))}
+                </Row>
+              </Col>
+              <Col xs={12}>
+                <Form.Label>Evening</Form.Label>
+                <Row className="mb-3 mb-md-0">
+                  {eveningSlots.map(slot => (
+                    <Col key={slot} className="my-2 my-lg-0" md={4} xs={12}>
+                      <Form.Label htmlFor={`${slot}`}>
+                        <Form.Check
+                          type="radio"
+                          id={slot}
+                          name="timeSlot"
+                          value={slot}
+                          checked={visitData.timeSlot === slot}
+                          onChange={handleChange}
+                        />
+                        {slot}
+                      </Form.Label>
+                    </Col>
+                  ))}
+                </Row>
+              </Col>
+            </Row>
+          </div>
+
           {/* time slots code end here */}
 
           <div className="d-flex gap-4 mt-5">
