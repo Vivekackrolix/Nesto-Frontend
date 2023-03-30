@@ -2,14 +2,14 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { AiOutlineEye } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { BsFillBellFill } from 'react-icons/bs';
-import homeIcon from '../../assets/images/home.svg';
 import clientIcon from '../../assets/images/client.svg';
 import brokerageIcon from '../../assets/images/brokerage.svg';
 import brokerProfileImg from '../../assets/images/broker-profile-img.png';
-import './Header.css';
 import { Link } from 'react-router-dom';
+import { RiHome5Fill } from 'react-icons/ri';
+import './Header.css';
 
-function Header() {
+const Header = () => {
   return (
     <Navbar expand="lg" className="nes__navbar">
       <Container>
@@ -28,8 +28,8 @@ function Header() {
               to="/broker/dashboard"
               className="mx-3 d-flex align-items-center gap-2"
             >
-              <img src={homeIcon} alt="home icon" className="img-fluid" />
-              Home
+              <RiHome5Fill size={25} />
+              <span>Home </span>
             </Nav.Link>
             <Nav.Link href="/" className="mx-3 d-flex align-items-center gap-2">
               <img
@@ -84,6 +84,6 @@ function Header() {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default Header;
