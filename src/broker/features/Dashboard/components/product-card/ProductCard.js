@@ -30,7 +30,6 @@ const ProductCard = ({
 }) => {
   const dispatch = useDispatch();
   const handleClick = () => {
-    console.log('test');
     dispatch(openBookAVisit());
   };
   return (
