@@ -9,13 +9,14 @@ import { RiVipCrownFill } from "react-icons/ri";
 import DashboardHeader from "../../header/DashboardHeader";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import Footer from "../../Footer/Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { recentlyAddedPropertyActions } from "../../../redux/recentlyAddedPropertySlice";
 
 // const RecentlyAddedProperty = ({ data }) => {
 const RecentlyAddedProperty = (props) => {
-  const data = useSelector((state) => state.addedPropertyDetails.properties);
+  // const data = useSelector((state) => state.addedPropertyDetails.properties);
+  const [data, setData] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,20 +25,21 @@ const RecentlyAddedProperty = (props) => {
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/property/getAllproperty",
         "http://localhost:3000/api/v1/property/getAllproperty",
+
         {
           headers: {
             Authorization:
-              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
               "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
           },
         }
       );
       console.log(response.data);
-      dispatch(
-        recentlyAddedPropertyActions.setAddedPropertyDetails({
-          data: response.data.data,
-        })
-      );
+      // dispatch(
+      //   recentlyAddedPropertyActions.setAddedPropertyDetails({
+      //     data: response.data.data,
+      //   })
+      // );
+      setData(response.data.data);
     };
     getAddedProperties();
   }, []);
@@ -50,14 +52,8 @@ const RecentlyAddedProperty = (props) => {
         id={itm._id}
         key={itm._id}
       >
-        <Card.Img
-          variant="top"
-          src={propertyImage}
-          // src={itm.images}
-        />
+        <Card.Img variant="top" src={propertyImage} />
         <Card.Body>
-          {/* <Card.Title></Card.Title> */}
-
           <Card.Text>
             <Row>
               <Col md={10} sm={10}>
@@ -65,7 +61,8 @@ const RecentlyAddedProperty = (props) => {
                   {" "}
                   <Link
                     className="recent-heading"
-                    to="/builder/home-dashboard/description"
+                    // to="/builder/home-dashboard/description"
+                    // to={`/builder/home-dashboard/description/${itm.propertyId._id}`}
                   >
                     {/* {itm.propertyId === null ? "no data Name" : itm._id.name} */}
                     {itm.name}
@@ -120,7 +117,7 @@ const RecentlyAddedProperty = (props) => {
                 {itm.minPrice}-{itm.maxPrice}
               </Col>
               <Col md={7} style={{ color: "#7D7F88", fontSize: "0.8em" }}>
-                Book now & get {itm.discountDescription} discount
+                {itm.discountDescription}
               </Col>
             </Row>
             <div className="d-flex justify-content-end gap-2 mt-2">

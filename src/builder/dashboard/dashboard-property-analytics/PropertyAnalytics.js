@@ -20,9 +20,9 @@ const PropertyAnalytics = () => {
           },
         }
       );
-      debugger;
+      // debugger;
 
-      console.log(response.data);
+      // console.log(response.data);
       setData(response.data.data);
     };
 

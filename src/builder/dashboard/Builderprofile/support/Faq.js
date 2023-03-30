@@ -1,31 +1,10 @@
-// import DashboardTabs from '../../dashboard-tabs/DashboardTabs';
-import { Container, Tab, Tabs } from "react-bootstrap";
-import AccordionCard from "../accordion/AccordionCard";
-import DashboardTabs from "../dashboard-tabs/DashboardTabs";
+import { Container } from "react-bootstrap";
 import { GrDocumentPdf } from "react-icons/gr";
-import SupportMenu from "./SupportMenu";
-import Faq from "./Faq";
+import AccordionCard from "../accordion/AccordionCard";
 
-// const tabKey = ["Support", "FAQ"];
-const Support = () => {
+const Faq = () => {
   return (
     <>
-      {/* <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]} /> */}
-      <Tabs
-        defaultActiveKey="visits"
-        id="fill-tab-example"
-        className="mb-3 p-5 rounded flex-column flex-sm-row"
-        fill
-      >
-        <Tab eventKey="Support" title="Support">
-          <SupportMenu />
-        </Tab>
-
-        <Tab eventKey="FAQ" title="FAQ ">
-          <Faq />
-        </Tab>
-      </Tabs>
-      {/* 
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <Container className="pt-5 pb-4 dashboard__wrapper">
           <h3>What is App flow and why is the best App?</h3>
@@ -70,9 +49,8 @@ const Support = () => {
         itemLength={4}
         accordionTitle="Lorem Ipsum dolor sit amet,consectetur elit"
         // accordionText="text goes here"
-      /> */}
+      />
     </>
   );
 };
-
-export default Support;
+export default Faq;

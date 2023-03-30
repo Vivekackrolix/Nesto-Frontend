@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
+// import axios from "axios";
 import { Col, Row } from "react-bootstrap";
-import { RiStarSFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { FaHeadset } from "react-icons/fa";
-// import bot from "../../../Images/bot.png";
+
 import Rating from "./Property claim/Rating";
 import Report from "./Property claim/Report";
 
@@ -14,27 +13,7 @@ const PromotedVisitItem = (props) => {
 
   const [hover, setHover] = useState(0);
   const [review, setReview] = useState(false);
-  const [show, setShow] = useState(false);
-
-  const [data, setData] = useState({}); //Later use redux
-  useEffect(() => {
-    const getPromoted = async () => {
-      const response = await axios.get(
-        "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-
-      setData(response.data.data);
-    };
-
-    getPromoted();
-  }, []);
+  // const [show, setShow] = useState(false);
 
   const onReport = () => {
     setReport(true);
@@ -45,15 +24,19 @@ const PromotedVisitItem = (props) => {
 
   return (
     <Row className={props.className}>
-      <Col>2111321321</Col>
-      <Col>Lorem Ipsum</Col>
-      <Col>Lorem Ipsum</Col>
-      <Col>12 Jan 2023</Col>
+      {/* <Col>{props.itm._id.slice(-10)}</Col>
+      <Col>
+        {props.itm.brokerId === null ? "no data Name" : props.itm.brokerId.name}
+      </Col>
+      <Col>{props.itm.date}</Col>
+      <Col>{props.itm.visitStatus}</Col>
+      <Col>{props.itm.clientName}</Col> */}
       <Col as={Link} to="/builder/home-dashboard/promoted/claim">
         Bought
+        {/* {props.itm.visitStatus} */}
       </Col>
       <Col>
-        <FaHeadset size="20" className="cursor"  onClick={onReport}  />
+        <FaHeadset size="20" className="cursor" onClick={onReport} />
         <Report show={report} onHide={setReport} />
       </Col>
 

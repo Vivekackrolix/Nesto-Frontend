@@ -35,6 +35,7 @@ const Subscription = () => {
           >
             <h3 style={{ color: "#FFFFFF" }}>Recommended</h3>
           </div>
+
           <div class="card mb-4 rounded shadow-sm">
             <div class={`card-header py-4`} style={{ background: itm.colour }}>
               <h5 className="fw-bold">{itm.name}</h5>
@@ -97,7 +98,7 @@ const Subscription = () => {
     );
   });
 
-  const [data1, setData1] = useState({});
+  const [data1, setData1] = useState([]);
   useEffect(() => {
     const getSubscriptionOrder = async () => {
       const response = await axios.get(
@@ -113,7 +114,7 @@ const Subscription = () => {
       );
       debugger;
       console.log(response.data.data);
-      setData1(response.data.data[0]);
+      setData1(response.data.data);
     };
 
     getSubscriptionOrder();
@@ -139,12 +140,25 @@ const Subscription = () => {
             <Col
               md={3}
               className={` rounded-start`}
-              style={{ padding: "50px", background: data1.planId.colour }}
+              style={{
+                padding: "50px",
+                // background:
+                // data1.length === 0 ? "Api call" : data1.planId.colour,
+              }}
             >
-              <h5 className="fw-bold">{data1.planId.name}</h5>
+              <h5 className="fw-bold">
+                {" "}
+                {data1.length === 0 ? "Api call" : data1[0].planId.name}
+              </h5>
 
-              <p style={{ opacity: "0.6" }}>{data1.planId.description}</p>
-              <p className="fw-bold">₹ {data1.planId.costPerMonth}/per-month</p>
+              <p style={{ opacity: "0.6" }}>
+                {data1.length === 0 ? "Api call" : data1[0].planId.description}
+              </p>
+              <p className="fw-bold">
+                ₹{" "}
+                {data1.length === 0 ? "Api call" : data1[0].planId.costPerMonth}
+                /per-month
+              </p>
             </Col>
             <Col md={3} className="p-4">
               <ListGroup as="ul">
@@ -191,9 +205,18 @@ const Subscription = () => {
                     fontSize: "1.4em",
                   }}
                 >
-                  {data1.planId.planValidityInDays} Days Left
+                  {data1.length === 0
+                    ? "Api call"
+                    : data1[0].planId.planValidityInDays}{" "}
+                  Days Left
                 </h5>
-                <p>({data1.planId.numberOfVisit}/24 Visits Left)</p>
+                <p>
+                  (
+                  {data1.length === 0
+                    ? "Api call"
+                    : data1[0].planId.numberOfVisit}
+                  /24 Visits Left)
+                </p>
                 <span className="p-3 gap-4 d-flex justify-content-center">
                   <Button
                     type="button"
@@ -213,7 +236,9 @@ const Subscription = () => {
                   </Button>
                 </span>
                 <p style={{ color: "rgba(0, 0, 0, 0.5)" }}>
-                  {data1.planId.minimumSpend}
+                  {data1.length === 0
+                    ? "Api call"
+                    : data1[0].planId.minimumSpend}
                 </p>
               </div>
             </Col>

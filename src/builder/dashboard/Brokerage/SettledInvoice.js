@@ -1,6 +1,6 @@
-import { Col, Container, Row } from 'react-bootstrap';
-import { GrDocumentPdf } from 'react-icons/gr';
-import brocker from '../../Images/brocker.png';
+import { Col, Container, Row } from "react-bootstrap";
+import { GrDocumentPdf } from "react-icons/gr";
+import brocker from "../../Images/brocker.png";
 // import DashboardHeader from "../header/DashboardHeader";
 
 const SettledInvoice = ({ data }) => {
@@ -10,7 +10,7 @@ const SettledInvoice = ({ data }) => {
         <div className="d-flex ">
           {/* <div className="d-flex flex-grow-1"> */}
           <img src={brocker} alt="broker" />
-          {/* <div className="p-2 rounded"></div> */}{' '}
+          {/* <div className="p-2 rounded"></div> */}{" "}
           <div className="d-flex flex-column ">
             <div className="d-flex  justify-content-between">
               <span className="mr-auto p-2">
@@ -18,33 +18,33 @@ const SettledInvoice = ({ data }) => {
                 <p
                   style={{
                     opacity: 0.5,
-                    fontFamily: 'Bahnschrift',
+                    fontFamily: "Bahnschrift",
 
-                    textDecorationLine: 'underline',
+                    textDecorationLine: "underline",
                   }}
                 >
                   Sector-29,Gurugram
                 </p>
               </span>
-              <span className="p-2" style={{ color: '#8B9199' }}>
+              <span className="p-2" style={{ color: "#8B9199" }}>
                 12/12/2022
               </span>
             </div>
             <div className="d-flex justify-content-between">
               <span className="p-2">
-                <p className="" style={{ color: '#8B9199' }}>
+                <p className="" style={{ color: "#8B9199" }}>
                   Broker Name
                 </p>
                 <p>Lorem Ipsum</p>
               </span>
               <span className="p-2 ">
-                <p className="" style={{ color: '#8B9199' }}>
+                <p className="" style={{ color: "#8B9199" }}>
                   Unit Number
                 </p>
                 <p>32322132</p>
               </span>
               <span className="p-2">
-                <p className="" style={{ color: '#8B9199' }}>
+                <p className="" style={{ color: "#8B9199" }}>
                   Claimed Amount
                 </p>
                 <p>RS.3.94 L</p>
@@ -62,8 +62,8 @@ const SettledInvoice = ({ data }) => {
           </div>
           <hr />
           <div className="d-flex justify-content-around">
-            <p style={{ color: '#838383' }}>32245554778</p>
-            <p style={{ color: '#838383' }}>Rs.3.94</p>
+            <p style={{ color: "#838383" }}>32245554778</p>
+            <p style={{ color: "#838383" }}>Rs.3.94</p>
             <h5>
               <button
                 type="button"
@@ -79,8 +79,8 @@ const SettledInvoice = ({ data }) => {
           </div>
           <hr />
           <div className="d-flex justify-content-around">
-            <p style={{ color: '#838383' }}>32245554778</p>
-            <p style={{ color: '#838383' }}>Rs.3.94</p>
+            <p style={{ color: "#838383" }}>32245554778</p>
+            <p style={{ color: "#838383" }}>Rs.3.94</p>
             <h5>
               <button
                 type="button"
