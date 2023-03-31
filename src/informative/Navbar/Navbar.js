@@ -5,11 +5,6 @@ import { BsApple } from 'react-icons/bs';
 import { AiFillAndroid } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import LoginModal from '../HomePage/LoginModal/LoginModal';
-import LoginAsBroker from '../HomePage/LoginModal/LoginAsBroker/LoginAsBroker';
-import ReffrelRegister from '../HomePage/LoginModal/ReffrelRegister/ReffrelRegister';
-import SuccessfulLogin from '../HomePage/LoginModal/SuccessfulLogin/SuccessfulLogin';
-import ListProperty from '../HomePage/LoginModal/ListProperty/ListProperty';
-import NotRegistered from '../HomePage/LoginModal/NotRegistered/NotRegistered';
 
 const InformativeNavbar = () => {
   const [show, setShow] = useState(false);
@@ -21,12 +16,12 @@ const InformativeNavbar = () => {
   };
   return (
     <>
-      {/* <LoginModal show={show} onHide={onHide} /> */}
+      <LoginModal show={show} onHide={onHide} />
       {/* <LoginAsBroker show={show} onHide={onHide} /> */}
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
       {/* <SuccessfulLogin show={show} onHide={onHide} /> */}
       {/* <ListProperty show={show} onHide={onHide} /> */}
-      <NotRegistered show={show} onHide={onHide} />
+      {/* <NotRegistered show={show} onHide={onHide} /> */}
       <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
         <Container className="nav-container">
           <Link to="/" className="navbar-brand nav-image">
@@ -65,9 +60,9 @@ const InformativeNavbar = () => {
               {/* List your Property btn */}
               <Nav.Item>
                 <div className="list-property-div">
-                  <button className="list-property-link" onClick={showLoginModal}>
-                    List your Property
-                  </button>
+                  {/* <button > */}
+                    <Link className="list-property-link" to='/builder-page'>List your Property</Link>
+                  {/* </button> */}
                 </div>
               </Nav.Item>
               {/* Download btn */}

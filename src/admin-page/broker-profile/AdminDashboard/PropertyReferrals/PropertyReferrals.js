@@ -79,6 +79,14 @@ const PropertyReferrals = () => {
                                         trailColor: "transparent"
                                     })}
                                 />
+                                <div style={{ width: "44%" }}>
+                                    <CircularProgressbar
+                                        value={40}
+                                        styles={buildStyles({
+                                            trailColor: "transparent"
+                                        })}
+                                    />
+                                </div>
                             </div>
                         </CircularProgressbarWithChildren>
                     </div>
