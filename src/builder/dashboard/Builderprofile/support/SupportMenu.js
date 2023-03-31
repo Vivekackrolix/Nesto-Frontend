@@ -48,7 +48,7 @@ const SupportMenu = () => {
       <AccordionCard
         itemLength={4}
         accordionTitle="Lorem Ipsum dolor sit amet,consectetur elit"
-        // accordionText="text goes here"
+        accordionText="text goes here"
       />
     </>
   );
