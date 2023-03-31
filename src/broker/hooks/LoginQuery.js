@@ -429,6 +429,36 @@ export const useGetAllPromotionBanner = () => {
   };
 };
 
+// get all customer
+export const useGetAllCustomer = brokerId => {
+  const {
+    isLoading: getAllCustomerIsLoading,
+    isError: getAllCustomerIsError,
+    data: getAllCustomerResponse,
+    error: getAllCustomerError,
+    isSuccess: getAllCustomerIsSuccess,
+  } = useQuery(
+    ['getAllCustomer', brokerId],
+    () => getAPI(`${apiEndpoints.getAllCustomer}?brokerId=${brokerId}`),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: true,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+      enabled: !!brokerId,
+    }
+  );
+
+  return {
+    getAllCustomerIsLoading,
+    getAllCustomerIsError,
+    getAllCustomerResponse,
+    getAllCustomerError,
+    getAllCustomerIsSuccess,
+  };
+};
+
 // reusable function
 // get api query without any params
 export const useGetQuery = (queryKey, apiEndpoint) => {

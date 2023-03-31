@@ -13,4 +13,5 @@ export const apiEndpoints = {
   visitVerifyOtp: '/v1/visit/verifyOtp',
   getBrokerById: `/v1/broker/getBrokerById`,
   updatePersonalInfo: '/v1/broker/updatePersonalInfo',
+  getAllCustomer: '/v1/customer/getAllCustomer',
 };

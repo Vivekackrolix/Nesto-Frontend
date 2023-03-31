@@ -52,10 +52,13 @@ const VisitVerification = ({ show, onHide, visitId, visitOTP }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    visitVerifyOtp({
-      visitId: visitId,
-      otp: otpInputs.current.map(el => el.value).join(''),
-    });
+    console.log(visitId);
+    if (visitId) {
+      visitVerifyOtp({
+        visitId: visitId,
+        otp: otpInputs.current.map(el => el.value).join(''),
+      });
+    }
   };
 
   useEffect(() => {

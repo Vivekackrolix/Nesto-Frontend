@@ -81,7 +81,10 @@ const BookAVisitModal = ({ show, onHide }) => {
   };
 
   if (isAddVisitSuccess) {
+    console.log('eee');
     console.log(isAddVisitResponse);
+    console.log('eee');
+    console.log(isAddVisitResponse?._id);
     console.log(isAddVisitResponse?._id);
   }
 
