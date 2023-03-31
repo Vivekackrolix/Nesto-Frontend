@@ -110,6 +110,7 @@
         background: var(--color-white);
         box-shadow: 0 0 10px -5px rgba(0, 0, 0, .2);
     }
+
     .faq-col-2 {
         z-index: 1;
         box-shadow: 0 0 14px 0 rgba(0, 0, 0, .065);

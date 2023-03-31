@@ -12,7 +12,7 @@ export default function GetStarted() {
                 Start listing or buying a property with NestoHub
               </span>
               <div className="">
-                <Link to="/contact-us" className="get-started_btn rounded-3">
+                <Link to="/builder-page" className="get-started_btn rounded-3">
                   Let's get Started
                 </Link>
               </div>
