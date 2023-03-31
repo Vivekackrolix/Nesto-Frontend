@@ -24,16 +24,16 @@ const PromotedVisitItem = (props) => {
 
   return (
     <Row className={props.className}>
-      {/* <Col>{props.itm._id.slice(-10)}</Col>
+      <Col>{props.itm._id.slice(-10)}</Col>
       <Col>
         {props.itm.brokerId === null ? "no data Name" : props.itm.brokerId.name}
       </Col>
+      <Col>{props.itm.clientName}</Col>
       <Col>{props.itm.date}</Col>
-      <Col>{props.itm.visitStatus}</Col>
-      <Col>{props.itm.clientName}</Col> */}
+      {/* <Col>{props.itm.visitStatus}</Col> */}
+
       <Col as={Link} to="/builder/home-dashboard/promoted/claim">
-        Bought
-        {/* {props.itm.visitStatus} */}
+        {props.itm.visitStatus}
       </Col>
       <Col>
         <FaHeadset size="20" className="cursor" onClick={onReport} />
