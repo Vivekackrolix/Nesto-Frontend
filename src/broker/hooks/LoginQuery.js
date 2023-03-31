@@ -237,9 +237,7 @@ export const useVisitVerifyOtpMutation = () => {
     ({ otp, visitId }) =>
       postAPI(apiEndpoints.visitVerifyOtp, { otp, visitId }),
     {
-      onSuccess: data => {
-        console.log(data);
-      },
+      onSuccess: data => {},
       onError: error => {
         console.log('something goes wrong');
       },
@@ -467,6 +465,27 @@ export const usePostMutation = apiEndpoint => {
     }
   );
   console.log(data);
+  return {
+    mutate,
+    isLoading,
+    isSuccess,
+    isError,
+    error,
+    data,
+  };
+};
+
+// use put
+export const usePutMutation = apiEndpoint => {
+  const { mutate, isLoading, isSuccess, isError, error, data } = useMutation(
+    payload => putAPI(apiEndpoint, payload),
+    {
+      onSuccess: data => {
+        console.log(data);
+      },
+    }
+  );
+
   return {
     mutate,
     isLoading,
