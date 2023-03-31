@@ -8,7 +8,7 @@ import { BsPencilFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const PropertyManager = (props) => {
+const Finance = (props) => {
   const [role, setRole] = useState(false);
   const [visible, setVisible] = useState(true);
 
@@ -46,7 +46,7 @@ const PropertyManager = (props) => {
     <>
       <Row className={props.className}>
         <Col>2111321321</Col>
-        <Col>91-0000000000</Col>
+        <Col>91-9999841038</Col>
         <Col>Lorem Ipsum</Col>
 
         <Col>Lorem Ipsum</Col>
@@ -80,4 +80,4 @@ const PropertyManager = (props) => {
     </>
   );
 };
-export default PropertyManager;
+export default Finance;

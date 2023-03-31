@@ -1,16 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper';
 import { useParams } from 'react-router-dom';
-import {
-  Button,
-  Card,
-  Col,
-  Container,
-  Image,
-  Row,
-  Table,
-} from 'react-bootstrap';
-import { Footer, Header, Ribbon } from '../../../features';
+import { Card, Col, Container, Image, Row, Table } from 'react-bootstrap';
+import { Footer, Header, Ribbon, SmallCardSection } from '../../../features';
 
 import ViewDetailsCard from './ViewDetailsCard';
 import { SwiperSlider } from '../../../components';
@@ -20,12 +12,12 @@ import { useGetPropertyById } from '../../../hooks/LoginQuery';
 import LoadingSpinner from '../../../Common/loading-spinner/LoadingSpinner';
 import ErrorMessage from '../../../Common/error-message/ErrorMessage';
 import PropertyDetailsCard from './PropertyDetailsCard';
+import SearchFilterBox from '../../../../components/search-filter/SearchFilter';
 
 import 'swiper/css';
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 import './PropertyDescription.css';
-import React from 'react';
 
 const PropertyDescription = () => {
   const { id } = useParams();
@@ -50,6 +42,7 @@ const PropertyDescription = () => {
     const [property] = getPropertyByIdResponse;
     const {
       thumbnail,
+      images,
       brokerageType,
       brokerageValue,
       isRera,
@@ -70,15 +63,19 @@ const PropertyDescription = () => {
     return (
       <>
         <Header />
+        <SmallCardSection />
+        <SearchFilterBox addBtn />
         {getPropertyByIdIsSuccess && (
-          <section className="mt-5 broker__property__details">
+          <section className="broker__property__details">
             <Container>
-              {/* <HeroSection details /> */}
-              <section className="mt-5">
+              <section>
+                <h1 className="broker__section__title">Property Details</h1>
                 <div
                   className="hero-section nes__hero d-flex flex-column justify-content-center"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${thumbnail})`,
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${
+                      thumbnail ? thumbnail : ''
+                    })`,
                   }}
                 >
                   <Container>
@@ -87,40 +84,57 @@ const PropertyDescription = () => {
                       {isBestSelling && (
                         <Ribbon cssClass="ribbonStyle" text="Best Seller" />
                       )}
-                      <Ribbon
-                        cssClass="ribbonStyle2 rounded-pill mt-5 py-1 px-3"
-                        text={`${brokerageValue}${
-                          brokerageType === 'percentage' && '%'
-                        } Brokerage`}
-                      />
+                      {brokerageType && brokerageValue && (
+                        <Ribbon
+                          cssClass="ribbonStyle2 rounded-pill mt-5 py-1 px-3"
+                          text={`${brokerageValue}${
+                            brokerageType === 'percentage' && '%'
+                          } Brokerage`}
+                        />
+                      )}
                       <div className="hero-caption-img-navigation position-absolute">
-                        <Image
-                          rounded
-                          src="/assets/broker/hero-small-img.png"
-                          className="ml-3"
-                        />
-                        <Image
-                          src="/assets/broker/hero-small-img.png"
-                          rounded
-                          className="mx-5"
-                        />
-                        <div className="position-relative d-inline-block">
-                          <Image
-                            src="/assets/broker/hero-small-img.png"
-                            rounded
-                            className="ml-3"
-                          />
-                          <div className="position-absolute bottom-0 end-0 bg-dark text-white">
-                            <span className="px-2">3+</span>
-                          </div>
-                        </div>
+                        {!!images.length &&
+                          images.slice(0, 3).map((img, index) => {
+                            if (index <= 1)
+                              return (
+                                <Image
+                                  key={index}
+                                  rounded
+                                  src={img}
+                                  className="ms-3"
+                                  width={70}
+                                  height={70}
+                                />
+                              );
+
+                            if (index > 1) {
+                              return (
+                                <div className="position-relative d-inline-block rounded ms-3">
+                                  <Image
+                                    src={img}
+                                    rounded
+                                    width={70}
+                                    height={70}
+                                  />
+
+                                  {images.length > 3 && (
+                                    <div className="position-absolute top-0 left-0 w-100 h-100 rounded bg-dark opacity-75 text-white d-flex justify-content-center align-items-center h3">
+                                      <span className="px-2">3+</span>
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            }
+                          })}
                       </div>
                     </div>
                   </Container>
                 </div>
               </section>
-              {/* hero sectiob details code end here */}
+              {/* hero section details code end here */}
               <PropertyDetailsCard propertyDetailsCard={propertyDetailsCard} />
+
+              <SwiperSlider floorPlansAndPricing={floorPlanAndPricing} />
 
               <div className="nes__dashboard__largeicons">
                 {/* amenities */}
@@ -198,8 +212,6 @@ const PropertyDescription = () => {
                 </Card>
               </div>
 
-              <SwiperSlider floorPlansAndPricing={floorPlanAndPricing} />
-
               {/* map  */}
               <div className="w-100">
                 <Image fluid src="/assets/broker/map-image.png" alt="map" />
@@ -210,7 +222,7 @@ const PropertyDescription = () => {
               <Swiper
                 modules={[Navigation, Autoplay]}
                 spaceBetween={30}
-                slidesPerView={2}
+                slidesPerView={2.5}
                 navigation
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 3000 }}
@@ -218,7 +230,7 @@ const PropertyDescription = () => {
               >
                 {!!propertyAdvertiseMentDetails.length &&
                   propertyAdvertiseMentDetails.map(
-                    ({ iconUrl, _id, name, location, distance }) => (
+                    ({ iconUrl, _id, name, location, distance }, index) => (
                       <SwiperSlide key={_id}>
                         <Card className="media-card">
                           <Card.Body>

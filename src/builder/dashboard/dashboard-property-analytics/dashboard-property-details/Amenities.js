@@ -5,7 +5,8 @@ import bath from "../../../Images/bath.png";
 import garage from "../../../Images/garage.png";
 import balcony from "../../../Images/Balcony.png";
 
-const Amenities = () => {
+const Amenities = ({ data }) => {
+  const unitType = data.unitType ? data.unitType : [];
   return (
     <>
       <br></br>
@@ -23,7 +24,10 @@ const Amenities = () => {
             <span>
               <img src={sqft} className="rounded my-3" alt="Search" />
             </span>
-            <span style={{ fontFamily: "Bahnschrift" }}>2110 Sqft</span>
+            <span style={{ fontFamily: "Bahnschrift" }}>
+              2110 Sqft
+              {/* {data.amenities[1].name} */}
+            </span>
           </div>
           <div className="text-center d-flex flex-column">
             <span>

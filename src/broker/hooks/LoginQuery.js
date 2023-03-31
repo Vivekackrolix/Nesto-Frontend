@@ -200,7 +200,6 @@ export const useGetAllBanner = () => {
 };
 
 // useBookVisit
-
 export const useAddVisitMutation = () => {
   // const dispatch = useDispatch();
 
@@ -222,6 +221,36 @@ export const useAddVisitMutation = () => {
     isAddIsError,
     isAddVisitError,
     isAddVisitResponse,
+  };
+};
+
+// // verify
+export const useVisitVerifyOtpMutation = () => {
+  const {
+    mutate: visitVerifyOtp,
+    isLoading: isVisitVerifyOtpLoading,
+    isSuccess: isVisitVerifyOtpSuccess,
+    isError: isVisitVerifyOtpIsError,
+    data: visitVerifyOtpResponse,
+    error: isVisitVerifyOtpError,
+  } = useMutation(
+    ({ otp, visitId }) =>
+      postAPI(apiEndpoints.visitVerifyOtp, { otp, visitId }),
+    {
+      onSuccess: data => {},
+      onError: error => {
+        console.log('something goes wrong');
+      },
+    }
+  );
+
+  return {
+    visitVerifyOtp,
+    isVisitVerifyOtpLoading,
+    isVisitVerifyOtpSuccess,
+    isVisitVerifyOtpIsError,
+    visitVerifyOtpResponse,
+    isVisitVerifyOtpError,
   };
 };
 
@@ -400,6 +429,36 @@ export const useGetAllPromotionBanner = () => {
   };
 };
 
+// get all customer
+export const useGetAllCustomer = brokerId => {
+  const {
+    isLoading: getAllCustomerIsLoading,
+    isError: getAllCustomerIsError,
+    data: getAllCustomerResponse,
+    error: getAllCustomerError,
+    isSuccess: getAllCustomerIsSuccess,
+  } = useQuery(
+    ['getAllCustomer', brokerId],
+    () => getAPI(`${apiEndpoints.getAllCustomer}?brokerId=${brokerId}`),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: true,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+      enabled: !!brokerId,
+    }
+  );
+
+  return {
+    getAllCustomerIsLoading,
+    getAllCustomerIsError,
+    getAllCustomerResponse,
+    getAllCustomerError,
+    getAllCustomerIsSuccess,
+  };
+};
+
 // reusable function
 // get api query without any params
 export const useGetQuery = (queryKey, apiEndpoint) => {
@@ -436,6 +495,27 @@ export const usePostMutation = apiEndpoint => {
     }
   );
   console.log(data);
+  return {
+    mutate,
+    isLoading,
+    isSuccess,
+    isError,
+    error,
+    data,
+  };
+};
+
+// use put
+export const usePutMutation = apiEndpoint => {
+  const { mutate, isLoading, isSuccess, isError, error, data } = useMutation(
+    payload => putAPI(apiEndpoint, payload),
+    {
+      onSuccess: data => {
+        console.log(data);
+      },
+    }
+  );
+
   return {
     mutate,
     isLoading,

@@ -1,7 +1,14 @@
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Alert } from 'react-bootstrap';
 import DashboardTabs from '../dashboard-tabs/DashboardTabs';
 // import CreatableSelect from "react-select/creatable";
 import FileUpload from '../file-upload/FileUpload';
+import { usePutMutation } from '../../../hooks/LoginQuery';
+import { apiEndpoints } from '../../../config/apiEndpoints';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setToken } from '../../../store/authSlice';
+import { setAuthToken } from '../../../services/api';
+import useToken from '../../../hooks/useToken';
 // const options = [
 //   { value: "sector 28", label: "Sector 28" },
 //   { value: "hDFC Bank", label: "HDFC Bank" },
@@ -10,16 +17,49 @@ const tabKey2 = ['Personal Info', 'Bank Info'];
 
 // personal info
 const PersonalInfo = ({ getBrokerByIdResponse }) => {
+  // const [show, setShow] = useState(true);
+
+  const {
+    mutate: updatePersonalInfo,
+    isLoading: isUpdatePersonalInfoLoading,
+    isSuccess: isUpdatePersonalInfoSuccess,
+    isError,
+    error,
+    data,
+  } = usePutMutation(apiEndpoints.updatePersonalInfo);
+
+  const [formData, setFormData] = useState({
+    id: getBrokerByIdResponse._id,
+    email: getBrokerByIdResponse.email ?? '',
+    phoneNumber: getBrokerByIdResponse.phoneNumber ?? '',
+    address: getBrokerByIdResponse.address ?? '',
+    panNumber: getBrokerByIdResponse.panNumber ?? '',
+    reraRegistrationNumber: getBrokerByIdResponse.reraRegistrationNumber ?? '',
+    name: getBrokerByIdResponse.name ?? '',
+  });
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    console.log(name);
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    updatePersonalInfo(formData);
+  };
+
   return (
-    <Form className="profile__form ps-2">
-      <Form.Group className="mb-4" controlId="email">
+    <Form className="profile__form ps-2" onSubmit={handleSubmit}>
+      <Form.Group className="mb-4">
         <Form.Label>Email</Form.Label>
         <Form.Control
           className="rounded-0"
           type="email"
+          name="email"
           placeholder="enter you email"
-          value={getBrokerByIdResponse.email ?? ''}
-          onChange={() => {}}
+          value={formData.email}
+          onChange={handleChange}
         />
       </Form.Group>
 
@@ -29,8 +69,9 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
           className="rounded-0"
           type="tel"
           placeholder="enter you phone number"
-          value={getBrokerByIdResponse.phoneNumber ?? ''}
-          onChange={() => {}}
+          value={formData.phoneNumber}
+          onChange={handleChange}
+          name="phoneNumber"
         />
       </Form.Group>
 
@@ -40,8 +81,9 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
           className="rounded-0"
           type="text"
           placeholder="enter your address"
-          value={getBrokerByIdResponse.address ?? ''}
-          onChange={() => {}}
+          value={formData.address}
+          onChange={handleChange}
+          name="address"
         />
       </Form.Group>
       <Form.Group className="mb-4" controlId="address">
@@ -50,8 +92,9 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
           className="rounded-0"
           type="text"
           placeholder="pan number"
-          value={getBrokerByIdResponse.panNumber ?? ''}
-          onChange={() => {}}
+          value={formData.panNumber}
+          onChange={handleChange}
+          name="panNumber"
         />
       </Form.Group>
 
@@ -61,20 +104,55 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
           className="rounded-0"
           type="text"
           placeholder="rera register number"
-          value={getBrokerByIdResponse.reraRegistrationNumber ?? ''}
-          onChange={() => {}}
+          value={formData.reraRegistrationNumber}
+          onChange={handleChange}
+          name="reraRegistrationNumber"
         />
       </Form.Group>
       <Form.Label>Upload Documents</Form.Label>
 
       <FileUpload />
 
+      {/* success message */}
+      {isUpdatePersonalInfoSuccess && (
+        <Alert
+          variant="success"
+          className="py-1"
+          // onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Successful Updated</Alert.Heading>
+        </Alert>
+      )}
+      {/* success message code end here */}
+
       <div className="d-flex gap-4 mt-5">
-        <Button className="btn-color-outline-primary rounded-100 btn-rounded">
+        <Button
+          className="btn-color-outline-primary rounded-100 btn-rounded"
+          type="submit"
+        >
           Cancel
         </Button>
-        <Button className="btn-color-primary rounded-100 btn-rounded">
-          Save
+        <Button
+          type="submit"
+          className="btn-color-primary rounded-100 btn-rounded"
+          disabled={isUpdatePersonalInfoLoading}
+        >
+          {isUpdatePersonalInfoLoading ? (
+            <>
+              <span>
+                <span
+                  className="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                {'  '}
+                Update...
+              </span>
+            </>
+          ) : (
+            'Save'
+          )}
         </Button>
       </div>
     </Form>

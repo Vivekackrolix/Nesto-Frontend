@@ -26,7 +26,6 @@
 .nes__product__card__title {
   font-weight: 700;
   font-size: 18.03px;
-  line-height: 25px;
   letter-spacing: 0.03em;
   color: #252b5c;
 }
@@ -61,14 +60,6 @@
   background-color: #fe5e6a; /* replace with your desired color */
 }
 
-/* .nes__product__card__image {
-  transition: transform 0.2s ease-in-out;
+.nes__product__card .swiper {
+  margin-bottom: 0px !important;
 }
-
-.position-relative:hover .nes__product__card__image {
-  transform: scale(1.1);
-}
-
-.position-relative:hover .ribbonStyle {
-  transform: scale(1.1);
-} */

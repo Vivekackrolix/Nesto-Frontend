@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Tab, Nav, Button, Image } from 'react-bootstrap';
-import {
-  FiUser,
-  FiClock,
-  FiClipboard,
-  FiBookOpen,
-  FiHelpCircle,
-  FiPlus,
-} from 'react-icons/fi';
+import { FiUser, FiClipboard, FiBookOpen, FiHelpCircle } from 'react-icons/fi';
 import './Profile.css';
 import { RiArrowRightSLine, RiPencilFill } from 'react-icons/ri';
 import { BsBoxArrowRight } from 'react-icons/bs';
 import PersonalDetailsForm from './personal-details/PersonalDetailsForm';
-import QueriesHistory from './queries-history/QueriesHistory';
 import TermsConditions from './terms-and-conditions/TermsConditions';
 import RaiseQuery from './raise-query/RaiseQuery';
 import CardWrapper from './card-wrapper/CardWrapper';
@@ -25,6 +17,8 @@ import { setBrokerID } from '../../store/authSlice';
 import { useGetBrokerById } from '../../hooks/LoginQuery';
 import ErrorMessage from '../../Common/error-message/ErrorMessage';
 import LoadingSpinner from '../../Common/loading-spinner/LoadingSpinner';
+import { Footer, Header } from '../../features';
+import useToken from '../../hooks/useToken';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -80,9 +74,10 @@ const profileSidebarNavContent = [
 ];
 
 const ProfilePage = () => {
+  useToken();
   const [activeTab, setActiveTab] = useState(0);
   const brokerID = useSelector(state => state.auth.brokerID);
-  const dispatch = useDispatch();
+
   const {
     getBrokerByIdIsLoading,
     getBrokerByIdIsError,
@@ -94,14 +89,6 @@ const ProfilePage = () => {
   const handleTabChange = index => {
     setActiveTab(index);
   };
-
-  useEffect(() => {
-    const brokerID = localStorage.getItem('brokerID');
-
-    if (brokerID) {
-      dispatch(setBrokerID(brokerID));
-    }
-  }, [dispatch]);
 
   if (getBrokerByIdIsLoading) {
     return (
@@ -120,6 +107,7 @@ const ProfilePage = () => {
 
   return (
     <>
+      <Header />
       <section className="mt-5">
         <Container fluid="lg" className="profile mb-5">
           <Row className="gy-5 gx-lg-5">
@@ -209,6 +197,7 @@ const ProfilePage = () => {
           </Row>
         </Container>
       </section>
+      <Footer />
     </>
   );
 };

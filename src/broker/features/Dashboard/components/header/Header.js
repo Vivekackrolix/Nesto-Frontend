@@ -2,26 +2,34 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { AiOutlineEye } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { BsFillBellFill } from 'react-icons/bs';
-import { RiNotification3Line } from 'react-icons/ri';
-import homeIcon from '../../assets/images/home.svg';
 import clientIcon from '../../assets/images/client.svg';
 import brokerageIcon from '../../assets/images/brokerage.svg';
 import brokerProfileImg from '../../assets/images/broker-profile-img.png';
+import { Link } from 'react-router-dom';
+import { RiHome5Fill } from 'react-icons/ri';
 import './Header.css';
 
-function Header() {
+const Header = () => {
   return (
     <Navbar expand="lg" className="nes__navbar">
       <Container>
-        <Navbar.Brand href="/" className="d-flex justify-content-center">
+        <Navbar.Brand
+          as={Link}
+          to="/broker/login"
+          className="d-flex justify-content-center"
+        >
           <img src="/assets/nesto-logo.png" alt="Logo" height="30" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link href="/" className="mx-3 d-flex align-items-center gap-2">
-              <img src={homeIcon} alt="home icon" className="img-fluid" />
-              Home
+            <Nav.Link
+              as={Link}
+              to="/broker/dashboard"
+              className="mx-3 d-flex align-items-center gap-2"
+            >
+              <RiHome5Fill size={25} />
+              <span>Home </span>
             </Nav.Link>
             <Nav.Link href="/" className="mx-3 d-flex align-items-center gap-2">
               <img
@@ -62,7 +70,7 @@ function Header() {
                 </div>
               </div>
             </Nav.Link>
-            <Nav.Link href="#">
+            <Nav.Link as={Link} to="/broker/profile">
               <div className="nes__navbar__right__circle d-flex align-items-center bg-transparent">
                 <img
                   src={brokerProfileImg}
@@ -76,6 +84,6 @@ function Header() {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default Header;

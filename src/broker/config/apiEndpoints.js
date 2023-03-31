@@ -1,18 +1,17 @@
 export const apiEndpoints = {
-  verifyOtp: '/v1/broker/verifyOtp',
   sendOtp: '/v1/broker/sendOtp',
+  verifyOtp: '/v1/broker/verifyOtp',
   registerName: '/v1/broker/registerName',
-  getAllproperty: '/v1/property/getAllproperty',
+  getAllPropertyCategory: '/v1/propertyCategory/getAllPropertyCategory',
   getAllBanner: '/v1/banner/getAllBanner',
-  addVisit: '/v1/visit/addVisit',
-  getBrokerById: `/v1/broker/getBrokerById`,
+  getAllPromotionBanner: '/v1/promotionBanner/getAllPromotionBanner',
+  getAllproperty: '/v1/property/getAllproperty',
+  getPropertyById: '/v1/property/getPropertyById',
   getAllTermsAndConditionsBroker: `/v1/termsAndConditionsBroker/getAllTermsAndConditionsBroker`,
   getAllFaqAndSupport: '/v1/faqAndSupport/getAllFaqAndSupport',
-  getAllCommunitySupportQuestions:
-    '/v1/communitySupportQuestions/getAllCommunitySupportQuestions?pageSize=1&pageNo=1',
-  getAllCommunitySupportAnswers:
-    'http://13.233.149.97:3000/api/v1/communitySupportAnswers/getAllCommunitySupportAnswers?communitySupportQuestionsId=6411b84888986c905fa7e1e7&pageSize=2&pageNo=1',
-  getAllPropertyCategory: '/v1/propertyCategory/getAllPropertyCategory',
-  getAllPromotionBanner: '/v1/promotionBanner/getAllPromotionBanner',
-  getPropertyById: '/v1/property/getPropertyById',
+  addVisit: '/v1/visit/addVisit',
+  visitVerifyOtp: '/v1/visit/verifyOtp',
+  getBrokerById: `/v1/broker/getBrokerById`,
+  updatePersonalInfo: '/v1/broker/updatePersonalInfo',
+  getAllCustomer: '/v1/customer/getAllCustomer',
 };

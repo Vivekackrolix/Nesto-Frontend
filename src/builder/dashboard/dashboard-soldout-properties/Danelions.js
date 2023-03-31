@@ -1,5 +1,5 @@
 import { Container, Button, Col, Row } from "react-bootstrap";
-import { RiStarSFill } from "react-icons/ri";
+// import { RiStarSFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import sky from "../../Images/Sky.png";
 import build from "../../Images/build.png";
@@ -9,7 +9,7 @@ import { useState } from "react";
 const Danelions = ({ data }) => {
   const [rating, setRating] = useState(0);
   const unitType = data.unitType ? data.unitType : [];
-  // const [over, setOver] = useState(0);
+
   const [hover, setHover] = useState(0);
   return (
     <>
@@ -46,22 +46,6 @@ const Danelions = ({ data }) => {
                   <p style={{ opacity: 0.5 }}>{itm}</p>
                 </Col>
               ))}
-              {/* <Col md={3} sm={3} className="text-center">
-                <img src={build} alt="build" className="build-icon" />
-                <p style={{ opacity: 0.5 }}>2BHK</p>
-              </Col>
-              <Col md={3} sm={3} className="text-center">
-                <img src={build} alt="build" className="build-icon" />
-                <p style={{ opacity: 0.5 }}>3BHK</p>
-              </Col>
-              <Col md={3} sm={3} className="text-center">
-                <img src={build} alt="build" className="build-icon" />
-                <p style={{ opacity: 0.5 }}>4BHK</p>
-              </Col>
-              <Col md={3} sm={3} className="text-center">
-                <img src={build} alt="build" className="build-icon" />
-                <p style={{ opacity: 0.5 }}>5BHK</p>
-              </Col> */}
             </Row>
           </Col>
           <Col md={5} sm={12} className="text-center">
@@ -69,7 +53,8 @@ const Danelions = ({ data }) => {
               Rs. {data.minPrice} - {data.maxPrice}
             </h4>
             <p style={{ color: "#7D7F88" }}>
-              Book now & get {data.discountDescription} Discount
+              {/* Book now & get {data.discountDescription} Discount */}
+              {data.discountDescription}
             </p>
             <br></br>
 

@@ -51,11 +51,13 @@ const BrokerView = () => {
       {getAllPropertyIsError && <ErrorMessage />}
 
       {getAllPropertyResponse && (
-        <ProductContainers
-          sectionTitle="Promoted Property"
-          propertyData={getAllPropertyResponse}
-          view="broker"
-        />
+        <ProductContainers propertyData={getAllPropertyResponse} view="broker">
+          <SwiperSliderNew
+            swiperData={getAllBannerResponse}
+            pagination
+            promotionalBanner
+          />
+        </ProductContainers>
       )}
       <HeroSection />
 

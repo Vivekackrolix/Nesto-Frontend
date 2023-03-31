@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   BookAVisitModal,
   BrokerView,
@@ -15,18 +15,21 @@ import {
   Claim,
 } from '../../features';
 import '../../features/Dashboard/assets/styles/Dashboard.css';
-import ClientCards from '../../features/Dashboard/components/client-cards/ClientCard';
-import { clientsData } from '../../data/Constant';
-import ProfilePage from '../../dashboard-containers/broker-profile/Profile';
 import { setToken, setBrokerID } from '../../store/authSlice';
 import { setAuthToken } from '../../services/api';
+import { hideBookAVisit } from '../../store/ModalsSlice';
 
 const DashboardPage = () => {
   const dispatch = useDispatch();
+  const isBookAVisit = useSelector(state => state.modals.isBookAVisit);
+
+  const onHide = () => {
+    dispatch(hideBookAVisit());
+  };
+
   useEffect(() => {
     const token = localStorage.getItem('authToken');
     const brokerID = localStorage.getItem('brokerID');
-
     if (token && brokerID) {
       dispatch(setToken(token));
       setAuthToken(token);
@@ -38,7 +41,7 @@ const DashboardPage = () => {
       {/* popup modal */}
       {/* <ShareModal show={show} onHide={onHide} /> */}
       {/* <ShareModal show={show} onHide={onHide} /> */}
-      {/* <BookAVisitModal show={true} /> */}
+      <BookAVisitModal show={isBookAVisit} onHide={onHide} />
       {/* <SuccessModal show={show} onHide={onHide} /> */}
       {/* <VisitAlertModal show={show} onHide={onHide} /> */}
       {/* <CustomerModal show={show} onHide={onHide} /> */}
@@ -56,7 +59,7 @@ const DashboardPage = () => {
           {/* <ClientCards
             title="Client Management"
             clientManagement
-            clientData={clientsData}
+            clientData={[clientsData]}
           /> */}
 
           {/* requirements */}

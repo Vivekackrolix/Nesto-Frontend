@@ -15,19 +15,16 @@ import storage from 'redux-persist/lib/storage';
 import authReducer from './authSlice';
 import communityReducer from '../dashboard-containers/broker-profile/community/CommunitySlice';
 import loginReducer from '../features/auth/login/loginSlice';
-import modalsReducer from './ModalsSlice';
 
 const rootReducer = combineReducers({
   auth: authReducer,
   community: communityReducer,
   login: loginReducer,
-  modals: modalsReducer,
 });
 
 const persistConfig = {
   key: 'root',
   storage,
-  whiteList: ['auth'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
