@@ -18,6 +18,7 @@ import { useGetBrokerById } from '../../hooks/LoginQuery';
 import ErrorMessage from '../../Common/error-message/ErrorMessage';
 import LoadingSpinner from '../../Common/loading-spinner/LoadingSpinner';
 import { Footer, Header } from '../../features';
+import useToken from '../../hooks/useToken';
 
 const tabs = [
   { title: 'Personal Details', icon: <FiUser /> },
@@ -73,9 +74,10 @@ const profileSidebarNavContent = [
 ];
 
 const ProfilePage = () => {
+  useToken();
   const [activeTab, setActiveTab] = useState(0);
   const brokerID = useSelector(state => state.auth.brokerID);
-  const dispatch = useDispatch();
+
   const {
     getBrokerByIdIsLoading,
     getBrokerByIdIsError,
@@ -87,14 +89,6 @@ const ProfilePage = () => {
   const handleTabChange = index => {
     setActiveTab(index);
   };
-
-  useEffect(() => {
-    const brokerID = localStorage.getItem('brokerID');
-
-    if (brokerID) {
-      dispatch(setBrokerID(brokerID));
-    }
-  }, [dispatch]);
 
   if (getBrokerByIdIsLoading) {
     return (
