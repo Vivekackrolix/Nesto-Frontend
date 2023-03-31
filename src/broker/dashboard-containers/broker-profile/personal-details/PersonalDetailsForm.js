@@ -18,7 +18,6 @@ const tabKey2 = ['Personal Info', 'Bank Info'];
 // personal info
 const PersonalInfo = ({ getBrokerByIdResponse }) => {
   // const [show, setShow] = useState(true);
-  useToken();
 
   const {
     mutate: updatePersonalInfo,
