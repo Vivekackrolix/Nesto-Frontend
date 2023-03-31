@@ -15,9 +15,6 @@ import {
   Claim,
 } from '../../features';
 import '../../features/Dashboard/assets/styles/Dashboard.css';
-import ClientCards from '../../features/Dashboard/components/client-cards/ClientCard';
-import { clientsData } from '../../data/Constant';
-import ProfilePage from '../../dashboard-containers/broker-profile/Profile';
 import { setToken, setBrokerID } from '../../store/authSlice';
 import { setAuthToken } from '../../services/api';
 import { hideBookAVisit } from '../../store/ModalsSlice';
@@ -62,7 +59,7 @@ const DashboardPage = () => {
           {/* <ClientCards
             title="Client Management"
             clientManagement
-            clientData={clientsData}
+            clientData={[clientsData]}
           /> */}
 
           {/* requirements */}

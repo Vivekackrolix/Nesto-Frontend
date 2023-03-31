@@ -10,6 +10,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import PropertyDescription from './Pages/dashboard/property-details/PropertyDescription';
 import ScrollToTop from './Common/scroll-to-top/ScrollToTop';
 import ProfilePage from './dashboard-containers/broker-profile/Profile';
+import ClientCards from './features/Dashboard/components/client-cards/ClientCard';
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,10 @@ const App = () => {
               <Route path="/broker/register" element={<Register />} />
               <Route path="/broker/dashboard" element={<DashboardPage />} />
               <Route path="/broker/profile" element={<ProfilePage />} />
+              <Route
+                path="/broker/clientManagement"
+                element={<ClientCards />}
+              />
               <Route
                 path="/broker/property-details/:id"
                 element={<PropertyDescription />}

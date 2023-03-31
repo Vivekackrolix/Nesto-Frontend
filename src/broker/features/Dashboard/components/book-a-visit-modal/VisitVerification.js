@@ -52,8 +52,6 @@ const VisitVerification = ({ show, onHide, visitId, visitOTP }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // console.log(visitVerifyOtpResponse);
-    return;
     visitVerifyOtp({
       visitId: visitId,
       otp: otpInputs.current.map(el => el.value).join(''),
@@ -65,8 +63,6 @@ const VisitVerification = ({ show, onHide, visitId, visitOTP }) => {
   }, []);
 
   if (isVisitVerifyOtpSuccess) {
-    console.log('te');
-    console.log(visitVerifyOtpResponse);
     dispatch(hideBookAVisit());
   }
 
