@@ -4,7 +4,11 @@ import DashboardTabs from '../dashboard-tabs/DashboardTabs';
 import FileUpload from '../file-upload/FileUpload';
 import { usePutMutation } from '../../../hooks/LoginQuery';
 import { apiEndpoints } from '../../../config/apiEndpoints';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setToken } from '../../../store/authSlice';
+import { setAuthToken } from '../../../services/api';
+import useToken from '../../../hooks/useToken';
 // const options = [
 //   { value: "sector 28", label: "Sector 28" },
 //   { value: "hDFC Bank", label: "HDFC Bank" },
@@ -13,7 +17,8 @@ const tabKey2 = ['Personal Info', 'Bank Info'];
 
 // personal info
 const PersonalInfo = ({ getBrokerByIdResponse }) => {
-  const [show, setShow] = useState(true);
+  // const [show, setShow] = useState(true);
+  useToken();
 
   const {
     mutate: updatePersonalInfo,
@@ -35,7 +40,9 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
   });
 
   const handleChange = e => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    console.log(name);
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = e => {
@@ -45,13 +52,14 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
 
   return (
     <Form className="profile__form ps-2" onSubmit={handleSubmit}>
-      <Form.Group className="mb-4" controlId="email">
+      <Form.Group className="mb-4">
         <Form.Label>Email</Form.Label>
         <Form.Control
           className="rounded-0"
           type="email"
+          name="email"
           placeholder="enter you email"
-          value={formData.email ?? ''}
+          value={formData.email}
           onChange={handleChange}
         />
       </Form.Group>
@@ -62,7 +70,7 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
           className="rounded-0"
           type="tel"
           placeholder="enter you phone number"
-          value={formData.phoneNumber ?? ''}
+          value={formData.phoneNumber}
           onChange={handleChange}
           name="phoneNumber"
         />
@@ -74,7 +82,7 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
           className="rounded-0"
           type="text"
           placeholder="enter your address"
-          value={formData.address ?? ''}
+          value={formData.address}
           onChange={handleChange}
           name="address"
         />
@@ -85,7 +93,7 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
           className="rounded-0"
           type="text"
           placeholder="pan number"
-          value={formData.panNumber ?? ''}
+          value={formData.panNumber}
           onChange={handleChange}
           name="panNumber"
         />
@@ -97,7 +105,7 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
           className="rounded-0"
           type="text"
           placeholder="rera register number"
-          value={formData.reraRegistrationNumber ?? ''}
+          value={formData.reraRegistrationNumber}
           onChange={handleChange}
           name="reraRegistrationNumber"
         />
