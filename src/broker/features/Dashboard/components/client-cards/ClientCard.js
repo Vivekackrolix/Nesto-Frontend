@@ -146,8 +146,11 @@ const ClientCards = ({
                             <span className="fw-normal text-muted">
                               Preferred Location
                             </span>{' '}
-                            <span className="fw-semibold">
-                              {preferredLocation}
+                            <span className="fw-semibold d-flex justify-content-end gap-2">
+                              {!!preferredLocation.length &&
+                                preferredLocation.map((location, index) => (
+                                  <span key={index}>{location}</span>
+                                ))}
                             </span>
                           </Card.Text>
                           <Card.Text className="d-flex justify-content-between">
