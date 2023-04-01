@@ -31,7 +31,12 @@ const Header = () => {
               <RiHome5Fill size={25} />
               <span>Home </span>
             </Nav.Link>
-            <Nav.Link href="/" className="mx-3 d-flex align-items-center gap-2">
+            <Nav.Link
+              as={Link}
+              to="/broker/clientManagement"
+              href="/"
+              className="mx-3 d-flex align-items-center gap-2"
+            >
               <img
                 src={clientIcon}
                 alt="client icon"
