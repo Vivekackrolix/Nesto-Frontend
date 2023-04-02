@@ -14,4 +14,5 @@ export const apiEndpoints = {
   getBrokerById: `/v1/broker/getBrokerById`,
   updatePersonalInfo: '/v1/broker/updatePersonalInfo',
   getAllCustomer: '/v1/customer/getAllCustomer',
+  getAllRequirement: '/v1/requirement/getAllRequirement',
 };

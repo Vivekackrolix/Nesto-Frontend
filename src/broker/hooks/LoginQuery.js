@@ -459,6 +459,38 @@ export const useGetAllCustomer = brokerId => {
   };
 };
 
+export const useGetAllRequirement = (brokerId, customerId) => {
+  const {
+    isLoading: getAllRequirementIsLoading,
+    isError: getAllRequirementIsError,
+    data: getAllRequirementResponse,
+    error: getAllRequirementError,
+    isSuccess: getAllRequirementIsSuccess,
+  } = useQuery(
+    ['getAllRequirement', brokerId, customerId],
+    () =>
+      getAPI(
+        `${apiEndpoints.getAllRequirement}?brokerId=${brokerId}&customerId=${customerId}`
+      ),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: true,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+      enabled: !!brokerId && !!customerId,
+    }
+  );
+
+  return {
+    getAllRequirementIsLoading,
+    getAllRequirementIsError,
+    getAllRequirementResponse,
+    getAllRequirementError,
+    getAllRequirementIsSuccess,
+  };
+};
+
 // reusable function
 // get api query without any params
 export const useGetQuery = (queryKey, apiEndpoint) => {

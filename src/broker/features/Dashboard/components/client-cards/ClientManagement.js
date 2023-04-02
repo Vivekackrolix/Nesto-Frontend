@@ -31,7 +31,10 @@ const ClientManagement = () => {
       <>
         <Header />
         <SearchFilterBox addBtn />
-        <ClientCards getAllCustomerResponse={getAllCustomerResponse} />
+        <ClientCards
+          getAllCustomerResponse={getAllCustomerResponse}
+          getAllCustomerIsSuccess={getAllCustomerIsSuccess}
+        />
       </>
     );
   }
