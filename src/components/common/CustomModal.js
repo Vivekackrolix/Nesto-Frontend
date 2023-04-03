@@ -22,7 +22,7 @@ const CustomModal = ({
     >
       {!modalHeader && !closeBtn && (
         <>
-          <Modal.Header className="justify-content-center p2-4 pb-0 border-0">
+          <Modal.Header className="p2-4 pb-0 border-0">
             <Modal.Title className="fw-bold display-6">
               {title ? title : ``}
             </Modal.Title>
@@ -45,7 +45,7 @@ const CustomModal = ({
                 title ? `` : 'border-0'
               }`}
             >
-              <Modal.Title className="ms-auto fw-bold d-flex align-items-center">
+              <Modal.Title className="fw-bold d-flex align-items-center">
                 {title ? title : ``}
               </Modal.Title>
               <Button
@@ -59,7 +59,7 @@ const CustomModal = ({
         </>
       )}
 
-      <Modal.Body className="pt-2 px-5 pb-4">{children}</Modal.Body>
+      <Modal.Body className="pt-2 px-2 pb-4">{children}</Modal.Body>
     </Modal>
   );
 };

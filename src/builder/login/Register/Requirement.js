@@ -1,4 +1,4 @@
-import { Button, Container, Form, Modal } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
 import CustomModal from "../../../components/common/CustomModal";
 import axios from "axios";
@@ -52,101 +52,86 @@ const Requirement = (props) => {
         cssClassName="nes__dashboard__modal"
         modalHeader
       >
-        {/* <Modal.Header className="justify-content-center">
-        <Modal.Title>List your property/requirement</Modal.Title>
-      </Modal.Header> */}
-        <Container className="pt-2 pb-5 dashboard__wrapper">
-          <Form className="profile__form ps-2">
-            <Form.Group className="mb-4" controlId="email">
-              <Form.Label>
-                <h5>Name</h5>
-              </Form.Label>
+        <Container className="pt-2 pb-2 dashboard__wrapper">
+          <Form className="profile__form">
+            <Form.Group className="mb-3" controlId="email">
+              <Form.Label className="mb-0">Builder Name</Form.Label>
               <Form.Control
-                className="rounded-0"
+                className="rounded-2"
                 type="text"
-                placeholder="Lorem Ipsum"
+                placeholder="Builder Name"
                 value={props.name}
                 readOnly
-                // onChange={(e) => {
-                //   setName(e.target.value);
-                // }}
               />
-              <Form.Label>
-                <h5>Enter Phone Number</h5>
-              </Form.Label>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="mb-0">Enter Phone Number</Form.Label>
               <Form.Control
-                className="rounded-0"
+                className="rounded-2"
                 type="text"
-                placeholder="Lorem Ipsum"
+                placeholder="Enter Phone Number"
                 value={props.phone}
                 readOnly
-                // onChange={(e) => {
-                //   setNumber(e.target.value);
-                // }}
               />
-              <Form.Label>
-                <h5>Enter Email Address</h5>
-              </Form.Label>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="mb-0">Enter Email Address</Form.Label>
               <Form.Control
-                className="rounded-0"
-                type="text"
-                placeholder="Lorem Ipsum"
+                className="rounded-2"
+                type="email"
+                placeholder="Enter Email Address"
                 // value={name}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
               />
-              <Form.Label>
-                <h5>Type of Property</h5>
-              </Form.Label>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="mb-0">Type Of Property</Form.Label>
               <CreatableSelect
                 isMulti
-                placeholder="Choose"
+                placeholder="Choose Type Of Property"
                 // options={add}
-                className="rounded-0"
+                className="rounded-2"
                 styles={{ background: "#F8F8F8" }}
                 onChange={(e) => {
                   setProperty(e.target.value);
                 }}
               />
-              <Form.Label>
-                <h5>Location of Property </h5>
-              </Form.Label>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="mb-0">Location of Property</Form.Label>
               <CreatableSelect
                 isMulti
-                placeholder="Choose"
+                placeholder="Choose Location Of Property"
                 // options={add}
-                className="rounded-0"
+                className="rounded-2"
                 styles={{ background: "#F8F8F8" }}
                 onChange={(e) => {
                   setLocation(e.target.value);
                 }}
               />
-
-              <Form.Label>
-                <h5>Name of Project</h5>
-              </Form.Label>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="mb-0">Name Of Project</Form.Label>
               <Form.Control
-                className="rounded-0"
+                className="rounded-2"
                 type="text"
-                placeholder="Lorem Ipsum"
+                placeholder="Name Of Project"
                 onChange={(e) => {
                   setProject(e.target.value);
                 }}
-                // value={name}
               />
-
-              <Form.Label>
-                <h5>Brief Description</h5>
-              </Form.Label>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="mb-0">Brief Description</Form.Label>
               <Form.Control
-                className="rounded-0"
-                type="text"
-                placeholder="Lorem Ipsum"
+                className="rounded-2"
+                as="textarea"
+                placeholder="Write Brief Description"
                 onChange={(e) => {
                   setDescription(e.target.value);
                 }}
-                // value={name}
               />
             </Form.Group>
           </Form>

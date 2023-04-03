@@ -12,6 +12,7 @@ import Header from "../../header/Header";
 import loginImage from "../../Images/Rectangle-34624401.png";
 import Requirement from "./Requirement";
 import Successful from "./Successful";
+import "./RegisterLogin.css";
 
 const RegisterLogin = (props) => {
   const [inputValue, setInputValue] = useState("");
@@ -80,61 +81,51 @@ const RegisterLogin = (props) => {
               <InputGroup className="mb-0">
                 <Form.Control
                   name="Name"
-                  className="rounded"
+                  className="rounded input"
                   required
                   type="text"
                   value={inputName}
                   onChange={handleNameChange}
-                  placeholder="Name"
+                  placeholder=" "
                 />
-
-                {/* <Form.Control.Feedback type="invalid">
-                  Please enter valid Name.
-                </Form.Control.Feedback>
-                <Form.Control.Feedback type="valid">
-                  Input is valid!
-                </Form.Control.Feedback> */}
+                <Form.Label className="placeholder">Name</Form.Label>
               </InputGroup>
               <br />
               <InputGroup className="mb-0">
                 <Form.Control
                   name="phone"
-                  className="rounded"
+                  className="rounded input"
                   required
                   type="text"
                   value={inputValue}
                   maxLength="10"
                   onChange={handleInputChange}
-                  placeholder="Enter your phone number"
-
-                  //   isInvalid={showErrorMessage}
-                  //   isValid={!showErrorMessage && inputValue !== ""}
+                  placeholder=" "
                 />
+                
                 <Form.Control.Feedback type="invalid">
                   Please enter valid phone number.
                 </Form.Control.Feedback>
                 <Form.Control.Feedback type="valid">
                   Input is valid!
                 </Form.Control.Feedback>
+                
               </InputGroup>
+              
               <br />
               <InputGroup className="mb-0">
                 <Form.Control
                   name="Referral"
-                  className="rounded"
+                  className="rounded input"
                   required
                   type="text"
                   value={referral}
                   onChange={handleReferralChange}
-                  placeholder="Enter Referral Code"
+                  placeholder=" "
                 />
-                {/* <Form.Control.Feedback type="invalid">
-                  Please enter valid Name.
-                </Form.Control.Feedback>
-                <Form.Control.Feedback type="valid">
-                  Input is valid!
-                </Form.Control.Feedback> */}
+                <Form.Label className="placeholder">Enter Referral Code</Form.Label>
               </InputGroup>
+              
               <br />
 
               <div className="d-grid mt-3">

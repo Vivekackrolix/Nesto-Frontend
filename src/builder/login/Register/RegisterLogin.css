@@ -1,0 +1,26 @@
+.input-group{
+    position: relative;
+}
+.input{
+    padding: 10px;
+    outline: none;
+}
+.placeholder{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    padding: 0px 5px;
+    color: black;
+    transition: 0.3s;
+    pointer-events: none;
+    background-color: transparent;
+    z-index: 10;
+}
+.input:focus + .placeholder, input:not(:placeholder-shown) + .placeholder{
+    top: -10px;
+    background-color: transparent;
+    color: #000;
+}
+.form-control:focus{
+    box-shadow: none;
+}

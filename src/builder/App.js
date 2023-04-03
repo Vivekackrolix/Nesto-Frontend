@@ -11,9 +11,9 @@ import VisitDetails from "./dashboard/dashboard-property-analytics/Visit Details
 import PropertyEdit from "./dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
 
 import PropertyClaim from "./dashboard/dashboard-property-analytics/Visit Details/Property claim/PropertyClaim";
-import Brockrage from "./dashboard/Brokerage/Brokerage";
+import Brokerage from "./dashboard/Brokerage/Brokerage";
 import SettledInvoice from "./dashboard/Brokerage/SettledInvoice";
-import BrockrageSettled from "./dashboard/Brokerage/BrokerageSettled";
+import BrokerageSettled from "./dashboard/Brokerage/BrokerageSettled";
 import ProfilePage from "./dashboard/Builderprofile/Profile";
 import NotificationDropdown from "./dashboard/Builderprofile/notification/NotificationDropdown";
 import { Provider } from "react-redux";
@@ -67,12 +67,12 @@ const App = () => {
           <Route
             exact
             path="/builder/home-dashboard/Brokerage/settled"
-            element={<BrockrageSettled />}
+            element={<BrokerageSettled />}
           />
           <Route
             exact
             path="/builder/home-dashboard/Brokerage"
-            element={<Brockrage />}
+            element={<Brokerage />}
           />
           <Route
             exact
@@ -101,7 +101,7 @@ const App = () => {
           >
             <Route exact path="property" element={<Property />} />
             <Route exact spath="HOME" />
-            <Route exact bpath="Brockrage" />
+            <Route exact bpath="Brokerage" />
           </Route>
         </Routes>
       </BrowserRouter>

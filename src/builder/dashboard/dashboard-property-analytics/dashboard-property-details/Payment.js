@@ -59,10 +59,11 @@ const Payment = ({ data }) => {
 
       <br></br>
       <br></br>
-      <h3>Brockrage Payout plan</h3>
+      <h3>Brokerage Payout plan</h3>
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <br></br>
-        <h4>Brockrage {data.brokerageValue}%</h4>
+        
+        <h4>Brokerage {data.brokerageValue}%</h4>
         <p style={{ color: "#7D7F88" }}>
           {/* Platform charges & applicable taxes shall be deducted */}
           {data.brokerageTerms}

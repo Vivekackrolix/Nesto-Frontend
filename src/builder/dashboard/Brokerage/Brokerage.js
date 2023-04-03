@@ -11,29 +11,7 @@ import axios from "axios";
 
 // const tabKey = ["Pending Invoices", "Settled Invoices"];
 
-const Brockrage = () => {
-  // const [data, setData] = useState({}); //Later use redux
-  // useEffect(() => {
-  //   const getVisit = async () => {
-  //     const response = await axios.get(
-  //       "http://localhost:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
-
-  //       {
-  //         headers: {
-  //           Authorization:
-  //             "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-  //         },
-  //       }
-  //     );
-
-  //     // debugger;
-
-  //     // console.log(response.data.data);
-  //     setData(response.data.data);
-  //   };
-
-  //   getVisit();
-  // }, []);
+const Brokerage = () => {
   return (
     <>
       <DashboardHeader />
@@ -60,4 +38,4 @@ const Brockrage = () => {
     </>
   );
 };
-export default Brockrage;
+export default Brokerage;
