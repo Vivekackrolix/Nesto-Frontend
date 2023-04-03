@@ -16,7 +16,7 @@ const PastPropertyList = (props) => {
       // debugger;
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/boughtProperty/getAllBoughtProperty",
-        "http://localhost:3000/api/v1/boughtProperty/getAllBoughtProperty",
+        "http://65.1.3.134:3000/api/v1/boughtProperty/getAllBoughtProperty",
         {
           headers: {
             Authorization:
@@ -90,8 +90,8 @@ const PastPropertyList = (props) => {
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Broker ID</Row>
-              <Row>{itm.brokerId.referalCode}</Row>
-              <Row>{itm.brokerId._id}</Row>
+              {/* <Row>{itm.brokerId.referalCode}</Row> */}
+              <Row>{itm.brokerId._id.slice(-10)}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Date</Row>

@@ -6,10 +6,11 @@ import "./TransactionHistory.css";
 const TransactionHistory = () => {
   const [data, setData] = useState([]); //Later use redux
   useEffect(() => {
-    const getVisit = async () => {
+    const getTransaction = async () => {
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-        "http://localhost:3000/api/v1/payment/getPaymentById?id=6411a9cf52af4e7966b5d5e2",
+        // "http://localhost:3000/api/v1/payment/getPaymentById?id=6411a9cf52af4e7966b5d5e2",
+        "http://65.1.3.134:3000/api/v1/payment/getAllPayment",
         // formData,
         {
           headers: {
@@ -18,18 +19,18 @@ const TransactionHistory = () => {
           },
         }
       );
-      debugger;
+      // debugger;
 
-      console.log(response.data.data);
+      // console.log(response.data.data);
       setData(response.data.data);
     };
 
-    getVisit();
+    getTransaction();
   }, []);
 
   const paymentData = data.map((itm) => (
     <tr>
-      <td>123</td>
+      <td>{itm.invoiceId}</td>
       <td>{itm.transactionId}</td>
       <td>{itm.transactionDate}</td>
       <td>{itm.transactionAmount}</td>

@@ -3,7 +3,8 @@ import Axis from "../../../Images/Axis.png";
 import HDFC from "../../../Images/HDFC.png";
 import dlf from "../../../Images/dlf.png";
 
-const Payment = () => {
+const Payment = ({ data }) => {
+  const unitType = data.unitType ? data.unitType : [];
   return (
     <>
       <div className=" d-flex justify-content-around rounded">
@@ -61,9 +62,11 @@ const Payment = () => {
       <h3>Brokerage Payout plan</h3>
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <br></br>
-        <h4>Brokerage 5%</h4>
+        
+        <h4>Brokerage {data.brokerageValue}%</h4>
         <p style={{ color: "#7D7F88" }}>
-          Platform charges & applicable taxes shall be deducted
+          {/* Platform charges & applicable taxes shall be deducted */}
+          {data.brokerageTerms}
         </p>
 
         <br></br>
@@ -137,7 +140,8 @@ const Payment = () => {
         </div>
         <hr />
         <span style={{ color: "#7D7F88", alignitems: "cente" }}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          {data.propertyDescription}
+          {/* Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
@@ -145,7 +149,7 @@ const Payment = () => {
           remaining essentially unchanged. It was popularised in the 1960s with
           the release of Letraset sheets containing Lorem Ipsum passages, and
           more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          including versions of Lorem Ipsum. */}
         </span>
         <br></br>
         <br></br>

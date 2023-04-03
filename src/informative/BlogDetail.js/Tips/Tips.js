@@ -81,7 +81,7 @@ const Tips = () => {
     ]
     return (
         <>
-            <div className='container tips-container' data-aos='fade-up' style={{overflowX: 'hidden'}}>
+            <div className='container tips-container' data-aos='fade-up' style={{ overflowX: 'hidden' }}>
                 <div className='tips-header'>
                     <div className='tips-header_box text-center'>
                         <span className='tips-header_heading'>
@@ -182,14 +182,14 @@ const Tips = () => {
             </div>
             {/* RecentPost */}
             {/* Css coming from BlogList/LatestPostLeft/LatestPostLeft.css*/}
-            <div className='container mb-5' style={{overflowX: 'hidden'}}>
+            <div className='container mb-5' style={{ overflowX: 'hidden' }}>
                 <div className='row'>
                     <div className='recent-post_box'>
                         <div data-aos='fade-right'>
                             <span className='recent-post_span3'>Recent Post</span>
                         </div>
                         <div data-aos='fade-left'>
-                            <Link to='/' style={{textDecoration: 'none'}}>
+                            <Link to='/' style={{ textDecoration: 'none' }}>
                                 <span className='recent-post_span4'>Browse All Article</span>
                             </Link>
                         </div>
@@ -222,7 +222,6 @@ const Tips = () => {
                 </div>
             </div>
             {/* RecentPostEnd */}
-            {/* ================= */}
             <InformativeFooter />
         </>
     )

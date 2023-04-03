@@ -1,16 +1,10 @@
-import { Container, Button, Row, Col, Tab, Tabs } from "react-bootstrap";
+import { Container, Tab, Tabs } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
-// import { Link } from "react-router-dom";
 import Footer from "../../Footer/Footer";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
-
-// import VisitDetailItem from "./VisitDetailItem";
 import Header from "../../../header/Header";
-import AllVisits from './AllVisits';
-import PromotedVisits from './PromotedVisits';
+import AllVisits from "./AllVisits";
+import PromotedVisits from "./PromotedVisits";
 const VisitDetails = () => {
-
   return (
     <>
       <Header />
@@ -25,14 +19,13 @@ const VisitDetails = () => {
           fill
         >
           <Tab eventKey="visits" title="All Visits">
-          <AllVisits />
+            <AllVisits />
           </Tab>
 
           <Tab eventKey="promoted" title="Promoted Visits">
-          <PromotedVisits />
+            <PromotedVisits />
           </Tab>
         </Tabs>
-
       </Container>
       <Footer />
     </>

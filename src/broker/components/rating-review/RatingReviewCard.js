@@ -3,7 +3,7 @@ import CustomCircularProgressbar from './circular-progressbar/CircularProgressba
 import { FaStar } from 'react-icons/fa';
 import './RatingReviewCard.css';
 
-const RatingReviewCard = () => {
+const RatingReviewCard = ({ rating }) => {
   return (
     <Card className="nes__rating__review__card mb-5 border-0">
       <Card.Header className="bg-transparent px-0 border-0">
@@ -32,19 +32,19 @@ const RatingReviewCard = () => {
             </h3>
             <Row className="g-3" lg={2}>
               <Col>
-                <CustomCircularProgressbar value="4.3" text="4.3" />
+                <CustomCircularProgressbar value={rating} text={rating} />
               </Col>
               <Col>
                 <CustomCircularProgressbar value="5" text="5" />
               </Col>
               <Col>
-                <CustomCircularProgressbar value="4.3" text="4.3" />
+                <CustomCircularProgressbar value={rating} text={rating} />
               </Col>
               <Col>
-                <CustomCircularProgressbar value="4.3" text="4.3" />
+                <CustomCircularProgressbar value={rating} text={rating} />
               </Col>
               <Col>
-                <CustomCircularProgressbar value="4.4" text="4.4" />
+                <CustomCircularProgressbar value={rating} text={rating} />
               </Col>
             </Row>
           </Col>

@@ -8,7 +8,7 @@ import { BsPencilFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const ManageRole = (props) => {
+const PropertyManager = (props) => {
   const [role, setRole] = useState(false);
   const [visible, setVisible] = useState(true);
 
@@ -80,4 +80,4 @@ const ManageRole = (props) => {
     </>
   );
 };
-export default ManageRole;
+export default PropertyManager;

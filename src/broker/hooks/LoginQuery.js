@@ -21,12 +21,11 @@ export const useSendOtpMutation = () => {
     phoneNumber => postAPI(apiEndpoints.sendOtp, { phoneNumber }),
     {
       onSuccess: data => {
-        console.log(data);
         dispatch(setNewUserPhoneNumber(data.phoneNumber));
       },
     }
   );
-  console.log(sendOtpResponse);
+
   return {
     sendOtp,
     isSendingOtp,
@@ -53,20 +52,15 @@ export const useVerifyOtpMutation = () => {
       postAPI(apiEndpoints.verifyOtp, { phoneNumber, otp }),
     {
       onSuccess: data => {
-        console.log(data);
-
         const userStatus = data?.status;
         if (userStatus === 'newuser') {
           dispatch(setNewUserPhoneNumber(data?.phoneNumber));
-          console.log(userStatus);
-          console.log(data);
-          // return;
+
           navigate('/broker/register');
           return;
         }
 
         if (userStatus === 'olduser') {
-          console.log(data);
           localStorage.setItem('authToken', data?.token);
           localStorage.setItem('brokerID', data?._id);
           navigate('/broker/dashboard');
@@ -137,15 +131,46 @@ export const useGetAllPropertyQuery = () => {
     refetchOnMount: false,
     refetchOnWindowFocus: false,
     onError: error => console.log(error),
-    onSuccess: data => console.log(data),
+    // onSuccess: data => console.log(data),
   });
-  console.log(getAllPropertyResponse);
+
   return {
     getAllPropertyIsLoading,
     getAllPropertyIsError,
     getAllPropertyResponse,
     getAllPropertyError,
     getAllpropertyIsSuccess,
+  };
+};
+
+// get Property by id
+export const useGetPropertyById = propertyID => {
+  const {
+    isLoading: getPropertyByIdIsLoading,
+    isError: getPropertyByIdIsError,
+    data: getPropertyByIdResponse,
+    error: getPropertyByIdError,
+    isSuccess: getPropertyByIdIsSuccess,
+  } = useQuery(
+    ['getPropertyById', propertyID],
+    () => getAPI(`${apiEndpoints.getPropertyById}?id=${propertyID}`),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: true,
+      onError: error => console.log(error),
+      // onSuccess: data => console.log(data),
+      enabled: !!propertyID,
+    }
+  );
+  console.log(getPropertyByIdResponse);
+
+  return {
+    getPropertyByIdIsLoading,
+    getPropertyByIdIsError,
+    getPropertyByIdResponse,
+    getPropertyByIdError,
+    getPropertyByIdIsSuccess,
   };
 };
 
@@ -162,10 +187,9 @@ export const useGetAllBanner = () => {
     refetchOnMount: false,
     refetchOnWindowFocus: false,
     onError: error => console.log(error),
-    onSuccess: data => console.log(data),
+    // onSuccess: data => console.log(data),
   });
-  console.log('banner');
-  console.log(getAllBannerResponse);
+
   return {
     getAllBannerIsLoading,
     getAllBannerIsError,
@@ -176,7 +200,6 @@ export const useGetAllBanner = () => {
 };
 
 // useBookVisit
-
 export const useAddVisitMutation = () => {
   // const dispatch = useDispatch();
 
@@ -188,12 +211,9 @@ export const useAddVisitMutation = () => {
     error: isAddVisitError,
     data: isAddVisitResponse,
   } = useMutation(payload => postAPI(apiEndpoints.addVisit, payload), {
-    onSuccess: data => {
-      console.log('test');
-      console.log(data);
-    },
+    // onSuccess: data => {},
   });
-  console.log(isAddVisitResponse);
+
   return {
     addVisit,
     isAddVisitLoading,
@@ -201,6 +221,36 @@ export const useAddVisitMutation = () => {
     isAddIsError,
     isAddVisitError,
     isAddVisitResponse,
+  };
+};
+
+// // verify
+export const useVisitVerifyOtpMutation = () => {
+  const {
+    mutate: visitVerifyOtp,
+    isLoading: isVisitVerifyOtpLoading,
+    isSuccess: isVisitVerifyOtpSuccess,
+    isError: isVisitVerifyOtpIsError,
+    data: visitVerifyOtpResponse,
+    error: isVisitVerifyOtpError,
+  } = useMutation(
+    ({ otp, visitId }) =>
+      postAPI(apiEndpoints.visitVerifyOtp, { otp, visitId }),
+    {
+      onSuccess: data => {},
+      onError: error => {
+        console.log('something goes wrong');
+      },
+    }
+  );
+
+  return {
+    visitVerifyOtp,
+    isVisitVerifyOtpLoading,
+    isVisitVerifyOtpSuccess,
+    isVisitVerifyOtpIsError,
+    visitVerifyOtpResponse,
+    isVisitVerifyOtpError,
   };
 };
 
@@ -220,11 +270,10 @@ export const useGetBrokerById = brokerID => {
       refetchOnMount: false,
       refetchOnWindowFocus: true,
       onError: error => console.log(error),
-      onSuccess: data => console.log(data),
+      // onSuccess: data => console.log(data),
       enabled: !!brokerID,
     }
   );
-  console.log(getBrokerByIdResponse);
 
   return {
     getBrokerByIdIsLoading,
@@ -251,10 +300,10 @@ export const useGetAllTermsAndConditionsBroker = () => {
       refetchOnMount: false,
       refetchOnWindowFocus: false,
       onError: error => console.log(error),
-      onSuccess: data => console.log(data),
+      // onSuccess: data => console.log(data),
     }
   );
-  console.log(getAllTermsAndConditionsBrokerResponse);
+
   return {
     getAllTermsAndConditionsBrokerIsLoading,
     getAllTermsAndConditionsBrokerIsError,
@@ -280,10 +329,10 @@ export const useGetAllFaqAndSupport = type => {
       refetchOnMount: false,
       refetchOnWindowFocus: false,
       onError: error => console.log(error),
-      onSuccess: data => console.log(data),
+      // onSuccess: data => console.log(data),
     }
   );
-  console.log(getAllFaqAndSupportResponse);
+
   return {
     getAllFaqAndSupportIsLoading,
     getAllFaqAndSupportIsError,
@@ -309,15 +358,226 @@ export const useGetAllCommunitySupportQuestions = () => {
       refetchOnMount: false,
       refetchOnWindowFocus: false,
       onError: error => console.log(error),
-      onSuccess: data => console.log(data),
+      // onSuccess: data => console.log(data),
     }
   );
-  console.log(getAllCommunitySupportQuestionsResponse);
+
   return {
     getAllCommunitySupportQuestionsIsLoading,
     getAllCommunitySupportQuestionsIsError,
     getAllCommunitySupportQuestionsResponse,
     getAllCommunitySupportQuestionsError,
     getAllCommunitySupportQuestionsIsSuccess,
+  };
+};
+
+// get all category
+export const useGetAllPropertyCategory = () => {
+  const {
+    isLoading: getAllPropertyCategoryIsLoading,
+    isError: getAllPropertyCategoryIsError,
+    data: getAllPropertyCategoryResponse,
+    error: getAllPropertyCategoryError,
+    isSuccess: getAllPropertyCategoryIsSuccess,
+  } = useQuery(
+    ['getAllPropertyCategory'],
+    () => getAPI(apiEndpoints.getAllPropertyCategory),
+    {
+      retry: 3,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      onError: error => console.log(error),
+      // onSuccess: data => console.log(data),
+    }
+  );
+
+  return {
+    getAllPropertyCategoryIsLoading,
+    getAllPropertyCategoryIsError,
+    getAllPropertyCategoryResponse,
+    getAllPropertyCategoryError,
+    getAllPropertyCategoryIsSuccess,
+  };
+};
+
+// get all promotion banner
+export const useGetAllPromotionBanner = () => {
+  const {
+    isLoading: getAllPromotionBannerIsLoading,
+    isError: getAllPromotionBannerIsError,
+    data: getAllPromotionBannerResponse,
+    error: getAllPromotionBannerError,
+    isSuccess: getAllPromotionBannerIsSuccess,
+  } = useQuery(
+    ['getAllPromotionBanner'],
+    () => getAPI(apiEndpoints.getAllPromotionBanner),
+    {
+      retry: 3,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      onError: error => console.log(error),
+      // onSuccess: data => console.log(data),
+    }
+  );
+
+  return {
+    getAllPromotionBannerIsLoading,
+    getAllPromotionBannerIsError,
+    getAllPromotionBannerResponse,
+    getAllPromotionBannerError,
+    getAllPromotionBannerIsSuccess,
+  };
+};
+
+// get all customer
+export const useGetAllCustomer = brokerId => {
+  const {
+    isLoading: getAllCustomerIsLoading,
+    isError: getAllCustomerIsError,
+    data: getAllCustomerResponse,
+    error: getAllCustomerError,
+    isSuccess: getAllCustomerIsSuccess,
+  } = useQuery(
+    ['getAllCustomer', brokerId],
+    () => getAPI(`${apiEndpoints.getAllCustomer}?brokerId=${brokerId}`),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: true,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+      enabled: !!brokerId,
+    }
+  );
+
+  return {
+    getAllCustomerIsLoading,
+    getAllCustomerIsError,
+    getAllCustomerResponse,
+    getAllCustomerError,
+    getAllCustomerIsSuccess,
+  };
+};
+
+export const useGetAllRequirement = (brokerId, customerId) => {
+  const {
+    isLoading: getAllRequirementIsLoading,
+    isError: getAllRequirementIsError,
+    data: getAllRequirementResponse,
+    error: getAllRequirementError,
+    isSuccess: getAllRequirementIsSuccess,
+  } = useQuery(
+    ['getAllRequirement', brokerId, customerId],
+    () =>
+      getAPI(
+        `${apiEndpoints.getAllRequirement}?brokerId=${brokerId}&customerId=${customerId}`
+      ),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: true,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+      enabled: !!brokerId && !!customerId,
+    }
+  );
+
+  return {
+    getAllRequirementIsLoading,
+    getAllRequirementIsError,
+    getAllRequirementResponse,
+    getAllRequirementError,
+    getAllRequirementIsSuccess,
+  };
+};
+
+// reusable function
+// get api query without any params
+export const useGetQuery = (queryKey, apiEndpoint) => {
+  const { isLoading, isError, data, error, isSuccess } = useQuery(
+    [queryKey],
+    () => getAPI(apiEndpoint),
+    {
+      retry: 3,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      onError: error => console.log(error),
+      // onSuccess: data => console.log(data),
+    }
+  );
+
+  return {
+    isLoading,
+    isError,
+    data,
+    error,
+    isSuccess,
+  };
+};
+
+// get query with broker id params
+export const useGetQueryWithId = (queryKey, apiEndpoint, brokerId) => {
+  const { isLoading, isError, data, error, isSuccess } = useQuery(
+    [queryKey, brokerId],
+    () => getAPI(`${apiEndpoint}?brokerId=${brokerId}`),
+    {
+      retry: 3,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      onError: error => console.log(error),
+      onSuccess: data => data,
+      enabled: !!brokerId,
+    }
+  );
+
+  return {
+    isLoading,
+    isError,
+    data,
+    error,
+    isSuccess,
+  };
+};
+
+// use post
+export const usePostMutation = apiEndpoint => {
+  const { mutate, isLoading, isSuccess, isError, error, data } = useMutation(
+    payload => postAPI(apiEndpoint, payload),
+    {
+      // onSuccess: data => {
+      //   console.log('test');
+      //   console.log(data);
+      // },
+    }
+  );
+  console.log(data);
+  return {
+    mutate,
+    isLoading,
+    isSuccess,
+    isError,
+    error,
+    data,
+  };
+};
+
+// use put
+export const usePutMutation = apiEndpoint => {
+  const { mutate, isLoading, isSuccess, isError, error, data } = useMutation(
+    payload => putAPI(apiEndpoint, payload),
+    {
+      onSuccess: data => {
+        console.log(data);
+      },
+    }
+  );
+
+  return {
+    mutate,
+    isLoading,
+    isSuccess,
+    isError,
+    error,
+    data,
   };
 };

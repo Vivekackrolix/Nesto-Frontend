@@ -1,15 +1,36 @@
 import { Col, Container, Row, Table, Button } from "react-bootstrap";
-
 import SearchFilterBox from "../../../search-filter/SearchFilter";
-// import claim from "../../../../Images/claim.png";
 import { BsFiletypePdf } from "react-icons/bs";
 import Footer from "../../../Footer/Footer";
 import Header from "../../../../header/Header";
 import { TbMap2 } from "react-icons/tb";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Payment from "./Payment";
 
 const PropertyClaim = () => {
+  debugger;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const getClaim = async () => {
+      const response = await axios.get(
+        "http://65.1.3.134:3000/api/v1/claim/getAllClaim?builderId=641069056532f2569479fc9d&claimType=property&claimStatus=pending&boughtPropertyId=64214754483c737b5714ccb3",
+
+        {
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
+          },
+        }
+      );
+      debugger;
+      console.log(response.data.data);
+      setData(response.data.data);
+    };
+
+    getClaim();
+  }, []);
+
   const [showPayment, setShowPayment] = useState(false);
   const onPayClick = () => {
     setShowPayment((prev) => !prev);

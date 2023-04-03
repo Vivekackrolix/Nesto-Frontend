@@ -7,26 +7,27 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const RecentPackage = () => {
-  const [data, setData] = useState([]); //Later use redux
+  const [data, setData] = useState([]);
   useEffect(() => {
     const getSubscription = async () => {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
-        // formData,
+        "http://65.1.3.134:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
+
         {
           headers: {
             Authorization:
-              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
               "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
           },
         }
       );
+      debugger;
+      console.log(response.data.data);
       setData(response.data.data);
     };
 
     getSubscription();
   }, []);
-
+  // if(data.length ===0 ){return <h1>API CALL</h1>}
   return (
     <>
       <h3 className="heading">Recent Package</h3>
@@ -34,13 +35,23 @@ const RecentPackage = () => {
         <Row>
           <Col
             md={3}
-            className="plan rounded-start text-center"
+            // className="plan rounded-start text-center"
+            className={`rounded-start text-center`}
+            // style={{ background: data.planId.colour, padding: "40px" }}
             style={{ padding: "40px" }}
           >
-            <h4 className="fw-bold">Silver Plan</h4>
+            <h4 className="fw-bold">
+              {data.length === 0 ? "Api call" : data[0].planId.name}
+              {/* {data.length === 0 ? "Api call" : data[0].planId.name} */}
+            </h4>
             {/* <h4 className="fw-bold">{data.planId.name}</h4> */}
-            <p style={{ opacity: "0.6" }}>The perfect all-rounder</p>
-            <p className="fw-bold">₹ 99/per-month</p>
+            <p style={{ opacity: "0.6" }}>
+              {data.length === 0 ? "Api call" : data[0].planId.description}
+            </p>
+            <p className="fw-bold">
+              ₹ {data.length === 0 ? "Api call " : data[0].planId.costPerMonth}
+              /per-month
+            </p>
           </Col>
           <Col md={3} className="p-4">
             <ListGroup as="ul">
@@ -71,9 +82,12 @@ const RecentPackage = () => {
                   fontSize: "1.4em",
                 }}
               >
-                6 Days Left
+                {data.length === 0
+                  ? "Api call "
+                  : data[0].planId.planValidityInDays}{" "}
+                Days Left
               </h5>
-              <p>(12/24 Visits Left)</p>
+              {/* <p>({data.noOfVisits}/24 Visits Left)</p> */}
               <span className="p-3 gap-4 d-flex justify-content-center">
                 <Button
                   type="button"
@@ -88,7 +102,8 @@ const RecentPackage = () => {
 
                 <Button
                   type="button"
-                  variant="primary"
+                  // variant="primary"
+                  variant="transparent"
                   size="lg"
                   className="rounded-2 px-4 py-2 border border-primary wd-120 "
                   as={Link}

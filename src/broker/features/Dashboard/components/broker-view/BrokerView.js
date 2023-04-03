@@ -35,7 +35,11 @@ const BrokerView = () => {
     <Container fluid="lg">
       {getAllBannerIsLoading && <LoadingSpinner />}
       {getAllBannerError && <ErrorMessage />}
-      <SwiperSliderNew swiperData={getAllBannerResponse} pagination />
+      <SwiperSliderNew
+        swiperData={getAllBannerResponse}
+        pagination
+        promotionalBanner
+      />
       <SmallCardSection />
       <section className="mt-3">
         <SearchFilter addBtn />
@@ -47,11 +51,13 @@ const BrokerView = () => {
       {getAllPropertyIsError && <ErrorMessage />}
 
       {getAllPropertyResponse && (
-        <ProductContainers
-          sectionTitle="Promoted Property"
-          propertyData={getAllPropertyResponse}
-          view="broker"
-        />
+        <ProductContainers propertyData={getAllPropertyResponse} view="broker">
+          <SwiperSliderNew
+            swiperData={getAllBannerResponse}
+            pagination
+            promotionalBanner
+          />
+        </ProductContainers>
       )}
       <HeroSection />
 
