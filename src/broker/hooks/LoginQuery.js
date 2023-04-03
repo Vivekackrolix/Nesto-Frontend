@@ -515,6 +515,30 @@ export const useGetQuery = (queryKey, apiEndpoint) => {
   };
 };
 
+// get query with broker id params
+export const useGetQueryWithId = (queryKey, apiEndpoint, brokerId) => {
+  const { isLoading, isError, data, error, isSuccess } = useQuery(
+    [queryKey, brokerId],
+    () => getAPI(`${apiEndpoint}?brokerId=${brokerId}`),
+    {
+      retry: 3,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      onError: error => console.log(error),
+      onSuccess: data => data,
+      enabled: !!brokerId,
+    }
+  );
+
+  return {
+    isLoading,
+    isError,
+    data,
+    error,
+    isSuccess,
+  };
+};
+
 // use post
 export const usePostMutation = apiEndpoint => {
   const { mutate, isLoading, isSuccess, isError, error, data } = useMutation(

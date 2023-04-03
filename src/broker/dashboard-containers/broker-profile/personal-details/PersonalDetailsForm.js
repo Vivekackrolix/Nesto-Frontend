@@ -1,24 +1,13 @@
 import { Form, Button, Alert } from 'react-bootstrap';
 import DashboardTabs from '../dashboard-tabs/DashboardTabs';
-// import CreatableSelect from "react-select/creatable";
 import FileUpload from '../file-upload/FileUpload';
 import { usePutMutation } from '../../../hooks/LoginQuery';
 import { apiEndpoints } from '../../../config/apiEndpoints';
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setToken } from '../../../store/authSlice';
-import { setAuthToken } from '../../../services/api';
-import useToken from '../../../hooks/useToken';
-// const options = [
-//   { value: "sector 28", label: "Sector 28" },
-//   { value: "hDFC Bank", label: "HDFC Bank" },
-// ];
+import { useState } from 'react';
 const tabKey2 = ['Personal Info', 'Bank Info'];
 
 // personal info
 const PersonalInfo = ({ getBrokerByIdResponse }) => {
-  // const [show, setShow] = useState(true);
-
   const {
     mutate: updatePersonalInfo,
     isLoading: isUpdatePersonalInfoLoading,
@@ -115,12 +104,7 @@ const PersonalInfo = ({ getBrokerByIdResponse }) => {
 
       {/* success message */}
       {isUpdatePersonalInfoSuccess && (
-        <Alert
-          variant="success"
-          className="py-1"
-          // onClose={() => setShow(false)}
-          dismissible
-        >
+        <Alert variant="success" className="py-1" dismissible>
           <Alert.Heading>Successful Updated</Alert.Heading>
         </Alert>
       )}

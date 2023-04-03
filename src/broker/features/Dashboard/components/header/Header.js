@@ -44,7 +44,11 @@ const Header = () => {
               />
               Client
             </Nav.Link>
-            <Nav.Link href="/" className="mx-3 d-flex align-items-center gap-2">
+            <Nav.Link
+              as={Link}
+              to="/broker/brokerageManagement"
+              className="mx-3 d-flex align-items-center gap-2"
+            >
               <img
                 src={brokerageIcon}
                 alt="brokerage icon"
