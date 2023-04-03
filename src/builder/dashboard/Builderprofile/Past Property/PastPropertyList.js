@@ -16,7 +16,7 @@ const PastPropertyList = (props) => {
       // debugger;
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/boughtProperty/getAllBoughtProperty",
-        "http://localhost:3000/api/v1/boughtProperty/getAllBoughtProperty",
+        "http://65.1.3.134:3000/api/v1/boughtProperty/getAllBoughtProperty",
         {
           headers: {
             Authorization:

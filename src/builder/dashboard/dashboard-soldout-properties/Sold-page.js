@@ -33,7 +33,7 @@ const SoldPage = () => {
       // debugger;
       const response = await axios.get(
         // `http://13.233.149.97:3000/api/v1/boughtProperty/getBoughtPropertyById?id=${params.propertyId}`,
-        `http://localhost:3000/api/v1/property/getPropertyById?id=${params.propertyId}`,
+        `http://65.1.3.134:3000/api/v1/property/getPropertyById?id=${params.propertyId}`,
         {
           headers: {
             Authorization:
@@ -41,7 +41,7 @@ const SoldPage = () => {
           },
         }
       );
-      // debugger;
+      debugger;
       console.log(response.data.data);
       setProperty(response.data.data[0]);
     };
@@ -84,7 +84,12 @@ const SoldPage = () => {
           <Col md={12}>
             <h3 className="heading"> View offical brochure</h3>
             <Row className="gx-4 dashboard-cards align-items-center">
-              <img src={brochure} className="rounded my-3" alt="Home" />
+              <img
+                src={property.brochureUrl}
+                sizes="140"
+                className="rounded my-3"
+                alt="Home"
+              />
             </Row>
           </Col>
           <Col md={12}>

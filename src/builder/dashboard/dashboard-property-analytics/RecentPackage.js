@@ -11,7 +11,7 @@ const RecentPackage = () => {
   useEffect(() => {
     const getSubscription = async () => {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
+        "http://65.1.3.134:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
 
         {
           headers: {

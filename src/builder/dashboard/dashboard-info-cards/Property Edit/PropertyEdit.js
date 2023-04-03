@@ -4,7 +4,7 @@ import brochure from "../../../Images/brochure.png";
 import DashboardHeader from "../../header/DashboardHeader";
 import Axis from "../../../Images/Axis.png";
 import HDFC from "../../../Images/HDFC.png";
-import { useState } from "react";
+// import { useState } from "react";
 import AmenitiesPop from "./Amenitiespop";
 import LocationPop from "./LocationPop";
 import Footer from "../../Footer/Footer";
@@ -26,11 +26,36 @@ import { BsPencilFill } from "react-icons/bs";
 import SubmitPop from "./Submitpop";
 import CreatableSelect from "react-select/creatable";
 import BankPop from "./BankPop";
+import axios from "axios";
+import { useEffect, useState } from "react";
 const sort = [
   { value: "Lorem Ipsum", label: "Lorem Ipsum" },
   { value: "Lorem ipsum", label: "Lorem Ipsum" },
 ];
+
 const PropertyEdit = () => {
+  debugger;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const putEdit = async () => {
+      const response = await axios.put(
+        "http://65.1.3.134:3000/api/v1/requestProperty/updateRequestProperty",
+
+        {
+          headers: {
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+          },
+        }
+      );
+      debugger;
+      console.log(response.data.data);
+      setData(response.data.data);
+    };
+
+    putEdit();
+  }, []);
+
   const [showAmenities, setShowAmenities] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
   const [showSubmit, setShowSubmit] = useState(false);
@@ -45,6 +70,13 @@ const PropertyEdit = () => {
   const onBankClick = () => {
     setShowBank(true);
   };
+
+  const paymentData = data.map((itm) => (
+    <tr>
+      <td>{itm.selectProperties.paymentPlan.payment}</td>
+      <td>{itm.selectProperties.paymentPlan.milestone}</td>
+    </tr>
+  ));
 
   return (
     <>
@@ -87,16 +119,6 @@ const PropertyEdit = () => {
         </Form.Group>
         <br></br>
         <br></br>
-        {/* <h4>Location</h4>
-        <Container
-          className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
-          style={{ background: "#F8F8F8" }}
-        >
-          <div className="p-2 d-flex justify-content-between">
-            <h4>Lorem Ipsum</h4>
-            <img src={loc} className="rounded my-3" alt="loc" />
-          </div>
-        </Container> */}
         <Form.Group className="mb-3">
           <Form.Label>
             <h5>Location</h5>
@@ -245,17 +267,7 @@ const PropertyEdit = () => {
         <br></br>
         <h3 className="heading">About the Project</h3>
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
+          <p>{/* {data.selectProperties.propertyDescription} */}</p>
         </Container>
         <br></br>
         <br></br>
@@ -270,7 +282,8 @@ const PropertyEdit = () => {
               <th>Milestone</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody>{paymentData}</tbody>
+          {/* <tbody>
             <tr>
               <td>10%</td>
               <td>
@@ -299,9 +312,8 @@ const PropertyEdit = () => {
                 setting industry
               </td>
             </tr>
-          </tbody>
+          </tbody> */}
         </Table>
-        {/* </div> */}
         <br></br>
         <br></br>
         <div className="p-4 d-flex justify-content-between">

@@ -10,7 +10,7 @@ const Subscription = () => {
   useEffect(() => {
     const getSubscription = async () => {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/subscription/getAllSubscription",
+        "http://65.1.3.134:3000/api/v1/subscription/getAllSubscription",
 
         {
           headers: {
@@ -103,7 +103,7 @@ const Subscription = () => {
     const getSubscriptionOrder = async () => {
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder?builderId=64107bce7b4c4240671aeb94",
-        "http://localhost:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
+        "http://65.1.3.134:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
 
         {
           headers: {
