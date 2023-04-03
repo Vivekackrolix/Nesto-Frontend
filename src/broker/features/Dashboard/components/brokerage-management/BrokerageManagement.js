@@ -63,34 +63,32 @@ const BrokerageManagement = () => {
                 <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
                   {/* <Container tabKey={tabKey[0]}> */}
                   <Row tabKey={tabKey[0]}>
-                    <Col lg={6} md={6} className="mb-3">
-                      {isGetAllEligibleClaimSuccess &&
-                        getAllEligibleClaimResponse.map(
-                          (eligibleClaim, index) => (
+                    {isGetAllEligibleClaimSuccess &&
+                      getAllEligibleClaimResponse.map(
+                        (eligibleClaim, index) => (
+                          <Col lg={6} md={6} className="mb-3" key={index}>
                             <BrokerageManagementCard
-                              key={index}
                               text="Raise the brokerage claim"
                               type="raise"
                               eligibleClaim={eligibleClaim}
                             />
-                          )
-                        )}
-                    </Col>
+                          </Col>
+                        )
+                      )}
                   </Row>
                   {/* </Container> */}
                   {/* <Container tabKey={tabKey[1]}> */}
                   <Row tabKey={tabKey[1]}>
-                    <Col lg={6} md={6} className="mb-3">
-                      {getAllClaimIsSuccess &&
-                        getAllClaimResponse.map((claimHistory, index) => (
+                    {getAllClaimIsSuccess &&
+                      getAllClaimResponse.map((claimHistory, index) => (
+                        <Col lg={6} md={6} className="mb-3" key={index}>
                           <BrokerageManagementCard
-                            key={index}
                             text="Raise the brokerage claim"
                             type="claimHistory"
                             claimHistory={claimHistory}
                           />
-                        ))}
-                    </Col>
+                        </Col>
+                      ))}
                   </Row>
                   {/* </Container> */}
                   {/* <Container tabKey={tabKey[2]}> */}
