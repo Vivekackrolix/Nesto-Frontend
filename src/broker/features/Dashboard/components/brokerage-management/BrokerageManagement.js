@@ -6,7 +6,10 @@ import Footer from '../footer/Footer';
 import SearchFilterBox from '../../../../../components/search-filter/SearchFilter';
 import useToken from '../../../../hooks/useToken';
 import { useSelector } from 'react-redux';
-import { useGetQueryWithId } from '../../../../hooks/LoginQuery';
+import {
+  useGetAllClaim,
+  useGetQueryWithId,
+} from '../../../../hooks/LoginQuery';
 import { apiEndpoints } from '../../../../config/apiEndpoints';
 import LoadingSpinner from '../../../../Common/loading-spinner/LoadingSpinner';
 import ErrorMessage from '../../../../Common/error-message/ErrorMessage';
@@ -27,6 +30,16 @@ const BrokerageManagement = () => {
     brokerId
   );
 
+  // get all claim
+  const {
+    getAllClaimIsLoading,
+    getAllClaimIsError,
+    getAllClaimResponse,
+    getAllClaimError,
+    getAllClaimIsSuccess,
+  } = useGetAllClaim('640c30902cdf3673a29ae71d');
+  // get all claim code end here
+
   if (isGetAllEligibleClaimLoading) {
     return <LoadingSpinner />;
   }
@@ -35,7 +48,7 @@ const BrokerageManagement = () => {
     return <ErrorMessage />;
   }
 
-  if (isGetAllEligibleClaimSuccess) {
+  if (isGetAllEligibleClaimSuccess && getAllClaimIsSuccess) {
     return (
       <>
         <Header />
@@ -58,9 +71,7 @@ const BrokerageManagement = () => {
                               key={index}
                               text="Raise the brokerage claim"
                               type="raise"
-                              getAllEligibleClaimResponse={
-                                getAllEligibleClaimResponse
-                              }
+                              eligibleClaim={eligibleClaim}
                             />
                           )
                         )}
@@ -70,12 +81,15 @@ const BrokerageManagement = () => {
                   {/* <Container tabKey={tabKey[1]}> */}
                   <Row tabKey={tabKey[1]}>
                     <Col lg={6} md={6} className="mb-3">
-                      {isGetAllEligibleClaimSuccess && (
-                        <BrokerageManagementCard
-                          text="Raise the brokerage claim"
-                          type="raise"
-                        />
-                      )}
+                      {getAllClaimIsSuccess &&
+                        getAllClaimResponse.map((claimHistory, index) => (
+                          <BrokerageManagementCard
+                            key={index}
+                            text="Raise the brokerage claim"
+                            type="claimHistory"
+                            claimHistory={claimHistory}
+                          />
+                        ))}
                     </Col>
                   </Row>
                   {/* </Container> */}

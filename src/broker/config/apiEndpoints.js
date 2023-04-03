@@ -16,4 +16,5 @@ export const apiEndpoints = {
   getAllCustomer: '/v1/customer/getAllCustomer',
   getAllRequirement: '/v1/requirement/getAllRequirement',
   getAllEligibleClaims: '/v1/claim/getAllEligibleClaims',
+  getAllClaim: '/v1/claim/getAllClaim',
 };

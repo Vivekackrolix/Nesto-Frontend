@@ -4,9 +4,9 @@ import './BrokerageManagementCard.css';
 const BrokerageManagementCard = ({
   type,
   text,
-  getAllEligibleClaimResponse,
+  eligibleClaim,
+  claimHistory,
 }) => {
-  console.log(getAllEligibleClaimResponse);
   return (
     <>
       <Card className="brokerage__management__card border-0">
@@ -20,18 +20,20 @@ const BrokerageManagementCard = ({
                   className="img-fluid w-100 h-100"
                 />
               </Col>
-              {/* <Col md={type === 'assigned' ? 12 : 8}> */}
-              <Col md={type === 'assigned' ? 12 : 8}>
+
+              <Col md={8}>
                 <Card.Body>
                   <Card.Title className="d-flex justify-content-between align-items-center">
                     <span className="text-truncate fw-semibold">
-                      {getAllEligibleClaimResponse?.propertyId?.name}
-                    </span>{' '}
-                    <span className="text-muted m-0">12/12/2022</span>
+                      {eligibleClaim?.propertyId?.name}
+                    </span>
+                    <span className="text-muted m-0">
+                      {eligibleClaim?.bookingDate}
+                    </span>
                   </Card.Title>
                   {type !== 'assigned' && (
                     <Card.Text className="text-muted m-0 mb-3">
-                      Sector-29,Gurugram
+                      {eligibleClaim?.propertyId?.location}
                     </Card.Text>
                   )}
                   <Row>
@@ -39,19 +41,83 @@ const BrokerageManagementCard = ({
                       <Card.Text className="text-muted m-0">
                         Builder Name
                       </Card.Text>
-                      <Card.Text>Lorem Ipsum</Card.Text>
+                      <Card.Text>{eligibleClaim?.builderId?.name}</Card.Text>
                     </Col>
                     <Col>
                       <Card.Text className="text-muted m-0">
-                        Lorem Ipsum
+                        Brokerage Value
                       </Card.Text>
-                      <Card.Text>₹ 3.94 L</Card.Text>
+                      <Card.Text>{eligibleClaim?.brokerageValue}</Card.Text>
                     </Col>
                     <Col>
                       <Card.Text className="text-muted m-0">
                         Customer Name
                       </Card.Text>
-                      <Card.Text>Lorem Ipsum</Card.Text>
+                      <Card.Text>{eligibleClaim?.customerName}</Card.Text>
+                    </Col>
+                  </Row>
+                  <Button
+                    variant="primary"
+                    className={`mt-3 rounded-pill w-100 ${
+                      type === 'raise' || type === 'claimSubmitted'
+                        ? `raise claim-submitted`
+                        : type === 'paymentReceived' ||
+                          type === 'paid' ||
+                          type === 'assigned'
+                        ? 'custom-green-btn'
+                        : 'claim-approved'
+                    }`}
+                  >
+                    {text}
+                  </Button>
+                </Card.Body>
+              </Col>
+            </>
+          )}
+
+          {type === 'claimHistory' && (
+            <>
+              <Col md={4}>
+                <Card.Img
+                  src={claimHistory?.propertyId?.images[0]}
+                  alt="Media"
+                  className="img-fluid w-100 h-100"
+                />
+              </Col>
+
+              <Col md={8}>
+                <Card.Body>
+                  <Card.Title className="d-flex justify-content-between align-items-center">
+                    <span className="text-truncate fw-semibold">
+                      {claimHistory?.propertyId?.name}
+                    </span>
+                    <span className="text-muted m-0">
+                      {/* {claimHistory?.bookingDate} */}
+                    </span>
+                  </Card.Title>
+                  {type !== 'assigned' && (
+                    <Card.Text className="text-muted m-0 mb-3">
+                      {claimHistory?.propertyId?.location}
+                    </Card.Text>
+                  )}
+                  <Row>
+                    <Col>
+                      <Card.Text className="text-muted m-0">
+                        Builder Name
+                      </Card.Text>
+                      <Card.Text>{claimHistory?.builderId?.name}</Card.Text>
+                    </Col>
+                    <Col>
+                      <Card.Text className="text-muted m-0">
+                        Claimed Amount
+                      </Card.Text>
+                      <Card.Text>{claimHistory?.brokerageValue}</Card.Text>
+                    </Col>
+                    <Col>
+                      <Card.Text className="text-muted m-0">
+                        Customer Name
+                      </Card.Text>
+                      <Card.Text>{claimHistory?.customerName}</Card.Text>
                     </Col>
                   </Row>
                   <Button

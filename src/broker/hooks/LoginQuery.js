@@ -491,6 +491,37 @@ export const useGetAllRequirement = (brokerId, customerId) => {
   };
 };
 
+// get all claims
+export const useGetAllClaim = brokerId => {
+  const {
+    isLoading: getAllClaimIsLoading,
+    isError: getAllClaimIsError,
+    data: getAllClaimResponse,
+    error: getAllClaimError,
+    isSuccess: getAllClaimIsSuccess,
+  } = useQuery(
+    ['getAllClaim', brokerId],
+    () =>
+      getAPI(`${apiEndpoints.getAllClaim}?brokerId=${brokerId}&claimType=all`),
+    {
+      retry: 1,
+      refetchOnMount: false,
+      refetchOnWindowFocus: true,
+      onError: error => console.log(error),
+      onSuccess: data => console.log(data),
+      enabled: !!brokerId,
+    }
+  );
+
+  return {
+    getAllClaimIsLoading,
+    getAllClaimIsError,
+    getAllClaimResponse,
+    getAllClaimError,
+    getAllClaimIsSuccess,
+  };
+};
+
 // reusable function
 // get api query without any params
 export const useGetQuery = (queryKey, apiEndpoint) => {
