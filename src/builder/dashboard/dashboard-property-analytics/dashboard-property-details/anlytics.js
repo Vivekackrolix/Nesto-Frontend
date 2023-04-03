@@ -14,7 +14,7 @@ const Anlytics = () => {
   useEffect(() => {
     const getAnlytics = async () => {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/property/getPropertiesAnalyticsForIndividualProperty?builderId=641069056532f2569479fc9d&propertyId=640ee6a8cbe2f98daaa8813f",
+        "http://65.1.3.134:3000/api/v1/property/getPropertiesAnalyticsForIndividualProperty?builderId=641069056532f2569479fc9d&propertyId=640ee6a8cbe2f98daaa8813f",
         // formData,
         {
           headers: {
@@ -37,7 +37,7 @@ const Anlytics = () => {
   useEffect(() => {
     const getAnlyticsA = async () => {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/property/getPropertyById?id=641bf437067c659dc0be278c",
+        "http://65.1.3.134:3000/api/v1/property/getPropertyById?id=641bf437067c659dc0be278c",
         // formData,
         {
           headers: {

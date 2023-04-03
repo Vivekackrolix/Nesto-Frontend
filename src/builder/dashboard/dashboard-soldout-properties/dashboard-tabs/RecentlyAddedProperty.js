@@ -11,12 +11,13 @@ import SearchFilterBox from "../../search-filter/SearchFilter";
 import Footer from "../../Footer/Footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { recentlyAddedPropertyActions } from "../../../redux/recentlyAddedPropertySlice";
+// import { recentlyAddedPropertyActions } from "../../../redux/recentlyAddedPropertySlice";
 
 // const RecentlyAddedProperty = ({ data }) => {
 const RecentlyAddedProperty = (props) => {
   // const data = useSelector((state) => state.addedPropertyDetails.properties);
   const [data, setData] = useState([]);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const RecentlyAddedProperty = (props) => {
       debugger;
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/property/getAllproperty",
-        "http://localhost:3000/api/v1/property/getAllproperty",
+        "http://65.1.3.134:3000/api/v1/property/getAllproperty",
 
         {
           headers: {

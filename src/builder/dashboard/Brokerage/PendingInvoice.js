@@ -1,8 +1,32 @@
+// import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { GrDocumentPdf } from "react-icons/gr";
 import brocker from "../../Images/brocker.png";
+import axios from "axios";
+import { useEffect, useState } from "react";
+const PendingInvoice = () => {
+  // debugger;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const getPending = async () => {
+      debugger;
+      const response = await axios.get(
+        "http://65.1.3.134:3000/api/v1/invoice/getAllInvoiceForBuilder?builderId=641069056532f2569479fc9d&status=pending",
+        {
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
+          },
+        }
+      );
+      console.log(response.data.data);
+      setData(response.data.data);
+    };
+    debugger;
 
-const PendingInvoice = ({ data }) => {
+    getPending();
+  }, []);
+
   const propertyListing = data.map((itm, index) => {
     return (
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3">
@@ -14,6 +38,7 @@ const PendingInvoice = ({ data }) => {
             <div className="d-flex  justify-content-between">
               <span className="mr-auto p-2">
                 <h5>Sky Danelions Apartment</h5>
+                {/* <h5>{itm.invoices.builderId.companyName}</h5> */}
                 <p
                   style={{
                     opacity: 0.5,

@@ -1,5 +1,6 @@
 import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Header from "../../header/Header";
 // import DashboardTabs from "../../../components/dashboard-tabs/DashboardTabs";
 import DashboardHeader from "../header/DashboardHeader";
 import SearchFilterBox from "../search-filter/SearchFilter";
@@ -16,6 +17,7 @@ const BrockrageSettled = () => {
   return (
     <>
       <DashboardHeader />
+      {/* <Header /> */}
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
         <br /> <h1> Brokerage Management</h1>
