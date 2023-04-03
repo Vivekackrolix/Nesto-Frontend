@@ -15,4 +15,5 @@ export const apiEndpoints = {
   updatePersonalInfo: '/v1/broker/updatePersonalInfo',
   getAllCustomer: '/v1/customer/getAllCustomer',
   getAllRequirement: '/v1/requirement/getAllRequirement',
+  getAllEligibleClaims: '/v1/claim/getAllEligibleClaims',
 };

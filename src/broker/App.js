@@ -11,6 +11,7 @@ import PropertyDescription from './Pages/dashboard/property-details/PropertyDesc
 import ScrollToTop from './Common/scroll-to-top/ScrollToTop';
 import ProfilePage from './dashboard-containers/broker-profile/Profile';
 import ClientManagement from './features/Dashboard/components/client-cards/ClientManagement';
+import { BrokerageManagement } from './features';
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,10 @@ const App = () => {
               <Route
                 path="/broker/property-details/:id"
                 element={<PropertyDescription />}
+              />
+              <Route
+                path="/broker/brokerageManagement"
+                element={<BrokerageManagement />}
               />
             </Routes>
             {/* <Footer /> */}
