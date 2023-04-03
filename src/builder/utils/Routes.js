@@ -8,9 +8,9 @@ import PropertyEdit from "../dashboard/dashboard-info-cards/Property Edit/Proper
 
 import PropertyClaim from "../dashboard/dashboard-property-analytics/Visit Details/Property claim/PropertyClaim";
 import ProfilePage from "../dashboard/Builderprofile/Profile";
-import Brockrage from "../dashboard/Brokerage/Brokerage";
+import Brokerage from "../dashboard/Brokerage/Brokerage";
 import SettledInvoice from "../dashboard/Brokerage/SettledInvoice";
-import BrockrageSettled from "../dashboard/Brokerage/BrokerageSettled";
+import BrokerageSettled from "../dashboard/Brokerage/BrokerageSettled";
 import NotificationDropdown from "../dashboard/Builderprofile/notification/NotificationDropdown";
 import RecentlyAddedProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
 import RecentlySoldOutProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlySoldOutProperty";
@@ -56,12 +56,12 @@ export const RouteData = [
       {
         id: 8,
         path: "Brokerage",
-        element: <Brockrage />,
+        element: <Brokerage />,
       },
       {
         id: 9,
         path: "Settled",
-        element: <BrockrageSettled />,
+        element: <BrokerageSettled />,
       },
       {
         id: 10,

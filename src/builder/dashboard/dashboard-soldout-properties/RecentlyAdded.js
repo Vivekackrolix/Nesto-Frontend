@@ -5,7 +5,7 @@ import build from "../../Images/build.png";
 import { Link } from "react-router-dom";
 import { BsPencilFill } from "react-icons/bs";
 import { RiVipCrownFill } from "react-icons/ri";
-import RecentlyAddedProperty from "./dashboard-tabs/RecentlyAddedProperty";
+// import RecentlyAddedProperty from "./dashboard-tabs/RecentlyAddedProperty";
 
 const RecentlyAdded = ({ data }) => {
   const propertyListing = data.map((itm, index) => {
@@ -19,7 +19,6 @@ const RecentlyAdded = ({ data }) => {
         <Card.Img variant="top" src={propertyImage} />
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
-
           <Card.Text>
             <Row className="pb-2">
               <Col md={10} sm={10}>

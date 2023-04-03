@@ -111,8 +111,8 @@ const Subscription = () => {
           },
         }
       );
-      debugger;
-      console.log(response.data.data);
+      // debugger;
+      // console.log(response.data.data);
       setData1(response.data.data[0]);
     };
 

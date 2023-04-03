@@ -21,7 +21,7 @@ const VisitDetails = () => {
         <Tabs
           defaultActiveKey="visits"
           id="fill-tab-example"
-          className="mb-3 mx-auto w-50"
+          className="visit-details-tab mb-3 mx-auto w-50"
           fill
         >
           <Tab eventKey="visits" title="All Visits">

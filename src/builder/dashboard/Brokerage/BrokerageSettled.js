@@ -8,7 +8,7 @@ import SettledInvoice from "./SettledInvoice";
 
 // const tabKey = ["Pending Invoices", "Settled Invoices"];
 
-const BrockrageSettled = () => {
+const BrokerageSettled = () => {
   // const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   // const propertyListing = arr.map((itm) => (
   //   <PendingInvoice className={"mb-3 py-3 border rounded"} />
@@ -50,4 +50,4 @@ const BrockrageSettled = () => {
     </>
   );
 };
-export default BrockrageSettled;
+export default BrokerageSettled;

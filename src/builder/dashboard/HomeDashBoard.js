@@ -50,7 +50,6 @@ const HomeDashBoard = () => {
         </Row>
 
         <SearchFilterBox />
-        {/* <SearchFilterBox addBtn /> */}
         <PropertyAnalytics />
         <SoldOut data={[1, 2, 3, 4, 5, 6]} />
         <RecentlyAdded data={[1, 2, 3, 4, 5, 6]} />

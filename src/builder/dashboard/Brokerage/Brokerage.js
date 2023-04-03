@@ -8,7 +8,7 @@ import SettledInvoice from "./SettledInvoice";
 
 // const tabKey = ["Pending Invoices", "Settled Invoices"];
 
-const Brockrage = () => {
+const Brokerage = () => {
   return (
     <>
       <DashboardHeader />
@@ -42,4 +42,4 @@ const Brockrage = () => {
     </>
   );
 };
-export default Brockrage;
+export default Brokerage;

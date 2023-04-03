@@ -16,6 +16,8 @@
   --silver-surfer: #7d7f88;
   /* divider */
   --divider: #d3d3d3;
+  --transparent-danger: #FFE1E1;
+  --transparent-succes: #EAF5E7;
 }
 
 /* Custom Scroll-bar */
