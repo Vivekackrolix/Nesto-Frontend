@@ -38,6 +38,7 @@ const PropertyEdit = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const putEdit = async () => {
+      debugger;
       const response = await axios.put(
         "http://65.1.3.134:3000/api/v1/requestProperty/updateRequestProperty",
 
@@ -73,8 +74,8 @@ const PropertyEdit = () => {
 
   const paymentData = data.map((itm) => (
     <tr>
-      <td>{itm.selectProperties.paymentPlan.payment}</td>
-      <td>{itm.selectProperties.paymentPlan.milestone}</td>
+      <td>{itm.paymentPlan.payment}</td>
+      <td>{itm.paymentPlan.milestone}</td>
     </tr>
   ));
 

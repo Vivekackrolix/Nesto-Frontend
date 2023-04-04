@@ -36,6 +36,7 @@ const Anlytics = () => {
   const [data1, setData1] = useState([]); //Later use redux
   useEffect(() => {
     const getAnlyticsA = async () => {
+      // debugger;
       const response = await axios.get(
         "http://65.1.3.134:3000/api/v1/property/getPropertyById?id=641bf437067c659dc0be278c",
         // formData,
@@ -49,7 +50,7 @@ const Anlytics = () => {
       );
       // debugger;
 
-      // console.log(response.data);
+      // console.log(response.data.data);
       setData1(response.data.data);
     };
 
@@ -89,7 +90,7 @@ const Anlytics = () => {
             </span>
 
             <span style={{ fontFamily: "Bahnschrift" }}>
-              {data1.length === 0 ? "Calling API" : data1[0].searchCount}
+              {data1.length === 0 ? "No Search" : data1.searchCount}
               <br></br> Search
             </span>
           </div>
@@ -98,7 +99,7 @@ const Anlytics = () => {
               <img src={view} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>
-              {data1.length === 0 ? "Calling API" : data1[0].viewsCount}
+              {data1.length === 0 ? "No Viwes" : data1[0].viewsCount}
               <br></br> Views
             </span>
           </div>{" "}
