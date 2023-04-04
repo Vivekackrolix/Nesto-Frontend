@@ -30,30 +30,32 @@ const SupportMenu = () => {
     return (
       <Accordion.Item eventKey="0">
         <Accordion.Header>{itm.question}</Accordion.Header>
-        <Accordion.Body>{itm.answer}</Accordion.Body>
-        <div className="d-flex justify-content-end">
-          <h3>
-            <GrDocumentPdf />
+        <Accordion.Body>
+          {itm.answer}
+          <div className="d-flex justify-content-end">
+            <h3>
+              <GrDocumentPdf />
+            </h3>
+          </div>
+          {/* </Container> */}
+          <h3 className="d-flex justify-content-center">
+            Was this information helpful?
           </h3>
-        </div>
-        {/* </Container> */}
-        <h3 className="d-flex justify-content-center">
-          Was this information helpful?
-        </h3>
-        <div className="d-flex justify-content-center gap-5">
-          <button
-            type="button"
-            className="btn btn-outline-dark btn-lg btn-block"
-          >
-            Yes
-          </button>
-          <button
-            type="button"
-            className="btn  btn-outline-dark btn-lg btn-block "
-          >
-            No
-          </button>
-        </div>
+          <div className="d-flex justify-content-center gap-5">
+            <button
+              type="button"
+              className="btn btn-outline-dark btn-lg btn-block"
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              className="btn  btn-outline-dark btn-lg btn-block "
+            >
+              No
+            </button>
+          </div>
+        </Accordion.Body>
       </Accordion.Item>
     );
   });

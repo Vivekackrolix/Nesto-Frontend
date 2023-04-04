@@ -56,7 +56,6 @@ const PropertyClaim = () => {
             </div>
             <div>
               <TbMap2 size="40" color="#278fd9" />
-              {/* <img src={claim} alt="claim" /> */}
             </div>
           </div>
           <br />
@@ -113,17 +112,6 @@ const PropertyClaim = () => {
               <BsFiletypePdf size={30} />
             </Col>
           </Row>
-          {/* <div className="d-flex justify-content-between">
-            <span>
-              <h2>Rs. 830</h2>
-              <h5>*Brokerage Percentage -5%</h5>
-            </span>
-            <span>
-              <h6  className="text-secondary">Builder Form</h6>
-                <BsFiletypePdf />
-            </span>
-          </div>
-          <br /> */}
         </Container>
         <br />
         <br />
@@ -133,33 +121,32 @@ const PropertyClaim = () => {
         <Container className="rounded shadow-sm">
           <br />
           <Container>
-          <div className="d-flex justify-content-between">
-            <h5>M1 - 10%</h5>
-            <h6 className="text-secondary">12 Jan 2023</h6>
-          </div>
-          </Container> 
+            <div className="d-flex justify-content-between">
+              <h5>M1 - 10%</h5>
+              <h6 className="text-secondary">12 Jan 2023</h6>
+            </div>
+          </Container>
           <br />
 
           <Container>
-          <Row>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">Brokerage %</h5>
-              <h5 className="milestone-head">12324443</h5>
-            </Col>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">
-                Brokerage Amount
-              </h5>
-              <h5 className="milestone-head">Rs. 3.94 L</h5>
-            </Col>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">Claimed ID</h5>
-              <h5 className="milestone-head">22132322</h5>
-            </Col>
-          </Row>
-          </Container>          
+            <Row>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">Brokerage %</h5>
+                <h5 className="milestone-head">12324443</h5>
+              </Col>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">
+                  Brokerage Amount
+                </h5>
+                <h5 className="milestone-head">Rs. 3.94 L</h5>
+              </Col>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">Claimed ID</h5>
+                <h5 className="milestone-head">22132322</h5>
+              </Col>
+            </Row>
+          </Container>
 
-          {/* Milestone Payment Table Start */}
           <Container className="brokerage-table">
             <Table responsive className="border rounded mt-4">
               <thead>
@@ -231,33 +218,32 @@ const PropertyClaim = () => {
         <Container className="rounded shadow-sm">
           <br />
           <Container>
-          <div className="d-flex justify-content-between">
-            <h5>M2 - 10%</h5>
-            <h6 className="text-secondary">12 Jan 2023</h6>
-          </div>
-          </Container>          
+            <div className="d-flex justify-content-between">
+              <h5>M2 - 10%</h5>
+              <h6 className="text-secondary">12 Jan 2023</h6>
+            </div>
+          </Container>
           <br />
 
           <Container>
-          <Row>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">Brokerage %</h5>
-              <h5 className="milestone-head">12324443</h5>
-            </Col>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">
-                Brokerage Amount
-              </h5>
-              <h5 className="milestone-head">Rs. 3.94 L</h5>
-            </Col>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">Claimed ID</h5>
-              <h5 className="milestone-head">22132322</h5>
-            </Col>
-          </Row>
-          </Container>          
+            <Row>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">Brokerage %</h5>
+                <h5 className="milestone-head">12324443</h5>
+              </Col>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">
+                  Brokerage Amount
+                </h5>
+                <h5 className="milestone-head">Rs. 3.94 L</h5>
+              </Col>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">Claimed ID</h5>
+                <h5 className="milestone-head">22132322</h5>
+              </Col>
+            </Row>
+          </Container>
 
-          {/* Milestone Payment Table Start */}
           <Container className="brokerage-table">
             <Table responsive className="border rounded mt-4">
               <thead>
@@ -329,34 +315,32 @@ const PropertyClaim = () => {
         <Container className="rounded shadow-sm">
           <br />
           <Container>
-          <div className="d-flex justify-content-between">
-            <h5>M3 - 10%</h5>
-            <h6 className="text-secondary">12 Jan 2023</h6>
-          </div>
-          </Container>   
+            <div className="d-flex justify-content-between">
+              <h5>M3 - 10%</h5>
+              <h6 className="text-secondary">12 Jan 2023</h6>
+            </div>
+          </Container>
           <br />
 
           <Container>
-          <Row>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">Brokerage %</h5>
-              <h5 className="milestone-head">12324443</h5>
-            </Col>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">
-                Brokerage Amount
-              </h5>
-              <h5 className="milestone-head">Rs. 3.94 L</h5>
-            </Col>
-            <Col md={4}>
-              <h5 className="milestone-head text-secondary">Claimed ID</h5>
-              <h5 className="milestone-head">22132322</h5>
-            </Col>
-          </Row>
+            <Row>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">Brokerage %</h5>
+                <h5 className="milestone-head">12324443</h5>
+              </Col>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">
+                  Brokerage Amount
+                </h5>
+                <h5 className="milestone-head">Rs. 3.94 L</h5>
+              </Col>
+              <Col md={4}>
+                <h5 className="milestone-head text-secondary">Claimed ID</h5>
+                <h5 className="milestone-head">22132322</h5>
+              </Col>
+            </Row>
           </Container>
-          
 
-          {/* Milestone Payment Table Start */}
           <Container className="brokerage-table">
             <Table responsive className="border rounded mt-4">
               <thead>

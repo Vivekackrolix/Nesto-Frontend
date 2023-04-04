@@ -12,7 +12,7 @@ const Support = () => {
     <>
       {/* <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]} /> */}
       <Tabs
-        defaultActiveKey="visits"
+        defaultActiveKey="Support"
         id="fill-tab-example"
         className="mb-3 p-5 rounded flex-column flex-sm-row"
         fill

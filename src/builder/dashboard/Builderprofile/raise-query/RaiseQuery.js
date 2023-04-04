@@ -3,7 +3,8 @@ import ShadowCard from "../shadow-card/ShadowCard";
 import "./RaiseQuery.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Form } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 
 const RaiseQuery = () => {
   const [queryData, setQueryData] = useState([]); //Later use redux
@@ -31,26 +32,30 @@ const RaiseQuery = () => {
 
   const recentQuery = queryData.map((data, index) => {
     return (
-      <ShadowCard
-        itemLength={queryData.length}
-        // itemLength={data.totalCount}
-        // title="Loreum ipsum dolor sit amet, consectetur elit"
-        title={data.subject}
-        // text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        //  labore et dolore magna aliqua. Ut."
-        text={data.description}
-      />
+      // <ShadowCard
+      //   // itemLength={queryData.length}
+      //   // itemLength={data.totalCount}
+      //   // title="Loreum ipsum dolor sit amet, consectetur elit"
+      //   title={data.subject}
+      //   // text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      //   //  labore et dolore magna aliqua. Ut."
+      //   text={data.description}
+      // />
       // </div>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>{data.subject}</Accordion.Header>
+        <Accordion.Body> {data.description} </Accordion.Body>
+      </Accordion.Item>
     );
   });
   return (
     <>
-      <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
-        {recentQuery}
+      <div className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
+        <Accordion defaultActiveKey="0"> {recentQuery}</Accordion>
       </div>
 
       <div className="mt-5 mb-3 chat-text">Chat With Us</div>
-      {/* <div className="mt-2 row justify-content-around">{recentQuery}</div> */}
+
       <AccordionCard itemLength={1} accordionTitle="Contact 24×7 Help" />
       <AccordionCard itemLength={1} accordionTitle="Email Us" />
     </>
