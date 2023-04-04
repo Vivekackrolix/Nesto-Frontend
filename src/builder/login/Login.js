@@ -20,6 +20,8 @@ import builder from "../Images/builder.png";
 import loan from "../Images/loan.png";
 import axios from "axios";
 import NotRegister from "./Register/NotRegister";
+import { postAPI } from "../Api/ApiRequest";
+import { apiEndpoints } from "../Api/ApiEndpoint";
 const Login = () => {
   const [inputValue, setInputValue] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -27,19 +29,24 @@ const Login = () => {
   const [register, setRegister] = useState(false);
 
   const onContinueHandler = async () => {
+    debugger;
     if (inputValue.length === 10) {
       setShowModal((prev) => {
         return (prev = true);
       });
-      const response = await axios.post(
-        // "http://13.233.149.97:3000/api/v1/builder/sendOtp",
-        "http://localhost:3000/api/v1/builder/sendOtp",
-        { phoneNumber: inputValue }
-      );
-      console.log(response);
-    } else {
-      console.log("Error");
+      //   const response = await axios.post(
+      //     // "http://13.233.149.97:3000/api/v1/builder/sendOtp",
+      //     "http://localhost:3000/api/v1/builder/sendOtp",
+      //     { phoneNumber: inputValue }
+      //   );
+      //   console.log(response);
+      // } else {
+      //   console.log("Error");
     }
+    const response = await postAPI(apiEndpoints.sendOtp, {
+      phoneNumber: inputValue,
+    });
+    console.log(response);
   };
 
   const handleInputChange = (event) => {

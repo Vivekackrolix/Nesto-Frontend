@@ -17,11 +17,11 @@ import BrokerageSettled from "./dashboard/Brokerage/BrokerageSettled";
 import ProfilePage from "./dashboard/Builderprofile/Profile";
 import NotificationDropdown from "./dashboard/Builderprofile/notification/NotificationDropdown";
 import { Provider } from "react-redux";
-import store from "./redux";
 import RegisterLogin from "./login/Register/RegisterLogin";
 import RecentlyAddedProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
 import RecentlySoldOutProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlySoldOutProperty";
 import Subscription from "./dashboard/dashboard-soldout-properties/Subscription/Subscription";
+import store from "./redux/store";
 
 const App = () => {
   return (
