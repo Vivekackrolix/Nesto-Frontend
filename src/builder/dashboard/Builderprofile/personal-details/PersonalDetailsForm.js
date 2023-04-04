@@ -16,15 +16,14 @@ const PersonalDetailsForm = () => {
   const builderData = useSelector(
     (state) => state.builderDetail.details[0]
   ) || { email: "", phoneNumber: "", gst: "" };
+  console.log(builderData);
 
   useEffect(() => {
     dispatch(getBuilderDetail());
   }, [dispatch]);
   return (
     <>
-      <h3>
-        Personal Details
-      </h3>
+      <h3>Personal Details</h3>
       <br />
       <Form className="profile__form row">
         <Col md={6} sm={12}>
@@ -107,10 +106,16 @@ const PersonalDetailsForm = () => {
         </Col>
 
         <div className="d-flex gap-4 mt-2">
-          <Button variant="transparent" className="btn-color-outline-primary rounded-100 btn-rounded">
+          <Button
+            variant="transparent"
+            className="btn-color-outline-primary rounded-100 btn-rounded"
+          >
             Cancel
           </Button>
-          <Button variant="primary" className="btn-color-primary rounded-100 btn-rounded">
+          <Button
+            variant="primary"
+            className="btn-color-primary rounded-100 btn-rounded"
+          >
             Save
           </Button>
         </div>

@@ -31,6 +31,11 @@ const Login = () => {
   const onContinueHandler = async () => {
     debugger;
     if (inputValue.length === 10) {
+      const response = await postAPI(apiEndpoints.sendOtp, {
+        phoneNumber: inputValue,
+      });
+      console.log(response);
+
       setShowModal((prev) => {
         return (prev = true);
       });
@@ -43,10 +48,6 @@ const Login = () => {
       // } else {
       //   console.log("Error");
     }
-    const response = await postAPI(apiEndpoints.sendOtp, {
-      phoneNumber: inputValue,
-    });
-    console.log(response);
   };
 
   const handleInputChange = (event) => {

@@ -61,7 +61,7 @@ const App = () => {
           />
           <Route
             exact
-            path="/builder/home-dashboard/promoted/claim"
+            path="/builder/home-dashboard/promoted/claim/:propertyId"
             element={<PropertyClaim />}
           />
           <Route
@@ -86,7 +86,7 @@ const App = () => {
           />
           <Route
             exact
-            path="/builder/home-dashboard/propertyedit"
+            path="/builder/home-dashboard/propertyedit/:propertyId"
             element={<PropertyEdit />}
           />
           <Route

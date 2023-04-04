@@ -12,7 +12,8 @@ import { axiosInstance } from "./api";
 const postAPI = async (endpoint, body) => {
   debugger;
   try {
-    const response = await axiosInstance.get(endpoint, body);
+    const response = await axiosInstance.post(endpoint, body);
+    console.log(response.data);
     if (response.data) {
       return response.data;
     } else {
@@ -32,15 +33,34 @@ const postAPI = async (endpoint, body) => {
 //       throw error;
 //     });
 
-const getAPI = async (endpoint, body) => {};
+const getAPI = async (endpoint) => {
+  // debugger
+  try {
+    const response = await axiosInstance.get(endpoint);
+    console.log(response.data);
+    if (response.data) {
+      return response.data;
+    } else {
+      throw new Error("function getAPI error.");
+    }
+  } catch (err) {
+    return err;
+  }
+};
 
-const putAPI = (endPoint, body) =>
-  axiosInstance
-    ?.put(endPoint, body)
-    .then((response) => response.data)
-    .then((response) => response.data)
-    .catch((error) => {
-      throw error;
-    });
+const putAPI = async (endpoint, body) => {
+  debugger;
+  try {
+    const response = await axiosInstance.put(endpoint, body);
+    console.log(response.data);
+    if (response.data) {
+      return response.data;
+    } else {
+      throw new Error("function putAPI error.");
+    }
+  } catch (err) {
+    return err;
+  }
+};
 
 export { getAPI, postAPI, putAPI };

@@ -12,7 +12,7 @@ const PromotedVisit = () => {
   useEffect(() => {
     const getVisit = async () => {
       const response = await axios.get(
-        "http://65.1.3.134:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
+        "https://apis.nestohub.in/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
 
         {
           headers: {
@@ -37,7 +37,7 @@ const PromotedVisit = () => {
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
         // "http://localhost:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-        "http://65.1.3.134:3000/api/v1/visit/getAllVisit",
+        "https://apis.nestohub.in/api/v1/visit/getAllVisit",
         // formData,
         {
           headers: {

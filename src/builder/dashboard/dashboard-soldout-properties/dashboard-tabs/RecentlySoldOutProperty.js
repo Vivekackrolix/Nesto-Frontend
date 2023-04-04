@@ -20,7 +20,7 @@ const RecentlySoldOutProperty = (props) => {
       debugger;
       const response = await axios.get(
         // "http://13.233.149.97:3000/api/v1/boughtProperty/getAllBoughtProperty",
-        "http://65.1.3.134:3000/api/v1/boughtProperty/getAllBoughtProperty",
+        "https://apis.nestohub.in/api/v1/boughtProperty/getAllBoughtProperty",
         // "http://localhost:3000/api/v1/boughtProperty/getAllBoughtProperty?propertyId=6421d0cd47ff879954ad7f17",
         {
           headers: {

@@ -2,10 +2,11 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 
 const axiosInstance = axios.create({
-  // baseURL: `http://localhost:3000/api`,
-  baseURL: `http://65.1.3.134:3000/api`,
+  baseURL: `https://apis.nestohub.in/api`,
+  // baseURL: `http://65.1.3.134:3000/api`,
+
   headers: {
-    // "Content-Type": "application/json",
+    "Content-Type": "application/json",
     Authorization:
       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
   },

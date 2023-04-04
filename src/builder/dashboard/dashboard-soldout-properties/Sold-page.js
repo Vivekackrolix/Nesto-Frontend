@@ -33,7 +33,7 @@ const SoldPage = () => {
       // debugger;
       const response = await axios.get(
         // `http://13.233.149.97:3000/api/v1/boughtProperty/getBoughtPropertyById?id=${params.propertyId}`,
-        `http://65.1.3.134:3000/api/v1/property/getPropertyById?id=${params.propertyId}`,
+        `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
         {
           headers: {
             Authorization:

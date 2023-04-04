@@ -5,6 +5,7 @@ import DashboardHeader from "../../header/DashboardHeader";
 import Axis from "../../../Images/Axis.png";
 import HDFC from "../../../Images/HDFC.png";
 // import { useState } from "react";
+import { useParams } from "react-router-dom";
 import AmenitiesPop from "./Amenitiespop";
 import LocationPop from "./LocationPop";
 import Footer from "../../Footer/Footer";
@@ -28,20 +29,22 @@ import CreatableSelect from "react-select/creatable";
 import BankPop from "./BankPop";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { putAPI } from "../../../Api/ApiRequest";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
 const sort = [
   { value: "Lorem Ipsum", label: "Lorem Ipsum" },
   { value: "Lorem ipsum", label: "Lorem Ipsum" },
 ];
 
 const PropertyEdit = () => {
-  debugger;
+  // debugger;
   const [data, setData] = useState([]);
   useEffect(() => {
-    const putEdit = async () => {
+    const getPropertyById = async () => {
       debugger;
-      const response = await axios.put(
-        "http://65.1.3.134:3000/api/v1/requestProperty/updateRequestProperty",
-
+      const response = await axios.get(
+        // `http://13.233.149.97:3000/api/v1/boughtProperty/getBoughtPropertyById?id=${params.propertyId}`,
+        `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
         {
           headers: {
             Authorization:
@@ -51,16 +54,17 @@ const PropertyEdit = () => {
       );
       debugger;
       console.log(response.data.data);
-      setData(response.data.data);
+      setData(response.data.data[0]);
     };
 
-    putEdit();
+    getPropertyById();
   }, []);
 
   const [showAmenities, setShowAmenities] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
   const [showSubmit, setShowSubmit] = useState(false);
   const [showBank, setShowBank] = useState(false);
+  const params = useParams();
 
   const onAmenitiesClick = () => {
     setShowAmenities(true);
@@ -72,10 +76,19 @@ const PropertyEdit = () => {
     setShowBank(true);
   };
 
-  const paymentData = data.map((itm) => (
+  const onSubmit = async () => {
+    const data = {
+      id: params.propertyId,
+    };
+    console.log(data);
+    const resposne = await putAPI(apiEndpoints.updateRequestProperty, data);
+    setData(resposne.data);
+  };
+
+  const paymentData = data.paymentPlan?.map((itm) => (
     <tr>
-      <td>{itm.paymentPlan.payment}</td>
-      <td>{itm.paymentPlan.milestone}</td>
+      <td>{itm.payment}</td>
+      <td>{itm.milestone}</td>
     </tr>
   ));
 
@@ -392,6 +405,7 @@ const PropertyEdit = () => {
           variant="primary"
           size="sm"
           className="rounded-pill border-0 py-2 px-5 my-3"
+          onClick={onSubmit}
         >
           Submit
         </Button>

@@ -7,14 +7,16 @@ import { TbMap2 } from "react-icons/tb";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Payment from "./Payment";
+import { useParams } from "react-router-dom";
 
 const PropertyClaim = () => {
   debugger;
   const [data, setData] = useState([]);
+  const params = useParams();
   useEffect(() => {
     const getClaim = async () => {
       const response = await axios.get(
-        "http://65.1.3.134:3000/api/v1/claim/getAllClaim?builderId=641069056532f2569479fc9d&claimType=property&claimStatus=pending&boughtPropertyId=64214754483c737b5714ccb3",
+        `https://apis.nestohub.in/api/v1/claim/getAllClaim?claimType=property&claimStatus=pending`,
 
         {
           headers: {

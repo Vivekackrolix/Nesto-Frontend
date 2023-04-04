@@ -11,6 +11,8 @@ import SearchFilterBox from "../../search-filter/SearchFilter";
 import Footer from "../../Footer/Footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { getAPI } from "../../../Api/ApiRequest";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
 // import { recentlyAddedPropertyActions } from "../../../redux/recentlyAddedPropertySlice";
 
 // const RecentlyAddedProperty = ({ data }) => {
@@ -23,24 +25,25 @@ const RecentlyAddedProperty = (props) => {
   useEffect(() => {
     const getAddedProperties = async () => {
       debugger;
-      const response = await axios.get(
-        // "http://13.233.149.97:3000/api/v1/property/getAllproperty",
-        "http://65.1.3.134:3000/api/v1/property/getAllproperty",
+      // const response = await axios.get(
+      //   // "http://13.233.149.97:3000/api/v1/property/getAllproperty",
+      //   "http://65.1.3.134:3000/api/v1/property/getAllproperty",
 
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
+      //   {
+      //     headers: {
+      //       Authorization:
+      //         "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
+      //     },
+      //   }
+      // );
+      const response = await getAPI(apiEndpoints.getAllproperty);
       console.log(response.data);
       // dispatch(
       //   recentlyAddedPropertyActions.setAddedPropertyDetails({
       //     data: response.data.data,
       //   })
       // );
-      setData(response.data.data);
+      setData(response.data);
     };
     getAddedProperties();
   }, []);
