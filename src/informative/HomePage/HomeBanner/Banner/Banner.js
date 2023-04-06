@@ -8,7 +8,7 @@ import MobileSlider from '../MobileSlider/MobileSlider'
 const Banner = () => {
     return (
         <>
-            <div className='banner' style={{overflowX: 'hidden'}}>
+            <div className='banner' style={{ overflowX: 'hidden' }}>
                 <div className='banner-container-div'>
                     <div className='row'>
                         <div className='col-lg-5 banner-col-5' data-aos='fade-right'>
