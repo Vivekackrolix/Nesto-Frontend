@@ -8,7 +8,7 @@ const AboutUs = () => {
             <div className='container' style={{ overflow: 'hidden' }}>
                 <div className='row align-items-center'>
                     <div className='col-lg-6' data-aos='fade-right'>
-                        <img className='about-us_box1-img' src='/assets/informative/device.png' alt='about' />
+                        <img className='about-us_box1-img' src='/assets/informative/device.svg' alt='about' />
                         <div className='about-us_box1_btn-div'>
                             <div className='d-flex gap-4'>
                                 <div>

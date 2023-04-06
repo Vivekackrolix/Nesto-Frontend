@@ -1,9 +1,11 @@
 .choose-row {
     margin-bottom: 4rem;
-    padding: 20px;
+    /* padding: 20px; */
 }
+
 .choose-col {
     /* height: 5000px; */
+    padding: 16px;
     text-align: center;
 }
 
@@ -62,3 +64,24 @@
     display: block;
     padding-top: 6px !important;
 }
+
+
+/* .choose-row .slick-list::before {
+    background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.choose-row .slick-list::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    z-index: 2;
+} */
