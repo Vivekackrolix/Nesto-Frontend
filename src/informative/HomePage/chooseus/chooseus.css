@@ -1,6 +1,8 @@
 .choose-row {
-    margin-bottom: 4rem;
     /* padding: 20px; */
+    width: 98%;
+    margin: auto;
+    margin-bottom: 4rem;
 }
 
 .choose-col {
@@ -24,6 +26,7 @@
     transition: all .3s ease-in-out;
     /* max-height: 260px !important; */
     margin-bottom: 40px;
+    height: 300px;
 }
 
 
@@ -85,3 +88,10 @@
     width: 200px;
     z-index: 2;
 } */
+
+
+@media(max-width: 1400px) {
+    .choose-row {
+        width: 90%;
+    }
+}
