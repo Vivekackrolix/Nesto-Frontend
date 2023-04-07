@@ -30,7 +30,6 @@ export default function ChooseUs() {
         style={{
           ...style,
           display: 'block',
-          //   background: "black",
           borderRadius: '50%',
           padding: '1px 0px',
         }}
@@ -94,22 +93,59 @@ export default function ChooseUs() {
   ];
 
   const settings = {
-    dots: false,
-    infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    speed: 3000,
-    autoplaySpeed: 3000,
-    cssEase: 'linear',
+    dots: false,
+    infinite: true,
+    // speed: 3000,
+    // cssEase: 'linear',
     arrows: true,
     loop: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     accessibility: true,
     cssEase: 'linear',
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+    ],
   };
   return (
     <>
@@ -122,7 +158,7 @@ export default function ChooseUs() {
                 <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
                   <div className="choose-card">
                     <div className="choose-icon-div">
-                      <img src={item.img} className="choose-icon-img" alt='choose' />
+                      <img src={item.img} className="choose-icon-img" />
                     </div>
                     <div className="">
                       <h5 className="card-heading">{item.title}</h5>
