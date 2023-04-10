@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import './AboutUs.css'
 import { Link } from 'react-router-dom'
+import './AboutUs.css'
 
 const AboutUs = () => {
     return (
@@ -42,14 +42,14 @@ const AboutUs = () => {
                     </div>
                     <div className='col-lg-6' data-aos='fade-left'>
                         <div className='about-us_box2'>
-                            <span className='about-us_box-span1 sections-heading'>ABOUT US</span>
-                            <span className='about-us_box-span2 sections-sub-heading'>dream Living Spaces Setting New Build</span>
-                            <span className='about-us_box-span3'>Over 39,000 people work for us in more than 70 countries all
-                                over the This breadth of global coverage, combined with
-                                specialist services. Over 39,000 people work for us in more
-                                than 70 countries all over the This breadth of global
-                                coverage, combined with specialist services.Over 39,000 people
-                                work for us in more than 70 countries all over the</span>
+                            <span className='sections-heading'>ABOUT US</span>
+                            <span className='about-us_box-span2 sections-sub-heading'>Inspiring Brokers & Builders With Innovative Empowerment</span>
+                            <span className='about-us_box-span3'>NestoHub is a platform that makes it simple for brokers and builders
+                                to connect, creating a vast network of possibilities for both. With the help of NestoHub, a
+                                broker can benefit from an exclusive inventory from well-known builders, and the builders
+                                can take advantage of quicker sales with greater transparency.</span>
+                            <span className='about-us_box-span4'>We significantly provide automation, trust, and
+                                digitalization for brokers and builders across PAN India.</span>
                         </div>
                         <div className=''>
                             <Link to='/about-us' className='about-us-read-more'>Read More</Link>

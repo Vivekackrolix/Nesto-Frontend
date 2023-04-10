@@ -14,11 +14,12 @@ const Banner = () => {
                         <div className='col-lg-5 banner-col-5' data-aos='fade-right'>
                             <div>
                                 <h4 className='banner-h4'>
-                                    Professional Network For Real Estate Brokers
+                                    An Online Space To Connect Builders & Brokers
                                 </h4>
                                 <hr className='banner-hr' />
-                                <p className='banner-p'>Broker Network app is a suite of services specifically designed for Indian real
-                                    estate brokers and developers to maximize their business.</p>
+                                <p className='banner-p'>Our technology-driven platform, NestoHub, provides several services that
+                                    speed up, streamline, and increase transparency in the sale of real estate. We are bringing
+                                    digital transformation to the real estate world.</p>
                                 <Link to='/contact-us' className='banner-link'>
                                     Join Us
                                 </Link>

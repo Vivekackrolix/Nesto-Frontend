@@ -61,6 +61,8 @@
     font-size: 16px;
     padding-top: 2px;
 }
+
+
 .about-us_box2 {
     padding-top: 3%;
 }
@@ -70,6 +72,16 @@
     font-size: 15px;
     display: block;
     line-height: 25px;
+    padding: 1% 0;
+    color: var(--silver-surfer);
+}
+
+.about-us_box-span4 {
+    font-weight: 400;
+    font-size: 15px;
+    display: block;
+    line-height: 25px;
+    padding-top: 1%;
     color: var(--silver-surfer);
 }
 
@@ -78,6 +90,7 @@
     .about-us_box1 {
         padding-bottom: 10%;
     }
+
     .second-card__icon {
         width: 20px;
     }
@@ -105,6 +118,7 @@
     .about-us_box1 {
         padding-bottom: 6%;
     }
+
     .second-card__icon {
         width: 20px;
     }

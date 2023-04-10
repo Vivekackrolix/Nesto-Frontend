@@ -33,7 +33,7 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    HOMES FOR SALE
+                    NestoHub Brokers
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
@@ -55,7 +55,7 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    RECENTLY SOLD
+                    NestoHub Inventory
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
@@ -70,7 +70,7 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    TOTAL SQ
+                    NestoHub Builders
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
@@ -84,7 +84,7 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    PRICE REDUCED
+                    NestoHub Cities
                 </p>
             </div>
         </div>

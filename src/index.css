@@ -122,7 +122,7 @@ p{
 /* Sections Headings */
 .sections-heading {
   font-weight: 600;
-  font-size: 28px;
+  font-size: 30px !important;
   text-transform: uppercase;
   color: var(--carnation-color);
   display: block;
