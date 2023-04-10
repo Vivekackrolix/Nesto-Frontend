@@ -9,7 +9,7 @@ export default function GetStarted() {
           <div className="row get-started_row">
             <div className="col-md-6 get-started_col-1">
               <span className="get-started_heading">
-                Start listing or buying a property with NestoHub
+                Hurry Up! Find NestoHub Serving You With The Best In Real Estate.
               </span>
               <div className="">
                 <Link to="/builder-page" className="get-started_btn rounded-3">
