@@ -5,7 +5,7 @@ import HowWork from '../HowWork'
 import HowWorkAgent from '../HowWorkAgent/HowWorkAgent'
 import HowWorkBuilder from './../HowWorkBuilder/HowWorkBuilder';
 
-const AboutUsSelectBar = () => {
+const HowWorkSelectBar = () => {
     const [showBroker, setShowBroker] = useState(true);
     const [showBuilder, setShowBuilder] = useState(false)
     const [showAgent, setShowAgent] = useState(false)
@@ -31,17 +31,17 @@ const AboutUsSelectBar = () => {
         <>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-lg-12 AboutUsSelectBar-col'>
-                        <div className='AboutUsSelectBar-div gap-3'>
-                            <div className={`AboutUsSelectBar-box ${showBroker ? 'AboutUsSelectBar-box-active' : ''}`}
+                    <div className='col-lg-12 HowWorkSelectBar-col'>
+                        <div className='HowWorkSelectBar-div gap-3'>
+                            <div className={`HowWorkSelectBar-box ${showBroker ? 'HowWorkSelectBar-box-active' : ''}`}
                                 onClick={selectBroker}>
                                 <span>Broker</span>
                             </div>
-                            <div className={`AboutUsSelectBar-box ${showBuilder ? 'AboutUsSelectBar-box-active' : ''}`}
+                            <div className={`HowWorkSelectBar-box ${showBuilder ? 'HowWorkSelectBar-box-active' : ''}`}
                                 onClick={selectBuilder}>
                                 <span className=''>Builder</span>
                             </div>
-                            <div className={`AboutUsSelectBar-box ${showAgent ? 'AboutUsSelectBar-box-active' : ''}`}
+                            <div className={`HowWorkSelectBar-box ${showAgent ? 'HowWorkSelectBar-box-active' : ''}`}
                                 onClick={selectAgent}>
                                 <span className=''>Loan Agent</span>
                             </div>
@@ -66,4 +66,4 @@ const AboutUsSelectBar = () => {
     )
 }
 
-export default AboutUsSelectBar
+export default HowWorkSelectBar
