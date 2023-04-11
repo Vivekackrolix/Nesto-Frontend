@@ -2,12 +2,12 @@
     background: #fff !important;
 }
 
-.login__header__img {
+.info-login__header__img {
     width: 170px;
 }
 
 .login__header .nav-link {
-    font-weight: 350;
+    font-weight: 400;
     font-size: 15px;
     border-radius: 0.25rem;
     padding: 0.25rem 0.5rem;
@@ -41,8 +41,8 @@
     color: var(--color-white);
     padding-right: 60px !important;
     padding-left: 30px !important;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .download-button:hover {
@@ -64,10 +64,10 @@
 ===================== */
 .login-link {
     color: var(--primary-color);
-    font-size: 16px;
+    font-size: 0.9rem;
     border: 1px solid var(--primary-color);
     padding: 7.15px 30px;
-    font-weight: 350;
+    font-weight: 400;
     border-radius: 8px;
     background: var(--color-white);
     transition: all .3s ease-in;
@@ -89,10 +89,10 @@
 
 .list-property-link {
     color: var(--color-white);
-    font-size: 16px;
+    font-size: 0.9rem;
     border: 1px solid var(--primary-color);
     padding: 10px 30px;
-    font-weight: 350;
+    font-weight: 400;
     border-radius: 8px;
     background: var(--primary-color);
     transition: all .3s ease-in;

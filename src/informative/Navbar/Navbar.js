@@ -5,6 +5,10 @@ import { BsApple } from 'react-icons/bs';
 import { AiFillAndroid } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import LoginModal from '../HomePage/LoginModal/LoginModal';
+import LoginAsBroker from './../HomePage/LoginModal/LoginAsBroker/LoginAsBroker';
+import ReffrelRegister from './../HomePage/LoginModal/ReffrelRegister/ReffrelRegister';
+import SuccessfulLogin from './../HomePage/LoginModal/SuccessfulLogin/SuccessfulLogin';
+import NotRegistered from './../HomePage/LoginModal/NotRegistered/NotRegistered';
 
 const InformativeNavbar = () => {
   const [show, setShow] = useState(false);
@@ -16,8 +20,8 @@ const InformativeNavbar = () => {
   };
   return (
     <>
-      <LoginModal show={show} onHide={onHide} />
-      {/* <LoginAsBroker show={show} onHide={onHide} /> */}
+      {/* <LoginModal show={show} onHide={onHide} /> */}
+      <LoginAsBroker show={show} onHide={onHide} /> 
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
       {/* <SuccessfulLogin show={show} onHide={onHide} /> */}
       {/* <ListProperty show={show} onHide={onHide} /> */}
@@ -27,12 +31,13 @@ const InformativeNavbar = () => {
           <Link to="/" className="navbar-brand nav-image">
             <img
               src="/assets/nesto-logo.png"
-              className="login__header__img me-auto"
+              className="info-login__header__img me-auto"
+              alt='login-header'
             />
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto d-flex align-items-center gap-5">
+            <Nav className="ms-auto d-flex align-items-center gap-3">
               {/* Login btn */}
               <Nav.Item>
                 <div className="login-div">
@@ -46,7 +51,7 @@ const InformativeNavbar = () => {
                 <div className="broker-link-div">
                   <div>
                     <span>
-                      <img src="/assets/profle.png" />
+                      <img src="/assets/profle.png" alt='profile'/>
                     </span>
                   </div>
                   <div>

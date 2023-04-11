@@ -32,7 +32,7 @@ const SecondCard = ({url}) => {
                             </Link>
                         </div>
                         <div className='second-card__box-2' data-aos="flip-left">
-                            <img src={url} className='second-card__img-1' />
+                            <img src={url} className='second-card__img-1' alt="second-card" />
                         </div>
                     </div>
                 </div>
