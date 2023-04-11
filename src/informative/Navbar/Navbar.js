@@ -5,6 +5,10 @@ import { BsApple } from 'react-icons/bs';
 import { AiFillAndroid } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import LoginModal from '../HomePage/LoginModal/LoginModal';
+import LoginAsBroker from './../HomePage/LoginModal/LoginAsBroker/LoginAsBroker';
+import ReffrelRegister from './../HomePage/LoginModal/ReffrelRegister/ReffrelRegister';
+import SuccessfulLogin from './../HomePage/LoginModal/SuccessfulLogin/SuccessfulLogin';
+import NotRegistered from './../HomePage/LoginModal/NotRegistered/NotRegistered';
 
 const InformativeNavbar = () => {
   const [show, setShow] = useState(false);
@@ -16,8 +20,8 @@ const InformativeNavbar = () => {
   };
   return (
     <>
-      <LoginModal show={show} onHide={onHide} />
-      {/* <LoginAsBroker show={show} onHide={onHide} /> */}
+      {/* <LoginModal show={show} onHide={onHide} /> */}
+      <LoginAsBroker show={show} onHide={onHide} />
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
       {/* <SuccessfulLogin show={show} onHide={onHide} /> */}
       {/* <ListProperty show={show} onHide={onHide} /> */}
