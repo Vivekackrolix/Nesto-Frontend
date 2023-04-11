@@ -90,3 +90,9 @@
     color: var(--color-white);
     background: var(--primary-color);
 }
+
+@media(max-width: 992px) {
+    .news-box {
+        margin-bottom: 6% !important;
+    }
+}

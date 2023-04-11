@@ -27,7 +27,6 @@ const InformativeNavbar = () => {
           <Link to="/" className="navbar-brand nav-image">
             <img
               src="/assets/nesto-logo.png"
-              alt="logo"
               className="login__header__img me-auto"
             />
           </Link>
@@ -47,7 +46,7 @@ const InformativeNavbar = () => {
                 <div className="broker-link-div">
                   <div>
                     <span>
-                      <img src="./assets/profle.png" alt="profile" />
+                      <img src="/assets/profle.png" />
                     </span>
                   </div>
                   <div>
@@ -59,9 +58,9 @@ const InformativeNavbar = () => {
               </Nav.Item>
               {/* List your Property btn */}
               <Nav.Item>
-                <div className="list-property-div">
+                <div className="">
                   {/* <button > */}
-                    <Link className="list-property-link" to='/builder-page'>List your Property</Link>
+                  <Link className="list-property-link" to='/builder-page'>List your Property</Link>
                   {/* </button> */}
                 </div>
               </Nav.Item>
@@ -73,12 +72,12 @@ const InformativeNavbar = () => {
                 >
                   <div>
                     <span>Download App</span>
-                    <span className="text-white mx-2">
+                    <span className="text-white mx-1">
                       <AiFillAndroid size={24} />
                     </span>
                   </div>
                   <div>
-                    <span className="text-white ">
+                    <span className="text-white">
                       <BsApple size={24} />
                     </span>
                   </div>
