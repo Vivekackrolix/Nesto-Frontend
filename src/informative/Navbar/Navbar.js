@@ -20,8 +20,8 @@ const InformativeNavbar = () => {
   };
   return (
     <>
-      {/* <LoginModal show={show} onHide={onHide} /> */}
-      <LoginAsBroker show={show} onHide={onHide} />
+      <LoginModal show={show} onHide={onHide} />
+      {/* <LoginAsBroker show={show} onHide={onHide} /> */}
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
       {/* <SuccessfulLogin show={show} onHide={onHide} /> */}
       {/* <ListProperty show={show} onHide={onHide} /> */}
