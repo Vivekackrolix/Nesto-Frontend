@@ -55,14 +55,8 @@
     /* width: 1200px !important; */
 }
 
-
-
-
-
-
-
-
-/* Media Queri */
+/* ====================== 
+========== Media Queri */
 @media(max-width: 992px) {
     .desktop-col {
         display: none;
