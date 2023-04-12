@@ -1,5 +1,10 @@
 .login__header.nes__header {
+    z-index: 100;
     background: #fff !important;
+    /* position: fixed;
+    top: 0;
+    width: -webkit-fill-available; */
+    box-shadow: 1px 0px 3px #d8d8d8;
 }
 
 .info-login__header__img {
@@ -56,7 +61,7 @@
 
 .nav-image {
     position: relative;
-    right: 100px;
+    right: 50px;
 }
 
 

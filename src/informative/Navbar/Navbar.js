@@ -26,7 +26,7 @@ const InformativeNavbar = () => {
       {/* <SuccessfulLogin show={show} onHide={onHide} /> */}
       {/* <ListProperty show={show} onHide={onHide} /> */}
       {/* <NotRegistered show={show} onHide={onHide} /> */}
-      <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
+      <Navbar bg="light" expand="lg" className="login__header nes__header py-0 sticky-top">
         <Container className="nav-container">
           <Link to="/" className="navbar-brand nav-image">
             <img

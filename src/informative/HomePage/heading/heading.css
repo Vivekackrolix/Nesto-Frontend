@@ -1,7 +1,7 @@
 /* ==================== */
 .sections-heading {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17px;
     text-transform: uppercase;
     color: var(--carnation-color);
     display: block;
@@ -10,7 +10,8 @@
     text-transform: capitalize;
     font-weight: 900;
     color: var(--cold-black-color);
-    font-weight: 700;
     display: block;
-    font-size: 44px;
+    font-size: 34px;
+    line-height: 1.4;
+    margin-bottom: 10px;
 }

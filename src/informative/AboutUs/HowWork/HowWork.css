@@ -27,17 +27,12 @@
 
 .how-container .how-col-1 {
     padding: 2% 0;
-    /* background: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: end; */
 }
 
 .how-col-1-span-1 {
     font-weight: 600;
-    font-size: 32px;
-    line-height: 73px;
+    font-size: 26px;
+    line-height: 46px;
     width: 70%;
     margin-left: auto;
     display: block;
@@ -45,13 +40,13 @@
 }
 
 .how-col-1-span-2 {
-    display: block;
-    font-weight: 400;
-    font-size: 16px;
     width: 70%;
     margin-left: auto;
-    color: var(--cold-black-color);
-    line-height: 28px;
+    font-weight: 400;
+    font-size: 15px;
+    display: block;
+    line-height: 25px;
+    color: var(--silver-surfer);
 }
 
 .how-container .how-col-2 {

@@ -13,10 +13,10 @@ const InformativeFooter = () => {
                                 <img src='/assets/informative/informative-footer-logo.svg' alt='footer-logo' className='informative-footer_logo' />
                                 <span className='footer-col-1-span'>We’re reimagining how you buy, sell and rent. It’s now easier to get into a place you love. So let’s do this, together.</span>
                                 <div className='informative-footer-icons-div'>
-                                    <img src='/assets/informative/footerSocialIcon4.svg' alt='social' className='footer-col-1-icons' />
-                                    <img src='/assets/informative/footerSocialIcon3.svg' alt='social' className='footer-col-1-icons' />
-                                    <img src='/assets/informative/footerSocialIcon2.svg' alt='social' className='footer-col-1-icons' />
-                                    <img src='/assets/informative/footerSocialIcon1.svg' alt='social' className='footer-col-1-icons' />
+                                    <Link to='#'><img src='/assets/informative/footerSocialIcon4.svg' alt='social' className='footer-col-1-icons' /></Link>
+                                    <Link to='#'><img src='/assets/informative/footerSocialIcon3.svg' alt='social' className='footer-col-1-icons' /></Link>
+                                    <Link to='#'><img src='/assets/informative/footerSocialIcon2.svg' alt='social' className='footer-col-1-icons' /></Link>
+                                    <Link to='#'><img src='/assets/informative/footerSocialIcon1.svg' alt='social' className='footer-col-1-icons' /></Link>
                                 </div>
                             </div>
                             <div className='col-lg-3 footer-col-2'>
@@ -26,6 +26,7 @@ const InformativeFooter = () => {
                                 <Link to='/blog-list' className='informative-footer-link'>Blog</Link>
                             </div>
                             <div className='col-lg-3 footer-col-3'>
+                                <span className='footer-col-2-span'>Our Policies</span>
                                 <Link to='/terms-condition' className='informative-footer-link'>Terms & Condition</Link>
                                 <Link to='/privacy-policy' className='informative-footer-link'>Privacy Policy</Link>
                                 <Link to='/contact-us' className='informative-footer-link'>Contact Us</Link>

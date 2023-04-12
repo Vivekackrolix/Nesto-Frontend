@@ -2,24 +2,21 @@
     background: var(--lite-skyblue);
     height: 100%;
     position: relative;
-}
-
-.banner-container-div {
-    /* position: relative; */
+    /* margin-top: 72px; */
 }
 
 .banner-col-5 {
     display: flex;
     align-items: center;
-    padding-left: 8rem;
+    padding-left: 6rem;
     margin-left: auto;
 }
 
 .banner-h4 {
     font-weight: 700;
-    font-size: 33px;
+    font-size: 34px;
     /* width: 95%; */
-    line-height: 50px;
+    line-height: 44px;
 }
 
 .banner-hr {
@@ -29,9 +26,9 @@
 }
 
 .banner-p {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 15px;
-    line-height: 26px;
+    line-height: 24px;
     color: var(--silver-surfer);
     margin-bottom: 24px;
 }

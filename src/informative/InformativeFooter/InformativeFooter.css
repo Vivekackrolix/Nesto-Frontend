@@ -25,6 +25,14 @@
 .footer-col-1-icons:not(:first-child) {
     margin-left: 20px;
 }
+.footer-col-1-icons{
+    width: 36px; 
+    transition: transform 400ms;
+    margin-right: 15px;
+}
+.footer-col-1-icons:hover{
+    transform: scale(1.1);
+}
 
 /* Second Col Css =======
 =======================*/
@@ -38,7 +46,7 @@
     color: var(--color-white);
     font-weight: 500;
     font-size: 22px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .informative-footer-link {
@@ -48,10 +56,10 @@
     font-weight: 400;
     margin-top: 20px;
 }
-
+/* 
 .footer-col-3 {
     margin-top: 62px;
-}
+} */
 
 /* Third Col */
 .footer-mail-div {
@@ -71,11 +79,11 @@
 .informative-footer_rights {
     /* background: var(--primary-color-darker); */
     background: #1278C0;
-    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 10px 0;
 }
 .informative-footer_rights_p {
     color: var(--color-white);
