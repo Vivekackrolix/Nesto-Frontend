@@ -10,8 +10,8 @@
 
 .play-button {
   position: absolute;
-  top: 45%;
-  right: 47%;
+  top: 40%;
+  right: 46%;
 }
 .home-video {
   width: 100%;
@@ -21,9 +21,10 @@
 }
 
 
-@media screen and (max-width: 680px) {
+@media (max-width: 680px) {
   .play-button {
-    top: 22%;
-    right: 44%;
+    top: 38%;
+    width: 10%;
+    right: 42%;
   }
 }

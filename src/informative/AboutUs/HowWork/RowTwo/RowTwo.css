@@ -16,6 +16,7 @@
 .row-two-col-3-span-2 {
     display: block;
     width: 70%;    
+    margin: auto;
     margin-left: auto;
     font-weight: 400;
     font-size: 15px;
@@ -31,7 +32,9 @@
     font-size: 3rem;
     font-weight: 600;
 }
-
+.row-two-col-3 {
+    padding-top: 2%;
+}
 /* media queri */
 @media (max-width: 768px) {
     .row-two-col-3-span-1 {

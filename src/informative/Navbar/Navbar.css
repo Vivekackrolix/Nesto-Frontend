@@ -1,9 +1,7 @@
 .login__header.nes__header {
     z-index: 100;
-    background: #fff !important;
-    /* position: fixed;
-    top: 0;
-    width: -webkit-fill-available; */
+    background: var(--color-white) !important;
+    padding: 0 0 0 6%;
     box-shadow: 1px 0px 3px #d8d8d8;
 }
 
@@ -11,71 +9,15 @@
     width: 170px;
 }
 
-.login__header .nav-link {
-    font-weight: 400;
-    font-size: 15px;
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.5rem;
-    color: #278FD9;
-}
-
-.login__header .nav-link:hover {
-    background-color: var(--primary-color);
-    color: #ffffff;
-}
-
-
-.profile-button {
-    color: #278FD9;
-    padding-left: 0;
-    border-radius: 30px;
-}
-
-.profile-button:hover {
-    color: white;
-    background-color: #278FD9;
-}
-
-.nav-container {
-    margin-right: 0 !important;
-}
-
-.download-button {
-    background-color: #FC5C67;
-    border: none;
-    color: var(--color-white);
-    padding-right: 60px !important;
-    padding-left: 30px !important;
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
-.download-button:hover {
-    color: var(--color-white);
-}
-
-.download {
-    position: relative;
-    left: 14px;
-}
-
-.nav-image {
-    position: relative;
-    right: 50px;
-}
-
-
-/* =====================
-===================== */
 .login-link {
     color: var(--primary-color);
-    font-size: 0.9rem;
+    font-size: 14px;
     border: 1px solid var(--primary-color);
-    padding: 7.15px 30px;
     font-weight: 400;
     border-radius: 8px;
     background: var(--color-white);
     transition: all .3s ease-in;
+    padding: 7.15px 30px;
 }
 
 .login-link:hover {
@@ -94,7 +36,7 @@
 
 .list-property-link {
     color: var(--color-white);
-    font-size: 0.9rem;
+    font-size: 14px;
     border: 1px solid var(--primary-color);
     padding: 10px 30px;
     font-weight: 400;
@@ -108,4 +50,127 @@
     color: var(--primary-color);
 }
 
-@media (max-width: 992px) {}
+.nes__header-download-button,
+.nes__header-download-button:hover {
+    background-color: var(--carnation-color);
+    border: none;
+    color: var(--color-white);
+    padding: 28px 60px 24px 30px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Navbar Collapse Styling ======================== 
+===============================================  */
+.navbar-toggler {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+    border: 1px solid var(--primary-color);
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--carnation-color);
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.toggler-icon-middle-bar {
+    margin-top: 0px;
+    height: 2px;
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .toggler-icon-top-bar {
+    margin-top: 0px;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .toggler-icon-middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .toggler-icon-bottom-bar {
+    margin-top: 0px;
+    transform: rotate(-135deg);
+}
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .toggler-icon-top-bar {
+    margin-top: -10px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .toggler-icon-middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .toggler-icon-bottom-bar {
+    margin-top: 10px;
+    transform: rotate(0deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+    background: linear-gradient(263deg, var(--carnation-color) 0%, var(--primary-color) 100%);
+    background: var(--primary-color);
+}
+
+/* Media Queri ================= 
+============================  */
+@media (max-width: 992px) {
+    .login__header.nes__header {
+        padding: 2% 3%;
+    }
+
+    .nes__header-collapse-nav {
+        align-items: start !important;
+        padding: 4% 0 0 0;
+    }
+
+    .broker-link-div {
+        margin: 3% 0 6% 0;
+    }
+
+    .list-property-link {
+        margin-top: 3%;
+    }
+
+    .nes__header-download-button {
+        margin-top: 5%;
+        padding: 14px 30px 14px 10px;
+        border-radius: 8px;
+    }
+
+    .basic-navbar-nav {
+        border-top: 1px solid #E0E0E0;
+        margin-top: 2.4%;
+    }
+}
