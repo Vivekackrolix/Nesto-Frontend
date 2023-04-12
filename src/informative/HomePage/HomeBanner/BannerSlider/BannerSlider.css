@@ -8,8 +8,10 @@
 }
 
 .cartoon_img {
-    margin-right: -49px;
-    height: 100%;
+    /* margin-right: -49px; */
+    /* height: 100%; */
+    margin-right: -45.5px;
+    height: 60vh;
     z-index: 10;
 }
 .slider-img {
