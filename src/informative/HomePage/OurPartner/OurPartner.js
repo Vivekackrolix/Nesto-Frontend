@@ -19,7 +19,7 @@ function SampleNextArrow(props) {
       }}
       onClick={onClick}
     >
-      <img className="next-image" src="./assets/next.png" alt="next-image" />
+      <img className="next-image" src="./assets/next.png" alt="next" />
     </div>
   );
 }
@@ -38,7 +38,7 @@ function SamplePrevArrow(props) {
       }}
       onClick={onClick}
     >
-      <img className="next-image" src="./assets/back.png" alt="next-image" />
+      <img className="next-image" src="./assets/back.png" alt="next" />
     </div>
   );
 }
@@ -106,13 +106,11 @@ const OurPartner = () => {
       arrows: true,
       loop: true,
       autoplay: true,
-      autoplaySpeed: 2000,
       accessibility: true,
-      cssEase: 'linear',
       swipeToSlide: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
-
+      
       responsive: [
         {
           breakpoint: 1080,

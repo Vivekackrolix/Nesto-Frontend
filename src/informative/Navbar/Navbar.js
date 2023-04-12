@@ -20,23 +20,24 @@ const InformativeNavbar = () => {
   };
   return (
     <>
-      <LoginModal show={show} onHide={onHide} />
-      {/* <LoginAsBroker show={show} onHide={onHide} /> */}
+      {/* <LoginModal show={show} onHide={onHide} /> */}
+      <LoginAsBroker show={show} onHide={onHide} /> 
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
       {/* <SuccessfulLogin show={show} onHide={onHide} /> */}
       {/* <ListProperty show={show} onHide={onHide} /> */}
       {/* <NotRegistered show={show} onHide={onHide} /> */}
-      <Navbar bg="light" expand="lg" className="login__header nes__header py-0">
+      <Navbar bg="light" expand="lg" className="login__header nes__header py-0 sticky-top">
         <Container className="nav-container">
           <Link to="/" className="navbar-brand nav-image">
             <img
               src="/assets/nesto-logo.png"
-              className="login__header__img me-auto"
+              className="info-login__header__img me-auto"
+              alt='login-header'
             />
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto d-flex align-items-center gap-5">
+            <Nav className="ms-auto d-flex align-items-center gap-3">
               {/* Login btn */}
               <Nav.Item>
                 <div className="login-div">
@@ -50,7 +51,7 @@ const InformativeNavbar = () => {
                 <div className="broker-link-div">
                   <div>
                     <span>
-                      <img src="/assets/profle.png" />
+                      <img src="/assets/profle.png" alt='profile'/>
                     </span>
                   </div>
                   <div>

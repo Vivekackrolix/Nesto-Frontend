@@ -1,18 +1,14 @@
 .residency {
-    background: url(../../../../public/assets/informative/aboutUsImg2.png);
-    /* padding: 10rem 0; */
-    padding: 8% 0 6% 0;
+    background: url(../../../../public/assets/informative/blocks.png);    
+    padding: 10% 0 6% 0;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
     position: relative;
 }
 
 .residency-row {
-    /* padding-left: 8%; */
     display: flex;
-    /* align-items: center; */
-}
-
-.residency-col-1 {
-    /* padding-top: 6%; */
 }
 
 .col-1-box {
@@ -32,11 +28,11 @@
 
 .col-1-box-span_2 {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
     display: block;
-    padding-top: 10px;
-    color: var(--gray-color);
+    line-height: 25px;
+    padding: 1% 0;
+    color: var(--silver-surfer);
 }
 
 

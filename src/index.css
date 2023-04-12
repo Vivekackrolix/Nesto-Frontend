@@ -35,6 +35,9 @@ html::-webkit-scrollbar-thumb {
   background: #278fd9;
   border-radius: 10px;
 }
+body{
+  overflow-x: hidden;
+}
 
 @font-face {
   font-family: 'Bahnschrift';
@@ -124,10 +127,11 @@ p{
 /* Sections Headings */
 .sections-heading {
   font-weight: 600;
-  font-size: 30px !important;
+  font-size: 17px !important;
   text-transform: uppercase;
   color: var(--carnation-color);
   display: block;
+  margin-bottom: 5px;
 }
 
 .sections-sub-heading {

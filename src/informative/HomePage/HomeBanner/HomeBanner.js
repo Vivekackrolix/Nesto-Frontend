@@ -20,7 +20,7 @@ const HomeBanner = () => {
   }, []);
   return (
     <>
-      <div style={{ overflowX: 'hidden' }}>
+      <div>
         <InformativeNavbar />
         <Banner />
         <AboutUs />

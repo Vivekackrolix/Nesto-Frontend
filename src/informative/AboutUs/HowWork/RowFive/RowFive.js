@@ -22,7 +22,7 @@ const RowFive = () => {
                 </div>
             </div>
             <div className='col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3' data-aos='fade-left'>
-                <img src='/assets/informative/howWorks/Claim.gif' className='how-work_img' />
+                <img src='/assets/informative/howWorks/Claim.gif' className='how-work_img' alt='how-work' />
             </div>
         </>
     )

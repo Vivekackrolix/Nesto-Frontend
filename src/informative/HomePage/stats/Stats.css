@@ -1,6 +1,6 @@
 .stats-row {
     background: var(--lite-skyblue);
-    padding: 80px 0 40px 0;
+    padding: 50px 80px 25px 80px;
     margin-top: 6rem;
 }
 
@@ -15,13 +15,12 @@
 
 .stats-row-count {
     font-weight: 700;
-    font-size: 38px;
-    ;
-    padding: 18px 0 10px 0;
+    font-size: 30px;
+    padding: 10px 0 5px 0;
 }
 
 .stats-row-p {
     font-weight: 400;
-    font-size: 23px;
+    font-size: 18px;
     color: var(--silver-surfer);
 }
