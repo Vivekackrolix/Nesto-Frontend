@@ -33,6 +33,10 @@
         font-size: 16px;
         padding: 10px;
     }
+
+    .HowWorkSelectBar-div {
+        padding: 5px 6px;
+    }
 }
 
 @media(max-width: 437px) {

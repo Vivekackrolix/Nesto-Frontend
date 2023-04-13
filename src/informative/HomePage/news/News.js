@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './news.css';
 import Heading from '../heading/Heading';
 import { CiCalendar } from 'react-icons/ci';
+import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 
 export default function News() {
   const data = [
@@ -50,8 +51,9 @@ export default function News() {
                       <div>
                         <p className="news-desc">{item.desc}</p>
                       </div>
-                      <Link to="/blog-list" className="news-btn">
+                      <Link to="/blog-list" className="primary_button">
                         Read More
+                        <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
                       </Link>
                     </div>
                   </div>
