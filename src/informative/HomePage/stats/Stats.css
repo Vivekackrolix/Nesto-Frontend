@@ -1,8 +1,6 @@
 .stats-row {
     background: var(--lite-skyblue);
-    padding: 50px 80px 25px 80px;
-    width: 100%;
-    margin: auto;
+    padding: 40px 80px 20px 80px;
     margin-top: 6rem;
 }
 
@@ -18,7 +16,7 @@
 .stats-row-count {
     font-weight: 700;
     font-size: 30px;
-    padding: 10px 0 5px 0;
+    padding: 10px 0 0 0;
 }
 
 .stats-row-p {
@@ -34,7 +32,16 @@
 }
 
 @media (max-width: 492px) {
-    /* .stats-row-img {
-        width: 40%;
-    } */
+    .stats-row-img {
+        width: 35%;
+    }
+    .stats-row{
+        padding: 40px 20px 20px 20px;
+    }
+    .stats-row-count{
+        font-size: 26px;
+    }
+    .stats-row-p{
+        font-size: 15px;
+    }
 }

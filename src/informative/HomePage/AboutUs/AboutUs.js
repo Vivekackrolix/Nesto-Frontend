@@ -5,7 +5,7 @@ import "./AboutUs.css";
 const AboutUs = () => {
   return (
     <div className="home-page-about">
-      <div className="container" style={{ overflow: "hidden" }}>
+      <div className="container">
         <div className="row">
           <div className="col-lg-6" data-aos="fade-right">
             <img
@@ -65,7 +65,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6" data-aos="fade-left">
+          <div className="col-lg-6 ps-5 about-content" data-aos="fade-left">
             <div className="about-us_box2">
               <span className="sections-heading">ABOUT US</span>
               <span className="about-us_box-span2 sections-sub-heading">
