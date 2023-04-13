@@ -19,15 +19,15 @@
 
 .get-started_heading {
     font-weight: 900;
-    font-size: 40px;
+    font-size: 34px;
     line-height: 1.2;
     display: block;
     text-transform: capitalize;
-    text-shadow: 2px 2px 3px #bbbbbb;
+    /* text-shadow: 2px 2px 3px #bbbbbb; */
 }
 
 .get-started_heading span {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
 }
 
