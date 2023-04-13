@@ -1,5 +1,6 @@
 .how-container {
     margin: 30px auto;
+    overflow-x: hidden;
     /* background: #000; */
 }
 
@@ -153,7 +154,7 @@
     }
 
     .how-work_img {
-        width: 40%;
+        width: 60%;
         margin: auto;
     }
 }

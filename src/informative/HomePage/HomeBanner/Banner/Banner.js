@@ -3,8 +3,7 @@ import "./Banner.css";
 import { Link } from "react-router-dom";
 import BannerSlider from "../BannerSlider/BannerSlider";
 import TextSlider from "../TextSlider/TextSlider";
-import { MdKeyboardArrowRight, MdKeyboardDoubleArrowRight } from "react-icons/md";
-import MobileSlider from "../MobileSlider/MobileSlider";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Banner = () => {
   return (

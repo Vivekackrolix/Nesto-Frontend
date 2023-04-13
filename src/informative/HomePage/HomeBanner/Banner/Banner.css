@@ -104,12 +104,19 @@
 @keyframes armove {
   0% {
     /* right: 0px; */
-    opacity: .2;
+    opacity: 0;
     transform: translateX(0px);
   }
+
+  50% {
+    opacity: .5;
+    transform: translateX(5px);
+  }
+
   100% {
     /* right: 4px; */
     opacity: 1;
     transform: translateX(10px);
   }
+
 }

@@ -66,7 +66,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 ps-5 about-content" data-aos="fade-left">
+          <div className="col-lg-6 about-content" data-aos="fade-left">
             <div className="about-us_box2">
               <span className="sections-heading">ABOUT US</span>
               <span className="about-us_box-span2 sections-sub-heading">

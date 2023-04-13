@@ -1,6 +1,8 @@
 .stats-row {
     background: var(--lite-skyblue);
     padding: 40px 80px 20px 80px;
+    width: 100%;
+    margin: auto;
     margin-top: 6rem;
 }
 

@@ -2,8 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Heading from '../heading/Heading';
 import './OurPartner.css';
+import Heading from '../heading/Heading';
 import { Link } from 'react-router-dom';
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 
@@ -39,7 +39,7 @@ function SamplePrevArrow(props) {
       }}
       onClick={onClick}
     >
-      <img className="next-image" src="./assets/back.png" alt="next" />
+      <img className="prev-image" src="./assets/next.png" alt="next" />
     </div>
   );
 }
@@ -100,7 +100,6 @@ const OurPartner = () => {
     dots: false,
     infinite: true,
     slidesToShow: 6,
-    slidesToScroll: 1,
     speed: 3000,
     autoplaySpeed: 3000,
     cssEase: 'linear',
@@ -111,6 +110,7 @@ const OurPartner = () => {
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    slidesToScroll: 1,
 
     responsive: [
       {

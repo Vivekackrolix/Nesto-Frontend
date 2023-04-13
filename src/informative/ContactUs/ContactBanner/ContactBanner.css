@@ -45,6 +45,12 @@
     width: 100%;
 }
 
+@media(max-width: 492px) {
+    .contact-us_col {
+        padding: 40px 44px !important;
+    }
+}
+
 @media(max-width: 998px) {
     .contact-us_col {
         padding: 40px 90px;
