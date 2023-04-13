@@ -23,25 +23,30 @@ const Faq = () => {
                 <div className='row'>
                     <div className='col-lg-6 col-md-12 col-sm-12 faq-col-1'>
                         <div className='faq-col_box-1'>
-                            <span className='faq-span' onClick={() => setShowFaq(1)}>
-                                <span><VscCircleLargeFilled className='circle-icon' /> Lorem Ipsum is simply dummy text?</span>
-                                <span><MdArrowForwardIos className='arrow-icon' /></span>
+                            <span className={`faq-span ${showFaq === 1 ? 'faq-span_active' : ''}`} onClick={() => setShowFaq(1)}>
+                                <span>
+                                    <VscCircleLargeFilled className={`circle-icon ${showFaq === 1 ? 'circle-icon_active' : ''}`} />
+                                    Lorem Ipsum is simply dummy text?
+                                </span>
+                                <span><MdArrowForwardIos className={`arrow-icon ${showFaq === 1 ? 'arrow-icon_active' : ''}`} /></span>
                             </span>
-                            <span className='faq-span' onClick={() => setShowFaq(2)}>
-                                <span><VscCircleLargeFilled className='circle-icon' /> Lorem Ipsum is simply dummy text?</span>
-                                <span><MdArrowForwardIos className='arrow-icon' /></span>
+                            <span className={`faq-span ${showFaq === 2 ? 'faq-span_active' : ''}`} onClick={() => setShowFaq(2)}>
+                                <span><VscCircleLargeFilled className={`circle-icon ${showFaq === 2 ? 'circle-icon_active' : ''}`} />
+                                    Lorem Ipsum is simply dummy text?
+                                </span>
+                                <span><MdArrowForwardIos className={`arrow-icon ${showFaq === 2 ? 'arrow-icon_active' : ''}`} /></span>
                             </span>
-                            <span className='faq-span' onClick={() => setShowFaq(3)}>
-                                <span><VscCircleLargeFilled className='circle-icon' /> Lorem Ipsum is simply dummy text?</span>
-                                <span><MdArrowForwardIos className='arrow-icon' /></span>
+                            <span className={`faq-span ${showFaq === 3 ? 'faq-span_active' : ''}`} onClick={() => setShowFaq(3)}>
+                                <span><VscCircleLargeFilled className={`circle-icon ${showFaq === 3 ? 'circle-icon_active' : ''}`} /> Lorem Ipsum is simply dummy text?</span>
+                                <span><MdArrowForwardIos className={`arrow-icon ${showFaq === 3 ? 'arrow-icon_active' : ''}`} /></span>
                             </span>
-                            <span className='faq-span' onClick={() => setShowFaq(4)}>
-                                <span><VscCircleLargeFilled className='circle-icon' /> Lorem Ipsum is simply dummy text?</span>
-                                <span><MdArrowForwardIos className='arrow-icon' /></span>
+                            <span className={`faq-span ${showFaq === 4 ? 'faq-span_active' : ''}`} onClick={() => setShowFaq(4)}>
+                                <span><VscCircleLargeFilled className={`circle-icon ${showFaq === 4 ? 'circle-icon_active' : ''}`} /> Lorem Ipsum is simply dummy text?</span>
+                                <span><MdArrowForwardIos className={`arrow-icon ${showFaq === 4 ? 'arrow-icon_active' : ''}`} /></span>
                             </span>
-                            <span className='faq-span' onClick={() => setShowFaq(5)}>
-                                <span><VscCircleLargeFilled className='circle-icon' /> Lorem Ipsum is simply dummy text?</span>
-                                <span><MdArrowForwardIos className='arrow-icon' /></span>
+                            <span className={`faq-span ${showFaq === 5 ? 'faq-span_active' : ''}`} onClick={() => setShowFaq(5)}>
+                                <span><VscCircleLargeFilled className={`circle-icon ${showFaq === 5 ? 'circle-icon_active' : ''}`} /> Lorem Ipsum is simply dummy text?</span>
+                                <span><MdArrowForwardIos className={`arrow-icon ${showFaq === 5 ? 'arrow-icon_active' : ''}`} /></span>
                             </span>
                         </div>
                     </div>

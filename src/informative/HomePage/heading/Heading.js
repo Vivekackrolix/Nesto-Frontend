@@ -1,5 +1,4 @@
-import React from "react";
-import "./heading.css";
+import React from 'react';
 
 const Heading = ({ title, sub }) => {
   return (

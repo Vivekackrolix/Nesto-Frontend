@@ -53,6 +53,9 @@
 .faq-span:hover {
     background: var(--Pattens-Blue);
 }
+.faq-span_active {
+    background: var(--Pattens-Blue);
+}
 
 .circle-icon {
     color: var(--Pattens-Blue);
@@ -71,6 +74,12 @@
 .faq-span:hover .arrow-icon {
     color: var(--primary-color);
 }
+
+.circle-icon_active,
+.arrow-icon_active {
+    color: var(--primary-color);
+}
+
 
 .faq-col-2 {
     z-index: -10;

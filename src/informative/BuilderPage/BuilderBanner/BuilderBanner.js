@@ -2,6 +2,7 @@ import React from 'react'
 import './BuilderBanner.css'
 import { Link } from 'react-router-dom'
 import BuilderForm from '../BuilderForm/BuilderForm'
+import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 
 const BuilderBanner = () => {
   return (
@@ -18,8 +19,9 @@ const BuilderBanner = () => {
                 Broker Network app is a suite of services specifically designed for Indian
                 real estate brokers and developers to maximize their business.
               </p>
-              <Link to="/" className="builder-banner-link">
+              <Link to="/" className="primary_button">
                 Contact Us
+                <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
               </Link>
             </div>
           </div>

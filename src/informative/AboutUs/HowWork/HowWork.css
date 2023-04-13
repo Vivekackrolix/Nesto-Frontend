@@ -1,17 +1,7 @@
-.how-box {
-    margin-top: 3%;
-    text-align: center;
-}
-
 .how-container {
     margin: 30px auto;
-}
-
-.how-heading-1 {
-    font-weight: 500;
-    display: block;
-    font-size: 24px;
-    color: var(--carnation-color);
+    overflow-x: hidden;
+    /* background: #000; */
 }
 
 .how-work_img {
@@ -151,9 +141,9 @@
     }
     .how-col-1-span-1 {
         width: 100%;
-        padding: 5% 0 0 0;
-        line-height: 1.4;
-        font-size: 18px;
+        padding-top: 5%;
+        line-height: 28px;
+        font-size: 21px;
     }
 
     .how-col-1-span-2 {
@@ -204,7 +194,7 @@
     }
 
     .how-work_img {
-        width: 40%;
+        width: 60%;
         margin: auto;
     }
 }

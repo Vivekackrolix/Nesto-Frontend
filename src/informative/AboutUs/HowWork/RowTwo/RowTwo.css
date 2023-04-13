@@ -37,6 +37,15 @@
     padding-top: 2%;
 }
 /* media queri */
+@media (max-width: 493px) {
+    /* .row-two-col-3-span-1 {
+        font-size: 18px !important;
+    }
+    .row-two-col-3-span-2 {
+        line-height: 19px !important;
+        font-weight: 350;
+    } */
+}
 @media (max-width: 768px) {
     .row-two-col-3-span-1 {
         width: 100%;

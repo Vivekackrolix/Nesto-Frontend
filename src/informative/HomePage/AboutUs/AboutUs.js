@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./AboutUs.css";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const AboutUs = () => {
   return (
     <div className="home-page-about">
-      <div className="container" style={{ overflow: "hidden" }}>
+      <div className="container">
         <div className="row">
           <div className="col-lg-6" data-aos="fade-right">
             <img
@@ -48,11 +49,11 @@ const AboutUs = () => {
                   </div>
                   <span
                     className="about-us_box1_icon-span-3"
-                    style={{letterSpacing: '1px'}}
+                    style={{ letterSpacing: '1px' }}
                   >
                     Download The App Now!
                   </span>
-                </div> 
+                </div>
 
                 <div className="text-center">
                   <img
@@ -65,7 +66,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 ps-5 about-content" data-aos="fade-left">
+          <div className="col-lg-6 about-content" data-aos="fade-left">
             <div className="about-us_box2">
               <span className="sections-heading">ABOUT US</span>
               <span className="about-us_box-span2 sections-sub-heading">
@@ -90,11 +91,12 @@ const AboutUs = () => {
                 We significantly provide automation, trust, and digitalization
                 for brokers and builders across PAN India.
               </span>
-            </div>
-            <div className="">
-              <Link to="/about-us" className="about-us-read-more">
-                Read More
-              </Link>
+              <div className="">
+                <Link to="/about-us" className="about-us-read-more primary_button">
+                  Read More
+                  <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
-.slider-div {
-    /* position: relative; */
-}
+.slider-div {}
+
 .slider-div-2 {
     display: flex;
     align-items: center;
@@ -8,16 +7,16 @@
 }
 
 .cartoon_img {
-    /* margin-right: -49px; */
-    /* height: 100%; */
     margin-right: -44px;
     height: 410px;
     z-index: 10;
 }
+
 .slider-img {
     height: 550px;
     width: 100%;
 }
+
 .slider-div .slick-dots {
     position: absolute;
     bottom: 0;
