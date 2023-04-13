@@ -26,7 +26,14 @@
   height: 20px;
   width: 20px;
 }
-.our-partner .slick-list::before{
+
+.prev-image {
+  height: 20px;
+  width: 20px;
+  transform: rotate(180deg);
+}
+
+.our-partner .slick-list::before {
   background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 175px;
@@ -34,8 +41,9 @@
   width: 200px;
   z-index: 2;
 }
-.our-partner .slick-list::after{
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100% );
+
+.our-partner .slick-list::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
   content: "";
   height: 175px;
   position: absolute;

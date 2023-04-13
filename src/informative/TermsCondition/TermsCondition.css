@@ -39,7 +39,7 @@
 }
 @media(max-width: 998px) {
     .t-c_heading-box {
-        margin-top: 30px;
+        /* margin-top: 30px; */
     }
     .t-c_footer-box {
         width: 90%;

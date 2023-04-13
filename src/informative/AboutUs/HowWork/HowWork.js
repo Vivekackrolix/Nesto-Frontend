@@ -33,9 +33,11 @@ const HowWork = () => {
                     <div className='col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3' data-aos='fade-left'>
                         <img src='/assets/informative/howWorks/gif1.gif' className='how-work_img' alt='how-work' />
                     </div>
-                    {/* ============================= */}
+                    {/* Row Two =====================
+                    ============================= */}
                     <RowTwo />
-                    {/* RowThree */}
+                    {/* Row Three ===================
+                    ============================= */}
                     <div className='col-lg-5 col-md-5 col-sm-5 col-5 how-col-1' data-aos='fade-right'>
                         <span className='how-col-1-span-1'>
                             Manage Customer Visits
@@ -57,11 +59,14 @@ const HowWork = () => {
                     <div className='col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3' data-aos='fade-left'>
                         <img src='/assets/informative/howWorks/gif3.gif' className='how-work_img' alt='how-work_img' />
                     </div>
-                    {/* RowFour */}
+                    {/* Row Four =====================
+                    ============================== */}
                     <RowFour />
-                    {/* RowFive */}
+                    {/* Row Five =====================
+                    ============================== */}
                     <RowFive />
-                    {/* RowSix */}
+                    {/* Row Six =====================
+                    ============================= */}
                     <RowSix />
                 </div>
             </div>
