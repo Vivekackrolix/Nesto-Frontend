@@ -1,5 +1,5 @@
-import React from 'react';
-import './heading.css';
+import React from "react";
+import "./heading.css";
 
 const Heading = ({ title, sub }) => {
   return (
@@ -12,6 +12,13 @@ const Heading = ({ title, sub }) => {
         </div>
         <div className="sections-sub-heading" data-aos="fade-up">
           <p className="">{sub}</p>
+        </div>
+        <div className="load-wrapp">
+          <div className="load" data-aos="fade-up">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
         </div>
       </div>
     </>

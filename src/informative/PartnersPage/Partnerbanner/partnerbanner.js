@@ -15,7 +15,7 @@ const PartnerBanner = () => {
           <div className="col-lg-6 partners-col-1">
             <div>
               <h4 className="partners-h4">
-                Our Partners, The Companies That Represent Us.
+                Our Partners, The Companies That Represent Us
               </h4>
               <hr className="banner-hr" />
               <p className="partners-p">

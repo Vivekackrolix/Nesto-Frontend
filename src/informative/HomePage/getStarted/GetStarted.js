@@ -18,7 +18,7 @@ export default function GetStarted() {
               </div>
             </div>
             <div className="col-lg-6 col-md-12 get-started_col-2">
-              <img src="./assets/getStarted.png" className="get-started_img" alt="get-started" />
+              <img src="./assets/get-started.png" className="get-started_img" alt="get-started" />
             </div>
           </div>
         </div>

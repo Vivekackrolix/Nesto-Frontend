@@ -1,5 +1,6 @@
 .stats-row {
-    background: var(--lite-skyblue);
+    background: url(../../../../public/assets/informative/circle-2.png) top left no-repeat, url(../../../../public/assets/informative/circle-2.png) bottom center no-repeat, url(../../../../public/assets/informative/circle-2.png) top right no-repeat, var(--lite-skyblue);
+    background-size: 15%, 10%, 15%;
     padding: 40px 80px 20px 80px;
     margin-top: 6rem;
 }
