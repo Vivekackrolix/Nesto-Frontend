@@ -23,33 +23,6 @@
     margin-bottom: 1%;
 }
 
-.slider {}
-
-.bg-sky {
-    background-color: #ECF7FF;
-}
-
-.text-grey {
-    color: #282431;
-    font-weight: 400;
-    font-size: 26.57px;
-    line-height: 87.41px;
-    text-align: center;
-    opacity: 0.5;
-    margin: 8px 0;
-}
-
-.desc {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 31px;
-    /* or 176% */
-    text-align: left;
-    color: #282431;
-    opacity: 0.5;
-}
-
 .text-orange {
     font-style: normal;
     font-weight: 600;
@@ -82,7 +55,7 @@
 }
 
 .testimonial-desc {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 15px;
     line-height: 25px;
     color: var(--gray-color);
