@@ -7,6 +7,7 @@ import HowWork from './HowWork/HowWork'
 import Aos from 'aos'
 import AboutUsDesc from './AboutUsDesc/AboutUsDesc'
 import InformativeFooter from '../InformativeFooter/InformativeFooter'
+import HowWorkSelectBar from './HowWork/HowWorkSelectBar/HowWorkSelectBar'
 
 const AboutUsMain = () => {
     useEffect(() => {
@@ -19,8 +20,8 @@ const AboutUsMain = () => {
                 <span className='about-us-banner-heading' data-aos='zoom-in'>About Us</span>
             </div>
             <AboutUsDesc />
-            {/* How Nesto Work */}
-            <HowWork />
+            {/* How Work Select Bar */}
+            <HowWorkSelectBar />
             {/* Footer */}
             <InformativeFooter />
         </>

@@ -1,6 +1,8 @@
 .news {
-    background-image: url('../../../../public/assets/informative/aboutUsImg2.png');
-    background-size: cover;
+    background-image: url('../../../../public/assets/informative/blocks.png');
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
     padding-top: 5%;
 }
 
@@ -70,11 +72,11 @@
 }
 
 .news-desc {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     color: var(--gray-color);
     line-height: 24px;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
 }
 
 .news-btn {
@@ -89,4 +91,10 @@
 .news-btn:hover {
     color: var(--color-white);
     background: var(--primary-color);
+}
+
+@media(max-width: 992px) {
+    .news-box {
+        margin-bottom: 6% !important;
+    }
 }

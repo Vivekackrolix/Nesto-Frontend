@@ -1,6 +1,3 @@
-//full responsive and triggered stats count up done
-
-
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
@@ -13,7 +10,7 @@ const Stats = () => {
     const [counter4On, setCounter4On] = useState(false);
     return (
         <div className="row stats-row">
-            <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
+            <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
                 <img className="stats-row-img" src='./assets/stats1.png' alt="animation" />
                 <div className="stats-row-count">
                     <ScrollTrigger
@@ -33,10 +30,10 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    HOMES FOR SALE
+                    NestoHub Brokers
                 </p>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
+            <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
                 <img className="stats-row-img" src='./assets/stats2.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
@@ -55,10 +52,10 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    RECENTLY SOLD
+                    NestoHub Inventory
                 </p>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
+            <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
                 <img className="stats-row-img" src='./assets/stats3.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
@@ -70,10 +67,10 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    TOTAL SQ
+                    NestoHub Builders
                 </p>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-6 col-6 stats-row-col">
+            <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
                 <img className="stats-row-img" src='./assets/stats4.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
@@ -84,7 +81,7 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    PRICE REDUCED
+                    NestoHub Cities
                 </p>
             </div>
         </div>

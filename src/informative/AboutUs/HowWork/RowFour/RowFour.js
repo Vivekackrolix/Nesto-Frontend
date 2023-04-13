@@ -5,7 +5,7 @@ const RowFour = () => {
     return (
         <>
             <div className='col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-1' data-aos='fade-right'>
-                <img src='/assets/informative/howImg4.png' className='how-work_img' alt='how-work_img' />
+                <img src='/assets/informative/howWorks/pitch.gif' className='how-work_img' alt='how-work' />
             </div>
             <div className='col-lg-2 col-md-2 col-sm-2 col-2 row-two-col-2' data-aos='zoom-in'>
                 <span className='row-two-col-2-span-1'>
@@ -19,10 +19,10 @@ const RowFour = () => {
             </div>
             <div className='col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-3' data-aos='fade-left'>
                 <span className='row-two-col-3-span-1'>
-                    Earn Easily
+                    Pitch & Close The Deal
                 </span>
                 <span className='row-two-col-3-span-2'>
-                    Real Estate agents are Property cting of land the buildings on it, ong with its seds naturals resources such.
+                    To successfully close the deal, guide your clients through price negotiation, funding, and loans through NestoHub.
                 </span>
             </div>
         </>

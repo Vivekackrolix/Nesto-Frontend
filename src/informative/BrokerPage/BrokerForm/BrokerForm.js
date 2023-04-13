@@ -10,8 +10,8 @@ const BrokerForm = () => {
                 </div>
                 <form action='#' className='broker-banner-col-3_form'>
                     <input type='text' placeholder='Name*' className='broker-banner-col-3_input' required />
-                    <input type='number' placeholder='Phone Number*' className='broker-banner-col-3_input' required />
-                    <input type='number' placeholder='Referal Code' className='broker-banner-col-3_input' required />
+                    <input type='tel' placeholder='Phone Number*' className='broker-banner-col-3_input' required />
+                    <input type='tel' placeholder='Referal Code' className='broker-banner-col-3_input' required />
                     <button type='submit' className='broker-banner-col-3_btn'>Submit</button>
                 </form>
             </div>

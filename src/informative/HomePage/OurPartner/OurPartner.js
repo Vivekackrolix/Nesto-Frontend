@@ -14,13 +14,12 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: 'block',
-        //   background: "black",
         borderRadius: '50%',
         padding: '1px 0px',
       }}
       onClick={onClick}
     >
-      <img className="next-image" src="./assets/next.png" alt="next-image" />
+      <img className="next-image" src="./assets/next.png" alt="next" />
     </div>
   );
 }
@@ -39,7 +38,7 @@ function SamplePrevArrow(props) {
       }}
       onClick={onClick}
     >
-      <img className="next-image" src="./assets/back.png" alt="next-image" />
+      <img className="next-image" src="./assets/back.png" alt="next" />
     </div>
   );
 }
@@ -96,65 +95,60 @@ const review = [
 ];
 
 const OurPartner = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    // autoplay: true,
-    // centerMode: true,
-    // centerPadding: "60px",
-    speed: 3000,
-    autoplaySpeed: 3000,
-    cssEase: 'linear',
-    arrows: true,
-    loop: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    accessibility: true,
-    cssEase: 'linear',
-    swipeToSlide: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-
-    responsive: [
-      {
-        breakpoint: 1080,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
+    const settings = {
+      dots: false,
+      infinite: true,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      speed: 3000,
+      autoplaySpeed: 3000,
+      cssEase: 'linear',
+      arrows: true,
+      loop: true,
+      autoplay: true,
+      accessibility: true,
+      swipeToSlide: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      
+      responsive: [
+        {
+          breakpoint: 1080,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: false,
+          },
         },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: false,
+          },
         },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
-          arrows: false,
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1,
+            arrows: false,
+          },
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+          },
         },
-      },
-    ],
-  };
+      ],
+    };
   return (
     <div className="our-partner">
       <div className="">

@@ -36,6 +36,10 @@ html::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
+body {
+  overflow-x: hidden !important;
+}
+
 @font-face {
   font-family: 'Bahnschrift';
   src: url(./fonts/Bahnschrift.ttf) format('truetype');
@@ -49,7 +53,7 @@ html::-webkit-scrollbar-thumb {
 body {
   font-size: 0.9em;
   line-height: 1.35;
-} 
+}
 
 ::placeholder {
   color: #c6c6c6 !important;
@@ -79,17 +83,21 @@ body {
   background-color: var(--primary-color);
   color: #ffffff;
 }
-.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+
+.was-validated .form-check-input:valid~.form-check-label,
+.form-check-input.is-valid~.form-check-label {
   color: #1C1C28;
   margin-top: 0.25rem !important;
   margin-left: 8px;
 }
 
-.was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked {
+.was-validated .form-check-input:valid:checked,
+.form-check-input.is-valid:checked {
   background-color: #278fd9;
 }
 
-.was-validated .form-check-input:valid, .form-check-input.is-valid {
+.was-validated .form-check-input:valid,
+.form-check-input.is-valid {
   border-color: #C7C9D9;
 }
 
@@ -101,22 +109,25 @@ body {
   box-shadow: 2px 10px 22px #278fd973;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px){
-  .col-sm-3{
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  .col-sm-3 {
     width: 25%;
   }
-  .col-sm-10{
+
+  .col-sm-10 {
     width: 80%;
   }
-  .col-sm-2{
+
+  /* .col-sm-2 {
     width: 20%;
-  }
-  .col-sm-6{
+  } */
+
+  .col-sm-6 {
     width: 50%;
   }
 }
 
-p{
+p {
   margin-bottom: 0.5rem;
 }
 
@@ -124,20 +135,23 @@ p{
 /* Sections Headings */
 .sections-heading {
   font-weight: 600;
-  font-size: 28px;
+  font-size: 17px !important;
   text-transform: uppercase;
   color: var(--carnation-color);
   display: block;
+  margin-bottom: 5px;
 }
 
 .sections-sub-heading {
   text-transform: capitalize;
   font-weight: 900;
   color: var(--cold-black-color);
-  font-weight: 700;
   display: block;
-  font-size: 44.26px;
+  font-size: 34px;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
-.cursor{
+
+.cursor {
   cursor: pointer;
 }

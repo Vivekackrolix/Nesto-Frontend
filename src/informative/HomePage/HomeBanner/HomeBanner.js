@@ -20,12 +20,12 @@ const HomeBanner = () => {
   }, []);
   return (
     <>
-      <div style={{ overflowX: 'hidden' }}>
+      <div>
         <InformativeNavbar />
         <Banner />
         <AboutUs />
         <Stats />
-        <Residency />
+        {/* <Residency /> */}
         <ChooseUs />
         <HomeVideo />
         <HowWork />
