@@ -1,6 +1,8 @@
 .stats-row {
     background: var(--lite-skyblue);
     padding: 50px 80px 25px 80px;
+    width: 100%;
+    margin: auto;
     margin-top: 6rem;
 }
 
@@ -32,7 +34,7 @@
 }
 
 @media (max-width: 492px) {
-    .stats-row-img {
+    /* .stats-row-img {
         width: 40%;
-    }
+    } */
 }

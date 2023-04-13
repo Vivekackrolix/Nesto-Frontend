@@ -48,11 +48,11 @@ const AboutUs = () => {
                   </div>
                   <span
                     className="about-us_box1_icon-span-3"
-                    style={{letterSpacing: '1px'}}
+                    style={{ letterSpacing: '1px' }}
                   >
                     Download The App Now!
                   </span>
-                </div> 
+                </div>
 
                 <div className="text-center">
                   <img
@@ -65,7 +65,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 ps-5" data-aos="fade-left">
+          <div className="col-lg-6" data-aos="fade-left">
             <div className="about-us_box2">
               <span className="sections-heading">ABOUT US</span>
               <span className="about-us_box-span2 sections-sub-heading">
@@ -83,11 +83,11 @@ const AboutUs = () => {
                 We significantly provide automation, trust, and digitalization
                 for brokers and builders across PAN India.
               </span>
-            </div>
-            <div className="">
-              <Link to="/about-us" className="about-us-read-more">
-                Read More
-              </Link>
+              <div className="">
+                <Link to="/about-us" className="about-us-read-more">
+                  Read More
+                </Link>
+              </div>
             </div>
           </div>
         </div>
