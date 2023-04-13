@@ -1,17 +1,6 @@
-.how-box {
-    margin-top: 3%;
-    text-align: center;
-}
-
 .how-container {
     margin: 30px auto;
-}
-
-.how-heading-1 {
-    font-weight: 500;
-    display: block;
-    font-size: 24px;
-    color: var(--carnation-color);
+    /* background: #000; */
 }
 
 .how-work_img {
@@ -94,6 +83,16 @@
 
 
 /* media queri */
+@media (max-width: 493px) {
+    /* .how-col-1-span-1 {
+        font-size: 18px !important;
+    }
+    .how-col-1-span-2 {
+        line-height: 19px !important;
+        font-weight: 350;
+    } */
+}
+
 @media (max-width: 768px) {
     .how-container .px-5{
         padding-left: 1rem !important;
@@ -101,9 +100,9 @@
     }
     .how-col-1-span-1 {
         width: 100%;
-        padding: 5% 0 0 0;
-        line-height: 1.4;
-        font-size: 18px;
+        padding-top: 5%;
+        line-height: 28px;
+        font-size: 21px;
     }
 
     .how-col-1-span-2 {

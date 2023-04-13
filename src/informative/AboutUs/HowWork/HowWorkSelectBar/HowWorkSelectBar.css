@@ -1,7 +1,8 @@
 .HowWorkSelectBar-col {
     padding: 0 6%;
-    margin: 4% 0 1% 0;
+    margin: 5% 0 1% 0;
 }
+
 .HowWorkSelectBar-div {
     background: var(--color-white);
     border: 1px solid var(--divider);
@@ -9,6 +10,7 @@
     border-radius: 10rem;
     padding: 8px 14px;
 }
+
 .HowWorkSelectBar-box {
     font-size: 21px;
     font-weight: 350;
@@ -23,4 +25,19 @@
 .HowWorkSelectBar-box-active {
     background: var(--primary-color);
     color: var(--color-white);
+}
+
+
+@media(max-width: 523px) {
+    .HowWorkSelectBar-box {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media(max-width: 437px) {
+    .HowWorkSelectBar-box {
+        font-size: 13px;
+        padding: 8px;
+    }
 }
