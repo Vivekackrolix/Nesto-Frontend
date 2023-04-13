@@ -33,4 +33,19 @@
 .scan{
     width: 52px;
 }
+
+
+/* ====================== 
+========== Media Queri */
+@media(max-width: 992px) {
+    .ps-5.about-content {
+        padding: 2rem !important;
+    }
+    .sections-sub-heading{
+        font-size: 24px;
+    }
+    .sections-heading{
+        font-size: 15px !important;
+    }
+}
 /* Other Coming from (../AboutUs/AboutUsMain.css */

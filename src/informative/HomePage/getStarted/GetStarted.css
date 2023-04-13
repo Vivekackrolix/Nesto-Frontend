@@ -67,15 +67,14 @@
 
 @media(max-width: 492px) {
     .get-started_col-1 {
-        padding-left: 3%;
-        align-items: start;
+        padding: 5% 0 0;
     }
     .get-started_heading {
-        font-size: 32px;
+        font-size: 26px;
     }
 
     .get-started_heading span {
-        font-size: 21px;
+        font-size: 18px;
         font-weight: 400;
     }
     .get-started_btn {

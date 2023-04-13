@@ -87,14 +87,13 @@ export default function ChooseUs() {
     slidesToScroll: 1,
     dots: false,
     infinite: true,
-    // speed: 3000,
-    // cssEase: 'linear',
-    arrows: true,
-    // loop: true,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
-    // accessibility: true,
+    speed: 1000,
     cssEase: 'linear',
+    arrows: true,
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    accessibility: true,
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -139,7 +138,7 @@ export default function ChooseUs() {
   };
   return (
     <>
-      <div className="container" style={{ overflow: 'hidden' }}>
+      <div className="container">
         <Heading title="Why Choose Us" sub="We Make Real Estate Simple & Efficient" />
         <div className="row choose-row" data-aos="fade-up">
           <Slider {...settings}>

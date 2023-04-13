@@ -8,11 +8,11 @@ import RowSix from './RowSix/RowSix'
 const HowWork = () => {
     return (
         <>
-            <div className="how-box">
+            <div className="how-box px-2">
                 <span className='sections-heading' data-aos='fade-up'>How NestoHub Works For Brokers</span>
                 <span className='sections-sub-heading' data-aos='fade-up'>We Follow A Simple Process To Streamline Broker’s Process</span>
             </div>
-            <div className='container how-container' style={{ overflowX: 'hidden' }}>
+            <div className='container how-container'>
                 <div className='row pt-4 px-5'>
                     <div className='col-lg-5 col-md-5 col-sm-5 col-5 how-col-1' data-aos='fade-right'>
                         <span className='how-col-1-span-1'>
