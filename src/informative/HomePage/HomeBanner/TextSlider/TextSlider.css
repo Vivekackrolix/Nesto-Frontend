@@ -1,7 +1,6 @@
 .text-slider {
     position: absolute;
-    /* left: 24%; */
-    left: 26%;
+    left: 24%;
     top: 5%;
     width: 300px;
     height: 100px;
