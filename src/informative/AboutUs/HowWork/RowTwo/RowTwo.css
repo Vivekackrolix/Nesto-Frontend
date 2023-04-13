@@ -40,14 +40,14 @@
     .row-two-col-3-span-1 {
         width: 100%;
         padding-top: 5%;
-        line-height: 38px;
-        font-size: 21px;
+        line-height: 1.4;
+        font-size: 18px;
     }
 
     .row-two-col-3-span-2 {
         width: 100%;
         font-size: 12px;
-        line-height: 23px;
+        line-height: 1.6;
         padding-top: 2%;
     }
 

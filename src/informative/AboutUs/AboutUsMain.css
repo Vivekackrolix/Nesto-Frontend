@@ -109,8 +109,8 @@
         font-size: 14px;
     }
 
-    .about-us_box-span3 {
-        width: 96%;
+    .about-us_box-span3, .about-us_box-span4 {
+        text-align: justify;
     }
 }
 
