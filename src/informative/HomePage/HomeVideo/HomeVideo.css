@@ -10,8 +10,32 @@
 
 .play-button {
   position: absolute;
-  top: 40%;
+  top: 45%;
   right: 46%;
+  font-size: 60px;
+  color: #fff;
+  
+}
+.video-main:before{
+  content: "";  
+  opacity: 0.75;
+  transition-duration: 500ms;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 45%;
+  right: 46%;
+  display: inline-flex;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+}
 }
 .home-video {
   width: 100%;
