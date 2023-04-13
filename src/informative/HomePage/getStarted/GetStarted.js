@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "./GetStarted.css";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 export default function GetStarted() {
   return (
     <>
-      <div className="get-started">
+      <div className="get-started" data-aos='fade-up'>
         <div className="container get-started_container">
           <div className="row get-started_row">
             <div className="col-lg-6 col-md-12 get-started_col-1">
@@ -12,8 +13,9 @@ export default function GetStarted() {
                 Hurry Up! Find NestoHub <br></br><span>Serving You With The Best In Real Estate.</span>
               </span>
               <div className="">
-                <Link to="/builder-page" className="get-started_btn rounded-3">
+                <Link to="/builder-page" className="get-started_btn primary_button rounded-3">
                   Let's get Started
+                  <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
                 </Link>
               </div>
             </div>

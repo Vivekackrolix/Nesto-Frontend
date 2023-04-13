@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./AboutUs.css";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const AboutUs = () => {
   return (
@@ -84,8 +85,9 @@ const AboutUs = () => {
                 for brokers and builders across PAN India.
               </span>
               <div className="">
-                <Link to="/about-us" className="about-us-read-more">
+                <Link to="/about-us" className="about-us-read-more primary_button">
                   Read More
+                  <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
                 </Link>
               </div>
             </div>

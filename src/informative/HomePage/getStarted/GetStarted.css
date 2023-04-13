@@ -31,23 +31,9 @@
 }
 
 .get-started_btn {
-    margin-top: 10px;
-    padding: 8px 30px;
     display: block;
-    background: var(--primary-color);
-    border: 1px solid transparent;
+    margin-top: 10px;
     width: fit-content;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 350;
-    transition: transform .3s ease-in;
-}
-
-.get-started_btn:hover {
-    background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    transform: scale(1.01);
 }
 
 .get-started_col-2 {
