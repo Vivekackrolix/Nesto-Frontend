@@ -1,8 +1,7 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../../Images/propertyadded.png";
 import build from "../../../Images/build.png";
-// import subs from "../../Images/subs.png";
-import { useSelector, useDispatch } from "react-redux";
+// import {  useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { BsPencilFill } from "react-icons/bs";
 import { RiVipCrownFill } from "react-icons/ri";
@@ -10,24 +9,17 @@ import DashboardHeader from "../../header/DashboardHeader";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import Footer from "../../Footer/Footer";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { getAPI } from "../../../Api/ApiRequest";
 import { apiEndpoints } from "../../../Api/ApiEndpoint";
-// import { recentlyAddedPropertyActions } from "../../../redux/recentlyAddedPropertySlice";
 
-// const RecentlyAddedProperty = ({ data }) => {
 const RecentlyAddedProperty = (props) => {
-  // const data = useSelector((state) => state.addedPropertyDetails.properties);
   const [data, setData] = useState([]);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   useEffect(() => {
     const getAddedProperties = async () => {
-      debugger;
-
       const response = await getAPI(apiEndpoints.getAllproperty);
-      console.log(response.data);
 
       setData(response.data);
     };
@@ -54,14 +46,10 @@ const RecentlyAddedProperty = (props) => {
                     // to="/builder/home-dashboard/description"
                     // to={`/builder/home-dashboard/description/${itm.propertyId._id}`}
                   >
-                    {/* {itm.propertyId === null ? "no data Name" : itm._id.name} */}
                     {itm.name}
                   </Link>
                 </div>
-                <p style={{ opacity: 0.5 }}>
-                  {/* {itm.propertyId === null ? "no data" : itm._id.location} */}
-                  {itm.location}
-                </p>
+                <p style={{ opacity: 0.5 }}>{itm.location}</p>
               </Col>
               <Col md={2} sm={2}>
                 <RiVipCrownFill
@@ -155,18 +143,8 @@ const RecentlyAddedProperty = (props) => {
 
         <div className="row justify-content-between">
           <h3 className="col-4 heading">Recently Added</h3>
-          {/* <i
-            className="col-1"
-            style={{
-              color: "#FC5C67",
-              fontFamily: "Bahnschrift",
-              textDecorationLine: "underline",
-            }}
-          >
-            View all
-          </i> */}
         </div>
-        {/* <div className="mt-4">{propertyListing}</div> */}
+
         <div className="mt-2 mb-5 row row-cols-2 w-100 justify-content-between ms-0">
           {propertyListing}
         </div>

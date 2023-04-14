@@ -27,7 +27,7 @@ const tabKey = ["All", "2BHK ", " 3BHK", "4BHK", "5BHK"];
 const Floor = ({ data }) => {
   // const items = data;
   const [slidesPerView, setSlidesPerView] = useState(1);
-  const unitType = data.unitType ? data.unitType : [];
+  // const unitType = data.unitType ? data.unitType : [];
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,7 +48,7 @@ const Floor = ({ data }) => {
 
   console.log(data);
 
-  const floorPlan = data.floorPlanAndPricing.map((item) => (
+  const floorPlan = data?.floorPlanAndPricing?.map((item) => (
     <SwiperSlide key={item.id}>
       <Card className="h-100 border-0 shadow-sm swiper__card p-3">
         <div class="ribbon">
@@ -62,13 +62,13 @@ const Floor = ({ data }) => {
             <span className="text-right">Price</span>
           </div>
           <div className="swiper__card__row d-flex justify-content-between align-items-center">
-            <span>{item.areaSquareFeet}</span>
-            {/* {data.floorPlanAndPricing.map((itm) => (
-              <span>{itm.areaSquareFeet}</span>
-            ))} */}
+            <span>{item?.areaSquareFeet}</span>
+            {data?.floorPlanAndPricing.map((itm) => (
+              <span>{itm?.areaSquareFeet}</span>
+            ))}
             <span className="swiper__price text-wrap">
               ₹ 3.94 Cr (5,000/sq.ft.)
-              {/* {data.floorPlanAndPricing.price} */}
+              {data?.floorPlanAndPricing?.price}
             </span>
           </div>
           <div className="swiper__card__row d-flex justify-content-between align-items-center mt-2">

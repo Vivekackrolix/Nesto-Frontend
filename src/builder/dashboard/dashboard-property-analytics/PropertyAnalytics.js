@@ -2,34 +2,22 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./PropertyAnalytics.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { apiEndpoints } from "../../Api/ApiEndpoint";
+import { getAPI } from "../../Api/ApiRequest";
+// import axios from "axios";
 
 const PropertyAnalytics = () => {
   const [data, setData] = useState({}); //Later use redux
   useEffect(() => {
-    const getSubscription = async () => {
-      const response = await axios.get(
-        // "http://13.233.149.97:3000/api/v1/builder/getPropertyAnalytics?id=64107bce7b4c4240671aeb94",
-        "http://65.1.3.134:3000/api/v1/builder/getPropertyAnalytics?id=64107bce7b4c4240671aeb94",
-        // formData,
-        {
-          headers: {
-            Authorization:
-              // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-      // debugger;
+    const getAnalytics = async () => {
+      const response = await getAPI(apiEndpoints.getPropertyAnalytics);
 
-      // console.log(response.data);
-      setData(response.data.data);
+      setData(response.data);
     };
 
-    getSubscription();
+    getAnalytics();
   }, []);
 
-  // const plans = data.map((itm) => {
   return (
     <>
       <h3 className="heading">Property Analytics</h3>

@@ -1,34 +1,26 @@
 import { Container } from "react-bootstrap";
 import { GrDocumentPdf } from "react-icons/gr";
-// import AccordionCard from "../accordion/AccordionCard";
+
 import Accordion from "react-bootstrap/Accordion";
-import axios from "axios";
+
 import { useEffect, useState } from "react";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
+import { getAPI } from "../../../Api/ApiRequest";
 const SupportMenu = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getSupport = async () => {
-      const response = await axios.get(
-        "http://65.1.3.134:3000/api/v1/faqAndSupport/getAllFaqAndSupport?search=&for=builder&type=support",
+      const response = await getAPI(apiEndpoints.getAllFaqAndSupport);
 
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-      debugger;
-      console.log(response.data.data);
-      setData(response.data.data);
+      setData(response.data);
     };
 
     getSupport();
   }, []);
 
-  const accordionData = data.map((itm) => {
+  const accordionData = data.map((itm, index) => {
     return (
-      <Accordion.Item eventKey="0">
+      <Accordion.Item eventKey={index} key={data._id} className="my-3">
         <Accordion.Header>{itm.question}</Accordion.Header>
         <Accordion.Body>
           {itm.answer}

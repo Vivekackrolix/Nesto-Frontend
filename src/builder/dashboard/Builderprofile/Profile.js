@@ -89,15 +89,19 @@ const ProfilePage = () => {
                 <div className="text-center">
                   <div className="text-center position-relative profile__image mx-auto">
                     <Image
-                      src="/assets/profile-page/profile-mg-big.png"
+                      // src="/assets/profile-page/profile-mg-big.png"
+                      src={builderData.profilePictureUrl}
                       roundedCircle
+                      alt="profileImage"
                     />
                     <div className="profile__image__overlay">
                       <RiPencilFill />
                     </div>
                   </div>
                   <h4 className="mt-3">{builderData.name}</h4>
-                  <p className="text-muted mb-0">Builder ID:BL679887665</p>
+                  <p className="text-muted mb-0">
+                    Builder ID:{builderData._id}
+                  </p>
                 </div>
                 {/* profile img code end here */}
 
@@ -124,7 +128,10 @@ const ProfilePage = () => {
                 </Nav>
               </div>
               <div className="mt-4 d-grid">
-                <Button variant="transparent" className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout">
+                <Button
+                  variant="transparent"
+                  className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout"
+                >
                   <BsBoxArrowRight className="icon" size={24} /> Sign Out
                 </Button>
               </div>

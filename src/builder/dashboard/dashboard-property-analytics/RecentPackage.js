@@ -3,26 +3,18 @@ import { Button, Col, Row } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import axios from "axios";
+
 import { useEffect, useState } from "react";
+import { apiEndpoints } from "../../Api/ApiEndpoint";
+import { getAPI } from "../../Api/ApiRequest";
 
 const RecentPackage = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getSubscription = async () => {
-      const response = await axios.get(
-        "http://65.1.3.134:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
-
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-      debugger;
-      console.log(response.data.data);
-      setData(response.data.data);
+      const response = await getAPI(apiEndpoints.getAllSubscriptionOrder);
+      console.log(response.data);
+      setData(response.data);
     };
 
     getSubscription();
@@ -38,7 +30,7 @@ const RecentPackage = () => {
             // className="plan rounded-start text-center"
             className={`rounded-start text-center`}
             // style={{ background: data.planId.colour, padding: "40px" }}
-            style={{ padding: "40px" }}
+            style={{ padding: "40px", background: data[0]?.planId?.colour }}
           >
             <h4 className="fw-bold">
               {data.length === 0 ? "Api call" : data[0].planId.name}

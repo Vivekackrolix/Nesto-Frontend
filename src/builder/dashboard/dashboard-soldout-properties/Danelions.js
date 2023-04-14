@@ -9,7 +9,7 @@ import { useState } from "react";
 const Danelions = ({ data }) => {
   const [rating, setRating] = useState(0);
   const unitType = data.unitType ? data.unitType : [];
-  console.log(data);
+  // console.log(data);
 
   const [hover, setHover] = useState(0);
   return (

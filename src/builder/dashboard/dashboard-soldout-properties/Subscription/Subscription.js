@@ -4,22 +4,15 @@ import SearchFilterBox from "../../search-filter/SearchFilter";
 import { AiFillCheckCircle } from "react-icons/ai";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
+import { getAPI } from "../../../Api/ApiRequest";
 
 const Subscription = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getSubscription = async () => {
-      const response = await axios.get(
-        "http://65.1.3.134:3000/api/v1/subscription/getAllSubscription",
-
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-      setData(response.data.data);
+      const response = await getAPI(apiEndpoints.getAllSubscription);
+      setData(response.data);
     };
 
     getSubscription();
@@ -100,24 +93,13 @@ const Subscription = () => {
 
   const [data1, setData1] = useState([]);
   useEffect(() => {
-    const getSubscriptionOrder = async () => {
-      const response = await axios.get(
-        // "http://13.233.149.97:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder?builderId=64107bce7b4c4240671aeb94",
-        "http://65.1.3.134:3000/api/v1/subscriptionOrder/getAllSubscriptionOrder",
-
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-      // debugger;
-      // console.log(response.data.data);
-      setData1(response.data.data[0]);
+    const getSubscription = async () => {
+      const response = await getAPI(apiEndpoints.getAllSubscriptionOrder);
+      // console.log(response.data);
+      setData1(response.data);
     };
 
-    getSubscriptionOrder();
+    getSubscription();
   }, []);
 
   return (
@@ -142,8 +124,7 @@ const Subscription = () => {
               className={` rounded-start`}
               style={{
                 padding: "50px",
-                // background:
-                // data1.length === 0 ? "Api call" : data1.planId.colour,
+                background: data1[0]?.planId?.colour,
               }}
             >
               <h5 className="fw-bold">

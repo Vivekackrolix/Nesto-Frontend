@@ -64,6 +64,9 @@ const PropertyEdit = () => {
   const [showLocation, setShowLocation] = useState(false);
   const [showSubmit, setShowSubmit] = useState(false);
   const [showBank, setShowBank] = useState(false);
+  const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
+  // const [name, setName] = useState("");
   const params = useParams();
 
   const onAmenitiesClick = () => {
@@ -81,7 +84,15 @@ const PropertyEdit = () => {
       id: params.propertyId,
     };
     console.log(data);
-    const resposne = await putAPI(apiEndpoints.updateRequestProperty, data);
+    const formData = {
+      name,
+      location,
+    };
+    const resposne = await putAPI(
+      apiEndpoints.updateRequestProperty,
+      data,
+      formData
+    );
     setData(resposne.data);
   };
 
@@ -129,6 +140,11 @@ const PropertyEdit = () => {
             className="rounded-0"
             type="text"
             placeholder="Reet"
+            value={name}
+            onChange={(e) => {
+              console.log(e.target.value);
+              setName(e.target.value);
+            }}
           />
         </Form.Group>
         <br></br>
@@ -142,6 +158,11 @@ const PropertyEdit = () => {
             className="rounded-0"
             type="text"
             placeholder="Lorem Ipsum"
+            value={location}
+            onChange={(e) => {
+              console.log(e.target.value);
+              setLocation(e.target.value);
+            }}
             // <Form.Img src={loc} className="rounded my-3" alt="loc" />
           />
         </Form.Group>
@@ -297,38 +318,7 @@ const PropertyEdit = () => {
             </tr>
           </thead>
           <tbody>{paymentData}</tbody>
-          {/* <tbody>
-            <tr>
-              <td>10%</td>
-              <td>
-                Lorem Ipsum is simply dummy text of the printing and type
-                setting industry
-              </td>
-            </tr>
-            <tr>
-              <td>10%</td>
-              <td>
-                Lorem Ipsum is simply dummy text of the printing and type
-                setting industry
-              </td>
-            </tr>
-            <tr>
-              <td>10%</td>
-              <td>
-                Lorem Ipsum is simply dummy text of the printing and type
-                setting industry
-              </td>
-            </tr>
-            <tr>
-              <td>10%</td>
-              <td>
-                Lorem Ipsum is simply dummy text of the printing and type
-                setting industry
-              </td>
-            </tr>
-          </tbody> */}
         </Table>
-        <br></br>
         <br></br>
         <div className="p-4 d-flex justify-content-between">
           <h3 className="heading">Loan Approved By</h3>

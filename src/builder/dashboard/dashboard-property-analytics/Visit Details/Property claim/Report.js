@@ -48,6 +48,9 @@ const Report = (props) => {
         <Container className=" dashboard__wrapper">
           <Form className="profile__form ps-2">
             <Form.Group className="mb-4" controlId="email">
+              <Form.Label>
+                <h5>Reason *</h5>
+              </Form.Label>
               <CreatableSelect
                 isMulti
                 placeholder="Choose"
@@ -61,6 +64,9 @@ const Report = (props) => {
                 styles={{ background: "#F8F8F8" }}
               />
               <br />
+              <Form.Label>
+                <h5>Any Comment</h5>
+              </Form.Label>
 
               <Form.Control
                 className="rounded-0 d-flex justify-content-start"
