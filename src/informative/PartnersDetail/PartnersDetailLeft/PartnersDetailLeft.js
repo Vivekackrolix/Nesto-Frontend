@@ -65,7 +65,7 @@ export default function PartnersDetailLeft() {
                 {/* Localities========================
                 ================================== */}
                 <Localities />
-                {/* List Property */}
+                {/* List Property ====================== */}
                 <ListProperty />
                 {/*About the Builder ==================
                 =================================== */}
