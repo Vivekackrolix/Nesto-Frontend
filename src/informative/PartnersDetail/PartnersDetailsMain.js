@@ -1,6 +1,5 @@
 import React from 'react';
 import InformativeNavbar from '../Navbar/Navbar'
-import Footer from '../../components/footer/Footer'
 import PartnersDetailLeft from './PartnersDetailLeft/PartnersDetailLeft';
 import PartnersDetailSidebar from './PartnersDetailSidebar/PartnersDetailSidebar';
 import InformativeFooter from '../InformativeFooter/InformativeFooter'

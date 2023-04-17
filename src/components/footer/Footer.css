@@ -14,7 +14,7 @@
   font-size: 16px;
   line-height: 28px;
 
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   color: var(--color-white);
 }
@@ -24,7 +24,7 @@
 }
 
 .login__footer p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   color: var(--color-white);
   line-height: 28px;
@@ -43,7 +43,7 @@
 
 /* Set common styles for input placeholders */
 .login__footer input::placeholder {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 38px;
   color: var(--primary-color) !important;
@@ -78,7 +78,7 @@ input::-ms-input-placeholder {
 }
 
 .login__footer__copyright {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   color: var(--color-white);
 }

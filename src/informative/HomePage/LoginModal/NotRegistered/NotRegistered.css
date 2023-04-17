@@ -4,7 +4,7 @@
 }
 
 .not-register-img {
-    width: 60%;
+    width: 50%;
     margin-top: -3rem;
 }
 
@@ -15,22 +15,22 @@
 }
 
 .not-register-sub-heading {
-    font-size: 18px;
+    font-size: 1rem;
     color: var(--silver-surfer);
     width: 80%;
-    line-height: 30px;
+    line-height: 1.6;
     display: block;
     margin: auto;
 }
 
 .not-register-btn {
     width: 100%;
-    padding: 12px 0;
-    font-size: 18px;
-    font-weight: 350;
-    margin-top: 30px;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 10px;
     background: var(--primary-color);
     color: var(--color-white) !important;
-    border-radius: 10rem !important;
+    border-radius: 8px;
     border: 1px solid var(--primary-color);
 }

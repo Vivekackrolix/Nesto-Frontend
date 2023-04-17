@@ -1,9 +1,10 @@
 .t-c_span2 {
     margin-top: 10px;
-    font-weight: 350;
-    font-size: 18px;
-    color: var(--cold-black-color);
+    font-weight: 400;
+    font-size: 15px;
     display: block;
+    line-height: 25px;
+    color: var(--silver-surfer);
 }
 .t-c_box {
     padding-left: 20px;
@@ -14,9 +15,9 @@
 }
 
 .t-c_li {
-    line-height: 32px;
-    font-weight: 350;
-    font-size: 18px;
-    color: var(--cold-black-color);
-    display: block; 
+    font-weight: 400;
+    font-size: 15px;
+    display: block;
+    line-height: 25px;
+    color: var(--silver-surfer);
 }

@@ -32,7 +32,7 @@ const InformativeFooter = () => {
                                 <Link to='/contact-us' className='informative-footer-link'>Contact Us</Link>
                             </div>
                             <div className='col-lg-3 footer-col-1 footer-col-4'>
-                                <span className='footer-col-2-span'>Get in Touch With Us</span>
+                                <span className='footer-col-2-span'>Get In Touch With Us</span>
                                 <span className='footer-col-1-span'>Duis mattis laoreet neque, et ornare neque sollicitudin at. Proin sagittis dolor sed...</span>
                                 <div className='footer-mail-div gap-3'>
                                     <div className=''>

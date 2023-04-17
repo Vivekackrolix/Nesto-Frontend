@@ -11,11 +11,17 @@ const BrokerBanner = () => {
         <div className="row broker-banner-row">
           <div className="col-lg-5 broker-banner-col-1" data-aos='fade-right'>
             <div>
-              <h4 className="broker-banner-h4">
+              <h4 className="banner-h4">
                 Welcome to India's Largest Network of Brokers
               </h4>
-              <hr className="banner-hr" />
-              <p className="broker-banner-p">
+              <div className="load-wrapp">
+                  <div className="load">
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                  </div>
+                </div>
+              <p className="banner-p">
                 Broker Network app is a suite of services specifically designed for
                 Indian real estate brokers and developers to maximize their business.
               </p>

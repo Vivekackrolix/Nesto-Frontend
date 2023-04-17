@@ -32,13 +32,14 @@
     z-index: 10;
     background: var(--color-white);
     box-shadow: 0 0 10px -5px rgba(0, 0, 0, .2);
+    border-radius: 10px;
 }
 
 .faq-span {
     display: block;
-    padding: 24px 15px;
+    padding: 20px 15px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--cold-black-color);
     display: flex;
@@ -59,7 +60,7 @@
 
 .circle-icon {
     color: var(--Pattens-Blue);
-    font-size: 1.65rem;
+    font-size: 0.9rem;
     margin-right: 10px;
     transition: all .25s ease-in;
 }
@@ -85,7 +86,8 @@
     z-index: -10;
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, .065);
     padding: 40px 10px 30px 80px;
-    border-radius: 14px;
+    border-radius: 10px;
+    background: #fafdff;
 }
 
 .faq-span-2 {
@@ -108,7 +110,7 @@
 /* media queri */
 @media (max-width: 509px) {
     .faq-banner-heading {
-        font-size: 48px;
+        font-size: 34px;
     }
 }
 

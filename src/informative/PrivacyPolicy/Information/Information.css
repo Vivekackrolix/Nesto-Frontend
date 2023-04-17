@@ -10,19 +10,14 @@
     color: var(--cold-black-color);
 }
 
-.info_span {
-    line-height: 34px;
-    font-weight: 500;
-    font-size: 18px;
-    color: var(--cold-black-color);
+.info_span, .info_span2 {
+    font-weight: 400;
+    font-size: 15px;
     display: block;
+    line-height: 25px;
+    color: var(--silver-surfer);
+}
+.info_span {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-.info_span2 {
-    line-height: 34px;
-    font-weight: 350;
-    font-size: 18px;
-    color: var(--cold-black-color);
-    display: block;
 }
