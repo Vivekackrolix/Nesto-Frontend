@@ -159,7 +159,7 @@ const Tips = () => {
             <span className="tips_box-6-span">
               Was this information helpful?
             </span>
-            <div className="mt-4">
+            <div className="mt-3">
               <button className="tips_box-6-btn">YES</button>
               <button className="tips_box-6-btn">NO</button>
             </div>
@@ -206,14 +206,14 @@ const Tips = () => {
               <span className="recent-post_span3">Recent Post</span>
             </div>
             <div data-aos="fade-left">
-              <Link to="/" style={{ textDecoration: "none" }}>
+              <Link to="/blog-list" style={{ textDecoration: "none" }}>
                 <span className="recent-post_span4">Browse All Article</span>
               </Link>
             </div>
           </div>
           {data.map((item) => {
             return (
-              <div className="col-lg-4 left-col mt-4" data-aos="fade-right">
+              <div className="col-lg-4 left-col mt-4" data-aos="fade-up">
                 <div className="left-col_box">
                   <Link to="/blog-detail">
                     <img

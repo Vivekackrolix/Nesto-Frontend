@@ -103,7 +103,7 @@
 }
 
 .listing-container_link {
-    margin-top: 20px;
+    margin-top: 10px;
     background: var(--primary-color);
     width: fit-content;
     color: var(--color-white);
