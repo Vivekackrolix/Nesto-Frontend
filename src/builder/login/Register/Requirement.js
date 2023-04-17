@@ -32,10 +32,6 @@ const Requirement = (props) => {
     const response = await postAPI(
       apiEndpoints.addShareYourIntern,
 
-      // const response = await axios.post(
-      // "http://13.233.149.97:3000/api/v1/builder/addShareYourIntern",
-
-      // "https://apis.nestohub.in/api/v1/builder/addShareYourIntern",
       formData
     );
     console.log(response);

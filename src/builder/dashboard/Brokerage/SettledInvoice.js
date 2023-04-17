@@ -47,7 +47,7 @@ const SettledInvoice = () => {
                 </p>
               </span>
               <span className="p-2" style={{ color: "#8B9199" }}>
-                {itm?.invoices[0]?.claimId?.createdAt}
+                {itm?.invoices[0]?.claimId?.date}
               </span>
             </div>
             <div className="d-flex justify-content-between">
@@ -92,9 +92,9 @@ const SettledInvoice = () => {
             <h5>
               <button
                 type="button"
-                class=" rounded-pill btn btn-outline-danger"
+                class=" rounded-pill btn btn-outline-success"
               >
-                Pending
+                Settled
               </button>
             </h5>
 
@@ -114,9 +114,9 @@ const SettledInvoice = () => {
             <h5>
               <button
                 type="button"
-                class=" rounded-pill btn btn-outline-danger"
+                class=" rounded-pill btn btn-outline-success"
               >
-                Pending
+                Settled
               </button>
             </h5>
 

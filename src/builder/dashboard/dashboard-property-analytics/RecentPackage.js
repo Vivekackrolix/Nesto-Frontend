@@ -13,7 +13,7 @@ const RecentPackage = () => {
   useEffect(() => {
     const getSubscription = async () => {
       const response = await getAPI(apiEndpoints.getAllSubscriptionOrder);
-      console.log(response.data);
+      // console.log(response.data);
       setData(response.data);
     };
 

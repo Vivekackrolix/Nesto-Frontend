@@ -1,38 +1,65 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
 import propertyImage from "../../Images/propertyadded.png";
 import build from "../../Images/build.png";
-
 import { Link } from "react-router-dom";
 import { BsPencilFill } from "react-icons/bs";
 import { RiVipCrownFill } from "react-icons/ri";
-// import RecentlyAddedProperty from "./dashboard-tabs/RecentlyAddedProperty";
+import { useEffect, useState } from "react";
+import { getAPI } from "../../Api/ApiRequest";
+import { apiEndpoints } from "../../Api/ApiEndpoint";
 
-const RecentlyAdded = ({ data }) => {
-  const propertyListing = data.map((itm, index) => {
+const RecentlyAdded = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const getAddedProperties = async () => {
+      try {
+        const response = await getAPI(apiEndpoints.getAllproperty);
+
+        setData(response.data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getAddedProperties();
+  }, []);
+
+  if (loading) {
+    return (
+      <Container className="mt-5">
+        <div className="text-center">
+          <Spinner animation="border" role="status" />
+        </div>
+      </Container>
+    );
+  }
+
+  const propertyListing = data?.slice(0, 6).map((itm, index) => {
     return (
       <Col
         md={3}
-        sm={12}
-        className="card mb-4 shadow-sm rounded-4 p-0 border-0 w-100"
-        style={{ maxWidth: "21.5rem" }}
+        className="card mb-4 shadow-sm rounded-4 p-0 border-0"
+        style={{ width: "21.75rem" }}
+        id={itm._id}
+        key={itm._id}
       >
         <Card.Img variant="top" src={propertyImage} />
         <Card.Body>
-          {/* <Card.Title></Card.Title> */}
           <Card.Text>
-            <Row className="pb-2">
+            <Row>
               <Col md={10} sm={10}>
                 <div>
                   {" "}
-                  <Link className="recent-heading"
-                    to="/builder/home-dashboard/description"
+                  <Link
+                    className="recent-heading"
+                    // to={`/builder/home-dashboard/description/${itm.propertyId._id}`}
                   >
-                    Sky Danelions Apartment
+                    {itm.name}
                   </Link>
                 </div>
-                <p style={{ opacity: 0.5 }}>
-                  Luxury Apartment in Sector-29,Gurugram
-                </p>
+                <p style={{ opacity: 0.5 }}>{itm?.location}</p>
               </Col>
               <Col md={2} sm={2}>
                 <RiVipCrownFill
@@ -47,23 +74,13 @@ const RecentlyAdded = ({ data }) => {
                 />
               </Col>
             </Row>
-            <Row>
-              <Col md={3} sm={3} className="text-center">
-                <img src={build} alt="build" className="build-icon" />
-                <p style={{ opacity: 0.5 }}>2BHK</p>
-              </Col>
-              <Col md={3} sm={3} className="text-center">
-                <img src={build} alt="build" className="build-icon" />
-                <p style={{ opacity: 0.5 }}>3BHK</p>
-              </Col>
-              <Col md={3} sm={3} className="text-center">
-                <img src={build} alt="build" className="build-icon" />
-                <p style={{ opacity: 0.5 }}>4BHK</p>
-              </Col>
-              <Col md={3} sm={3} className="text-center">
-                <img src={build} alt="build" className="build-icon" />
-                <p style={{ opacity: 0.5 }}>5BHK</p>
-              </Col>
+            <Row className="mt-3">
+              {itm?.unitType?.map((item) => (
+                <Col md={3} sm={3} className="text-center">
+                  <img src={build} alt="build" className="build-icon" />
+                  <p style={{ opacity: 0.5 }}>{item}</p>
+                </Col>
+              ))}
             </Row>
 
             <Row className="align-items-center">
@@ -75,34 +92,33 @@ const RecentlyAdded = ({ data }) => {
                   fontWeight: "bold",
                 }}
               >
-                Rs.3.94-6.01 Cr
+                {itm?.minPrice}-{itm?.maxPrice}
               </Col>
               <Col md={7} style={{ color: "#7D7F88", fontSize: "0.8em" }}>
-                Book now & get upto 5% discount
+                {itm?.discountDescription}
               </Col>
             </Row>
             <div className="d-flex justify-content-end gap-2 mt-2">
               <Button
-                type="button"
                 variant="transparent"
+                type="button"
                 className="rounded-pill px-4 py-2 border border-primary"
+                style={{ color: "#278FD9", fontSize: "14px" }}
                 as={Link}
                 to="/builder/home-dashboard/visit"
               >
-                50 Visits
+                {itm?.noOfVisits} Visits
               </Button>
-
               <Button
-                type="button"
                 variant="transparent"
-                className="rounded-pill px-4 py-2 border border-primary"
+                type="button"
+                className="primary rounded-pill px-4 py-2 border border-primary"
                 as={Link}
                 to="/builder/home-dashboard/propertyedit"
               >
                 <BsPencilFill
                   style={{
-                    width: "0.95rem",
-                    height: "0.95rem",
+                    width: "0.9em",
                     color: "#fff",
                     background: "#278fd9",
                     padding: "2px",
@@ -126,7 +142,7 @@ const RecentlyAdded = ({ data }) => {
         <a
           className="col-4 text-danger text-end w-auto"
           as={Link}
-          href="/builder/home-dashboard/recentlyadded"          
+          href="/builder/home-dashboard/recentlyadded"
         >
           View All
         </a>

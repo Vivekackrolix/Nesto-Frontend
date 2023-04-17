@@ -22,6 +22,7 @@ import RecentlyAddedProperty from "./dashboard/dashboard-soldout-properties/dash
 import RecentlySoldOutProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlySoldOutProperty";
 import Subscription from "./dashboard/dashboard-soldout-properties/Subscription/Subscription";
 import store from "./redux/store";
+import AllProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/AllProperty";
 
 const App = () => {
   return (
@@ -93,6 +94,11 @@ const App = () => {
             exact
             path="/builder/home-dashboard/description/:propertyId"
             element={<SoldPage />}
+          />
+          <Route
+            exact
+            path="/builder/home-dashboard/property"
+            element={<AllProperty />}
           />
           <Route
             exact

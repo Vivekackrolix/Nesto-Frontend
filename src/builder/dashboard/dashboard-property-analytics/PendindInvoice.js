@@ -32,7 +32,7 @@ const PropertyInvoice = () => {
                 fontSize: "1.4em",
               }}
             >
-              {data.pendingInvoice}
+              {data?.pendingInvoice}
             </span>
             <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
               Pending <br></br> Invoice
@@ -46,7 +46,7 @@ const PropertyInvoice = () => {
                 fontSize: "1.4em",
               }}
             >
-              ₹ {data.totalAmount}
+              ₹ {data?.totalAmount}
             </span>
             <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
               Pending <br></br> Amount
@@ -60,7 +60,7 @@ const PropertyInvoice = () => {
                 fontSize: "1.4em",
               }}
             >
-              {data.pendingDays} Days
+              {data?.pendingDays} Days
             </span>
             <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
               Pending <br></br> Since
@@ -74,7 +74,7 @@ const PropertyInvoice = () => {
                 fontSize: "1.4em",
               }}
             >
-              {data.averagepayoutTime} Days
+              {data?.averagepayoutTime} Days
             </span>
             <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
               Average <br></br> Payout Time

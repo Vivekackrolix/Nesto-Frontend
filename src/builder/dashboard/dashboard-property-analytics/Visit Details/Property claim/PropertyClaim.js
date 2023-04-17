@@ -10,7 +10,7 @@ import Payment from "./Payment";
 import { useParams } from "react-router-dom";
 
 const PropertyClaim = () => {
-  debugger;
+  // debugger;
   const [data, setData] = useState([]);
   const params = useParams();
   useEffect(() => {
@@ -46,7 +46,7 @@ const PropertyClaim = () => {
         <div className="d-flex justify-content-between">
           <h3 className="heading">Property Claim</h3>
           <h6 className="text-secondary claim-id">
-            Eligible Claim ID:1253325271
+            Eligible Claim ID:{data?._id}
           </h6>
         </div>
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm p-3">
@@ -54,7 +54,7 @@ const PropertyClaim = () => {
           <div className="d-flex col justify-content-between align-items-center">
             <div>
               <h6 className="text-secondary">Property Name</h6>
-              <h5>Sky Dandelions Flat</h5>
+              <h5>{data?.visitId?.propertyName}</h5>
             </div>
             <div>
               <TbMap2 size="40" color="#278fd9" />

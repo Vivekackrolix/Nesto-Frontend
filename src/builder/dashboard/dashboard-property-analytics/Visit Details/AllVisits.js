@@ -49,7 +49,7 @@ const AllVisits = () => {
       //     },
       //   }
       // );
-      // debugger;
+      debugger;
       const response = await getAPI(apiEndpoints.getAllVisit);
       console.log(response.data);
 

@@ -3,7 +3,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import SearchFilterBox from "../search-filter/SearchFilter";
 import homeImage from "../../Images/homeimage.png";
 import map from "../../Images/Map.png";
-// import brochure from "../../Images/brochure.png";
 import Anlytics from "../dashboard-property-analytics/dashboard-property-details/anlytics";
 import Location from "../dashboard-property-analytics/dashboard-property-details/Location";
 import Amenities from "../dashboard-property-analytics/dashboard-property-details/Amenities";
@@ -22,9 +21,7 @@ const SoldPage = () => {
 
   useEffect(() => {
     const getPropertyById = async () => {
-      // debugger;
       const response = await axios.get(
-        // `http://13.233.149.97:3000/api/v1/boughtProperty/getBoughtPropertyById?id=${params.propertyId}`,
         `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
         {
           headers: {
@@ -33,8 +30,9 @@ const SoldPage = () => {
           },
         }
       );
-      debugger;
-      console.log(response.data.data);
+
+      // debugger;
+      // console.log(response.data.data);
       setProperty(response.data.data[0]);
     };
 

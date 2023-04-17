@@ -7,13 +7,10 @@ import Footer from "../../Footer/Footer";
 
 import { useEffect, useState } from "react";
 
-// import { recentlySoldPropertyActions } from "../../../redux/recentlySoldPropertySlice";
 import { apiEndpoints } from "../../../Api/ApiEndpoint";
 import { getAPI } from "../../../Api/ApiRequest";
-// import "./SoldOut.css";
 
 const RecentlySoldOutProperty = (props) => {
-  // const data = useSelector((state) => state.soldPropertyDetail.properties);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -47,11 +44,9 @@ const RecentlySoldOutProperty = (props) => {
               {" "}
               <Link
                 className="sold-heading"
-                to={`/builder/home-dashboard/description/${itm.propertyId._id}`}
-                // to="/builder/home-dashboard/description"
+                to={`/builder/home-dashboard/description/${itm?.propertyId?._id}`}
               >
                 {itm.propertyId === null ? "no data Name" : itm.propertyId.name}
-                {/* {itm.propertyId.companyName} */}
               </Link>
             </div>
             <div style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
@@ -79,9 +74,8 @@ const RecentlySoldOutProperty = (props) => {
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Broker ID</Row>
-              {/* <Row>{itm.brokerId.referalCode}</Row> */}
+
               <Row>{itm.brokerId._id.slice(-10)}</Row>
-              {/* <Row>{itm.brokerId}</Row> */}
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Date</Row>

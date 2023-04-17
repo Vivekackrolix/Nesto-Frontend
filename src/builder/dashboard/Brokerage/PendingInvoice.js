@@ -47,7 +47,7 @@ const PendingInvoice = () => {
                 </p>
               </span>
               <span className="p-2" style={{ color: "#8B9199" }}>
-                {itm?.invoices[0]?.claimId?.createdAt}
+                {itm?.invoices[0]?.claimId?.date}
               </span>
             </div>
             <div className="d-flex justify-content-between">

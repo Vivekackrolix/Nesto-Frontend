@@ -11,7 +11,8 @@ const PropertyAnalytics = () => {
   useEffect(() => {
     const getAnalytics = async () => {
       const response = await getAPI(apiEndpoints.getPropertyAnalytics);
-
+      debugger;
+      console.log(response);
       setData(response.data);
     };
 
@@ -32,7 +33,7 @@ const PropertyAnalytics = () => {
                 fontSize: "1.4em",
               }}
             >
-              {data.listedProperties}
+              {data?.listedProperties}
             </span>
             <span style={{ opacity: 0.5 }}>
               Listed <br></br> Properties
@@ -46,7 +47,7 @@ const PropertyAnalytics = () => {
                 fontSize: "1.4em",
               }}
             >
-              {data.soldOutUnits}
+              {data?.soldOutUnits}
             </span>
             <span style={{ opacity: 0.5 }}>
               Sold Out <br></br> Units
@@ -62,7 +63,7 @@ const PropertyAnalytics = () => {
               }}
               to="/builder/home-dashboard/visit"
             >
-              {data.totalVisit}
+              {data?.totalVisit}
             </Link>
             <span style={{ opacity: 0.5 }}>
               Total <br></br> Visits
@@ -76,7 +77,7 @@ const PropertyAnalytics = () => {
                 fontSize: "1.4em",
               }}
             >
-              {data.averageTimeToSell} Days
+              {data?.averageTimeToSell} Days
             </span>
             <span style={{ opacity: 0.5 }}>
               Average <br></br> time to sell

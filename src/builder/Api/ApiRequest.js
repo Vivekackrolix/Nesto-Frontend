@@ -16,6 +16,7 @@ const postAPI = async (endpoint, body) => {
 };
 
 const getAPI = async (endpoint) => {
+  debugger;
   try {
     const response = await axiosInstance.get(endpoint);
     console.log(response.data);

@@ -175,7 +175,3 @@ const Payment = ({ data }) => {
   );
 };
 export default Payment;
-
-// {
-//           <img src={HDFC} className="rounded my-3" alt="Home" />
-//           <img src={Axis} className="rounded my-3" alt="Home" />}
