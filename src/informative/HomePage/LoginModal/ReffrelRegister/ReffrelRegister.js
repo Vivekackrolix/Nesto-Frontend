@@ -2,22 +2,83 @@ import React from 'react';
 import CustomModal from '../../../../components/common/CustomModal';
 import './ReffrelRegister.css';
 import { Link } from 'react-router-dom';
-
+import {
+  Button,
+  Form,
+  InputGroup,
+} from "react-bootstrap";
 const ReffrelRegister = ({ show, onHide }) => {
   return (
     <CustomModal
+      title="Register to get started"
       show={show}
       closeBtn
       modalHeader
       size="md"
       onHide={onHide}
     >
-      <span className='reffrel-register-heading'>
-        Hello! Register to get started
-      </span>
-      <hr />
+      
       <div className="reffrel-register">
         <div className="reffrel-register-input-div">
+
+        <Form>
+              <InputGroup className="mb-0">
+                <Form.Control
+                  name="Name"
+                  className="rounded input reffrel-register-input-label"
+                  required
+                  type="text"
+                  placeholder=" "
+                />
+                <Form.Label className="placeholder">Name</Form.Label>
+              </InputGroup>
+              <br />
+              <InputGroup className="mb-0">
+                <Form.Control
+                  name="phone"
+                  className="rounded input reffrel-register-input-label"
+                  required
+                  type="text"
+                  maxLength="10"
+                  placeholder=" "
+                />
+                <Form.Label className="placeholder">Phone Number</Form.Label>
+                <Form.Control.Feedback type="invalid">
+                  Please enter valid phone number.
+                </Form.Control.Feedback>
+                <Form.Control.Feedback type="valid">
+                  Input is valid!
+                </Form.Control.Feedback>                
+              </InputGroup>              
+              <br />
+              <InputGroup className="mb-0">
+                <Form.Control
+                  name="Referral"
+                  className="rounded input reffrel-register-input-label"
+                  required
+                  type="text"                  
+                  placeholder=" "
+                />
+                <Form.Label className="placeholder">Referral Code</Form.Label>
+              </InputGroup>              
+              <br />
+              <Form.Check className="contact-form_checkbox-label" type="checkbox">
+                I agree to the{' '}
+                <Link to="/terms-condition">Terms of Service</Link> and
+                <Link to="/privacy-policy"> Privacy Policy</Link>
+              </Form.Check>
+              <br />
+              <div className="d-grid mt-3">
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="rounded border-0 bg-color-primary py-2"
+                >
+                  Continue
+                </Button>
+              </div>
+            </Form>
+{/* 
           <form>
             <div className='mt-1'>
               <label for='reffrel-register-input-1' className='reffrel-register-input-label'>Name</label>
@@ -37,7 +98,6 @@ const ReffrelRegister = ({ show, onHide }) => {
               required
               id='reffrel-register-input-2'
             />
-            {/* css coming from (contactUs.css) */}
             <div className="d-flex align-items-center gap-2 mt-4">
               <input
                 required
@@ -52,7 +112,7 @@ const ReffrelRegister = ({ show, onHide }) => {
               </label>
             </div>
             <button className="reffrel-register-btn">Register</button>
-          </form>
+          </form> */}
         </div>
       </div>
     </CustomModal>

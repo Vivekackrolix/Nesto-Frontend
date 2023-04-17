@@ -141,13 +141,14 @@
 }
 
 .contact-form_button {
-    padding: 12px 135px;
-    border-radius: 10rem;
+    padding: 12px 20px;
+    border-radius: 10px;
     font-size: 15px;
     color: var(--color-white);
     background: var(--primary-color);
     border: none;
     font-weight: bold;
+    width: 100%;
 }
 .contact-form_button:hover{
     background: #FC5C67;

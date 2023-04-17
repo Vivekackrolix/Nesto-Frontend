@@ -17,7 +17,6 @@ import "./RegisterLogin.css";
 const RegisterLogin = (props) => {
   const [inputValue, setInputValue] = useState("");
   const [inputName, setInputName] = useState("");
-  // const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [referral, setReferral] = useState("");
   const [showSucess, setShowSucess] = useState(false);
@@ -70,11 +69,12 @@ const RegisterLogin = (props) => {
             <Image className="h-100" src={loginImage} fluid alt="login img" />
           </Col>
           <Col md={6} className="p-5 d-flex flex-column justify-content-center">
-            <Container fluid className="mb-4 login__user">
-              <h1 className="fw-bold text-center mb-3">
+            <Container fluid className="mb-3 login__user">
+              <h1 className="fw-bold text-center mb-2">
                 Hello!
                 <br /> Register to get started!
               </h1>
+              <p className="text-center">Be a part of our Brokerage Network: Register Today and Join a Community of Excellence!</p>
             </Container>
 
             <Form>
@@ -102,16 +102,14 @@ const RegisterLogin = (props) => {
                   onChange={handleInputChange}
                   placeholder=" "
                 />
-                
+                <Form.Label className="placeholder">Phone Number</Form.Label>
                 <Form.Control.Feedback type="invalid">
                   Please enter valid phone number.
                 </Form.Control.Feedback>
                 <Form.Control.Feedback type="valid">
                   Input is valid!
-                </Form.Control.Feedback>
-                
-              </InputGroup>
-              
+                </Form.Control.Feedback>                
+              </InputGroup>              
               <br />
               <InputGroup className="mb-0">
                 <Form.Control
@@ -124,9 +122,9 @@ const RegisterLogin = (props) => {
                   placeholder=" "
                 />
                 <Form.Label className="placeholder">Enter Referral Code</Form.Label>
-              </InputGroup>
-              
+              </InputGroup>              
               <br />
+              <Form.Check type="checkbox" label="I agree to the Terms of Service &  Privacy Policy" />
 
               <div className="d-grid mt-3">
                 <Button

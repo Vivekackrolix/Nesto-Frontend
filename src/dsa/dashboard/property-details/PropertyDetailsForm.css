@@ -8,7 +8,7 @@
 
 .property__details__form label {
   font-weight: 400;
-  font-size: 15.5613px;
+  font-size: 14px;
   color: #000000 !important;
 }
 
@@ -16,7 +16,7 @@ input,
 select,
 textarea {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.5) !important;
 }
 
@@ -28,20 +28,20 @@ textarea {
 
 .property__details__form label {
   font-weight: 400;
-  font-size: 15.5613px;
+  font-size: 14px;
   color: #000000;
 }
 
 .property__details__form input,
 .property__details__form textarea {
   font-weight: 400;
-  font-size: 17.7973px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.5);
 }
 
 .testimonial .card-title {
   font-weight: 400;
-  font-size: 11.0599px;
+  font-size: 10px;
   letter-spacing: 0.02em;
   color: #1a1e25;
 }
@@ -49,7 +49,7 @@ textarea {
 .testimonial .card-text,
 .testimonial button {
   font-weight: 400;
-  font-size: 15.4839px;
+  font-size: 14px;
   letter-spacing: 0.02em;
   color: #7d7f88;
 }
@@ -77,14 +77,14 @@ textarea {
 }
 
 .property__details__iconcard__icontitle {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 17px;
   letter-spacing: 0.02em;
   color: #000000;
 }
 
 .property__details__iconcard__iconsubtitle {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.02em;
   color: #7d7f88;

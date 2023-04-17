@@ -1,7 +1,10 @@
 .how-container {
-    margin: 30px auto;
-    overflow-x: hidden;
-    /* background: #000; */
+    margin: 0px auto;
+    padding: 30px 0;
+}
+
+.how-box{
+    text-align: center;
 }
 
 .how-work_img {
@@ -95,7 +98,7 @@
     transform:translate(-50%,-50%);
   }
   .place{
-    background:#eaf4fb;
+    background:#dbeefb;
     z-index:2;
   }
   .radius .border-animation, .place{

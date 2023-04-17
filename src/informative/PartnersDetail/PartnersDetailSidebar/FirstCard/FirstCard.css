@@ -24,7 +24,7 @@
     display: block;
     padding-bottom: 12px;
     color: var(--cold-black-color);
-    font-weight: 300;
+    font-weight: 400;
 }
 .first-card__link {
     color: var(--primary-color);

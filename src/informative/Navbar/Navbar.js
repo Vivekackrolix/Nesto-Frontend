@@ -9,7 +9,7 @@ import LoginAsBroker from './../HomePage/LoginModal/LoginAsBroker/LoginAsBroker'
 import ReffrelRegister from './../HomePage/LoginModal/ReffrelRegister/ReffrelRegister';
 import SuccessfulLogin from './../HomePage/LoginModal/SuccessfulLogin/SuccessfulLogin';
 import NotRegistered from './../HomePage/LoginModal/NotRegistered/NotRegistered';
-
+import ListProperty from './../HomePage/LoginModal/ListProperty/ListProperty'
 const InformativeNavbar = () => {
   const [show, setShow] = useState(false);
   const onHide = () => {
@@ -20,12 +20,12 @@ const InformativeNavbar = () => {
   };
   return (
     <>
-      {/* <LoginModal show={show} onHide={onHide} /> */}
-      <LoginAsBroker show={show} onHide={onHide} />
+      {/* <LoginModal show={show} onHide={onHide} />  */}
+      {/* <LoginAsBroker show={show} onHide={onHide} /> */}
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
-      {/* <SuccessfulLogin show={show} onHide={onHide} /> */}
-      {/* <ListProperty show={show} onHide={onHide} /> */}
-      {/* <NotRegistered show={show} onHide={onHide} /> */}
+      {/* <SuccessfulLogin show={show} onHide={onHide} />  */}
+      {/* <ListProperty show={show} onHide={onHide} />   */}
+      <NotRegistered show={show} onHide={onHide} /> 
       <Navbar bg="light" expand="lg" className="login__header nes__header sticky-top">
         <Link to="/" className="navbar-brand">
           <img

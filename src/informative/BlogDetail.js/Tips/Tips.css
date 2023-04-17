@@ -17,7 +17,7 @@
 
 .tips-header_heading {
     font-weight: 700;
-    font-size: 41px;
+    font-size: 30px;
     color: var(--cold-black-color);
 }
 
@@ -54,8 +54,9 @@
 
 .tips_box-2-span {
     font-weight: 400;
-    font-size: 19px;
-    line-height: 38px;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--silver-surfer);
 }
 
 .tips_box-4 {
@@ -75,18 +76,16 @@
 
 .tips_box-5-heading {
     font-weight: 600;
-    font-size: 34px;
+    font-size: 30px;
     color: var(--cold-black-color);
-}
-
-.tips_box-5-line {
-    /* width: 100%; */
 }
 
 .tips_box-5-li {
     list-style: none;
     font-weight: 400;
-    font-size: 19px;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--silver-surfer);
 }
 
 .tips_box-6 {
@@ -141,13 +140,13 @@
 }
 
 .share-box_span1 {
-    font-weight: 350;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 18px;
     margin-right: 18px;
 }
 
 .share-box_span2 {
-    font-size: 30px;
+    font-size: 20px;
     color: var(--primary-color);
 }
 /* mediaQueri */
