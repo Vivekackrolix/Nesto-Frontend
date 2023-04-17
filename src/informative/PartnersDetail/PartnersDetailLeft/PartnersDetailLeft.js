@@ -10,33 +10,40 @@ import RatingChart from './ReviewsRatings/RatingChart/RatingChart';
 import ListProperty from '../ListProperty/ListProperty';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import AllimageVideosPopUp from './AllimageVideosPopUp/AllimageVideosPopUp';
+import IndoorImagePopUp from './IndoorImagePopUp/IndoorImagePopUp';
+import OutdoorImagePopUp from './OutdoorImagePopUp/OutdoorImagePopUp';
 
 export default function PartnersDetailLeft() {
+    const [firstPopUp, setFirstPopUp] = useState(false)
+    const [secondPopUp, setSecondPopUp] = useState(false)
+    const [thirdPopUp, setThirdPopUp] = useState(false)
+
     useEffect(() => {
-        Aos.init({duration: 1400})
+        Aos.init({ duration: 1400 })
     }, [])
     return (
         <>
             <div className='container-fluid partners-container'>
                 <div className='row' data-aos='fade-right'>
                     <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
-                        <div className='partners-container_box-3'>
+                        <div className='partners-container_box-3' onClick={() => setFirstPopUp(true)}>
                             <span className='partners-container_span-1'>All Photos & Videos</span>
                             <span className='partners-container_span-1'>16 Photos</span>
                         </div>
                     </div>
-                    <div className='col-lg-6 col-md-6 col-sm-6 col-6  rounded-3'>
-                        <div className='partners-container_box-1'>
+                    <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
+                        <div className='partners-container_box-1' onClick={() => setSecondPopUp(true)}>
                             <span className='partners-container_span-1'>Indoor</span>
                             <span className='partners-container_span-1'>10 Photos</span>
                         </div>
-                        <div className='partners-container_box-2'>
+                        <div className='partners-container_box-2' onClick={() => setThirdPopUp(true)}>
                             <span className='partners-container_span-1'>Outdoor</span>
                             <span className='partners-container_span-1'>14 Photos</span>
                         </div>
                     </div>
                 </div>
-                {/*Puri Construction==================
+                {/*Puri Construction=============
                 ============================= */}
                 <PuriConstruction />
                 {/*Description==================
@@ -63,10 +70,26 @@ export default function PartnersDetailLeft() {
                 {/*About the Builder ==================
                 =================================== */}
                 <AboutBuilder />
-                {/* Reviews&Ratings ===========
-                =========================== */}
+                {/* Ratings ===========
+                =================== */}
                 <RatingChart />
+                {/* Reviews ========
+                ================ */}
                 <ReviewCard />
+                {/* Modal ****************************
+                ********************************** */}
+                <AllimageVideosPopUp
+                    show={firstPopUp}
+                    onHide={() => setFirstPopUp(false)}
+                />
+                <IndoorImagePopUp
+                    show={secondPopUp}
+                    onHide={() => setSecondPopUp(false)}
+                />
+                <OutdoorImagePopUp
+                    show={thirdPopUp}
+                    onHide={() => setThirdPopUp(false)}
+                />
             </div>
         </>
     );

@@ -44,6 +44,7 @@
     padding-top: 10px;
     line-height: 1.4;
     color: var(--cold-black-color);
+    transition: all .2s ease-in-out;
 }
 
 .left-col_para:hover{
@@ -51,10 +52,10 @@
 }
 
 .left-col_para-2 {
-    font-weight: 400;
+    font-weight: 600;
     width: 95%;
     font-size: 14px;
-    color: var(--gray-color);
+    color: var(--silver-surfer);
     line-height: 24px;
 }
 .left-col_link {
