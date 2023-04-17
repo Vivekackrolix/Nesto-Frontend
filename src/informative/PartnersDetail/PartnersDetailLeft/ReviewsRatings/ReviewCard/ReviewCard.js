@@ -19,7 +19,7 @@ const ReviewCard = () => {
         speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        centerMode: true,
+        centerMode: false,
         responsive: [{
             breakpoint: 800,
             settings: {

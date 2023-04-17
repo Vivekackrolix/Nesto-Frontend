@@ -1,8 +1,7 @@
 import React from 'react'
 import Modal from 'react-bootstrap/Modal';
-import './AllimageVideosPopUp.css'
 
-const AllimageVideosPopUp = (props) => {
+const IndoorImagePopUp = (props) => {
     const data = [
         {
             img: '/assets/informative/homeSlider-3.jpg'
@@ -32,22 +31,7 @@ const AllimageVideosPopUp = (props) => {
             img: '/assets/informative/homeSlider-1.png'
         },
         {
-            img: '/assets/informative/homeSlider-4.jpeg'
-        },
-        {
-            img: '/assets/informative/homeSlider-2.jpg'
-        },
-        {
-            img: '/assets/informative/partnerbuilding.png'
-        },
-        {
-            img: '/assets/informative/homeSlider-1.png'
-        },
-        {
-            img: '/assets/informative/homeSlider-4.jpeg'
-        },
-        {
-            img: '/assets/informative/homeSlider-2.jpg'
+            img: '/assets/informative/homeSlider-3.jpg'
         },
     ]
     return (
@@ -58,7 +42,7 @@ const AllimageVideosPopUp = (props) => {
             centered>
             <Modal.Header closeButton>
                 <Modal.Title>
-                    <span>All Photos & Videos</span>
+                    <span>Indoor Photos</span>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -81,4 +65,4 @@ const AllimageVideosPopUp = (props) => {
     )
 }
 
-export default AllimageVideosPopUp
+export default IndoorImagePopUp
