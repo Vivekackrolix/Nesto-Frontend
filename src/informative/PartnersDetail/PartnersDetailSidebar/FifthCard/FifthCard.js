@@ -16,7 +16,7 @@ const FifthCard = () => {
                 <div className='fifth-card__box-2'>
                     <span className='fifth-card__span-2'>Find Buyers & Tenants Easily</span>
                     <Link to='/' className='fifth-card__link rounded-5 w-100'>
-                        <span className='fifth-card__link-span rounded-5'>Post a Property</span>
+                        <span className='fifth-card__link-span rounded'>Post a Property</span>
                     </Link>
                 </div>
                 <div className='fifth-card__box-3'>
