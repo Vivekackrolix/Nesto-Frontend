@@ -1,6 +1,6 @@
 input.invalid {
   color: var(--carnation-color) !important;
-  font-weight: 350;
+  font-weight: 400;
   font-size: 19.5815px;
 }
 
@@ -20,14 +20,14 @@ input.invalid {
 }
 
 .login__user figcaption {
-  font-weight: 350;
+  font-weight: 400;
   font-size: 16px;
   opacity: 0.5;
 }
 
 /* login form */
 .login__form form label {
-  font-weight: 350;
+  font-weight: 400;
   font-size: 15px;
   color: var(--cold-steel-color);
 }

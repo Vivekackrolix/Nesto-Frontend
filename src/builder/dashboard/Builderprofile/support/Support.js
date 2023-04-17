@@ -1,8 +1,8 @@
 // import DashboardTabs from '../../dashboard-tabs/DashboardTabs';
-import { Container, Tab, Tabs } from "react-bootstrap";
-import AccordionCard from "../accordion/AccordionCard";
-import DashboardTabs from "../dashboard-tabs/DashboardTabs";
-import { GrDocumentPdf } from "react-icons/gr";
+import { Tab, Tabs } from "react-bootstrap";
+// import AccordionCard from "../accordion/AccordionCard";
+// import DashboardTabs from "../dashboard-tabs/DashboardTabs";
+// import { GrDocumentPdf } from "react-icons/gr";
 import SupportMenu from "./SupportMenu";
 import Faq from "./Faq";
 

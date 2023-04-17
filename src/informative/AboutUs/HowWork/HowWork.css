@@ -98,7 +98,7 @@
     transform:translate(-50%,-50%);
   }
   .place{
-    background:#eaf4fb;
+    background:#dbeefb;
     z-index:2;
   }
   .radius .border-animation, .place{

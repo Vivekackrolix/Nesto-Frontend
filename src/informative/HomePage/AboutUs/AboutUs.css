@@ -29,7 +29,7 @@
 
 
 /* ====================== 
-========== Media Queri */
+========== Media Query */
 @media(max-width: 992px) {
     .ps-5.about-content {
         padding: 2rem !important;

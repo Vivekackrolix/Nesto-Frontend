@@ -12,7 +12,7 @@
     display: block;
     margin-top: 18px;   
     color: var(--color-white);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 0.9rem;
     line-height: 1.6;
     /* width: 80%; */
@@ -71,7 +71,7 @@
 .footer-mail-span {
     display: block;
     color: var(--color-white);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     line-height: 22px;
 }
@@ -87,7 +87,7 @@
 }
 .informative-footer_rights_p {
     color: var(--color-white);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     padding-top: 14px;
 }

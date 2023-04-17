@@ -6,14 +6,14 @@
 }
 
 .login__page__modal p {
-  font-weight: 350;
+  font-weight: 400;
   font-size: 13px;
   line-height: 37px;
   color: #282431;
 }
 
 .login__page__modal .form-label {
-  font-weight: 350;
+  font-weight: 400;
   font-size: 15px;
   color: #282431;
 }
@@ -23,12 +23,12 @@
 }
 
 .custom__modal__close {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000000 !important;
+  border: 1px solid #b5b5b5 !important;
 }
 
 .nes__dashboard__modal .nav-tabs {

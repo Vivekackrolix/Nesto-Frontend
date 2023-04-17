@@ -12,7 +12,7 @@
     font-size: 28px;
     line-height: 38px;
     padding-bottom: 15px;
-    font-weight: 300;
+    font-weight: 400;
 }
 .third-card__span-1 {
     color: var(--cold-black-color);
@@ -31,5 +31,5 @@
     display: block;
     color: var(--cold-black-color);
     padding-top: 8px;
-    font-weight: 300;
+    font-weight: 400;
 }

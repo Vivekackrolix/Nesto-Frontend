@@ -19,7 +19,7 @@ const Faq = () => {
             <div className="faq-banner">
                 <span className='faq-banner-heading' data-aos='zoom-in'>Frequently Asked Questions</span>
             </div>
-            <div className='container faq-container' data-aos='fade-up' style={{ overflowX: 'hidden' }}>
+            <div className='container faq-container' data-aos='fade-up'>
                 <div className='row'>
                     <div className='col-lg-6 col-md-12 col-sm-12 faq-col-1'>
                         <div className='faq-col_box-1'>

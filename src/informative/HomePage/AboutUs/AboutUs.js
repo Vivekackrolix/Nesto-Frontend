@@ -49,7 +49,7 @@ const AboutUs = () => {
                   </div>
                   <span
                     className="about-us_box1_icon-span-3"
-                    style={{ letterSpacing: '1px' }}
+                    style={{ letterSpacing: "1px" }}
                   >
                     Download The App Now!
                   </span>
@@ -73,12 +73,12 @@ const AboutUs = () => {
                 Inspiring Brokers & Builders With Innovative Empowerment
               </span>
               <div className="load-wrapp">
-                  <div className="load">
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                  </div>
+                <div className="load">
+                  <div className="line"></div>
+                  <div className="line"></div>
+                  <div className="line"></div>
                 </div>
+              </div>
               <span className="about-us_box-span3">
                 NestoHub is a platform that makes it simple for brokers and
                 builders to connect, creating a vast network of possibilities
@@ -92,9 +92,15 @@ const AboutUs = () => {
                 for brokers and builders across PAN India.
               </span>
               <div className="">
-                <Link to="/about-us" className="about-us-read-more primary_button">
+                <Link
+                  to="/about-us"
+                  className="about-us-read-more primary_button"
+                >
                   Read More
-                  <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
+                  <MdKeyboardDoubleArrowRight
+                    size={20}
+                    className="move-arrow"
+                  />
                 </Link>
               </div>
             </div>
