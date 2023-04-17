@@ -17,7 +17,6 @@
     font-weight: 600;
 }
 .second-card__btn-div {
-    /* padding: 0 0px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +32,7 @@
     padding-left: 6px;
 }
 .second-card__icon {
-    width: 150px;
+    width: 138px;
     margin-right: 6px;
 }
 .second-card__icon-span-1 {

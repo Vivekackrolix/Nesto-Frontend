@@ -14,12 +14,12 @@ const ReviewCard = () => {
     var settings = {
         dots: false,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         arrows: true,
         speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        // centerMode: true,
+        centerMode: true,
         responsive: [{
             breakpoint: 800,
             settings: {
@@ -32,27 +32,27 @@ const ReviewCard = () => {
     const projectSliderData =
         [
             {
-                img: "/assets/property-img.png",
+                img: "/assets/informative/builder1.png",
                 review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
             {
-                img: "/assets/property-img.png",
+                img: "/assets/informative/userRating1.png",
                 review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
             {
-                img: "/assets/property-img.png",
+                img: "/assets/informative/builder1.png",
                 review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
             {
-                img: "/assets/property-img.png",
+                img: "/assets/informative/userRating1.png",
                 review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
             {
-                img: "/assets/property-img.png",
+                img: "/assets/informative/builder1.png",
                 review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
@@ -66,7 +66,7 @@ const ReviewCard = () => {
                             <div className='d-flex shadow-sm p-0 rounded-3'>
                                 <div className='col-lg-6 reviews_slider-col'>
                                     <div className='reviews_slider-box1'>
-                                        <img src='/assets/informative/userRating1.png' alt='rating' className='reviews_slider-userImg' />
+                                        <img src={item.img} alt='rating' className='reviews_slider-userImg' />
                                     </div>
                                     <div className='reviews_slider-box2'>
                                         <span className='reviews_slider-span1'>{item.review}</span>

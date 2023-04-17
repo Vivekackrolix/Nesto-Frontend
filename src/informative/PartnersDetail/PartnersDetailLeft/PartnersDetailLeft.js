@@ -10,16 +10,19 @@ import RatingChart from './ReviewsRatings/RatingChart/RatingChart';
 import ListProperty from '../ListProperty/ListProperty';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import AllimageVideosPopUp from './AllimageVideosPopUp/AllimageVideosPopUp';
 
 export default function PartnersDetailLeft() {
+    const [firstPopUp, setFirstPopUp] = useState(false)
+    
     useEffect(() => {
-        Aos.init({duration: 1400})
+        Aos.init({ duration: 1400 })
     }, [])
     return (
         <>
             <div className='container-fluid partners-container'>
                 <div className='row' data-aos='fade-right'>
-                    <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
+                    <div className='col-lg-6 col-md-6 col-sm-6 col-6' onClick={() => setFirstPopUp(true)}>
                         <div className='partners-container_box-3'>
                             <span className='partners-container_span-1'>All Photos & Videos</span>
                             <span className='partners-container_span-1'>16 Photos</span>
@@ -36,7 +39,7 @@ export default function PartnersDetailLeft() {
                         </div>
                     </div>
                 </div>
-                {/*Puri Construction==================
+                {/*Puri Construction=============
                 ============================= */}
                 <PuriConstruction />
                 {/*Description==================
@@ -63,10 +66,18 @@ export default function PartnersDetailLeft() {
                 {/*About the Builder ==================
                 =================================== */}
                 <AboutBuilder />
-                {/* Reviews&Ratings ===========
-                =========================== */}
+                {/* Ratings ===========
+                =================== */}
                 <RatingChart />
+                {/* Reviews ========
+                ================ */}
                 <ReviewCard />
+                {/* Modal ****************************
+                ********************************** */}
+                <AllimageVideosPopUp
+                    show={firstPopUp}
+                    onHide={() => setFirstPopUp(false)}
+                />
             </div>
         </>
     );
