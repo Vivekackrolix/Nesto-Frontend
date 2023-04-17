@@ -1,7 +1,7 @@
 .partners-second__card {
     padding: 10px;
-    border: 2px var(--wild-sand) solid;
     margin-top: 50px;
+    border: 2px var(--wild-sand) solid;
 }
 .second-card__box  {
     background: var(--lite-skyblue);
@@ -17,7 +17,11 @@
     font-weight: 600;
 }
 .second-card__btn-div {
-    padding: 0 0px;
+    /* padding: 0 0px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 .second-card__btn {
     width: 45%;
