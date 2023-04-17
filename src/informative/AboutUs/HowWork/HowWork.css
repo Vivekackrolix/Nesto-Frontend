@@ -1,6 +1,7 @@
 .how-container {
     margin: 0px auto;
     padding: 30px 0;
+    overflow-x: hidden;
 }
 
 .how-box{

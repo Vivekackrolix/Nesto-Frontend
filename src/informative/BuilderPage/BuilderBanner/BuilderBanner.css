@@ -1,8 +1,9 @@
 .builder-banner {
     background: url(../../../../public/assets/informative/circle-2.png) top left no-repeat, url(../../../../public/assets/informative/circle-2.png) bottom right no-repeat, var(--lite-skyblue);
-  position: relative;
-  background-size: 15%, 30%;
+    position: relative;
+    background-size: 15%, 30%;
     margin-bottom: 5rem;
+    overflow-x: hidden;
 }
 
 .builder-banner-col-1 {
