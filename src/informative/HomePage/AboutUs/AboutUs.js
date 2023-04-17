@@ -26,7 +26,7 @@ const AboutUs = () => {
                         <div>
                           <img
                             src="/assets/informative/Google-Play.png"
-                            className="second-card__icon"
+                            className="about-second-card__icon"
                             alt="google-play"
                           />
                         </div>
@@ -40,7 +40,7 @@ const AboutUs = () => {
                         <div>
                           <img
                             src="/assets/informative/Apple.png"
-                            className="second-card__icon"
+                            className="about-second-card__icon"
                             alt="apple"
                           />
                         </div>

@@ -10,8 +10,7 @@ const LatestPostLeft = () => {
       id: 0,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -19,8 +18,7 @@ const LatestPostLeft = () => {
       id: 1,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -28,8 +26,7 @@ const LatestPostLeft = () => {
       id: 2,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -37,8 +34,7 @@ const LatestPostLeft = () => {
       id: 3,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -46,8 +42,7 @@ const LatestPostLeft = () => {
       id: 4,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -55,8 +50,7 @@ const LatestPostLeft = () => {
       id: 5,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -73,8 +67,7 @@ const LatestPostLeft = () => {
       id: 7,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -82,8 +75,7 @@ const LatestPostLeft = () => {
       id: 8,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -91,8 +83,7 @@ const LatestPostLeft = () => {
       id: 9,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -100,8 +91,7 @@ const LatestPostLeft = () => {
       id: 10,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -109,8 +99,7 @@ const LatestPostLeft = () => {
       id: 11,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },
@@ -118,8 +107,7 @@ const LatestPostLeft = () => {
       id: 12,
       date: "Sept 05, 2022",
       para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       userImg: "/assets/informative/articleImg4.png",
       name: "Sarah Harding",
     },

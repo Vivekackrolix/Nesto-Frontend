@@ -1,7 +1,7 @@
 .reviews_slider .slick-next:before,
 .slick-prev:before {
-    font-size: 30px;
-    color: var(--cold-black-color);
+    /* font-size: 30px;
+    color: var(--cold-black-color); */
 }
 
 .reviews_slider .reviews_slider-col {
