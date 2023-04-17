@@ -63,7 +63,7 @@ const ReviewCard = () => {
                 {projectSliderData.map((item) => (
                     <div className='container'>
                         <div className='row p-2'>
-                            <div className='d-flex shadow-sm p-0 rounded-3'>
+                            <div className='d-flex p-0 rounded-3'>
                                 <div className='col-lg-6 reviews_slider-col'>
                                     <div className='reviews_slider-box1'>
                                         <img src={item.img} alt='rating' className='reviews_slider-userImg' />

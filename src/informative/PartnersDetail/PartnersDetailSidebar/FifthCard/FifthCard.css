@@ -12,7 +12,7 @@
 .partners-container .fifth-card__span-1 {
     text-align: center;
     margin: auto;
-    font-size: 2rem;
+    font-size: 1.35rem;
     color: var(--cold-black-color);
     font-weight: 600;
 }
@@ -22,9 +22,9 @@
     width: 100%;
 }
 .partners-container .fifth-card__span-2 {
-    font-size: 24px;
+    font-size: 1.35rem;
     display: block;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     font-weight: 500;
 }
 .partners-container .fifth-card__link {
