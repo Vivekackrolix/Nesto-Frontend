@@ -1,5 +1,5 @@
 .reffrel-register-heading {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 900;
     text-align: center;
     display: block;
@@ -14,7 +14,7 @@
     font-size: 16px;
     margin-bottom: .2rem;
     color: var(--silver-surfer);
-    font-weight: 350;
+    font-weight: 400;
 }
 
 .reffrel-register-input-div {
@@ -46,12 +46,11 @@
 
 .reffrel-register-btn {
     width: 100%;
-    padding: 12px 0;
-    font-size: 18px;
-    font-weight: 350;
-    margin-top: 30px;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 15px;
     background: var(--primary-color);
     color: var(--color-white) !important;
-    border-radius: 10rem !important;
-    border: 1px solid var(--primary-color);
+    border-radius: 8px;
 }

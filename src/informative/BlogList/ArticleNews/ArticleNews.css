@@ -16,12 +16,12 @@
 }
 
 .article-news_para {
-    font-weight: 350;
-    font-size: 21px;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .article-news_row {
-    height: 500px;
+    height: 450px;
 }
 
 .article-news_box {
@@ -74,7 +74,7 @@
 
 .article-news_span-2 {
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     color: var(--color-white);
 }

@@ -6,7 +6,6 @@ const CustomModal = ({
   show,
   title,
   children,
-  border,
   onHide,
   closeBtn,
   cssClassName,
@@ -22,7 +21,7 @@ const CustomModal = ({
     >
       {!modalHeader && !closeBtn && (
         <>
-          <Modal.Header className="p2-4 pb-0 border-0">
+          <Modal.Header className="p-2 border-0">
             <Modal.Title className="fw-bold display-6">
               {title ? title : ``}
             </Modal.Title>
@@ -33,7 +32,7 @@ const CustomModal = ({
       {modalHeader && closeBtn && (
         <>
           {!closeBtn && (
-            <Modal.Header className="justify-content-center p2-4 pb-0 border-0">
+            <Modal.Header className="justify-content-center p-2 border-0">
               <Modal.Title className="fw-bold display-6">
                 {title ? title : ``}
               </Modal.Title>
@@ -41,7 +40,7 @@ const CustomModal = ({
           )}
           {closeBtn && (
             <Modal.Header
-              className={`align-items-center p2-4 pb-0 ${
+              className={`align-items-center p-2  ${
                 title ? `` : 'border-0'
               }`}
             >
@@ -52,14 +51,14 @@ const CustomModal = ({
                 className="ms-auto bg-transparent p-0 custom__modal__close rounded rounded-circle"
                 onClick={onHide}
               >
-                <FiX size={20} color="#000000" />
+                <FiX size={20} color="#b5b5b5" />
               </Button>
             </Modal.Header>
           )}
         </>
       )}
 
-      <Modal.Body className="pt-2 px-2 pb-4">{children}</Modal.Body>
+      <Modal.Body className="p-3">{children}</Modal.Body>
     </Modal>
   );
 };

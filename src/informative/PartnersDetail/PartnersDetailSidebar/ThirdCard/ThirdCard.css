@@ -9,10 +9,10 @@
 }
 .third-card__p-1 {
     color: var(--cold-black-color);
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 22px;
+    line-height: 32px;
     padding-bottom: 15px;
-    font-weight: 300;
+    font-weight: 400;
 }
 .third-card__span-1 {
     color: var(--cold-black-color);
@@ -21,7 +21,7 @@
 .third-card__link {
     color: var(--purple-color);
     font-weight: 600;
-    font-size: 21px;
+    font-size: 18px;
     text-decoration: none;
 }
 .third-card__link:hover {
@@ -31,5 +31,5 @@
     display: block;
     color: var(--cold-black-color);
     padding-top: 8px;
-    font-weight: 300;
+    font-weight: 400;
 }

@@ -8,7 +8,7 @@ const FifthCard = () => {
             <div className='d-flex flex-column justify-content-between partners-fifth__card rounded-3' data-aos='fade-left'>
                 <div className='fifth-card__box rounded-3'>
                     <div className='text-center'>
-                        <span className='fifth-card__span-1'>Sell your Property with us for
+                        <span className='fifth-card__span-1'>Sell Your Property With Us For
                             <span style={{ color: 'var(--primary-color)', display: 'block' }}>FREE</span>
                         </span>
                     </div>
@@ -16,7 +16,7 @@ const FifthCard = () => {
                 <div className='fifth-card__box-2'>
                     <span className='fifth-card__span-2'>Find Buyers & Tenants Easily</span>
                     <Link to='/' className='fifth-card__link rounded-5 w-100'>
-                        <span className='fifth-card__link-span rounded-5'>Post a Property</span>
+                        <span className='fifth-card__link-span rounded'>Post a Property</span>
                     </Link>
                 </div>
                 <div className='fifth-card__box-3'>

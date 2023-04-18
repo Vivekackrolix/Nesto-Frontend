@@ -10,8 +10,10 @@
 }
 
 .choose-card:hover {
-    transform: scale(1.1);
-    border: 1px solid var(--primary-color);
+    transform: scale(1.05);
+    border: 1px solid rgb(39 143 217 / 20%);
+    box-shadow: 0px 0px 15px 2px rgb(39 143 217 / 20%);
+    /* border: 1px solid var(--primary-color); */
 }
 .next-image {
     /* width: 20px !important; */

@@ -21,16 +21,16 @@
 
 .t-c_span {
     margin-top: 40px;
-    line-height: 34px;
-    font-weight: 350;
-    font-size: 18px;
-    color: var(--cold-black-color);
+    font-weight: 400;
+    font-size: 15px;
     display: block;
+    line-height: 25px;
+    color: var(--silver-surfer);
 }
 
 .t-c_footer-box {
     width: 55%;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     color: var(--silver-surfer);
     line-height: 30px;
@@ -39,7 +39,7 @@
 }
 @media(max-width: 998px) {
     .t-c_heading-box {
-        margin-top: 30px;
+        /* margin-top: 30px; */
     }
     .t-c_footer-box {
         width: 90%;

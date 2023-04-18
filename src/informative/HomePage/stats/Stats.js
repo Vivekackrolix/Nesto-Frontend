@@ -11,7 +11,7 @@ const Stats = () => {
     return (
         <div className="row stats-row">
             <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
-                <img className="stats-row-img" src='./assets/stats1.png' alt="animation" />
+                <img className="stats-row-img" src='./assets/get-money.png' alt="animation" />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter1On(true)}
@@ -30,11 +30,11 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    NestoHub Brokers
+                Superior Earnings
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
-                <img className="stats-row-img" src='./assets/stats2.png' alt="stats" />
+                <img className="stats-row-img" src='./assets/sale.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter2On(true)}
@@ -52,11 +52,11 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    NestoHub Inventory
+                Vast Property Pool
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
-                <img className="stats-row-img" src='./assets/stats3.png' alt="stats" />
+                <img className="stats-row-img" src='./assets/document.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter3On(true)}
@@ -67,11 +67,11 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    NestoHub Builders
+                Easy Brokerage Claims
                 </p>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
-                <img className="stats-row-img" src='./assets/stats4.png' alt="stats" />
+                <img className="stats-row-img" src='./assets/target.png' alt="stats" />
                 <div className="stats-row-count">
                     <ScrollTrigger
                         onEnter={() => setCounter4On(true)}
@@ -81,7 +81,7 @@ const Stats = () => {
                     </ScrollTrigger>
                 </div>
                 <p className="stats-row-p">
-                    NestoHub Cities
+                Digital Customer Management
                 </p>
             </div>
         </div>

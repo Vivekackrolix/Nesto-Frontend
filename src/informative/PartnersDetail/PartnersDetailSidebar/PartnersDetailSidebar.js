@@ -13,7 +13,7 @@ export default function PartnersDetailSidebar() {
                     <div className='col-lg-12'>
                         <div className='row' data-aos='fade-left'>
                             <FirstCard />
-                            <SecondCard url='/assets/informative/device.svg' />
+                            <SecondCard url='/assets/informative/device-new.svg' />
                             <ThirdCard />
                             <FourthCard />
                             <FifthCard />

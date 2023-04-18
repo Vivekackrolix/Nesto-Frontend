@@ -17,7 +17,7 @@
 
 .tips-header_heading {
     font-weight: 700;
-    font-size: 41px;
+    font-size: 30px;
     color: var(--cold-black-color);
 }
 
@@ -54,8 +54,9 @@
 
 .tips_box-2-span {
     font-weight: 400;
-    font-size: 19px;
-    line-height: 38px;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--silver-surfer);
 }
 
 .tips_box-4 {
@@ -75,18 +76,16 @@
 
 .tips_box-5-heading {
     font-weight: 600;
-    font-size: 34px;
+    font-size: 30px;
     color: var(--cold-black-color);
-}
-
-.tips_box-5-line {
-    /* width: 100%; */
 }
 
 .tips_box-5-li {
     list-style: none;
     font-weight: 400;
-    font-size: 19px;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--silver-surfer);
 }
 
 .tips_box-6 {
@@ -98,22 +97,28 @@
 
 .tips_box-6-span {
     font-weight: 600;
-    font-size: 28px;
+    font-size: 22px;
     color: var(--cold-black-color);
-    line-height: 38px;
-    /* display: block; */
+    line-height: 30px;
 }
 
 .tips_box-6-btn {
     padding: 10px 0;
     width: 20%;
-    font-size: 18px;
+    font-size: 0.9rem;
     border: none;
-    border: 1px solid rgba(224, 224, 224, .1);
+    border: 1px solid rgba(224, 224, 224);
     border-radius: 8px;
     background: var(--color-white);
-    box-shadow: 0px 0px 8px rgba(224, 224, 224.25);
-    margin: 0 30px;
+    /* box-shadow: 0px 0px 8px rgba(224, 224, 224.25); */
+    margin: 0 10px;
+    transition: all .4s ease-in !important;
+}
+
+.tips_box-6-btn:hover{
+    background: rgb(13 110 253 / 20%) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid rgb(13 110 253 / 20%) !important;
 }
 
 /* Share */
@@ -141,13 +146,13 @@
 }
 
 .share-box_span1 {
-    font-weight: 350;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 18px;
     margin-right: 18px;
 }
 
 .share-box_span2 {
-    font-size: 30px;
+    font-size: 20px;
     color: var(--primary-color);
 }
 /* mediaQueri */

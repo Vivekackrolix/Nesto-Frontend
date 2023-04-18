@@ -2,6 +2,7 @@ import React from 'react';
 import CustomModal from '../../../../components/common/CustomModal';
 import { Link } from 'react-router-dom';
 import './NotRegistered.css';
+import { Button } from 'react-bootstrap';
 
 const NotRegistered = ({ show, onHide }) => {
     return (
@@ -18,7 +19,7 @@ const NotRegistered = ({ show, onHide }) => {
                         You are not registered with us! Please contact with Nestohub team.
                     </span>
                     <Link to='/contact-us'>
-                        <button className="not-register-btn">Contact Us</button>
+                        <Button variant='primary' className="not-register-btn">Contact Us</Button>
                     </Link>
                 </div>
             </div>

@@ -12,7 +12,7 @@ const SearchBar = ({ addBtn }) => {
                 <div className="dashboard__wrapper__filter nes__dashboard__filter partner-search-div">
                     <div className="flex-grow-1 order-first order-md-2">
                         <InputGroup className='partner-input-group'>
-                            <BsSearch color="#B3B4B8" className='partner-search-icon' />
+                            <BsSearch color="#B3B4B8" size={16} className='partner-search-icon' />
                             <FormControl placeholder="Search here..." className="partner-search-input" />
                         </InputGroup>
                     </div>

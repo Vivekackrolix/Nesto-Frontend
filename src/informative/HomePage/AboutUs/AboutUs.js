@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./AboutUs.css";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const AboutUs = () => {
   return (
@@ -25,7 +26,7 @@ const AboutUs = () => {
                         <div>
                           <img
                             src="/assets/informative/Google-Play.png"
-                            className="second-card__icon"
+                            className="about-second-card__icon"
                             alt="google-play"
                           />
                         </div>
@@ -39,7 +40,7 @@ const AboutUs = () => {
                         <div>
                           <img
                             src="/assets/informative/Apple.png"
-                            className="second-card__icon"
+                            className="about-second-card__icon"
                             alt="apple"
                           />
                         </div>
@@ -48,7 +49,7 @@ const AboutUs = () => {
                   </div>
                   <span
                     className="about-us_box1_icon-span-3"
-                    style={{ letterSpacing: '1px' }}
+                    style={{ letterSpacing: "1px" }}
                   >
                     Download The App Now!
                   </span>
@@ -65,12 +66,19 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 ps-5 about-content" data-aos="fade-left">
+          <div className="col-lg-6 about-content" data-aos="fade-left">
             <div className="about-us_box2">
               <span className="sections-heading">ABOUT US</span>
               <span className="about-us_box-span2 sections-sub-heading">
                 Inspiring Brokers & Builders With Innovative Empowerment
               </span>
+              <div className="load-wrapp">
+                <div className="load">
+                  <div className="line"></div>
+                  <div className="line"></div>
+                  <div className="line"></div>
+                </div>
+              </div>
               <span className="about-us_box-span3">
                 NestoHub is a platform that makes it simple for brokers and
                 builders to connect, creating a vast network of possibilities
@@ -84,8 +92,15 @@ const AboutUs = () => {
                 for brokers and builders across PAN India.
               </span>
               <div className="">
-                <Link to="/about-us" className="about-us-read-more">
+                <Link
+                  to="/about-us"
+                  className="about-us-read-more primary_button"
+                >
                   Read More
+                  <MdKeyboardDoubleArrowRight
+                    size={20}
+                    className="move-arrow"
+                  />
                 </Link>
               </div>
             </div>
