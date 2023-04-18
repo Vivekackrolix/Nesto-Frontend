@@ -11,15 +11,52 @@ const ReviewCard = () => {
     function hide() {
         setShowMore(false)
     }
+    // =============================
+    // ========= Slick Customization
+    function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{
+                    ...style,
+                    display: 'block',
+                    borderRadius: '50%',
+                    padding: '1px 0px',
+                }}
+                onClick={onClick}
+            >
+                <img className="next-image" src="/assets/next.png" alt="next" />
+            </div>
+        );
+    }
+
+    function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{
+                    ...style,
+                    display: 'block',
+                    borderRadius: '50%',
+                    padding: '1px 0px',
+                }}
+                onClick={onClick}
+            >
+                <img className="prev-image" src="/assets/next.png" alt="next" />
+            </div>
+        );
+    }
     var settings = {
         dots: false,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         arrows: true,
-        speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        centerMode: false,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
         responsive: [{
             breakpoint: 800,
             settings: {
@@ -33,27 +70,27 @@ const ReviewCard = () => {
         [
             {
                 img: "/assets/informative/builder1.png",
-                review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
+                review: 'Good area lighting proper light installation on road. good hospital schools are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
             {
                 img: "/assets/informative/userRating1.png",
-                review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
+                review: 'Good area lighting proper light installation on road. good hospital schools are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
             {
                 img: "/assets/informative/builder1.png",
-                review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
+                review: 'Good area lighting proper light installation on road. good hospital schools are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
             {
                 img: "/assets/informative/userRating1.png",
-                review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
+                review: 'Good area lighting proper light installation on road. good hospital schools are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
             {
                 img: "/assets/informative/builder1.png",
-                review: 'Good area lighting proper light installation on the road. good hospital schools and colleges are nearby from locality. vegetable markets are at walkable distance',
+                review: 'Good area lighting proper light installation on road. good hospital schools are nearby from locality. vegetable markets are at walkable distance',
                 createdDate: 'Vimal Thakur, Tenant | 28/12/2022',
             },
         ]

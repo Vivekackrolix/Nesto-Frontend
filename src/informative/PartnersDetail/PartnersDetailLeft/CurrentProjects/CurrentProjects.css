@@ -1,12 +1,10 @@
 /* Current Projects ================
 ================================= */
 .current-project_slider {
-    padding: 0;
-    /* background: #000; */
+    padding: 0 3%;
 }
 .current-project_row {
-    /* padding: 0; */
-    /* padding-left: 10px; */
+    padding: 0 2px;
 }
 .current-project_slider .slick-next:before,
 .slick-prev:before {
@@ -32,7 +30,7 @@
     border-radius: 0 5px 5px 0;
     text-transform: uppercase;
     margin: 10px 0;
-    font-size: 18px;
+    font-size: .8rem;
 }
 
 .current-project_slider .current-project-slider_icon1 {
