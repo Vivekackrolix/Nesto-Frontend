@@ -1,3 +1,6 @@
+.locality_slider {
+    padding: 0;
+}
 .locality_slider .slick-next:before,
 .slick-prev:before {
     font-size: 30px;

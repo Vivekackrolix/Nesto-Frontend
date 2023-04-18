@@ -79,12 +79,12 @@ const CurrentProjects = () => {
             <Slider {...settings}>
                 {projectSliderData.map((item) => (
                     <div className='container'>
-                        <div className='row p-2'>
+                        <div className='row p-2 current-project_row'>
                             <div className='d-flex shadow-sm p-0 rounded-3'>
                                 <div className='col-lg-6 current-project-slider_col-1'>
                                     <div className='h-100'>
                                         <span className='current-project-slider_tag'>{item.tag}</span>
-                                        <img src={item.img} className='current-project-slider_img' alt='project-slider'/>
+                                        <img src={item.img} className='current-project-slider_img' alt='project-slider' />
                                         <span
                                             className='current-project-slider_icon1'
                                             onClick={heartChange}

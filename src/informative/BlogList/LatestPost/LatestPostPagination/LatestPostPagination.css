@@ -1,11 +1,13 @@
 .LatestPostPagination-pagination-ul {
     /* margin-top: 30px; */
-    padding: 0;
+    padding: 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .LatestPostPagination-pagination-li {
+    
     list-style: none;
     background: transparent;
     font-size: 14px;
@@ -16,11 +18,13 @@
     border-radius: 2px;
     cursor: pointer;
 }
+
 .LatestPostPagination-pagination-li-active {
     color: var(--color-white);
     background: var(--primary-color);
     border-radius: 2px;
 }
+
 .LatestPostPagination-pagination-li-arrow {
     list-style: none;
     font-size: 22px;

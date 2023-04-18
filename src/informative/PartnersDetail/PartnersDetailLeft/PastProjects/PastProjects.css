@@ -1,5 +1,8 @@
 /* Current Projects ================
 ================================= */
+.past-project_slider {
+    padding: 0;
+}
 .past-project_slider .slick-next:before,
 .slick-prev:before {
     font-size: 30px;

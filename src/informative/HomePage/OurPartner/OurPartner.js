@@ -155,7 +155,7 @@ const OurPartner = () => {
       <div className="">
         <Heading title="Our Partners" sub="The Companies That Represent Us" />
       </div>
-      <div className="mt-4 mb-5 px-5 d-flex">
+      <div className="mt-4 mb-5 px-5 d-flex" data-aos='fade-up'>
         <Slider {...settings} className="partner-slider d-flex gap-2" data-aos="fade-up">
           {review.map((obj, e) => {
             return (
