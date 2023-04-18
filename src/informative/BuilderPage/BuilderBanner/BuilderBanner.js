@@ -66,14 +66,14 @@ const BuilderBanner = () => {
                   required
                 />
                 <select className="builder-banner-col-3_input builder-banner-col-3_select">
-                  <option>option1</option>
+                  <option disabled={true} value="">Select Property Type</option>
                   <option>option1</option>
                   <option>option1</option>
                   <option>option1</option>
                   <option>option1</option>
                 </select>
                 <select className="builder-banner-col-3_input builder-banner-col-3_select">
-                  <option>option1</option>
+                  <option>Location Of Property</option>
                   <option>option1</option>
                   <option>option1</option>
                   <option>option1</option>

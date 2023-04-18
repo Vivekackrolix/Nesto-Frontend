@@ -1,7 +1,7 @@
 .partners-container .partners-third__card {
     padding: 30px 20px;
     background: linear-gradient(to right, rgba(255, 255, 255, 1), var(--lite-skyblue));
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .partners-container .third-card__img {
     width: 100%;
