@@ -15,8 +15,8 @@ const Video = () => {
         <>
             <div className="video-main" data-aos='fade-up'>
                 {play ? <AiFillPlayCircle className="play-button"></AiFillPlayCircle> : ""}
-                <video onPlay={handleClick} onPause={handlePause} controls className="home-video">
-                    <source src={"/assets/dummyVideo.mp4"} style={{ width: '100%' }} />
+                <video onPlay={handleClick} onPause={handlePause} controls autoPlay muted className="home-video">
+                    <source src={"/assets/informative/NestoHubVideo.mp4"} style={{ width: '100%' }} />
                 </video>
             </div>
             <br /><br /><br />
