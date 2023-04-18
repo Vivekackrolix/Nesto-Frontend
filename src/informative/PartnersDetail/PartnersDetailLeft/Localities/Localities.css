@@ -1,6 +1,11 @@
 .locality_slider {
-    padding: 0;
+    padding: 0 3%;
 }
+
+.locality_slider_row {
+    padding: 0 2px;
+}
+
 .locality_slider .slick-next:before,
 .slick-prev:before {
     font-size: 30px;
@@ -45,6 +50,7 @@
     background: var(--primary-color);
     top: 0;
 }
+
 .locality-slider_span-3 {
     font-size: 14px;
     font-weight: 400;

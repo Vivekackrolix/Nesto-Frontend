@@ -1,4 +1,5 @@
 :root {
+  font-family: 'Bahnschrift';
   /* colors */
   --primary-color: #278fd9;
   --purple-color: #bf0063;
@@ -38,21 +39,13 @@ html::-webkit-scrollbar-thumb {
 
 body {
   overflow-x: hidden !important;
+  font-size: 0.9em;
+  line-height: 1.35;
 }
 
 @font-face {
   font-family: 'Bahnschrift';
   src: url(./fonts/Bahnschrift.ttf) format('truetype');
-}
-
-:root {
-  font-family: 'Bahnschrift';
-}
-
-
-body {
-  font-size: 0.9em;
-  line-height: 1.35;
 }
 
 .form-control {
@@ -73,6 +66,12 @@ body {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #c6c6c6 !important;
+}
+
+/* userSelect */
+::selection {
+  background: var(--primary-color);
+  color: var(--color-white);
 }
 
 .btn.btn-color-outline-primary {

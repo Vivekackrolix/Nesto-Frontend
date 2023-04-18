@@ -1,6 +1,7 @@
 .reviews_slider {
-    padding: 0;
+    padding: 0 3%;
 }
+
 .reviews_slider .slick-next:before,
 .slick-prev:before {
     /* font-size: 30px;
@@ -8,9 +9,9 @@
 }
 
 .reviews_slider-row {
-    /* padding: 0 3%; */
+    padding: 0;
     margin: 0;
-}   
+}
 
 .reviews_slider .reviews_slider-col {
     width: 100%;
@@ -48,9 +49,11 @@
     color: var(--primary-color);
     cursor: pointer;
 }
+
 .reviews_slider .reviews_slider-box3 {
     margin-top: 1.55rem;
 }
+
 .reviews_slider .reviews_slider-span3 {
     color: var(--silver-surfer);
     font-weight: 400;
