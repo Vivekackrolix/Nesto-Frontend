@@ -33,6 +33,18 @@ const OutdoorImagePopUp = (props) => {
         {
             img: '/assets/informative/homeSlider-3.jpg'
         },
+        {
+            img: '/assets/informative/homeSlider-1.png'
+        },
+        {
+            img: '/assets/informative/homeSlider-3.jpg'
+        },
+        {
+            img: '/assets/informative/homeSlider-1.png'
+        },
+        {
+            img: '/assets/informative/homeSlider-3.jpg'
+        },
     ]
     return (
         <Modal

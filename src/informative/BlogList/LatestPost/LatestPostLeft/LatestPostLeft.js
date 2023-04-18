@@ -135,13 +135,15 @@ const LatestPostLeft = () => {
               data-aos="fade-right"
             >
               <div className="left-col_box">
-                <Link to="/blog-detail">
-                  <img
-                    className="left-col_img"
-                    src="/assets/informative/latest-news1.png"
-                    alt="news"
-                  />
-                </Link>
+                <div className="left-col_box_child-box">
+                  <Link to="/blog-detail">
+                    <img
+                      className="left-col_img"
+                      src="/assets/informative/latest-news1.png"
+                      alt="news"
+                    />
+                  </Link>
+                </div>
 
                 <p className="left-col_date">{item.date}</p>
                 <Link to="/blog-detail" className="left-col_para">

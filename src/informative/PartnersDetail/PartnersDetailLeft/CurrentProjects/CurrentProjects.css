@@ -1,10 +1,19 @@
 /* Current Projects ================
 ================================= */
+.current-project_slider {
+    padding: 0;
+    /* background: #000; */
+}
+.current-project_row {
+    /* padding: 0; */
+    /* padding-left: 10px; */
+}
 .current-project_slider .slick-next:before,
 .slick-prev:before {
     font-size: 30px;
     color: var(--cold-black-color);
 }
+
 .current-project_slider .current-project-slider_col-1 {
     width: 50%;
     margin-right: auto;
@@ -12,6 +21,7 @@
     border-radius: 2rem;
     position: relative;
 }
+
 .current-project_slider .current-project-slider_tag {
     position: absolute;
     top: 0;
@@ -24,6 +34,7 @@
     margin: 10px 0;
     font-size: 18px;
 }
+
 .current-project_slider .current-project-slider_icon1 {
     position: absolute;
     bottom: 0;
@@ -35,11 +46,13 @@
     margin: 10px;
     cursor: pointer;
     font-size: 18px;
-    transition: all .2s ;
+    transition: all .2s;
 }
+
 .current-project_slider .current-project-slider_icon1:hover {
     transform: scale(1.04);
 }
+
 .current-project_slider .current-project-slider_icon2 {
     position: absolute;
     bottom: 0;
@@ -51,10 +64,12 @@
     cursor: pointer;
     font-size: 18px;
 }
+
 .current-project-slider_col-1 .current-project-slider_img {
     height: 100%;
     width: 100%;
 }
+
 .current-project_slider .current-project_col-2 {
     width: 50%;
     padding: 20px 0 20px 15px;
@@ -62,11 +77,13 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .current-project_slider .current-project_span-1 {
     font-weight: 700;
     font-size: 16px;
     display: block;
 }
+
 .current-project_slider .current-project_span-2 {
     font-weight: 400;
     font-size: 14px;
@@ -74,6 +91,7 @@
     display: block;
     margin-top: 8px;
 }
+
 .current-project_slider .current-project_span-3 {
     font-weight: 700;
     padding-right: .5rem;
@@ -82,6 +100,7 @@
     margin-top: 8px;
     display: block;
 }
+
 .current-project_slider .current-project_star {
     color: #ffb630;
     font-size: 16px;

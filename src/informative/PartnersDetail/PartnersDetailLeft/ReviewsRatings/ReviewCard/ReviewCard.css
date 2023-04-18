@@ -1,8 +1,16 @@
+.reviews_slider {
+    padding: 0;
+}
 .reviews_slider .slick-next:before,
 .slick-prev:before {
     /* font-size: 30px;
     color: var(--cold-black-color); */
 }
+
+.reviews_slider-row {
+    /* padding: 0 3%; */
+    margin: 0;
+}   
 
 .reviews_slider .reviews_slider-col {
     width: 100%;

@@ -62,7 +62,7 @@ const ReviewCard = () => {
             <Slider {...settings}>
                 {projectSliderData.map((item) => (
                     <div className='container'>
-                        <div className='row p-2'>
+                        <div className='row reviews_slider-row'>
                             <div className='d-flex p-0 rounded-3'>
                                 <div className='col-lg-6 reviews_slider-col'>
                                     <div className='reviews_slider-box1'>
