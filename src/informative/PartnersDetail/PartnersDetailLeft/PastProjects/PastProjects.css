@@ -68,7 +68,7 @@
 .past-project_slider .past-project_span-2 {
     font-weight: 400;
     font-size: 14px;
-    color: var(--cold-black-color);
+    color: var(--silver-surfer);
     display: block;
     margin-top: 8px;
 }
@@ -84,4 +84,7 @@
     color: #ffb630;
     font-size: 16px;
     margin-right: 1.5px;
+}
+.past-project-slider-card{
+    border: 2px solid var(--wild-sand);
 }

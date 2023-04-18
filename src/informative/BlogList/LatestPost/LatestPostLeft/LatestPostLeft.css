@@ -63,3 +63,6 @@
     color: var(--primary-color);
     font-weight: 400;
 }
+.left-col_link:hover{
+    color: var(--carnation-color);
+}
