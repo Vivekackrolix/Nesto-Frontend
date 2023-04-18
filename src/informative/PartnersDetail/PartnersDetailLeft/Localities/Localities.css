@@ -12,6 +12,7 @@
     width: 100%;
     align-items: center;
     position: relative;
+    border: 1.5px solid var(--wild-sand);
 }
 
 .locality-slider_img {
@@ -20,7 +21,8 @@
 
 .locality-slider_span-1 {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.2;
     display: block;
 }
 
@@ -28,6 +30,7 @@
     font-weight: 500;
     font-size: 16px;
     display: block;
+    color: var(--silver-surfer);
 }
 
 .locality-slider_box {

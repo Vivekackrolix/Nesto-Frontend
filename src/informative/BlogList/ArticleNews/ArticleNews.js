@@ -34,7 +34,7 @@ const ArticleNews = () => {
                     {/* <h3 className='sections-heading'>Articles & News</h3>
                     <span className='sections-sub-heading'>Get the Latest News, Updates and Tips</span> */}
                 </div>
-                <div className='row article-news_row my-5'>
+                <div className='row article-news_row mt-3 mb-5'>
                     {data.map((item) => {
                         return (
                             <div className='col-lg-4 article-news_col'>

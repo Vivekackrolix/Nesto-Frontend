@@ -5,14 +5,14 @@
 }
 .partners-container .fifth-card__box  {
     background: var(--lite-skyblue);
-    padding: 14% 5%;
+    padding: 8% 5%;
     margin: auto;
     width: 100%;
 }
 .partners-container .fifth-card__span-1 {
     text-align: center;
     margin: auto;
-    font-size: 2rem;
+    font-size: 1.35rem;
     color: var(--cold-black-color);
     font-weight: 600;
 }
@@ -22,9 +22,9 @@
     width: 100%;
 }
 .partners-container .fifth-card__span-2 {
-    font-size: 24px;
+    font-size: 1.35rem;
     display: block;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     font-weight: 500;
 }
 .partners-container .fifth-card__link {
@@ -39,14 +39,17 @@
     padding: 25px 0 0 25px;
 }
 .partners-container .fifth-card__span-3 {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 700;
     color: var(--cold-black-color);
 }
 .partners-container .fifth-card__li {
-    font-size: 24px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 1.4;
     list-style: none;
+    font-weight: 400;
+    color: var(--silver-surfer);
 }
 .partners-container .fifth-card__dot {
-    width: 6px;
+    width: 5px;
 }

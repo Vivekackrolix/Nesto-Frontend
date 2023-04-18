@@ -62,8 +62,8 @@ const PastProjects = () => {
             <Slider {...settings}>
                 {localitySliderData.map((item) => (
                     <div className='container'>
-                        <div className='row p-2'>
-                            <div className='col-lg-6 shadow-sm rounded-3 p-4 locality-slider_col-2 gap-4'>
+                        <div className='row me-2'>
+                            <div className='col-lg-6 rounded-3 p-3 locality-slider_col-2 gap-4'>
                                 <div className=''>
                                     <img src={item.img} className='locality-slider_img' alt='locality-slider' />
                                 </div>

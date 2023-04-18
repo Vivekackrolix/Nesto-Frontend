@@ -14,7 +14,7 @@ export default function GetStarted() {
               </span>
               <div className="">
                 <Link to="/builder-page" className="get-started_btn primary_button rounded-3">
-                  Let's get Started
+                  Let's Get Started
                   <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
                 </Link>
               </div>
