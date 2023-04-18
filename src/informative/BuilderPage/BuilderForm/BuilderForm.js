@@ -5,20 +5,21 @@ const BuilderForm = () => {
     return (
         <div className='col-lg-4 builder-banner-col-3' data-aos='fade-up'>
             <div className='builder-banner-col-3_title_div'>
-                <span className='builder-banner-col-3_title'>Hello! List your Property / Requirement</span>
+                <span className='builder-banner-col-3_title'>Hello! List Your Property / Requirement</span>
             </div>
             <form action='#' className='builder-banner-col-3_form'>
                 <input type='text' placeholder='Name' className='builder-banner-col-3_input' required />
                 <input type='number' placeholder='Phone Number' className='builder-banner-col-3_input' required />
                 <input type='email' placeholder='Email Address' className='builder-banner-col-3_input' required />
                 <select className='builder-banner-col-3_input builder-banner-col-3_select'>
-                    <option>option1</option>
-                    <option>option1</option>
-                    <option>option1</option>
-                    <option>option1</option>
-                    <option>option1</option>
+                    <option disabled={true} value="">Property Type</option>
+                    <option>Flats / Apartment</option>
+                    <option>Farmhouse / Villa</option>
+                    <option>Plots / Lands</option>
+                    <option>Commercial</option>
                 </select>
                 <select className='builder-banner-col-3_input builder-banner-col-3_select'>
+                <option disabled={true} value="">Location of Property</option>
                     <option>option1</option>
                     <option>option1</option>
                     <option>option1</option>

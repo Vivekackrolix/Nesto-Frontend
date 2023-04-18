@@ -1,7 +1,6 @@
 .reviews_slider {
     padding: 0 3%;
 }
-
 .reviews_slider .slick-next:before,
 .slick-prev:before {
     /* font-size: 30px;
@@ -57,4 +56,9 @@
 .reviews_slider .reviews_slider-span3 {
     color: var(--silver-surfer);
     font-weight: 400;
+}
+.reviews_slider-card{
+    width: auto !important;
+    display: block !important;
+    max-width: 97.5%;
 }
