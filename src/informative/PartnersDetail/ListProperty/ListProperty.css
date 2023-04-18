@@ -6,10 +6,11 @@
 }
 
 .listing-container_col-1 {
-    padding-left: 60px;
+    padding-left: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-transform: capitalize;
 }
 
 .listing-container_span {

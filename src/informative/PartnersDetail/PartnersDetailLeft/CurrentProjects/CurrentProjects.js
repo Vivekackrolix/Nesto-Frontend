@@ -79,8 +79,8 @@ const CurrentProjects = () => {
             <Slider {...settings}>
                 {projectSliderData.map((item) => (
                     <div className='container'>
-                        <div className='row p-2'>
-                            <div className='d-flex shadow-sm p-0 rounded-3'>
+                        <div className='row me-2'>
+                            <div className='d-flex p-0 rounded-3 current-project-slider-card'>
                                 <div className='col-lg-6 current-project-slider_col-1'>
                                     <div className='h-100'>
                                         <span className='current-project-slider_tag'>{item.tag}</span>

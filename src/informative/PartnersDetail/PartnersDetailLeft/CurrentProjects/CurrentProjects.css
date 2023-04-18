@@ -87,3 +87,6 @@
     font-size: 16px;
     margin-right: 1.5px;
 }
+.current-project-slider-card{
+    border:  2px solid var(--wild-sand);
+}
