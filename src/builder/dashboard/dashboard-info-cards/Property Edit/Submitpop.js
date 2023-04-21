@@ -1,10 +1,7 @@
-// import { useNavigate } from "react-router-dom";
 import { Button, Container, Modal } from "react-bootstrap";
 import submit from "../../../Images/submit.png";
 
 const SubmitPop = (props) => {
-  // const navigate = useNavigate();
-
   return (
     <Modal show={props.show}>
       <Container className="pt-5 pb-4 py-2 dashboard__wrapper">
@@ -21,20 +18,16 @@ const SubmitPop = (props) => {
           />
         </h6>
         <br />
-        {/* <div className=" d-flex row justify-content-center"> */}
+
         <h2 className="d-flex justify-content-center">Request Submitted</h2>
         <br />
-        {/* <Modal.Title style={{ color: "#838BA1" }}> */}
+
         <span className="d-flex justify-content-center">
           <h4 style={{ color: "#838BA1" }}>
             Changes suggested by you will be live.Post review by Nestohub team
           </h4>
-
-          {/* <h4 style={{ color: "#838BA1" }}></h4> */}
         </span>
         <br />
-        {/* </Modal.Title> */}
-        {/* </div> */}
 
         <div className="d-flex justify-content-center mt-2 pt-2 ms-2">
           <Button

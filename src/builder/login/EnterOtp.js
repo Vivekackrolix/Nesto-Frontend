@@ -5,6 +5,8 @@ import { RiTimerLine } from "react-icons/ri";
 import CustomModal from "../../components/common/CustomModal";
 // import OtpContent from './OtpContent';
 import axios from "axios";
+import { apiEndpoints } from "../Api/ApiEndpoint";
+import { postAPI } from "../Api/ApiRequest";
 
 const EnterOtp = ({ show, onHide, phone, setRegister }) => {
   const otpInputs = useRef([]);
@@ -13,17 +15,24 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
   const navigate = useNavigate();
   const [timer, setTimer] = useState(30);
 
+  const hide = () => {
+    onHide(false);
+  };
+
   const resendOTP = async () => {
     resetOtpInputs();
     startTimer();
     debugger;
-    const response = await axios.post(
-      // "http://13.233.149.97:3000/api/v1/builder/resendOtp",
-      "http://localhost:3000/api/v1/builder/resendOtp",
-      {
-        phoneNumber: phone,
-      }
-    );
+    // const response = await axios.post(
+    //   // "http://13.233.149.97:3000/api/v1/builder/resendOtp",
+    //   "http://localhost:3000/api/v1/builder/resendOtp",
+    //   {
+    //     phoneNumber: phone,
+    //   }
+    // );
+    const response = await postAPI(apiEndpoints.resendOtp, {
+      phoneNumber: phone,
+    });
     console.log(response);
   };
 
@@ -34,16 +43,20 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
     });
     try {
       debugger;
-      const response = await axios.post(
-        // "http://13.233.149.97:3000/api/v1/builder/verifyOtp",
-        "http://localhost:3000/api/v1/builder/verifyOtp",
-        { phoneNumber: phone, otp: otp }
-      );
+      // const response = await axios.post(
+      //   // "http://13.233.149.97:3000/api/v1/builder/verifyOtp",
+      //   "http://localhost:3000/api/v1/builder/verifyOtp",
+      //   { phoneNumber: phone, otp: otp }
+      // );
+      const response = await postAPI(apiEndpoints.verifyOtp, {
+        phoneNumber: phone,
+        otp: otp,
+      });
       // console.log(response);
-      if (response.data.code === 200) {
+      if (response.code === 200) {
         console.log("CORRECT OTP");
         localStorage.setItem("phone", phone);
-        if (response.data.data.status === "newuser") {
+        if (response.data.status === "newuser") {
           // navigate("/builder/register");
           setRegister(true);
           onHide(false);
@@ -120,7 +133,7 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
       show={show}
       border
       closeBtn
-      onHide={onHide}
+      onHide={hide}
       cssClassName="nes__dashboard__modal"
       modalHeader
     >

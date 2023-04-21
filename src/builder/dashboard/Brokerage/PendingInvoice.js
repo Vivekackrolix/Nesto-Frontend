@@ -1,26 +1,19 @@
 // import { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { GrDocumentPdf } from "react-icons/gr";
 import brocker from "../../Images/brocker.png";
-import axios from "axios";
 import { useEffect, useState } from "react";
+import { apiEndpoints } from "../../Api/ApiEndpoint";
+import { getAPI } from "../../Api/ApiRequest";
 const PendingInvoice = () => {
   // debugger;
   const [data, setData] = useState([]);
   useEffect(() => {
     const getPending = async () => {
       debugger;
-      const response = await axios.get(
-        "http://65.1.3.134:3000/api/v1/invoice/getAllInvoiceForBuilder?builderId=641069056532f2569479fc9d&status=pending",
-        {
-          headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
-          },
-        }
-      );
-      console.log(response.data.data);
-      setData(response.data.data);
+      const response = await getAPI(apiEndpoints.getAllInvoiceForBuilder);
+      // console.log(response.data.data);
+      setData(response.data);
     };
     debugger;
 
@@ -28,6 +21,9 @@ const PendingInvoice = () => {
   }, []);
 
   const propertyListing = data.map((itm, index) => {
+    const unitType = itm?.invoices[0]?.claimId?.propertyId?.unitType
+      ? itm?.invoices[0]?.claimId?.propertyId?.unitType
+      : [];
     return (
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3">
         <div className="d-flex ">
@@ -37,7 +33,7 @@ const PendingInvoice = () => {
           <div className="d-flex flex-column ">
             <div className="d-flex  justify-content-between">
               <span className="mr-auto p-2">
-                <h5>Sky Danelions Apartment</h5>
+                <h5>{itm?.invoices[0]?.builderId?.projectName}</h5>
                 {/* <h5>{itm.invoices.builderId.companyName}</h5> */}
                 <p
                   style={{
@@ -47,11 +43,11 @@ const PendingInvoice = () => {
                     textDecorationLine: "underline",
                   }}
                 >
-                  Sector-29,Gurugram
+                  {itm?.invoices[0]?.builderId?.locationOfProperty}
                 </p>
               </span>
               <span className="p-2" style={{ color: "#8B9199" }}>
-                12/12/2022
+                {itm?.invoices[0]?.claimId?.date}
               </span>
             </div>
             <div className="d-flex justify-content-between">
@@ -59,19 +55,19 @@ const PendingInvoice = () => {
                 <p className="" style={{ color: "#8B9199" }}>
                   Broker Name
                 </p>
-                <p>Lorem Ipsum</p>
+                <p> {itm?.invoices[0]?.brokerId?.name}</p>
               </span>
               <span className="p-2 ">
                 <p className="" style={{ color: "#8B9199" }}>
                   Unit Number
                 </p>
-                <p>32322132</p>
+                <p>{unitType.map((item) => item)}</p>
               </span>
               <span className="p-2">
                 <p className="" style={{ color: "#8B9199" }}>
                   Claimed Amount
                 </p>
-                <p>RS.3.94 L</p>
+                <p> {itm?.invoices[0]?.claimId?.brokerageAmount}</p>
               </span>
             </div>
           </div>
@@ -87,8 +83,12 @@ const PendingInvoice = () => {
           </div>
           <hr />
           <div className="d-flex justify-content-around">
-            <p style={{ color: "#838383" }}>32245554778</p>
-            <p style={{ color: "#838383" }}>Rs.3.94</p>
+            <p style={{ color: "#838383" }}>
+              {itm?.invoices[0]?._id.slice(-10)}
+            </p>
+            <p style={{ color: "#838383" }}>
+              {itm?.invoices[0]?.invoiceAmount}
+            </p>
             <h5>
               <button
                 type="button"
@@ -104,8 +104,13 @@ const PendingInvoice = () => {
           </div>
           <hr />
           <div className="d-flex justify-content-around">
-            <p style={{ color: "#838383" }}>32245554778</p>
-            <p style={{ color: "#838383" }}>Rs.3.94</p>
+            <p style={{ color: "#838383" }}>
+              {" "}
+              {itm?.invoices[1]?._id.slice(-10)}
+            </p>
+            <p style={{ color: "#838383" }}>
+              {itm?.invoices[1]?.invoiceAmount}
+            </p>
             <h5>
               <button
                 type="button"

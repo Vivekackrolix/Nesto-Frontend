@@ -26,7 +26,7 @@ const DashboardHeader = () => {
             <Nav className="mx-auto">
               <Nav.Item
                 as={Link}
-                to="/builder/home-dashboard/property"
+                to="/builder/home-dashboard"
                 className="mx-3 d-flex align-items-center gap-2"
                 style={{ textDecoration: "none" }}
               >
@@ -34,6 +34,8 @@ const DashboardHeader = () => {
                 Home
               </Nav.Item>
               <Nav.Link
+                as={Link}
+                to="/builder/home-dashboard/property"
                 className="mx-3 d-flex align-items-center gap-2"
                 style={{ color: "black" }}
               >
@@ -51,28 +53,48 @@ const DashboardHeader = () => {
               </Nav.Item>
             </Nav>
             {/* <Nav className="mx-auto gap-2 "> */}
-            <Nav className="d-flex col-3 ms-auto align-items-center justify-content-end gap-2">
-              <Nav.Item>
-                <div className="nes__navbar__right__circle rounded-circle d-flex align-items-center justify-content-center">
-                  <GiWallet />
-                </div>
+            {/* <Nav className="d-flex col-3 ms-auto align-items-center justify-content-end gap-2"> */}
+            {/* <div className="d-flex col-3 ms-auto align-items-center justify-content-end"> */}
+            {/* <Nav.Item> */}
+            {/* <div className="nes__navbar__right__circle rounded-circle d-flex align-items-center justify-content-center"> */}
+            {/* <GiWallet /> */}
+            {/* </div> */}
+            {/* </Nav.Item> */}
+            {/* <Nav.Item className="nes__navbar__right__circle rounded-circle d-flex align-items-center justify-content-center"> */}
+            {/* <div className="d-flex align-items-center position-relative"> */}
+            {/* <div className="nes__navbar__right__circle rounded-circle d-flex align-items-center justify-content-center"> */}
+            {/* <BsFillBellFill /> */}
+            {/* <NotificationDropdown notification={3} /> */}
+            {/* </div> */}
+            {/* </div> */}
+            {/* </Nav.Item> */}
+            {/* </div> */}
+            {/* </Nav> */}
+
+            <div className="d-flex col-3 ms-auto align-items-center justify-content-end">
+              <Nav.Item className="me-2 p-2">
+                <img
+                  src="/assets/subscription.png"
+                  alt="subscription"
+                  className="subscription"
+                />
               </Nav.Item>
-              <Nav.Item className="nes__navbar__right__circle rounded-circle d-flex align-items-center justify-content-center">
-                <div className="d-flex align-items-center position-relative">
-                  <div className="nes__navbar__right__circle rounded-circle d-flex align-items-center justify-content-center">
-                    {/* <BsFillBellFill /> */}
-                    <NotificationDropdown notification={3} />
-                  </div>
-                </div>
+              <Nav.Item className="me-2">
+                <img
+                  src="/assets/notification.png"
+                  alt="notification"
+                  className="notification"
+                />
+                {/* <NotificationDropdown notification={3} /> */}
               </Nav.Item>
               <Nav.Item
-                className="nes__navbar__right__circle rounded-circle d-flex align-items-center justify-content-center"
+                className="me-3 mx-1 my-2"
                 as={Link}
                 to="/builder/home-dashboard/profile"
               >
-                <img src={profile} alt="profile" />
+                <img src={profile} alt="profile" className="br-profile" />
               </Nav.Item>
-            </Nav>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

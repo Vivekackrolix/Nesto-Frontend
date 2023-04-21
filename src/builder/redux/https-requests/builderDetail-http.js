@@ -6,7 +6,7 @@ export const getBuilderDetail = () => {
     //HTTP REQ
     const getData = async () => {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/builder/getAllBuilder",
+        "https://apis.nestohub.in/api/v1/builder/getAllBuilder",
         {
           headers: {
             Authorization:

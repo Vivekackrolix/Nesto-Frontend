@@ -10,7 +10,7 @@ import homeImage from "../Images/summer.png";
 import PropertyInvoice from "./dashboard-property-analytics/PendindInvoice";
 import RecentPackage from "./dashboard-property-analytics/RecentPackage";
 import RecentlyAdded from "./dashboard-soldout-properties/RecentlyAdded";
-import Header from "../header/Header";
+// import Header from "../header/Header";
 import Footer from "./Footer/Footer";
 import { useEffect } from "react";
 import { getBuilderDetail } from "../redux/https-requests/builderDetail-http";
@@ -51,10 +51,10 @@ const HomeDashBoard = () => {
 
         <SearchFilterBox />
         <PropertyAnalytics />
-        <SoldOut data={[1, 2, 3, 4, 5, 6]} />
-        <RecentlyAdded data={[1, 2, 3, 4, 5, 6]} />
+        <SoldOut />
+        <RecentlyAdded />
 
-        <RecentPackage />
+        {/* <RecentPackage /> */}
         <PropertyInvoice />
         {/* <Charts /> */}
       </Container>

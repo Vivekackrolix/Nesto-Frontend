@@ -2,35 +2,22 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../../Images/propertyimage.png";
 import { Link } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
-import axios from "axios";
-import { recentlySoldPropertyActions } from "../../../redux/recentlySoldPropertySlice";
+import { useEffect, useState } from "react";
+
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
+import { getAPI } from "../../../Api/ApiRequest";
 
 const PastPropertyList = (props) => {
-  const data = useSelector((state) => state.soldPropertyDetail.properties);
-  const dispatch = useDispatch();
+  // const data = useSelector((state) => state.soldPropertyDetail.properties);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const getBoughtProperties = async () => {
-      // debugger;
-      const response = await axios.get(
-        // "http://13.233.149.97:3000/api/v1/boughtProperty/getAllBoughtProperty",
-        "http://65.1.3.134:3000/api/v1/boughtProperty/getAllBoughtProperty",
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
+      const response = await getAPI(apiEndpoints.getAllBoughtProperty);
 
       console.log(response.data);
-      dispatch(
-        recentlySoldPropertyActions.setSoldPropertyDetails({
-          data: response.data.data,
-        })
-      );
+
+      setData(response.data);
     };
 
     getBoughtProperties();
@@ -104,18 +91,9 @@ const PastPropertyList = (props) => {
   });
   return (
     <>
-      {/* <DashboardHeader /> */}
       <Container className="mt-5">
-        {/* <SearchFilterBox />
-        <div className="row justify-content-between">
-          <h3 className="col-4" style={{ fontFamily: "Bahnschrift" }}>
-            Recently Sold Out Property
-          </h3>
-        </div> */}
-
         <div className="mt-2 row justify-content-around">{propertyListing}</div>
       </Container>
-      {/* <Footer /> */}
     </>
   );
 };

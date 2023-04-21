@@ -32,7 +32,10 @@ const PromotedVisitItem = (props) => {
       <Col>{props.itm.date}</Col>
       {/* <Col>{props.itm.visitStatus}</Col> */}
 
-      <Col as={Link} to="/builder/home-dashboard/promoted/claim">
+      <Col
+        as={Link}
+        to={`/builder/home-dashboard/promoted/claim/${props.itm._id}`}
+      >
         {props.itm.visitStatus}
       </Col>
       <Col>

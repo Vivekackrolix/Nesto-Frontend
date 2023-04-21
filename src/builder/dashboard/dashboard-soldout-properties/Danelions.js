@@ -9,6 +9,7 @@ import { useState } from "react";
 const Danelions = ({ data }) => {
   const [rating, setRating] = useState(0);
   const unitType = data.unitType ? data.unitType : [];
+  // console.log(data);
 
   const [hover, setHover] = useState(0);
   return (
@@ -63,7 +64,7 @@ const Danelions = ({ data }) => {
               type="button"
               className="rounded-pill border-primary btn-lg justify-content-center px-4 gap-3 py-1"
               as={Link}
-              to="/builder/home-dashboard/propertyedit"
+              to={`/builder/home-dashboard/propertyedit/${data._id}`}
             >
               <BsPencilFill
                 style={{

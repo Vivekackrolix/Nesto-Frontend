@@ -1,15 +1,15 @@
-import axios from 'axios';
-import { useSelector } from 'react-redux';
+import axios from "axios";
+import { useSelector } from "react-redux";
 
 const axiosInstance = axios.create({
   // baseURL: `http://localhost:3000/api`,
   baseURL: `http://65.1.3.134:3000/api`,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
-const setAuthToken = token => {
+const setAuthToken = (token) => {
   if (token) {
     axiosInstance.defaults.headers.Authorization = `Bearer ${token}`;
   } else {
@@ -18,7 +18,7 @@ const setAuthToken = token => {
 };
 
 const useAuth = () => {
-  const token = useSelector(state => state.auth.token) || [];
+  const token = useSelector((state) => state.auth.token) || [];
 
   if (token) {
     setAuthToken(token);
