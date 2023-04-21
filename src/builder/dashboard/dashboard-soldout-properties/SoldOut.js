@@ -24,16 +24,14 @@ const SoldOut = () => {
   const propertyListing = data?.slice(0, 6).map((itm, index) => {
     return (
       <Col
-        md={3}
-        sm={12}
-        className="card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0"
-        style={{
-          width: "21.75rem",
-        }}
+        md={3} sm={12}
+        className="card bl-card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0 w-100"        
         id={itm._id}
         key={itm._id}
       >
-        <Card.Img className="w-100" variant="top" src={propertyImage} />
+        <Link to="/builder/home-dashboard/description">
+          <Card.Img className="w-100 bl-prop-img" variant="top" src={propertyImage} />
+        </Link>
         <Card.Body>
           <div>
             <div>
@@ -49,7 +47,7 @@ const SoldOut = () => {
               {itm.propertyId === null ? "no data" : itm.propertyId.location}
             </div>
           </div>
-          <Row className="p-2">
+          <Row className="bl-p-2">
             <Col>
               <Row style={{ opacity: 0.5 }}>Unit Type</Row>
               <Row>{itm.unitType}</Row>

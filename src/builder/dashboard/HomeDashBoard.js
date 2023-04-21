@@ -15,8 +15,6 @@ import Footer from "./Footer/Footer";
 import { useEffect } from "react";
 import { getBuilderDetail } from "../redux/https-requests/builderDetail-http";
 import { useDispatch, useSelector } from "react-redux";
-// import RecentlyAddedProperty from "./dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
-// import Charts from "./property/Charts";
 
 const dashboardInfoCardsData = [];
 
