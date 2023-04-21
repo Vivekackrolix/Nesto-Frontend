@@ -156,7 +156,7 @@ p {
 }
 
 .cursor {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 /* primary_button */

@@ -1,117 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./LatestPostLeft.css";
 import { Link } from "react-router-dom";
 import LatestPostPagination from "../LatestPostPagination/LatestPostPagination";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { getAPI } from "../../BlogListApi/ApiRequest";
+import { apiEndpoints } from "../../BlogListApi/ApiEndpoint";
+// import { log } from "console";
 
 const LatestPostLeft = () => {
-  const [data, setData] = useState([
-    {
-      id: 0,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 1,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 2,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 3,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 4,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 5,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 6,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 7,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 8,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 9,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 10,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 11,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-    {
-      id: 12,
-      date: "Sept 05, 2022",
-      para1: "Tips to buy your dream home in minutes",
-      para2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      userImg: "/assets/informative/articleImg4.png",
-      name: "Sarah Harding",
-    },
-  ]);
+  const [data, setData] = useState([]);
   const [showPerPage, setShowPerPage] = useState(6);
   const [pagination, setPagination] = useState({
     start: 0,
@@ -120,6 +17,16 @@ const LatestPostLeft = () => {
   const onPaginationChange = (start, end) => {
     setPagination({ start: start, end: end });
   };
+  useEffect(() => {
+    const getPage = async () => {
+      const response = await getAPI(apiEndpoints.getAllBlog);
+      debugger;
+      console.log(response.data);
+      setData(response.data);
+    };
+    getPage();
+  }, []);
+
   return (
     <div className="latest-post-left" style={{ overflowX: "hidden" }}>
       <div data-aos="fade-right">
@@ -129,47 +36,53 @@ const LatestPostLeft = () => {
       <div className="row mt-3">
         {data.slice(pagination.start, pagination.end).map((item) => {
           return (
-            <div
-              className="col-lg-6 left-col"
-              key={item.id}
-              data-aos="fade-right"
-            >
-              <div className="left-col_box">
-                <div className="left-col_box_child-box">
-                  <Link to="/blog-detail">
-                    <img
-                      className="left-col_img"
-                      src="/assets/informative/latest-news1.png"
-                      alt="news"
-                    />
-                  </Link>
-                </div>
-
-                <p className="left-col_date">{item.date}</p>
-                <Link to="/blog-detail" className="left-col_para">
-                  #{item.id} {item.para1}
-                </Link>
-                <p className="left-col_para-2">{item.para2}</p>
-                <div className="d-flex align-items-center justify-content-between mt-4">
-                  <div>
-                    <span>
-                      <img src={item.userImg} alt="user" />
-                      <span> {item.name}</span>
-                    </span>
-                  </div>
-                  <div>
-                    <Link to="/blog-detail" className="left-col_link">
-                      <span>
-                        Read More<MdKeyboardDoubleArrowRight
-                          size={20}
-                          className="move-arrow"
-                        />
-                      </span>
+            <>
+              <div
+                className="col-lg-6 latest-post-left-col"
+                key={item?._id}
+                data-aos="fade-right"
+              >
+                <div className="left-col_box">
+                  <div className="left-col_box_child-box">
+                    <Link to="/blog-detail">
+                      <img
+                        className="left-col_img"
+                        src="/assets/informative/latest-news1.png"
+                        // src={item?.thumbnailImage}
+                        alt="news"
+                      />
                     </Link>
+                  </div>
+
+                  <p className="left-col_date">{item?.blogDate}</p>
+                  <Link to="/blog-detail" className="left-col_para">
+                    {item?.blogName}
+                  </Link>
+                  <p className="left-col_para-2">{item?.excerpt}</p>
+                  <div className="d-flex align-items-center justify-content-between mt-4">
+                    <div>
+                      <span>
+                        <img
+                          src="/assets/informative/profile.png"
+                        // src={item?.profileImage} 
+                        />
+                        <span> {item?.postedByName}</span>
+                      </span>
+                    </div>
+                    <div>
+                      <Link to="/blog-detail" className="left-col_link">
+                        <span>
+                          Read More<MdKeyboardDoubleArrowRight
+                            size={20}
+                            className="move-arrow"
+                          />
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </>
           );
         })}
         <LatestPostPagination
@@ -178,7 +91,7 @@ const LatestPostLeft = () => {
           total={data.length}
         />
       </div>
-    </div>
+    </div >
   );
 };
 
