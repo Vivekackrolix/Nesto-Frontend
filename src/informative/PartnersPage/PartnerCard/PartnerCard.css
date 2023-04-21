@@ -1,5 +1,5 @@
 .partner-card {
-    margin: 20px auto 55px auto;
+    margin: 40px auto 55px auto;
 }
 
 .partner-card-div {
@@ -10,27 +10,37 @@
     margin: 0 2% 10% 2%;
     transform: scale(1);
     transition: all .3s ease-in;
-    cursor: pointer;
 }
 .partner-card-div:hover {
     transform: scale(1.05);
+    box-shadow: 0px 0px 15px 2px rgb(39 143 217 / 20%);
 }
 
 .partner-card-heading {
     font-weight: 700;
-    font-size: 28px;
+    font-size: 20px;
     display: block;
     margin-top: 12px;
+    color: #282431;
 }
 
 .partner-card-span {
-    font-weight: 350;
-    font-size: 21px;
+    font-weight: 400;
+    font-size: 16px;
     color: var(--primary-color);
-    margin-top: 6px;
     display: block;
 }
 
 .partner-star-div {
-    margin-top: 19px;
+    margin-top: 8px;
+}
+
+.partner-card-img-div{
+    border-radius: 50%;
+    border: 1px solid #e6e6e6;
+    width: 145px;
+    max-width: 100%;
+    height: 145px;
+    padding: 5px;
+    object-fit: scale-down;
 }

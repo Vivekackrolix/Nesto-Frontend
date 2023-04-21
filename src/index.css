@@ -1,4 +1,5 @@
 :root {
+  font-family: 'Bahnschrift';
   /* colors */
   --primary-color: #278fd9;
   --purple-color: #bf0063;
@@ -38,6 +39,8 @@ html::-webkit-scrollbar-thumb {
 
 body {
   overflow-x: hidden !important;
+  font-size: 0.9em;
+  line-height: 1.35;
 }
 
 @font-face {
@@ -45,14 +48,8 @@ body {
   src: url(./fonts/Bahnschrift.ttf) format('truetype');
 }
 
-:root {
-  font-family: 'Bahnschrift';
-}
-
-
-body {
-  font-size: 0.9em;
-  line-height: 1.35;
+.form-control {
+  font-size: 0.9rem;
 }
 
 ::placeholder {
@@ -69,6 +66,12 @@ body {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #c6c6c6 !important;
+}
+
+/* userSelect */
+::selection {
+  background: var(--primary-color);
+  color: var(--color-white);
 }
 
 .btn.btn-color-outline-primary {
@@ -154,4 +157,23 @@ p {
 
 .cursor {
   cursor: pointer;
+}
+
+/* primary_button */
+.primary_button {
+  text-decoration: none !important;
+  background: var(--primary-color) !important;
+  color: var(--color-white) !important;
+  padding: 10px 45px !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  border-radius: 8px !important;
+  border: 1px solid transparent !important;
+  transition: all .4s ease-in !important;
+}
+
+.primary_button:hover {
+  background: rgb(13 110 253 / 20%) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgb(13 110 253 / 20%) !important;
 }

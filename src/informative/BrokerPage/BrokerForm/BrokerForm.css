@@ -20,7 +20,7 @@
 
 .broker-banner-col-3_title {
     font-weight: 900;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .broker-banner-col-3_form {
@@ -29,9 +29,9 @@
 }
 
 .broker-banner-col-3_input {
-    border: 2px solid #E8ECF4;
+    border: 1px solid #E8ECF4;
     width: 100%;
-    padding: 12px 20px;
+    padding: 10px 20px;
     background: #F8F8F8;
     border-radius: 8px;
 }
@@ -59,11 +59,11 @@
     margin-top: 20px;
     background: var(--primary-color);
     border: 1px solid var(--primary-color);
-    font-size: 18px;
-    font-weight: 300;
-    border-radius: 10rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 8px;
     color: var(--color-white);
-    padding: 12px 0;
+    padding: 10px 0;
 }
 
 /* mediaQueri */

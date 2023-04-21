@@ -1,7 +1,9 @@
 .get-started {
+    background: url(../../../../public/assets/informative/circle-2.png) top left no-repeat, url(../../../../public/assets/started-building.png) bottom right no-repeat, var(--lite-skyblue);
+    /* background: url(../../../../public/assets/informative/circle-2.png) bottom left no-repeat, var(--lite-skyblue); */
+    position: relative;
+    background-size: 15%, 12%;
     margin-top: 5rem;
-    background: var(--lite-skyblue);
-    background-size: 100%;
 }
 
 .get-started_row {
@@ -18,36 +20,22 @@
 
 .get-started_heading {
     font-weight: 900;
-    font-size: 40px;
+    font-size: 34px;
     line-height: 1.2;
     display: block;
     text-transform: capitalize;
-    text-shadow: 2px 2px 3px #bbbbbb;
+    /* text-shadow: 2px 2px 3px #bbbbbb; */
 }
 
 .get-started_heading span {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
 }
 
 .get-started_btn {
-    margin-top: 10px;
-    padding: 8px 30px;
     display: block;
-    background: var(--primary-color);
-    border: 1px solid transparent;
+    margin-top: 10px;
     width: fit-content;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 350;
-    transition: transform .3s ease-in;
-}
-
-.get-started_btn:hover {
-    background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    transform: scale(1.01);
 }
 
 .get-started_col-2 {
@@ -55,7 +43,7 @@
 }
 
 .get-started_img {
-    margin: auto;
+    margin: 0 0 0px 70px;
     width: 75%;
 }
 
@@ -69,6 +57,7 @@
     .get-started_col-1 {
         padding: 5% 0 0;
     }
+
     .get-started_heading {
         font-size: 26px;
     }
@@ -77,6 +66,7 @@
         font-size: 18px;
         font-weight: 400;
     }
+
     .get-started_btn {
         padding: 8px 22px 5px 22px;
     }

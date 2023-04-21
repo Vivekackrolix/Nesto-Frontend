@@ -1,7 +1,7 @@
 .partners-second__card {
     padding: 10px;
+    margin-top: 20px;
     border: 2px var(--wild-sand) solid;
-    margin-top: 50px;
 }
 .second-card__box  {
     background: var(--lite-skyblue);
@@ -10,14 +10,16 @@
 }
 .second-card__span-1 {
     text-align: center;
-    /* width: 100%; */
     margin: auto;
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: var(--cold-black-color);
     font-weight: 600;
 }
 .second-card__btn-div {
-    padding: 0 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
 }
 .second-card__btn {
     width: 45%;
@@ -29,8 +31,7 @@
     padding-left: 6px;
 }
 .second-card__icon {
-    width: 150px;
-    margin-right: 6px;
+    width: 140px;
 }
 .second-card__icon-span-1 {
     font-size: 10px;

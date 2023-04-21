@@ -1,7 +1,7 @@
 import React from 'react'
 import './RatingChart.css'
 import { MdOutlineStarPurple500, MdOutlineStarOutline } from 'react-icons/md'
-import { CircularProgressbar, CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
+import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const RatingChart = () => {

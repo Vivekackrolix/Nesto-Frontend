@@ -49,7 +49,7 @@ const TermsCondition = () => {
                         <span className='t-c_heading'>Your Trusted Partner in Property Search</span>
                     </div>
                 </div>
-                <div className='t-c_footer-box'>
+                <div className='t-c_footer-box'> 
                     <span className='t-c_footer'>All trademarks, logos and names are properties of their respective owners. All Rights Reserved.© Copyright 2023 NestHub Realty Services Limited. Terms of use</span>
                 </div>
             </div>

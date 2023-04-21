@@ -1,10 +1,11 @@
-import React from 'react';
-import './partnerbanner.css';
-import SearchBar from '../SearchBar/SearchBar';
-import InformativeNavbar from '../../Navbar/Navbar';
-import { Link } from 'react-router-dom';
-import PartnerCard from '../PartnerCard/PartnerCard';
-import InformativeFooter from './../../InformativeFooter/InformativeFooter';
+import React from "react";
+import "./partnerbanner.css";
+import SearchBar from "../SearchBar/SearchBar";
+import InformativeNavbar from "../../Navbar/Navbar";
+import { Link } from "react-router-dom";
+import PartnerCard from "../PartnerCard/PartnerCard";
+import InformativeFooter from "../../InformativeFooter/InformativeFooter";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const PartnerBanner = () => {
   return (
@@ -15,15 +16,26 @@ const PartnerBanner = () => {
           <div className="col-lg-6 partners-col-1">
             <div>
               <h4 className="partners-h4">
-                Our Partners, The Companies That Represent Us.
+                Our Partners, The Companies That Represent Us
               </h4>
-              <hr className="banner-hr" />
+              <div className="load-wrapp">
+                <div className="load">
+                  <div className="line"></div>
+                  <div className="line"></div>
+                  <div className="line"></div>
+                </div>
+              </div>
               <p className="partners-p">
                 Borem ipsum dolor sit amet conse ctetur adipisicing elit sed do
-                eiusmod Eorem ipsum dolor sit amet conse ctetur.
+                eiusmod Eorem ipsum dolor sit amet conse ctetur. Borem ipsum
+                dolor sit amet conse ctetur adipisicing elit sed do eiusmod
+                Eorem ipsum dolor sit amet conse ctetur.
               </p>
-              <Link to="/" className="partners-link">
-                Contact Us
+              <Link to="/contact-us" className="partners-link primary_button">
+                Contact Us<MdKeyboardDoubleArrowRight
+                    size={20}
+                    className="move-arrow"
+                  />
               </Link>
             </div>
           </div>

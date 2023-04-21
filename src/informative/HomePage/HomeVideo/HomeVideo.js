@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './HomeVideo.css';
+import { AiFillPlayCircle } from "react-icons/ai";
 
 const Video = () => {
     const [play, setPlay] = useState(true);
@@ -13,9 +14,9 @@ const Video = () => {
     return (
         <>
             <div className="video-main" data-aos='fade-up'>
-                {play ? <img className="play-button" alt="play" src="/assets/informative/videoPlay.svg" /> : ""}
-                <video onPlay={handleClick} onPause={handlePause} controls className="home-video">
-                    <source src={"/assets/dummyVideo.mp4"} style={{ width: '100%' }} />
+                {play ? <AiFillPlayCircle className="play-button"></AiFillPlayCircle> : ""}
+                <video onPlay={handleClick} onPause={handlePause} controls autoPlay muted className="home-video">
+                    <source src={"/assets/informative/NestoHubVideo.mp4"} style={{ width: '100%' }} />
                 </video>
             </div>
             <br /><br /><br />

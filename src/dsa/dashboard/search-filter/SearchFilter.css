@@ -12,7 +12,7 @@
 
 /* Set common styles for input placeholders */
 .dashboard__wrapper__filter input::placeholder {
-  font-weight: 350;
+  font-weight: 400;
   font-size: 20px;
   color: #b3b4b8;
   opacity: 0.3;

@@ -1,7 +1,7 @@
 .partners {
-    background: var(--lite-skyblue);
-    overflow-x: hidden;
-    position: relative !important;
+    background: url(../../../../public/assets/informative/circle-2.png) top left no-repeat, url(../../../../public/assets/informative/circle-2.png) bottom center no-repeat, var(--lite-skyblue);
+    position: relative;
+    background-size: 15%, 25%;
     margin-bottom: 8%;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .partners-col-1 {
-    padding-left: 9%;
+    padding: 6%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -27,16 +27,15 @@
 
 .partners-h4 {
     font-weight: 700;
-    font-size: 33px;
-    line-height: 50px;
+    font-size: 34px;
+    line-height: 44px;
 }
 
 .partners-p {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 15px;
-    line-height: 26px;
+    line-height: 1.6;
     color: var(--silver-surfer);
-    width: 70%;
     margin-bottom: 24px;
 }
 
@@ -46,11 +45,32 @@
     color: var(--color-white);
     padding: 9px 45px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     border-radius: 8px;
 }
 
 .partners-link:hover {
     background: var(--primary-color);
     color: var(--color-white);
+}
+
+/* ====================== 
+========== Media Query */
+@media(max-width: 992px) {
+    .partners-h4{
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .partner-card-heading{
+        font-size: 18px !important;
+    }
+
+    .partner-card-span{
+        font-size: 14px !important;
+    }
+
+    .sections-heading{
+        font-size: 15px !important;
+    }
 }

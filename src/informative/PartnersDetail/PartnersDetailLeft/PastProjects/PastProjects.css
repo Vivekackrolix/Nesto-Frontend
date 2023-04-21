@@ -1,10 +1,19 @@
 /* Current Projects ================
 ================================= */
+.past-project_slider {
+    padding: 0 3%;
+}
+
+.past-project_row {
+    padding: 0 2px;
+}
+
 .past-project_slider .slick-next:before,
 .slick-prev:before {
     font-size: 30px;
     color: var(--cold-black-color);
 }
+
 .past-project_slider .past-project-slider_col-1 {
     width: 50%;
     margin-right: auto;
@@ -12,6 +21,7 @@
     border-radius: 2rem;
     position: relative;
 }
+
 .past-project_slider .past-project-slider_tag {
     position: absolute;
     top: 0;
@@ -22,8 +32,9 @@
     border-radius: 0 5px 5px 0;
     text-transform: uppercase;
     margin: 10px 0;
-    font-size: 18px;
+    font-size: .8rem;
 }
+
 .past-project_slider .past-project-slider_icon1 {
     position: absolute;
     bottom: 0;
@@ -35,11 +46,13 @@
     margin: 10px;
     cursor: pointer;
     font-size: 18px;
-    transition: all .2s ;
+    transition: all .2s;
 }
+
 .past-project_slider .past-project-slider_icon1:hover {
     transform: scale(1.04);
 }
+
 .past-project_slider .past-project-slider_icon2 {
     position: absolute;
     bottom: 0;
@@ -51,27 +64,32 @@
     cursor: pointer;
     font-size: 18px;
 }
+
 .past-project-slider_col-1 .past-project-slider_img {
     height: 100%;
     width: 100%;
 }
+
 .past-project_slider .past-project-slider_col-2 {
     width: 50%;
     padding: 20px 0 20px 14px;
 }
+
 .past-project_slider .past-project_span-1 {
     font-weight: 700;
     color: var(--cold-black-color);
     font-size: 16px;
     display: block;
 }
+
 .past-project_slider .past-project_span-2 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
-    color: var(--cold-black-color);
+    color: var(--silver-surfer);
     display: block;
     margin-top: 8px;
 }
+
 .past-project_slider .past-project_span-3 {
     font-weight: 700;
     padding-right: .5rem;
@@ -80,8 +98,13 @@
     margin-top: 8px;
     display: block;
 }
+
 .past-project_slider .past-project-slider_star {
     color: #ffb630;
     font-size: 16px;
     margin-right: 1.5px;
+}
+
+.past-project-slider-card {
+    border: 2px solid var(--wild-sand);
 }

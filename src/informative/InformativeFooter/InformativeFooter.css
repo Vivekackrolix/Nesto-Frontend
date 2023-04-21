@@ -7,14 +7,16 @@
     width: 90%;
     margin: auto;
 }
-
+.informative-footer_logo{
+    width: 200px;
+}
 .footer-col-1-span {
     display: block;
     margin-top: 18px;   
     color: var(--color-white);
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.6;
     /* width: 80%; */
 }
 
@@ -33,6 +35,11 @@
 .footer-col-1-icons:hover{
     transform: scale(1.1);
 }
+
+.informative-footer_logo{
+    width: 200px;
+}
+
 
 /* Second Col Css =======
 =======================*/
@@ -71,7 +78,7 @@
 .footer-mail-span {
     display: block;
     color: var(--color-white);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     line-height: 22px;
 }
@@ -87,7 +94,7 @@
 }
 .informative-footer_rights_p {
     color: var(--color-white);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     padding-top: 14px;
 }

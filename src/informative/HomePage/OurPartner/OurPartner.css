@@ -1,5 +1,5 @@
 .our-partner {
-  margin-top: 3%;
+  margin-top: 2%;
   margin-bottom: 8%;
 }
 
@@ -18,22 +18,6 @@
   margin-top: 5px;
 }
 
-.our-partner_link {
-  background-color: var(--carnation-color);
-  border-radius: var(--bs-border-radius-lg);
-  padding: 10px 42px;
-  border: none;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--color-white);
-  transition: all .3s ease-in;
-}
-
-.our-partner_link:hover {
-  color: var(--color-white);
-  background: var(--primary-color);
-}
-
 .next {
   background-image: url("../../../../public/assets/next.png");
 }
@@ -42,7 +26,14 @@
   height: 20px;
   width: 20px;
 }
-.our-partner .slick-list::before{
+
+.prev-image {
+  height: 20px;
+  width: 20px;
+  transform: rotate(180deg);
+}
+
+.our-partner .slick-list::before {
   background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 175px;
@@ -50,8 +41,9 @@
   width: 200px;
   z-index: 2;
 }
-.our-partner .slick-list::after{
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100% );
+
+.our-partner .slick-list::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
   content: "";
   height: 175px;
   position: absolute;

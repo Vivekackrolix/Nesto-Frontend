@@ -10,13 +10,16 @@ const InformativeFooter = () => {
                     <div className='container-fluid'>
                         <div className='row'>
                             <div className='col-lg-3 footer-col-1'>
+                                <Link to='/'>
                                 <img src='/assets/informative/informative-footer-logo.svg' alt='footer-logo' className='informative-footer_logo' />
+                                </Link>
+                                
                                 <span className='footer-col-1-span'>We’re reimagining how you buy, sell and rent. It’s now easier to get into a place you love. So let’s do this, together.</span>
                                 <div className='informative-footer-icons-div'>
-                                    <Link to='#'><img src='/assets/informative/footerSocialIcon4.svg' alt='social' className='footer-col-1-icons' /></Link>
-                                    <Link to='#'><img src='/assets/informative/footerSocialIcon3.svg' alt='social' className='footer-col-1-icons' /></Link>
-                                    <Link to='#'><img src='/assets/informative/footerSocialIcon2.svg' alt='social' className='footer-col-1-icons' /></Link>
-                                    <Link to='#'><img src='/assets/informative/footerSocialIcon1.svg' alt='social' className='footer-col-1-icons' /></Link>
+                                    <Link to='/'><img src='/assets/informative/footerSocialIcon4.svg' alt='social' className='footer-col-1-icons' /></Link>
+                                    <Link to='/'><img src='/assets/informative/footerSocialIcon3.svg' alt='social' className='footer-col-1-icons' /></Link>
+                                    <Link to='/'><img src='/assets/informative/footerSocialIcon2.svg' alt='social' className='footer-col-1-icons' /></Link>
+                                    <Link to='/'><img src='/assets/informative/footerSocialIcon1.svg' alt='social' className='footer-col-1-icons' /></Link>
                                 </div>
                             </div>
                             <div className='col-lg-3 footer-col-2'>
@@ -32,7 +35,7 @@ const InformativeFooter = () => {
                                 <Link to='/contact-us' className='informative-footer-link'>Contact Us</Link>
                             </div>
                             <div className='col-lg-3 footer-col-1 footer-col-4'>
-                                <span className='footer-col-2-span'>Get in Touch With Us</span>
+                                <span className='footer-col-2-span'>Get In Touch With Us</span>
                                 <span className='footer-col-1-span'>Duis mattis laoreet neque, et ornare neque sollicitudin at. Proin sagittis dolor sed...</span>
                                 <div className='footer-mail-div gap-3'>
                                     <div className=''>

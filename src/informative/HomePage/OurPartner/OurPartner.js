@@ -2,9 +2,10 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Heading from '../heading/Heading';
 import './OurPartner.css';
+import Heading from '../heading/Heading';
 import { Link } from 'react-router-dom';
+import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -38,7 +39,7 @@ function SamplePrevArrow(props) {
       }}
       onClick={onClick}
     >
-      <img className="next-image" src="./assets/back.png" alt="next" />
+      <img className="prev-image" src="./assets/next.png" alt="next" />
     </div>
   );
 }
@@ -95,67 +96,67 @@ const review = [
 ];
 
 const OurPartner = () => {
-    const settings = {
-      dots: false,
-      infinite: true,
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      speed: 3000,
-      autoplaySpeed: 3000,
-      cssEase: 'linear',
-      arrows: true,
-      loop: true,
-      autoplay: true,
-      accessibility: true,
-      swipeToSlide: true,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-      
-      responsive: [
-        {
-          breakpoint: 1080,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
-            arrows: false,
-          },
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 6,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    cssEase: 'linear',
+    arrows: true,
+    loop: true,
+    autoplay: true,
+    accessibility: true,
+    swipeToSlide: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    slidesToScroll: 1,
+
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
         },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            arrows: false,
-          },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
         },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 1,
-            arrows: false,
-          },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          arrows: false,
         },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-          },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
         },
-      ],
-    };
+      },
+    ],
+  };
   return (
     <div className="our-partner">
       <div className="">
-        <Heading title="Our Partners" sub="The Companies That Represent Us." />
+        <Heading title="Our Partners" sub="The Companies That Represent Us" />
       </div>
-      <div className="mt-4 mb-5 px-5 d-flex">
-        <Slider {...settings} className="partner-slider d-flex gap-2">
+      <div className="mt-4 mb-5 px-5 d-flex" data-aos='fade-up'>
+        <Slider {...settings} className="partner-slider d-flex gap-2" data-aos="fade-up">
           {review.map((obj, e) => {
             return (
               <div className="px-4" key={e}>
@@ -165,9 +166,10 @@ const OurPartner = () => {
           })}
         </Slider>
       </div>
-      <div className="text-center">
-        <Link to="/partner-page" className="our-partner_link">
+      <div className="text-center" data-aos='fade-up'>
+        <Link to="/partner-page" className="primary_button">
           View All
+          <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
         </Link>
       </div>
     </div>

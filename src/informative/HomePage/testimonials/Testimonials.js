@@ -6,40 +6,6 @@ import { FaStar } from 'react-icons/fa';
 import { AiOutlineStar } from 'react-icons/ai';
 import Heading from '../heading/Heading';
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: 'block',
-        background: 'red',
-        borderRadius: '50%',
-        padding: '1px',
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: 'block',
-        background: 'red',
-        borderRadius: '50%',
-        padding: '1px',
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
 const review = [
   {
     id: 1,

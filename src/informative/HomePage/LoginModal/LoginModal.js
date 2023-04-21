@@ -14,7 +14,7 @@ const LoginModal = ({ show, onHide }) => {
       onHide={onHide}
     >
       <div className="login-modal">
-        <span className="login-modal-heading">New Place, New Home!</span>
+        <h3 className="login-modal-heading">New Place, New Home!</h3>
         <span className="login-modal-sub-heading">
           Are you ready to uproot and start over in a new area?
         </span>
