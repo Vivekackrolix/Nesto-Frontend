@@ -1,11 +1,7 @@
-.video-main {
+.video-main-div {
   position: relative;
   cursor: pointer;
-  width: 100%;
-}
-
-.w-full {
-  width: 100%;
+  width: 100% !important;
 }
 
 .play-button {
@@ -16,7 +12,7 @@
   color: var(--color-white);
 }
 
-.video-main:before {
+.video-main-div-before:before {
   content: "";
   opacity: 0.75;
   transition-duration: 500ms;
@@ -42,9 +38,13 @@
 
 .home-video {
   width: 100%;
+  height: 400px;
+  background: #a89393;
 }
 
-.video-main video::-webkit-media-controls-panel {
+.home-video-source {}
+
+.home-video::-webkit-media-controls-panel {
   display: none !important;
 }
 
