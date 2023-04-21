@@ -2,9 +2,13 @@ import { Container, Button, Col, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import VisitDetailItem from "./VisitDetailItem";
-import PromotedVisitItem from "./PromotedVisitItem";
+// import PromotedVisitItem from "./PromotedVisitItem";
 import { getAPI } from "../../../Api/ApiRequest";
 import { apiEndpoints } from "../../../Api/ApiEndpoint";
+
+// import jsPDF from "jspdf";
+// import "jspdf-autotable";
+// import FileSaver from "file-saver";
 
 const AllVisits = () => {
   const [data, setData] = useState({}); //Later use redux
@@ -32,28 +36,47 @@ const AllVisits = () => {
     getVisit();
   }, []);
 
+  // const downloadPDF = (data) => {
+  //   const doc = new jsPDF();
+  //   const tableColumn = [
+  //     "Visit ID",
+  //     "Customer Name",
+  //     "Date",
+  //     "Status",
+  //     "Location",
+  //     "Notes",
+  //   ];
+  //   const tableRows = [];
+  //   data.forEach((visit) => {
+  //     const visitData = [
+  //       visit.visitId,
+  //       visit.customerName,
+  //       visit.visitDate,
+  //       visit.visitStatus,
+  //       visit.visitLocation,
+  //       visit.visitNotes,
+  //     ];
+  //     tableRows.push(visitData);
+  //   });
+  //   doc.autoTable({
+  //     head: [tableColumn],
+  //     body: tableRows,
+  //     startY: 20,
+  //   });
+
+  //   const date = new Date().toISOString().slice(0, 10);
+  //   const filename = `visits_${date}.pdf`;
+  //   doc.save(filename);
+  // };
+
   const [data1, setData1] = useState([]); //Later use redux
   const [filterData, setFilterData] = useState([]);
   useEffect(() => {
     const getVisit = async () => {
-      // const response = await axios.get(
-      //   // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-      //   // "http://localhost:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-      //   "https://apis.nestohub.in/api/v1/visit/getAllVisit",
-
-      //   // formData,
-      //   {
-      //     headers: {
-      //       Authorization:
-      //         "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-      //     },
-      //   }
-      // );
       debugger;
       const response = await getAPI(apiEndpoints.getAllVisit);
       console.log(response.data);
 
-      // console.log(response.data.data);
       setData1(response.data);
       setFilterData(response.data);
     };
@@ -185,7 +208,7 @@ const AllVisits = () => {
           variant="primary"
           size="sm"
           className="w-70 rounded-pill border-0 bg-color-primary py-2 mx-5 "
-          //   onClick={onContinueHandler}
+          // onClick={() => downloadPDF(filterData)}
         >
           Download Pdf
         </Button>

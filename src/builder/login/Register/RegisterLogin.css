@@ -20,12 +20,8 @@
 .input:focus + .placeholder, input:not(:placeholder-shown) + .placeholder, .select:focus + .placeholder, select:not(:placeholder-shown) + .placeholder{
     top: -10px;
     background-color: #fff;
-<<<<<<< HEAD
-    color: #000;
-=======
     color: #959595;
     opacity: 1;
->>>>>>> 71f299ad725393f20ac0f119e777882fd397d28c
 }
 .form-control:focus{
     box-shadow: none;

@@ -1,7 +1,7 @@
 import { axiosInstance } from "./api";
 
 const postAPI = async (endpoint, body) => {
-  debugger;
+  // debugger;
   try {
     const response = await axiosInstance.post(endpoint, body);
     console.log(response.data);
@@ -16,7 +16,7 @@ const postAPI = async (endpoint, body) => {
 };
 
 const getAPI = async (endpoint) => {
-  debugger;
+  // debugger;
   try {
     const response = await axiosInstance.get(endpoint);
     console.log(response.data);
@@ -31,7 +31,7 @@ const getAPI = async (endpoint) => {
 };
 
 const putAPI = async (endpoint, body) => {
-  debugger;
+  // debugger;
   try {
     const response = await axiosInstance.put(endpoint, body);
     console.log(response.data);

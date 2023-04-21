@@ -37,6 +37,8 @@ const RecentlyAdded = () => {
   }
 
   const propertyListing = data?.slice(0, 6).map((itm, index) => {
+    debugger;
+    console.log(itm);
     return (
       <Col
         md={3}
@@ -54,7 +56,7 @@ const RecentlyAdded = () => {
                   {" "}
                   <Link
                     className="recent-heading"
-                    // to={`/builder/home-dashboard/description/${itm.propertyId._id}`}
+                    to={`/builder/home-dashboard/description/${itm._id}`}
                   >
                     {itm.name}
                   </Link>
