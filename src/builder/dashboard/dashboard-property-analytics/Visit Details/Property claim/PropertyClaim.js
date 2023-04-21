@@ -8,6 +8,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Payment from "./Payment";
 import { useParams } from "react-router-dom";
+import { getAPI } from "../../../../Api/ApiRequest";
+import { apiEndpoints } from "../../../../Api/ApiEndpoint";
 
 const PropertyClaim = () => {
   // debugger;
@@ -15,19 +17,31 @@ const PropertyClaim = () => {
   const params = useParams();
   useEffect(() => {
     const getClaim = async () => {
-      const response = await axios.get(
-        `https://apis.nestohub.in/api/v1/claim/getAllClaim?claimType=property&claimStatus=pending`,
+      //   const response = await axios.get(
+      //     `https://apis.nestohub.in/api/v1/claim/getAllClaim?claimType=property&claimStatus=pending`,
 
-        {
-          headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
-          },
-        }
-      );
+      //     {
+      //       headers: {
+      //         Authorization:
+      //           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
+      //       },${params.propertyId}
+      //     }
+      //   );
+      //   debugger;
+      // try {
       debugger;
-      console.log(response.data.data);
-      setData(response.data.data);
+      const response = await getAPI(
+        `${apiEndpoints.getClaimById}64353a693f099266360cd724`
+      );
+      console.log(response.data);
+      setData(response.data);
+      // } catch (error) {
+      //   console.error(error);
+      // } finally {
+      //   setLoading(false);
+      // }
+      // console.log(response.data.data);
+      // setData(response.data.data);
     };
 
     getClaim();
@@ -46,7 +60,7 @@ const PropertyClaim = () => {
         <div className="d-flex justify-content-between">
           <h3 className="heading">Property Claim</h3>
           <h6 className="text-secondary claim-id">
-            Eligible Claim ID:{data?._id}
+            Eligible Claim ID:{data[0]?._id}
           </h6>
         </div>
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm p-3">
@@ -54,7 +68,7 @@ const PropertyClaim = () => {
           <div className="d-flex col justify-content-between align-items-center">
             <div>
               <h6 className="text-secondary">Property Name</h6>
-              <h5>{data?.visitId?.propertyName}</h5>
+              <h5>{data[0]?.builderId?.projectName}</h5>
             </div>
             <div>
               <TbMap2 size="40" color="#278fd9" />
@@ -65,7 +79,7 @@ const PropertyClaim = () => {
           <Row>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Visit ID</h6>
-              <h5 className="calim-sub-head">12324443</h5>
+              <h5 className="calim-sub-head">{data[0]?.visitId}</h5>
             </Col>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Visit Date</h6>
@@ -73,7 +87,7 @@ const PropertyClaim = () => {
             </Col>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Client Name</h6>
-              <h5 className="calim-sub-head">Lorem Ipsum</h5>
+              <h5 className="calim-sub-head">{data[0]?.builderId?.name}</h5>
             </Col>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Unit Type</h6>

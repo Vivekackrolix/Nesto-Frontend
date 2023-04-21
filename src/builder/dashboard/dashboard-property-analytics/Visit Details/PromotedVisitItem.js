@@ -21,7 +21,8 @@ const PromotedVisitItem = (props) => {
   const onRating = () => {
     setReview(true);
   };
-
+  // debugger;
+  // console.log(props.itm);
   return (
     <Row className={props.className}>
       <Col>{props.itm._id.slice(-10)}</Col>

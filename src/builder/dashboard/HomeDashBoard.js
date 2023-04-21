@@ -52,7 +52,7 @@ const HomeDashBoard = () => {
         <SoldOut />
         <RecentlyAdded />
 
-        {/* <RecentPackage /> */}
+        <RecentPackage />
         <PropertyInvoice />
         {/* <Charts /> */}
       </Container>

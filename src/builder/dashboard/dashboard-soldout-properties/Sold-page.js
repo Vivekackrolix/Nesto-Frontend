@@ -10,19 +10,30 @@ import Payment from "../dashboard-property-analytics/dashboard-property-details/
 import Danelions from "./Danelions";
 import Footer from "../Footer/Footer";
 import Floor from "../dashboard-property-analytics/dashboard-property-details/Floor";
-// import { useSelector } from "react-redux";
+
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
 const SoldPage = () => {
   const params = useParams();
   const [property, setProperty] = useState({});
+  // const [map, setMap] = useState(null);
+  // const mapRef = useRef(null);
+  // const initMap = () => {
+  //   const mapOptions = {
+  //     zoom: 12,
+  //     center: { lat: property.latitude, lng: property.longitude },
+  //   };
+  //   const newMap = new window.google.maps.Map(mapRef.current, mapOptions);
+  //   setMap(newMap);
+  // };
 
   useEffect(() => {
     const getPropertyById = async () => {
       const response = await axios.get(
-        `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
+        // `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
+        `http://localhost:3001/api/v1/property/getPropertyById?id=${params.propertyId}`,
         {
           headers: {
             Authorization:
@@ -39,6 +50,12 @@ const SoldPage = () => {
     getPropertyById();
   }, []);
 
+  // useEffect(() => {
+  //   if (property?.latitude && property?.longitude) {
+  //     initMap();
+  //   }
+  // }, [property]);
+
   return (
     <>
       <DashboardHeader />
@@ -54,8 +71,8 @@ const SoldPage = () => {
           className="d-flex gap-2 mb-4"
           style={{ color: "#7D7F88", border: "none", outline: "none" }}
         >
-          <span className="prop-tag me-2">{property.constructionStatus}</span>
-          <span className="prop-tag">{property.possessionDate}</span>
+          <span className="prop-tag me-2">{property?.constructionStatus}</span>
+          <span className="prop-tag">{property?.possessionDate}</span>
         </div>
         <br></br>
         <Danelions data={property} />
@@ -67,6 +84,10 @@ const SoldPage = () => {
             <Location data={property} />
             <Row className="gx-4 dashboard-cards align-items-center">
               <img src={map} className="rounded my-3" alt="Home" />
+              {/* <div
+                ref={mapRef}
+                style={{ height: "500px", width: "100%" }}
+              ></div> */}
             </Row>
           </Col>
           <Col md={12}>
@@ -76,7 +97,7 @@ const SoldPage = () => {
             <h3 className="heading"> View offical brochure</h3>
             <Row className="gx-4 dashboard-cards align-items-center">
               <img
-                src={property.brochureUrl}
+                src={property?.brochureUrl}
                 sizes="140"
                 className="rounded my-3"
                 alt="Home"
@@ -89,7 +110,7 @@ const SoldPage = () => {
               <div className="p-4 d-flex justify-content-between">
                 <p style={{ color: "#7D7F88", fontFamily: "Bahnschrift" }}>
                   {/* {data.termAndCondition} */}
-                  {property.termAndCondition}
+                  {property?.termAndCondition}
                 </p>
               </div>
             </Container>
