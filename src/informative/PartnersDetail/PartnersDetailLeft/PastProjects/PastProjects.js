@@ -127,7 +127,7 @@ const PastProjects = () => {
                                             onClick={heartChange}
                                         > <AiOutlineHeart />
                                         </span>
-                                        {heart == true
+                                        {heart === true
                                             ?
                                             <span
                                                 className='past-project-slider_icon2'
