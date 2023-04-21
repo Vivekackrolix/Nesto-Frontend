@@ -1,28 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
+import { getAPI } from "../../../Api/ApiRequest";
 import "./TransactionHistory.css";
 
 const TransactionHistory = () => {
   const [data, setData] = useState([]); //Later use redux
   useEffect(() => {
     const getTransaction = async () => {
-      const response = await axios.get(
-        // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-        // "http://localhost:3000/api/v1/payment/getPaymentById?id=6411a9cf52af4e7966b5d5e2",
-        "http://65.1.3.134:3000/api/v1/payment/getAllPayment",
-        // formData,
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
+      const response = await getAPI(apiEndpoints.getAllPayment);
       // debugger;
 
       // console.log(response.data.data);
-      setData(response.data.data);
+      setData(response.data);
     };
 
     getTransaction();

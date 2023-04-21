@@ -15,6 +15,7 @@ import NotificationDropdown from "../dashboard/Builderprofile/notification/Notif
 import RecentlyAddedProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlyAddedProperty";
 import RecentlySoldOutProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/RecentlySoldOutProperty";
 import Subscription from "../dashboard/dashboard-soldout-properties/Subscription/Subscription";
+import AllProperty from "../dashboard/dashboard-soldout-properties/dashboard-tabs/AllProperty";
 export const RouteData = [
   {
     id: 1,
@@ -87,6 +88,11 @@ export const RouteData = [
         id: 14,
         path: "Subscription",
         element: <Subscription />,
+      },
+      {
+        id: 15,
+        path: "AllProperty",
+        element: <AllProperty />,
       },
     ],
   },

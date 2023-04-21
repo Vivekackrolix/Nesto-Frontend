@@ -3,6 +3,8 @@ import CreatableSelect from "react-select/creatable";
 import CustomModal from "../../../components/common/CustomModal";
 import axios from "axios";
 import { useState } from "react";
+import { postAPI } from "../../Api/ApiRequest";
+import { apiEndpoints } from "../../Api/ApiEndpoint";
 
 const Requirement = (props) => {
   //   const [name, setName] = useState("");
@@ -27,9 +29,9 @@ const Requirement = (props) => {
       projectName: project,
       description: description,
     };
-    const response = await axios.post(
-      // "http://13.233.149.97:3000/api/v1/builder/addShareYourIntern",
-      "http://localhost:3000/api/v1/builder/addShareYourIntern",
+    const response = await postAPI(
+      apiEndpoints.addShareYourIntern,
+
       formData
     );
     console.log(response);

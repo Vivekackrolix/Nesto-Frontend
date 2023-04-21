@@ -15,22 +15,34 @@ const PersonalDetailsForm = () => {
   const dispatch = useDispatch();
   const builderData = useSelector(
     (state) => state.builderDetail.details[0]
-  ) || { email: "", phoneNumber: "", gst: "" };
+  ) || {
+    email: "",
+    phoneNumber: "",
+    gst: "",
+    companyName: "",
+    address: "",
+    panOfCompany: "",
+    companyType: "",
+  };
+  console.log(builderData);
 
   useEffect(() => {
     dispatch(getBuilderDetail());
   }, [dispatch]);
   return (
     <>
-      <h3>
-        Personal Details
-      </h3>
+      <h3>Personal Details</h3>
       <br />
       <Form className="profile__form row">
         <Col md={6} sm={12}>
           <Form.Group className="mb-3" controlId="companyName">
             <Form.Label>Company Name</Form.Label>
-            <Form.Control className="rounded-2" type="text" placeholder="DLF" />
+            <Form.Control
+              className="rounded-2"
+              type="text"
+              placeholder="DLF"
+              value={builderData.companyName}
+            />
           </Form.Group>
         </Col>
         <Col md={6} sm={12}>
@@ -64,6 +76,7 @@ const PersonalDetailsForm = () => {
               className="rounded-2"
               type="text"
               placeholder="Sector 13,Karnal"
+              value={builderData.address}
             />
           </Form.Group>
         </Col>
@@ -75,6 +88,7 @@ const PersonalDetailsForm = () => {
               className="rounded-2"
               type="text"
               placeholder="WD3 12 3321D"
+              value={builderData.companyType}
             />
           </Form.Group>
         </Col>
@@ -98,6 +112,7 @@ const PersonalDetailsForm = () => {
               className="rounded-2"
               type="text"
               placeholder="WD3 12 3321D"
+              value={builderData.panOfCompany}
             />
           </Form.Group>
         </Col>
@@ -107,10 +122,16 @@ const PersonalDetailsForm = () => {
         </Col>
 
         <div className="d-flex gap-4 mt-2">
-          <Button variant="transparent" className="btn-color-outline-primary rounded-100 btn-rounded">
+          <Button
+            variant="transparent"
+            className="btn-color-outline-primary rounded-100 btn-rounded"
+          >
             Cancel
           </Button>
-          <Button variant="primary" className="btn-color-primary rounded-100 btn-rounded">
+          <Button
+            variant="primary"
+            className="btn-color-primary rounded-100 btn-rounded"
+          >
             Save
           </Button>
         </div>

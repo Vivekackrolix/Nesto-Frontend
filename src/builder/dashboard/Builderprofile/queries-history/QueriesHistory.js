@@ -18,7 +18,7 @@ const QueriesHistory = () => {
       <h3>Manage Roles</h3>
       <SearchFilterBox />
       <Tabs
-        defaultActiveKey="visits"
+        defaultActiveKey="Property"
         id="fill-tab-example"
         // className="mb-3 mx-auto w-50"
         className="mb-3 p-5 rounded flex-column flex-sm-row"

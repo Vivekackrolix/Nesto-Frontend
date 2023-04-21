@@ -21,7 +21,7 @@ const Brokerage = () => {
         <SearchFilterBox />
         <br /> <h1> Brokerage Management</h1>
         <Tabs
-          defaultActiveKey="visits"
+          defaultActiveKey="Pending"
           id="fill-tab-example"
           className="mb-3 mx-auto w-50"
           fill

@@ -1,7 +1,21 @@
+import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { apiEndpoints } from "../../Api/ApiEndpoint";
+import { getAPI } from "../../Api/ApiRequest";
 import "./PropertyAnalytics.css";
 
 const PropertyInvoice = () => {
+  const [data, setData] = useState({}); //Later use redux
+  useEffect(() => {
+    const getAnalytics = async () => {
+      const response = await getAPI(apiEndpoints.getPendingInvoice);
+
+      setData(response.data);
+    };
+
+    getAnalytics();
+  }, []);
+
   return (
     <>
       <h3 className="heading">Property Invoices</h3>
@@ -11,62 +25,62 @@ const PropertyInvoice = () => {
       >
         <Row className="p-4 align-items-center text-center">
           <Col md={3} sm={6} className="d-grid my-2">
-          <span
+            <span
               style={{
                 color: "#278FD9",
                 fontWeight: "bold",
                 fontSize: "1.4em",
               }}
             >
-              10
+              {data?.pendingInvoice}
             </span>
             <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
               Pending <br></br> Invoice
             </span>
           </Col>
           <Col md={3} sm={6} className="d-grid my-2">
-          <span
+            <span
               style={{
                 color: "#278FD9",
                 fontWeight: "bold",
                 fontSize: "1.4em",
               }}
             >
-              ₹ 99 L
+              ₹ {data?.totalAmount}
             </span>
             <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
               Pending <br></br> Amount
             </span>
           </Col>
           <Col md={3} sm={6} className="d-grid my-2">
-          <span
+            <span
               style={{
                 color: "#278FD9",
                 fontWeight: "bold",
                 fontSize: "1.4em",
               }}
             >
-              10 Days
+              {data?.pendingDays} Days
             </span>
             <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
               Pending <br></br> Since
             </span>
           </Col>
           <Col md={3} sm={6} className="d-grid my-2">
-          <span
+            <span
               style={{
                 color: "#278FD9",
                 fontWeight: "bold",
                 fontSize: "1.4em",
               }}
             >
-              10 Days
+              {data?.averagepayoutTime} Days
             </span>
             <span style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
               Average <br></br> Payout Time
             </span>
           </Col>
-        </Row>  
+        </Row>
         {/* <div className="p-4 d-flex justify-content-around">
           <div className="text-center d-flex flex-column">
             <span

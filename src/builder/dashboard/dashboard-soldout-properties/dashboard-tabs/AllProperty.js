@@ -1,4 +1,4 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
 import propertyImage from "../../../Images/propertyadded.png";
 import build from "../../../Images/build.png";
 import { Pagination } from "react-bootstrap";
@@ -11,14 +11,13 @@ import Footer from "../../Footer/Footer";
 import { useEffect, useState } from "react";
 import { getAPI } from "../../../Api/ApiRequest";
 import { apiEndpoints } from "../../../Api/ApiEndpoint";
-
-const RecentlyAddedProperty = (props) => {
+const AllProperty = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [propertiesPerPage] = useState(9);
-  // const unitType = data.unitType ? data.unitType : [];
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // const dispatch = useDispatch();
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(data.length / propertiesPerPage); i++) {
     pageNumbers.push(i);
@@ -26,9 +25,14 @@ const RecentlyAddedProperty = (props) => {
 
   useEffect(() => {
     const getAddedProperties = async () => {
-      const response = await getAPI(apiEndpoints.getAllproperty);
+      try {
+        const response = await getAPI(apiEndpoints.getAllproperty);
 
-      setData(response.data);
+        setData(response.data);
+      } catch (error) {
+        setError(error.message);
+      }
+      setLoading(false);
     };
     getAddedProperties();
   }, []);
@@ -41,6 +45,15 @@ const RecentlyAddedProperty = (props) => {
     indexOfFirstProperty,
     indexOfLastProperty
   );
+  if (loading) {
+    return (
+      <Container className="mt-5">
+        <div className="text-center">
+          <Spinner animation="border" role="status" />
+        </div>
+      </Container>
+    );
+  }
   const propertyListing = currentProperties.map((itm, index) => {
     // const propertyListing = data.map((itm, index) => {
     return (
@@ -141,6 +154,14 @@ const RecentlyAddedProperty = (props) => {
       </Col>
     );
   });
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
   return (
     <>
       <DashboardHeader />
@@ -148,7 +169,7 @@ const RecentlyAddedProperty = (props) => {
         <SearchFilterBox />
 
         <div className="row justify-content-between">
-          <h3 className="col-4 heading">Recently Added</h3>
+          <h3 className="col-4 heading">All Properties</h3>
         </div>
 
         <div className="mt-2 mb-5 row row-cols-2 w-100 justify-content-between ms-0">
@@ -172,4 +193,4 @@ const RecentlyAddedProperty = (props) => {
   );
 };
 
-export default RecentlyAddedProperty;
+export default AllProperty;
