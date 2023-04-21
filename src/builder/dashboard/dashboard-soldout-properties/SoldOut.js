@@ -8,12 +8,11 @@ const SoldOut = ({ data }) => {
     return (
       <Col
         md={3} sm={12}
-        className="card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0 w-100"
-        style={{
-          maxWidth: "21.5rem",
-        }}
+        className="card bl-card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0"
       >
-        <Card.Img className="w-100" variant="top" src={propertyImage} />
+        <Link to="/builder/home-dashboard/description">
+          <Card.Img className="w-100 bl-prop-img" variant="top" src={propertyImage} />
+        </Link>
         <Card.Body>
           {/* <Card.Title></Card.Title> */}
 
@@ -30,7 +29,7 @@ const SoldOut = ({ data }) => {
               Farmhouse in Sector 63 Gurgaon
             </div>
           </div>
-          <Row className="p-2">
+          <Row className="bl-p-2">
             <Col>
               <Row style={{ opacity: 0.5 }}>Unit Type</Row>
               <Row>2BHK</Row>

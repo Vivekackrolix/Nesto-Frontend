@@ -1,7 +1,19 @@
 .card-body{
     font-size: 13px !important;
 }
-.p-2 {
+.bl-card{
+    width: 100%;
+    max-width: 21.5rem;
+    overflow: hidden;
+}
+.bl-card img{
+    object-fit: cover;
+    transition: transform 400ms linear;
+}
+.bl-card a:hover img{
+    transform: scale(1.05);
+}
+.bl-p-2 {
     padding: 0.75rem !important;
 }
 .card-img-top {
