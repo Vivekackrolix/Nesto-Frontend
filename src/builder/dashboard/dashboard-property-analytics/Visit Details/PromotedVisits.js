@@ -7,12 +7,14 @@ import axios from "axios";
 
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import PromotedVisitItem from "./PromotedVisitItem";
+import { getAPI } from "../../../Api/ApiRequest";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
 const PromotedVisit = () => {
-  const [data, setData] = useState({}); //Later use redux
+  const [data, setData] = useState({});
   useEffect(() => {
     const getVisit = async () => {
       const response = await axios.get(
-        "http://65.1.3.134:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
+        "https://apis.nestohub.in/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
 
         {
           headers: {
@@ -21,36 +23,23 @@ const PromotedVisit = () => {
           },
         }
       );
-      // debugger;
 
-      // console.log(response.data.data);
       setData(response.data.data);
     };
 
     getVisit();
   }, []);
 
-  const [data1, setData1] = useState([]); //Later use redux
+  const [data1, setData1] = useState([]);
   const [filterData, setFilterData] = useState([]);
   useEffect(() => {
     const getVisit = async () => {
-      const response = await axios.get(
-        // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-        // "http://localhost:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-        "http://65.1.3.134:3000/api/v1/visit/getAllVisit",
-        // formData,
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
+      const response = await getAPI(apiEndpoints.getAllVisit);
+
       debugger;
 
-      console.log(response.data.data);
-      setData1(response.data.data);
-      setFilterData(response.data.data);
+      setData1(response.data);
+      setFilterData(response.data);
     };
 
     getVisit();
@@ -62,25 +51,21 @@ const PromotedVisit = () => {
   };
 
   const onCompletedClick = () => {
-    // console.log(e);
     const pendingData = data1.filter((itm) => itm.visitStatus === "completed");
     setFilterData(pendingData);
   };
 
   const onBoughtClick = () => {
-    // console.log(e);
     const pendingData = data1.filter((itm) => itm.visitStatus === "bought");
     setFilterData(pendingData);
   };
 
   const onFollowupClick = () => {
-    // console.log(e);
     const pendingData = data1.filter((itm) => itm.visitStatus === "followup");
     setFilterData(pendingData);
   };
 
   const onNegotiationClick = () => {
-    // console.log(e);
     const pendingData = data1.filter(
       (itm) => itm.visitStatus === "negotiation"
     );
@@ -94,9 +79,6 @@ const PromotedVisit = () => {
     <>
       {/* <Header /> */}
       <Container className="pt-2 pb-2 dashboard__wrapper">
-        {/* <SearchFilterBox /> */}
-        {/* <h3 className="heading"> Visit Details</h3> */}
-
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
           <div className="p-4 d-flex justify-content-around">
             <div className="text-center d-flex flex-column">
@@ -193,7 +175,6 @@ const PromotedVisit = () => {
           </Button>
         </div>
       </Container>
-      {/* <Footer /> */}
     </>
   );
 };
