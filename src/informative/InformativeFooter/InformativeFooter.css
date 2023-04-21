@@ -7,7 +7,9 @@
     width: 90%;
     margin: auto;
 }
-
+.informative-footer_logo{
+    width: 200px;
+}
 .footer-col-1-span {
     display: block;
     margin-top: 18px;   
@@ -33,6 +35,11 @@
 .footer-col-1-icons:hover{
     transform: scale(1.1);
 }
+
+.informative-footer_logo{
+    width: 200px;
+}
+
 
 /* Second Col Css =======
 =======================*/

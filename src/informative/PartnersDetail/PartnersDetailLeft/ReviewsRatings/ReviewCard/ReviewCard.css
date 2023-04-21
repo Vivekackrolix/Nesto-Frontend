@@ -1,7 +1,15 @@
+.reviews_slider {
+    padding: 0 3%;
+}
 .reviews_slider .slick-next:before,
 .slick-prev:before {
     /* font-size: 30px;
     color: var(--cold-black-color); */
+}
+
+.reviews_slider-row {
+    padding: 0;
+    margin: 0;
 }
 
 .reviews_slider .reviews_slider-col {
@@ -40,10 +48,17 @@
     color: var(--primary-color);
     cursor: pointer;
 }
+
 .reviews_slider .reviews_slider-box3 {
     margin-top: 1.55rem;
 }
+
 .reviews_slider .reviews_slider-span3 {
     color: var(--silver-surfer);
     font-weight: 400;
+}
+.reviews_slider-card{
+    width: auto !important;
+    display: block !important;
+    max-width: 97.5%;
 }

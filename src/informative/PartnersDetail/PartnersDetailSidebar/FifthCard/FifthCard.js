@@ -15,26 +15,26 @@ const FifthCard = () => {
                 </div>
                 <div className='fifth-card__box-2'>
                     <span className='fifth-card__span-2'>Find Buyers & Tenants Easily</span>
-                    <Link to='/' className='fifth-card__link rounded-5 w-100'>
-                        <span className='fifth-card__link-span rounded'>Post a Property</span>
+                    <Link to='/builder-page' className='fifth-card__link rounded-5 w-100'>
+                        <span className='fifth-card__link-span rounded'>Post A Property</span>
                     </Link>
                 </div>
                 <div className='fifth-card__box-3'>
                     <span className='fifth-card__span-3'>Here's why NestoHub:</span>
-                    <div className='fifth-card__box-4 mt-5'>
-                        <div className='d-flex gap-3 align-items-center pb-5'>
+                    <div className='fifth-card__box-4 mt-3'>
+                        <div className='d-flex gap-3 align-items-center pb-2'>
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='fifth-card__dot' />
                             <li className='fifth-card__li'>Get Access to 4 Lakh + Buyers</li>
                         </div>
-                        <div className='d-flex gap-3 align-items-center pb-5'>
+                        <div className='d-flex gap-3 align-items-center pb-2'>
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='fifth-card__dot' />
                             <li className='fifth-card__li'>Sell Faster with Premium Service</li>
                         </div>
-                        <div className='d-flex gap-3 align-items-center pb-5'>
+                        <div className='d-flex gap-3 align-items-center pb-2'>
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='fifth-card__dot' />
                             <li className='fifth-card__li'>Find only Genuine Leads</li>
                         </div>
-                        <div className='d-flex gap-3 align-items-center pb-5'>
+                        <div className='d-flex gap-3 align-items-center pb-2'>
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='fifth-card__dot' />
                             <li className='fifth-card__li'>Get Expert advice on Market Trends & insights</li>
                         </div>

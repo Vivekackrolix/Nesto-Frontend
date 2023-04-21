@@ -12,15 +12,52 @@ const PastProjects = () => {
     function heartUndo() {
         setHeart(false)
     }
+    // =============================
+    // ========= Slick Customization
+    function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{
+                    ...style,
+                    display: 'block',
+                    borderRadius: '50%',
+                    padding: '1px 0px',
+                }}
+                onClick={onClick}
+            >
+                <img className="next-image" src="/assets/next.png" alt="next" />
+            </div>
+        );
+    }
+
+    function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{
+                    ...style,
+                    display: 'block',
+                    borderRadius: '50%',
+                    padding: '1px 0px',
+                }}
+                onClick={onClick}
+            >
+                <img className="prev-image" src="/assets/next.png" alt="next" />
+            </div>
+        );
+    }
     var settings = {
         dots: false,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         arrows: true,
-        speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        // centerMode: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
         responsive: [{
             breakpoint: 800,
             settings: {
@@ -79,8 +116,8 @@ const PastProjects = () => {
             <Slider {...settings}>
                 {projectSliderData.map((item) => (
                     <div className='container'>
-                        <div className='row p-2'>
-                            <div className='d-flex shadow-sm p-0 rounded-3'>
+                        <div className='row past-project_row'>
+                            <div className='d-flex p-0 rounded-3 past-project-slider-card'>
                                 <div className='col-lg-6 past-project-slider_col-1'>
                                     <div className='h-100'>
                                         <span className='past-project-slider_tag'>{item.tag}</span>
@@ -90,7 +127,7 @@ const PastProjects = () => {
                                             onClick={heartChange}
                                         > <AiOutlineHeart />
                                         </span>
-                                        {heart == true
+                                        {heart === true
                                             ?
                                             <span
                                                 className='past-project-slider_icon2'
