@@ -26,7 +26,7 @@ const Video = () => {
                     controls autoPlay muted
                     className="home-video"
                     // data-aos='fade-up'
-                    src="/assets/informative/NestoHubVideo.mp4"
+                    src="/assets/informative/NestohubVideo.mp4"
                 >
                     {/* <source src="/assets/informative/NestoHubVideo.mp4" className="home-video-source" /> */}
                 </video>
