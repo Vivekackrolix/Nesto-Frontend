@@ -5,7 +5,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const AboutUs = () => {
   return (
-    <div className="home-page-about">
+    <div className="home-page-about" style={{ overflowX: 'hidden' }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6" data-aos="fade-right">
