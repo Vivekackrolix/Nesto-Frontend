@@ -10,13 +10,15 @@
   right: 48%;
   font-size: 60px;
   color: var(--color-white);
+  background: var(--primary-color);
+  border-radius: 50%;
 }
 
 .video-main-div-before:before {
   content: "";
   opacity: 0.75;
   transition-duration: 500ms;
-  background-color: #fff;
+  background-color: var(--primary-color);
   border-radius: 100%;
   width: 60px;
   height: 60px;

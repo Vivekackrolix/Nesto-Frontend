@@ -80,6 +80,7 @@
     font-weight: 700;
     font-size: 16px;
     display: block;
+    color: var(--cold-black-color);
 }
 
 .current-project_slider .current-project_span-2 {
