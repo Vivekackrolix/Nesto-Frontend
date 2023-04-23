@@ -27,7 +27,7 @@ export default function News() {
   ];
   return (
     <>
-      <div class="news">
+      <div class="news" style={{ overflowX: 'hidden' }}>
         <Heading title="Blogs & News" sub="Latest Blogs and News" />
         <div className="container news-container" data-aos="fade-up">
           <div className="row">
@@ -68,7 +68,7 @@ export default function News() {
                   </div>
                 </div>
               );
-            })}            
+            })}
           </div>
           {/* <div className="text-center" data-aos="fade-up">
               <Link to="/blog-list" className="primary_button">

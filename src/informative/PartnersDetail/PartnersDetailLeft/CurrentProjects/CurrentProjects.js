@@ -123,7 +123,7 @@ const CurrentProjects = () => {
                                 <div className='col-lg-6 current-project-slider_col-1'>
                                     <div className='h-100'>
                                         <span className='current-project-slider_tag'>{item.tag}</span>
-                                        <Link to='/'>
+                                        <Link to='/property-details'>
                                             <img src={item.img} className='current-project-slider_img' alt='project-slider' />
                                         </Link>
                                         <span
@@ -142,7 +142,7 @@ const CurrentProjects = () => {
                                     </div>
                                 </div>
                                 <div className='col-lg-6 current-project_col-2'>
-                                    <Link to='/'>
+                                    <Link to='/property-details'>
                                         <span className='current-project_span-1'>{item.propertyName}</span>
                                     </Link>
                                     <span>

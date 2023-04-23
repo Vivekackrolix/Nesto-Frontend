@@ -151,7 +151,7 @@ const OurPartner = () => {
     ],
   };
   return (
-    <div className="our-partner">
+    <div className="our-partner" >
       <div className="">
         <Heading title="Our Partners" sub="The Companies That Represent Us" />
       </div>
