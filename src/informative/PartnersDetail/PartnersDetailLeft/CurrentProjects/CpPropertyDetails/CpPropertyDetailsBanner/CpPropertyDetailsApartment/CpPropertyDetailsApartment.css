@@ -1,0 +1,39 @@
+.CpPropertyDetailsApartment {
+    margin-top: 20px;
+    padding: 0;
+}
+
+.CpPropertyDetailsApartment-col {
+    padding: 10px 30px;
+    box-shadow: 0px 7.86258px 44.4353px rgba(0, 0, 0, 0.07);
+    border-radius: 14px;
+}
+
+.CpPropertyDetailsApartment-div-2 {
+    display: flex;
+    align-items: center;
+}
+
+.CpPropertyDetailsApartment-div-2_img {
+    width: 80px;
+}
+
+.div-2_child_heading {
+    font-weight: 700;
+    font-size: 28px;
+    display: block;
+}
+
+.div-2_child_stars {
+    display: flex;
+    font-size: 18px;
+    color: #FFB630;
+}
+
+.div-2_child_address {
+    font-size: 14px;
+    color: var(--silver-surfer);
+    font-weight: 350;
+    display: block;
+    margin-top: 8px;
+}
