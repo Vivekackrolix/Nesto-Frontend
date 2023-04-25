@@ -49,11 +49,10 @@ const CpPropertyDetailsApartment = () => {
                     </div>
                     <div className='CpPropertyDetailsApartment-div-3'>
                         <span className='CpPropertyDetailsApartment-div-3-span-1'>₹ 3.94 L - 6.01 Cr</span>
-                        <span className='CpPropertyDetailsApartment-div-3-span-2'>Book now & get 5% Discount</span>
+                        {/* <span className='CpPropertyDetailsApartment-div-3-span-2'>Book now & get 5% Discount</span> */}
                     </div>
                 </div>
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
     )
 }

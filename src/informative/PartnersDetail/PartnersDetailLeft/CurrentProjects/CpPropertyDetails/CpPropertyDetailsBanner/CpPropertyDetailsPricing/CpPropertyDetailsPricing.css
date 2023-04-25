@@ -1,0 +1,11 @@
+.CpPropertyDetailsPricing {
+    padding: 0;
+    margin-top: 20px;
+}
+
+.CpPropertyDetailsPricing-subHeading {
+    font-size: 14px;
+    color: var(--silver-surfer);
+    font-weight: 350;
+    display: block;
+}
