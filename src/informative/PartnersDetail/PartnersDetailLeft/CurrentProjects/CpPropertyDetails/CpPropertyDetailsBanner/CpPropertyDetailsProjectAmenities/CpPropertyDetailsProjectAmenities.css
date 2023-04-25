@@ -1,0 +1,27 @@
+.CpPropertyDetailsProjectAmenities {
+    padding: 0;
+    margin-top: 45px;
+}
+
+.CpPropertyDetailsProjectAmenities-col_12 {
+    margin-top: 20px;
+    padding: 0 10px 25px 10px;
+    text-align: center;
+    border-radius: 14px;
+    border: 2px solid #eaeaea;
+}
+.CpPropertyDetailsProjectAmenities-col {
+    margin-top: 20px;
+}
+.CpPropertyDetailsProjectAmenities-col_icon {
+    font-size: 34px;
+    color: var(--gray-color);
+}
+
+.CpPropertyDetailsProjectAmenities-col_size {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 350;
+    color: var(--silver-surfer);
+}

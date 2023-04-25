@@ -4,16 +4,22 @@ import InformativeFooter from '../../../../InformativeFooter/InformativeFooter'
 import CpPropertyDetailsSearch from './CpPropertyDetailsSearch/CpPropertyDetailsSearch'
 import CpPropertyDetailsBanner from './CpPropertyDetailsBanner/CpPropertyDetailsBanner'
 import CpPropertyDetailsApartment from './CpPropertyDetailsBanner/CpPropertyDetailsApartment/CpPropertyDetailsApartment';
-import CpPropertyDetailsAnalytics from './CpPropertyDetailsBanner/CpPropertyDetailsAnalytics/CpPropertyDetailsAnalytics'
+import CpPropertyDetailsPricing from './CpPropertyDetailsBanner/CpPropertyDetailsPricing/CpPropertyDetailsPricing'
+import CpPropertyDetailsProjectAmenities from './CpPropertyDetailsBanner/CpPropertyDetailsProjectAmenities/CpPropertyDetailsProjectAmenities'
+import CpPropertyDetailsLocationAdvantage from './CpPropertyDetailsBanner/CpPropertyDetailsLocationAdvantage/CpPropertyDetailsLocationAdvantage'
+import CpPropertyDetailsBrokerage from './CpPropertyDetailsBanner/CpPropertyDetailsBrokerage/CpPropertyDetailsBrokerage'
 
 const CpPropertyDetailsMain = () => {
   return (
     <>
       <InformativeNavbar />
-      <CpPropertyDetailsSearch />
+      {/* <CpPropertyDetailsSearch /> */}
       <CpPropertyDetailsBanner />
       <CpPropertyDetailsApartment />
-      <CpPropertyDetailsAnalytics />
+      {/* <CpPropertyDetailsPricing /> */}
+      <CpPropertyDetailsProjectAmenities />
+      <CpPropertyDetailsLocationAdvantage />
+      <CpPropertyDetailsBrokerage />
       <InformativeFooter />
     </>
   )
