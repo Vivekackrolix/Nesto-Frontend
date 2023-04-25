@@ -42,26 +42,16 @@ const Subscription = () => {
 
           <div className="p-4 d-flex justify-content-center">
             <ListGroup as="ul">
-              <ListGroup.Item as="li">
-                <AiFillCheckCircle size={20} color="#51CC5D" className="me-2" />
-                Lorem Ipsum Dummy
-                {/* {itm.numberOfVisit} */}
-              </ListGroup.Item>
-              <ListGroup.Item as="li">
-                <AiFillCheckCircle size={20} color="#51CC5D" className="me-2" />
-                Lorem Ipsum Dummy
-                {/* {itm.numberOfproperty} */}
-              </ListGroup.Item>
-              <ListGroup.Item as="li">
-                <AiFillCheckCircle size={20} color="#51CC5D" className="me-2" />
-                {/* {itm.planValidityInDays} */}
-                Lorem Ipsum Dummy
-              </ListGroup.Item>
-              <ListGroup.Item as="li">
-                <AiFillCheckCircle size={20} color="#51CC5D" className="me-2" />
-                {/* {itm.totalCount} */}
-                Lorem Ipsum Dummy
-              </ListGroup.Item>
+              {itm?.availablePropertyList?.map((i) => (
+                <ListGroup.Item as="li">
+                  <AiFillCheckCircle
+                    size={20}
+                    color="#278fd9"
+                    className="me-2"
+                  />
+                  {i?.name}
+                </ListGroup.Item>
+              ))}
             </ListGroup>
           </div>
           <div className="p-4 text-center">

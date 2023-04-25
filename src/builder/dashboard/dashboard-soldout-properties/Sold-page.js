@@ -12,28 +12,18 @@ import Footer from "../Footer/Footer";
 import Floor from "../dashboard-property-analytics/dashboard-property-details/Floor";
 
 import { useParams } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const SoldPage = () => {
   const params = useParams();
   const [property, setProperty] = useState({});
-  // const [map, setMap] = useState(null);
-  // const mapRef = useRef(null);
-  // const initMap = () => {
-  //   const mapOptions = {
-  //     zoom: 12,
-  //     center: { lat: property.latitude, lng: property.longitude },
-  //   };
-  //   const newMap = new window.google.maps.Map(mapRef.current, mapOptions);
-  //   setMap(newMap);
-  // };
 
   useEffect(() => {
     const getPropertyById = async () => {
       const response = await axios.get(
         // `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
-        `http://localhost:3001/api/v1/property/getPropertyById?id=${params.propertyId}`,
+        `http://nestobackend-env.eba-fk3zufmz.ap-south-1.elasticbeanstalk.com/api/v1/property/getPropertyById?id=${params.propertyId}`,
         {
           headers: {
             Authorization:
@@ -42,19 +32,11 @@ const SoldPage = () => {
         }
       );
 
-      // debugger;
-      // console.log(response.data.data);
       setProperty(response.data.data[0]);
     };
 
     getPropertyById();
   }, []);
-
-  // useEffect(() => {
-  //   if (property?.latitude && property?.longitude) {
-  //     initMap();
-  //   }
-  // }, [property]);
 
   return (
     <>
@@ -84,10 +66,6 @@ const SoldPage = () => {
             <Location data={property} />
             <Row className="gx-4 dashboard-cards align-items-center">
               <img src={map} className="rounded my-3" alt="Home" />
-              {/* <div
-                ref={mapRef}
-                style={{ height: "500px", width: "100%" }}
-              ></div> */}
             </Row>
           </Col>
           <Col md={12}>
@@ -109,7 +87,6 @@ const SoldPage = () => {
             <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
               <div className="p-4 d-flex justify-content-between">
                 <p style={{ color: "#7D7F88", fontFamily: "Bahnschrift" }}>
-                  {/* {data.termAndCondition} */}
                   {property?.termAndCondition}
                 </p>
               </div>
