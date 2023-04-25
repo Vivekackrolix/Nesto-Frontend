@@ -6,7 +6,7 @@ const CpPropertyDetailsBanner = () => {
     return (
         <>
             <div className='container CpPropertyDetailsBanner'>
-                <span className='CpPropertyDetailsBanner-heading'>Property Details</span>
+                <span className='PropertyDetails-heading'>Property Details</span>
                 <div className='row'>
                     <div className='col-lg-12 CpPropertyDetailsBanner-col'>
                         {/* CpPropertyDetailsBanner-col_div-1, CpPropertyDetailsBanner-col_div-2, 
