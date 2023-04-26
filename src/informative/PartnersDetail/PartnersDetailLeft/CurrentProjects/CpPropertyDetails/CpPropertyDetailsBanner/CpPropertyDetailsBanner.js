@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './CpPropertyDetailsBanner.css'
 import { RxCheck } from 'react-icons/rx'
+import Aos from 'aos';
 
 const CpPropertyDetailsBanner = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     return (
         <>
-            <div className='container CpPropertyDetailsBanner'>
+            <div className='container CpPropertyDetailsBanner' data-aos='zoom-in'>
                 <span className='PropertyDetails-heading'>Property Details</span>
                 <div className='row'>
                     <div className='col-lg-12 CpPropertyDetailsBanner-col'>

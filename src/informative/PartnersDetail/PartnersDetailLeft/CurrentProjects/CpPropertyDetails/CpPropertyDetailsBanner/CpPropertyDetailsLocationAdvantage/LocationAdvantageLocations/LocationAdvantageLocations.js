@@ -3,6 +3,7 @@ import './LocationAdvantageLocations.css'
 import Slider from 'react-slick';
 
 const LocationAdvantageLocations = () => {
+    
     // =============================
     // ========= Slick Customization
     function SampleNextArrow(props) {

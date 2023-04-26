@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './CpPropertyDetailsBrokerage.css'
+import Aos from 'aos'
 
 const CpPropertyDetailsBrokerage = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     return (
         <>
-            <div className='container CpPropertyDetailsBrokerage'>
+            <div className='container CpPropertyDetailsBrokerage' data-aos='fade-up'>
                 <span className='PropertyDetails-heading'>Brokerage Payout Plan</span>
                 <div className='col-lg-12 CpPropertyDetailsBrokerage-col'>
                     <span className='CpPropertyDetailsBrokerage-col_span-1'>Brokerage 5%</span>

@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './CpPropertyDetailsApartment.css'
 import { ImStarEmpty, ImStarFull } from 'react-icons/im'
+import Aos from 'aos'
 
 const CpPropertyDetailsApartment = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     const data = [
         {
             img: '/assets/informative/building.svg',
@@ -22,7 +26,7 @@ const CpPropertyDetailsApartment = () => {
         },
     ]
     return (
-        <div className='container CpPropertyDetailsApartment'>
+        <div className='container CpPropertyDetailsApartment' data-aos='fade-up'>
             <div className='col-lg-12 CpPropertyDetailsApartment-col'>
                 <div className='CpPropertyDetailsApartment-div-1'>
                     <div className='CpPropertyDetailsApartment-div-2 gap-4'>

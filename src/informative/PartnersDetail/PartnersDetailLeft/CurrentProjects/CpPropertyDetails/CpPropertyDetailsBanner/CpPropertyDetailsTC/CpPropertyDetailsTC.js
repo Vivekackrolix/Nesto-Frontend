@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './CpPropertyDetailsTC.css'
+import Aos from 'aos'
 
 const CpPropertyDetailsTC = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     return (
         <>
-            <div className='container CpPropertyDetailsTC'>
+            <div className='container CpPropertyDetailsTC' data-aos='fade-up'>
                 <span className='PropertyDetails-heading'>Terms & Conditions</span>
                 <div className='col-lg-12 CpPropertyDetailsTC-col'>
                     <span className='CpPropertyDetailsTC-col_span'>
