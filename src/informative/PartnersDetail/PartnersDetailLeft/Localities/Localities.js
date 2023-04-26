@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Localities.css'
 import Slider from 'react-slick';
 

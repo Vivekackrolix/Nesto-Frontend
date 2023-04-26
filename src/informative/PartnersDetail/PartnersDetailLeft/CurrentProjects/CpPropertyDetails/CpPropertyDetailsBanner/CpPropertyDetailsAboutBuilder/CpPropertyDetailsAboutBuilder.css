@@ -1,0 +1,41 @@
+.CpPropertyDetailsAboutBuilder {
+    margin-top: 45px;
+    padding: 0;
+}
+
+.CpPropertyDetailsAboutBuilder-col {
+    padding: 20px 0;
+    border-radius: 14px;
+    box-shadow: 4px 10px 30px 1px rgba(0, 0, 0, 0.055);
+}
+
+.CpPropertyDetailsAboutBuilder-col_div {
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CpPropertyDetailsAboutBuilder-col_span_1 {
+    font-size: 21px;
+}
+
+.CpPropertyDetailsAboutBuilder-col_link,
+.CpPropertyDetailsAboutBuilder-col_link:hover {
+    font-weight: 800;
+    text-decoration: underline !important;
+    color: var(--carnation-color);
+}
+
+.CpPropertyDetailsAboutBuilder-col_div-2 {
+    padding: 0 30px;
+}
+
+.CpPropertyDetailsAboutBuilder-col_div-2_span {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 350;
+    line-height: 26px;
+    color: var(--silver-surfer);
+}

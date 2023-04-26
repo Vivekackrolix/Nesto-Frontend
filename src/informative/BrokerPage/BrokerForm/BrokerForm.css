@@ -23,6 +23,12 @@
     font-size: 24px;
 }
 
+.broker-banner-col-3_sub_title {
+    font-size: 14px;
+    display: block;
+    font-weight: 350;
+}
+
 .broker-banner-col-3_form {
     margin-top: 26px;
     padding: 0 10px;

@@ -8,6 +8,9 @@ import CpPropertyDetailsPricing from './CpPropertyDetailsBanner/CpPropertyDetail
 import CpPropertyDetailsProjectAmenities from './CpPropertyDetailsBanner/CpPropertyDetailsProjectAmenities/CpPropertyDetailsProjectAmenities'
 import CpPropertyDetailsLocationAdvantage from './CpPropertyDetailsBanner/CpPropertyDetailsLocationAdvantage/CpPropertyDetailsLocationAdvantage'
 import CpPropertyDetailsBrokerage from './CpPropertyDetailsBanner/CpPropertyDetailsBrokerage/CpPropertyDetailsBrokerage'
+import CpPropertyDetailsTC from './CpPropertyDetailsBanner/CpPropertyDetailsTC/CpPropertyDetailsTC'
+import CpPropertyDetailsBrochure from './CpPropertyDetailsBanner/CpPropertyDetailsBrochure/CpPropertyDetailsBrochure'
+import CpPropertyDetailsAboutBuilder from './CpPropertyDetailsBanner/CpPropertyDetailsAboutBuilder/CpPropertyDetailsAboutBuilder'
 
 const CpPropertyDetailsMain = () => {
   return (
@@ -20,6 +23,9 @@ const CpPropertyDetailsMain = () => {
       <CpPropertyDetailsProjectAmenities />
       <CpPropertyDetailsLocationAdvantage />
       <CpPropertyDetailsBrokerage />
+      <CpPropertyDetailsAboutBuilder />
+      <CpPropertyDetailsBrochure />
+      <CpPropertyDetailsTC />
       <InformativeFooter />
     </>
   )
