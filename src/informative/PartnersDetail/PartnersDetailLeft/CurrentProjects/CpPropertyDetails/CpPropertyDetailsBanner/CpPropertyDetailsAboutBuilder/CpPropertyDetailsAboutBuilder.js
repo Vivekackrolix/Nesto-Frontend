@@ -1,10 +1,15 @@
 import React from 'react'
 import './CpPropertyDetailsAboutBuilder.css'
 import { Link } from 'react-router-dom'
+import Aos from 'aos'
+import { useEffect } from 'react'
 
 const CpPropertyDetailsAboutBuilder = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     return (
-        <div className='container CpPropertyDetailsAboutBuilder'>
+        <div className='container CpPropertyDetailsAboutBuilder' data-aos='fade-up'>
             <div className='col-lg-12 CpPropertyDetailsAboutBuilder-col'>
                 <div className='CpPropertyDetailsAboutBuilder-col_div'>
                     <div>

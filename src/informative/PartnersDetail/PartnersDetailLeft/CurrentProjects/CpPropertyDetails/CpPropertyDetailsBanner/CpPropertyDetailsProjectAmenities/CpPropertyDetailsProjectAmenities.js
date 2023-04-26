@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './CpPropertyDetailsProjectAmenities.css'
+import Aos from 'aos'
 
 const CpPropertyDetailsProjectAmenities = () => {
     const data = [
@@ -36,9 +37,12 @@ const CpPropertyDetailsProjectAmenities = () => {
             img: '/assets/informative/propertyDetails/shower.svg'
         }
     ]
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     return (
         <>
-            <div className='container CpPropertyDetailsProjectAmenities'>
+            <div className='container CpPropertyDetailsProjectAmenities' data-aos='fade-up'>
                 <span className='PropertyDetails-heading'>Project Amenities</span>
                 <div className='col-lg-12 CpPropertyDetailsProjectAmenities-col_12'>
                     <div className='row'>
