@@ -32,3 +32,9 @@
     font-weight: 350;
     color: var(--silver-surfer);
 }
+
+/* Map Styling */
+.CpPropertyDetailsLocationAdvantage_map {
+    margin-top: 30px;
+    border-radius: 14px;
+}

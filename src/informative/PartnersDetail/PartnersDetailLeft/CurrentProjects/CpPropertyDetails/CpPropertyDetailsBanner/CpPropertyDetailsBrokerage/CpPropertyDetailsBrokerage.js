@@ -13,7 +13,6 @@ const CpPropertyDetailsBrokerage = () => {
                     </span>
                 </div>
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </>
     )
 }

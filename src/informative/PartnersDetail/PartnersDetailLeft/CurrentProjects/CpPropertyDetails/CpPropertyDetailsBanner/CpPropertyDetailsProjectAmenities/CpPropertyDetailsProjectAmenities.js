@@ -1,6 +1,5 @@
 import React from 'react'
 import './CpPropertyDetailsProjectAmenities.css'
-import { BiBed } from 'react-icons/bi'
 
 const CpPropertyDetailsProjectAmenities = () => {
     const data = [
