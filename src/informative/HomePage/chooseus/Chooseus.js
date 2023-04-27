@@ -87,7 +87,7 @@ export default function ChooseUs() {
     slidesToScroll: 1,
     dots: false,
     infinite: true,
-    speed: 1000,
+    speed: 600,
     cssEase: 'linear',
     arrows: true,
     loop: true,

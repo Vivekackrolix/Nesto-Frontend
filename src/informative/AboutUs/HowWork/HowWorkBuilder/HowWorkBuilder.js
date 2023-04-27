@@ -2,10 +2,15 @@ import React from "react";
 import BuilderRowTwo from "./BuilderRowTwo/BuilderRowTwo";
 import BuilderRowFour from "./BuilderRowFour/BuilderRowFour";
 import BuilderRowFive from "./BuilderRowFive/BuilderRowFive";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const HowWorkBuilder = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1400 })
+  }, [])
   return (
-    <div className="container how-container">
+    <div className="container how-container" data-aos="fade-up">
       <div className="how-box px-2 pb-2">
         <span className="sections-heading" data-aos="fade-up">
           How NestoHub Works For Builders

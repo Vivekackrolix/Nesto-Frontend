@@ -1,8 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
-import TextSlider from '../TextSlider/TextSlider';
 import './BannerSlider.css'
-// import { baseUrl } from "./config";
 
 const BannerSlider = () => {
     const settings = {
@@ -21,7 +19,7 @@ const BannerSlider = () => {
                 <div className='slider-div'>
                     <Slider {...settings}>
                         <div className='d-flex slider-div-2'>
-                            <img src='/assets/informative/curve-arrow.png' className='arrow-img'/>
+                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
                             <img src='/assets/informative/cartoon.png' className='cartoon_img' />
                             <img src="/assets/informative/homeSlider-1.png" className='slider-img' />
                         </div>
