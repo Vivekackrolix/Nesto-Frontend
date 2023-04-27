@@ -24,7 +24,7 @@ const Video = () => {
                 <video
                     onPlay={handleClick}
                     onPause={handlePause}
-                    controls autoPlay muted
+                    controls autoPlay muted loop
                     className="home-video"
                     // data-aos='fade-up'
                     src="/assets/informative/NestohubVideo.mp4"

@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HowWork.css";
 import RowTwo from "./RowTwo/RowTwo";
 import RowFour from "./RowFour/RowFour";
 import RowFive from "./RowFive/RowFive";
 import RowSix from "./RowSix/RowSix";
+import Aos from "aos";
 
 const HowWork = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1400 })
+  }, [])
   return (
     <>
-      <div className="container how-container">
+      <div className="container how-container" data-aos="fade-up">
         <div className="how-box px-2 pb-2">
           <span className="sections-heading" data-aos="fade-up">
             How NestoHub Works For Brokers
