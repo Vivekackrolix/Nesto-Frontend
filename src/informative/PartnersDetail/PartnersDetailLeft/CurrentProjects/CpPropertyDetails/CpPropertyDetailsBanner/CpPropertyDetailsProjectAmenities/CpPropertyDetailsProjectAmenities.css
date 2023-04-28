@@ -1,5 +1,6 @@
 .CpPropertyDetailsProjectAmenities {
     padding: 0;
+    overflow-x: hidden;
     margin-top: 45px;
 }
 
@@ -10,9 +11,11 @@
     border-radius: 14px;
     border: 2px solid #eaeaea;
 }
+
 .CpPropertyDetailsProjectAmenities-col {
     margin-top: 30px;
 }
+
 .CpPropertyDetailsProjectAmenities-col_icon {
     font-size: 34px;
     color: var(--gray-color);
@@ -24,4 +27,11 @@
     margin-top: 10px;
     font-weight: 350;
     color: var(--silver-surfer);
+}
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .CpPropertyDetailsProjectAmenities {
+        padding: 0 10px;
+    }
 }
