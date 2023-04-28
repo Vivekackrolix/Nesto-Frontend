@@ -4,6 +4,8 @@ import Information from './Information/Information';
 import './PrivacyPolicy.css'
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
+import InformativeFooter from '../InformativeFooter/InformativeFooter';
+import InformativeNavbar from '../Navbar/Navbar';
 
 const PrivacyPolicy = () => {
     useEffect(() => {
@@ -11,14 +13,15 @@ const PrivacyPolicy = () => {
     }, [])
     return (
         <>
+            <InformativeNavbar />
             <div style={{ overflowX: 'hidden' }}>
-                <Navbar expand="lg" bg='light' className="t-c_navbar">
+                {/* <Navbar expand="lg" bg='light' className="t-c_navbar">
                     <Container>
                         <Navbar.Brand href="#home">
                             <Link to='/'><img src="/assets/nesto-logo.png" alt='nesto-logo' className="t-c_brand-img" /></Link>
                         </Navbar.Brand>
                     </Container>
-                </Navbar>
+                </Navbar> */}
                 {/* Navbar-end=================
                 =========================== */}
                 <div className='p-p_heading-box' data-aos='fade-up'>
@@ -26,7 +29,7 @@ const PrivacyPolicy = () => {
                         <span className='p-p_heading'>Privacy Policy</span>
                     </div>
                 </div>
-                <div className='container'>
+                <div className='container p-p_container'>
                     <div className='row'>
                         <div className='col-lg-12'>
                             <span className='p-p_span' data-aos='fade-up'>
@@ -43,15 +46,16 @@ const PrivacyPolicy = () => {
                     </div>
                 </div>
                 <Information />
-                <div className='t-c_heading-box mt-5 text-center' data-aos='fade-up'>
+                {/* <div className='t-c_heading-box mt-5 text-center' data-aos='fade-up'>
                     <div className='container'>
                         <span className='t-c_heading'>Your Trusted Partner in Property Search</span>
                     </div>
                 </div>
                 <div className='t-c_footer-box'>
                     <span className='t-c_footer'>All trademarks, logos and names are properties of their respective owners. All Rights Reserved.© Copyright 2023 NestHub Realty Services Limited. Terms of use</span>
-                </div>
+                </div> */}
             </div>
+            <InformativeFooter />
         </>
     )
 }

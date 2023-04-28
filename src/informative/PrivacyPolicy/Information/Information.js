@@ -9,7 +9,7 @@ const Information = () => {
                     <span className='info_title'>1. Information Received, Collected And Stored by The Company</span>
                 </div>
             </div>
-            <div className='container'>
+            <div className='container p-p_info-container'>
                 <div className='row'>
                     <div className='col-lg-12'>
                         <span className='info_span' data-aos='fade-up'>
@@ -41,7 +41,7 @@ const Information = () => {
                     <span className='info_title'>2. Information Automatically Collected/Tracked While Navigation</span>
                 </div>
             </div>
-            <div className='container'>
+            <div className='container p-p_info-container-2'>
                 <div className='row'>
                     <div className='col-lg-12'>
                         <span className='info_span' data-aos='fade-up'>
