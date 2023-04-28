@@ -19,6 +19,11 @@
     color: var(--primary-color);
 }
 
+.t-c_container {
+    margin-bottom: 3%;
+    overflow-y: hidden;
+}
+
 .t-c_span {
     margin-top: 40px;
     font-weight: 400;
