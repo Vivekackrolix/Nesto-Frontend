@@ -28,3 +28,10 @@
 .CpPropertyDetailsTC-col_span:not(:first-child) {
     margin-top: 24px;
 }
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .CpPropertyDetailsTC {
+        padding: 0 10px;
+    }
+}

@@ -24,3 +24,10 @@
     position: absolute;
     color: var(--color-white);
 }
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .CpPropertyDetailsBrochure {
+        padding: 0 10px;
+    }
+}

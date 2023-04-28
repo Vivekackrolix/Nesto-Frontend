@@ -39,3 +39,10 @@
     line-height: 26px;
     color: var(--silver-surfer);
 }
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .CpPropertyDetailsAboutBuilder {
+        padding: 0 10px;
+    }
+}

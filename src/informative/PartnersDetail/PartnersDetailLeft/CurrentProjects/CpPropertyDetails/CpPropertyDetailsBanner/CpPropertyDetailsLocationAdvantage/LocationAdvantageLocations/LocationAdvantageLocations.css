@@ -40,3 +40,10 @@
     margin-top: 15px;
     color: var(--silver-surfer);
 }
+
+/* Media Queri ===================== */
+@media(max-width: 590px) {
+    .LocationAdvantageLocations {
+        padding: 0 25px;
+    }
+}

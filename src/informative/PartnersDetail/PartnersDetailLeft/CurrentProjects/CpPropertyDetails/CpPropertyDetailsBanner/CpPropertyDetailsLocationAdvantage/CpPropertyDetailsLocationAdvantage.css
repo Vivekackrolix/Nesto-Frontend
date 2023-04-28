@@ -1,6 +1,7 @@
 .CpPropertyDetailsLocationAdvantage {
     padding: 0;
     margin-top: 45px;
+    /* overflow-x: hidden; */
 }
 
 .CpPropertyDetailsLocationAdvantage-col_12 {
@@ -10,21 +11,25 @@
     border-radius: 14px;
     border: 2px solid #eaeaea;
 }
+
 .CpPropertyDetailsLocationAdvantage-col {
     margin-top: 20px;
 }
+
 .CpPropertyDetailsLocationAdvantage-col_icon {
     font-size: 34px;
     color: var(--gray-color);
     width: 35px;
     height: 35px;
 }
+
 .CpPropertyDetailsLocationAdvantage-col_name {
     display: block;
     font-size: 14px;
     font-weight: 350;
     margin-top: 6px;
 }
+
 .CpPropertyDetailsLocationAdvantage-col_size {
     display: block;
     font-size: 14px;
@@ -37,4 +42,11 @@
 .CpPropertyDetailsLocationAdvantage_map {
     margin-top: 30px;
     border-radius: 14px;
+}
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .CpPropertyDetailsLocationAdvantage {
+        padding: 0 10px;
+    }
 }
