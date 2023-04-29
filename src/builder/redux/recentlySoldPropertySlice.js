@@ -7,7 +7,7 @@ const recentlySoldPropertySlice = createSlice({
   initialState,
   reducers: {
     setSoldPropertyDetails(state, action) {
-      // debugger;
+      // ;
       state.properties = action.payload.data;
     },
   },

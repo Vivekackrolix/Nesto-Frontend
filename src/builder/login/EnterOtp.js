@@ -22,14 +22,7 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
   const resendOTP = async () => {
     resetOtpInputs();
     startTimer();
-    debugger;
-    // const response = await axios.post(
-    //   // "http://13.233.149.97:3000/api/v1/builder/resendOtp",
-    //   "http://localhost:3000/api/v1/builder/resendOtp",
-    //   {
-    //     phoneNumber: phone,
-    //   }
-    // );
+
     const response = await postAPI(apiEndpoints.resendOtp, {
       phoneNumber: phone,
     });
@@ -42,12 +35,6 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
       otp = otp + element.value;
     });
     try {
-      debugger;
-      // const response = await axios.post(
-      //   // "http://13.233.149.97:3000/api/v1/builder/verifyOtp",
-      //   "http://localhost:3000/api/v1/builder/verifyOtp",
-      //   { phoneNumber: phone, otp: otp }
-      // );
       const response = await postAPI(apiEndpoints.verifyOtp, {
         phoneNumber: phone,
         otp: otp,

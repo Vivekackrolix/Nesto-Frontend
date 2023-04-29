@@ -12,7 +12,7 @@ import { getAPI } from "../../../../Api/ApiRequest";
 import { apiEndpoints } from "../../../../Api/ApiEndpoint";
 
 const PropertyClaim = () => {
-  // debugger;
+  // ;
   const [data, setData] = useState([]);
   const params = useParams();
   useEffect(() => {
@@ -25,23 +25,13 @@ const PropertyClaim = () => {
       //         Authorization:
       //           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
       //       },${params.propertyId}
-      //     }
+      //     }64353a693f099266360cd724
       //   );
-      //   debugger;
+      //   ;
       // try {
-      debugger;
-      const response = await getAPI(
-        `${apiEndpoints.getClaimById}64353a693f099266360cd724`
-      );
+      const response = await getAPI(apiEndpoints.getAllClaim);
       console.log(response.data);
       setData(response.data);
-      // } catch (error) {
-      //   console.error(error);
-      // } finally {
-      //   setLoading(false);
-      // }
-      // console.log(response.data.data);
-      // setData(response.data.data);
     };
 
     getClaim();
@@ -60,7 +50,7 @@ const PropertyClaim = () => {
         <div className="d-flex justify-content-between">
           <h3 className="heading">Property Claim</h3>
           <h6 className="text-secondary claim-id">
-            Eligible Claim ID:{data[0]?._id}
+            {/* Eligible Claim ID:{data[0]?._id} */}
           </h6>
         </div>
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm p-3">
@@ -68,7 +58,7 @@ const PropertyClaim = () => {
           <div className="d-flex col justify-content-between align-items-center">
             <div>
               <h6 className="text-secondary">Property Name</h6>
-              <h5>{data[0]?.builderId?.projectName}</h5>
+              {/* <h5>{data[0]?.builderId?.projectName}</h5> */}
             </div>
             <div>
               <TbMap2 size="40" color="#278fd9" />
@@ -79,23 +69,27 @@ const PropertyClaim = () => {
           <Row>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Visit ID</h6>
-              <h5 className="calim-sub-head">{data[0]?.visitId}</h5>
+              {/* <h5 className="calim-sub-head">{data[0]?.visitId}</h5> */}
             </Col>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Visit Date</h6>
-              <h5 className="calim-sub-head">20 Nov 2022</h5>
+              {/* <h5 className="calim-sub-head">{data[0]?.date}</h5> */}
             </Col>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Client Name</h6>
-              <h5 className="calim-sub-head">{data[0]?.builderId?.name}</h5>
+              {/* <h5 className="calim-sub-head">{data[0]?.builderId?.name}</h5> */}
             </Col>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Unit Type</h6>
-              <h5 className="calim-sub-head">Lorem Ipsum</h5>
+              <h5 className="calim-sub-head">
+                {data[0]?.propertyId?.unitType?.map((item) => item)}
+              </h5>
             </Col>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Unit Number</h6>
-              <h5 className="calim-sub-head">1233212432</h5>
+              <h5 className="calim-sub-head">
+                {/* {data[0]?.boughtPropertyId?.unitNumber} */}
+              </h5>
             </Col>
             <Col md={4} className="mb-3">
               <h6 className="text-secondary">Selling Price</h6>
@@ -120,8 +114,10 @@ const PropertyClaim = () => {
         <Container>
           <Row className="align-items-center rounded shadow-sm p-3">
             <Col md={8}>
-              <h2>Rs. 830</h2>
-              <h5 className="brokerage-head">*Brokerage Percentage -5%</h5>
+              <h2>Rs. {data[0]?.brokerageAmount}</h2>
+              <h5 className="brokerage-head">
+                *Brokerage Percentage -{data[0]?.brokeragePercentage}%
+              </h5>
             </Col>
             <Col md={4} className="text-right">
               <h6 className="text-secondary">Builder Form</h6>

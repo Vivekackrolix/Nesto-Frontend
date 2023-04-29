@@ -6,11 +6,9 @@ import garage from "../../../Images/garage.png";
 import balcony from "../../../Images/Balcony.png";
 
 const Amenities = ({ data }) => {
-  const unitType = data.unitType ? data.unitType : [];
+  // const unitType = data.unitType ? data.unitType : [];
   return (
     <>
-      <br></br>
-      <br></br>
       <h3 style={{ fontFamily: "Bahnschrift" }}>Project Amenities</h3>
       <Container
         className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4"
@@ -20,16 +18,22 @@ const Amenities = ({ data }) => {
           className="p-1 d-flex justify-content-around "
           style={{ opacity: 0.5 }}
         >
-          <div className="text-center d-flex flex-column ">
-            <span>
-              <img src={sqft} className="rounded my-3" alt="Search" />
-            </span>
-            <span style={{ fontFamily: "Bahnschrift" }}>
-              2110 Sqft
-              {/* {data.amenities[1].name} */}
-            </span>
-          </div>
-          <div className="text-center d-flex flex-column">
+          {data?.amenities?.map((itm) => (
+            <div className="text-center d-flex flex-column ">
+              <span>
+                <img
+                  src={itm?.iconUrl}
+                  className="rounded my-3"
+                  alt="Amenities"
+                />
+              </span>
+              <span style={{ fontFamily: "Bahnschrift" }}>
+                {itm?.name}
+                {/* {data.amenities[1].name} */}
+              </span>
+            </div>
+          ))}
+          {/* <div className="text-center d-flex flex-column">
             <span>
               <img src={beds} className="rounded my-3" alt="Search" />
             </span>
@@ -53,9 +57,9 @@ const Amenities = ({ data }) => {
               <img src={balcony} className="rounded my-3" alt="Search" />
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>1 Balcony</span>
-          </div>
+          </div> */}
         </div>
-        <div
+        {/* <div
           className="p-1 d-flex justify-content-around"
           style={{ opacity: 0.5 }}
         >
@@ -90,7 +94,7 @@ const Amenities = ({ data }) => {
             </span>
             <span style={{ fontFamily: "Bahnschrift" }}>1 Balcony</span>
           </div>
-        </div>
+        </div> */}
       </Container>
     </>
   );

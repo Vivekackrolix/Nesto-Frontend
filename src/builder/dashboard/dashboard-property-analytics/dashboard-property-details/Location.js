@@ -3,7 +3,7 @@ import market from "../../../Images/market.png";
 import canteen from "../../../Images/canteen.png";
 import hospital from "../../../Images/hospital.png";
 import station from "../../../Images/station.png";
-const Location = () => {
+const Location = ({ data }) => {
   return (
     <>
       <br></br>
@@ -14,16 +14,23 @@ const Location = () => {
         style={{ border: "2.94206px solid #E3E3E7", boxSizing: "border-box" }}
       >
         <div className="p-4 d-flex justify-content-around">
-          <div className="text-center d-flex flex-column">
-            <span>
-              <img src={market} className="rounded my-3" alt="Search" />
-            </span>
-            <span style={{ fontFamily: "Bahnschrift" }}>
-              Mini Market<br></br>
-              <span style={{ opacity: "0.5" }}>200m</span>
-            </span>
-          </div>
-          <div className="text-center d-flex flex-column">
+          {data?.locationAdvantages?.map((itm) => (
+            <div className="text-center d-flex flex-column">
+              <span>
+                <img
+                  src={itm?.iconUrl}
+                  className="rounded my-3"
+                  alt="location"
+                />
+              </span>
+              <span style={{ fontFamily: "Bahnschrift" }}>
+                {itm?.name}
+                <br></br>
+                <span style={{ opacity: "0.5" }}>{itm?.distance}</span>
+              </span>
+            </div>
+          ))}
+          {/* <div className="text-center d-flex flex-column">
             <span>
               <img src={canteen} className="rounded my-3" alt="Search" />
             </span>
@@ -49,7 +56,7 @@ const Location = () => {
               Station <br></br>
               <span style={{ opacity: "0.5" }}> 200m</span>
             </span>
-          </div>
+          </div> */}
         </div>
       </Container>
       <br></br>

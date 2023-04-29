@@ -85,7 +85,7 @@ const DashboardHeader = () => {
                   alt="notification"
                   className="notification"
                 />
-                {/* <NotificationDropdown notification={3} /> */}
+                <NotificationDropdown notification={3} />
               </Nav.Item>
               <Nav.Item
                 className="me-3 mx-1 my-2"

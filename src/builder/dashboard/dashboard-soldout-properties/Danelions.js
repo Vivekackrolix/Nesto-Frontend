@@ -22,23 +22,7 @@ const Danelions = ({ data }) => {
           </Col>
           <Col md={4} sm={12}>
             <h3 className="heading">{data?.name}</h3>
-            {/* <div className="star-rating">
-                {[...Array(5)].map((star, index) => {
-                  index += 1;
-                  return (
-                    <button
-                      type="button"
-                      key={index}
-                      className={index <= (hover || rating) ? "on" : "off"}
-                      onClick={() => setRating(index)}
-                      onMouseEnter={() => setHover(index)}
-                      onMouseLeave={() => setHover(rating)}
-                    >
-                      <span className="star">&#9733; </span>
-                    </button>
-                  );
-                })}
-              </div> */}
+
             <div className="star-rating">
               {[...Array(5)].map((_, index) => (
                 <FaStar

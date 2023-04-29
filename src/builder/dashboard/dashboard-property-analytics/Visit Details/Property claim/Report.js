@@ -2,6 +2,8 @@ import { Button, Container, Form, Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { postAPI } from "../../../../Api/ApiRequest";
+import { apiEndpoints } from "../../../../Api/ApiEndpoint";
 
 // const reason = [
 //   { value: {data.reason}, label: {data.reason} },
@@ -16,19 +18,9 @@ const Report = (props) => {
       reason: {},
       comments: {},
     };
-    console.log(formData);
-    debugger;
-    const response = await axios.post(
-      // "http://13.233.149.97:3000/api/v1/raiseDispute/addRaiseDispute",
-      "http://localhost:3000/api/v1/raiseDispute/addRaiseDispute",
-      formData,
-      {
-        headers: {
-          Authorization:
-            "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNjkwNTY1MzJmMjU2OTQ3OWZjOWQiLCJpYXQiOjE2Nzg3OTc1ODMsImV4cCI6MTY4NjU3MzU4M30.8QjZtAmk342PMxa0CvGdqfp36BWk6lJ4QFyN6f1MO_A",
-        },
-      }
-    );
+    // console.log(formData);
+
+    const response = await postAPI(apiEndpoints.addRaiseDispute, formData);
     console.log(response.data);
   };
 

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { getBuilderDetail } from "../../../redux/https-requests/builderDetail-http";
@@ -24,16 +24,34 @@ const PersonalDetailsForm = () => {
     panOfCompany: "",
     companyType: "",
   };
-  console.log(builderData);
+
+  const [formData, setFormData] = useState(builderData);
 
   useEffect(() => {
     dispatch(getBuilderDetail());
   }, [dispatch]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+    dispatch({
+      type: "UPDATE_BUILDER_DETAIL",
+      payload: { ...builderData, [name]: value },
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch({
+      type: "UPDATE_BUILDER_DETAIL",
+      payload: formData,
+    });
+  };
   return (
     <>
       <h3>Personal Details</h3>
       <br />
-      <Form className="profile__form row">
+      <Form className="profile__form row" onSubmit={handleSubmit}>
         <Col md={6} sm={12}>
           <Form.Group className="mb-3" controlId="companyName">
             <Form.Label>Company Name</Form.Label>
@@ -41,7 +59,8 @@ const PersonalDetailsForm = () => {
               className="rounded-2"
               type="text"
               placeholder="DLF"
-              value={builderData.companyName}
+              value={formData.companyName}
+              onChange={handleChange}
             />
           </Form.Group>
         </Col>
@@ -52,7 +71,8 @@ const PersonalDetailsForm = () => {
               className="rounded-2"
               type="email"
               placeholder="jack.s@gmail.com"
-              value={builderData.email}
+              value={formData.email}
+              onChange={handleChange}
             />
           </Form.Group>
         </Col>
@@ -64,7 +84,8 @@ const PersonalDetailsForm = () => {
               className="rounded-2"
               type="tel"
               placeholder="4857788898"
-              value={builderData.phoneNumber}
+              value={formData.phoneNumber}
+              onChange={handleChange}
             />
           </Form.Group>
         </Col>
@@ -76,43 +97,47 @@ const PersonalDetailsForm = () => {
               className="rounded-2"
               type="text"
               placeholder="Sector 13,Karnal"
-              value={builderData.address}
+              value={formData.address}
+              onChange={handleChange}
             />
           </Form.Group>
         </Col>
 
         <Col md={6} sm={12}>
-          <Form.Group className="mb-3" controlId="address">
+          <Form.Group className="mb-3" controlId="companyType">
             <Form.Label>Company Type</Form.Label>
             <Form.Control
               className="rounded-2"
               type="text"
               placeholder="WD3 12 3321D"
-              value={builderData.companyType}
+              value={formData.companyType}
+              onChange={handleChange}
             />
           </Form.Group>
         </Col>
 
         <Col md={6} sm={12}>
-          <Form.Group className="mb-3" controlId="address">
+          <Form.Group className="mb-3" controlId="gst">
             <Form.Label>GST</Form.Label>
             <Form.Control
               className="rounded-2"
               type="text"
               placeholder="WD3 12 3321D"
-              value={builderData.gst}
+              value={formData.gst}
+              onChange={handleChange}
             />
           </Form.Group>
         </Col>
 
         <Col md={12} sm={12}>
-          <Form.Group className="mb-3" controlId="address">
+          <Form.Group className="mb-3" controlId="panOfCompany">
             <Form.Label>PAN of the Company</Form.Label>
             <Form.Control
               className="rounded-2"
               type="text"
               placeholder="WD3 12 3321D"
-              value={builderData.panOfCompany}
+              value={formData.panOfCompany}
+              onChange={handleChange}
             />
           </Form.Group>
         </Col>

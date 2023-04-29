@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { apiEndpoints } from "../../../../Api/ApiEndpoint";
+import { postAPI } from "../../../../Api/ApiRequest";
 
 const Payment = (props) => {
   const navigate = useNavigate();
@@ -28,16 +30,10 @@ const Payment = (props) => {
       transactionAmount,
     };
     console.log(formData);
-    debugger;
-    const response = await axios.post(
-      "http://13.233.149.97:3000/api/v1/payment/addPayment",
-      formData,
-      {
-        headers: {
-          Authorization:
-            "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-        },
-      }
+    const response = await postAPI(
+      apiEndpoints.addPayment,
+
+      formData
     );
 
     console.log(response);

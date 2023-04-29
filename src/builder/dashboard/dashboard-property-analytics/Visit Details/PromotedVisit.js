@@ -21,7 +21,7 @@
 //           },
 //         }
 //       );
-//       // debugger;
+//       // ;
 
 //       // console.log(response.data.data);
 //       setData(response.data.data);
@@ -46,7 +46,7 @@
 //           },
 //         }
 //       );
-//       debugger;
+//       ;
 
 //       console.log(response.data.data);
 //       setData1(response.data.data);

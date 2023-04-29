@@ -30,4 +30,10 @@ export const apiEndpoints = {
   getAllInvoiceForBuilder1:
     "/v1/invoice/getAllInvoiceForBuilder?builderId=641069056532f2569479fc9d&status=settled",
   getClaimById: "/v1/claim/getClaimById?id=",
+  addPayment: "/v1/payment/addPayment",
+  getAllBuilder: "/v1/builder/getAllBuilder",
+  getAllBanner: "/v1/banner/getAllBanner",
+  getAllClaim:
+    "/v1/claim/getAllClaim?builderId=641069056532f2569479fc9d&claimType=property",
+  addRaiseDispute: "/v1/raiseDispute/addRaiseDispute",
 };

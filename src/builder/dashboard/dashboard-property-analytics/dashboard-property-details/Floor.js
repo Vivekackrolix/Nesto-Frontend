@@ -27,6 +27,7 @@ const tabKey = ["All", "2BHK ", " 3BHK", "4BHK", "5BHK"];
 const Floor = ({ data }) => {
   // const items = data;
   const [slidesPerView, setSlidesPerView] = useState(1);
+
   // const unitType = data.unitType ? data.unitType : [];
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const Floor = ({ data }) => {
     };
   }, []);
 
-  console.log(data);
+  // console.log(data);
 
   const floorPlan = data?.floorPlanAndPricing?.map((item) => (
     <SwiperSlide key={item?.id}>

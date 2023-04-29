@@ -9,8 +9,19 @@ const axiosInstance = axios.create({
   headers: {
     "Content-Type": "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
+      "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0NTVhNTVlNDQ2NjJkMTJkNTNjY2YiLCJpYXQiOjE2ODI1Nzk2MDYsImV4cCI6MTY5MDM1NTYwNn0.jFsDonK3xexeM6heyw5lzbjS5dR3aBcQKsJgRQWEOgM",
   },
 });
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// });
+// const setAuthToken = (token) => {
+//   if (token) {
+//     axiosInstance.defaults.headers.Authorization = `Bearer ${token}`;
+//   } else {
+//     delete axiosInstance.defaults.headers.Authorization;
+//   }
+// };
 
 export { axiosInstance };

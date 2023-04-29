@@ -37,11 +37,10 @@ const sort = [
 ];
 
 const PropertyEdit = () => {
-  // debugger;
+  // ;
   const [data, setData] = useState([]);
   useEffect(() => {
     const getPropertyById = async () => {
-      debugger;
       const response = await axios.get(
         // `http://13.233.149.97:3000/api/v1/boughtProperty/getBoughtPropertyById?id=${params.propertyId}`,
         `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
@@ -52,8 +51,8 @@ const PropertyEdit = () => {
           },
         }
       );
-      debugger;
-      console.log(response.data.data);
+      // ;
+      // console.log(response.data.data);
       setData(response.data.data[0]);
     };
 
@@ -117,13 +116,13 @@ const PropertyEdit = () => {
             className="d-flex gap-2"
             style={{ border: "5.72244px solid #FFFFFF" }}
           >
-            <img src={img} className="rounded my-3 mx-3" alt="img" />
+            {/* <img src={img} className="rounded my-3 mx-3" alt="img" />
             <img src={img} className="rounded my-3  " alt="img" />
             <img src={img} className="rounded my-3" alt="img" />
             <img src={img} className="rounded my-3" alt="img" />
             <img src={img} className="rounded my-3" alt="img" />
             <img src={img} className="rounded my-3" alt="img" />
-            <img src={blank} className="rounded my-3" alt="img" />
+            <img src={blank} className="rounded my-3" alt="img" /> */}
             <div className="rounded my-3">
               <FileUpload />
             </div>

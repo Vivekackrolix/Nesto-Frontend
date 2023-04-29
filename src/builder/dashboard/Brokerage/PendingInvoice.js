@@ -6,16 +6,16 @@ import { useEffect, useState } from "react";
 import { apiEndpoints } from "../../Api/ApiEndpoint";
 import { getAPI } from "../../Api/ApiRequest";
 const PendingInvoice = () => {
-  // debugger;
+  // ;
   const [data, setData] = useState([]);
   useEffect(() => {
     const getPending = async () => {
-      debugger;
+      // ;
       const response = await getAPI(apiEndpoints.getAllInvoiceForBuilder);
       // console.log(response.data.data);
       setData(response.data);
     };
-    debugger;
+    // ;
 
     getPending();
   }, []);

@@ -26,7 +26,6 @@ const AllVisits = () => {
   const [filterData, setFilterData] = useState([]);
   useEffect(() => {
     const getVisit = async () => {
-      debugger;
       const response = await getAPI(apiEndpoints.getAllVisit);
       console.log(response.data);
 

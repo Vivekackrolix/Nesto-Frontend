@@ -21,7 +21,7 @@ const PromotedVisitItem = (props) => {
   const onRating = () => {
     setReview(true);
   };
-  // debugger;
+  // ;
   // console.log(props.itm);
   return (
     <Row className={props.className}>
@@ -33,13 +33,18 @@ const PromotedVisitItem = (props) => {
       </Col>
       <Col>{props?.itm?.clientName}</Col>
       <Col>{props?.itm?.date}</Col>
-      {/* <Col>{props.itm.visitStatus}</Col> */}
 
-      <Col
-        as={Link}
-        to={`/builder/home-dashboard/promoted/claim/${props.itm._id}`}
-      >
-        {props?.itm?.visitStatus}
+      <Col>
+        <div>{props?.itm?.visitStatus}</div>
+        {props?.itm?.visitStatus === "bought" && (
+          <div>
+            <Link
+              to={`/builder/home-dashboard/promoted/claim/${props.itm._id}`}
+            >
+              <div>{props?.itm?.visitStatus}</div>
+            </Link>
+          </div>
+        )}
       </Col>
       <Col>
         <FaHeadset size="20" className="cursor" onClick={onReport} />

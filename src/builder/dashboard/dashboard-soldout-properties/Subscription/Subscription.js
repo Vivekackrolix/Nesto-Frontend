@@ -187,7 +187,7 @@ const Subscription = () => {
         <SearchFilterBox />
         <h3>Buy New Packages</h3>
         <br />
-        <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div className="row row-cols-1 row-cols-md-3 mb-3 text-center overflow-auto">
           {plans}
         </div>
         <br />
