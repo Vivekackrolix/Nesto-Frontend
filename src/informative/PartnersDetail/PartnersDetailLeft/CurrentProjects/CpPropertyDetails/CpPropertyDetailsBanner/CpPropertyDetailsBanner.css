@@ -1,5 +1,8 @@
 .CpPropertyDetailsBanner {
-    padding: 0;
+    padding: 0px;
+    margin-top: 20px;
+    /* width: 100%; */
+    overflow-x: hidden;
 }
 
 .PropertyDetails-heading {
@@ -111,8 +114,6 @@
     font-weight: 400;
 }
 
-/* CpPropertyDetailsBanner-col_div-8 =======================
-========================================================= */
 .CpPropertyDetailsBanner-col_div-8 {
     display: flex;
     align-items: center;
@@ -124,6 +125,49 @@
     font-weight: 600;
     border-radius: 8px;
     background: #EFEFEF;
+    font-size: 14px;
     padding: 10px 30px 6px 30px;
     color: var(--silver-surfer);
+}
+
+/* Media Queri ===================== */
+@media(max-width: 448px) {
+    .CpPropertyDetailsBanner {
+        padding: 0 10px;
+    }
+
+    .CpPropertyDetailsBanner-col_div-5 {
+        position: absolute;
+        top: 68%;
+        left: 4%;
+    }
+
+    .CpPropertyDetailsBanner-col_div-8-span {
+        font-weight: 600;
+        border-radius: 8px;
+        background: #EFEFEF;
+        font-size: 14px;
+        padding: 10px 14px;
+        color: var(--silver-surfer);
+    }
+}
+
+@media(max-width: 576px) and (min-width: 448px) {
+    .CpPropertyDetailsBanner {
+        padding: 0 10px;
+    }
+
+    .CpPropertyDetailsBanner-col_div-5 {
+        position: absolute;
+        top: 72%;
+        left: 4%;
+    }
+}
+
+@media(max-width: 768px) and (min-width: 576px) {
+    .CpPropertyDetailsBanner-col_div-5 {
+        position: absolute;
+        top: 76%;
+        left: 4%;
+    }
 }

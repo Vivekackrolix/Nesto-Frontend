@@ -24,8 +24,12 @@ const SoldOut = () => {
   const propertyListing = data?.slice(0, 6).map((itm, index) => {
     return (
       <Col
+<<<<<<< HEAD
         md={3}
         sm={12}
+=======
+        md={3} sm={12}
+>>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
         className="card bl-card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0 w-100"
         id={itm._id}
         key={itm._id}

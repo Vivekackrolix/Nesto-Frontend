@@ -5,7 +5,8 @@
 
 .CpPropertyDetailsApartment-col {
     padding: 20px 30px;
-    box-shadow: 0px 7.86258px 44.4353px rgba(0, 0, 0, 0.07);
+    /* border: 2px solid #eaeaea; */
+    box-shadow: 4px 10px 30px 1px rgba(0, 0, 0, 0.055);
     border-radius: 14px;
 }
 
@@ -52,8 +53,8 @@
     flex-direction: column;
 }
 
-.CpPropertyDetailsApartment-div-2_child-img {
-    display: block;
+.CpPropertyDetailsApartment-div-2_child:not(:last-child) {
+    margin-right: 35px;
 }
 
 .CpPropertyDetailsApartment-div-2_child-span {
@@ -64,19 +65,49 @@
     color: var(--silver-surfer);
 }
 
-/* CpPropertyDetailsApartment-div-3 ===============
-================================================ */
-.CpPropertyDetailsApartment-div-3 {}
+.CpPropertyDetailsApartment-div-3 {
+    display: none;
+}
 
-.CpPropertyDetailsApartment-div-3-span-1 {
+.CpPropertyDetailsApartment-div-3-span {
     font-weight: 700;
     font-size: 24px;
     display: block;
 }
 
-.CpPropertyDetailsApartment-div-3-span-2 {
-    font-size: 14px;
-    color: var(--silver-surfer);
-    font-weight: 350;
+/* CpPropertyDetailsApartment-div-4 ===============
+================================================ */
+.CpPropertyDetailsApartment-div-4 {}
+
+.CpPropertyDetailsApartment-div-4-span {
+    font-weight: 700;
+    font-size: 24px;
     display: block;
+}
+
+/* Media Queri ===================== */
+@media(max-width: 448px) {
+    .CpPropertyDetailsApartment {
+        padding: 0 10px;
+    }
+    .CpPropertyDetailsApartment-div-2_child:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 576px) and (min-width: 448px) {
+    .CpPropertyDetailsApartment {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    .CpPropertyDetailsApartment-div-3 {
+        margin-top: 8px;
+        display: block;
+    }
+
+    .CpPropertyDetailsApartment-div-4 {
+        display: none;
+    }
 }

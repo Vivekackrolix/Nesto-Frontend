@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './CpPropertyDetailsBanner.css'
 import { RxCheck } from 'react-icons/rx'
+import Aos from 'aos';
 
 const CpPropertyDetailsBanner = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     return (
         <>
-            <div className='container CpPropertyDetailsBanner'>
+            <div className='container CpPropertyDetailsBanner' data-aos='zoom-in'>
                 <span className='PropertyDetails-heading'>Property Details</span>
                 <div className='row'>
-                    <div className='col-lg-12 CpPropertyDetailsBanner-col'>
+                    <div className='col-lg-12 col-md-12 col-sm-12 CpPropertyDetailsBanner-col'>
                         {/* CpPropertyDetailsBanner-col_div-1, CpPropertyDetailsBanner-col_div-2, 
                         CpPropertyDetailsBanner-col_div-3, CpPropertyDetailsBanner-col_div-4 */}
                         <div className='CpPropertyDetailsBanner-col_div-1'>
@@ -24,7 +28,7 @@ const CpPropertyDetailsBanner = () => {
                                 </div>
                             </div>
                             {/* CpPropertyDetailsBanner-col_div-5, CpPropertyDetailsBanner-col_div-6, 
-                        CpPropertyDetailsBanner-col_div-7 */}
+                            CpPropertyDetailsBanner-col_div-7 */}
                             <div className='CpPropertyDetailsBanner-col_div-5 gap-4'>
                                 <div className='CpPropertyDetailsBanner-col_div-6'>
                                     <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' />

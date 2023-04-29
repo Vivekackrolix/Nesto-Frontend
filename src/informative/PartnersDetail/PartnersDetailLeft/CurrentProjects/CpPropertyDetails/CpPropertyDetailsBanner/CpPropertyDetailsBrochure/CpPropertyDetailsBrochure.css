@@ -1,0 +1,33 @@
+.CpPropertyDetailsBrochure {
+    margin-top: 45px;
+    padding: 0;
+}
+
+.CpPropertyDetailsBrochure-col {
+    border: 2px solid #eaeaea;
+    padding: 5px;
+    border-radius: 14px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.CpPropertyDetailsBrochure-col_img {
+    width: 100%;
+    height: 100%;
+}
+
+.CpPropertyDetailsBrochure-col_span {
+    left: 2%;
+    bottom: 4%;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    color: var(--color-white);
+}
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .CpPropertyDetailsBrochure {
+        padding: 0 10px;
+    }
+}

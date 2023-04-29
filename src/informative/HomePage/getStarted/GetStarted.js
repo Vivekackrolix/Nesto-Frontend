@@ -13,7 +13,7 @@ export default function GetStarted() {
                 Hurry Up! Find NestoHub <br /><span>Serving You With The Best In Real Estate.</span>
               </span>
               <div className="">
-                <Link to="/builder-page" className="get-started_btn primary_button rounded-3">
+                <Link to="/builder-page" className="get-started_btn primary_button">
                   Let's Get Started
                   <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
                 </Link>

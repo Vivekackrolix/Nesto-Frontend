@@ -85,6 +85,7 @@
     padding-top: 1%;
     color: var(--silver-surfer);
 }
+
 .about-second-card__icon {
     width: 150px;
 }
@@ -93,6 +94,7 @@
 @media (max-width: 490px) {
     .about-us_box1 {
         padding-bottom: 10%;
+        background: #000 !important;
     }
 
     .about-second-card__icon {
@@ -113,14 +115,25 @@
         font-size: 14px;
     }
 
-    .about-us_box-span3, .about-us_box-span4 {
+    .about-us_box-span3,
+    .about-us_box-span4 {
         text-align: justify;
+    }
+}
+
+@media (max-width: 489px) {
+    .about-us_box2 {
+        padding-left: 0%;
     }
 }
 
 @media (max-width: 1200px) and (min-width: 490px) {
     .about-us_box1 {
         padding-bottom: 6%;
+    }
+
+    .about-us_box2 {
+        padding-left: 0%;
     }
 
     .about-second-card__icon {

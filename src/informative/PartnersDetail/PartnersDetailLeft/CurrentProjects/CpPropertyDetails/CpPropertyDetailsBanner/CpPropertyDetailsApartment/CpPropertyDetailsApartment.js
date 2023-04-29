@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './CpPropertyDetailsApartment.css'
 import { ImStarEmpty, ImStarFull } from 'react-icons/im'
+import Aos from 'aos'
 
 const CpPropertyDetailsApartment = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1400 })
+    }, [])
     const data = [
         {
             img: '/assets/informative/building.svg',
@@ -22,10 +26,10 @@ const CpPropertyDetailsApartment = () => {
         },
     ]
     return (
-        <div className='container CpPropertyDetailsApartment'>
+        <div className='container CpPropertyDetailsApartment' data-aos='fade-up'>
             <div className='col-lg-12 CpPropertyDetailsApartment-col'>
                 <div className='CpPropertyDetailsApartment-div-1'>
-                    <div className='CpPropertyDetailsApartment-div-2 gap-4'>
+                    <div className='CpPropertyDetailsApartment-div-2 gap-3'>
                         <div className=''>
                             <img src='/assets/informative/partner-2.png' className='CpPropertyDetailsApartment-div-2_img' />
                         </div>
@@ -35,7 +39,7 @@ const CpPropertyDetailsApartment = () => {
                                 <ImStarFull /> <ImStarFull /> <ImStarFull /> <ImStarFull /> <ImStarEmpty />
                             </span>
                             <span className='div-2_child_address'>Luxury Apartment in Sector-29, Gurugram</span>
-                            <div className='d-flex gap-5 mt-3'>
+                            <div className='d-flex mt-3'>
                                 {data.map((item) => {
                                     return (
                                         <div className='CpPropertyDetailsApartment-div-2_child'>
@@ -45,15 +49,17 @@ const CpPropertyDetailsApartment = () => {
                                     )
                                 })}
                             </div>
+                            {/* CpPropertyDetailsApartment-div-3 only visible in Mobile View */}
+                            <div className='CpPropertyDetailsApartment-div-3'>
+                                <span className='CpPropertyDetailsApartment-div-3-span'>₹ 3.94 L - 6.01 Cr</span>
+                            </div>
                         </div>
                     </div>
-                    <div className='CpPropertyDetailsApartment-div-3'>
-                        <span className='CpPropertyDetailsApartment-div-3-span-1'>₹ 3.94 L - 6.01 Cr</span>
-                        <span className='CpPropertyDetailsApartment-div-3-span-2'>Book now & get 5% Discount</span>
+                    <div className='CpPropertyDetailsApartment-div-4'>
+                        <span className='CpPropertyDetailsApartment-div-4-span'>₹ 3.94 L - 6.01 Cr</span>
                     </div>
                 </div>
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
     )
 }
