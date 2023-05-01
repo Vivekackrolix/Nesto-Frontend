@@ -12,6 +12,20 @@ const HowWork = () => {
   }, [])
   return (
     <>
+<<<<<<< HEAD
+      <div className="how-box px-2">
+        <span className="sections-heading" data-aos="fade-up">
+          How NestoHub Works For Brokers
+        </span>
+        <span className="sections-sub-heading" data-aos="fade-up">
+          We Follow A Simple Process To Streamline Broker’s Process
+        </span>
+        <div className="load-wrapp">
+          <div className="load" data-aos="fade-up">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+=======
       <div className="container how-container" data-aos="fade-up">
         <div className="how-box px-2 pb-2">
           <span className="sections-heading" data-aos="fade-up">
@@ -26,9 +40,11 @@ const HowWork = () => {
               <div className="line"></div>
               <div className="line"></div>
             </div>
+>>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
           </div>
         </div>
-        {/* <div className="container how-container"> */}
+      </div>
+      <div className="container how-container">
         <div className="row pt-4 px-5">
           <div
             className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
@@ -44,7 +60,7 @@ const HowWork = () => {
             className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2"
             data-aos="zoom-in"
           >
-
+            
             <div class="radius">
               <span class="place how-col-2-span-1">01</span>
               <span class="border-animation ba1"></span>
@@ -83,7 +99,7 @@ const HowWork = () => {
           <div
             className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2"
             data-aos="zoom-in"
-          >
+          >            
             <div class="radius">
               <span class="place how-col-2-span-1">03</span>
               <span class="border-animation ba1"></span>
@@ -113,7 +129,6 @@ const HowWork = () => {
           {/* RowSix */}
           <RowSix />
         </div>
-        {/* </div> */}
       </div>
     </>
   );

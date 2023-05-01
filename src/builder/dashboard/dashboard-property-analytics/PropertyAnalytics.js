@@ -24,13 +24,7 @@ const PropertyAnalytics = () => {
       <h3 className="heading">Property Analytics</h3>
       <Container className="dashboard__wrapper__filter border border-light rounded-4 shadow-sm mt-2">
         <Row className="p-4 align-items-center text-center">
-          <Col
-            md={3}
-            sm={6}
-            className="d-grid my-2"
-            as={Link}
-            to="/builder/home-dashboard/property"
-          >
+          <Col md={3} sm={6} className="d-grid my-2">
             {/* {plans} */}
             <span
               style={{
@@ -41,17 +35,11 @@ const PropertyAnalytics = () => {
             >
               {data?.listedProperties}
             </span>
-            <span style={{ opacity: 0.5, color: "#171C26" }}>
+            <span style={{ opacity: 0.5 }}>
               Listed <br></br> Properties
             </span>
           </Col>
-          <Col
-            md={3}
-            sm={6}
-            className="d-grid my-2"
-            as={Link}
-            to="/builder/home-dashboard/recentlysold"
-          >
+          <Col md={3} sm={6} className="d-grid my-2">
             <span
               style={{
                 color: "#278FD9",
@@ -61,7 +49,7 @@ const PropertyAnalytics = () => {
             >
               {data?.soldOutUnits}
             </span>
-            <span style={{ opacity: 0.5, color: "#171C26" }}>
+            <span style={{ opacity: 0.5 }}>
               Sold Out <br></br> Units
             </span>
           </Col>
