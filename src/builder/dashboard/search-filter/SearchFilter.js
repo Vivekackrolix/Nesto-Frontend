@@ -9,6 +9,17 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 const SearchFilterBox = () => {
   const [showFilter, setShowFilter] = useState(false);
+  const [transcript, setTranscript] = useState("");
+  const handleVoiceSearch = () => {
+    const recognition = new window.webkitSpeechRecognition();
+    recognition.lang = "en-IN";
+    recognition.start();
+    recognition.onresult = (event) => {
+      const speechResult = event.results[0][0].transcript;
+      setTranscript(speechResult);
+    };
+  };
+
   return (
     <div className="row d-flex align-items-center mx-auto mb-5 mt-2">
       <div
@@ -36,13 +47,18 @@ const SearchFilterBox = () => {
               placeholder="Search"
               className="border-0"
               style={{ background: "#fff" }}
+              value={transcript}
+              onChange={(event) => setTranscript(event.target.value)}
             />
           </InputGroup>
         </div>
 
         <div className="px-3 py-2 voice-location-icons order-last d-flex align-items-center">
           <BsGeoAlt className="rounded-circle me-2 p-2" size={16} />
-          <BsMic className="rounded-circle me-2 p-2" size={16} />
+          <button onClick={handleVoiceSearch}>
+            <BsMic className="rounded-circle me-2 p-2" size={16} />
+          </button>
+
           <Button variant="primary" className="ms-2 bg-color-primary">
             Search
           </Button>

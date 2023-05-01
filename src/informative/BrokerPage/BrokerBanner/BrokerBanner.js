@@ -15,12 +15,12 @@ const BrokerBanner = () => {
                 Welcome to India's Largest Network of Brokers
               </h4>
               <div className="load-wrapp">
-                  <div className="load">
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                  </div>
+                <div className="load">
+                  <div className="line"></div>
+                  <div className="line"></div>
+                  <div className="line"></div>
                 </div>
+              </div>
               <p className="banner-p">
                 Broker Network app is a suite of services specifically designed for
                 Indian real estate brokers and developers to maximize their business.

@@ -13,18 +13,9 @@ const PromotedVisit = () => {
   const [data, setData] = useState({});
   useEffect(() => {
     const getVisit = async () => {
-      const response = await axios.get(
-        "https://apis.nestohub.in/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
+      const response = await getAPI(apiEndpoints.getVisitAnalytics);
 
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-
-      setData(response.data.data);
+      setData(response.data);
     };
 
     getVisit();

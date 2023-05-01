@@ -25,6 +25,7 @@ const InformativeFooter = () => {
                             <div className='col-lg-3 footer-col-2'>
                                 <span className='footer-col-2-span'>Company Info</span>
                                 <Link to='/about-us' className='informative-footer-link'>About Us</Link>
+                                <Link to='/partners/details' className='informative-footer-link'>Partner Details</Link>
                                 <Link to='/faq' className='informative-footer-link'>FAQ</Link>
                                 <Link to='/blog-list' className='informative-footer-link'>Blog</Link>
                             </div>

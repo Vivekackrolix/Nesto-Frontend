@@ -50,7 +50,7 @@ export default function PartnersDetailLeft() {
                 ============================= */}
                 <div className='partners-container_box border rounded-4 mt-5' data-aos='fade-right'>
                     <span className='partners-container_span-5'>Description</span>
-                    <hr className='partners-container-hr'/>
+                    <hr className='partners-container-hr' />
                     <span className='partners-container_span-6'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the
                         printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

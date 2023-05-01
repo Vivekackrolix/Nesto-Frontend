@@ -52,9 +52,9 @@ const CurrentProjects = () => {
     var settings = {
         dots: false,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         arrows: true,
-        // speed: 600,
+        speed: 600,
         slidesToShow: 2,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow />,

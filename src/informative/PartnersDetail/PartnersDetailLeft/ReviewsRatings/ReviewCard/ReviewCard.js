@@ -51,7 +51,8 @@ const ReviewCard = () => {
     var settings = {
         dots: false,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
+        speed: 600,
         arrows: true,
         slidesToShow: 2,
         slidesToScroll: 1,

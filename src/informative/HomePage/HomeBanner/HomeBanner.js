@@ -13,11 +13,12 @@ import OurPartner from '../OurPartner/OurPartner';
 import HowWork from '../../AboutUs/HowWork/HowWork';
 import HomeVideo from '../HomeVideo/HomeVideo'
 import InformativeFooter from '../../InformativeFooter/InformativeFooter'
+import HowWorkBuilder from '../../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder';
 
 const HomeBanner = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1400 });
-  }, []);
+  // useEffect(() => {
+  //   Aos.init({ duration: 1400 });
+  // }, []);
   return (
     <>
       <div>
@@ -28,7 +29,8 @@ const HomeBanner = () => {
         {/* <Residency /> */}
         <ChooseUs />
         <HomeVideo />
-        <HowWork />
+        {/* <HowWork /> */}
+        <HowWorkBuilder />
         <OurPartner />
         <GetStarted />
         <News />

@@ -1,3 +1,12 @@
+.p-p_info-container {  
+    overflow-y: hidden;
+}
+
+.p-p_info-container-2 {  
+    overflow-y: hidden;
+    margin-bottom: 3%;
+}
+
 .info_title-box {
     background: var(--lite-skyblue);
     padding: 14px 0;
@@ -10,13 +19,15 @@
     color: var(--cold-black-color);
 }
 
-.info_span, .info_span2 {
+.info_span,
+.info_span2 {
     font-weight: 400;
     font-size: 15px;
     display: block;
     line-height: 25px;
     color: var(--silver-surfer);
 }
+
 .info_span {
     margin-top: 10px;
     margin-bottom: 10px;

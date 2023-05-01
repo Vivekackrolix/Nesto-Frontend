@@ -10,23 +10,9 @@ const AllVisits = () => {
   const [data, setData] = useState({}); //Later use redux
   useEffect(() => {
     const getVisit = async () => {
-      const response = await axios.get(
-        "http://65.1.3.134:3000/api/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
+      const response = await getAPI(apiEndpoints.getVisitAnalytics);
 
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-      // const response = await getAPI(apiEndpoints.getVisitAnalytics);
-      // console.log(response.data);
-
-      // debugger;
-
-      console.log(response.data.data);
-      setData(response.data.data);
+      setData(response.data);
     };
 
     getVisit();

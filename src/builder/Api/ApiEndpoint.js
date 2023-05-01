@@ -12,7 +12,8 @@ export const apiEndpoints = {
   getAllSubscription: "/v1/subscription/getAllSubscription",
   getPendingInvoice:
     "/v1/builder/getPendingInvoice?id=641069056532f2569479fc9d", //CRASH
-  getVisitAnalytics: "v1/visit/getVisitAnalytics",
+  getVisitAnalytics:
+    "/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
   getAllVisit: "/v1/visit/getAllVisit",
   getAllproperty: "/v1/property/getAllproperty",
   updateRequestProperty: "/v1/requestProperty/updateRequestProperty",

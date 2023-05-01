@@ -25,7 +25,7 @@ const SoldOut = () => {
     return (
       <Col
         md={3} sm={12}
-        className="card bl-card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0 w-100"        
+        className="card bl-card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0 w-100"
         id={itm._id}
         key={itm._id}
       >

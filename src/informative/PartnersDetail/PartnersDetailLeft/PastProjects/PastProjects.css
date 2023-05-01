@@ -80,6 +80,10 @@
     color: var(--cold-black-color);
     font-size: 16px;
     display: block;
+    transition: all .2s ease-in;
+}
+.past-project_slider .past-project_span-1:hover {
+    color: var(--primary-color) !important;
 }
 
 .past-project_slider .past-project_span-2 {

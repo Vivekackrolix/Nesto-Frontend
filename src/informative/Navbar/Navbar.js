@@ -20,12 +20,12 @@ const InformativeNavbar = () => {
   };
   return (
     <>
-      {/* <LoginModal show={show} onHide={onHide} />  */}
+      <LoginModal show={show} onHide={onHide} /> 
       {/* <LoginAsBroker show={show} onHide={onHide} /> */}
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
       {/* <SuccessfulLogin show={show} onHide={onHide} />  */}
       {/* <ListProperty show={show} onHide={onHide} />   */}
-      <NotRegistered show={show} onHide={onHide} /> 
+      {/* <NotRegistered show={show} onHide={onHide} />  */}
       <Navbar bg="light" expand="lg" className="login__header nes__header sticky-top">
         <Link to="/" className="navbar-brand">
           <img

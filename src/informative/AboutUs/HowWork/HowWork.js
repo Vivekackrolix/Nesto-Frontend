@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HowWork.css";
 import RowTwo from "./RowTwo/RowTwo";
 import RowFour from "./RowFour/RowFour";
 import RowFive from "./RowFive/RowFive";
 import RowSix from "./RowSix/RowSix";
+import Aos from "aos";
 
 const HowWork = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1400 })
+  }, [])
   return (
     <>
+<<<<<<< HEAD
       <div className="how-box px-2">
         <span className="sections-heading" data-aos="fade-up">
           How NestoHub Works For Brokers
@@ -20,6 +25,22 @@ const HowWork = () => {
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
+=======
+      <div className="container how-container" data-aos="fade-up">
+        <div className="how-box px-2 pb-2">
+          <span className="sections-heading" data-aos="fade-up">
+            How NestoHub Works For Brokers
+          </span>
+          <span className="sections-sub-heading" data-aos="fade-up">
+            We Follow A Simple Process To Streamline Brokers’s Process
+          </span>
+          <div className="load-wrapp">
+            <div className="load" data-aos="fade-up">
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+            </div>
+>>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
           </div>
         </div>
       </div>

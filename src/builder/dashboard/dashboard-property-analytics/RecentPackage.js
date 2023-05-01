@@ -47,22 +47,16 @@ const RecentPackage = () => {
           </Col>
           <Col md={3} className="p-4">
             <ListGroup as="ul">
-              <ListGroup.Item as="li">
-                <AiFillCheckCircle size={20} color="#278fd9" className="me-2" />
-                Lorem Ipsum dummy
-              </ListGroup.Item>
-              <ListGroup.Item as="li">
-                <AiFillCheckCircle size={20} color="#278fd9" className="me-2" />
-                Lorem Ipsum dummy
-              </ListGroup.Item>
-              <ListGroup.Item as="li">
-                <AiFillCheckCircle size={20} color="#278fd9" className="me-2" />
-                Lorem Ipsum dummy
-              </ListGroup.Item>
-              <ListGroup.Item as="li">
-                <AiFillCheckCircle size={20} color="#278fd9" className="me-2" />
-                Lorem Ipsum dummy
-              </ListGroup.Item>
+              {data[0]?.selectProperties?.map((i) => (
+                <ListGroup.Item as="li">
+                  <AiFillCheckCircle
+                    size={20}
+                    color="#278fd9"
+                    className="me-2"
+                  />
+                  {i?.name}
+                </ListGroup.Item>
+              ))}
             </ListGroup>
           </Col>
           <Col md={6} className="p-4 text-center">

@@ -6,6 +6,8 @@ import './OurPartner.css';
 import Heading from '../heading/Heading';
 import { Link } from 'react-router-dom';
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -150,8 +152,15 @@ const OurPartner = () => {
       },
     ],
   };
+  useEffect(() => {
+    Aos.init({ duration: 1400 });
+  }, []);
   return (
+<<<<<<< HEAD
     <div className="our-partner">
+=======
+    <div className="our-partner" data-aos='fade-up'>
+>>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
       <div className="">
         <Heading title="Our Partners" sub="The Companies That Represent Us" />
       </div>
@@ -160,7 +169,9 @@ const OurPartner = () => {
           {review.map((obj, e) => {
             return (
               <div className="px-4" key={e}>
-                <img src={obj.img} className="partner-image" alt='partner' />
+                <Link to='/partner-page'>
+                  <img src={obj.img} className="partner-image" alt='partner' />
+                </Link>
               </div>
             );
           })}

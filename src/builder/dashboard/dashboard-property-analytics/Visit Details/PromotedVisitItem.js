@@ -3,15 +3,15 @@ import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaHeadset } from "react-icons/fa";
-
+import { FaStar } from "react-icons/fa";
 import Rating from "./Property claim/Rating";
 import Report from "./Property claim/Report";
 
 const PromotedVisitItem = (props) => {
   const [report, setReport] = useState(false);
-  const [rating, setRating] = useState(0);
+  // const [rating, setRating] = useState(0);
 
-  const [hover, setHover] = useState(0);
+  // const [hover, setHover] = useState(0);
   const [review, setReview] = useState(false);
   // const [show, setShow] = useState(false);
 
@@ -24,19 +24,21 @@ const PromotedVisitItem = (props) => {
 
   return (
     <Row className={props.className}>
-      <Col>{props.itm._id.slice(-10)}</Col>
+      <Col>{props?.itm?._id.slice(-10)}</Col>
       <Col>
-        {props.itm.brokerId === null ? "no data Name" : props.itm.brokerId.name}
+        {props?.itm?.brokerId === null
+          ? "no data Name"
+          : props?.itm.brokerId?.name}
       </Col>
-      <Col>{props.itm.clientName}</Col>
-      <Col>{props.itm.date}</Col>
+      <Col>{props?.itm?.clientName}</Col>
+      <Col>{props?.itm?.date}</Col>
       {/* <Col>{props.itm.visitStatus}</Col> */}
 
       <Col
         as={Link}
         to={`/builder/home-dashboard/promoted/claim/${props.itm._id}`}
       >
-        {props.itm.visitStatus}
+        {props?.itm?.visitStatus}
       </Col>
       <Col>
         <FaHeadset size="20" className="cursor" onClick={onReport} />
@@ -45,24 +47,15 @@ const PromotedVisitItem = (props) => {
 
       <Col>
         <div className="star-rating">
-          {[...Array(5)].map((star, index) => {
-            index += 1;
-            return (
-              <button
-                type="button"
-                key={index}
-                className={index <= (hover || rating) ? "on" : "off"}
-                onClick={() => {
-                  setRating(index);
-                  onRating();
-                }}
-                onMouseEnter={() => setHover(index)}
-                onMouseLeave={() => setHover(rating)}
-              >
-                <span className="star">&#9733; </span>
-              </button>
-            );
-          })}
+          {[...Array(5)].map((_, index) => (
+            <FaStar
+              key={index}
+              size={25}
+              color={
+                index < props?.itm?.builderId?.rating ? "#ffc107" : "#e4e5e9"
+              }
+            />
+          ))}
         </div>
         <Rating show={review} onHide={setReview} />
       </Col>
