@@ -11,7 +11,7 @@ const ListProperty = () => {
                     <span>List Your Property</span>
                 </Link>
             </div>
-            <div className='col-lg-5 listing-container_col-2'>
+            <div className='col-lg-5 listing-container_col-2 d-flex align-items-end justify-content-end'>
                 <img src='/assets/get-started.png' alt='listing' className='listing-container_img' />
             </div>
         </div>

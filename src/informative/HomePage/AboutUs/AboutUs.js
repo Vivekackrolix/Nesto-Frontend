@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./AboutUs.css";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
@@ -14,7 +14,7 @@ const AboutUs = () => {
               src="/assets/informative/device-new.svg"
               alt="about"
             />
-            <div className="about-us_box1_btn-div">
+            <div className="about-us_box1_btn-div align-items-start justify-content-end">
               <div className="d-flex gap-4">
                 <div>
                   <div className="d-flex gap-3 mb-2">

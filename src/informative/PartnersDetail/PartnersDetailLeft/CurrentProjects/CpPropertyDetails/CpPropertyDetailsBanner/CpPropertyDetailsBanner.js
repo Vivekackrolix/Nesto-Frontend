@@ -12,7 +12,7 @@ const CpPropertyDetailsBanner = () => {
                         {/* CpPropertyDetailsBanner-col_div-1, CpPropertyDetailsBanner-col_div-2, 
                         CpPropertyDetailsBanner-col_div-3, CpPropertyDetailsBanner-col_div-4 */}
                         <div className='CpPropertyDetailsBanner-col_div-1'>
-                            <img src='/assets/informative/propertyImage.jpg' className='CpPropertyDetailsBanner-col_div_img' />
+                            <img src='/assets/informative/propertyImage.jpg' className='CpPropertyDetailsBanner-col_div_img' alt='propertyImage' />
                             <div className='CpPropertyDetailsBanner-col_div-2'>
                                 <div className='CpPropertyDetailsBanner-col_div-3'>
                                     <span className='CpPropertyDetailsBanner-col_div-3_span-1'>
@@ -25,15 +25,15 @@ const CpPropertyDetailsBanner = () => {
                             </div>
                             {/* CpPropertyDetailsBanner-col_div-5, CpPropertyDetailsBanner-col_div-6, 
                         CpPropertyDetailsBanner-col_div-7 */}
-                            <div className='CpPropertyDetailsBanner-col_div-5 gap-4'>
+                            <div className='CpPropertyDetailsBanner-col_div-5 justify-content-start gap-4'>
                                 <div className='CpPropertyDetailsBanner-col_div-6'>
-                                    <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' />
+                                    <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' alt='homeSlider' />
                                 </div>
                                 <div className='CpPropertyDetailsBanner-col_div-6'>
-                                    <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' />
+                                    <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' alt='homeSlider' />
                                 </div>
                                 <div className='CpPropertyDetailsBanner-col_div-6'>
-                                    <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' />
+                                    <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' alt='homeSlider' />
                                     <div className='CpPropertyDetailsBanner-col_div-7'>
                                         <span className='CpPropertyDetailsBanner-col_div-7-span'>
                                             +3
@@ -44,7 +44,7 @@ const CpPropertyDetailsBanner = () => {
                         </div>
                     </div>
                     {/* CpPropertyDetailsBanner-col_div-8 */}
-                    <div className='CpPropertyDetailsBanner-col_div-8 gap-2'>
+                    <div className='CpPropertyDetailsBanner-col_div-8 justify-content-start gap-2'>
                         <span className='CpPropertyDetailsBanner-col_div-8-span'>Under Constructions</span>
                         <span className='CpPropertyDetailsBanner-col_div-8-span'>Possession in Dec,2023</span>
                     </div>

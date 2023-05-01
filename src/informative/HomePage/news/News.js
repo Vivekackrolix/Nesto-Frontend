@@ -39,11 +39,11 @@ export default function News() {
                       <img
                         src={item.img}
                         className="news-image"
-                        alt="news-image"
+                        alt="news"
                       />
                     </Link>
                     <div className="news-box-2">
-                      <div className="news-date">
+                      <div className="news-date align-items-end">
                         <span>
                           <CiCalendar className="date-icon" />
                         </span>

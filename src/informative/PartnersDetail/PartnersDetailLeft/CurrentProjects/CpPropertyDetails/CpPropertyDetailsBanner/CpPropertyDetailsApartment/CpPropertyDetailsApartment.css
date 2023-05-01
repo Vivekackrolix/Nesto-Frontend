@@ -17,7 +17,7 @@
 
 .CpPropertyDetailsApartment-div-2 {
     display: flex;
-    align-items: start;
+    /* align-items: start; */
 }
 
 .CpPropertyDetailsApartment-div-2_img {
@@ -48,7 +48,7 @@
     display: flex;
     width: fit-content;
     align-items: center;
-    justify-content: start;
+    /* justify-content: start; */
     flex-direction: column;
 }
 

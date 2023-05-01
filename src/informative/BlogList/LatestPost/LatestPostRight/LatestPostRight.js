@@ -66,7 +66,7 @@ const LatestPostRight = () => {
               <hr />
               {data.map((item) => {
                 return (
-                  <div className='latest-left_box-2 gap-3'>
+                  <div className='latest-left_box-2 align-items-start gap-3'>
                     <div className='latest-left_box-3'>
                       <img className='latest-left_img-1' src={item.img} alt='latest' />
                     </div>

@@ -25,9 +25,9 @@ const CpPropertyDetailsApartment = () => {
         <div className='container CpPropertyDetailsApartment'>
             <div className='col-lg-12 CpPropertyDetailsApartment-col'>
                 <div className='CpPropertyDetailsApartment-div-1'>
-                    <div className='CpPropertyDetailsApartment-div-2 gap-4'>
+                    <div className='CpPropertyDetailsApartment-div-2 align-items-start gap-4'>
                         <div className=''>
-                            <img src='/assets/informative/partner-2.png' className='CpPropertyDetailsApartment-div-2_img' />
+                            <img src='/assets/informative/partner-2.png' className='CpPropertyDetailsApartment-div-2_img' alt='partner-2' />
                         </div>
                         <div className=''>
                             <span className='div-2_child_heading'>Sky Dandelions Apartment</span>
@@ -38,8 +38,8 @@ const CpPropertyDetailsApartment = () => {
                             <div className='d-flex gap-5 mt-3'>
                                 {data.map((item) => {
                                     return (
-                                        <div className='CpPropertyDetailsApartment-div-2_child'>
-                                            <img src={item.img} className='CpPropertyDetailsApartment-div-2_child-img' />
+                                        <div className='CpPropertyDetailsApartment-div-2_child justify-content-start'>
+                                            <img src={item.img} className='CpPropertyDetailsApartment-div-2_child-img' alt='detail-apartment' />
                                             <span className='CpPropertyDetailsApartment-div-2_child-span'>{item.detail}</span>
                                         </div>
                                     )
@@ -53,7 +53,6 @@ const CpPropertyDetailsApartment = () => {
                     </div>
                 </div>
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
     )
 }

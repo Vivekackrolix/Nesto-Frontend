@@ -26,7 +26,7 @@ const CpPropertyDetailsSearch = () => {
                         {/* Filter End =============== */}
                         {/* Input Field Start =============== */}
                         <div className="flex-grow-1">
-                            <InputGroup className='CpPropertyDetailsSearch_input'>
+                            <InputGroup className='CpPropertyDetailsSearch_input align-items-start'>
                                 <InputGroup.Text className="CpPropertyDetailsSearch_input-search">
                                     <FiSearch className='CpPropertyDetailsSearch_search-icon' />
                                 </InputGroup.Text>
