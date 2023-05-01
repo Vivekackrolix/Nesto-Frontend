@@ -18,9 +18,8 @@ const Video = () => {
     return (
         <>
             {/* <div className={`video-main ${play === true ? 'video-main-before' : 'video-main'}`} data-aos='fade-up'> */}
-            {/* <div className={`video-main-div ${play === true ? 'video-main-div-before' : ''}`}> */}
-            <div className="video-main-div">
-                {/* {play ? <AiFillPlayCircle className="play-button"></AiFillPlayCircle> : ""} */}
+            <div className={`video-main-div ${play === true ? 'video-main-div-before' : ''}`}>
+                {play ? <AiFillPlayCircle className="play-button"></AiFillPlayCircle> : ""}
                 <video
                     onPlay={handleClick}
                     onPause={handlePause}

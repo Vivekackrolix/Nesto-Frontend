@@ -80,7 +80,7 @@ const Testimonial = () => {
   };
   return (
     <>
-      <div className=" main-testimonial-body py-5" style={{ overflowX: 'hidden' }}>
+      <div className=" main-testimonial-body py-5">
         <div className="quote-image d-flex flex-row-reverse ">
           <img src="./assets/quote.png" alt="quote" />
         </div>

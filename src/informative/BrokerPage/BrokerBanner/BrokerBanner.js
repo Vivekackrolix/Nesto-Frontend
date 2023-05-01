@@ -31,7 +31,7 @@ const BrokerBanner = () => {
               </Link>
             </div>
           </div>
-          <div className="col-lg-2 broker-banner-col-2 align-items-end" data-aos='zoom-in'>
+          <div className="col-lg-2 broker-banner-col-2" data-aos='zoom-in'>
             <img src='/assets/informative/brokerCartoon.svg' alt='broker' className='broker-banner-cartoon' />
           </div>
           {/* BuilderForm */}

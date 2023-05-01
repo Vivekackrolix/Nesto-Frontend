@@ -17,12 +17,12 @@ export default function BlogListMain() {
             <div className="blog-list-banner">
                 <span className='blog-list-banner-heading' data-aos='zoom-in'>Blog</span>
             </div>
-            <div className='container' style={{ overflowX: 'hidden' }}>
+            <div className='container' style={{overflowX: 'hidden'}}>
                 {/* ArticleNews===
                 ============== */}
                 <ArticleNews />
-                {/* ListProperty ===
-                ================ */}
+                {/* ListProperty===
+                =============== */}
                 <ListProperty />
                 {/* LatestPost======
                 ================ */}

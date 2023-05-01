@@ -3,7 +3,7 @@ import { Container, Table } from "react-bootstrap";
 import dlf from "../../../Images/dlf.png";
 
 const Payment = ({ data }) => {
-  // const unitType = data.unitType ? data.unitType : [];
+  const unitType = data.unitType ? data.unitType : [];
 
   const PaymentPlan = data.paymentPlan?.map((itm) => (
     <tr>
@@ -31,33 +31,59 @@ const Payment = ({ data }) => {
     </Container>
   ));
 
-  const advertisement = data?.propertyAdvertiseMentDetails?.map(
-    (iteam, index) => (
-      <div className=" border border_light rounded container mx-4">
-        <div className="d-flex bd-highlight mb-3">
-          <div className="me-auto p-1 bd-highlight">
-            {" "}
-            <img src={dlf} alt="property" />
-          </div>
-          <span className="me-auto p-2 bd-highlight">
-            <h4>{iteam?.name}</h4>
-
-            <h6 style={{ color: "#8B9199" }}>{iteam?.location}</h6>
-
-            <h6 style={{ color: "#8B9199" }}>{iteam?.distance}</h6>
-          </span>
-        </div>
-      </div>
-    )
-  );
-
   const bankData = data.loanApprovedByIds?.map((item) => (
     <img src={item?.image} className="rounded my-3" alt="Home" />
   ));
   return (
     <>
       <div className=" d-flex justify-content-around rounded">
-        {advertisement}
+        <div className=" border border_light rounded container mx-4">
+          <div className="d-flex bd-highlight mb-3">
+            <div className="me-auto p-1 bd-highlight">
+              {" "}
+              <img src={dlf} alt="property" />
+            </div>
+            <span className="me-auto p-2 bd-highlight">
+              <h4>DLF Tower</h4>
+
+              <h6 style={{ color: "#8B9199" }}>Shivaji Nagar</h6>
+
+              <h6 style={{ color: "#8B9199" }}>0.06 KM distance</h6>
+            </span>
+          </div>
+        </div>
+
+        <div className=" border border_light rounded container mx-4">
+          <div className="d-flex bd-highlight mb-3">
+            <div className="me-auto p-1 bd-highlight">
+              {" "}
+              <img src={dlf} alt="property" />
+            </div>
+            <span className="me-auto p-2 bd-highlight">
+              <h4>DLF Tower</h4>
+
+              <h6 style={{ color: "#8B9199" }}>Shivaji Nagar</h6>
+
+              <h6 style={{ color: "#8B9199" }}>0.06 KM distance</h6>
+            </span>
+          </div>
+        </div>
+
+        <div className=" border border_light rounded container mx-4">
+          <div className="d-flex bd-highlight mb-3">
+            <div className="me-auto p-1 bd-highlight">
+              {" "}
+              <img src={dlf} alt="property" />
+            </div>
+            <span className="me-auto p-2 bd-highlight">
+              <h4>DLF Tower</h4>
+
+              <h6 style={{ color: "#8B9199" }}>Shivaji Nagar</h6>
+
+              <h6 style={{ color: "#8B9199" }}>0.06 KM distance</h6>
+            </span>
+          </div>
+        </div>
       </div>
 
       <br></br>

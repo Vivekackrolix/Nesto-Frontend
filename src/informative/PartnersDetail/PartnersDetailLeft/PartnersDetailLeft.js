@@ -27,17 +27,17 @@ export default function PartnersDetailLeft() {
             <div className='container-fluid partners-container'>
                 <div className='row' data-aos='fade-right'>
                     <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
-                        <div className='partners-container_box-3 align-items-end' onClick={() => setFirstPopUp(true)}>
+                        <div className='partners-container_box-3' onClick={() => setFirstPopUp(true)}>
                             <span className='partners-container_span-1'>All Photos & Videos</span>
                             <span className='partners-container_span-1'>16 Photos</span>
                         </div>
                     </div>
                     <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
-                        <div className='partners-container_box-1 align-items-end' onClick={() => setSecondPopUp(true)}>
+                        <div className='partners-container_box-1' onClick={() => setSecondPopUp(true)}>
                             <span className='partners-container_span-1'>Indoor</span>
                             <span className='partners-container_span-1'>10 Photos</span>
                         </div>
-                        <div className='partners-container_box-2 align-items-end' onClick={() => setThirdPopUp(true)}>
+                        <div className='partners-container_box-2' onClick={() => setThirdPopUp(true)}>
                             <span className='partners-container_span-1'>Outdoor</span>
                             <span className='partners-container_span-1'>14 Photos</span>
                         </div>

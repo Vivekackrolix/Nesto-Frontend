@@ -32,7 +32,7 @@ const BuilderBanner = () => {
               </Link>
             </div>
           </div>
-          <div className="col-lg-2 builder-banner-col-2 align-items-end" data-aos="zoom-in">
+          <div className="col-lg-2 builder-banner-col-2" data-aos="zoom-in">
             <img
               src="/assets/informative/builderCartoon.svg"
               alt="builder"

@@ -49,19 +49,13 @@ const Floor = ({ data }) => {
   console.log(data);
 
   const floorPlan = data?.floorPlanAndPricing?.map((item) => (
-    <SwiperSlide key={item?.id}>
+    <SwiperSlide key={item.id}>
       <Card className="h-100 border-0 shadow-sm swiper__card p-3">
         <div class="ribbon">
-          <span>{tabKey[item?.id]} </span>
+          <span>{tabKey[item.id]} </span>
         </div>
 
-        <Card.Img
-          variant="top"
-          src={
-            "/assets/swiper-img.png"
-            // item?.floorPlanImageUrl
-          }
-        />
+        <Card.Img variant="top" src="/assets/swiper-img.png" />
         <Card.Body className="px-0">
           <div className="swiper__card__row d-flex justify-content-between align-items-center">
             <span>Super Built-Up Area</span>
@@ -69,13 +63,16 @@ const Floor = ({ data }) => {
           </div>
           <div className="swiper__card__row d-flex justify-content-between align-items-center">
             <span>{item?.areaSquareFeet}</span>
-            {/* {data?.floorPlanAndPricing.map((itm) => ( */}
-            {/* <span>{itm?.areaSquareFeet}</span> */}
-            {/* ))} */}
-            <span className="swiper__price text-wrap">{item?.price}</span>
+            {data?.floorPlanAndPricing.map((itm) => (
+              <span>{itm?.areaSquareFeet}</span>
+            ))}
+            <span className="swiper__price text-wrap">
+              ₹ 3.94 Cr (5,000/sq.ft.)
+              {data?.floorPlanAndPricing?.price}
+            </span>
           </div>
           <div className="swiper__card__row d-flex justify-content-between align-items-center mt-2">
-            <span>{item?.areaSquareMeter}</span>
+            <span>(130.6 sq.m.)</span>
             <span>+Govt. Charges</span>
           </div>
         </Card.Body>

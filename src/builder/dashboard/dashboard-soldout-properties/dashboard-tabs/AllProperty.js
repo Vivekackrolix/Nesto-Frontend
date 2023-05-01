@@ -73,7 +73,7 @@ const AllProperty = () => {
                   {" "}
                   <Link
                     className="recent-heading"
-                    to={`/builder/home-dashboard/description/${itm?.propertyId?._id}`}
+                    // to={`/builder/home-dashboard/description/${itm.propertyId._id}`}
                   >
                     {itm.name}
                   </Link>

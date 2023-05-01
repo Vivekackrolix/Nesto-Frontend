@@ -27,7 +27,7 @@ export default function News() {
   ];
   return (
     <>
-      <div class="news" style={{ overflowX: 'hidden' }}>
+      <div class="news">
         <Heading title="Blogs & News" sub="Latest Blogs and News" />
         <div className="container news-container" data-aos="fade-up">
           <div className="row">
@@ -39,11 +39,11 @@ export default function News() {
                       <img
                         src={item.img}
                         className="news-image"
-                        alt="news"
+                        alt="news-image"
                       />
                     </Link>
                     <div className="news-box-2">
-                      <div className="news-date align-items-end">
+                      <div className="news-date">
                         <span>
                           <CiCalendar className="date-icon" />
                         </span>
@@ -68,7 +68,7 @@ export default function News() {
                   </div>
                 </div>
               );
-            })}
+            })}            
           </div>
           {/* <div className="text-center" data-aos="fade-up">
               <Link to="/blog-list" className="primary_button">

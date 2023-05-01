@@ -2,14 +2,6 @@
   position: relative;
   cursor: pointer;
   width: 100% !important;
-  /* height: 100vh !important; */
-}
-
-.home-video {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  object-position: center;
 }
 
 .play-button {
@@ -18,15 +10,13 @@
   right: 48%;
   font-size: 60px;
   color: var(--color-white);
-  background: var(--primary-color);
-  border-radius: 50%;
 }
 
 .video-main-div-before:before {
   content: "";
   opacity: 0.75;
   transition-duration: 500ms;
-  background-color: var(--primary-color);
+  background-color: #fff;
   border-radius: 100%;
   width: 60px;
   height: 60px;
@@ -46,6 +36,11 @@
   }
 }
 
+.home-video {
+  width: 100%;
+  /* height: 400px;
+  background: #a89393; */
+}
 
 .home-video-source {}
 
@@ -55,13 +50,6 @@
 
 
 @media (max-width: 680px) {
-  .home-video {
-    width: 100%;
-    height: 220px;
-    object-fit: fill;
-    object-position: center;
-  }
-
   .play-button {
     top: 36%;
     width: 10%;
