@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './CpPropertyDetailsBanner.css'
 import { RxCheck } from 'react-icons/rx'
 import Aos from 'aos';
+import CpPropertyDBImgPopUp from './CpPropertyDBImgPopUp/CpPropertyDBImgPopUp';
 
 const CpPropertyDetailsBanner = () => {
+    const [imgPopUp, SetImgPopUp] = useState(false)
     useEffect(() => {
         Aos.init({ duration: 1400 })
     }, [])
@@ -27,8 +29,7 @@ const CpPropertyDetailsBanner = () => {
                                     <span className='CpPropertyDetailsBanner-col_div-4_span-1'>Listing Date: 05/01/2023</span>
                                 </div>
                             </div>
-                            {/* CpPropertyDetailsBanner-col_div-5, CpPropertyDetailsBanner-col_div-6, 
-                            CpPropertyDetailsBanner-col_div-7 */}
+                            {/* CpPropertyDetailsBanner-col_div-5, CpPropertyDetailsBanner-col_div-6, CpPropertyDetailsBanner-col_div-7 */}
                             <div className='CpPropertyDetailsBanner-col_div-5 gap-4'>
                                 <div className='CpPropertyDetailsBanner-col_div-6'>
                                     <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' />
@@ -36,7 +37,7 @@ const CpPropertyDetailsBanner = () => {
                                 <div className='CpPropertyDetailsBanner-col_div-6'>
                                     <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' />
                                 </div>
-                                <div className='CpPropertyDetailsBanner-col_div-6'>
+                                <div className='CpPropertyDetailsBanner-col_div-6' onClick={() => SetImgPopUp(true)}>
                                     <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' />
                                     <div className='CpPropertyDetailsBanner-col_div-7'>
                                         <span className='CpPropertyDetailsBanner-col_div-7-span'>
@@ -54,6 +55,10 @@ const CpPropertyDetailsBanner = () => {
                     </div>
                 </div>
             </div>
+            <CpPropertyDBImgPopUp
+                show={imgPopUp}
+                onHide={() => SetImgPopUp(false)}
+            />
         </>
     )
 }
