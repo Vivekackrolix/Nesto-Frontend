@@ -22,20 +22,6 @@ const AllVisits = () => {
   const [filterData, setFilterData] = useState([]);
   useEffect(() => {
     const getVisit = async () => {
-      // const response = await axios.get(
-      //   // "http://13.233.149.97:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-      //   // "http://localhost:3000/api/v1/visit/getAllVisit?propertyId=641bf437067c659dc0be278c&isPromoted=false&builderId=641c31c0e55383765452d174",
-      //   "https://apis.nestohub.in/api/v1/visit/getAllVisit",
-
-      //   // formData,
-      //   {
-      //     headers: {
-      //       Authorization:
-      //         "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-      //     },
-      //   }
-      // );
-      debugger;
       const response = await getAPI(apiEndpoints.getAllVisit);
       console.log(response.data);
 

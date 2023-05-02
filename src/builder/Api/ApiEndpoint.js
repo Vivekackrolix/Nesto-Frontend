@@ -7,7 +7,7 @@ export const apiEndpoints = {
     "/v1/builder/getPropertyAnalytics?id=641069056532f2569479fc9d",
   getPropertiesAnalyticsForIndividualProperty:
     "/v1/property/getPropertiesAnalyticsForIndividualProperty?builderId=641069056532f2569479fc9d&propertyId=640ee6a8cbe2f98daaa8813f",
-  getPropertyById: "/v1/property/getPropertyById?id=64369da4d61407310a4e3b2a",
+  getPropertyById: "/v1/property/getPropertyById?id=",
   getAllSubscriptionOrder: "/v1/subscriptionOrder/getAllSubscriptionOrder",
   getAllSubscription: "/v1/subscription/getAllSubscription",
   getPendingInvoice:
@@ -28,4 +28,11 @@ export const apiEndpoints = {
     "/v1/invoice/getAllInvoiceForBuilder?builderId=641069056532f2569479fc9d&status=pending",
   getAllInvoiceForBuilder1:
     "/v1/invoice/getAllInvoiceForBuilder?builderId=641069056532f2569479fc9d&status=settled",
+  getClaimById: "/v1/claim/getClaimById?id=",
+  addPayment: "/v1/payment/addPayment",
+  getAllBuilder: "/v1/builder/getAllBuilder",
+  getAllBanner: "/v1/banner/getAllBanner",
+  getAllClaim:
+    "/v1/claim/getAllClaim?builderId=641069056532f2569479fc9d&claimType=property",
+  addRaiseDispute: "/v1/raiseDispute/addRaiseDispute",
 };

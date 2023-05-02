@@ -12,20 +12,18 @@ const HowWork = () => {
   }, [])
   return (
     <>
-      <div className="container how-container" data-aos="fade-up">
-        <div className="how-box px-2 pb-2">
-          <span className="sections-heading" data-aos="fade-up">
-            How NestoHub Works For Brokers
-          </span>
-          <span className="sections-sub-heading" data-aos="fade-up">
-            We Follow A Simple Process To Streamline Brokers’s Process
-          </span>
-          <div className="load-wrapp">
-            <div className="load" data-aos="fade-up">
-              <div className="line"></div>
-              <div className="line"></div>
-              <div className="line"></div>
-            </div>
+      <div className="how-box px-2">
+        <span className="sections-heading" data-aos="fade-up">
+          How NestoHub Works For Brokers
+        </span>
+        <span className="sections-sub-heading" data-aos="fade-up">
+          We Follow A Simple Process To Streamline Broker’s Process
+        </span>
+        <div className="load-wrapp">
+          <div className="load" data-aos="fade-up">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
           </div>
         </div>
       </div>

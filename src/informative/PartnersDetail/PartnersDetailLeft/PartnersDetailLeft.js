@@ -37,7 +37,7 @@ export default function PartnersDetailLeft() {
                             <span className='partners-container_span-1'>Indoor</span>
                             <span className='partners-container_span-1'>10 Photos</span>
                         </div>
-                        <div className='partners-container_box-2 align-items-end' onClick={() => setThirdPopUp(true)}>
+                        <div className='partners-container_box-2' onClick={() => setThirdPopUp(true)}>
                             <span className='partners-container_span-1'>Outdoor</span>
                             <span className='partners-container_span-1'>14 Photos</span>
                         </div>

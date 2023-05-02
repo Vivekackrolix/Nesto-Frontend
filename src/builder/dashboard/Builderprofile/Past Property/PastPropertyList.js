@@ -15,7 +15,7 @@ const PastPropertyList = (props) => {
     const getBoughtProperties = async () => {
       const response = await getAPI(apiEndpoints.getAllBoughtProperty);
 
-      console.log(response.data);
+      // console.log(response.data);
 
       setData(response.data);
     };

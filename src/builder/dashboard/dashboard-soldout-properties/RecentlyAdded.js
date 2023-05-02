@@ -15,7 +15,8 @@ const RecentlyAdded = () => {
     const getAddedProperties = async () => {
       try {
         const response = await getAPI(apiEndpoints.getAllproperty);
-
+        debugger;
+        console.log(response.data);
         setData(response.data);
       } catch (error) {
         console.error(error);
@@ -40,12 +41,18 @@ const RecentlyAdded = () => {
     return (
       <Col
         md={3}
-        className="card mb-4 shadow-sm rounded-4 p-0 border-0"
+        className="card bl-card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0 w-100"
         style={{ width: "21.75rem" }}
         id={itm._id}
         key={itm._id}
       >
-        <Card.Img variant="top" src={propertyImage} />
+        <Link to={`/builder/home-dashboard/description/${itm._id}`}>
+          <Card.Img
+            className="w-100 bl-prop-img"
+            variant="top"
+            src={propertyImage}
+          />
+        </Link>
         <Card.Body>
           <Card.Text>
             <Row>

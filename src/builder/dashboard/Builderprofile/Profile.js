@@ -20,6 +20,7 @@ import PastProperty from "./Past Property/PastProperty";
 import { MdSupportAgent } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
 import { getBuilderDetail } from "../../redux/https-requests/builderDetail-http";
+// import { useHistory } from "react-router-dom";
 
 const tabs = [
   { title: "Personal Details", icon: <FiUser color="#000000" /> },
@@ -59,6 +60,7 @@ const profileSidebarNavContent = [
 ];
 
 const ProfilePage = () => {
+  // const history = useHistory();
   const [activeTab, setActiveTab] = useState(0);
   const dispatch = useDispatch();
   const builderData = useSelector(
@@ -71,6 +73,13 @@ const ProfilePage = () => {
   const handleTabChange = (index) => {
     setActiveTab(index);
   };
+  // const handleSignOut = () => {
+  //   // Clear the user's session here (e.g. remove the JWT token from local storage)
+  //   localStorage.removeItem("token");
+
+  //   // Redirect the user to the login page
+  //   history.push("/login");
+  // };
 
   return (
     <>
@@ -131,6 +140,7 @@ const ProfilePage = () => {
                 <Button
                   variant="transparent"
                   className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout"
+                  // onClick={handleSignOut}
                 >
                   <BsBoxArrowRight className="icon" size={24} /> Sign Out
                 </Button>

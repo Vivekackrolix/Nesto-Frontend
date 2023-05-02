@@ -7,7 +7,7 @@ const builderDetailSlice = createSlice({
   initialState,
   reducers: {
     setDetails(state, action) {
-      // debugger;
+      // ;
       state.details = action.payload.details;
     },
   },

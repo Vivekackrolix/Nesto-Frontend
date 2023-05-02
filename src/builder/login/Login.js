@@ -29,7 +29,6 @@ const Login = () => {
   const [register, setRegister] = useState(false);
 
   const onContinueHandler = async () => {
-    debugger;
     if (inputValue.length === 10) {
       const response = await postAPI(apiEndpoints.sendOtp, {
         phoneNumber: inputValue,
@@ -39,14 +38,6 @@ const Login = () => {
       setShowModal((prev) => {
         return (prev = true);
       });
-      //   const response = await axios.post(
-      //     // "http://13.233.149.97:3000/api/v1/builder/sendOtp",
-      //     "http://localhost:3000/api/v1/builder/sendOtp",
-      //     { phoneNumber: inputValue }
-      //   );
-      //   console.log(response);
-      // } else {
-      //   console.log("Error");
     }
   };
 

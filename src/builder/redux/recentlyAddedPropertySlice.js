@@ -7,7 +7,7 @@ const recentlyAddedPropertySlice = createSlice({
   initialState,
   reducers: {
     setAddedPropertyDetails(state, action) {
-      // debugger;
+      // ;
       state.properties = action.payload.data;
     },
   },
