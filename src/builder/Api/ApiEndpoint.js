@@ -7,7 +7,7 @@ export const apiEndpoints = {
     "/v1/builder/getPropertyAnalytics?id=641069056532f2569479fc9d",
   getPropertiesAnalyticsForIndividualProperty:
     "/v1/property/getPropertiesAnalyticsForIndividualProperty?builderId=641069056532f2569479fc9d&propertyId=640ee6a8cbe2f98daaa8813f",
-  getPropertyById: "/v1/property/getPropertyById?id=64369da4d61407310a4e3b2a",
+  getPropertyById: "/v1/property/getPropertyById?id=",
   getAllSubscriptionOrder: "/v1/subscriptionOrder/getAllSubscriptionOrder",
   getAllSubscription: "/v1/subscription/getAllSubscription",
   getPendingInvoice:

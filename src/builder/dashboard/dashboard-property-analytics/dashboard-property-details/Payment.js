@@ -6,13 +6,13 @@ import "./Payment.css";
 const Payment = ({ data }) => {
   // const unitType = data.unitType ? data.unitType : [];
 
-  const PaymentPlan = data.paymentPlan?.map((itm) => (
+  const PaymentPlan = data?.paymentPlan?.map((itm) => (
     <tr>
-      <td>{itm.payment}</td>
-      <td>{itm.milestone}</td>
+      <td>{itm?.payment}</td>
+      <td>{itm?.milestone}</td>
     </tr>
   ));
-  const milestoneTable = data.milestones?.map((item, index) => (
+  const milestoneTable = data?.milestones?.map((item, index) => (
     <Container
       className="dashboard_wrapper_filter border border_light rounded p-3 mx-5"
       style={{ border: "2.94206px solid #E3E3E7" }}
@@ -108,7 +108,7 @@ const Payment = ({ data }) => {
   //   )
   // );
 
-  const bankData = data.loanApprovedByIds?.map((item) => (
+  const bankData = data?.loanApprovedByIds?.map((item) => (
     <img src={item?.image} className="rounded my-3" alt="Home" />
   ));
   return (
@@ -151,10 +151,10 @@ const Payment = ({ data }) => {
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <br></br>
 
-        <h4>Brokerage {data.brokerageValue}%</h4>
+        <h4>Brokerage {data?.brokerageValue}%</h4>
         <p style={{ color: "#7D7F88" }}>
           {/* Platform charges & applicable taxes shall be deducted */}
-          {data.brokerageTerms}
+          {data?.brokerageTerms}
         </p>
 
         <br></br>
@@ -180,7 +180,7 @@ const Payment = ({ data }) => {
         </div>
         <hr />
         <span style={{ color: "#7D7F88", alignitems: "cente" }}>
-          {data.propertyDescription}
+          {data?.propertyDescription}
         </span>
         <br></br>
         <br></br>
