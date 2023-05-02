@@ -35,11 +35,11 @@ const App = () => {
             path="/builder/register"
             element={<RegisterLogin />}
           />{" "}
-          <Route
+          {/* <Route
             exact
             path="/builder/home-dashboard/promoted"
             element={<PromotedVisit />}
-          />
+          /> */}
           <Route
             exact
             path="/builder/home-dashboard/subscription"

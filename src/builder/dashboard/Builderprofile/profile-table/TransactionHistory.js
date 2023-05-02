@@ -10,7 +10,7 @@ const TransactionHistory = () => {
   useEffect(() => {
     const getTransaction = async () => {
       const response = await getAPI(apiEndpoints.getAllPayment);
-      // debugger;
+      // ;
 
       // console.log(response.data.data);
       setData(response.data);

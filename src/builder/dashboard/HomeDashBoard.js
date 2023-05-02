@@ -12,9 +12,11 @@ import RecentPackage from "./dashboard-property-analytics/RecentPackage";
 import RecentlyAdded from "./dashboard-soldout-properties/RecentlyAdded";
 // import Header from "../header/Header";
 import Footer from "./Footer/Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getBuilderDetail } from "../redux/https-requests/builderDetail-http";
 import { useDispatch, useSelector } from "react-redux";
+// import { getAPI } from "../Api/ApiRequest";
+// import { apiEndpoints } from "../Api/ApiEndpoint";
 
 const dashboardInfoCardsData = [];
 
@@ -22,11 +24,24 @@ const HomeDashBoard = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const data = useSelector((state) => state.builderDetail.details);
-  console.log(data);
+  const [searchTerm, setSearchTerm] = useState("");
+  // console.log(data);
   useEffect(() => {
     dispatch(getBuilderDetail());
   }, [dispatch]);
 
+  const filteredData = data.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  // const [data1, setData1] = useState([]);
+  // useEffect(() => {
+  //   const getBanner = async () => {
+  //     const response = await getAPI(apiEndpoints.getAllBanner);
+  //     setData1(response.data);
+  //   };
+
+  //   getBanner();
+  // }, []);
   return (
     <>
       <DashboardHeader />
@@ -47,7 +62,10 @@ const HomeDashBoard = () => {
           ))}
         </Row>
 
-        <SearchFilterBox />
+        <SearchFilterBox
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        />
         <PropertyAnalytics />
         <SoldOut />
         <RecentlyAdded />

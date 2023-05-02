@@ -1,19 +1,14 @@
-import axios from "axios";
+// import axios from "axios";
+import { apiEndpoints } from "../../Api/ApiEndpoint";
+import { getAPI } from "../../Api/ApiRequest";
 import { builderDetailActions } from "../builderDetailSlice";
 
 export const getBuilderDetail = () => {
   return async (dispatch) => {
     //HTTP REQ
     const getData = async () => {
-      const response = await axios.get(
-        "https://apis.nestohub.in/api/v1/builder/getAllBuilder",
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNjkwNTY1MzJmMjU2OTQ3OWZjOWQiLCJpYXQiOjE2Nzg3OTc1ODMsImV4cCI6MTY4NjU3MzU4M30.8QjZtAmk342PMxa0CvGdqfp36BWk6lJ4QFyN6f1MO_A",
-          },
-        }
-      );
+      const response = await getAPI(apiEndpoints.getAllBuilder);
+      debugger;
       console.log(response.data);
       return response.data;
     };
@@ -22,7 +17,7 @@ export const getBuilderDetail = () => {
     try {
       const data = await getData();
       if (data.code !== 200) {
-        console.log("Permission not available");
+        // console.log("Permission not available");
       } else {
         const builderData = data.data.filter(
           (itm) => itm.phoneNumber === localStorage.getItem("phone")

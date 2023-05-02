@@ -1,12 +1,32 @@
 import { Card } from "react-bootstrap";
 import "./TermsConditions.css";
-
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getBuilderDetail } from "../../../redux/https-requests/builderDetail-http";
 const TermsConditions = () => {
+  const dispatch = useDispatch();
+  const builderData = useSelector(
+    (state) => state.builderDetail.details[0]
+  ) || {
+    email: "",
+    phoneNumber: "",
+    gst: "",
+    companyName: "",
+    address: "",
+    panOfCompany: "",
+    companyType: "",
+  };
+  // console.log(builderData);
+
+  useEffect(() => {
+    dispatch(getBuilderDetail());
+  }, [dispatch]);
   return (
     <>
       <h3 className="mb-2">Terms & Conditions</h3>
       <Card.Text style={{ textAlign: "justify" }}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
+        {builderData?.termAndCondition}
+        {/* Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
         scrambled it to make a type specimen book. It has survived not only five
@@ -34,7 +54,7 @@ const TermsConditions = () => {
         publishing software like Aldus PageMaker including versions of Lorem
         Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s,
+        since the 1500s, */}
       </Card.Text>
     </>
   );

@@ -1,7 +1,7 @@
 import { Button, Container, Form } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
 import CustomModal from "../../../components/common/CustomModal";
-import axios from "axios";
+// import axios from "axios";
 import { useState } from "react";
 import { postAPI } from "../../Api/ApiRequest";
 import { apiEndpoints } from "../../Api/ApiEndpoint";
@@ -15,7 +15,6 @@ const Requirement = (props) => {
   const [project, setProject] = useState("");
   const [description, setDescription] = useState("");
   const onSubmitHandler = async () => {
-    debugger;
     if (email.length <= 1) {
       //Set Error true
       return;

@@ -27,7 +27,8 @@ const PromotedVisit = () => {
     const getVisit = async () => {
       const response = await getAPI(apiEndpoints.getAllVisit);
 
-      debugger;
+      // ;
+      // console.log(response.data.slice(0, 11));
 
       setData1(response.data);
       setFilterData(response.data);

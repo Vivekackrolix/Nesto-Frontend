@@ -25,7 +25,7 @@ const PropertyManager = (props) => {
           },
         }
       );
-      // debugger;
+      // ;
 
       // console.log(response.data);
       setData(response.data.data);

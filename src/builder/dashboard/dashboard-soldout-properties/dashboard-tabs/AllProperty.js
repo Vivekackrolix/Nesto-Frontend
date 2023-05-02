@@ -361,8 +361,9 @@ const AllProperty = () => {
     <>
       <DashboardHeader />
       <br />
-      <SearchFilterBox />
-      <Container className=" dashboard__wrapper">
+
+      <Container className="pt-2 pb-4 dashboard__wrapper">
+        <SearchFilterBox />
         <h3 className="heading">All Property </h3>
 
         <Tabs

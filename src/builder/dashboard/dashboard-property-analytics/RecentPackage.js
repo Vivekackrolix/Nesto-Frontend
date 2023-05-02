@@ -13,13 +13,13 @@ const RecentPackage = () => {
   useEffect(() => {
     const getSubscription = async () => {
       const response = await getAPI(apiEndpoints.getAllSubscriptionOrder);
-      // console.log(response.data);
+
       setData(response.data);
     };
 
     getSubscription();
   }, []);
-  // if(data.length ===0 ){return <h1>API CALL</h1>}
+
   return (
     <>
       <h3 className="heading">Recent Package</h3>
@@ -27,21 +27,23 @@ const RecentPackage = () => {
         <Row>
           <Col
             md={3}
-            // className="plan rounded-start text-center"
             className={`rounded-start text-center`}
-            // style={{ background: data.planId.colour, padding: "40px" }}
             style={{ padding: "40px", background: data[0]?.planId?.colour }}
           >
             <h4 className="fw-bold">
-              {data.length === 0 ? "Api call" : data[0].planId.name}
-              {/* {data.length === 0 ? "Api call" : data[0].planId.name} */}
+              {data[0]?.length === 0 ? "Api call" : data[0]?.planId?.name}
             </h4>
-            {/* <h4 className="fw-bold">{data.planId.name}</h4> */}
+
             <p style={{ opacity: "0.6" }}>
-              {data.length === 0 ? "Api call" : data[0].planId.description}
+              {data[0]?.length === 0
+                ? "Api call"
+                : data[0]?.planId?.description}
             </p>
             <p className="fw-bold">
-              ₹ {data.length === 0 ? "Api call " : data[0].planId.costPerMonth}
+              ₹{" "}
+              {data[0]?.length === 0
+                ? "Api call "
+                : data[0]?.planId?.costPerMonth}
               /per-month
             </p>
           </Col>
@@ -68,12 +70,12 @@ const RecentPackage = () => {
                   fontSize: "1.4em",
                 }}
               >
-                {data.length === 0
+                {data[0]?.length === 0
                   ? "Api call "
-                  : data[0].planId.planValidityInDays}{" "}
+                  : data[0]?.planId?.planValidityInDays}{" "}
                 Days Left
               </h5>
-              {/* <p>({data.noOfVisits}/24 Visits Left)</p> */}
+
               <span className="p-3 gap-4 d-flex justify-content-center">
                 <Button
                   type="button"
@@ -88,7 +90,6 @@ const RecentPackage = () => {
 
                 <Button
                   type="button"
-                  // variant="primary"
                   variant="transparent"
                   size="lg"
                   className="rounded-2 px-4 py-2 border border-primary wd-120 "

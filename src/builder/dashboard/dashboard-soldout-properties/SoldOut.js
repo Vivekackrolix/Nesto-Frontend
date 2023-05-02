@@ -24,13 +24,20 @@ const SoldOut = () => {
   const propertyListing = data?.slice(0, 6).map((itm, index) => {
     return (
       <Col
-        md={3} sm={12}
+        md={3}
+        sm={12}
         className="card bl-card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0 w-100"
         id={itm._id}
         key={itm._id}
       >
-        <Link to="/builder/home-dashboard/description">
-          <Card.Img className="w-100 bl-prop-img" variant="top" src={propertyImage} />
+        <Link
+          to={`/builder/home-dashboard/description/${itm?.propertyId?._id}`}
+        >
+          <Card.Img
+            className="w-100 bl-prop-img"
+            variant="top"
+            src={propertyImage}
+          />
         </Link>
         <Card.Body>
           <div>

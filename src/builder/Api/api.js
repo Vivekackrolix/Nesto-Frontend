@@ -8,43 +8,19 @@ const axiosInstance = axios.create({
   headers: {
     "Content-Type": "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjMzA5MDJjZGYzNjczYTI5YWU3MWQiLCJpYXQiOjE2NzkzOTM1NDksImV4cCI6MTY4NzE2OTU0OX0.doSWScAsJZyCJk62uM7rBbsS8ipkpLZ-FjuYrfYJmu8",
+      "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0NTVhNTVlNDQ2NjJkMTJkNTNjY2YiLCJpYXQiOjE2ODI1Nzk2MDYsImV4cCI6MTY5MDM1NTYwNn0.jFsDonK3xexeM6heyw5lzbjS5dR3aBcQKsJgRQWEOgM",
   },
 });
-// const LoadingSpinner = () => {
-//   const [isLoading, setIsLoading] = useState(false);
-
-//   axiosInstance.interceptors.request.use(
-//     (config) => {
-//       setIsLoading(true);
-//       return config;
-//     },
-//     (error) => {
-//       setIsLoading(false);
-//       return Promise.reject(error);
-//     }
-//   );
-
-//   axiosInstance.interceptors.response.use(
-//     (response) => {
-//       setIsLoading(false);
-//       return response;
-//     },
-//     (error) => {
-//       setIsLoading(false);
-//       return Promise.reject(error);
-//     }
-//   );
-
-//   return (
-//     <div>
-//       {isLoading && (
-//         <div className="loading-spinner">
-//           <p>Loading...</p>
-//         </div>
-//       )}
-//     </div>
-//   );
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// });
+// const setAuthToken = (token) => {
+//   if (token) {
+//     axiosInstance.defaults.headers.Authorization = `Bearer ${token}`;
+//   } else {
+//     delete axiosInstance.defaults.headers.Authorization;
+//   }
 // };
 
 export { axiosInstance };
