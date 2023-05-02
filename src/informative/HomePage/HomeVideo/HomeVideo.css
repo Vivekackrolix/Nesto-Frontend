@@ -1,13 +1,7 @@
 .video-main-div {
-<<<<<<< HEAD
   position: relative;
   cursor: pointer;
   width: 100% !important;
-=======
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .home-video {
@@ -15,7 +9,6 @@
   height: 100%;
   object-fit: fill;
   object-position: center;
->>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
 }
 
 .play-button {

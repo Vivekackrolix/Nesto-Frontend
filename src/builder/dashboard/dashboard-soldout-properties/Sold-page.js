@@ -22,12 +22,9 @@ const SoldPage = () => {
   useEffect(() => {
     const getPropertyById = async () => {
       const response = await axios.get(
-<<<<<<< HEAD
-        `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
-=======
+        // `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
         // `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
         `http://nestobackend-env.eba-fk3zufmz.ap-south-1.elasticbeanstalk.com/api/v1/property/getPropertyById?id=${params.propertyId}`,
->>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
         {
           headers: {
             Authorization:
@@ -91,12 +88,7 @@ const SoldPage = () => {
             <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
               <div className="p-4 d-flex justify-content-between">
                 <p style={{ color: "#7D7F88", fontFamily: "Bahnschrift" }}>
-<<<<<<< HEAD
-                  {/* {data.termAndCondition} */}
-                  {property.termAndCondition}
-=======
                   {property?.termAndCondition}
->>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
                 </p>
               </div>
             </Container>

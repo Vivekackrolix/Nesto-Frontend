@@ -156,11 +156,7 @@ const OurPartner = () => {
     Aos.init({ duration: 1400 });
   }, []);
   return (
-<<<<<<< HEAD
-    <div className="our-partner">
-=======
     <div className="our-partner" data-aos='fade-up'>
->>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
       <div className="">
         <Heading title="Our Partners" sub="The Companies That Represent Us" />
       </div>
