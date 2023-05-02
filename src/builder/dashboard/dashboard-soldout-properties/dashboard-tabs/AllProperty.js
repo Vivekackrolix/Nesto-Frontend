@@ -18,7 +18,22 @@
 //   const [loading, setLoading] = useState(true);
 //   const [error, setError] = useState(null);
 
-import { Container, Tab, Tabs } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import {
+  Button,
+  Card,
+  Col,
+  Container,
+  Row,
+  Spinner,
+  Tab,
+  Tabs,
+} from "react-bootstrap";
+import { BsPencilFill } from "react-icons/bs";
+import { RiVipCrownFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
+import { getAPI } from "../../../Api/ApiRequest";
 import DashboardHeader from "../../header/DashboardHeader";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import AddedProperty from "./AddedProperty";
@@ -204,7 +219,6 @@ import SoldProperty from "./SoldProperty";
 // export default AllProperty;
 
 const AllProperty = () => {
-<<<<<<< HEAD
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [propertiesPerPage] = useState(9);
@@ -257,7 +271,10 @@ const AllProperty = () => {
         id={itm._id}
         key={itm._id}
       >
-        <Card.Img variant="top" src={propertyImage} />
+        <Card.Img
+          variant="top"
+          // src={propertyImage}
+        />
         <Card.Body>
           <Card.Text>
             <Row>
@@ -289,7 +306,11 @@ const AllProperty = () => {
             <Row className="mt-3">
               {itm?.unitType?.map((item) => (
                 <Col md={3} sm={3} className="text-center">
-                  <img src={build} alt="build" className="build-icon" />
+                  <img
+                    // src={build}
+                    alt="build"
+                    className="build-icon"
+                  />
                   <p style={{ opacity: 0.5 }}>{item}</p>
                 </Col>
               ))}
@@ -355,8 +376,6 @@ const AllProperty = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
-=======
->>>>>>> c76f9a5ad19e3ef7440d19a012508aade6d932b0
   return (
     <>
       <DashboardHeader />
