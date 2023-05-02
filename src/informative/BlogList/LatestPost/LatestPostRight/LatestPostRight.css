@@ -40,7 +40,7 @@
 
 .latest-left_box-2 {
     display: flex;
-    align-items: start;
+    /* align-items: start; */
     margin-bottom: 30px;
 }
 .latest-left_box-4 {

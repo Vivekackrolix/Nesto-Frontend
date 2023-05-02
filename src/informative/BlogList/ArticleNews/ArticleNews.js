@@ -39,10 +39,10 @@ const ArticleNews = () => {
                         return (
                             <div className='col-lg-4 article-news_col'>
                                 <div className={item.className}>
-                                    <div className='article-news_box-4'>
+                                    <div className='article-news_box-4 align-items-end'>
                                         <span className='article-news_span-1'>{item.tips}</span>
                                     </div>
-                                    <div className='article-news_box-5'>
+                                    <div className='article-news_box-5 align-items-end'>
                                         <div className=''>
                                             <span className='article-news_span-2'>
                                                 <img src={item.img} alt='article' /> {item.name}

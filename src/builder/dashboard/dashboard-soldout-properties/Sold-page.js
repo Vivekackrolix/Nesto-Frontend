@@ -91,7 +91,7 @@ const SoldPage = () => {
                       </div>
                     </div>
 
-                    <div className="CpPropertyDetailsBanner-col_div-5 gap-4">
+                    <div className="CpPropertyDetailsBanner-col_div-5 justify-content-start gap-4">
                       <div className="CpPropertyDetailsBanner-col_div-6">
                         <img
                           src={homeImage}
