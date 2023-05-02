@@ -3,8 +3,7 @@ import axios from "axios";
 
 const axiosInstance = axios.create({
   // baseURL: `https://apis.nestohub.in/api`,
-  // baseURL: `http://localhost:3001/api`,
-  baseURL: `http://nestobackend-env.eba-fk3zufmz.ap-south-1.elasticbeanstalk.com/api`,
+  baseURL: `http://localhost:3001/api`,
 
   headers: {
     "Content-Type": "application/json",
@@ -25,3 +24,4 @@ const axiosInstance = axios.create({
 // };
 
 export { axiosInstance };
+// export { axiosInstance, LoadingSpinner };

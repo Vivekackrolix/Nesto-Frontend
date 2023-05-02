@@ -4,7 +4,7 @@ import dlf from "../../../Images/dlf.png";
 import "./Payment.css";
 
 const Payment = ({ data }) => {
-  // const unitType = data.unitType ? data.unitType : [];
+  const unitType = data.unitType ? data.unitType : [];
 
   const PaymentPlan = data?.paymentPlan?.map((itm) => (
     <tr>

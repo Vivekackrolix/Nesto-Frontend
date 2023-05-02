@@ -1,13 +1,11 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import propertyImage from "../../../Images/propertyimage.png";
 import { Link } from "react-router-dom";
-import build from "../../../Images/build.png";
+
 import { useEffect, useState } from "react";
 
 import { apiEndpoints } from "../../../Api/ApiEndpoint";
 import { getAPI } from "../../../Api/ApiRequest";
-import { BsPencilFill } from "react-icons/bs";
-import { RiVipCrownFill } from "react-icons/ri";
 
 const PastPropertyList = (props) => {
   // const data = useSelector((state) => state.soldPropertyDetail.properties);
@@ -15,7 +13,7 @@ const PastPropertyList = (props) => {
 
   useEffect(() => {
     const getBoughtProperties = async () => {
-      const response = await getAPI(apiEndpoints.getAllproperty1);
+      const response = await getAPI(apiEndpoints.getAllBoughtProperty);
 
       // console.log(response.data);
 
@@ -27,100 +25,66 @@ const PastPropertyList = (props) => {
 
   const propertyListing = data.map((itm, index) => {
     return (
-      //
       <Col
         md={3}
-        className="card mb-4 shadow-sm rounded-4 p-0 border-0"
-        style={{ width: "21.75rem" }}
+        className="card mb-4 shadow-sm rounded-4 col-md-3 p-0 border-0"
+        style={{
+          width: "21.75rem",
+        }}
         id={itm._id}
         key={itm._id}
       >
-        <Card.Img variant="top" src={propertyImage} />
+        <Card.Img className="w-100" variant="top" src={propertyImage} />
         <Card.Body>
-          <Card.Text>
-            <Row>
-              <Col md={10} sm={10}>
-                <div>
-                  {" "}
-                  <Link
-                    className="recent-heading"
-                    to={`/builder/home-dashboard/description/${itm._id}`}
-                  >
-                    {itm.name}
-                  </Link>
-                </div>
-                <p style={{ opacity: 0.5 }}>{itm?.location}</p>
-              </Col>
-              <Col md={2} sm={2}>
-                <RiVipCrownFill
-                  style={{
-                    padding: "5px",
-                    borderRadius: "50%",
-                    background: "#ffd600",
-                    color: "#fff",
-                    width: "1.85em",
-                    height: "1.85em",
-                  }}
-                />
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              {itm?.unitType?.map((item) => (
-                <Col md={3} sm={3} className="text-center">
-                  <img src={build} alt="build" className="build-icon" />
-                  <p style={{ opacity: 0.5 }}>{item}</p>
-                </Col>
-              ))}
-            </Row>
-
-            <Row className="align-items-center">
-              <Col
-                md={5}
+          <div>
+            <div>
+              {" "}
+              <Link
                 style={{
-                  color: "#000000",
-                  fontSize: "1.35em",
+                  color: "black",
                   fontWeight: "bold",
+                  fontSize: "1.4em",
+                  textDecoration: "none",
                 }}
+                to="/builder/home-dashboard/description"
               >
-                {itm?.minPrice}-{itm?.maxPrice}
-              </Col>
-              <Col md={7} style={{ color: "#7D7F88", fontSize: "0.8em" }}>
-                {itm?.discountDescription}
-              </Col>
-            </Row>
-            <div className="d-flex justify-content-end gap-2 mt-2">
-              <Button
-                variant="transparent"
-                type="button"
-                className="rounded-pill px-4 py-2 border border-primary"
-                style={{ color: "#278FD9", fontSize: "14px" }}
-                as={Link}
-                to="/builder/home-dashboard/visit"
-              >
-                {itm?.noOfVisits} Visits
-              </Button>
-              <Button
-                variant="transparent"
-                type="button"
-                className="primary rounded-pill px-4 py-2 border border-primary"
-                as={Link}
-                to="/builder/home-dashboard/propertyedit"
-              >
-                <BsPencilFill
-                  style={{
-                    width: "0.9em",
-                    color: "#fff",
-                    background: "#278fd9",
-                    padding: "2px",
-                    borderRadius: "50%",
-                    marginRight: "4px",
-                    marginBottom: "5px",
-                  }}
-                />
-                Edit
-              </Button>
+                {itm.propertyId === null ? "no data Name" : itm.propertyId.name}
+                {/* {itm.propertyId.companyName} */}
+              </Link>
             </div>
-          </Card.Text>
+            <div style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
+              {itm.propertyId === null ? "no data" : itm.propertyId.location}
+            </div>
+          </div>
+          <Row className="p-2">
+            <Col>
+              <Row style={{ opacity: 0.5 }}>Unit Type</Row>
+              <Row>{itm.unitType}</Row>
+            </Col>
+            <Col>
+              <Row style={{ opacity: 0.5 }}>Unit Number</Row>
+              <Row>{itm.unitNumber}</Row>
+            </Col>
+            <Col>
+              <Row style={{ opacity: 0.5 }}>Selling Price</Row>
+              <Row>₹ {itm.sellingPrice}</Row>
+            </Col>
+          </Row>
+          <Row className="p-2">
+            <Col>
+              <Row style={{ opacity: 0.5 }}>Client Name</Row>
+              <Row>{itm.customerId.clientName}</Row>
+            </Col>
+            <Col>
+              <Row style={{ opacity: 0.5 }}>Broker ID</Row>
+              {/* <Row>{itm.brokerId.referalCode}</Row> */}
+              <Row>{itm.brokerId._id.slice(-10)}</Row>
+            </Col>
+            <Col>
+              <Row style={{ opacity: 0.5 }}>Selling Date</Row>
+              <Row>{itm.bookingDate}</Row>
+            </Col>
+          </Row>
         </Card.Body>
       </Col>
     );

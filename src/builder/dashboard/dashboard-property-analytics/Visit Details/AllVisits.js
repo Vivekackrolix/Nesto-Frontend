@@ -2,13 +2,9 @@ import { Container, Button, Col, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import VisitDetailItem from "./VisitDetailItem";
-// import PromotedVisitItem from "./PromotedVisitItem";
+import PromotedVisitItem from "./PromotedVisitItem";
 import { getAPI } from "../../../Api/ApiRequest";
 import { apiEndpoints } from "../../../Api/ApiEndpoint";
-
-// import jsPDF from "jspdf";
-// import "jspdf-autotable";
-// import FileSaver from "file-saver";
 
 const AllVisits = () => {
   const [data, setData] = useState({}); //Later use redux
@@ -29,6 +25,7 @@ const AllVisits = () => {
       const response = await getAPI(apiEndpoints.getAllVisit);
       console.log(response.data);
 
+      // console.log(response.data.data);
       setData1(response.data);
       setFilterData(response.data);
     };
@@ -160,7 +157,7 @@ const AllVisits = () => {
           variant="primary"
           size="sm"
           className="w-70 rounded-pill border-0 bg-color-primary py-2 mx-5 "
-          // onClick={() => downloadPDF(filterData)}
+          //   onClick={onContinueHandler}
         >
           Download Pdf
         </Button>

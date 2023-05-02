@@ -17,8 +17,8 @@ const PropertyClaim = () => {
   const params = useParams();
   useEffect(() => {
     const getClaim = async () => {
-      //   const response = await axios.get(
-      //     `https://apis.nestohub.in/api/v1/claim/getAllClaim?claimType=property&claimStatus=pending`,
+      // const response = await axios.get(
+      //   `https://apis.nestohub.in/api/v1/claim/getAllClaim?claimType=property&claimStatus=pending`,
 
       //     {
       //       headers: {
@@ -30,7 +30,7 @@ const PropertyClaim = () => {
       //   ;
       // try {
       const response = await getAPI(apiEndpoints.getAllClaim);
-      console.log(response.data);
+      // console.log(response.data);
       setData(response.data);
     };
 

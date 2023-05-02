@@ -16,7 +16,6 @@ export const apiEndpoints = {
     "/v1/visit/getVisitAnalytics?builderId=641069056532f2569479fc9d",
   getAllVisit: "/v1/visit/getAllVisit",
   getAllproperty: "/v1/property/getAllproperty",
-  getAllproperty1: "/v1/property/getAllproperty?isPropertySold=true",
   updateRequestProperty: "/v1/requestProperty/updateRequestProperty",
   getAllPayment: "/v1/payment/getAllPayment",
   getAllBoughtProperty: "/v1/boughtProperty/getAllBoughtProperty",

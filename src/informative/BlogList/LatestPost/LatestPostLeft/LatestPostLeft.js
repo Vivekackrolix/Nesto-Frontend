@@ -5,6 +5,7 @@ import LatestPostPagination from "../LatestPostPagination/LatestPostPagination";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { getAPI } from "../../BlogListApi/ApiRequest";
 import { apiEndpoints } from "../../BlogListApi/ApiEndpoint";
+// import { log } from "console";
 
 const LatestPostLeft = () => {
   const [data, setData] = useState([]);
@@ -19,6 +20,7 @@ const LatestPostLeft = () => {
   useEffect(() => {
     const getPage = async () => {
       const response = await getAPI(apiEndpoints.getAllBlog);
+      debugger;
       console.log(response.data);
       setData(response.data);
     };

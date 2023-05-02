@@ -1,7 +1,11 @@
 import { axiosInstance } from "./api";
 
 const postAPI = async (endpoint, body) => {
+<<<<<<< HEAD
   // ;
+=======
+  debugger;
+>>>>>>> 8919e99291c3172a61c671813cc4a985d040d456
   try {
     const response = await axiosInstance.post(endpoint, body);
     // console.log(response.data);
@@ -16,7 +20,11 @@ const postAPI = async (endpoint, body) => {
 };
 
 const getAPI = async (endpoint) => {
+<<<<<<< HEAD
   // ;
+=======
+  debugger;
+>>>>>>> 8919e99291c3172a61c671813cc4a985d040d456
   try {
     const response = await axiosInstance.get(endpoint);
     // console.log(response.data);
@@ -31,7 +39,11 @@ const getAPI = async (endpoint) => {
 };
 
 const putAPI = async (endpoint, body) => {
+<<<<<<< HEAD
   // ;
+=======
+  debugger;
+>>>>>>> 8919e99291c3172a61c671813cc4a985d040d456
   try {
     const response = await axiosInstance.put(endpoint, body);
     // console.log(response.data);
