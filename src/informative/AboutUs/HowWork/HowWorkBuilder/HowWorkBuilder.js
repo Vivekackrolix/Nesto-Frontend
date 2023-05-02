@@ -71,10 +71,9 @@ const HowWorkBuilder = () => {
           className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
           data-aos="fade-right"
         >
-          <span className="how-col-1-span-1">Manage Customer Visits</span>
+          <span className="how-col-1-span-1">View Property Performance</span>
           <span className="how-col-1-span-2">
-            NestoHub enables you to manage and update the status of your
-            customers' visits, allowing for more efficient planning.
+            Manage and overview your properties with NestoHub, and streamline your property sales.
           </span>
         </div>
         <div

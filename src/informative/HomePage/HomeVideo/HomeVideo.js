@@ -1,12 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './HomeVideo.css';
-import Aos from "aos";
 
 const Video = () => {
-    useEffect(() => {
-        Aos.init({ duration: 1400 });
-    }, []);
-
     return (
         <>
             <div className='video-main-div'>

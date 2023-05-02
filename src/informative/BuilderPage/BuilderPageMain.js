@@ -7,6 +7,7 @@ import BuilderBanner from './BuilderBanner/BuilderBanner'
 import ChooseUs from './../HomePage/chooseus/Chooseus';
 import Testimonials from '../HomePage/testimonials/Testimonials'
 import Aos from 'aos'
+import HowWorkBuilder from './../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder';
 
 const BuilderPageMain = () => {
   useEffect(() => {
@@ -17,7 +18,7 @@ const BuilderPageMain = () => {
       <InformativeNavbar />
       <BuilderBanner />
       {/* <Residency/> */}
-      <HowWork />
+      <HowWorkBuilder />
       <ChooseUs />
       <Testimonials />
       <InformativeFooter />

@@ -33,10 +33,9 @@ const AgentRowFour = () => {
         className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-3"
         data-aos="fade-left"
       >
-        <span className="row-two-col-3-span-1">Pitch & Close The Deal</span>
+        <span className="row-two-col-3-span-1">Manage Payments</span>
         <span className="row-two-col-3-span-2">
-          To successfully close the deal, guide your clients through price
-          negotiation, funding, and loans through NestoHub.
+          Once you have successfully assisted the customer, we will send you the invoices for further transactions.
         </span>
       </div>
     </>

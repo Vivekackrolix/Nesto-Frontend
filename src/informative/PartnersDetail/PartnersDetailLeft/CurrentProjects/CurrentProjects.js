@@ -3,6 +3,7 @@ import './CurrentProjects.css'
 import Slider from 'react-slick';
 import { MdOutlineStarOutline, MdOutlineStarPurple500 } from 'react-icons/md';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 
 const CurrentProjects = () => {
     const [heart, setHeart] = useState(false)
@@ -122,7 +123,9 @@ const CurrentProjects = () => {
                                 <div className='col-lg-6 current-project-slider_col-1'>
                                     <div className='h-100'>
                                         <span className='current-project-slider_tag'>{item.tag}</span>
-                                        <img src={item.img} className='current-project-slider_img' alt='project-slider' />
+                                        <Link to='/property-details'>
+                                            <img src={item.img} className='current-project-slider_img' alt='project-slider' />
+                                        </Link>
                                         <span
                                             className='current-project-slider_icon1'
                                             onClick={heartChange}
@@ -139,7 +142,9 @@ const CurrentProjects = () => {
                                     </div>
                                 </div>
                                 <div className='col-lg-6 current-project_col-2'>
-                                    <span className='current-project_span-1'>{item.propertyName}</span>
+                                    <Link to='/property-details'>
+                                        <span className='current-project_span-1'>{item.propertyName}</span>
+                                    </Link>
                                     <span>
                                         <MdOutlineStarPurple500 className='current-project_star' />
                                         <MdOutlineStarPurple500 className='current-project_star' />
