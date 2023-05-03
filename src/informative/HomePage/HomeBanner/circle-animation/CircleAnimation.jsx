@@ -5,33 +5,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import $ from 'jquery';
 import Scrollbar from 'smooth-scrollbar';
 
-import InformativeNavbar from '../../Navbar/Navbar';
-import Residency from '../residency/Residency';
-import GetStarted from '../getStarted/GetStarted';
-import News from '../news/News';
-import AboutUs from '../AboutUs/AboutUs';
-import ChooseUs from '../chooseus/Chooseus';
-import Testimonials from '../testimonials/Testimonials';
-import Stats from '../stats/Stats';
-import Aos from 'aos';
-import Banner from './Banner/Banner';
-import OurPartner from '../OurPartner/OurPartner';
-import HowWork from '../../AboutUs/HowWork/HowWork';
-import HomeVideo from '../HomeVideo/HomeVideo';
-import InformativeFooter from '../../InformativeFooter/InformativeFooter';
-import HowWorkBuilder from '../../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder';
-import './circle-animation/CircleAnimation.css';
-const HomeBanner = () => {
+import './CircleAnimation.css';
+
+function CircleAnimation() {
   const scrollbarRef = useRef(null);
 
   useEffect(() => {
     // Register ScrollTrigger with GSAP
     gsap.registerPlugin(ScrollTrigger);
-
-    document.body.classList.add('gsap-scroll-trigger');
-    return () => {
-      document.body.classList.remove('gsap-scroll-trigger');
-    };
   }, []);
 
   useEffect(() => {
@@ -546,143 +527,134 @@ const HomeBanner = () => {
 
     $cursor.init();
   }, []);
+
   return (
-    <>
-      <div id="app" ref={scrollbarRef}>
-        <div>
-          <InformativeNavbar />
-          <Banner />
-          <AboutUs />
-          <Stats />
-          {/* <Residency /> */}
-          {/* circle scroll */}
-          <div className="app-c">
-            <main>
-              <div id="sv" data-h-color="blck-1">
-                <div id="svlg" className="lg">
-                  <div className="lgt fx">
-                    <div>
-                      <p className="offering-sh">section 1</p>
-                      <div className="header-group addExtraSpace"></div>
+    <div id="app" ref={scrollbarRef}>
+      <div className="app-c">
+        <main>
+          <div id="sv" data-h-color="blck-1">
+            <div id="svlg" className="lg">
+              <div className="lgt fx">
+                <div>
+                  <p className="offering-sh">section 1</p>
+                  <div className="header-group addExtraSpace"></div>
 
-                      <div className="tx">
-                        <p className="load-p">Lorem ipsum dolor, sit</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lgt fx">
-                    <div>
-                      <div className="header-group addExtraSpace">
-                        <h3>
-                          <strong>Section 2</strong>
-                        </h3>
-                      </div>
-                      <div className="tx">
-                        <p className="load-p">Lorem ipsum dolor si</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lgt fx">
-                    <div>
-                      <div className="header-group addExtraSpace">
-                        <h3>
-                          <strong>Section 3</strong>
-                        </h3>
-                      </div>
-
-                      <div className="tx">
-                        <p className="load-p">Lorem ipsum, dolor sit</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lgt fx">
-                    <div>
-                      <div className="header-group addExtraSpace">
-                        <h3>
-                          <strong>Section 4</strong>
-                        </h3>
-                      </div>
-
-                      <div className="tx">
-                        <p className="load-p">Lorem ipsum dolor sit</p>
-                      </div>
-                    </div>
+                  <div className="tx">
+                    <p className="load-p">Lorem ipsum dolor, sit</p>
                   </div>
                 </div>
-                <div className="rg fx" data-fx>
-                  <div>
-                    <div className="cir">
-                      <div className="circ">
-                        <div className="circm">
-                          <div className="crc">
+              </div>
+              <div className="lgt fx">
+                <div>
+                  <div className="header-group addExtraSpace">
+                    <h3>
+                      <strong>Section 2</strong>
+                    </h3>
+                  </div>
+                  <div className="tx">
+                    <p className="load-p">Lorem ipsum dolor si</p>
+                  </div>
+                </div>
+              </div>
+              <div className="lgt fx">
+                <div>
+                  <div className="header-group addExtraSpace">
+                    <h3>
+                      <strong>Section 3</strong>
+                    </h3>
+                  </div>
+
+                  <div className="tx">
+                    <p className="load-p">Lorem ipsum, dolor sit</p>
+                  </div>
+                </div>
+              </div>
+              <div className="lgt fx">
+                <div>
+                  <div className="header-group addExtraSpace">
+                    <h3>
+                      <strong>Section 4</strong>
+                    </h3>
+                  </div>
+
+                  <div className="tx">
+                    <p className="load-p">Lorem ipsum dolor sit</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rg fx" data-fx>
+              <div>
+                <div className="cir">
+                  <div className="circ">
+                    <div className="circm">
+                      <div className="crc">
+                        <div>
+                          <div className="rnd">
                             <div>
-                              <div className="rnd">
-                                <div>
-                                  <div className="leadNurt">
-                                    <i>
-                                      <img
-                                        data-src="img/leadNurturing.svg"
-                                        className="lazy"
-                                        alt=".."
-                                        src="img/leadNurturing.svg"
-                                      />
-                                    </i>
-                                  </div>
-                                </div>
+                              <div className="leadNurt">
+                                <i>
+                                  <img
+                                    data-src="img/leadNurturing.svg"
+                                    className="lazy"
+                                    alt=".."
+                                    src="img/leadNurturing.svg"
+                                  />
+                                </i>
                               </div>
                             </div>
                           </div>
-                          <div className="crc">
+                        </div>
+                      </div>
+                      <div className="crc">
+                        <div>
+                          <div className="rnd">
                             <div>
-                              <div className="rnd">
-                                <div>
-                                  <div className="leadNurt">
-                                    <i>
-                                      <img
-                                        data-src="img/home.svg"
-                                        className="lazy"
-                                        alt=".."
-                                        src="img/home.svg"
-                                      />
-                                    </i>
-                                  </div>
-                                </div>
+                              <div className="leadNurt">
+                                <i>
+                                  <img
+                                    data-src="img/home.svg"
+                                    className="lazy"
+                                    alt=".."
+                                    src="img/home.svg"
+                                  />
+                                </i>
                               </div>
                             </div>
                           </div>
-                          <div className="crc">
+                        </div>
+                      </div>
+                      <div className="crc">
+                        <div>
+                          <div className="rnd">
                             <div>
-                              <div className="rnd">
-                                <div>
-                                  <div className="leadNurt">
-                                    <i>
-                                      <img
-                                        data-src="img/icons/Technology.svg"
-                                        className="lazy"
-                                        alt=".."
-                                        src="img/icons/Technology.svg"
-                                      />
-                                    </i>
-                                  </div>
-                                </div>
+                              <div className="leadNurt">
+                                <i>
+                                  <img
+                                    data-src="img/icons/Technology.svg"
+                                    className="lazy"
+                                    alt=".."
+                                    src="img/icons/Technology.svg"
+                                  />
+                                </i>
                               </div>
                             </div>
                           </div>
-                          <div className="crc">
+                        </div>
+                      </div>
+                      <div className="crc">
+                        <div>
+                          <div className="rnd">
                             <div>
-                              <div className="rnd">
-                                <div>
-                                  <div className="leadNurt">
-                                    <i>
-                                      <img
-                                        data-src="img/icons/digital.svg"
-                                        className="lazy"
-                                        alt=".."
-                                        src="img/icons/digital.svg"
-                                      />
-                                    </i>
-                                  </div>
-                                </div>
+                              <div className="leadNurt">
+                                <i>
+                                  <img
+                                    data-src="img/icons/digital.svg"
+                                    className="lazy"
+                                    alt=".."
+                                    src="img/icons/digital.svg"
+                                  />
+                                </i>
                               </div>
                             </div>
                           </div>
@@ -692,107 +664,97 @@ const HomeBanner = () => {
                   </div>
                 </div>
               </div>
-              <div className="sp sp-2">
-                <div className="eavl fx" data-fx>
-                  <div>
-                    <div className="ct">
-                      <div className="header-group">
-                        <img
-                          data-src="img/icons/footer_bg.svg"
-                          alt=".."
-                          className="desk_view lazy"
-                          src="img/icons/footer_bg.svg"
-                        />
-                        <img
-                          data-src="img/icons/header_bg.svg "
-                          alt=".."
-                          className="mob_view lazy"
-                          src="img/icons/header_bg.svg "
-                        />
-                        <h3>
-                          <strong className="about-mh">
-                            Lorem ipsum dolor sit amet.
-                          </strong>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="e">
-                <div className="sp sp-5"></div>
-                <div className="lgtxc lgtxc-1" data-lg-st="1" data-lg-en="2">
-                  <div className="ct">
-                    <div>
-                      <h3 className="">
-                        <strong>Lorem, ipsum dolor.</strong>
-                      </h3>
-                      <div className="txt">
-                        <p className="load1-p">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Itaque obcaecati neque nesciunt doloribus rem
-                          libero dolorem ea laboriosam fugit, consequuntur ad
-                          ratione necessitatibus natus quasi nemo aperiam ipsum?
-                          Molestiae, commodi?
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="lgtxc lgtxc-2" data-lg-st="2" data-lg-en="3">
-                  <div className="ct">
-                    <div>
-                      <h3 className="ct_second">
-                        <strong>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Id, praesentium.
-                        </strong>
-                      </h3>
-                      <div className="txt">
-                        <p className="load1-p">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing
-                          elit. Quia, dignissimos?
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="lgtxc lgtxc-3" data-lg-st="3" data-lg-en="4">
-                  <div className="ct">
-                    <div>
-                      <h3 className="">
-                        <strong>Lorem ipsum dolor sit amet.</strong>
-                      </h3>
-                      <div className="txt">
-                        <p className="load1-p">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Eos, error tempora! Minus pariatur veritatis
-                          rerum magni beatae dicta accusamus, maxime fugiat
-                          corporis sapiente aliquid facere autem voluptatibus
-                          inventore dolores itaque.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="sp sp-3" data-h-color="blck-5"></div>
-            </main>
+            </div>
           </div>
-          {/* circle scroll code end here */}
-          <ChooseUs />
-          <HomeVideo />
-          {/* <HowWork /> */}
-          <HowWorkBuilder />
-          <OurPartner />
-          <GetStarted />
-          <News />
-          <Testimonials />
-          <InformativeFooter />
-        </div>
+          <div className="sp sp-2">
+            <div className="eavl fx" data-fx>
+              <div>
+                <div className="ct">
+                  <div className="header-group">
+                    <img
+                      data-src="img/icons/footer_bg.svg"
+                      alt=".."
+                      className="desk_view lazy"
+                      src="img/icons/footer_bg.svg"
+                    />
+                    <img
+                      data-src="img/icons/header_bg.svg "
+                      alt=".."
+                      className="mob_view lazy"
+                      src="img/icons/header_bg.svg "
+                    />
+                    <h3>
+                      <strong className="about-mh">
+                        Lorem ipsum dolor sit amet.
+                      </strong>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="e">
+            <div className="sp sp-5"></div>
+            <div className="lgtxc lgtxc-1" data-lg-st="1" data-lg-en="2">
+              <div className="ct">
+                <div>
+                  <h3 className="">
+                    <strong>Lorem, ipsum dolor.</strong>
+                  </h3>
+                  <div className="txt">
+                    <p className="load1-p">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Itaque obcaecati neque nesciunt doloribus rem libero
+                      dolorem ea laboriosam fugit, consequuntur ad ratione
+                      necessitatibus natus quasi nemo aperiam ipsum? Molestiae,
+                      commodi?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lgtxc lgtxc-2" data-lg-st="2" data-lg-en="3">
+              <div className="ct">
+                <div>
+                  <h3 className="ct_second">
+                    <strong>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Id, praesentium.
+                    </strong>
+                  </h3>
+                  <div className="txt">
+                    <p className="load1-p">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quia, dignissimos?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lgtxc lgtxc-3" data-lg-st="3" data-lg-en="4">
+              <div className="ct">
+                <div>
+                  <h3 className="">
+                    <strong>Lorem ipsum dolor sit amet.</strong>
+                  </h3>
+                  <div className="txt">
+                    <p className="load1-p">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eos, error tempora! Minus pariatur veritatis rerum magni
+                      beatae dicta accusamus, maxime fugiat corporis sapiente
+                      aliquid facere autem voluptatibus inventore dolores
+                      itaque.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="sp sp-3" data-h-color="blck-5"></div>
+        </main>
       </div>
-    </>
+    </div>
   );
-};
+}
 
-export default HomeBanner;
+export default CircleAnimation;

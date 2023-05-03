@@ -156,24 +156,28 @@ const OurPartner = () => {
     Aos.init({ duration: 1400 });
   }, []);
   return (
-    <div className="our-partner" data-aos='fade-up'>
+    <div className="our-partner" data-aos="false">
       <div className="">
         <Heading title="Our Partners" sub="The Companies That Represent Us" />
       </div>
-      <div className="mt-4 mb-5 px-5 d-flex" data-aos='fade-up'>
-        <Slider {...settings} className="partner-slider d-flex gap-2" data-aos="fade-up">
+      <div className="mt-4 mb-5 px-5 d-flex" data-aos="false">
+        <Slider
+          {...settings}
+          className="partner-slider d-flex gap-2"
+          data-aos="false"
+        >
           {review.map((obj, e) => {
             return (
               <div className="px-4" key={e}>
-                <Link to='/partner-page'>
-                  <img src={obj.img} className="partner-image" alt='partner' />
+                <Link to="/partner-page">
+                  <img src={obj.img} className="partner-image" alt="partner" />
                 </Link>
               </div>
             );
           })}
         </Slider>
       </div>
-      <div className="text-center" data-aos='fade-up'>
+      <div className="text-center" data-aos="false">
         <Link to="/partner-page" className="primary_button">
           View All
           <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
