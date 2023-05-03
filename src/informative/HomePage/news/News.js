@@ -43,7 +43,7 @@ export default function News() {
                       />
                     </Link>
                     <div className="news-box-2">
-                      <div className="news-date">
+                      <div className="news-date align-items-end">
                         <span>
                           <CiCalendar className="date-icon" />
                         </span>

@@ -5,7 +5,7 @@ import AgentRowFour from "./AgentRowFour/AgentRowFour";
 const HowWorkBuilder = () => {
   return (
     <div className="container how-container">
-        <div className="how-box px-2 pb-2">
+      <div className="how-box px-2 pb-2">
         <span className="sections-heading" data-aos="fade-up">
           How NestoHub Works For Loan Agents
         </span>
@@ -65,10 +65,9 @@ const HowWorkBuilder = () => {
           className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
           data-aos="fade-right"
         >
-          <span className="how-col-1-span-1">Manage Customer Visits</span>
+          <span className="how-col-1-span-1">Supervise Leads</span>
           <span className="how-col-1-span-2">
-            NestoHub enables you to manage and update the status of your
-            customers' visits, allowing for more efficient planning.
+            You can manage the lead details and status from your NestoHub dashboard to connect with them.
           </span>
         </div>
         <div
@@ -76,11 +75,11 @@ const HowWorkBuilder = () => {
           data-aos="zoom-in"
         >
           <div class="radius">
-              <span class="place how-col-2-span-1">03</span>
-              <span class="border-animation ba1"></span>
-              <span class="border-animation ba2"></span>
-              <span class="border-animation ba3"></span>
-            </div>
+            <span class="place how-col-2-span-1">03</span>
+            <span class="border-animation ba1"></span>
+            <span class="border-animation ba2"></span>
+            <span class="border-animation ba3"></span>
+          </div>
           <div className="line-div">
             <span className="line-1"></span>
             <span className="line-2"></span>

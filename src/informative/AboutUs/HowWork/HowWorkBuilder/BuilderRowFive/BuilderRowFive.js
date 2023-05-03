@@ -7,10 +7,9 @@ const BuilderRowFive = () => {
         className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
         data-aos="false"
       >
-        <span className="how-col-1-span-1">Claim Higher Brokerage</span>
+        <span className="how-col-1-span-1">Manage Brokerage Payment</span>
         <span className="how-col-1-span-2">
-          Raise your brokerage or claim the higher brokerage at NestoHub after
-          closing the deal with the customer.
+          Now your properties are ready to be sold. Managing your brokerage payments will help you sell your home faster.
         </span>
       </div>
       <div

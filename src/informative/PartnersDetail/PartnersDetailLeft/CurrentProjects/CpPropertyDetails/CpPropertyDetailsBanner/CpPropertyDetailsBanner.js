@@ -30,7 +30,7 @@ const CpPropertyDetailsBanner = () => {
                                 </div>
                             </div>
                             {/* CpPropertyDetailsBanner-col_div-5, CpPropertyDetailsBanner-col_div-6, CpPropertyDetailsBanner-col_div-7 */}
-                            <div className='CpPropertyDetailsBanner-col_div-5 gap-4'>
+                            <div className='CpPropertyDetailsBanner-col_div-5 justify-content-start gap-4'>
                                 <div className='CpPropertyDetailsBanner-col_div-6'>
                                     <img src='/assets/informative/homeSlider-2.jpg' className='CpPropertyDetailsBanner-col_div-6_img' />
                                 </div>
@@ -49,7 +49,7 @@ const CpPropertyDetailsBanner = () => {
                         </div>
                     </div>
                     {/* CpPropertyDetailsBanner-col_div-8 */}
-                    <div className='CpPropertyDetailsBanner-col_div-8 gap-2'>
+                    <div className='CpPropertyDetailsBanner-col_div-8 justify-content-start gap-2'>
                         <span className='CpPropertyDetailsBanner-col_div-8-span'>Under Constructions</span>
                         <span className='CpPropertyDetailsBanner-col_div-8-span'>Possession in Dec,2023</span>
                     </div>

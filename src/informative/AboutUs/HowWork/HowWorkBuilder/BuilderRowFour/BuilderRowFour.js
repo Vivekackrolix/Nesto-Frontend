@@ -33,10 +33,9 @@ const BuilderRowFour = () => {
         className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-3"
         data-aos="false"
       >
-        <span className="row-two-col-3-span-1">Pitch & Close The Deal</span>
+        <span className="row-two-col-3-span-1">Buy Promotional Packages</span>
         <span className="row-two-col-3-span-2">
-          To successfully close the deal, guide your clients through price
-          negotiation, funding, and loans through NestoHub.
+          Purchase our promotional packages and reform your marketing to increase your visibility and reach.
         </span>
       </div>
     </>

@@ -29,7 +29,7 @@ const CpPropertyDetailsApartment = () => {
         <div className='container CpPropertyDetailsApartment' data-aos='fade-up'>
             <div className='col-lg-12 CpPropertyDetailsApartment-col'>
                 <div className='CpPropertyDetailsApartment-div-1'>
-                    <div className='CpPropertyDetailsApartment-div-2 gap-3'>
+                    <div className='CpPropertyDetailsApartment-div-2 align-items-start gap-3'>
                         <div className=''>
                             <img src='/assets/informative/partner-2.png' className='CpPropertyDetailsApartment-div-2_img' />
                         </div>
@@ -42,7 +42,7 @@ const CpPropertyDetailsApartment = () => {
                             <div className='d-flex mt-3'>
                                 {data.map((item) => {
                                     return (
-                                        <div className='CpPropertyDetailsApartment-div-2_child'>
+                                        <div className='CpPropertyDetailsApartment-div-2_child justify-content-start'>
                                             <img src={item.img} className='CpPropertyDetailsApartment-div-2_child-img' />
                                             <span className='CpPropertyDetailsApartment-div-2_child-span'>{item.detail}</span>
                                         </div>

@@ -13,6 +13,7 @@ import ScrollToTop from '../dsa/components/ScrollToTop';
 import ContactUs from './ContactUs/ContactUs';
 import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner';
 import BuilderPageMain from './BuilderPage/BuilderPageMain';
+import CpPropertyDetailsMain from './PartnersDetail/PartnersDetailLeft/CurrentProjects/CpPropertyDetails/CpPropertyDetailsMain';
 
 const HomeBanner = lazy(() => import('./HomePage/HomeBanner/HomeBanner'));
 
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/blog-detail" element={<BlogDetailMain />} />
         <Route path="/about-us" element={<AboutUsMain />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/property-details" element={<CpPropertyDetailsMain />} />
       </Routes>
     </BrowserRouter>
   );

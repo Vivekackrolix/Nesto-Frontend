@@ -32,10 +32,9 @@ const AgentRowTwo = () => {
         className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-3"
         data-aos="fade-left"
       >
-        <span className="row-two-col-3-span-1">Find Property Listings</span>
+        <span className="row-two-col-3-span-1">Receive Genuine Leads</span>
         <span className="row-two-col-3-span-2">
-          Use our platform as a sales tool and view all the exclusive properties
-          by prominent builders.
+          Log in to your dashboard to find easy-to-manage customer leads for home loans.
         </span>
       </div>
     </>

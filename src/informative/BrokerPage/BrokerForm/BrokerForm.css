@@ -1,7 +1,7 @@
 .broker-banner-col-3 {
     display: flex;
     padding-left: 30px;
-    align-items: end;
+    /* align-items: end; */
 }
 
 .broker-banner-col-3-div {

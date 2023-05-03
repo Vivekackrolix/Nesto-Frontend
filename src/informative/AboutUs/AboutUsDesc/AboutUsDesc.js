@@ -12,7 +12,7 @@ const AboutUsDesc = () => {
               src="/assets/informative/device-new.svg"
               alt="about"
             />
-            <div className="about-us_box1_btn-div">
+            <div className="about-us_box1_btn-div justify-content-end align-items-start">
               <div className="d-flex gap-4">
                 <div>
                   <div className="d-flex gap-3 mb-2">
