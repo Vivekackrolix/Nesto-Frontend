@@ -1,26 +1,26 @@
-import React, { useEffect } from "react";
-import "./HowWork.css";
-import RowTwo from "./RowTwo/RowTwo";
-import RowFour from "./RowFour/RowFour";
-import RowFive from "./RowFive/RowFive";
-import RowSix from "./RowSix/RowSix";
-import Aos from "aos";
+import React, { useEffect } from 'react';
+import './HowWork.css';
+import RowTwo from './RowTwo/RowTwo';
+import RowFour from './RowFour/RowFour';
+import RowFive from './RowFive/RowFive';
+import RowSix from './RowSix/RowSix';
+import Aos from 'aos';
 
 const HowWork = () => {
   useEffect(() => {
-    Aos.init({ duration: 1400 })
-  }, [])
+    Aos.init({ duration: 1400 });
+  }, []);
   return (
     <>
       <div className="how-box px-2">
-        <span className="sections-heading" data-aos="fade-up">
+        <span className="sections-heading" data-aos="false">
           How NestoHub Works For Brokers
         </span>
-        <span className="sections-sub-heading" data-aos="fade-up">
+        <span className="sections-sub-heading" data-aos="false">
           We Follow A Simple Process To Streamline Broker’s Process
         </span>
         <div className="load-wrapp">
-          <div className="load" data-aos="fade-up">
+          <div className="load" data-aos="false">
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
@@ -31,7 +31,7 @@ const HowWork = () => {
         <div className="row pt-4 px-5">
           <div
             className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
-            data-aos="fade-right"
+            data-aos="false"
           >
             <span className="how-col-1-span-1">Register Yourself</span>
             <span className="how-col-1-span-2">
@@ -43,7 +43,6 @@ const HowWork = () => {
             className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2"
             data-aos="zoom-in"
           >
-            
             <div class="radius">
               <span class="place how-col-2-span-1">01</span>
               <span class="border-animation ba1"></span>
@@ -58,7 +57,7 @@ const HowWork = () => {
           </div>
           <div
             className="col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3"
-            data-aos="fade-left"
+            data-aos="false"
           >
             <img
               src="/assets/informative/howWorks/gif1.gif"
@@ -71,7 +70,7 @@ const HowWork = () => {
           {/* RowThree */}
           <div
             className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
-            data-aos="fade-right"
+            data-aos="false"
           >
             <span className="how-col-1-span-1">Manage Customer Visits</span>
             <span className="how-col-1-span-2">
@@ -81,8 +80,8 @@ const HowWork = () => {
           </div>
           <div
             className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2"
-            data-aos="zoom-in"
-          >            
+            data-aos="false"
+          >
             <div class="radius">
               <span class="place how-col-2-span-1">03</span>
               <span class="border-animation ba1"></span>
@@ -97,7 +96,7 @@ const HowWork = () => {
           </div>
           <div
             className="col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3"
-            data-aos="fade-left"
+            data-aos="false"
           >
             <img
               src="/assets/informative/howWorks/gif3.gif"
