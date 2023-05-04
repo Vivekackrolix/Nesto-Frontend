@@ -21,6 +21,7 @@ import HomeVideo from '../HomeVideo/HomeVideo';
 import InformativeFooter from '../../InformativeFooter/InformativeFooter';
 import HowWorkBuilder from '../../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder';
 import './circle-animation/CircleAnimation.css';
+import { Image } from 'react-bootstrap';
 const HomeBanner = () => {
   const scrollbarRef = useRef(null);
 
@@ -35,15 +36,6 @@ const HomeBanner = () => {
   }, []);
 
   useEffect(() => {
-    // const tl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: '#my-element',
-    //     start: 'top 50%',
-    //     end: 'bottom 50%',
-    //     scrub: true,
-    //   },
-    // });
-    // tl.to('#my-element', { x: 100 });
     // jquery code start here
     const noloader = true;
 
@@ -76,9 +68,7 @@ const HomeBanner = () => {
 
     function heightPart() {
       var $winh = $(window).height();
-      $(
-        '#app, #n, #we, #sv .rg, #sv .lgt, [data-height], .ec > .cov, .ec section.nxt, .sp-2, #err, .sp-2 .eavl'
-      ).outerHeight($winh);
+      $('#app,  #sv .rg, #sv .lgt').outerHeight($winh);
     }
 
     $win.on('load', function () {
@@ -117,9 +107,6 @@ const HomeBanner = () => {
     /************ Cursor ************/
 
     var $cursor = {
-      cur: $('[data-cursor]'),
-      cur1: $('[data-cursor] .cur1'),
-      cur2: $('[data-cursor] .cur2'),
       classCursor: function () {
         var t = this;
         $('[data-cc]').each(function () {
@@ -145,18 +132,6 @@ const HomeBanner = () => {
             gsap.to(t.cur1, 0, { left: cx, top: cy });
             gsap.to(t.cur2, 0.15, { left: cx, top: cy });
           },
-        });
-        $(
-          '.line-ec .lp > *, form fieldset, form label, input, textarea, a, button, [data-nav], [data-link], [data-hover], [data-mail], [data-part]'
-        ).each(function () {
-          $(this).on({
-            mouseenter: function () {
-              $body.addClass('hover');
-            },
-            mouseleave: function () {
-              $body.removeClass('hover');
-            },
-          });
         });
       },
     };
@@ -332,6 +307,7 @@ const HomeBanner = () => {
               start: 'top bottom',
               end: 'bottom bottom',
               scrub: true,
+              toggleActions: 'play none none none',
             },
           });
           if ($win.width() > 950) {
@@ -393,7 +369,7 @@ const HomeBanner = () => {
               scrub: true,
             },
           });
-          $tl.from('.sp-2 h2', 1, { opacity: 0, x: '50%' }, 'a');
+          $tl.from('.sp-2 h2', 1, { opacity: 0, x: '0%' }, 'a');
           $tl.to(
             '.cirbc svg',
             1,
@@ -558,53 +534,109 @@ const HomeBanner = () => {
           {/* circle scroll */}
           <div className="app-c">
             <main>
-              <div id="sv" data-h-color="blck-1">
+              <div id="sv" data-h-color="blck-1" className="mt-5 scroll-circle">
                 <div id="svlg" className="lg">
-                  <div className="lgt fx">
+                  <div className="lgt fx my-5">
                     <div>
-                      <p className="offering-sh">section 1</p>
-                      <div className="header-group addExtraSpace"></div>
-
-                      <div className="tx">
-                        <p className="load-p">Lorem ipsum dolor, sit</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lgt fx">
-                    <div>
+                      <Image
+                        src="/assets/informative/circle-section-img-1.png"
+                        fluid
+                      />
                       <div className="header-group addExtraSpace">
-                        <h3>
-                          <strong>Section 2</strong>
-                        </h3>
-                      </div>
-                      <div className="tx">
-                        <p className="load-p">Lorem ipsum dolor si</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lgt fx">
-                    <div>
-                      <div className="header-group addExtraSpace">
-                        <h3>
-                          <strong>Section 3</strong>
+                        <h3 className="mt-5 mb-0">
+                          <strong>The Perfect Residency</strong>
                         </h3>
                       </div>
 
-                      <div className="tx">
-                        <p className="load-p">Lorem ipsum, dolor sit</p>
+                      <div className="tx mt-4">
+                        <p className="load-p">
+                          Lorem ipsum dolor sit amet, consectetur adipisic do
+                          eiusmod tempor incididunt ut labore etLorem ipsum
+                          dolor sit amet, consectetur adipisic do eiusmod tempor
+                          incididunt ut labore etLorem ipsum dolor sit amet,
+                          consectetur adipisic do eiusmod tempor incididunt ut
+                          labore etLorem ipsum dolor sit amet, consectetur
+                          adipisic do eiusmod tempor incididunt ut labore
+                          etLorem ipsum dolor sit amet.
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <div className="lgt fx">
+                  <div className="lgt fx my-5">
                     <div>
+                      <Image
+                        src="/assets/informative/circle-section-img-1.png"
+                        fluid
+                      />
                       <div className="header-group addExtraSpace">
-                        <h3>
-                          <strong>Section 4</strong>
+                        <h3 className="mt-5 mb-0">
+                          <strong>The Perfect Residency</strong>
                         </h3>
                       </div>
 
-                      <div className="tx">
-                        <p className="load-p">Lorem ipsum dolor sit</p>
+                      <div className="tx mt-4">
+                        <p className="load-p">
+                          Lorem ipsum dolor sit amet, consectetur adipisic do
+                          eiusmod tempor incididunt ut labore etLorem ipsum
+                          dolor sit amet, consectetur adipisic do eiusmod tempor
+                          incididunt ut labore etLorem ipsum dolor sit amet,
+                          consectetur adipisic do eiusmod tempor incididunt ut
+                          labore etLorem ipsum dolor sit amet, consectetur
+                          adipisic do eiusmod tempor incididunt ut labore
+                          etLorem ipsum dolor sit amet.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lgt fx my-5">
+                    <div>
+                      <Image
+                        src="/assets/informative/circle-section-img-1.png"
+                        fluid
+                      />
+                      <div className="header-group addExtraSpace">
+                        <h3 className="mt-5 mb-0">
+                          <strong>The Perfect Residency</strong>
+                        </h3>
+                      </div>
+
+                      <div className="tx mt-4">
+                        <p className="load-p">
+                          Lorem ipsum dolor sit amet, consectetur adipisic do
+                          eiusmod tempor incididunt ut labore etLorem ipsum
+                          dolor sit amet, consectetur adipisic do eiusmod tempor
+                          incididunt ut labore etLorem ipsum dolor sit amet,
+                          consectetur adipisic do eiusmod tempor incididunt ut
+                          labore etLorem ipsum dolor sit amet, consectetur
+                          adipisic do eiusmod tempor incididunt ut labore
+                          etLorem ipsum dolor sit amet.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lgt fx my-5">
+                    <div>
+                      <Image
+                        src="/assets/informative/circle-section-img-1.png"
+                        fluid
+                      />
+                      <div className="header-group addExtraSpace">
+                        <h3 className="mt-5 mb-0">
+                          <strong>The Perfect Residency</strong>
+                        </h3>
+                      </div>
+
+                      <div className="tx mt-4">
+                        <p className="load-p">
+                          Lorem ipsum dolor sit amet, consectetur adipisic do
+                          eiusmod tempor incididunt ut labore etLorem ipsum
+                          dolor sit amet, consectetur adipisic do eiusmod tempor
+                          incididunt ut labore etLorem ipsum dolor sit amet,
+                          consectetur adipisic do eiusmod tempor incididunt ut
+                          labore etLorem ipsum dolor sit amet, consectetur
+                          adipisic do eiusmod tempor incididunt ut labore
+                          etLorem ipsum dolor sit amet.
+                        </p>
                       </div>
                     </div>
                   </div>
