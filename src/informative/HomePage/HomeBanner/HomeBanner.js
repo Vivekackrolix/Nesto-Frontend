@@ -23,6 +23,7 @@ import HowWorkBuilder from '../../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder'
 import './circle-animation/CircleAnimation.css';
 import { Image } from 'react-bootstrap';
 import { circleScrollData, circleScrollDataIcons } from '../../data/constant';
+import { Zoom } from 'react-reveal';
 const HomeBanner = () => {
   const scrollbarRef = useRef(null);
 
@@ -564,6 +565,14 @@ const HomeBanner = () => {
                 <div className="rg fx" data-fx>
                   <div>
                     <div className="cir">
+                      <div className=" position-absolute top-50 start-50 translate-middle">
+                        <Image
+                          className="animation-cartoon-img"
+                          src="/assets/informative/animation-cartoon-original.svg"
+                          fluid
+                        />
+                      </div>
+
                       <div className="circ">
                         <div className="circm">
                           {!!circleScrollDataIcons?.length &&
