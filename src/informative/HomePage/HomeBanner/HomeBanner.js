@@ -308,13 +308,12 @@ const HomeBanner = () => {
               start: 'top bottom',
               end: 'bottom bottom',
               scrub: true,
-              toggleActions: 'play none none none',
             },
           });
           if ($win.width() > 950) {
             $tl.to('#sv .rg', 0.25, { paddingLeft: '50%' }, 'a');
             $tl.to('#sv .rg > div', 0.25, { y: '0%' }, 'a');
-            $tl.to('#sv .cir', 0.25, { rotation: -150, x: '-50%' }, 'a');
+            $tl.to('#sv .cir', 0.25, { rotation: -150, x: '-1000%' }, 'a');
           } else {
             $tl.to('#sv .rg', 0.25, { paddingLeft: '0' }, 'a');
             $tl.to(
@@ -599,18 +598,6 @@ const HomeBanner = () => {
                   <div>
                     <div className="ct">
                       <div className="header-group">
-                        <img
-                          data-src="img/icons/footer_bg.svg"
-                          alt=".."
-                          className="desk_view lazy"
-                          src="img/icons/footer_bg.svg"
-                        />
-                        <img
-                          data-src="img/icons/header_bg.svg "
-                          alt=".."
-                          className="mob_view lazy"
-                          src="img/icons/header_bg.svg "
-                        />
                         <h3>
                           <strong className="about-mh">
                             Lorem ipsum dolor sit amet.
