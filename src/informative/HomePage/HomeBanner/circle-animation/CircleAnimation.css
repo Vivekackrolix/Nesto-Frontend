@@ -723,3 +723,7 @@ html.mob [data-cursor] {
 .scroll-content {
   transform: inherit;
 }
+
+.leadNurt {
+  background-color: #1371e2;
+}

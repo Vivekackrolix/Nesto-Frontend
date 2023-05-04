@@ -22,6 +22,7 @@ import InformativeFooter from '../../InformativeFooter/InformativeFooter';
 import HowWorkBuilder from '../../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder';
 import './circle-animation/CircleAnimation.css';
 import { Image } from 'react-bootstrap';
+import { circleScrollData, circleScrollDataIcons } from '../../data/constant';
 const HomeBanner = () => {
   const scrollbarRef = useRef(null);
 
@@ -536,188 +537,57 @@ const HomeBanner = () => {
             <main>
               <div id="sv" data-h-color="blck-1" className="mt-5 scroll-circle">
                 <div id="svlg" className="lg">
-                  <div className="lgt fx my-5">
-                    <div>
-                      <Image
-                        src="/assets/informative/circle-section-img-1.png"
-                        fluid
-                      />
-                      <div className="header-group addExtraSpace">
-                        <h3 className="mt-5 mb-0">
-                          <strong>The Perfect Residency</strong>
-                        </h3>
-                      </div>
+                  {!!circleScrollData?.length &&
+                    circleScrollData.map(
+                      ({
+                        id,
+                        circleSectionImg,
+                        circleSectionHeading,
+                        circleSectionText,
+                      }) => (
+                        <div className="lgt fx my-5" key={id}>
+                          <div>
+                            <Image src={circleSectionImg} fluid />
+                            <div className="header-group addExtraSpace">
+                              <h3 className="mt-5 mb-0">
+                                <strong>{circleSectionHeading}</strong>
+                              </h3>
+                            </div>
 
-                      <div className="tx mt-4">
-                        <p className="load-p">
-                          Lorem ipsum dolor sit amet, consectetur adipisic do
-                          eiusmod tempor incididunt ut labore etLorem ipsum
-                          dolor sit amet, consectetur adipisic do eiusmod tempor
-                          incididunt ut labore etLorem ipsum dolor sit amet,
-                          consectetur adipisic do eiusmod tempor incididunt ut
-                          labore etLorem ipsum dolor sit amet, consectetur
-                          adipisic do eiusmod tempor incididunt ut labore
-                          etLorem ipsum dolor sit amet.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lgt fx my-5">
-                    <div>
-                      <Image
-                        src="/assets/informative/circle-section-img-1.png"
-                        fluid
-                      />
-                      <div className="header-group addExtraSpace">
-                        <h3 className="mt-5 mb-0">
-                          <strong>The Perfect Residency</strong>
-                        </h3>
-                      </div>
-
-                      <div className="tx mt-4">
-                        <p className="load-p">
-                          Lorem ipsum dolor sit amet, consectetur adipisic do
-                          eiusmod tempor incididunt ut labore etLorem ipsum
-                          dolor sit amet, consectetur adipisic do eiusmod tempor
-                          incididunt ut labore etLorem ipsum dolor sit amet,
-                          consectetur adipisic do eiusmod tempor incididunt ut
-                          labore etLorem ipsum dolor sit amet, consectetur
-                          adipisic do eiusmod tempor incididunt ut labore
-                          etLorem ipsum dolor sit amet.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lgt fx my-5">
-                    <div>
-                      <Image
-                        src="/assets/informative/circle-section-img-1.png"
-                        fluid
-                      />
-                      <div className="header-group addExtraSpace">
-                        <h3 className="mt-5 mb-0">
-                          <strong>The Perfect Residency</strong>
-                        </h3>
-                      </div>
-
-                      <div className="tx mt-4">
-                        <p className="load-p">
-                          Lorem ipsum dolor sit amet, consectetur adipisic do
-                          eiusmod tempor incididunt ut labore etLorem ipsum
-                          dolor sit amet, consectetur adipisic do eiusmod tempor
-                          incididunt ut labore etLorem ipsum dolor sit amet,
-                          consectetur adipisic do eiusmod tempor incididunt ut
-                          labore etLorem ipsum dolor sit amet, consectetur
-                          adipisic do eiusmod tempor incididunt ut labore
-                          etLorem ipsum dolor sit amet.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lgt fx my-5">
-                    <div>
-                      <Image
-                        src="/assets/informative/circle-section-img-1.png"
-                        fluid
-                      />
-                      <div className="header-group addExtraSpace">
-                        <h3 className="mt-5 mb-0">
-                          <strong>The Perfect Residency</strong>
-                        </h3>
-                      </div>
-
-                      <div className="tx mt-4">
-                        <p className="load-p">
-                          Lorem ipsum dolor sit amet, consectetur adipisic do
-                          eiusmod tempor incididunt ut labore etLorem ipsum
-                          dolor sit amet, consectetur adipisic do eiusmod tempor
-                          incididunt ut labore etLorem ipsum dolor sit amet,
-                          consectetur adipisic do eiusmod tempor incididunt ut
-                          labore etLorem ipsum dolor sit amet, consectetur
-                          adipisic do eiusmod tempor incididunt ut labore
-                          etLorem ipsum dolor sit amet.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                            <div className="tx mt-4">
+                              <p className="load-p">{circleSectionText}</p>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    )}
                 </div>
                 <div className="rg fx" data-fx>
                   <div>
                     <div className="cir">
                       <div className="circ">
                         <div className="circm">
-                          <div className="crc">
-                            <div>
-                              <div className="rnd">
+                          {!!circleScrollDataIcons?.length &&
+                            circleScrollDataIcons.map(({ id, circleIcon }) => (
+                              <div className="crc" key={id}>
                                 <div>
-                                  <div className="leadNurt">
-                                    <i>
-                                      <img
-                                        data-src="img/leadNurturing.svg"
-                                        className="lazy"
-                                        alt=".."
-                                        src="img/leadNurturing.svg"
-                                      />
-                                    </i>
+                                  <div className="rnd">
+                                    <div>
+                                      <div className="leadNurt">
+                                        <i>
+                                          <img
+                                            data-src={circleIcon}
+                                            className="lazy w-50"
+                                            alt=".."
+                                            src={circleIcon}
+                                          />
+                                        </i>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="crc">
-                            <div>
-                              <div className="rnd">
-                                <div>
-                                  <div className="leadNurt">
-                                    <i>
-                                      <img
-                                        data-src="img/home.svg"
-                                        className="lazy"
-                                        alt=".."
-                                        src="img/home.svg"
-                                      />
-                                    </i>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="crc">
-                            <div>
-                              <div className="rnd">
-                                <div>
-                                  <div className="leadNurt">
-                                    <i>
-                                      <img
-                                        data-src="img/icons/Technology.svg"
-                                        className="lazy"
-                                        alt=".."
-                                        src="img/icons/Technology.svg"
-                                      />
-                                    </i>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="crc">
-                            <div>
-                              <div className="rnd">
-                                <div>
-                                  <div className="leadNurt">
-                                    <i>
-                                      <img
-                                        data-src="img/icons/digital.svg"
-                                        className="lazy"
-                                        alt=".."
-                                        src="img/icons/digital.svg"
-                                      />
-                                    </i>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                            ))}
                         </div>
                       </div>
                     </div>
