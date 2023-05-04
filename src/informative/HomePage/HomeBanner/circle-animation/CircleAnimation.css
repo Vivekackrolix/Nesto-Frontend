@@ -1461,3 +1461,19 @@ html:not(.mob) #cof .slc li > div:hover {
     animation: scaleIn 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
   }
 }
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animation-cartoon-img {
+  animation: floating 2s ease-in-out infinite alternate;
+}
