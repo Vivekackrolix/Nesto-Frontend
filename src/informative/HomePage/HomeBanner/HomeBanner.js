@@ -547,7 +547,7 @@ const HomeBanner = () => {
                       }) => (
                         <div className="lgt fx my-5" key={id}>
                           <div>
-                            <Image src={circleSectionImg} fluid />
+                            <Image src={circleSectionImg} rounded fluid />
                             <div className="header-group addExtraSpace">
                               <h3 className="mt-5 mb-0">
                                 <strong>{circleSectionHeading}</strong>

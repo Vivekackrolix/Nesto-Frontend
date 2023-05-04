@@ -4,7 +4,7 @@ import BuilderRowFour from './BuilderRowFour/BuilderRowFour';
 import BuilderRowFive from './BuilderRowFive/BuilderRowFive';
 import { useEffect } from 'react';
 import Aos from 'aos';
-import { Fade } from 'react-reveal';
+import { Fade, Zoom } from 'react-reveal';
 const HowWorkBuilder = () => {
   useEffect(() => {
     Aos.init({ duration: 1400 });
@@ -35,81 +35,81 @@ const HowWorkBuilder = () => {
         </div>
         <div className="row pt-4 px-5">
           {/* BuilderRow-1 */}
-          <div
-            className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
-            data-aos="fade-right"
-          >
-            <span className="how-col-1-span-1">Register Yourself</span>
-            <span className="how-col-1-span-2">
-              Create your Broker account free of cost with NestoHub by filling
-              out simple details.
-            </span>
-          </div>
-          <div
-            className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2"
-            data-aos="zoom-in"
-          >
-            <div class="radius">
-              <span class="place how-col-2-span-1">01</span>
-              <span class="border-animation ba1"></span>
-              <span class="border-animation ba2"></span>
-              <span class="border-animation ba3"></span>
+          <Fade right duration={1000} distance="100px" delay={100}>
+            <div className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1">
+              <span className="how-col-1-span-1">Register Yourself</span>
+              <span className="how-col-1-span-2">
+                Create your Broker account free of cost with NestoHub by filling
+                out simple details.
+              </span>
             </div>
-            <div className="line-div">
-              <span className="line-1"></span>
-              <span className="line-2"></span>
-              <span className="line-3"></span>
+          </Fade>
+          <Zoom bottom duration={1000} delay={100}>
+            <div
+              className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2"
+              // data-aos="zoom-in"
+            >
+              <div class="radius">
+                <span class="place how-col-2-span-1">01</span>
+                <span class="border-animation ba1"></span>
+                <span class="border-animation ba2"></span>
+                <span class="border-animation ba3"></span>
+              </div>
+              <div className="line-div">
+                <span className="line-1"></span>
+                <span className="line-2"></span>
+                <span className="line-3"></span>
+              </div>
             </div>
-          </div>
-          <div
-            className="col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3"
-            data-aos="false"
-          >
-            <img
-              src="/assets/informative/howWorks/gif1.gif"
-              className="how-work_img"
-              alt="how-work_img"
-            />
-          </div>
+          </Zoom>
+          <Fade right duration={1000} distance="100px" delay={1000}>
+            <div className="col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3">
+              <img
+                src="/assets/informative/howWorks/gif1.gif"
+                className="how-work_img"
+                alt="how-work_img"
+              />
+            </div>
+          </Fade>
           {/* ============================= */}
           <BuilderRowTwo />
           {/* BuilderRow-2 */}
-          <div
-            className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
-            data-aos="false"
-          >
-            <span className="how-col-1-span-1">Manage Customer Visits</span>
-            <span className="how-col-1-span-2">
-              NestoHub enables you to manage and update the status of your
-              customers' visits, allowing for more efficient planning.
-            </span>
-          </div>
-          <div
-            className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2"
-            data-aos="false"
-          >
-            <div class="radius">
-              <span class="place how-col-2-span-1">03</span>
-              <span class="border-animation ba1"></span>
-              <span class="border-animation ba2"></span>
-              <span class="border-animation ba3"></span>
+          <Fade left duration={1000} distance="100px" delay={1000}>
+            <div
+              className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
+              data-aos="false"
+            >
+              <span className="how-col-1-span-1">Manage Customer Visits</span>
+              <span className="how-col-1-span-2">
+                NestoHub enables you to manage and update the status of your
+                customers' visits, allowing for more efficient planning.
+              </span>
             </div>
-            <div className="line-div">
-              <span className="line-1"></span>
-              <span className="line-2"></span>
-              <span className="line-3"></span>
+          </Fade>
+          <Zoom bottom duration={1000} delay={100}>
+            <div className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2">
+              <div class="radius">
+                <span class="place how-col-2-span-1">03</span>
+                <span class="border-animation ba1"></span>
+                <span class="border-animation ba2"></span>
+                <span class="border-animation ba3"></span>
+              </div>
+              <div className="line-div">
+                <span className="line-1"></span>
+                <span className="line-2"></span>
+                <span className="line-3"></span>
+              </div>
             </div>
-          </div>
-          <div
-            className="col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3"
-            data-aos="false"
-          >
-            <img
-              src="/assets/informative/howWorks/PropertyPerformance.gif"
-              className="how-work_img"
-              alt="how-work_img"
-            />
-          </div>
+          </Zoom>
+          <Fade right duration={1000} distance="100px" delay={1000}>
+            <div className="col-lg-5 col-md-5 col-sm-5 col-5 how-container-col-3">
+              <img
+                src="/assets/informative/howWorks/PropertyPerformance.gif"
+                className="how-work_img"
+                alt="how-work_img"
+              />
+            </div>
+          </Fade>
           {/* BuilderRowFour */}
           <BuilderRowFour />
           {/* BuilderRowFive */}
