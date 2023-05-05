@@ -39,6 +39,8 @@ const BuilderBanner = () => {
               className="builder-banner-cartoon"
             />
           </div>
+          {/* Modile View Form =======================
+          ======================================== */}
           <div className="col-lg-4 builder-banner-col-4" data-aos="fade-up">
             <div className="builder-banner-col-4-div">
               <div className="builder-banner-col-3_title_div">
@@ -66,7 +68,7 @@ const BuilderBanner = () => {
                   required
                 />
                 <select className="builder-banner-col-3_input builder-banner-col-3_select">
-                  <option disabled={true} value="">Select Property Type</option>
+                  <option disabled={false} value="">Select Property Type</option>
                   <option>option1</option>
                   <option>option1</option>
                   <option>option1</option>
@@ -93,6 +95,8 @@ const BuilderBanner = () => {
           </div>
         </div>
       </div>
+      {/* Desktop View Form ===========
+      ============================= */}
       <BuilderForm />
     </>
   );

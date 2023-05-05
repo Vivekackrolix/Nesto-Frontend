@@ -18,7 +18,7 @@ export default function ChooseUs() {
         }}
         onClick={onClick}
       >
-        <img className="next-image" src="./assets/next.png" alt="next-image" />
+        <img className="next-image" src="./assets/next.png" alt="nextImg" />
       </div>
     );
   }
@@ -36,7 +36,7 @@ export default function ChooseUs() {
         }}
         onClick={onClick}
       >
-        <img className="next-image" src="./assets/back.png" alt="next-image" />
+        <img className="next-image" src="./assets/back.png" alt="nextimg" />
       </div>
     );
   }
@@ -152,7 +152,7 @@ export default function ChooseUs() {
                   <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
                     <div className="choose-card">
                       <div className="choose-icon-div">
-                        <img src={item.img} className="choose-icon-img" />
+                        <img src={item.img} className="choose-icon-img" alt='chooseIcon' />
                       </div>
                       <div className="">
                         <h5 className="card-heading">{item.title}</h5>

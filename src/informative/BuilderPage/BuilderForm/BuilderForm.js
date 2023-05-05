@@ -12,14 +12,14 @@ const BuilderForm = () => {
                 <input type='number' placeholder='Phone Number' className='builder-banner-col-3_input' required />
                 <input type='email' placeholder='Email Address' className='builder-banner-col-3_input' required />
                 <select className='builder-banner-col-3_input builder-banner-col-3_select'>
-                    <option disabled={true} value="">Property Type</option>
+                    <option disabled={false} value="">Property Type</option>
                     <option>Flats / Apartment</option>
                     <option>Farmhouse / Villa</option>
                     <option>Plots / Lands</option>
                     <option>Commercial</option>
                 </select>
                 <select className='builder-banner-col-3_input builder-banner-col-3_select'>
-                <option disabled={false} value="">Location of Property</option>
+                    <option disabled={false} value="">Location of Property</option>
                     <option>option1</option>
                     <option>option1</option>
                     <option>option1</option>
