@@ -21,21 +21,16 @@ import HowWorkBuilder from '../../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder'
 import './circle-animation/CircleAnimation.css';
 import { Image } from 'react-bootstrap';
 import { circleScrollData, circleScrollDataIcons } from '../../data/constant';
-import { Zoom } from 'react-reveal';
+import { useLocation } from 'react-router-dom';
+
 const HomeBanner = () => {
   const scrollbarRef = useRef(null);
 
   useEffect(() => {
-    // Register ScrollTrigger with GSAP
     gsap.registerPlugin(ScrollTrigger);
 
     document.body.classList.add('gsap-scroll-trigger');
-    return () => {
-      document.body.classList.remove('gsap-scroll-trigger');
-    };
-  }, []);
 
-  useEffect(() => {
     // jquery code start here
     const noloader = true;
 
@@ -57,6 +52,7 @@ const HomeBanner = () => {
     /*********** * ************/
 
     function sizeBgRound() {
+      console.log('loaded');
       var $w_w = $(window).width() * 1.5;
       var $w_h = $(window).height() * 1.5;
       if ($w_w > $w_h) {
@@ -71,13 +67,23 @@ const HomeBanner = () => {
       $('#app,  #sv .rg, #sv .lgt').outerHeight($winh);
     }
 
-    $win.on('load', function () {
+    window.addEventListener('load', function () {
       sizeBgRound();
-    });
-
-    $win.on('load resize', function (e) {
       heightPart();
     });
+    window.addEventListener('resize', function () {
+      sizeBgRound();
+      heightPart();
+    });
+    sizeBgRound();
+    heightPart();
+    // $win.on('load', function () {
+    //   sizeBgRound();
+    // });
+
+    // $win.on('load resize', function (e) {
+    //   heightPart();
+    // });
 
     /************ if mobile ************/
 
@@ -520,6 +526,12 @@ const HomeBanner = () => {
     });
 
     $cursor.init();
+
+    return () => {
+      window.removeEventListener('load', sizeBgRound);
+      window.removeEventListener('resize', heightPart);
+      document.body.classList.remove('gsap-scroll-trigger');
+    };
   }, []);
   return (
     <>
