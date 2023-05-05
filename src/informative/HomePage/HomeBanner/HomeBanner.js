@@ -559,12 +559,12 @@ const HomeBanner = () => {
                           <div>
                             <Image src={circleSectionImg} rounded fluid />
                             <div className="header-group addExtraSpace">
-                              <h3 className="mt-5 mb-0">
+                              <h3 className="my-2">
                                 <strong>{circleSectionHeading}</strong>
                               </h3>
                             </div>
 
-                            <div className="tx mt-4">
+                            <div className="tx">
                               <p className="load-p">{circleSectionText}</p>
                             </div>
                           </div>
@@ -691,7 +691,8 @@ const HomeBanner = () => {
           <ChooseUs />
           <HomeVideo />
           {/* <HowWork /> */}
-          <HowWorkBuilder />
+          {/* <HowWorkBuilder /> */}
+          <HowWork />
           <OurPartner />
           <GetStarted />
           <News />

@@ -19,7 +19,7 @@ const BuilderForm = () => {
                     <option>Commercial</option>
                 </select>
                 <select className='builder-banner-col-3_input builder-banner-col-3_select'>
-                <option disabled={true} value="">Location of Property</option>
+                <option disabled={false} value="">Location of Property</option>
                     <option>option1</option>
                     <option>option1</option>
                     <option>option1</option>
