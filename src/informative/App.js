@@ -8,22 +8,21 @@ import BlogListMain from './BlogList/BlogListMain';
 import BlogDetailMain from './BlogDetail.js/BlogDetailMain';
 import AboutUsMain from './AboutUs/AboutUsMain';
 import Faq from './Faq/Faq';
-// import HomeBanner from './HomePage/HomeBanner/HomeBanner';
+import HomeBanner from './HomePage/HomeBanner/HomeBanner';
 import ScrollToTop from '../dsa/components/ScrollToTop';
 import ContactUs from './ContactUs/ContactUs';
 import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner';
 import BuilderPageMain from './BuilderPage/BuilderPageMain';
 import CpPropertyDetailsMain from './PartnersDetail/PartnersDetailLeft/CurrentProjects/CpPropertyDetails/CpPropertyDetailsMain';
 
-const HomeBanner = lazy(() => import('./HomePage/HomeBanner/HomeBanner'));
+// const HomeBanner = lazy(() => import('./HomePage/HomeBanner/HomeBanner'));
 
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes fallback={<div>Loading...</div>}>
+      <Routes>
         <Route path="/" element={<HomeBanner />} />
-
         <Route path="/partners/details" element={<PartnersDetailsMain />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/partner-page" element={<PartnerBanner />} />
