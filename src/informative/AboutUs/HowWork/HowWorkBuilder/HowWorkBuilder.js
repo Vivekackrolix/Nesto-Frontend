@@ -77,7 +77,7 @@ const HowWorkBuilder = () => {
               className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1">
               <span className="how-col-1-span-1">View Property Performance</span>
               <span className="how-col-1-span-2">
-                Manage and overview your properties with Nestohub and streamline your property sale.
+                Manage and overview your properties with NestoHub and streamline your property sale.
               </span>
             </div>
           </Fade>

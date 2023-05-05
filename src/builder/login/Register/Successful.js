@@ -41,7 +41,7 @@ const Successful = (props) => {
               className=" d-flex row justify-content-center"
               style={{ color: "#838BA1" }}
             >
-              Nestohub team will contact you soon
+              NestoHub team will contact you soon
             </h4>
             <br />
             {/* </Modal.Title> */}
