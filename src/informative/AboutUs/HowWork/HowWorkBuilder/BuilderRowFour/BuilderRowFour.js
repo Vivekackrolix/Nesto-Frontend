@@ -4,7 +4,7 @@ import { Fade, Zoom } from 'react-reveal';
 const BuilderRowFour = () => {
   return (
     <>
-      <Fade right duration={1000} distance="100px" delay={1000}>
+      <Fade left duration={1000} distance="100px" delay={1000}>
         <div className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-1">
           <img
             src="/assets/informative/howWorks/Promotion.gif"
