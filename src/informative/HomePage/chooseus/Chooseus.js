@@ -93,7 +93,7 @@ export default function ChooseUs() {
     arrows: true,
     loop: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     accessibility: true,
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,

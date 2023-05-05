@@ -75,10 +75,9 @@ const HowWorkBuilder = () => {
           <Fade left duration={1000} distance="100px" delay={1000}>
             <div
               className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1">
-              <span className="how-col-1-span-1">Manage Customer Visits</span>
+              <span className="how-col-1-span-1">View Property Performance</span>
               <span className="how-col-1-span-2">
-                NestoHub enables you to manage and update the status of your
-                customers' visits, allowing for more efficient planning.
+                Manage and overview your properties with Nestohub and streamline your property sale.
               </span>
             </div>
           </Fade>

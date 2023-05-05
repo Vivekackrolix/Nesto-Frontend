@@ -25,8 +25,8 @@ const BrokerBanner = () => {
                 Broker Network app is a suite of services specifically designed for
                 Indian real estate brokers and developers to maximize their business.
               </p>
-              <Link to="/" className="primary_button">
-                Get Started
+              <Link to="/contact-us" className="primary_button">
+                Write To Us
                 <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
               </Link>
             </div>
