@@ -41,7 +41,7 @@ const HowWork = () => {
           </div>
           <div
             className="col-lg-2 col-md-2 col-sm-2 col-2 how-col-2"
-            data-aos="zoom-in"
+            data-aos="false"
           >
             <div class="radius">
               <span class="place how-col-2-span-1">01</span>

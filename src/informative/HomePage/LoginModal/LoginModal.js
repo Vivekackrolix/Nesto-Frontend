@@ -49,7 +49,7 @@ const LoginModal = ({ show, onHide }) => {
           </div>
         </div>
         {/* Loan Agent Link */}
-        <div className="login-modal-broker-link">
+        {/* <div className="login-modal-broker-link">
           <div>
             <span>
               <img
@@ -62,7 +62,7 @@ const LoginModal = ({ show, onHide }) => {
           <div>
             <span className="login-modal-borker-text">Loan Agent</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </CustomModal>
   );

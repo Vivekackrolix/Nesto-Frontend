@@ -6,8 +6,8 @@ const BrokerForm = () => {
         <div className='col-lg-4 broker-banner-col-3 align-items-end' data-aos='fade-up'>
             <div className='broker-banner-col-3-div'>
                 <div className='broker-banner-col-3_title_div'>
-                    <span className='broker-banner-col-3_title'>Best Platform for Broker</span>
-                    <span className='broker-banner-col-3_sub_title'>Enter your details below</span>
+                    <span className='broker-banner-col-3_title'>Best Platform For Broker</span>
+                    <span className='broker-banner-col-3_sub_title'>Register Now For Free!</span>
                 </div>
                 <form action='#' className='broker-banner-col-3_form'>
                     <input type='text' placeholder='Name*' className='broker-banner-col-3_input' required />
