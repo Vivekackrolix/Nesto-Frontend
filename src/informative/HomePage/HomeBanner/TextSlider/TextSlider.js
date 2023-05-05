@@ -1,6 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
-import "./TextSlider.css";
+import React from 'react';
+import Slider from 'react-slick';
+import './TextSlider.css';
+import { Fade } from 'react-reveal';
 
 const TextSlider = () => {
   const settings = {
@@ -11,42 +12,44 @@ const TextSlider = () => {
     fade: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    cssEase: "linear",
+    cssEase: 'linear',
   };
   return (
     <div>
-      <div className="text-slider">
-        <Slider {...settings}>
-          <div className="d-flex">
-            <div className="text-slider-div">
-              <span className="text-slider-div-span">
-                Looking for the Best broker for your New Home
-              </span>
+      <Fade left>
+        <div className="text-slider">
+          <Slider {...settings}>
+            <div className="d-flex">
+              <div className="text-slider-div">
+                <span className="text-slider-div-span">
+                  Looking for the Best broker for your New Home
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="d-flex">
-            <div className="text-slider-div">
-              <span className="text-slider-div-span">
-                Looking for the Best broker for your
-              </span>
+            <div className="d-flex">
+              <div className="text-slider-div">
+                <span className="text-slider-div-span">
+                  Looking for the Best broker for your
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="d-flex">
-            <div className="text-slider-div">
-              <span className="text-slider-div-span">
-                Looking for the New Home
-              </span>
+            <div className="d-flex">
+              <div className="text-slider-div">
+                <span className="text-slider-div-span">
+                  Looking for the New Home
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="d-flex">
-            <div className="text-slider-div">
-              <span className="text-slider-div-span">
-                Looking for the broker for your New Home
-              </span>
+            <div className="d-flex">
+              <div className="text-slider-div">
+                <span className="text-slider-div-span">
+                  Looking for the broker for your New Home
+                </span>
+              </div>
             </div>
-          </div>
-        </Slider>
-      </div>
+          </Slider>
+        </div>
+      </Fade>
     </div>
   );
 };
