@@ -6,6 +6,7 @@ import ListProperty from '../PartnersDetail/ListProperty/ListProperty'
 import LatestPost from './LatestPost/LatestPost';
 import Aos from 'aos';
 import InformativeFooter from '../InformativeFooter/InformativeFooter'
+import { Zoom } from 'react-reveal'
 
 export default function BlogListMain() {
     useEffect(() => {
@@ -15,9 +16,11 @@ export default function BlogListMain() {
         <>
             <InformativeNavbar />
             <div className="blog-list-banner">
-                <span className='blog-list-banner-heading' data-aos='zoom-in'>Blog</span>
+                <Zoom duration={1000} delay={100}>
+                    <span className='blog-list-banner-heading'>Blog</span>
+                </Zoom>
             </div>
-            <div className='container' style={{overflowX: 'hidden'}}>
+            <div className='container' style={{ overflowX: 'hidden' }}>
                 {/* ArticleNews===
                 ============== */}
                 <ArticleNews />
@@ -27,7 +30,7 @@ export default function BlogListMain() {
                 {/* LatestPost======
                 ================ */}
                 <LatestPost />
-                <br /><br /><br /><br />
+                <br /><br /><br />
             </div>
             <InformativeFooter />
         </>

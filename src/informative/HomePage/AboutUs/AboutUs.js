@@ -10,7 +10,7 @@ const AboutUs = () => {
       <div className="container">
         <div className="row">
           <Fade left duration={1000} distance="30px" delay={10}>
-            <div className="col-lg-6" data-aos="false">
+            <div className="col-lg-6">
               <img
                 className="about-us_box1-img"
                 src="/assets/informative/device-new.svg"
@@ -70,11 +70,7 @@ const AboutUs = () => {
             </div>
           </Fade>
           <Fade right duration={1000} distance="30px" delay={10}>
-            <div
-              className="col-lg-6 about-content"
-              // data-aos="fade-left"
-              data-aos="false"
-            >
+            <div className="col-lg-6 about-content">
               <div className="about-us_box2">
                 <span className="sections-heading">ABOUT US</span>
                 <span className="about-us_box-span2 sections-sub-heading">
