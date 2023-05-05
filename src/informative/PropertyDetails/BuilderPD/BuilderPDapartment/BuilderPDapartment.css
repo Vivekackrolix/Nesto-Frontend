@@ -1,0 +1,113 @@
+.BuilderPDapartment {
+    margin-top: 20px;
+    padding: 0;
+}
+
+.BuilderPDapartment-col {
+    padding: 20px 30px;
+    /* border: 2px solid #eaeaea; */
+    box-shadow: 4px 10px 30px 1px rgba(0, 0, 0, 0.055);
+    border-radius: 14px;
+}
+
+.BuilderPDapartment-div-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BuilderPDapartment-div-2 {
+    display: flex;
+    /* align-items: start; */
+}
+
+.BuilderPDapartment-div-2_img {
+    width: 80px;
+}
+
+.div-2_child_heading {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+.div-2_child_stars {
+    display: flex;
+    font-size: 18px;
+    color: #FFB630;
+}
+
+.div-2_child_address {
+    font-size: 14px;
+    color: var(--silver-surfer);
+    font-weight: 350;
+    display: block;
+    margin-top: 8px;
+}
+
+.BuilderPDapartment-div-2_child {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    /* justify-content: start; */
+    flex-direction: column;
+}
+
+.BuilderPDapartment-div-2_child:not(:last-child) {
+    margin-right: 35px;
+}
+
+.BuilderPDapartment-div-2_child-span {
+    display: block;
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: 350;
+    color: var(--silver-surfer);
+}
+
+.BuilderPDapartment-div-3 {
+    display: none;
+}
+
+.BuilderPDapartment-div-3-span {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+/* BuilderPDapartment-div-4 ===============
+================================================ */
+.BuilderPDapartment-div-4 {}
+
+.BuilderPDapartment-div-4-span {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+/* Media Queri ===================== */
+@media(max-width: 448px) {
+    .BuilderPDapartment {
+        padding: 0 10px;
+    }
+    .BuilderPDapartment-div-2_child:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 576px) and (min-width: 448px) {
+    .BuilderPDapartment {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    .BuilderPDapartment-div-3 {
+        margin-top: 8px;
+        display: block;
+    }
+
+    .BuilderPDapartment-div-4 {
+        display: none;
+    }
+}

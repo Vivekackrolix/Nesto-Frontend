@@ -1,0 +1,52 @@
+.AgentPDlocationAdvantage {
+    padding: 0;
+    margin-top: 45px;
+    /* overflow-x: hidden; */
+}
+
+.AgentPDlocationAdvantage-col_12 {
+    margin-top: 20px;
+    padding: 0 10px 25px 10px;
+    text-align: center;
+    border-radius: 14px;
+    border: 2px solid #eaeaea;
+}
+
+.AgentPDlocationAdvantage-col {
+    margin-top: 20px;
+}
+
+.AgentPDlocationAdvantage-col_icon {
+    font-size: 34px;
+    color: var(--gray-color);
+    width: 35px;
+    height: 35px;
+}
+
+.AgentPDlocationAdvantage-col_name {
+    display: block;
+    font-size: 14px;
+    font-weight: 350;
+    margin-top: 6px;
+}
+
+.AgentPDlocationAdvantage-col_size {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 350;
+    color: var(--silver-surfer);
+}
+
+/* Map Styling */
+.AgentPDlocationAdvantage_map {
+    margin-top: 30px;
+    border-radius: 14px;
+}
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .AgentPDlocationAdvantage {
+        padding: 0 10px;
+    }
+}

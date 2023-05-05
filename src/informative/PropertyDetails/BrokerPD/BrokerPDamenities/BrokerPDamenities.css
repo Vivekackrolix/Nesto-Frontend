@@ -1,0 +1,37 @@
+.BrokerPDamenities {
+    padding: 0;
+    overflow-x: hidden;
+    margin-top: 45px;
+}
+
+.BrokerPDamenities-col_12 {
+    margin-top: 20px;
+    padding: 0 10px 25px 10px;
+    text-align: center;
+    border-radius: 14px;
+    border: 2px solid #eaeaea;
+}
+
+.BrokerPDamenities-col {
+    margin-top: 30px;
+}
+
+.BrokerPDamenities-col_icon {
+    font-size: 34px;
+    color: var(--gray-color);
+}
+
+.BrokerPDamenities-col_size {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 350;
+    color: var(--silver-surfer);
+}
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .BrokerPDamenities {
+        padding: 0 10px;
+    }
+}

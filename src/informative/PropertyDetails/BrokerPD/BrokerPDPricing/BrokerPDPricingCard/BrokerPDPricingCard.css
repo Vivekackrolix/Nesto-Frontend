@@ -1,0 +1,74 @@
+.BrokerPDPricingCard {
+    margin-top: 15px;
+    padding: 0;
+}
+
+.BrokerPDPricingCard-col {
+    padding: 5px 0;
+    position: relative;
+    width: 100%;
+}
+
+.BrokerPDPricingCard-div_1 {
+    padding: 14px 14px 21px 14px;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.055);
+}
+
+.BrokerPDPricingCard-div_2 {}
+
+.BrokerPDPricingCard-location_img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.BrokerPDPricingCard-span_1 {
+    color: var(--silver-surfer);
+    font-size: 15px;
+    display: block;
+    font-weight: 300;
+}
+
+.BrokerPDPricingCard-span_2 {
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 51px;
+    /* display: block; */
+}
+
+.BrokerPDPricingCard-span_3 {
+    color: var(--silver-surfer);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.BrokerPDPricingCard-span_4 {
+    display: block;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--primary-color);
+}
+
+.BrokerPDPricingCard-div_3 {
+    position: absolute;
+    top: 8%;
+    right: 0;
+}
+
+.BrokerPDPricingCard-span_5 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px 8px 20px;
+    border-top-left-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    background: #FFB630;
+}
+
+/* Media Queri */
+@media(max-width: 605px) {
+    .BrokerPDPricingCard {
+        padding: 0 8px;
+    }
+}
