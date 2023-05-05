@@ -1,0 +1,49 @@
+.AgentPDlocation {
+    margin-top: 45px;
+    padding: 0;
+}
+
+.AgentPDlocation-col {
+    display: flex;
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    padding: 10px 0 10px 10px;
+    border: 2px solid #eaeaea;
+    cursor: pointer;
+}
+
+.AgentPDlocation-col_child-div_img {
+    box-shadow: 4px 10px 30px 1px rgba(0, 0, 0, 0.075);
+    width: 100%;
+    border-radius: 14px;
+}
+
+.AgentPDlocation-child-div_span-1 {
+    display: block;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.AgentPDlocation-child-div_span-2 {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+    color: var(--silver-surfer);
+}
+
+.AgentPDlocation-child-div_span-3 {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 15px;
+    color: var(--silver-surfer);
+}
+
+/* Media Queri ===================== */
+@media(max-width: 590px) {
+    .AgentPDlocation {
+        padding: 0 25px;
+    }
+}
