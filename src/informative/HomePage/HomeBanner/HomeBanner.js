@@ -25,21 +25,21 @@ import { useLocation } from 'react-router-dom';
 const HomeBanner = () => {
   const testData = [
     {
-      personName: 'Jacob William',
-      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-      role: 'CEO of Google',
+      personName: 'Raghav Bindra',
+      desc: 'NestoHub is a unique platform for builders and brokers. It makes property listing and selling super easy and convenient. I highly recommend NestoHub to my fellow builders.',
+      role: '',
       personImg: '/assets/person.png'
     },
     {
-      personName: 'Jacob William2',
-      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-      role: 'CEO of Google',
+      personName: 'Suhail Siddiqui',
+      desc: 'I was a new broker in the market, and NestoHub was the perfect platform for me to start selling properties with higher earnings and the finest properties. They advised me on gaining profits and quick sales.',
+      role: '',
       personImg: '/assets/person.png'
     },
     {
-      personName: 'Jacob William3',
-      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-      role: 'CEO of Google',
+      personName: 'Jamshed Khan',
+      desc: 'I really like working with NestoHub, as they are skilled professionals and reliable for selling my properties. This digital platform is a big yes for every builder and broker from my side.',
+      role: '',
       personImg: '/assets/person.png'
     },
   ]
