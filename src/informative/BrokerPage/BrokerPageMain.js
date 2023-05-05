@@ -36,7 +36,7 @@ const BuilderPageMain = () => {
       <InformativeNavbar />
       <BrokerBanner />
       <ChooseUs />
-      <Testimonials testData={testData} />
+      <Testimonials testData={testData} title='Brokers On NestoHub' subtitle='Our Achievements In Your Words' />
       <InformativeFooter />
     </>
   )

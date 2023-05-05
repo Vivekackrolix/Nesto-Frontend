@@ -6,18 +6,18 @@ import { AiOutlineStar } from 'react-icons/ai';
 import Heading from '../heading/Heading';
 import { Fade } from 'react-reveal';
 
-const Testimonial = ({ testData, }) => {
+const Testimonial = ({ testData, title, subtitle }) => {
   const settings = {
-    dots: false,
-    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    speed: 3000,
-    autoplaySpeed: 3000,
+    dots: false,
+    infinite: true,
+    speed: 600,
     cssEase: 'linear',
     arrows: true,
     loop: true,
     autoplay: true,
+    autoplaySpeed: 3000,
     accessibility: true,
     swipeToSlide: true,
     responsive: [
@@ -67,8 +67,8 @@ const Testimonial = ({ testData, }) => {
         <div className="heading">
           <Heading
             className="mt-4"
-            title="Builders On NestoHub"
-            sub="Our Achievements In Your Words"
+            title={title}
+            sub={subtitle}
           />
         </div>
         <div className="container">
