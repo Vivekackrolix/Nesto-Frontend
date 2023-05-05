@@ -41,7 +41,7 @@ const BuilderPageMain = () => {
       {/* <Residency/> */}
       <HowWorkBuilder />
       <ChooseUs />
-      <Testimonials testData={testData} />
+      <Testimonials testData={testData} title='Builders On NestoHub' subtitle='Our Achievements In Your Words' />
       <InformativeFooter />
     </>
   )
