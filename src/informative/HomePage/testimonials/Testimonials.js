@@ -35,9 +35,7 @@ const Testimonial = () => {
     arrows: true,
     loop: true,
     autoplay: true,
-    autoplaySpeed: 7000,
     accessibility: true,
-    cssEase: 'linear',
     swipeToSlide: true,
     responsive: [
       {

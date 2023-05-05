@@ -1,6 +1,4 @@
 import React, {useEffect} from 'react'
-import HowWork from '../AboutUs/HowWork/HowWork'
-import Residency from '../HomePage/residency/Residency'
 import InformativeFooter from '../InformativeFooter/InformativeFooter'
 import InformativeNavbar from '../Navbar/Navbar'
 import BrokerBanner from './BrokerBanner/BrokerBanner'
@@ -16,8 +14,6 @@ const BuilderPageMain = () => {
     <>
       <InformativeNavbar />
       <BrokerBanner />
-      {/* <Residency/> */}
-      {/* <HowWork /> */}
       <ChooseUs />
       <Testimonials />
       <InformativeFooter />

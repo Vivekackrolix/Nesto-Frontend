@@ -133,7 +133,7 @@ const CurrentProjects = () => {
                                             onClick={heartChange}
                                         > <AiOutlineHeart />
                                         </span>
-                                        {heart == true
+                                        {heart === true
                                             ?
                                             <span
                                                 className='current-project-slider_icon2'
