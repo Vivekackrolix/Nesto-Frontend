@@ -19,12 +19,12 @@ const TransactionHistory = () => {
     getTransaction();
   }, []);
 
-  const paymentData = data.map((itm) => (
+  const paymentData = data?.map((itm) => (
     <tr>
-      <td>{itm.invoiceId}</td>
-      <td>{itm.transactionId}</td>
-      <td>{itm.transactionDate}</td>
-      <td>{itm.transactionAmount}</td>
+      <td>{itm?.invoiceId}</td>
+      <td>{itm?.transactionId}</td>
+      <td>{itm?.transactionDate}</td>
+      <td>{itm?.transactionAmount}</td>
     </tr>
   ));
   return (

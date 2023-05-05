@@ -4,31 +4,10 @@ import { Navigation, Autoplay } from "swiper";
 import { Card, Container } from "react-bootstrap";
 import DashboardTabs from "../../dashboard-soldout-properties/dashboard-tabs/DashboardTabs";
 
-// const items = [
-//   {
-//     id: 0,
-//   },
-//   {
-//     id: 1,
-//   },
-//   {
-//     id: 2,
-//   },
-//   {
-//     id: 3,
-//   },
-//   {
-//     id: 4,
-//   },
-// ];
-
 const tabKey = ["All", "2BHK ", " 3BHK", "4BHK", "5BHK"];
 
 const Floor = ({ data }) => {
-  // const items = data;
   const [slidesPerView, setSlidesPerView] = useState(1);
-
-  // const unitType = data.unitType ? data.unitType : [];
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,8 +25,6 @@ const Floor = ({ data }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  // console.log(data);
 
   const floorPlan = data?.floorPlanAndPricing?.map((item) => (
     <SwiperSlide key={item.id}>

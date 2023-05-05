@@ -26,8 +26,10 @@ const PersonalDetailsForm = () => {
   };
 
   const [formData, setFormData] = useState(builderData);
+  console.log(formData);
 
   useEffect(() => {
+    debugger;
     dispatch(getBuilderDetail());
   }, [dispatch]);
 

@@ -16,7 +16,7 @@ import { Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
 import { postAPI } from "../../Api/ApiRequest";
 import { apiEndpoints } from "../../Api/ApiEndpoint";
-const SearchFilterBox = () => {
+const SearchFilterBox = (props) => {
   const [showFilter, setShowFilter] = useState(false);
   const [transcript, setTranscript] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -30,9 +30,22 @@ const SearchFilterBox = () => {
   const [description, setDescription] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const [showAnotherPopup, setShowAnotherPopup] = useState(false);
+  // const [showRole, setShowRole] = useState(false);
+  const [showRoleProperty, setShowRoleProperty] = useState(false);
+  // const [showRoleOption,setShowRoleModal ] = useState(false);
   const [data, setData] = useState([]);
   const [reason, setReason] = useState({});
   const [comments, setComments] = useState({});
+
+  const [add, setAdd] = useState("");
+  // const [name, setName] = useState("");
+  const [mail, setMail] = useState("");
+  const [number, setNumber] = useState("");
+  const [property, setProperty] = useState("");
+  const role = [
+    { value: "Property Manager", label: "Property Manager" },
+    { value: "Finance Manager", label: "Finance Manager" },
+  ];
   const handleVoiceSearch = () => {
     const recognition = new window.webkitSpeechRecognition();
     recognition.lang = "en-IN";
@@ -83,6 +96,27 @@ const SearchFilterBox = () => {
     );
     console.log(response);
     setData(response.data);
+  };
+
+  // const handleToggle = () => setShowRole(!showRole);
+  const handleShowModalRole = () => {
+    setShowRoleProperty(true);
+  };
+  const onAddRole = async () => {
+    const formData = {
+      add: "property",
+      name: "karthik Thakur",
+      email: "karthikthukur@gmail.com",
+      mobileNumber: "8897612345",
+      selectProperties: [
+        "64219b8ae3221bc0daaacfa3",
+        "6421d0cd47ff879954ad7f17",
+      ],
+      builderId: "64214c1ab4567ccae10b2889",
+    };
+    debugger;
+    const response = await postAPI(apiEndpoints.addRole, formData);
+    console.log(response);
   };
 
   return (
@@ -138,6 +172,7 @@ const SearchFilterBox = () => {
           </Button>
         </div>
       </div>
+      {/* {showRole && ( */}
       <div className="col-auto" style={{ gap: "2" }}>
         <Dropdown>
           <Dropdown.Toggle
@@ -148,17 +183,23 @@ const SearchFilterBox = () => {
           >
             <RiAddFill size={30} />
           </Dropdown.Toggle>
-          <Dropdown.Menu>
-            {/* <Dropdown.Item href="#/action-1">Raise Dispute</Dropdown.Item> */}
-            <Dropdown.Item onClick={handleRaiseDispute}>
-              Raise Dispute
-            </Dropdown.Item>
 
-            <hr />
+          <Dropdown.Menu>
+            {/* <Dropdown.Item onClick={handleRaiseDispute}>
+              Raise Dispute
+            </Dropdown.Item> */}
+
+            {/* <hr /> */}
             <Dropdown.Item onClick={handleAnotherAction}>
               Request Property
             </Dropdown.Item>
+            {props?.isRoleScreen ? (
+              <Dropdown.Item onClick={handleShowModalRole}>
+                Add role
+              </Dropdown.Item>
+            ) : null}
           </Dropdown.Menu>
+
           <Modal show={showPopup} onHide={() => setShowPopup(false)}>
             <Modal.Header className="justify-content-center" closeButton>
               <Modal.Title>Raise Dispute</Modal.Title>
@@ -322,8 +363,110 @@ const SearchFilterBox = () => {
               </Button>
             </Modal.Footer>
           </Modal>
+          <Modal
+            show={showRoleProperty}
+            onHide={() => setShowRoleProperty(false)}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>Add Role</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Container className="pt-2 pb-5 dashboard__wrapper">
+                <Form className="profile__form ps-2">
+                  <Form.Group className="mb-4" controlId="email">
+                    <Form.Label>
+                      <h5>Add</h5>
+                    </Form.Label>
+                    <CreatableSelect
+                      // isMulti
+                      placeholder="Property Manager"
+                      value={add}
+                      // options={finance}
+                      className="rounded-0"
+                      styles={{ background: "#F8F8F8" }}
+                      onChange={(e) => {
+                        setAdd(e.target.value);
+                      }}
+                    />
+                    <br />
+                    <Form.Label>
+                      <h5>Name</h5>
+                    </Form.Label>
+                    <Form.Control
+                      className="rounded-0"
+                      type="text"
+                      placeholder="Lorem Ipsum"
+                      value={name}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setName(e.target.value);
+                      }}
+                    />
+                    <br />
+                    <Form.Label>
+                      <h5>Email</h5>
+                    </Form.Label>
+                    <Form.Control
+                      className="rounded-0"
+                      type="text"
+                      placeholder="Lorem Ipsum"
+                      value={mail}
+                      onChange={(e) => {
+                        setMail(e.target.value);
+                      }}
+                    />
+                    <br />
+                    <Form.Label>
+                      <h5>Mobile Number</h5>
+                    </Form.Label>
+                    <Form.Control
+                      className="rounded-0"
+                      type="tel"
+                      placeholder="Lorem Ipsum"
+                      maxLength="10"
+                      value={number}
+                      onChange={(e) => {
+                        setNumber(e.target.value);
+                        console.log(e.target);
+                      }}
+                    />
+                    <br />
+                    <Form.Label>
+                      <h5>Select Properties</h5>
+                    </Form.Label>
+                    <CreatableSelect
+                      // isMulti
+                      placeholder="Property Manager"
+                      value={property}
+                      className="rounded-0"
+                      styles={{ background: "#F8F8F8" }}
+                      onChange={(e) => {
+                        setProperty(e.target.value);
+                      }}
+                    />
+                  </Form.Group>
+                </Form>
+              </Container>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button
+                variant="secondary"
+                onClick={() => setShowRoleProperty(false)}
+              >
+                Close
+              </Button>
+              <Button
+                variant="primary"
+                // onClick={() => setShowRoleProperty(false)}
+                onClick={onAddRole}
+              >
+                Save Changes
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </Dropdown>
       </div>
+      {/* )} */}
       <div>
         <Filter show={showFilter} onChange={setShowFilter} />
       </div>

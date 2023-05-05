@@ -17,11 +17,11 @@ const RaiseQuery = () => {
     getQuery();
   }, []);
 
-  const recentQuery = queryData.map((data, index) => {
+  const recentQuery = queryData?.map((data, index) => {
     return (
       <Accordion.Item eventKey={index} key={data._id} className="my-3">
-        <Accordion.Header>{data.subject}</Accordion.Header>
-        <Accordion.Body> {data.description} </Accordion.Body>
+        <Accordion.Header>{data?.subject}</Accordion.Header>
+        <Accordion.Body> {data?.description} </Accordion.Body>
       </Accordion.Item>
     );
   });

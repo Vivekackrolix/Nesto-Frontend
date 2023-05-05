@@ -10,8 +10,9 @@ const PropertyAnalytics = () => {
   const [data, setData] = useState({}); //Later use redux
   useEffect(() => {
     const getAnalytics = async () => {
+      debugger;
       const response = await getAPI(apiEndpoints.getPropertyAnalytics);
-      // console.log(response);
+      console.log(response);
       setData(response.data);
     };
 

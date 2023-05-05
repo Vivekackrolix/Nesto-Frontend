@@ -10,9 +10,9 @@ const PendingInvoice = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getPending = async () => {
-      // ;
+      debugger;
       const response = await getAPI(apiEndpoints.getAllInvoiceForBuilder);
-      // console.log(response.data.data);
+      console.log(response.data);
       setData(response.data);
     };
     // ;
@@ -20,7 +20,7 @@ const PendingInvoice = () => {
     getPending();
   }, []);
 
-  const propertyListing = data.map((itm, index) => {
+  const propertyListing = data?.map((itm, index) => {
     const unitType = itm?.invoices[0]?.claimId?.propertyId?.unitType
       ? itm?.invoices[0]?.claimId?.propertyId?.unitType
       : [];
@@ -61,7 +61,7 @@ const PendingInvoice = () => {
                 <p className="" style={{ color: "#8B9199" }}>
                   Unit Number
                 </p>
-                <p>{unitType.map((item) => item)}</p>
+                {/* <p>{itm?.invoice[0]?.claimId?.boughtPropertyId?.unitNumber}</p> */}
               </span>
               <span className="p-2">
                 <p className="" style={{ color: "#8B9199" }}>
@@ -103,7 +103,7 @@ const PendingInvoice = () => {
             </h2>
           </div>
           <hr />
-          <div className="d-flex justify-content-around">
+          {/* <div className="d-flex justify-content-around">
             <p style={{ color: "#838383" }}>
               {" "}
               {itm?.invoices[1]?._id.slice(-10)}
@@ -123,7 +123,7 @@ const PendingInvoice = () => {
             <h2>
               <GrDocumentPdf />
             </h2>
-          </div>
+          </div> */}
         </Container>
       </Container>
     );

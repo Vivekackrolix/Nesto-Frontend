@@ -3,18 +3,7 @@ import CreatableSelect from "react-select/creatable";
 // import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
-// const finance = [
-//   { value: "Finance Manager", label: "Finance Manager" },
-//   { value: "Property Manager", label: "Property Manager" },
-// ];
-// const property = [
-//   { value: "Commercial", label: "Commercial" },
-//   { value: "Residential", label: "Residential" },
-// ];
-// const add =
-// [  {value:"Financial Manager", label:"Financial Manager" },
-//   {value:"Property Manager", label:"Property Manager"}],
-// [itm.formData];
+
 const AddRole = (props) => {
   const [add, setAdd] = useState("");
   const [name, setName] = useState("");
@@ -48,10 +37,10 @@ const AddRole = (props) => {
   return (
     <>
       <Modal
-        show={props.show}
-        onHide={() => {
-          props.onHide(false);
-        }}
+      // show={props.show}
+      // onHide={() => {
+      //   props.onHide(false);
+      // }}
       >
         <Modal.Header className="justify-content-center" closeButton>
           <Modal.Title>Add Role</Modal.Title>

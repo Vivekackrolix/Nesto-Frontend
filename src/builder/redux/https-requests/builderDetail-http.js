@@ -10,12 +10,13 @@ export const getBuilderDetail = () => {
       const response = await getAPI(apiEndpoints.getAllBuilder);
       debugger;
       console.log(response.data);
-      return response.data;
+      return response;
     };
 
     //CALL HTTP REQ AND USE REDUX
     try {
       const data = await getData();
+      debugger;
       if (data.code !== 200) {
         // console.log("Permission not available");
       } else {

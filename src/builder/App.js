@@ -1,18 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Login from "./login/Login";
 import HomeDashBoard from "./dashboard/HomeDashBoard";
 import Property from "./dashboard/property/Property";
-
 import SoldPage from "./dashboard/dashboard-soldout-properties/Sold-page";
-import PromotedVisit from "./dashboard/dashboard-property-analytics/Visit Details/PromotedVisit";
-
 import VisitDetails from "./dashboard/dashboard-property-analytics/Visit Details/VisitDetails";
 import PropertyEdit from "./dashboard/dashboard-info-cards/Property Edit/PropertyEdit.js";
-
 import PropertyClaim from "./dashboard/dashboard-property-analytics/Visit Details/Property claim/PropertyClaim";
 import Brokerage from "./dashboard/Brokerage/Brokerage";
-import SettledInvoice from "./dashboard/Brokerage/SettledInvoice";
 import BrokerageSettled from "./dashboard/Brokerage/BrokerageSettled";
 import ProfilePage from "./dashboard/Builderprofile/Profile";
 import NotificationDropdown from "./dashboard/Builderprofile/notification/NotificationDropdown";
@@ -35,11 +29,6 @@ const App = () => {
             path="/builder/register"
             element={<RegisterLogin />}
           />{" "}
-          {/* <Route
-            exact
-            path="/builder/home-dashboard/promoted"
-            element={<PromotedVisit />}
-          /> */}
           <Route
             exact
             path="/builder/home-dashboard/subscription"

@@ -44,5 +44,19 @@ const putAPI = async (endpoint, body) => {
     return err;
   }
 };
+const delAPI = async (endpoint, body) => {
+  // ;
+  try {
+    const response = await axiosInstance.del(endpoint, body);
+    // console.log(response.data);
+    if (response.data) {
+      return response.data;
+    } else {
+      throw new Error("function delAPI error.");
+    }
+  } catch (err) {
+    return err;
+  }
+};
 
-export { getAPI, postAPI, putAPI };
+export { getAPI, postAPI, putAPI, delAPI };

@@ -29,7 +29,9 @@ const PropertyClaim = () => {
       //   );
       //   ;
       // try {
-      const response = await getAPI(apiEndpoints.getAllClaim);
+      const response = await getAPI(
+        `${apiEndpoints.getAllClaim}${params.propertyId}`
+      );
       // console.log(response.data);
       setData(response.data);
     };

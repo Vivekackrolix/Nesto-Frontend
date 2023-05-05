@@ -7,6 +7,7 @@ import balcony from "../../../Images/Balcony.png";
 
 const Amenities = ({ data }) => {
   // const unitType = data.unitType ? data.unitType : [];
+  console.log(data);
   return (
     <>
       <h3 style={{ fontFamily: "Bahnschrift" }}>Project Amenities</h3>

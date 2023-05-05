@@ -24,10 +24,9 @@ export const apiEndpoints = {
   getAllFaqAndSupport1:
     "/v1/faqAndSupport/getAllFaqAndSupport?search=&for=builder&type=faq",
   getAllRaiseQuery: "/v1/raiseQuery/getAllRaiseQuery",
-  getAllInvoiceForBuilder:
-    "/v1/invoice/getAllInvoiceForBuilder?builderId=641069056532f2569479fc9d&status=pending",
+  getAllInvoiceForBuilder: "/v1/invoice/getAllInvoiceForBuilder?status=pending",
   getAllInvoiceForBuilder1:
-    "/v1/invoice/getAllInvoiceForBuilder?builderId=641069056532f2569479fc9d&status=settled",
+    "/v1/invoice/getAllInvoiceForBuilder?status=settled",
   getClaimById: "/v1/claim/getClaimById?id=",
   addPayment: "/v1/payment/addPayment",
   getAllBuilder: "/v1/builder/getAllBuilder",
@@ -35,4 +34,7 @@ export const apiEndpoints = {
   getAllClaim:
     "/v1/claim/getAllClaim?builderId=641069056532f2569479fc9d&claimType=property",
   addRaiseDispute: "/v1/raiseDispute/addRaiseDispute",
+  deleteRoles: "/v1/roles/deleteRoles?id=64194fb9734b3a4ba5181d23",
+  getAllReason: "/v1/reason/getAllReason",
+  addRole: "/v1/roles/addRoles",
 };

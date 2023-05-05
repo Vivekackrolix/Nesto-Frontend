@@ -30,9 +30,9 @@ const HomeDashBoard = () => {
     dispatch(getBuilderDetail());
   }, [dispatch]);
 
-  const filteredData = data.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // const filteredData = data.filter((item) =>
+  //   item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
   // const [data1, setData1] = useState([]);
   // useEffect(() => {
   //   const getBanner = async () => {
@@ -70,7 +70,7 @@ const HomeDashBoard = () => {
         <SoldOut />
         <RecentlyAdded />
 
-        {/* <RecentPackage /> */}
+        <RecentPackage />
         <PropertyInvoice />
         {/* <Charts /> */}
       </Container>

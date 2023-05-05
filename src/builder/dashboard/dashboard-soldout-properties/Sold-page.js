@@ -2,7 +2,7 @@ import DashboardHeader from "../header/DashboardHeader";
 import { Col, Container, Row } from "react-bootstrap";
 import SearchFilterBox from "../search-filter/SearchFilter";
 import homeImage from "../../Images/homeimage.png";
-import map from "../../Images/Map.png";
+// import map from "../../Images/Map.png";
 import Anlytics from "../dashboard-property-analytics/dashboard-property-details/anlytics";
 import { RxCheck } from "react-icons/rx";
 import Aos from "aos";
@@ -34,7 +34,7 @@ const SoldPage = () => {
         `${apiEndpoints.getPropertyById}${params.propertyId}`
       );
       // const response = await axios.get(
-      //   // `https://apis.nestohub.in/api/v1/property/getPropertyById?id=${params.propertyId}`,
+
       //   `http://nestobackend-env.eba-fk3zufmz.ap-south-1.elasticbeanstalk.com/api/v1/property/getPropertyById?id=${params.propertyId}`,
       //   {
       //     headers: {
@@ -45,9 +45,9 @@ const SoldPage = () => {
       //   }
       // );
 
-      // debugger;
-      // console.log(response);
-      setProperty(response.data);
+      debugger;
+      console.log(response.data);
+      setProperty(response.data[0]);
     };
 
     getPropertyById();
@@ -157,7 +157,7 @@ const SoldPage = () => {
               /> */}
               <iframe
                 src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7001.621621626714!2d${property?.longitude}!3d${property?.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd08c16bad3b%3A0x26668a270e9365b7!2sKashmere%20Gate%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1682425730846!5m2!1sen!2sin`}
-                allowfullscreen=""
+                allowFullScreen=""
                 title="Unique Title"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"

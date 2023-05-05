@@ -6,7 +6,8 @@ import AddRole from "./AddRole";
 import { BsPencilFill } from "react-icons/bs";
 // import delete from "../../../Images/editbutton.png";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { delAPI } from "../../../Api/ApiRequest";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
 
 const Finance = (props) => {
   const [role, setRole] = useState(false);
@@ -14,24 +15,15 @@ const Finance = (props) => {
 
   const [data, setData] = useState({}); //Later use redux
   useEffect(() => {
-    const getRemove = async () => {
-      const response = await axios.del(
-        "http://13.233.149.97:3000/api/v1/roles/deleteRoles?id=64194fb9734b3a4ba5181d23",
-        // formData,
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
+    const delRemove = async () => {
+      const response = await delAPI(apiEndpoints.deleteRoles);
       // ;
 
       // console.log(response.data);
-      setData(response.data.data);
+      setData(response.data);
     };
 
-    getRemove();
+    delRemove();
   }, []);
 
   const removeElement = () => {
