@@ -31,7 +31,7 @@ const BuilderForm = () => {
                     <input type='text' placeholder='Brief Description' className='builder-banner-col-3_input' required />
                     <button type='submit' className='builder-banner-col-3_btn'>Submit</button>
                 </form>
-            </div>
+       </div>
         </Fade>
     )
 }

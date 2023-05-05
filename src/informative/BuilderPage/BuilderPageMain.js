@@ -18,7 +18,7 @@ const BuilderPageMain = () => {
       <InformativeNavbar />
       <BuilderBanner />
       {/* <Residency/> */}
-      <HowWorkBuilder />
+      <HowWorkBuilder/>
       <ChooseUs />
       <Testimonials />
       <InformativeFooter />

@@ -14,7 +14,7 @@ const BuilderBanner = () => {
             <div className="col-lg-5 builder-banner-col-1">
               <div>
                 <h4 className="banner-h4">
-                  Stop Searching, Start Listing your Property With Us
+                  List & Sell Faster With NestoHub
                 </h4>
                 <div className="load-wrapp">
                   <div className="load">
@@ -24,17 +24,15 @@ const BuilderBanner = () => {
                   </div>
                 </div>
                 <p className="banner-p">
-                  Broker Network app is a suite of services specifically designed
-                  for Indian real estate brokers and developers to maximize their
-                  business.
+                  We are a leading platform for builders to sell their inventory quickly and easily. NestoHub eliminates the hassel of manually managing brokers!
                 </p>
                 <Link to="/" className="primary_button">
-                  Contact Us
+                  Connect For Queries
                   <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
                 </Link>
               </div>
-            </div>
-          </Fade>
+            </div >
+          </Fade >
           <Zoom duration={1300} delay={100}>
             <div className="col-lg-2 builder-banner-col-2 align-items-end">
               <img
@@ -100,11 +98,11 @@ const BuilderBanner = () => {
               </div>
             </div>
           </Fade>
-        </div>
-      </div>
+        </div >
+      </div >
       {/* Desktop View Form ===========
       ============================= */}
-      <BuilderForm />
+      < BuilderForm />
     </>
   );
 };

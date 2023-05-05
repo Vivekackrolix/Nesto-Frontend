@@ -67,8 +67,8 @@ const Testimonial = ({ testData, }) => {
         <div className="heading">
           <Heading
             className="mt-4"
-            title="Our Testimonial"
-            sub="What Our Customer Say About Us"
+            title="Builders On NestoHub"
+            sub="Our Achievements In Your Words"
           />
         </div>
         <div className="container">

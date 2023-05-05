@@ -24,7 +24,7 @@ const SubmitPop = (props) => {
 
         <span className="d-flex justify-content-center">
           <h4 style={{ color: "#838BA1" }}>
-            Changes suggested by you will be live.Post review by Nestohub team
+            Changes suggested by you will be live.Post review by NestoHub team
           </h4>
         </span>
         <br />
