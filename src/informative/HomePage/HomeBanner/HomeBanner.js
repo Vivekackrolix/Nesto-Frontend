@@ -17,13 +17,30 @@ import OurPartner from '../OurPartner/OurPartner';
 import HowWork from '../../AboutUs/HowWork/HowWork';
 import HomeVideo from '../HomeVideo/HomeVideo';
 import InformativeFooter from '../../InformativeFooter/InformativeFooter';
-import HowWorkBuilder from '../../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder';
 import './circle-animation/CircleAnimation.css';
 import { Image } from 'react-bootstrap';
 import { circleScrollData, circleScrollDataIcons } from '../../data/constant';
 import { useLocation } from 'react-router-dom';
 
 const HomeBanner = () => {
+  const testData = [
+    {
+      personName: 'Jacob William',
+      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
+      role: 'CEO of Google'
+    },
+    {
+      personName: 'Jacob William2',
+      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
+      role: 'CEO of Google'
+    },
+    {
+      personName: 'Jacob William3',
+      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
+      role: 'CEO of Google'
+    },
+  ]
+
   const scrollbarRef = useRef(null);
 
   useEffect(() => {
@@ -696,7 +713,7 @@ const HomeBanner = () => {
           <OurPartner />
           <GetStarted />
           <News />
-          <Testimonials />
+          <Testimonials testData={testData} />
           <InformativeFooter />
         </div>
       </div>

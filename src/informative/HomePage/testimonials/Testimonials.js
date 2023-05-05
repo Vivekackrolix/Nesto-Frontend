@@ -4,26 +4,9 @@ import './testimonials.css';
 import { FaStar } from 'react-icons/fa';
 import { AiOutlineStar } from 'react-icons/ai';
 import Heading from '../heading/Heading';
+import { Fade } from 'react-reveal';
 
-const review = [
-  {
-    id: 1,
-    testname: 'Jacob William',
-    desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-  },
-  {
-    id: 2,
-    testname: 'Jacob William',
-    desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-  },
-  {
-    id: 3,
-    testname: 'Jacob William',
-    desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-  },
-];
-
-const Testimonial = () => {
+const Testimonial = ({ testData, }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -90,51 +73,54 @@ const Testimonial = () => {
         </div>
         <div className="container">
           <div className="slider">
-            <Slider {...settings} className="mx-auto">
-              {review.map((obj, e) => {
-                return (
-                  <>
-                    <div key={e} className="px-3 pb-4" data-aos="false">
-                      <div className="test-card">
-                        <p className="testimonial-desc">{obj.desc}</p>
-                        <div className="d-flex mt-4 gap-3 justify-content-end">
-                          <div className="card-box">
-                            <span className="test-name justify-content-end">
-                              {' '}
-                              {obj.testname}
-                            </span>
-                            <span className="test-company justify-content-end">
-                              CEO of Google
-                            </span>
-                            <div className="d-flex justify-content-end">
-                              {Array.from({ length: 5 }, (_, index) => {
-                                if (index < 4) {
+            <Fade up duration={1000} distance="100px" delay={100}>
+              <Slider {...settings} className="mx-auto">
+                {testData?.map((obj, e) => {
+                  return (
+                    <>
+                      <div key={e} className="px-3 pb-4">
+                        <div className="test-card">
+                          <p className="testimonial-desc">{obj.desc}</p>
+                          <div className="d-flex mt-4 gap-3 justify-content-end">
+                            <div className="card-box">
+                              <span className="test-name justify-content-end">
+                                {' '}
+                                {obj.personName}
+                              </span>
+                              <span className="test-company justify-content-end">
+                                {' '}
+                                {obj.role}
+                              </span>
+                              <div className="d-flex justify-content-end">
+                                {Array.from({ length: 5 }, (_, index) => {
+                                  if (index < 4) {
+                                    return (
+                                      <FaStar
+                                        key={index}
+                                        fill="#FFB630"
+                                        size={16}
+                                      />
+                                    );
+                                  }
                                   return (
-                                    <FaStar
-                                      key={index}
-                                      fill="#FFB630"
-                                      size={16}
-                                    />
+                                    <AiOutlineStar color="#FFB630" size={18} />
                                   );
-                                }
-                                return (
-                                  <AiOutlineStar color="#FFB630" size={18} />
-                                );
-                              })}
+                                })}
+                              </div>
                             </div>
+                            <img
+                              className="person-image"
+                              src="./assets/person.png"
+                              alt="person"
+                            />
                           </div>
-                          <img
-                            className="person-image"
-                            src="./assets/person.png"
-                            alt="person"
-                          />
                         </div>
                       </div>
-                    </div>
-                  </>
-                );
-              })}
-            </Slider>
+                    </>
+                  );
+                })}
+              </Slider>
+            </Fade>
           </div>
         </div>
       </div>

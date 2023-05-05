@@ -145,7 +145,7 @@ export default function ChooseUs() {
           sub="We Make Real Estate Simple & Efficient"
         />
         <Fade bottom duration={1000} distance="100px" delay={100}>
-          <div className="row choose-row" data-aos="false">
+          <div className="row choose-row">
             <Slider {...settings}>
               {data.map(item => {
                 return (

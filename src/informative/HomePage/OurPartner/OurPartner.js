@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 import { useEffect } from 'react';
 import Aos from 'aos';
+import { Fade } from 'react-reveal';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -156,33 +157,36 @@ const OurPartner = () => {
     Aos.init({ duration: 1400 });
   }, []);
   return (
-    <div className="our-partner" data-aos="false">
+    <div className="our-partner">
       <div className="">
         <Heading title="Our Partners" sub="The Companies That Represent Us" />
       </div>
-      <div className="mt-4 mb-5 px-5 d-flex" data-aos="false">
-        <Slider
-          {...settings}
-          className="partner-slider d-flex gap-2"
-          data-aos="false"
-        >
-          {review.map((obj, e) => {
-            return (
-              <div className="px-4" key={e}>
-                <Link to="/partner-page">
-                  <img src={obj.img} className="partner-image" alt="partner" />
-                </Link>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
-      <div className="text-center" data-aos="false">
-        <Link to="/partner-page" className="primary_button">
-          View All
-          <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
-        </Link>
-      </div>
+      <Fade up duration={1000} distance="100px" delay={100}>
+        <div className="mt-4 mb-5 px-5 d-flex">
+          <Slider
+            {...settings}
+            className="partner-slider d-flex gap-2"
+          >
+            {review.map((obj, e) => {
+              return (
+                <div className="px-4" key={e}>
+                  <Link to="/partner-page">
+                    <img src={obj.img} className="partner-image" alt="partner" />
+                  </Link>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+        /</Fade>
+      <Fade up duration={1000} distance="100px" delay={100}>
+        <div className="text-center">
+          <Link to="/partner-page" className="primary_button">
+            View All
+            <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
+          </Link>
+        </div>
+      </Fade>
     </div>
   );
 };
