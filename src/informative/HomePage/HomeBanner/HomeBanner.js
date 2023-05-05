@@ -27,17 +27,20 @@ const HomeBanner = () => {
     {
       personName: 'Jacob William',
       desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-      role: 'CEO of Google'
+      role: 'CEO of Google',
+      personImg: '/assets/person.png'
     },
     {
       personName: 'Jacob William2',
       desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-      role: 'CEO of Google'
+      role: 'CEO of Google',
+      personImg: '/assets/person.png'
     },
     {
       personName: 'Jacob William3',
       desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
-      role: 'CEO of Google'
+      role: 'CEO of Google',
+      personImg: '/assets/person.png'
     },
   ]
 

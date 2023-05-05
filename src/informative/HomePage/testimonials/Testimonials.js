@@ -110,7 +110,7 @@ const Testimonial = ({ testData, }) => {
                             </div>
                             <img
                               className="person-image"
-                              src="./assets/person.png"
+                              src={obj.personImg}
                               alt="person"
                             />
                           </div>
