@@ -1,3 +1,4 @@
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PartnersDetailsMain from './PartnersDetail/PartnersDetailsMain';
 import BrokerPageMain from './BrokerPage/BrokerPageMain';
@@ -7,7 +8,7 @@ import BlogListMain from './BlogList/BlogListMain';
 import BlogDetailMain from './BlogDetail.js/BlogDetailMain';
 import AboutUsMain from './AboutUs/AboutUsMain';
 import Faq from './Faq/Faq';
-import HomeBanner from './HomePage/HomeBanner/HomeBanner';
+// import HomeBanner from './HomePage/HomeBanner/HomeBanner';
 import ScrollToTop from '../dsa/components/ScrollToTop';
 import ContactUs from './ContactUs/ContactUs';
 import PartnerBanner from './PartnersPage/Partnerbanner/partnerbanner';
@@ -16,12 +17,15 @@ import BuilderPD from './PropertyDetails/BuilderPD/BuilderPD'
 import BrokerPD from './PropertyDetails/BrokerPD/BrokerPD'
 import AgentPD from './PropertyDetails/AgentPD/AgentPD';
 
+const HomeBanner = lazy(() => import('./HomePage/HomeBanner/HomeBanner'));
+
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
+      <Routes fallback={<div>Loading...</div>}>
         <Route path="/" element={<HomeBanner />} />
+
         <Route path="/partners/details" element={<PartnersDetailsMain />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/partner-page" element={<PartnerBanner />} />

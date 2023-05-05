@@ -1,24 +1,29 @@
 import React from 'react';
+import { Fade } from 'react-reveal';
 
 const Heading = ({ title, sub }) => {
   return (
     <>
       <div className="text-center pt-5">
         <div className="">
-          <span className="sections-heading" data-aos="fade-up">
-            {title}
-          </span>
+          <Fade bottom duration={1000} distance="100px" delay={100}>
+            <span className="sections-heading">{title}</span>
+          </Fade>
         </div>
-        <div className="sections-sub-heading" data-aos="fade-up">
-          <p className="">{sub}</p>
-        </div>
-        <div className="load-wrapp">
-          <div className="load" data-aos="fade-up">
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
+        <Fade bottom duration={1000} distance="100px" delay={100}>
+          <div className="sections-sub-heading">
+            <p className="">{sub}</p>
           </div>
-        </div>
+        </Fade>
+        <Fade bottom duration={1000} distance="100px" delay={100}>
+          <div className="load-wrapp">
+            <div className="load">
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+            </div>
+          </div>
+        </Fade>
       </div>
     </>
   );

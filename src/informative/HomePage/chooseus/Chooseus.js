@@ -1,7 +1,8 @@
 import React from 'react';
 import Heading from '../heading/Heading';
 import './chooseus.css';
-import Slider from "react-slick";
+import Slider from 'react-slick';
+import { Fade } from 'react-reveal';
 
 export default function ChooseUs() {
   function SampleNextArrow(props) {
@@ -139,28 +140,33 @@ export default function ChooseUs() {
   return (
     <>
       <div className="container">
-        <Heading title="Why Choose Us" sub="We Make Real Estate Simple & Efficient" />
-        <div className="row choose-row" data-aos="fade-up">
-          <Slider {...settings}>
-            {data.map(item => {
-              return (
-                <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
-                  <div className="choose-card">
-                    <div className="choose-icon-div">
-                      <img src={item.img} className="choose-icon-img" />
-                    </div>
-                    <div className="">
-                      <h5 className="card-heading">{item.title}</h5>
-                    </div>
-                    <div className="">
-                      <span className="card-desc">{item.desc}</span>
+        <Heading
+          title="Why Choose Us"
+          sub="We Make Real Estate Simple & Efficient"
+        />
+        <Fade bottom duration={1000} distance="100px" delay={100}>
+          <div className="row choose-row" data-aos="false">
+            <Slider {...settings}>
+              {data.map(item => {
+                return (
+                  <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
+                    <div className="choose-card">
+                      <div className="choose-icon-div">
+                        <img src={item.img} className="choose-icon-img" />
+                      </div>
+                      <div className="">
+                        <h5 className="card-heading">{item.title}</h5>
+                      </div>
+                      <div className="">
+                        <span className="card-desc">{item.desc}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </Slider>
-        </div>
+                );
+              })}
+            </Slider>
+          </div>
+        </Fade>
       </div>
     </>
   );

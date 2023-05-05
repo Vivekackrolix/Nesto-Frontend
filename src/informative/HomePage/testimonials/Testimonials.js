@@ -97,7 +97,7 @@ const Testimonial = () => {
               {review.map((obj, e) => {
                 return (
                   <>
-                    <div key={e} className="px-3 pb-4" data-aos="fade-up">
+                    <div key={e} className="px-3 pb-4" data-aos="false">
                       <div className="test-card">
                         <p className="testimonial-desc">{obj.desc}</p>
                         <div className="d-flex mt-4 gap-3 justify-content-end">
