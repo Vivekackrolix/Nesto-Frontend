@@ -8,10 +8,6 @@
   position: relative;
 }
 
-strong {
-  font-weight: 700;
-}
-
 [data-link] {
   cursor: pointer;
 }
@@ -63,8 +59,7 @@ html.mob [data-cursor] {
 [data-cursor] .cur1 > * {
   opacity: 0;
   transition: 0.4s;
-  font-weight: 800;
-  font-size: 14px;
+
   color: #fff;
   position: absolute;
   top: 50%;
