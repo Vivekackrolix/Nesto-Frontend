@@ -159,7 +159,7 @@ const OurPartner = () => {
   return (
     <div className="our-partner">
       <div className="">
-        <Heading title="Our Partners" sub="The Companies That Represent Us" />
+        <Heading title="Our Partners" sub="The Leading Collaborations On NestoHub" />
       </div>
       <Fade up duration={1000} distance="100px" delay={100}>
         <div className="mt-4 mb-5 px-5 d-flex">
