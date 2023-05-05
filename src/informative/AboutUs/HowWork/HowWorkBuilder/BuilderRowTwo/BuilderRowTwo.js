@@ -4,11 +4,11 @@ import { Fade, Zoom } from 'react-reveal';
 const BuilderRowTwo = () => {
   return (
     <>
-      <Fade right duration={1000} distance="100px" delay={1000}>
+      <Fade left duration={1000} distance="100px" delay={1000}>
         <div className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-1">
           <img
             src="/assets/informative/howWorks/gif2.gif"
-            className="how-work_img"
+            className="how-work_img how-work_img-small"
           />
         </div>
       </Fade>
@@ -27,7 +27,7 @@ const BuilderRowTwo = () => {
           </div>
         </div>
       </Zoom>
-      <Fade left duration={1000} distance="100px" delay={1000}>
+      <Fade right duration={1000} distance="100px" delay={1000}>
         <div className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-3">
           <span className="row-two-col-3-span-1">List Your Properties</span>
           <span className="row-two-col-3-span-2">

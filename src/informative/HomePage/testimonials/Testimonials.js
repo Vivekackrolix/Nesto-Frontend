@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import React from 'react';
 import Slider from 'react-slick';
 import './testimonials.css';
@@ -131,7 +130,6 @@ const Testimonial = () => {
                             src="./assets/person.png"
                             alt="person"
                           />
-                          {/* <Image src={testimonialimage} className="w-16 h-16" /> */}
                         </div>
                       </div>
                     </div>

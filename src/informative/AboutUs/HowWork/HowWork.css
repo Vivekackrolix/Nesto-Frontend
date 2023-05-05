@@ -1,7 +1,7 @@
 .how-container {
   margin: 0px auto;
   /* padding: 30px 0; */
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .how-box {
@@ -118,6 +118,10 @@
 .ba1 {
   animation: rounder1 2s linear 2s infinite alternate;
   background: rgb(234 244 251 / 60%);
+}
+
+.how-work_img-small {
+  width: 30%;
 }
 
 @keyframes rounder1 {
