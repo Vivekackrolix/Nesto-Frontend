@@ -12,7 +12,7 @@ const BrokerBanner = () => {
           <div className="col-lg-5 broker-banner-col-1" data-aos='fade-right'>
             <div>
               <h4 className="banner-h4">
-                Welcome to India's Largest Network of Brokers
+              Connect & Earn Higher <br />With NestoHub
               </h4>
               <div className="load-wrapp">
                 <div className="load">
@@ -22,11 +22,10 @@ const BrokerBanner = () => {
                 </div>
               </div>
               <p className="banner-p">
-                Broker Network app is a suite of services specifically designed for
-                Indian real estate brokers and developers to maximize their business.
+              We provide brokers with exclusive property inventory, higher commissions, and an easy-to-use dashboard.<br /> Hit the best deals with NestoHub!
               </p>
               <Link to="/contact-us" className="primary_button">
-                Write To Us
+              Connect For Queries
                 <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
               </Link>
             </div>

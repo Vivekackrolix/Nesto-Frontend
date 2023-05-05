@@ -59,7 +59,7 @@ const InformativeNavbar = () => {
                 </div>
                 <div>
                   <Link to='/broker-page' className="informative-navbar-broker-link">
-                    Join as a broker
+                    Join As A Broker
                   </Link>
                 </div>
               </div>
@@ -68,7 +68,7 @@ const InformativeNavbar = () => {
             <Nav.Item>
               <div className="">
                 {/* <button > */}
-                <Link className="list-property-link" to='/builder-page'>List your Property</Link>
+                <Link className="list-property-link" to='/builder-page'>List Your Property</Link>
                 {/* </button> */}
               </div>
             </Nav.Item>

@@ -9,7 +9,7 @@ const SecondCard = ({ url }) => {
                 <div style={{ width: '100%' }}>
                     <div className='second-card__box rounded-3'>
                         <div className='text-center'>
-                            <span className='second-card__span-1'>Download Nestohub Mobile App</span>
+                            <span className='second-card__span-1'>Download NestoHub Mobile App</span>
                         </div>
                         <div className='d-flex gap-2 second-card__btn-div'>
                             <div>

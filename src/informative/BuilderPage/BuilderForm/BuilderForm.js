@@ -3,7 +3,7 @@ import './BuilderForm.css'
 
 const BuilderForm = () => {
     return (
-        <div className='col-lg-4 builder-banner-col-3' data-aos='fade-up'>
+        <div className='col-lg-4 builder-banner-col-3 mb-5' data-aos='fade-up'>
             <div className='builder-banner-col-3_title_div'>
                 <span className='builder-banner-col-3_title'>Hello! List Your Property / Requirement</span>
             </div>

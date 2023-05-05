@@ -18,7 +18,7 @@ export default function GetStarted() {
                   to="/builder-page"
                   className="get-started_btn primary_button"
                 >
-                  Let's Get Started
+                  List Your Property
                   <MdKeyboardDoubleArrowRight
                     size={20}
                     className="move-arrow"
