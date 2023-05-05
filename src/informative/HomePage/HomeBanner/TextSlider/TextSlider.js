@@ -15,7 +15,7 @@ const TextSlider = () => {
     };
     return (
         <div>
-            <div className='text-slider' data-aos='fade-left' >
+            <div className='text-slider' >
                 <Slider {...settings}>
                     <div className='d-flex'>
                         <div className='text-slider-div'>
