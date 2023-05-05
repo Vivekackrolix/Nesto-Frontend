@@ -6,38 +6,51 @@ import $ from 'jquery';
 import Scrollbar from 'smooth-scrollbar';
 
 import InformativeNavbar from '../../Navbar/Navbar';
-import Residency from '../residency/Residency';
 import GetStarted from '../getStarted/GetStarted';
 import News from '../news/News';
 import AboutUs from '../AboutUs/AboutUs';
 import ChooseUs from '../chooseus/Chooseus';
 import Testimonials from '../testimonials/Testimonials';
 import Stats from '../stats/Stats';
-import Aos from 'aos';
 import Banner from './Banner/Banner';
 import OurPartner from '../OurPartner/OurPartner';
 import HowWork from '../../AboutUs/HowWork/HowWork';
 import HomeVideo from '../HomeVideo/HomeVideo';
 import InformativeFooter from '../../InformativeFooter/InformativeFooter';
-import HowWorkBuilder from '../../AboutUs/HowWork/HowWorkBuilder/HowWorkBuilder';
 import './circle-animation/CircleAnimation.css';
 import { Image } from 'react-bootstrap';
 import { circleScrollData, circleScrollDataIcons } from '../../data/constant';
-import { Zoom } from 'react-reveal';
+import { useLocation } from 'react-router-dom';
+
 const HomeBanner = () => {
+  const testData = [
+    {
+      personName: 'Jacob William',
+      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
+      role: 'CEO of Google',
+      personImg: '/assets/person.png'
+    },
+    {
+      personName: 'Jacob William2',
+      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
+      role: 'CEO of Google',
+      personImg: '/assets/person.png'
+    },
+    {
+      personName: 'Jacob William3',
+      desc: 'Precious ipsum dolor sit amet consectetur adipisicing elit, sed dos mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, quis nostrud Precious ips um dolor sit amet, consecte',
+      role: 'CEO of Google',
+      personImg: '/assets/person.png'
+    },
+  ]
+
   const scrollbarRef = useRef(null);
 
   useEffect(() => {
-    // Register ScrollTrigger with GSAP
     gsap.registerPlugin(ScrollTrigger);
 
     document.body.classList.add('gsap-scroll-trigger');
-    return () => {
-      document.body.classList.remove('gsap-scroll-trigger');
-    };
-  }, []);
 
-  useEffect(() => {
     // jquery code start here
     const noloader = true;
 
@@ -59,6 +72,7 @@ const HomeBanner = () => {
     /*********** * ************/
 
     function sizeBgRound() {
+      console.log('loaded');
       var $w_w = $(window).width() * 1.5;
       var $w_h = $(window).height() * 1.5;
       if ($w_w > $w_h) {
@@ -73,13 +87,23 @@ const HomeBanner = () => {
       $('#app,  #sv .rg, #sv .lgt').outerHeight($winh);
     }
 
-    $win.on('load', function () {
+    window.addEventListener('load', function () {
       sizeBgRound();
-    });
-
-    $win.on('load resize', function (e) {
       heightPart();
     });
+    window.addEventListener('resize', function () {
+      sizeBgRound();
+      heightPart();
+    });
+    sizeBgRound();
+    heightPart();
+    // $win.on('load', function () {
+    //   sizeBgRound();
+    // });
+
+    // $win.on('load resize', function (e) {
+    //   heightPart();
+    // });
 
     /************ if mobile ************/
 
@@ -522,6 +546,12 @@ const HomeBanner = () => {
     });
 
     $cursor.init();
+
+    return () => {
+      window.removeEventListener('load', sizeBgRound);
+      window.removeEventListener('resize', heightPart);
+      document.body.classList.remove('gsap-scroll-trigger');
+    };
   }, []);
   return (
     <>
@@ -549,12 +579,12 @@ const HomeBanner = () => {
                           <div>
                             <Image src={circleSectionImg} rounded fluid />
                             <div className="header-group addExtraSpace">
-                              <h3 className="mt-5 mb-0">
+                              <h3 className="my-2">
                                 <strong>{circleSectionHeading}</strong>
                               </h3>
                             </div>
 
-                            <div className="tx mt-4">
+                            <div className="tx">
                               <p className="load-p">{circleSectionText}</p>
                             </div>
                           </div>
@@ -681,11 +711,12 @@ const HomeBanner = () => {
           <ChooseUs />
           <HomeVideo />
           {/* <HowWork /> */}
-          <HowWorkBuilder />
+          {/* <HowWorkBuilder /> */}
+          <HowWork />
           <OurPartner />
           <GetStarted />
           <News />
-          <Testimonials />
+          <Testimonials testData={testData} title='Builders On NestoHub' subtitle='Our Achievements In Your Words' />
           <InformativeFooter />
         </div>
       </div>

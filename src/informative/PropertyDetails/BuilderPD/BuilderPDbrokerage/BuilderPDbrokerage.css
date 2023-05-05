@@ -1,0 +1,34 @@
+.BuilderPDbrokerage {
+    margin-top: 45px;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.BuilderPDbrokerage-col {
+    border: 2px solid #eaeaea;
+    padding: 30px 0 30px 30px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.BuilderPDbrokerage-col_span-1 {
+    display: block;
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--cold-black-color);
+}
+
+.BuilderPDbrokerage-col_span-2 {
+    display: block;
+    font-size: 14px;
+    font-weight: 350;
+    margin-top: 10px;
+    color: var(--silver-surfer);
+}
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .BuilderPDbrokerage {
+        padding: 0 10px;
+    }
+}

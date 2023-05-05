@@ -15,7 +15,7 @@ const SuccessfulLogin = ({ show, onHide }) => {
         <div>
           <span className="successful-login-heading">Successful</span>
           <span className="successful-login-sub-heading">
-            Your requirement is submitted! Nestohub team will contact you soon.
+            Your requirement is submitted! NestoHub team will contact you soon.
           </span>
           <Link to='/contact-us'>
             <button className="reffrel-register-btn">Back to Login</button>

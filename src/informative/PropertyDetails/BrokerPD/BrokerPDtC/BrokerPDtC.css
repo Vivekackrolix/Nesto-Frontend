@@ -1,0 +1,30 @@
+.BrokerPDtC {
+    margin: 45px auto;
+    padding: 0;
+}
+
+.BrokerPDtC-col {
+    border: 2px solid #eaeaea;
+    padding: 30px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.BrokerPDtC-col_span {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 350;
+    color: var(--silver-surfer);
+}
+
+.BrokerPDtC-col_span:not(:first-child) {
+    margin-top: 24px;
+}
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .BrokerPDtC {
+        padding: 0 10px;
+    }
+}

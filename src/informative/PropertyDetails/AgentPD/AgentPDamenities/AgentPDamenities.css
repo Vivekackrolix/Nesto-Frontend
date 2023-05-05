@@ -1,0 +1,37 @@
+.AgentPDamenities {
+    padding: 0;
+    overflow-x: hidden;
+    margin-top: 45px;
+}
+
+.AgentPDamenities-col_12 {
+    margin-top: 20px;
+    padding: 0 10px 25px 10px;
+    text-align: center;
+    border-radius: 14px;
+    border: 2px solid #eaeaea;
+}
+
+.AgentPDamenities-col {
+    margin-top: 30px;
+}
+
+.AgentPDamenities-col_icon {
+    font-size: 34px;
+    color: var(--gray-color);
+}
+
+.AgentPDamenities-col_size {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 350;
+    color: var(--silver-surfer);
+}
+
+/* Media Queri ===================== */
+@media(max-width: 576px) {
+    .AgentPDamenities {
+        padding: 0 10px;
+    }
+}

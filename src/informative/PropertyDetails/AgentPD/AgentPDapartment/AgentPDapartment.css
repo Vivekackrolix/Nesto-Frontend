@@ -1,0 +1,114 @@
+.AgentPDapartment {
+    margin-top: 20px;
+    padding: 0;
+}
+
+.AgentPDapartment-col {
+    padding: 20px 30px;
+    /* border: 2px solid #eaeaea; */
+    box-shadow: 4px 10px 30px 1px rgba(0, 0, 0, 0.055);
+    border-radius: 14px;
+}
+
+.AgentPDapartment-div-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AgentPDapartment-div-2 {
+    display: flex;
+    /* align-items: start; */
+}
+
+.AgentPDapartment-div-2_img {
+    width: 80px;
+}
+
+.div-2_child_heading {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+.div-2_child_stars {
+    display: flex;
+    font-size: 18px;
+    color: #FFB630;
+}
+
+.div-2_child_address {
+    font-size: 14px;
+    color: var(--silver-surfer);
+    font-weight: 350;
+    display: block;
+    margin-top: 8px;
+}
+
+.AgentPDapartment-div-2_child {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    /* justify-content: start; */
+    flex-direction: column;
+}
+
+.AgentPDapartment-div-2_child:not(:last-child) {
+    margin-right: 35px;
+}
+
+.AgentPDapartment-div-2_child-span {
+    display: block;
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: 350;
+    color: var(--silver-surfer);
+}
+
+.AgentPDapartment-div-3 {
+    display: none;
+}
+
+.AgentPDapartment-div-3-span {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+/* AgentPDapartment-div-4 ===============
+================================================ */
+.AgentPDapartment-div-4 {}
+
+.AgentPDapartment-div-4-span {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+/* Media Queri ===================== */
+@media(max-width: 448px) {
+    .AgentPDapartment {
+        padding: 0 10px;
+    }
+
+    .AgentPDapartment-div-2_child:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 576px) and (min-width: 448px) {
+    .AgentPDapartment {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    .AgentPDapartment-div-3 {
+        margin-top: 8px;
+        display: block;
+    }
+
+    .AgentPDapartment-div-4 {
+        display: none;
+    }
+}

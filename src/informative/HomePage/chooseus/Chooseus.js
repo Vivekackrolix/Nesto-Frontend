@@ -18,7 +18,7 @@ export default function ChooseUs() {
         }}
         onClick={onClick}
       >
-        <img className="next-image" src="./assets/next.png" alt="next-image" />
+        <img className="next-image" src="./assets/next.png" alt="nextImg" />
       </div>
     );
   }
@@ -36,7 +36,7 @@ export default function ChooseUs() {
         }}
         onClick={onClick}
       >
-        <img className="next-image" src="./assets/back.png" alt="next-image" />
+        <img className="next-image" src="./assets/back.png" alt="nextimg" />
       </div>
     );
   }
@@ -48,38 +48,23 @@ export default function ChooseUs() {
     },
     {
       img: './assets/informative/chooseUs/handshake.svg',
-      title: 'No Customer Poaching',
-      desc: 'We guarantee that you will retain complete ownership of your client and that we will not reveal their identity or use their data to poach them.',
+      title: 'User Friendly',
+      desc: 'Our powerful platform gives you access to your property performance through the NestoHub builder dashboard.',
     },
     {
       img: './assets/informative/chooseUs/social-care.svg',
-      title: 'Community Benefits',
-      desc: 'NestoHub connects users with professional Nesto Advisors and other like-minded people to encourage one another through strategic guidance.',
-    },
-    {
-      img: './assets/informative/chooseUs/loan.svg',
-      title: 'Fluent Loan Support',
-      desc: 'Close the deals quickly and precisely with financial assistance from credible institutions on NestoHub, and make property buying simple.',
+      title: 'Wide Reach',
+      desc: 'We offer you and your property access to a vast pool of brokers without having to worry about excessive administrative burden.',
     },
     {
       img: './assets/informative/chooseUs/bullhorn.svg',
-      title: 'Digital Marketing',
-      desc: 'Brokers can easily and efficiently promote themselves free of cost as trusted fellows to their clients by creating and promoting a professional digital profile on NestoHub.',
+      title: 'Property Promotions',
+      desc: 'NestoHub list your property on its platform and promote it to the brokers at PAN India level.',
     },
     {
       img: './assets/informative/chooseUs/loan.svg',
-      title: 'Opportunities For New Brokers',
-      desc: 'NestoHub offers numerous opportunities for new brokers to gain access and empowerment in order to launch successful businesses.',
-    },
-    {
-      img: './assets/informative/chooseUs/bullhorn.svg',
-      title: 'Eliminate The Mediator',
-      desc: 'NestoHub removes the intermediaries, such as dealers, from the builder-broker connection, leaving the brokerage entirely to the broker.',
-    },
-    {
-      img: './assets/informative/chooseUs/refer.svg',
-      title: 'Refer & Earn',
-      desc: 'Brokers can earn substantial rewards by referring other brokers to the NestoHub platform. We appreciate your efforts to expand our network.',
+      title: 'Exclusive Package',
+      desc: 'You can set yourself apart both in a physical market and on NestoHub by purchasing our exclusive promotional packages.',
     },
   ];
 
@@ -93,7 +78,7 @@ export default function ChooseUs() {
     arrows: true,
     loop: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     accessibility: true,
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
@@ -141,18 +126,18 @@ export default function ChooseUs() {
     <>
       <div className="container">
         <Heading
-          title="Why Choose Us"
+          title="NestoHub For Brokers"
           sub="We Make Real Estate Simple & Efficient"
         />
         <Fade bottom duration={1000} distance="100px" delay={100}>
-          <div className="row choose-row" data-aos="false">
+          <div className="row choose-row">
             <Slider {...settings}>
               {data.map(item => {
                 return (
                   <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
                     <div className="choose-card">
                       <div className="choose-icon-div">
-                        <img src={item.img} className="choose-icon-img" />
+                        <img src={item.img} className="choose-icon-img" alt='chooseIcon' />
                       </div>
                       <div className="">
                         <h5 className="card-heading">{item.title}</h5>

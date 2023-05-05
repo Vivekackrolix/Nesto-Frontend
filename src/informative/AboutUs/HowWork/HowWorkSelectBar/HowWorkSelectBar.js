@@ -22,10 +22,10 @@ const HowWorkSelectBar = () => {
                                 onClick={() => setShowSelect(2)}>
                                 <span className=''>Builder</span>
                             </div>
-                            <div className={`HowWorkSelectBar-box ${showSelect === 3 ? 'HowWorkSelectBar-box-active' : ''}`}
+                            {/* <div className={`HowWorkSelectBar-box ${showSelect === 3 ? 'HowWorkSelectBar-box-active' : ''}`}
                                 onClick={() => setShowSelect(3)}>
                                 <span className=''>Loan Agent</span>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -39,10 +39,10 @@ const HowWorkSelectBar = () => {
                 <HowWorkBuilder />
                 : ''
             }
-            {showSelect === 3 ?
+            {/* {showSelect === 3 ?
                 <HowWorkAgent />
                 : ''
-            }
+            } */}
         </>
     )
 }

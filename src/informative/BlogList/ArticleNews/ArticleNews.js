@@ -1,5 +1,6 @@
 import React from 'react'
 import './ArticleNews.css'
+import { Zoom } from 'react-reveal'
 
 const ArticleNews = () => {
     const data = [
@@ -27,37 +28,37 @@ const ArticleNews = () => {
     ]
     return (
         <>
-            <div className='container article-news' data-aos='zoom-in' style={{overflowX: 'hidden'}}>
-                <div className='article-news_head-box'>
-                    <h3 className='article-news_heading'>Articles & News</h3>
-                    <span className='article-news_para'>Get the Latest News, Updates and Tips</span>
-                    {/* <h3 className='sections-heading'>Articles & News</h3>
-                    <span className='sections-sub-heading'>Get the Latest News, Updates and Tips</span> */}
-                </div>
-                <div className='row article-news_row mt-3 mb-5'>
-                    {data.map((item) => {
-                        return (
-                            <div className='col-lg-4 article-news_col'>
-                                <div className={item.className}>
-                                    <div className='article-news_box-4 align-items-end'>
-                                        <span className='article-news_span-1'>{item.tips}</span>
-                                    </div>
-                                    <div className='article-news_box-5 align-items-end'>
-                                        <div className=''>
-                                            <span className='article-news_span-2'>
-                                                <img src={item.img} alt='article' /> {item.name}
-                                            </span>
+            <Zoom duration={1000} delay={100}>
+                <div className='container article-news' style={{ overflowX: 'hidden' }}>
+                    <div className='article-news_head-box'>
+                        <h3 className='article-news_heading'>Articles & News</h3>
+                        <span className='article-news_para'>Get the Latest News, Updates and Tips</span>
+                    </div>
+                    <div className='row article-news_row mt-3 mb-5'>
+                        {data.map((item) => {
+                            return (
+                                <div className='col-lg-4 article-news_col'>
+                                    <div className={item.className}>
+                                        <div className='article-news_box-4 align-items-end'>
+                                            <span className='article-news_span-1'>{item.tips}</span>
                                         </div>
-                                        <div className='pb-1'>
-                                            <span className='article-news_span-2'>{item.date}</span>
+                                        <div className='article-news_box-5 align-items-end'>
+                                            <div className=''>
+                                                <span className='article-news_span-2'>
+                                                    <img src={item.img} alt='article' /> {item.name}
+                                                </span>
+                                            </div>
+                                            <div className='pb-1'>
+                                                <span className='article-news_span-2'>{item.date}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        )
-                    })}
+                            )
+                        })}
+                    </div>
                 </div>
-            </div>
+            </Zoom>
         </>
     )
 }

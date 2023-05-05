@@ -1,0 +1,63 @@
+.AgentPDPricing {
+    padding: 0;
+    margin-top: 45px;
+}
+
+.AgentPDPricing-subHeading {
+    display: block;
+    font-size: 14px;
+    font-weight: 350;
+    color: var(--silver-surfer);
+}
+
+.AgentPDPricing-div {
+    display: flex;
+    margin-top: 15px;
+    column-gap: 2%;
+}
+
+.AgentPDPricing-btns {
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 10rem;
+    padding: 8px 20px 6px 20px;
+    color: var(--cold-black-color);
+    border: 1px solid var(--gray-color);
+}
+
+.AgentPDPricing-btns-active {
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 10rem;
+    padding: 8px 20px 6px 20px;
+    background: var(--primary-color);
+    color: var(--color-white);
+    border: 1px solid var(--primary-color);
+}
+
+/* Media Queri */
+@media(max-width: 576px) {
+    .AgentPDPricing {
+        padding: 0 25px;
+    }
+}
+
+@media(max-width: 680px) and (min-width: 470px) {
+
+    .AgentPDPricing-btns,
+    .AgentPDPricing-btns-active {
+        font-size: 14px;
+        padding: 4px 10px 2px 10px;
+    }
+}
+
+@media(max-width: 470px) {
+
+    .AgentPDPricing-btns,
+    .AgentPDPricing-btns-active {
+        font-size: 12px;
+        padding: 4px 6px 2px 6px;
+    }
+}

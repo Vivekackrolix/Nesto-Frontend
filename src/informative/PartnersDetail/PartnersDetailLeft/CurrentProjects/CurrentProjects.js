@@ -123,7 +123,9 @@ const CurrentProjects = () => {
                                 <div className='col-lg-6 current-project-slider_col-1'>
                                     <div className='h-100'>
                                         <span className='current-project-slider_tag'>{item.tag}</span>
-                                        <Link to='/property-details'>
+                                        {/* <Link to='/builder-property-details'> */}
+                                        {/* <Link to='/broker-property-details'> */}
+                                        <Link to='/agent-property-details'>
                                             <img src={item.img} className='current-project-slider_img' alt='project-slider' />
                                         </Link>
                                         <span
@@ -131,7 +133,7 @@ const CurrentProjects = () => {
                                             onClick={heartChange}
                                         > <AiOutlineHeart />
                                         </span>
-                                        {heart == true
+                                        {heart === true
                                             ?
                                             <span
                                                 className='current-project-slider_icon2'
@@ -142,7 +144,9 @@ const CurrentProjects = () => {
                                     </div>
                                 </div>
                                 <div className='col-lg-6 current-project_col-2'>
-                                    <Link to='/property-details'>
+                                    {/* <Link to='/builder-property-details'> */}
+                                    {/* <Link to='/broker-property-details'> */}
+                                    <Link to='/agent-property-details'>
                                         <span className='current-project_span-1'>{item.propertyName}</span>
                                     </Link>
                                     <span>
