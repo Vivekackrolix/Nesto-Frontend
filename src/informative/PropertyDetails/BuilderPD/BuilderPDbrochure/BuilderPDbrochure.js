@@ -13,7 +13,7 @@ const BuilderPDbrochure = () => {
                 <span className='PropertyDetails-heading'>View official brochure</span>
                 <div className='col-lg-12 BuilderPDbrochure-col'>
                     <div className='col-lg-12'>
-                        <img src='/assets/informative/propertyDetails/brochure.svg' className='BuilderPDbrochure-col_img' />
+                        <img src='/assets/informative/propertyDetails/brochure.svg' className='BuilderPDbrochure-col_img' alt='brochure' />
                         <span className='BuilderPDbrochure-col_span'>Sky Apartment Brochure</span>
                     </div>
                 </div>
