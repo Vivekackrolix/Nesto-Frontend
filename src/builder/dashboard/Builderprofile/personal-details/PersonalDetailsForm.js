@@ -12,7 +12,12 @@ import FileUpload from "../file-upload/FileUpload";
 // ];
 
 const PersonalDetailsForm = () => {
+  debugger;
   const dispatch = useDispatch();
+  useEffect(() => {
+    debugger;
+    dispatch(getBuilderDetail(builderId));
+  }, [dispatch]);
   const builderData = useSelector(
     (state) => state.builderDetail.details[0]
   ) || {
@@ -24,14 +29,16 @@ const PersonalDetailsForm = () => {
     panOfCompany: "",
     companyType: "",
   };
-
+  const dt = useSelector(
+    (state) => state.builderDetail.details[0]?.companyName
+  );
+  const [x, setX] = useState(dt);
   const [formData, setFormData] = useState(builderData);
-
-  useEffect(() => {
-    dispatch(getBuilderDetail());
-  }, [dispatch]);
+  console.log(formData);
+  const builderId = useSelector((state) => state.auth.builderId);
 
   const handleChange = (e) => {
+    console.log(x);
     const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
     dispatch({
@@ -59,7 +66,7 @@ const PersonalDetailsForm = () => {
               className="rounded-2"
               type="text"
               placeholder="DLF"
-              value={formData.companyName}
+              value={x}
               onChange={handleChange}
             />
           </Form.Group>

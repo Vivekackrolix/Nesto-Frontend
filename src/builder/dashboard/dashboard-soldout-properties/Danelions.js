@@ -4,15 +4,12 @@ import { Link } from "react-router-dom";
 import sky from "../../Images/Sky.png";
 import build from "../../Images/build.png";
 import { BsPencilFill } from "react-icons/bs";
-import { useState } from "react";
+// import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
 const Danelions = ({ data }) => {
-  // const [rating, setRating] = useState(0);
   const unitType = data?.unitType ? data?.unitType : [];
-  // console.log(data);
 
-  // const [hover, setHover] = useState(0);
   return (
     <>
       <Container className="dashboard__wrapper border border-light rounded shadow-sm my-2">

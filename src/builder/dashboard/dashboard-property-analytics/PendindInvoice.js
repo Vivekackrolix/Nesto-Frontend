@@ -7,13 +7,13 @@ import "./PropertyAnalytics.css";
 const PropertyInvoice = () => {
   const [data, setData] = useState({}); //Later use redux
   useEffect(() => {
-    const getAnalytics = async () => {
+    const getInvoice = async () => {
       const response = await getAPI(apiEndpoints.getPendingInvoice);
 
       setData(response.data);
     };
 
-    getAnalytics();
+    getInvoice();
   }, []);
 
   return (

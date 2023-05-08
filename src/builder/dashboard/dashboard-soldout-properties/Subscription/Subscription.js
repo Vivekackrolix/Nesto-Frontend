@@ -18,7 +18,7 @@ const Subscription = () => {
     getSubscription();
   }, []);
 
-  const plans = data.map((itm) => {
+  const plans = data?.map((itm) => {
     return (
       <div className="col">
         <div className="shadow-recent  rounded-3">
@@ -30,9 +30,9 @@ const Subscription = () => {
           </div>
 
           <div class="card mb-4 rounded shadow-sm">
-            <div class={`card-header py-4`} style={{ background: itm.colour }}>
-              <h5 className="fw-bold">{itm.name}</h5>
-              <p style={{ opacity: "0.6" }}>{itm.description}</p>
+            <div class={`card-header py-4`} style={{ background: itm?.colour }}>
+              <h5 className="fw-bold">{itm?.name}</h5>
+              <p style={{ opacity: "0.6" }}>{itm?.description}</p>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const Subscription = () => {
                   fontSize: "1.4em",
                 }}
               >
-                {itm.costPerMonth}
+                {itm?.costPerMonth}
               </h5>
               <p>Per Month</p>
               <span className="p-2 d-flex justify-content-center">
@@ -73,7 +73,7 @@ const Subscription = () => {
                   Buy Now
                 </Button>
               </span>
-              <p style={{ color: "rgba(0, 0, 0, 0.5)" }}>{itm.minimumSpend}</p>
+              <p style={{ color: "rgba(0, 0, 0, 0.5)" }}>{itm?.minimumSpend}</p>
             </div>
           </div>
         </div>
@@ -119,52 +119,34 @@ const Subscription = () => {
             >
               <h5 className="fw-bold">
                 {" "}
-                {data1.length === 0 ? "Api call" : data1[0].planId.name}
+                {data1?.length === 0 ? "Api call" : data1[0]?.planId?.name}
               </h5>
 
               <p style={{ opacity: "0.6" }}>
-                {data1.length === 0 ? "Api call" : data1[0].planId.description}
+                {data1?.length === 0
+                  ? "Api call"
+                  : data1[0]?.planId?.description}
               </p>
               <p className="fw-bold">
                 ₹{" "}
-                {data1.length === 0 ? "Api call" : data1[0].planId.costPerMonth}
+                {data1?.length === 0
+                  ? "Api call"
+                  : data1[0]?.planId?.costPerMonth}
                 /per-month
               </p>
             </Col>
             <Col md={3} className="p-4">
               <ListGroup as="ul">
-                <ListGroup.Item as="li">
-                  <AiFillCheckCircle
-                    size={20}
-                    color="#278fd9"
-                    className="me-2"
-                  />
-                  Sky Apartment
-                </ListGroup.Item>
-                <ListGroup.Item as="li">
-                  <AiFillCheckCircle
-                    size={20}
-                    color="#278fd9"
-                    className="me-2"
-                  />
-                  DLF Apartment
-                </ListGroup.Item>
-                <ListGroup.Item as="li">
-                  <AiFillCheckCircle
-                    size={20}
-                    color="#278fd9"
-                    className="me-2"
-                  />
-                  Sky Apartment
-                </ListGroup.Item>
-                <ListGroup.Item as="li">
-                  <AiFillCheckCircle
-                    size={20}
-                    color="#278fd9"
-                    className="me-2"
-                  />
-                  DLf Apartment
-                </ListGroup.Item>
+                {data[0]?.selectProperties?.map((i) => (
+                  <ListGroup.Item as="li">
+                    <AiFillCheckCircle
+                      size={20}
+                      color="#278fd9"
+                      className="me-2"
+                    />
+                    {i?.name}
+                  </ListGroup.Item>
+                ))}
               </ListGroup>
             </Col>
             <Col md={6} className="p-4 text-center">
@@ -178,14 +160,14 @@ const Subscription = () => {
                 >
                   {data1.length === 0
                     ? "Api call"
-                    : data1[0].planId.planValidityInDays}{" "}
+                    : data1[0]?.planId?.planValidityInDays}{" "}
                   Days Left
                 </h5>
                 <p>
                   (
                   {data1.length === 0
                     ? "Api call"
-                    : data1[0].planId.numberOfVisit}
+                    : data1[0]?.planId?.numberOfVisit}
                   /24 Visits Left)
                 </p>
                 <span className="p-3 gap-4 d-flex justify-content-center">
@@ -209,7 +191,7 @@ const Subscription = () => {
                 <p style={{ color: "rgba(0, 0, 0, 0.5)" }}>
                   {data1.length === 0
                     ? "Api call"
-                    : data1[0].planId.minimumSpend}
+                    : data1[0]?.planId?.minimumSpend}
                 </p>
               </div>
             </Col>

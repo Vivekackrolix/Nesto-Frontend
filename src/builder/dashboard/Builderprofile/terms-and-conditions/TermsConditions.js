@@ -17,9 +17,10 @@ const TermsConditions = () => {
     companyType: "",
   };
   // console.log(builderData);
+  const builderId = useSelector((state) => state.auth.builderId);
 
   useEffect(() => {
-    dispatch(getBuilderDetail());
+    dispatch(getBuilderDetail(builderId));
   }, [dispatch]);
   return (
     <>

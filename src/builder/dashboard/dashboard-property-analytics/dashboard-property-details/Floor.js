@@ -4,31 +4,11 @@ import { Navigation, Autoplay } from "swiper";
 import { Card, Container } from "react-bootstrap";
 import DashboardTabs from "../../dashboard-soldout-properties/dashboard-tabs/DashboardTabs";
 
-// const items = [
-//   {
-//     id: 0,
-//   },
-//   {
-//     id: 1,
-//   },
-//   {
-//     id: 2,
-//   },
-//   {
-//     id: 3,
-//   },
-//   {
-//     id: 4,
-//   },
-// ];
-
 const tabKey = ["All", "2BHK ", " 3BHK", "4BHK", "5BHK"];
 
 const Floor = ({ data }) => {
-  // const items = data;
   const [slidesPerView, setSlidesPerView] = useState(1);
-
-  // const unitType = data.unitType ? data.unitType : [];
+  const [selectedTab, setSelectedTab] = useState("All");
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,17 +26,29 @@ const Floor = ({ data }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const handleTabClick = (tab) => {
+    debugger;
+    console.log(tab);
+    setSelectedTab(tab);
+  };
+  const filteredFloorPlan =
+    selectedTab === "All"
+      ? data?.floorPlanAndPricing
+      : data?.floorPlanAndPricing.filter(
+          (item) => item.unitType === selectedTab
+        );
 
-  // console.log(data);
-
-  const floorPlan = data?.floorPlanAndPricing?.map((item) => (
+  // const floorPlan = data?.floorPlanAndPricing?.map((item) => (
+  const floorPlan = filteredFloorPlan?.map((item) => (
     <SwiperSlide key={item.id}>
       <Card className="h-100 border-0 shadow-sm swiper__card p-3">
         <div class="ribbon">
-          <span>{tabKey[item.id]} </span>
+          <span>{tabKey[item?.id]} </span>
         </div>
-
-        <Card.Img variant="top" src="/assets/swiper-img.png" />
+        <Card.Img variant="top" src="/assets/swiper-img.png" />{" "}
+        <div className="sold-page-col_div-4">
+          <span className="sold-page-col_div-4_span-1">{item?.unitType}</span>
+        </div>
         <Card.Body className="px-0">
           <div className="swiper__card__row d-flex justify-content-between align-items-center">
             <span>Super Built-Up Area</span>
@@ -87,7 +79,13 @@ const Floor = ({ data }) => {
         <h3 className="swiper-title">Floor Plans & Pricing</h3>
         <span className="swiper-subtitle">in Arocon Rainbow</span>
       </div>
-      <DashboardTabs tabsKey={tabKey} activeState={tabKey[0]}>
+      <DashboardTabs
+        tabsKey={tabKey}
+        // activeState={tabKey[0]}
+        onClick={handleTabClick}
+        activeState={selectedTab}
+        setActiveState={setSelectedTab}
+      >
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={30}
@@ -95,6 +93,7 @@ const Floor = ({ data }) => {
           navigation
           autoplay={{ delay: 3000 }}
           className="mt-0 mb-5"
+          // onClick={handleTabClick}
         >
           {floorPlan}
         </Swiper>

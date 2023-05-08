@@ -11,16 +11,17 @@ const SettledInvoice = () => {
   useEffect(() => {
     const getPending = async () => {
       const response = await getAPI(apiEndpoints.getAllInvoiceForBuilder1);
-      // console.log(response.data.data);
-      setData(response.data);
+      debugger;
+      console.log(response.data);
+      setData(response?.data ?? []);
     };
     getPending();
   }, []);
 
-  const propertyListing = data.map((itm, index) => {
-    const unitType = itm?.invoices[0]?.claimId?.propertyId?.unitType
-      ? itm?.invoices[0]?.claimId?.propertyId?.unitType
-      : [];
+  const propertyListing = data?.map((itm, index) => {
+    // const unitType = itm?.invoices[0]?.claimId?.propertyId?.unitType
+    //   ? itm?.invoices[0]?.claimId?.propertyId?.unitType
+    //   : [];
     return (
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3">
         <div className="d-flex ">
@@ -58,7 +59,7 @@ const SettledInvoice = () => {
                 <p className="" style={{ color: "#8B9199" }}>
                   Unit Number
                 </p>
-                <p>{unitType.map((item) => item)}</p>
+                {/* <p>{itm?.invoice[0]?.claimId?.boughtPropertyId?.unitNumber}</p> */}
               </span>
               <span className="p-2">
                 <p className="" style={{ color: "#8B9199" }}>
@@ -70,6 +71,8 @@ const SettledInvoice = () => {
           </div>
         </div>
         {/* </div> */}
+        {/* unitNumber={item?.invoices?.[0]?.claimId?.boughtPropertyId?.unitNumber}
+                claimedAmount={item?.invoices?.[0]?.claimId?.brokerageAmount} */}
 
         <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-2 ">
           <div className="d-flex justify-content-around">
@@ -81,7 +84,7 @@ const SettledInvoice = () => {
           <hr />
           <div className="d-flex justify-content-around">
             <p style={{ color: "#838383" }}>
-              {itm?.invoices[0]?._id.slice(-10)}
+              {itm?.invoices[0]?._id?.slice(-10)}
             </p>
             <p style={{ color: "#838383" }}>
               {itm?.invoices[0]?.invoiceAmount}
@@ -100,27 +103,6 @@ const SettledInvoice = () => {
             </h2>
           </div>
           <hr />
-          <div className="d-flex justify-content-around">
-            <p style={{ color: "#838383" }}>
-              {" "}
-              {itm?.invoices[1]?._id.slice(-10)}
-            </p>
-            <p style={{ color: "#838383" }}>
-              {itm?.invoices[1]?.invoiceAmount}
-            </p>
-            <h5>
-              <button
-                type="button"
-                class=" rounded-pill btn btn-outline-success"
-              >
-                Settled
-              </button>
-            </h5>
-
-            <h2>
-              <GrDocumentPdf />
-            </h2>
-          </div>
         </Container>
       </Container>
     );

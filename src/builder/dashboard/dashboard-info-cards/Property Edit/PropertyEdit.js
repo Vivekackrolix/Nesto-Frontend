@@ -1,4 +1,4 @@
-import { Container, Table, Button, Form, Row } from "react-bootstrap";
+import { Container, Table, Button, Form, Row, Col } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import brochure from "../../../Images/brochure.png";
 import DashboardHeader from "../../header/DashboardHeader";
@@ -19,7 +19,7 @@ import hospital from "../../../Images/hospital.png";
 import station from "../../../Images/station.png";
 import img from "../../../Images/img.png";
 // import loc from "../../../Images/loc.png";
-import FileUpload from "../../Fileupload/Fileupload";
+// import FileUpload from "../../Fileupload/Fileupload";
 import blank from "../../../Images/blank.png";
 import { RiAddFill } from "react-icons/ri";
 import { BsPencilFill } from "react-icons/bs";
@@ -31,6 +31,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { putAPI } from "../../../Api/ApiRequest";
 import { apiEndpoints } from "../../../Api/ApiEndpoint";
+import FileUpload from "../../Builderprofile/file-upload/FileUpload";
+// import { useDropzone } from "react-dropzone";
 const sort = [
   { value: "Lorem Ipsum", label: "Lorem Ipsum" },
   { value: "Lorem ipsum", label: "Lorem Ipsum" },
@@ -65,6 +67,21 @@ const PropertyEdit = () => {
   const [showBank, setShowBank] = useState(false);
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
+  const [files, setFiles] = useState([]);
+
+  // const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  //   accept: "image/*",
+  //   multiple: true,
+  //   onDrop: (acceptedFiles) => {
+  //     setFiles((prevFiles) => [...prevFiles, ...acceptedFiles]);
+  //   },
+  // });
+
+  // const filePreview = files.map((file) => (
+  //   <div key={file.name}>
+  //     <img src={URL.createObjectURL(file)} alt={file.name} />
+  //   </div>
+  // ));
   // const [name, setName] = useState("");
   const params = useParams();
 
@@ -116,16 +133,18 @@ const PropertyEdit = () => {
             className="d-flex gap-2"
             style={{ border: "5.72244px solid #FFFFFF" }}
           >
-            {/* <img src={img} className="rounded my-3 mx-3" alt="img" />
-            <img src={img} className="rounded my-3  " alt="img" />
-            <img src={img} className="rounded my-3" alt="img" />
-            <img src={img} className="rounded my-3" alt="img" />
-            <img src={img} className="rounded my-3" alt="img" />
-            <img src={img} className="rounded my-3" alt="img" />
-            <img src={blank} className="rounded my-3" alt="img" /> */}
-            <div className="rounded my-3">
+            <Col md={12} sm={12}>
               <FileUpload />
-            </div>
+            </Col>
+            {/* <div {...getRootProps()}>
+              <input {...getInputProps()} />
+              {isDragActive ? (
+                <p>Drop the images here</p>
+              ) : (
+                <p>Drag and drop some images here, or click to select files</p>
+              )}
+              {filePreview}
+            </div> */}
           </div>
         </Row>
         <br></br>
@@ -162,7 +181,6 @@ const PropertyEdit = () => {
               console.log(e.target.value);
               setLocation(e.target.value);
             }}
-            // <Form.Img src={loc} className="rounded my-3" alt="loc" />
           />
         </Form.Group>
         <br></br>

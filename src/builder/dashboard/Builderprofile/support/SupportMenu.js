@@ -18,12 +18,12 @@ const SupportMenu = () => {
     getSupport();
   }, []);
 
-  const accordionData = data.map((itm, index) => {
+  const accordionData = data?.map((itm, index) => {
     return (
       <Accordion.Item eventKey={index} key={data._id} className="my-3">
-        <Accordion.Header>{itm.question}</Accordion.Header>
+        <Accordion.Header>{itm?.question}</Accordion.Header>
         <Accordion.Body>
-          {itm.answer}
+          {itm?.answer}
           <div className="d-flex justify-content-end">
             <h3>
               <GrDocumentPdf />

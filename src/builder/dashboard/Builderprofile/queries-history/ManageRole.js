@@ -6,50 +6,37 @@ import AddRole from "./AddRole";
 import { BsPencilFill } from "react-icons/bs";
 // import delete from "../../../Images/editbutton.png";
 import { useEffect, useState } from "react";
-import axios from "axios";
-
+// import axios from "axios";
+import { delAPI, getAPI } from "../../../Api/ApiRequest";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
 const PropertyManager = (props) => {
   const [role, setRole] = useState(false);
   const [visible, setVisible] = useState(true);
 
-  const [data, setData] = useState({}); //Later use redux
-  useEffect(() => {
-    const getRemove = async () => {
-      const response = await axios.del(
-        "http://13.233.149.97:3000/api/v1/roles/deleteRoles?id=64194fb9734b3a4ba5181d23",
-        // formData,
-        {
-          headers: {
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-          },
-        }
-      );
-      // ;
-
-      // console.log(response.data);
-      setData(response.data.data);
-    };
-
-    getRemove();
-  }, []);
-
-  const removeElement = () => {
-    setVisible((prev) => !prev);
+  const removeElement = async () => {
+    const response = await delAPI(
+      `${apiEndpoints.deleteRoles}${props.itm._id}`
+    );
+    console.log(response.message);
+    // delRemove();
+    // setVisible((prev) => !prev);
   };
   const onRole = () => {
     // setRole((prev) => ({ ...prev, role: true }));
     setRole(true);
   };
-
   return (
     <>
-      <Row className={props.className}>
-        <Col>2111321321</Col>
-        <Col>91-0000000000</Col>
-        <Col>Lorem Ipsum</Col>
+      <Row className={props?.className}>
+        <Col>{props?.itm?.name}</Col>
+        <Col>{props?.itm?.mobileNumber}</Col>
+        <Col>{props?.itm?.email}</Col>
 
-        <Col>Lorem Ipsum</Col>
+        <Col>
+          {props?.itm?.selectProperties?.map((itm, i) => (
+            <div>{i}</div>
+          ))}
+        </Col>
 
         <Col className="d-flex justify-content-between">
           <Col onClick={onRole} role="button">
@@ -66,14 +53,17 @@ const PropertyManager = (props) => {
                 marginBottom: "5px",
               }}
             />
-            <AddRole show={role} onChange={setRole} />
           </Col>
+          <AddRole
+            itm={props?.itm}
+            propertyOptions={props?.propertyOptions}
+            show={role}
+            onChange={setRole}
+          />
           <Col>
-            {visible && (
-              <button onClick={removeElement}>
-                <RiDeleteBin6Fill />
-              </button>
-            )}
+            <button onClick={removeElement}>
+              <RiDeleteBin6Fill />
+            </button>
           </Col>
         </Col>
       </Row>

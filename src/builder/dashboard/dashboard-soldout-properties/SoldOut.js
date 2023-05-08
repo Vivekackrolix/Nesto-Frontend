@@ -100,7 +100,7 @@ const SoldOut = () => {
         </a>
       </div>
       {/* <div className="mt-4">{propertyListing}</div> */}
-      <div className="mt-2 row w-100 justify-content-between ms-0">
+      <div className="mt-2 row w-100 justify-content-evenly ms-0">
         {propertyListing}
       </div>
     </Container>

@@ -7,10 +7,14 @@ import CustomModal from "../../components/common/CustomModal";
 import axios from "axios";
 import { apiEndpoints } from "../Api/ApiEndpoint";
 import { postAPI } from "../Api/ApiRequest";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/authSlice";
+import { axiosInstance, setAuthToken } from "../Api/api";
 
 const EnterOtp = ({ show, onHide, phone, setRegister }) => {
   const otpInputs = useRef([]);
   const [otpPassword, setOtpPassword] = useState(false);
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
   const [timer, setTimer] = useState(30);
@@ -39,15 +43,21 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
         phoneNumber: phone,
         otp: otp,
       });
-      // console.log(response);
+      debugger;
+      console.log(response);
       if (response.code === 200) {
         console.log("CORRECT OTP");
-        localStorage.setItem("phone", phone);
+        // localStorage.setItem("phone", phone);
         if (response.data.status === "newuser") {
           // navigate("/builder/register");
           setRegister(true);
           onHide(false);
         } else {
+          // REDUX SAVE
+          dispatch(
+            login({ token: response.data.token, builderId: response.data._id })
+          );
+          setAuthToken(response.data.token);
           navigate("/builder/home-dashboard");
         }
       } else {

@@ -1,12 +1,32 @@
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
+import { getAPI } from "../../../Api/ApiRequest";
 // import ManageRole from "../queries-history/ManageRole";
 import Finance from "./Finance";
-const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-const tabelData = arr.map((itm) => (
-  <Finance className={"mb-3 py-3 border rounded"} />
-));
+import { useSelector } from "react-redux";
 
 const FinanceProperty = () => {
+  const [data, setData] = useState([]); //Later use redux
+  const builderId = useSelector((state) => state.auth.builderId);
+  useEffect(() => {
+    const getAllFinanceManager = async () => {
+      const response = await getAPI(
+        `${apiEndpoints.getAllRolesFinance}${builderId}&add=finance`
+      );
+      // console.log(response.data);
+      setData(response.data);
+    };
+
+    // getAllFinanceManager();
+    const id = setInterval(getAllFinanceManager, 2000);
+    return () => {
+      clearInterval(id);
+    };
+  }, []);
+  const tabelData = data?.map((itm) => (
+    <Finance itm={itm} className={"mb-3 py-3 border rounded"} />
+  ));
   return (
     <>
       <Container className="dashboard__wrapper__filter">

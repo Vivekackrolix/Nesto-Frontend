@@ -20,6 +20,9 @@ import PastProperty from "./Past Property/PastProperty";
 import { MdSupportAgent } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
 import { getBuilderDetail } from "../../redux/https-requests/builderDetail-http";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../../redux/authSlice";
+import { setAuthToken } from "../../Api/api";
 // import { useHistory } from "react-router-dom";
 
 const tabs = [
@@ -60,6 +63,8 @@ const profileSidebarNavContent = [
 ];
 
 const ProfilePage = () => {
+  const builderId = useSelector((state) => state.auth.builderId);
+
   // const history = useHistory();
   const [activeTab, setActiveTab] = useState(0);
   const dispatch = useDispatch();
@@ -67,19 +72,21 @@ const ProfilePage = () => {
     (state) => state.builderDetail.details[0]
   ) || { name: "" };
   useEffect(() => {
-    dispatch(getBuilderDetail());
+    dispatch(getBuilderDetail(builderId));
   }, [dispatch]);
 
   const handleTabChange = (index) => {
     setActiveTab(index);
   };
-  // const handleSignOut = () => {
-  //   // Clear the user's session here (e.g. remove the JWT token from local storage)
-  //   localStorage.removeItem("token");
 
-  //   // Redirect the user to the login page
-  //   history.push("/login");
-  // };
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    dispatch(logout());
+    setAuthToken();
+    navigate("/builder/login");
+    // console.log("Click");
+  };
 
   return (
     <>
@@ -140,7 +147,7 @@ const ProfilePage = () => {
                 <Button
                   variant="transparent"
                   className="d-flex justify-content-center align-items-center gap-2 profile__sidebar__wrapper__signout"
-                  // onClick={handleSignOut}
+                  onClick={handleSubmit}
                 >
                   <BsBoxArrowRight className="icon" size={24} /> Sign Out
                 </Button>
