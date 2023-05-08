@@ -18,7 +18,7 @@ const BuilderPDbanner = () => {
                         {/* BuilderPDbanner-col_div-1, BuilderPDbanner-col_div-2, 
                         BuilderPDbanner-col_div-3, BuilderPDbanner-col_div-4 */}
                         <div className='BuilderPDbanner-col_div-1'>
-                            <img src='/assets/informative/propertyImage.jpg' className='BuilderPDbanner-col_div_img' />
+                            <img src='/assets/informative/propertyImage.jpg' className='BuilderPDbanner-col_div_img' alt='property-banner' />
                             <div className='BuilderPDbanner-col_div-2'>
                                 <div className='BuilderPDbanner-col_div-3'>
                                     <span className='BuilderPDbanner-col_div-3_span-1'>
@@ -32,13 +32,13 @@ const BuilderPDbanner = () => {
                             {/* BuilderPDbanner-col_div-5, BuilderPDbanner-col_div-6, BuilderPDbanner-col_div-7 */}
                             <div className='BuilderPDbanner-col_div-5 justify-content-start gap-4'>
                                 <div className='BuilderPDbanner-col_div-6'>
-                                    <img src='/assets/informative/homeSlider-2.jpg' className='BuilderPDbanner-col_div-6_img' />
+                                    <img src='/assets/informative/homeSlider-2.jpg' className='BuilderPDbanner-col_div-6_img' alt='home-slider' />
                                 </div>
                                 <div className='BuilderPDbanner-col_div-6'>
-                                    <img src='/assets/informative/homeSlider-2.jpg' className='BuilderPDbanner-col_div-6_img' />
+                                    <img src='/assets/informative/homeSlider-2.jpg' className='BuilderPDbanner-col_div-6_img' alt='home-slider' />
                                 </div>
                                 <div className='BuilderPDbanner-col_div-6' onClick={() => SetImgPopUp(true)}>
-                                    <img src='/assets/informative/homeSlider-2.jpg' className='BuilderPDbanner-col_div-6_img' />
+                                    <img src='/assets/informative/homeSlider-2.jpg' className='BuilderPDbanner-col_div-6_img' alt='home-slider' />
                                     <div className='BuilderPDbanner-col_div-7'>
                                         <span className='BuilderPDbanner-col_div-7-span'>
                                             +3

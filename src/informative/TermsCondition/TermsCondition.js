@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
-import { Container, Navbar } from 'react-bootstrap';
 import Terms from './Terms/Terms';
 import './TermsCondition.css'
 import Aos from 'aos';
-import { Link } from 'react-router-dom';
 import InformativeNavbar from './../Navbar/Navbar';
 import InformativeFooter from './../InformativeFooter/InformativeFooter';
 import { Fade } from 'react-reveal'
