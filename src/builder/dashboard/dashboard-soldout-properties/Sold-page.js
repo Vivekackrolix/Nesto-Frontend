@@ -1,7 +1,7 @@
 import DashboardHeader from "../header/DashboardHeader";
 import { Col, Container, Row } from "react-bootstrap";
 import SearchFilterBox from "../search-filter/SearchFilter";
-import homeImage from "../../Images/homeimage.png";
+import homeImage from "../../Images/homeImage.jpg";
 // import map from "../../Images/Map.png";
 import Anlytics from "../dashboard-property-analytics/dashboard-property-details/anlytics";
 import { RxCheck } from "react-icons/rx";
@@ -15,7 +15,6 @@ import Floor from "../dashboard-property-analytics/dashboard-property-details/Fl
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { getAPI } from "../../Api/ApiRequest";
 import { apiEndpoints } from "../../Api/ApiEndpoint";
 import "./SoldOut.css";
@@ -33,20 +32,8 @@ const SoldPage = () => {
       const response = await getAPI(
         `${apiEndpoints.getPropertyById}${params.propertyId}`
       );
-      // const response = await axios.get(
-
-      //   `http://nestobackend-env.eba-fk3zufmz.ap-south-1.elasticbeanstalk.com/api/v1/property/getPropertyById?id=${params.propertyId}`,
-      //   {
-      //     headers: {
-      //       Authorization:
-      //         // "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNWY3ODY1MzJmMjU2OTQ2YzE0NWYiLCJpYXQiOjE2Nzg3OTUzMTcsImV4cCI6MTY4NjU3MTMxN30.9zrslAOUlETLt38rLLrAp-UZqMEfV629il4L4I-lZs0",
-      //         "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0NTVhNTVlNDQ2NjJkMTJkNTNjY2YiLCJpYXQiOjE2ODI1Nzk2MDYsImV4cCI6MTY5MDM1NTYwNn0.jFsDonK3xexeM6heyw5lzbjS5dR3aBcQKsJgRQWEOgM",
-      //     },
-      //   }
-      // );
-
       debugger;
-      console.log(response.data);
+      console.log(response.data[0]);
       setProperty(response.data[0]);
     };
 
@@ -58,76 +45,69 @@ const SoldPage = () => {
       <DashboardHeader />
       <Container className="pt-2 pb-4 dashboard__wrapper">
         <SearchFilterBox />
-        <Row
-        // className="gx-4 dashboard-cards align-items-center"
-        >
+        <Row>
           <Col md={12}>
             {/* <h3 className="m-0 heading">Property Details</h3> */}
             {/* <img src={homeImage} className="rounded w-100 my-3" alt="Home" /> */}
-            <div
-              className="container CpPropertyDetailsBanner"
-              data-aos="zoom-in"
-            >
+            <div className="container sold-page" data-aos="zoom-in">
               <span className="PropertyDetails-heading">Property Details</span>
               <div className="row">
-                <div className="col-lg-12 col-md-12 col-sm-12 CpPropertyDetailsBanner-col">
-                  <div className="CpPropertyDetailsBanner-col_div-1">
+                <div className="col-lg-12 col-md-12 col-sm-12 sold-page-col">
+                  <div className="sold-page-col_div-1">
                     <img
                       src={homeImage}
-                      className="CpPropertyDetailsBanner-col_div_img"
+                      className="sold-page-col_div_img"
                       alt="Home"
                     />
-                    <div className="CpPropertyDetailsBanner-col_div-2">
-                      <div className="CpPropertyDetailsBanner-col_div-3">
-                        <span className="CpPropertyDetailsBanner-col_div-3_span-1">
-                          <RxCheck className="CpPropertyDetailsBanner-col_div-3_span-1-icon" />{" "}
-                          Rera
+                    <div className="sold-page-col_div-2">
+                      <div className="sold-page-col_div-3">
+                        <span className="sold-page-col_div-3_span-1">
+                          <RxCheck className="sold-page-col_div-3_span-1-icon" />{" "}
+                          Rera{property?.isRera}
                         </span>
                       </div>
-                      <div className="CpPropertyDetailsBanner-col_div-4">
-                        <span className="CpPropertyDetailsBanner-col_div-4_span-1">
-                          Listing Date: 05/01/2023
+                      <div className="sold-page-col_div-4">
+                        <span className="sold-page-col_div-4_span-1">
+                          {property?.createdAt}
                         </span>
                       </div>
                     </div>
 
-                    <div className="CpPropertyDetailsBanner-col_div-5 justify-content-start gap-4">
-                      <div className="CpPropertyDetailsBanner-col_div-6">
+                    <div className="sold-page-col_div-5 justify-content-start gap-4">
+                      <div className="sold-page-col_div-6">
                         <img
                           src={homeImage}
-                          className="CpPropertyDetailsBanner-col_div-6_img"
+                          className="sold-page-col_div-6_img"
                           alt="Home"
                         />
                       </div>
-                      <div className="CpPropertyDetailsBanner-col_div-6">
+                      <div className="sold-page-col_div-6">
                         <img
                           src={homeImage}
-                          className="CpPropertyDetailsBanner-col_div-6_img"
+                          className="sold-page-col_div-6_img"
                           alt="Home"
                         />
                       </div>
-                      <div className="CpPropertyDetailsBanner-col_div-6">
+                      <div className="sold-page-col_div-6">
                         <img
                           src={homeImage}
-                          className="CpPropertyDetailsBanner-col_div-6_img"
+                          className="sold-page-col_div-6_img"
                           alt="Home"
                         />
-                        <div className="CpPropertyDetailsBanner-col_div-7">
-                          <span className="CpPropertyDetailsBanner-col_div-7-span">
-                            +3
-                          </span>
+                        <div className="sold-page-col_div-7">
+                          <span className="sold-page-col_div-7-span">+3</span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* CpPropertyDetailsBanner-col_div-8 */}
-                <div className="CpPropertyDetailsBanner-col_div-8 gap-2">
-                  <span className="CpPropertyDetailsBanner-col_div-8-span">
-                    Under Constructions{property?.constructionStatus}
+
+                <div className="sold-page-col_div-8 gap-2">
+                  <span className="sold-page-col_div-8-span">
+                    {property?.constructionStatus}
                   </span>
-                  <span className="CpPropertyDetailsBanner-col_div-8-span">
-                    Possession in Dec,2023{property?.possessionDate}
+                  <span className="sold-page-col_div-8-span">
+                    {property?.possessionDate}
                   </span>
                 </div>
               </div>
@@ -141,20 +121,15 @@ const SoldPage = () => {
           <span className="prop-tag me-2">{property?.constructionStatus}</span>
           <span className="prop-tag">{property?.possessionDate}</span>
         </div> */}
-
+        <br />
         <Danelions data={property} />
-        {/* <Anlytics data={property} /> */}
+        <Anlytics data={property} />
         <Floor data={property} />
         <Amenities data={property} />
         <Row>
           <Col md={12}>
             <Location data={property} />
             <Row className="gx-4 dashboard-cards align-items-center">
-              {/* <img
-                src={map}
-                className="rounded my-3"
-                alt="Home"
-              /> */}
               <iframe
                 src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7001.621621626714!2d${property?.longitude}!3d${property?.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd08c16bad3b%3A0x26668a270e9365b7!2sKashmere%20Gate%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1682425730846!5m2!1sen!2sin`}
                 allowFullScreen=""

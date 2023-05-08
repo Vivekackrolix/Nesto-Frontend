@@ -4,14 +4,18 @@ import "./PropertyAnalytics.css";
 import { useEffect, useState } from "react";
 import { apiEndpoints } from "../../Api/ApiEndpoint";
 import { getAPI } from "../../Api/ApiRequest";
-// import axios from "axios";
+import { useSelector } from "react-redux";
 
 const PropertyAnalytics = () => {
   const [data, setData] = useState({}); //Later use redux
+  const builderId = useSelector((state) => state.auth.builderId);
+
   useEffect(() => {
     const getAnalytics = async () => {
       debugger;
-      const response = await getAPI(apiEndpoints.getPropertyAnalytics);
+      const response = await getAPI(
+        `${apiEndpoints.getPropertyAnalytics}${builderId}`
+      );
       console.log(response);
       setData(response.data);
     };

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { BsSearch, BsMic, BsGeoAlt } from "react-icons/bs";
 import {
   InputGroup,
@@ -8,14 +9,15 @@ import {
 } from "react-bootstrap";
 import "./SearchFilter.css";
 import { RiAddFill } from "react-icons/ri";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Filter from "../../../components/search-filter/Filter/Filter";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
-import { postAPI } from "../../Api/ApiRequest";
+import { getAPI, postAPI } from "../../Api/ApiRequest";
 import { apiEndpoints } from "../../Api/ApiEndpoint";
+import { useSelector } from "react-redux";
 const SearchFilterBox = (props) => {
   const [showFilter, setShowFilter] = useState(false);
   const [transcript, setTranscript] = useState("");
@@ -41,10 +43,25 @@ const SearchFilterBox = (props) => {
   // const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [number, setNumber] = useState("");
-  const [property, setProperty] = useState("");
+  const [property, setProperty] = useState([]);
+  const [propertyOptions, setPropertyOptions] = useState([]);
+  useEffect(() => {
+    const getAllProperty = async () => {
+      // debugger;
+      const response = await getAPI(apiEndpoints.getAllproperty);
+      console.log(response);
+      const propertySelectData = [];
+      response.data.forEach((element) => {
+        propertySelectData.push({ value: element._id, label: element.name });
+      });
+      setPropertyOptions(propertySelectData);
+    };
+
+    getAllProperty();
+  }, []);
   const role = [
-    { value: "Property Manager", label: "Property Manager" },
-    { value: "Finance Manager", label: "Finance Manager" },
+    { value: "property", label: "Property Manager" },
+    { value: "finance", label: "Finance Manager" },
   ];
   const handleVoiceSearch = () => {
     const recognition = new window.webkitSpeechRecognition();
@@ -102,21 +119,26 @@ const SearchFilterBox = (props) => {
   const handleShowModalRole = () => {
     setShowRoleProperty(true);
   };
+  const builderId = useSelector((state) => state.auth.builderId);
   const onAddRole = async () => {
     const formData = {
-      add: "property",
-      name: "karthik Thakur",
-      email: "karthikthukur@gmail.com",
-      mobileNumber: "8897612345",
-      selectProperties: [
-        "64219b8ae3221bc0daaacfa3",
-        "6421d0cd47ff879954ad7f17",
-      ],
-      builderId: "64214c1ab4567ccae10b2889",
+      add: add,
+      name: name,
+      email: mail,
+      mobileNumber: number,
+      selectProperties: property,
+      builderId: builderId,
     };
-    debugger;
     const response = await postAPI(apiEndpoints.addRole, formData);
     console.log(response);
+    if (response.code === 200) {
+      setShowRoleProperty(false);
+      setName("");
+      setMail("");
+      setNumber("");
+    } else {
+      console.log("Add builder Api error");
+    }
   };
 
   return (
@@ -379,13 +401,14 @@ const SearchFilterBox = (props) => {
                     </Form.Label>
                     <CreatableSelect
                       // isMulti
-                      placeholder="Property Manager"
-                      value={add}
-                      // options={finance}
+                      // placeholder="Property Manager"
+                      // value={add}
+                      options={role}
                       className="rounded-0"
                       styles={{ background: "#F8F8F8" }}
                       onChange={(e) => {
-                        setAdd(e.target.value);
+                        debugger;
+                        setAdd(e.value);
                       }}
                     />
                     <br />
@@ -435,13 +458,20 @@ const SearchFilterBox = (props) => {
                       <h5>Select Properties</h5>
                     </Form.Label>
                     <CreatableSelect
-                      // isMulti
-                      placeholder="Property Manager"
-                      value={property}
+                      isMulti
+                      placeholder="Select Properties"
+                      // value={property}
+                      options={propertyOptions}
                       className="rounded-0"
                       styles={{ background: "#F8F8F8" }}
                       onChange={(e) => {
-                        setProperty(e.target.value);
+                        debugger;
+                        console.log(e);
+                        const selected = [];
+                        e.forEach((element) => {
+                          selected.push(element.value);
+                        });
+                        setProperty(selected);
                       }}
                     />
                   </Form.Group>

@@ -44,10 +44,10 @@ const putAPI = async (endpoint, body) => {
     return err;
   }
 };
-const delAPI = async (endpoint, body) => {
+const delAPI = async (endpoint, body = {}) => {
   // ;
   try {
-    const response = await axiosInstance.del(endpoint, body);
+    const response = await axiosInstance.delete(endpoint, body);
     // console.log(response.data);
     if (response.data) {
       return response.data;

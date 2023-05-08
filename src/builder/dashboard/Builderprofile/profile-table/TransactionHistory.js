@@ -13,7 +13,7 @@ const TransactionHistory = () => {
       // ;
 
       // console.log(response.data.data);
-      setData(response.data);
+      setData(response?.data ?? []);
     };
 
     getTransaction();

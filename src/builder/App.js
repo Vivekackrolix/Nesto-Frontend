@@ -17,78 +17,105 @@ import RecentlySoldOutProperty from "./dashboard/dashboard-soldout-properties/da
 import Subscription from "./dashboard/dashboard-soldout-properties/Subscription/Subscription";
 import store from "./redux/store";
 import AllProperty from "./dashboard/dashboard-soldout-properties/dashboard-tabs/AllProperty";
+// import { useSelector } from "react-redux";
 
 const App = () => {
+  // const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   return (
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
+          {/* {!isLoggedIn && ( */}
           <Route exact path="/builder/login" element={<Login />} />
-          <Route
-            exact
-            path="/builder/register"
-            element={<RegisterLogin />}
-          />{" "}
+          {/* )} */}
+          {/* {!isLoggedIn && ( */}
+          <Route exact path="/builder/register" element={<RegisterLogin />} />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/subscription"
             element={<Subscription />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/recentlyadded"
             element={<RecentlyAddedProperty />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/recentlysold"
             element={<RecentlySoldOutProperty />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/visit"
             element={<VisitDetails />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/promoted/claim/:propertyId"
             element={<PropertyClaim />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/Brokerage/settled"
             element={<BrokerageSettled />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/Brokerage"
             element={<Brokerage />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/notification"
             element={<NotificationDropdown />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/profile"
             element={<ProfilePage />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/propertyedit/:propertyId"
             element={<PropertyEdit />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/description/:propertyId"
             element={<SoldPage />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard/property"
             element={<AllProperty />}
           />
+          {/* )} */}
+          {/* {isLoggedIn && ( */}
           <Route
             exact
             path="/builder/home-dashboard"
@@ -98,6 +125,7 @@ const App = () => {
             <Route exact spath="HOME" />
             <Route exact bpath="Brokerage" />
           </Route>
+          {/* )} */}
         </Routes>
       </BrowserRouter>
     </Provider>

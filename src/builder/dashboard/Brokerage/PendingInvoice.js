@@ -24,6 +24,7 @@ const PendingInvoice = () => {
     const unitType = itm?.invoices[0]?.claimId?.propertyId?.unitType
       ? itm?.invoices[0]?.claimId?.propertyId?.unitType
       : [];
+
     return (
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3">
         <div className="d-flex ">

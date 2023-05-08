@@ -13,15 +13,15 @@ const SettledInvoice = () => {
       const response = await getAPI(apiEndpoints.getAllInvoiceForBuilder1);
       debugger;
       console.log(response.data);
-      setData(response.data);
+      setData(response?.data ?? []);
     };
     getPending();
   }, []);
 
   const propertyListing = data?.map((itm, index) => {
-    const unitType = itm?.invoices[0]?.claimId?.propertyId?.unitType
-      ? itm?.invoices[0]?.claimId?.propertyId?.unitType
-      : [];
+    // const unitType = itm?.invoices[0]?.claimId?.propertyId?.unitType
+    //   ? itm?.invoices[0]?.claimId?.propertyId?.unitType
+    //   : [];
     return (
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-3 p-3">
         <div className="d-flex ">
@@ -84,7 +84,7 @@ const SettledInvoice = () => {
           <hr />
           <div className="d-flex justify-content-around">
             <p style={{ color: "#838383" }}>
-              {itm?.invoices[0]?._id.slice(-10)}
+              {itm?.invoices[0]?._id?.slice(-10)}
             </p>
             <p style={{ color: "#838383" }}>
               {itm?.invoices[0]?.invoiceAmount}
@@ -103,27 +103,6 @@ const SettledInvoice = () => {
             </h2>
           </div>
           <hr />
-          {/* <div className="d-flex justify-content-around">
-            <p style={{ color: "#838383" }}>
-              {" "}
-              {itm?.invoices[1]?._id.slice(-10)}
-            </p>
-            <p style={{ color: "#838383" }}>
-              {itm?.invoices[1]?.invoiceAmount}
-            </p>
-            <h5>
-              <button
-                type="button"
-                class=" rounded-pill btn btn-outline-success"
-              >
-                Settled
-              </button>
-            </h5>
-
-            <h2>
-              <GrDocumentPdf />
-            </h2>
-          </div> */}
         </Container>
       </Container>
     );
