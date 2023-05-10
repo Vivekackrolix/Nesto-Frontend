@@ -14,7 +14,7 @@ const RecentPackage = () => {
     const getSubscription = async () => {
       const response = await getAPI(apiEndpoints.getAllSubscriptionOrder);
 
-      setData(response.data);
+      setData(response.data ?? []);
     };
 
     getSubscription();

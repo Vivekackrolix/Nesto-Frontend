@@ -21,9 +21,9 @@ const SoldProperty = () => {
     const getBoughtProperties = async () => {
       const response = await getAPI(apiEndpoints.getAllBoughtProperty);
 
-      console.log(response.data);
+      // console.log(response.data);
 
-      setData(response.data);
+      setData(response.data ?? []);
     };
 
     getBoughtProperties();
@@ -38,7 +38,7 @@ const SoldProperty = () => {
     indexOfLastProperty
   );
 
-  const propertyListing = currentProperties.map((itm, index) => {
+  const propertyListing = currentProperties?.map((itm, index) => {
     return (
       <Col
         md={3}

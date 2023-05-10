@@ -25,10 +25,10 @@ const RegisterLogin = (props) => {
   const [location, setLocation] = useState("");
   const [project, setProject] = useState("");
   const [description, setDescription] = useState("");
-  const [inputValue, setInputValue] = useState("");
-  const [inputName, setInputName] = useState("");
+  // const [inputValue, setInputValue] = useState("");
+  // const [inputName, setInputName] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [referral, setReferral] = useState("");
+  // const [referral, setReferral] = useState("");
   const [showSucess, setShowSucess] = useState(false);
 
   // const onContinueHandler = () => {
