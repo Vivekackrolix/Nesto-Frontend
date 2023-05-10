@@ -710,8 +710,6 @@ const HomeBanner = () => {
           {/* circle scroll code end here */}
           <ChooseUs />
           <HomeVideo />
-          {/* <HowWork /> */}
-          {/* <HowWorkBuilder /> */}
           <HowWork />
           <OurPartner />
           <GetStarted />
