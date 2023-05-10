@@ -453,6 +453,10 @@ html.mob [data-cursor] {
     left: 0;
   }
 
+  .animate-cartoon {
+    display: none;
+  }
+
   #sv .rg > div {
     transform: translateY(-70%) rotate(-90deg);
     transform-origin: center center;
@@ -701,18 +705,16 @@ html.mob [data-cursor] {
 #ck p strong {
   display: block;
   /* margin-bottom: 10px; */
-  
+
   line-height: 1;
 }
 #ck a {
-  
   text-decoration: underline;
 }
 #ck a:hover {
   color: #222;
 }
 #ck i {
-  
   /* margin-right: 15px; */
   top: -8px;
 }
