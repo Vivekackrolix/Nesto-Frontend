@@ -23,7 +23,7 @@ const PastPropertyList = (props) => {
     getBoughtProperties();
   }, []);
 
-  const propertyListing = data.map((itm, index) => {
+  const propertyListing = data?.map((itm, index) => {
     return (
       <Col
         md={3}
@@ -31,58 +31,69 @@ const PastPropertyList = (props) => {
         style={{
           width: "21.75rem",
         }}
-        id={itm._id}
-        key={itm._id}
+        id={itm?._id}
+        key={itm?._id}
       >
         <Card.Img className="w-100" variant="top" src={propertyImage} />
         <Card.Body>
           <div>
             <div>
               {" "}
-              <Link
+              {/* <Link
                 style={{
                   color: "black",
                   fontWeight: "bold",
                   fontSize: "1.4em",
                   textDecoration: "none",
                 }}
-                to="/builder/home-dashboard/description"
+                // to="/builder/home-dashboard/description"
+              > */}
+              <h4
+                style={{
+                  color: "black",
+                  fontWeight: "bold",
+                  fontSize: "1.4em",
+                  textDecoration: "none",
+                }}
               >
-                {itm.propertyId === null ? "no data Name" : itm.propertyId.name}
-                {/* {itm.propertyId.companyName} */}
-              </Link>
+                {itm?.propertyId === null
+                  ? "no data Name"
+                  : itm?.propertyId?.name}
+              </h4>
+              {/* {itm.propertyId.companyName} */}
+              {/* </Link> */}
             </div>
             <div style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
-              {itm.propertyId === null ? "no data" : itm.propertyId.location}
+              {itm?.propertyId === null ? "no data" : itm?.propertyId?.location}
             </div>
           </div>
           <Row className="p-2">
             <Col>
               <Row style={{ opacity: 0.5 }}>Unit Type</Row>
-              <Row>{itm.unitType}</Row>
+              <Row>{itm?.unitType}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Unit Number</Row>
-              <Row>{itm.unitNumber}</Row>
+              <Row>{itm?.unitNumber}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Price</Row>
-              <Row>₹ {itm.sellingPrice}</Row>
+              <Row>₹ {itm?.sellingPrice}</Row>
             </Col>
           </Row>
           <Row className="p-2">
             <Col>
               <Row style={{ opacity: 0.5 }}>Client Name</Row>
-              <Row>{itm.customerId.clientName}</Row>
+              <Row>{itm?.customerId?.clientName}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Broker ID</Row>
               {/* <Row>{itm.brokerId.referalCode}</Row> */}
-              <Row>{itm.brokerId._id.slice(-10)}</Row>
+              <Row>{itm?.brokerId?._id.slice(-10)}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Date</Row>
-              <Row>{itm.bookingDate}</Row>
+              <Row>{itm?.bookingDate}</Row>
             </Col>
           </Row>
         </Card.Body>

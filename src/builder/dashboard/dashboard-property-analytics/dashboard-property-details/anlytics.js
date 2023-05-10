@@ -28,7 +28,7 @@ const Anlytics = () => {
     const getAnlyticsA = async () => {
       const response = await getAPI(apiEndpoints.getPropertyById);
 
-      setData1(response.data);
+      setData1(response.data[0]);
     };
 
     getAnlyticsA();
@@ -40,7 +40,6 @@ const Anlytics = () => {
       <br></br>
       <h3 className="heading">Property Analytics</h3>
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-2">
-        {/* {plans} */}
         <div className="p-4 d-flex justify-content-around">
           <div className="text-center d-flex flex-column">
             <span>

@@ -20,7 +20,7 @@ const AddedProperty = (props) => {
 
   // const dispatch = useDispatch();
   const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(data.length / propertiesPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(data?.length / propertiesPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -28,7 +28,7 @@ const AddedProperty = (props) => {
     const getAddedProperties = async () => {
       const response = await getAPI(apiEndpoints.getAllproperty);
 
-      setData(response.data);
+      setData(response.data ?? []);
     };
     getAddedProperties();
   }, []);
@@ -41,7 +41,7 @@ const AddedProperty = (props) => {
     indexOfFirstProperty,
     indexOfLastProperty
   );
-  const propertyListing = currentProperties.map((itm, index) => {
+  const propertyListing = currentProperties?.map((itm, index) => {
     // const propertyListing = data.map((itm, index) => {
     return (
       <Col

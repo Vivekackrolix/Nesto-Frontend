@@ -1,8 +1,5 @@
 import { Container } from "react-bootstrap";
-import market from "../../../Images/market.png";
-import canteen from "../../../Images/canteen.png";
-import hospital from "../../../Images/hospital.png";
-import station from "../../../Images/station.png";
+
 const Location = ({ data }) => {
   return (
     <>
@@ -30,36 +27,9 @@ const Location = ({ data }) => {
               </span>
             </div>
           ))}
-          {/* <div className="text-center d-flex flex-column">
-            <span>
-              <img src={canteen} className="rounded my-3" alt="Search" />
-            </span>
-            <span style={{ fontFamily: "Bahnschrift" }}>
-              Canteen<br></br>
-              <span style={{ opacity: "0.5" }}>200m</span>
-            </span>
-          </div>
-          <div className="text-center d-flex flex-column">
-            <span>
-              <img src={hospital} className="rounded my-3" alt="Search" />
-            </span>
-            <span style={{ fontFamily: "Bahnschrift" }}>
-              Hospital<br></br>
-              <span style={{ opacity: "0.5" }}>200m</span>
-            </span>
-          </div>
-          <div className="text-center d-flex flex-column">
-            <span>
-              <img src={station} className="rounded my-3" alt="Search" />
-            </span>
-            <span style={{ fontFamily: "Bahnschrift" }}>
-              Station <br></br>
-              <span style={{ opacity: "0.5" }}> 200m</span>
-            </span>
-          </div> */}
         </div>
       </Container>
-      <br></br>
+      {/* <br></br> */}
       <br></br>
     </>
   );

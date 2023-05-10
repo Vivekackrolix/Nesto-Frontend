@@ -14,8 +14,8 @@ const RecentlyAdded = () => {
   useEffect(() => {
     const getAddedProperties = async () => {
       try {
-        const response = await getAPI(apiEndpoints.getAllproperty);
         debugger;
+        const response = await getAPI(apiEndpoints.getAllproperty);
         console.log(response.data);
         setData(response.data);
       } catch (error) {
@@ -61,7 +61,7 @@ const RecentlyAdded = () => {
                   {" "}
                   <Link
                     className="recent-heading"
-                    // to={`/builder/home-dashboard/description/${itm.propertyId._id}`}
+                    to={`/builder/home-dashboard/description/${itm._id}`}
                   >
                     {itm.name}
                   </Link>

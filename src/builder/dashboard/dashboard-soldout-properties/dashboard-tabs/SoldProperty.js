@@ -13,7 +13,7 @@ const SoldProperty = () => {
   const [propertiesPerPage] = useState(9);
 
   const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(data.length / propertiesPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(data?.length / propertiesPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -21,9 +21,9 @@ const SoldProperty = () => {
     const getBoughtProperties = async () => {
       const response = await getAPI(apiEndpoints.getAllBoughtProperty);
 
-      console.log(response.data);
+      // console.log(response.data);
 
-      setData(response.data);
+      setData(response.data ?? []);
     };
 
     getBoughtProperties();
@@ -33,12 +33,12 @@ const SoldProperty = () => {
   };
   const indexOfLastProperty = currentPage * propertiesPerPage;
   const indexOfFirstProperty = indexOfLastProperty - propertiesPerPage;
-  const currentProperties = data.slice(
+  const currentProperties = data?.slice(
     indexOfFirstProperty,
     indexOfLastProperty
   );
 
-  const propertyListing = currentProperties.map((itm, index) => {
+  const propertyListing = currentProperties?.map((itm, index) => {
     return (
       <Col
         md={3}
@@ -64,40 +64,42 @@ const SoldProperty = () => {
                 className="sold-heading"
                 to={`/builder/home-dashboard/description/${itm?.propertyId?._id}`}
               >
-                {itm.propertyId === null ? "no data Name" : itm.propertyId.name}
+                {itm.propertyId === null
+                  ? "no data Name"
+                  : itm?.propertyId?.name}
               </Link>
             </div>
             <div style={{ opacity: 0.5, fontFamily: "Bahnschrift" }}>
-              {itm.propertyId === null ? "no data" : itm.propertyId.location}
+              {itm.propertyId === null ? "no data" : itm?.propertyId?.location}
             </div>
           </div>
           <Row className="bl-p-2">
             <Col>
               <Row style={{ opacity: 0.5 }}>Unit Type</Row>
-              <Row>{itm.unitType}</Row>
+              <Row>{itm?.unitType}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Unit Number</Row>
-              <Row>{itm.unitNumber}</Row>
+              <Row>{itm?.unitNumber}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Price</Row>
-              <Row>₹ {itm.sellingPrice}</Row>
+              <Row>₹ {itm?.sellingPrice}</Row>
             </Col>
           </Row>
           <Row className="p-2">
             <Col>
               <Row style={{ opacity: 0.5 }}>Client Name</Row>
-              <Row>{itm.customerId.clientName}</Row>
+              <Row>{itm?.customerId?.clientName}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Broker ID</Row>
 
-              <Row>{itm.brokerId._id.slice(-10)}</Row>
+              <Row>{itm?.brokerId?._id.slice(-10)}</Row>
             </Col>
             <Col>
               <Row style={{ opacity: 0.5 }}>Selling Date</Row>
-              <Row>{itm.bookingDate}</Row>
+              <Row>{itm?.bookingDate}</Row>
             </Col>
           </Row>
         </Card.Body>

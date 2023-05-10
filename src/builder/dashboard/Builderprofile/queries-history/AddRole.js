@@ -2,86 +2,67 @@ import { Button, Container, Form, Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
 // import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useState } from "react";
-// const finance = [
-//   { value: "Finance Manager", label: "Finance Manager" },
-//   { value: "Property Manager", label: "Property Manager" },
-// ];
-// const property = [
-//   { value: "Commercial", label: "Commercial" },
-//   { value: "Residential", label: "Residential" },
-// ];
-// const add =
-// [  {value:"Financial Manager", label:"Financial Manager" },
-//   {value:"Property Manager", label:"Property Manager"}],
-// [itm.formData];
+import { useEffect, useState } from "react";
+import { getAPI, putAPI } from "../../../Api/ApiRequest";
+import { apiEndpoints } from "../../../Api/ApiEndpoint";
+
 const AddRole = (props) => {
-  const [add, setAdd] = useState("");
-  const [name, setName] = useState("");
-  const [mail, setMail] = useState("");
-  const [number, setNumber] = useState("");
-  const [property, setProperty] = useState("");
-  // const navigate = useNavigate();
+  const [name, setName] = useState(props.itm?.name);
+  const [mail, setMail] = useState(props.itm?.email);
+  const [number, setNumber] = useState(props.itm?.mobileNumber);
+  const [selectedProperty, setSelectedProperty] = useState([]);
+
+  const [propertyOptions, setPropertyOptions] = useState([]);
+  useEffect(() => {
+    const getAllProperty = async () => {
+      const response = await getAPI(apiEndpoints.getAllproperty);
+      const propertySelectData = [];
+      response.data.forEach((element) => {
+        propertySelectData.push({ value: element._id, label: element.name });
+      });
+      setPropertyOptions(propertySelectData);
+    };
+
+    getAllProperty();
+  }, []);
+
   const submitHandler = async () => {
     const formData = {
-      add: [],
+      id: props.itm._id,
+      add: props.itm.add,
       name,
       email: mail,
       mobileNumber: number,
-      selectProperties: [],
+      selectProperties: selectedProperty,
+      builderId: props.itm.builderId._id,
     };
+    debugger;
     console.log(formData);
-    const response = await axios.put(
-      "http://13.233.149.97:3000/api/v1/roles/updateRoles",
-      formData,
-      {
-        headers: {
-          Authorization:
-            "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNjkwNTY1MzJmMjU2OTQ3OWZjOWQiLCJpYXQiOjE2Nzg3OTc1ODMsImV4cCI6MTY4NjU3MzU4M30.8QjZtAmk342PMxa0CvGdqfp36BWk6lJ4QFyN6f1MO_A",
-        },
-      }
-    );
-    console.log(response);
-    // props.onChange((prev) => ({ ...prev, rating: false, submit: true }));
-    // navigate("/builder/home-dashboard/profile");
+    const response = await putAPI(apiEndpoints.updateRoles, formData);
+    if (response.code === 200) props.onChange(false);
   };
   return (
     <>
       <Modal
         show={props.show}
         onHide={() => {
-          props.onHide(false);
+          props.onChange(false);
         }}
       >
         <Modal.Header className="justify-content-center" closeButton>
-          <Modal.Title>Add Role</Modal.Title>
+          <Modal.Title>Edit Role</Modal.Title>
         </Modal.Header>
         <br />
         <Container className="pt-2 pb-5 dashboard__wrapper">
           <Form className="profile__form ps-2">
             <Form.Group className="mb-4" controlId="email">
               <Form.Label>
-                <h5>Add</h5>
-              </Form.Label>
-              <CreatableSelect
-                // isMulti
-                placeholder="Property Manager"
-                value={add}
-                // options={finance}
-                className="rounded-0"
-                styles={{ background: "#F8F8F8" }}
-                onChange={(e) => {
-                  setAdd(e.target.value);
-                }}
-              />
-              <br />
-              <Form.Label>
                 <h5>Name</h5>
               </Form.Label>
               <Form.Control
                 className="rounded-0"
                 type="text"
-                placeholder="Lorem Ipsum"
+                placeholder="Name"
                 value={name}
                 onChange={(e) => {
                   console.log(e.target.value);
@@ -121,13 +102,17 @@ const AddRole = (props) => {
                 <h5>Select Properties</h5>
               </Form.Label>
               <CreatableSelect
-                // isMulti
-                placeholder="Property Manager"
-                value={property}
+                isMulti
+                placeholder="Select Properties"
+                options={propertyOptions}
                 className="rounded-0"
                 styles={{ background: "#F8F8F8" }}
                 onChange={(e) => {
-                  setProperty(e.target.value);
+                  const selected = [];
+                  e.forEach((element) => {
+                    selected.push(element.value);
+                  });
+                  setSelectedProperty(selected);
                 }}
               />
             </Form.Group>
@@ -139,7 +124,7 @@ const AddRole = (props) => {
             className="w-50 rounded-pill bg-color-primary"
             onClick={submitHandler}
           >
-            Add
+            Update
           </Button>
         </div>
       </Modal>

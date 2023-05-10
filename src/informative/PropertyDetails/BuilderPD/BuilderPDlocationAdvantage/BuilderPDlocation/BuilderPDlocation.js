@@ -101,7 +101,7 @@ const BuilderPDlocation = () => {
                     <div className='container'>
                         <div className='col-lg-12 BuilderPDlocation-col gap-3'>
                             <div className='BuilderPDlocation-col_child-div'>
-                                <img src={item.img} className='BuilderPDlocation-col_child-div_img' />
+                                <img src={item.img} className='BuilderPDlocation-col_child-div_img' alt='Builder-location' />
                             </div>
                             <div className='BuilderPDlocation-col_child-div'>
                                 <span className='BuilderPDlocation-child-div_span-1'>{item.localities}</span>

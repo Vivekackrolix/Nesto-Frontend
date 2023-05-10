@@ -6,8 +6,7 @@ const Successful = (props) => {
   const navigate = useNavigate();
   const submitHandler = () => {
     // props.onChange((prev) => ({ ...prev, submit: false }));
-    // navigate("/builder/login");
-    navigate("/builder/home-dashboard");
+    navigate("/builder/login");
   };
 
   return (

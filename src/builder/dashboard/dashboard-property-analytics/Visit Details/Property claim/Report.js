@@ -2,7 +2,7 @@ import { Button, Container, Form, Modal } from "react-bootstrap";
 import CreatableSelect from "react-select/creatable";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { postAPI } from "../../../../Api/ApiRequest";
+import { getAPI, postAPI } from "../../../../Api/ApiRequest";
 import { apiEndpoints } from "../../../../Api/ApiEndpoint";
 
 // const reason = [
@@ -10,15 +10,44 @@ import { apiEndpoints } from "../../../../Api/ApiEndpoint";
 
 // ];
 const Report = (props) => {
-  const [reason, setReason] = useState({});
-  const [comments, setComments] = useState({});
+  const [reason, setReason] = useState([]);
+  const [reasonValue, setReasonValue] = useState([]);
+  const [comments, setComments] = useState();
+
+  const onChange = (selected) => {
+    setReasonValue(selected);
+  };
+
+  useEffect(() => {
+    const getReason = async () => {
+      try {
+        debugger;
+        const response = await getAPI(apiEndpoints.getAllReason);
+        console.log(response.data);
+
+        if (response.code === 200) {
+          let responseArray = [];
+          response.data.forEach((element) => {
+            responseArray.push({
+              value: element.reason,
+              label: element.reason,
+            });
+          });
+          setReason(responseArray);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getReason();
+  }, []);
 
   const submitHandler = async () => {
     const formData = {
-      reason: {},
-      comments: {},
+      reason: reasonValue.value,
+      comment: comments,
     };
-    // console.log(formData);
+    console.log(formData);
 
     const response = await postAPI(apiEndpoints.addRaiseDispute, formData);
     console.log(response.data);
@@ -44,14 +73,15 @@ const Report = (props) => {
                 <h5>Reason *</h5>
               </Form.Label>
               <CreatableSelect
-                isMulti
+                // isMulti
                 placeholder="Choose"
-                // options={reason}
-                value={reason}
-                onChange={(e) => {
-                  console.log(e.target.value);
-                  setReason(e.target.value);
-                }}
+                options={reason}
+                onChange={onChange}
+                // value={reason}
+                // onChange={(e) => {
+                //   console.log(e.target.value);
+                //   setReason(e.target.value);
+                // }}
                 className="rounded-0"
                 styles={{ background: "#F8F8F8" }}
               />
@@ -66,7 +96,7 @@ const Report = (props) => {
                 placeholder="Lorem Ipsum"
                 value={comments}
                 onChange={(e) => {
-                  console.log(e.target.value);
+                  // console.log(e.target.value);
                   setComments(e.target.value);
                 }}
                 style={{
