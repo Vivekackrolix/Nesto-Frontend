@@ -11,7 +11,7 @@ const RaiseQuery = () => {
     const getQuery = async () => {
       const response = await getAPI(apiEndpoints.getAllRaiseQuery);
 
-      setQueryData(response.data);
+      setQueryData(response.data ?? []);
     };
 
     getQuery();
