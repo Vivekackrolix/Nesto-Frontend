@@ -1,5 +1,5 @@
-import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
+import CountUp from 'react-countup';
 import { useState } from 'react';
 import './Stats.css';
 
