@@ -28,21 +28,21 @@ const HomeBanner = () => {
       personName: 'Raghav Bindra',
       desc: 'NestoHub is a unique platform for builders and brokers. It makes property listing and selling super easy and convenient. I highly recommend NestoHub to my fellow builders.',
       role: '',
-      personImg: '/assets/person.png'
+      personImg: '/assets/person.png',
     },
     {
       personName: 'Suhail Siddiqui',
       desc: 'I was a new broker in the market, and NestoHub was the perfect platform for me to start selling properties with higher earnings and the finest properties. They advised me on gaining profits and quick sales.',
       role: '',
-      personImg: '/assets/person.png'
+      personImg: '/assets/person.png',
     },
     {
       personName: 'Jamshed Khan',
       desc: 'I really like working with NestoHub, as they are skilled professionals and reliable for selling my properties. This digital platform is a big yes for every builder and broker from my side.',
       role: '',
-      personImg: '/assets/person.png'
+      personImg: '/assets/person.png',
     },
-  ]
+  ];
 
   const scrollbarRef = useRef(null);
 
@@ -595,7 +595,7 @@ const HomeBanner = () => {
                 <div className="rg fx" data-fx>
                   <div>
                     <div className="cir">
-                      <div className=" position-absolute top-50 start-50 translate-middle">
+                      <div className="animate-cartoon position-absolute top-50 start-50 translate-middle">
                         <Image
                           className="animation-cartoon-img"
                           src="/assets/informative/animation-cartoon-original.svg"
@@ -714,7 +714,11 @@ const HomeBanner = () => {
           <OurPartner />
           <GetStarted />
           <News />
-          <Testimonials testData={testData} title='Builders On NestoHub' subtitle='Our Achievements In Your Words' />
+          <Testimonials
+            testData={testData}
+            title="Builders On NestoHub"
+            subtitle="Our Achievements In Your Words"
+          />
           <InformativeFooter />
         </div>
       </div>
