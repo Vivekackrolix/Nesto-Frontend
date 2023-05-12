@@ -28,19 +28,19 @@ const HomeBanner = () => {
       personName: 'Raghav Bindra',
       desc: 'NestoHub is a unique platform for builders and brokers. It makes property listing and selling super easy and convenient. I highly recommend NestoHub to my fellow builders.',
       role: '',
-      personImg: '/assets/person.png',
+      personImg: '/assets/profle.png',
     },
     {
       personName: 'Suhail Siddiqui',
       desc: 'I was a new broker in the market, and NestoHub was the perfect platform for me to start selling properties with higher earnings and the finest properties. They advised me on gaining profits and quick sales.',
       role: '',
-      personImg: '/assets/person.png',
+      personImg: '/assets/profle.png',
     },
     {
       personName: 'Jamshed Khan',
       desc: 'I really like working with NestoHub, as they are skilled professionals and reliable for selling my properties. This digital platform is a big yes for every builder and broker from my side.',
       role: '',
-      personImg: '/assets/person.png',
+      personImg: '/assets/profle.png',
     },
   ];
 
