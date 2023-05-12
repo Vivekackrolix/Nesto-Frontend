@@ -22,28 +22,28 @@ const TextSlider = () => {
             <div className="d-flex">
               <div className="text-slider-div">
                 <span className="text-slider-div-span">
-                  Looking for the Best broker for your New Home
+                  Come And Sell The Best Properties.
                 </span>
               </div>
             </div>
             <div className="d-flex">
               <div className="text-slider-div">
                 <span className="text-slider-div-span">
-                  Looking for the Best broker for your
+                  Join NestoHub For Higher Brokerage.
                 </span>
               </div>
             </div>
             <div className="d-flex">
               <div className="text-slider-div">
                 <span className="text-slider-div-span">
-                  Looking for the New Home
+                  It Is Already Sold Out If You Choose NestoHub.
                 </span>
               </div>
             </div>
             <div className="d-flex">
               <div className="text-slider-div">
                 <span className="text-slider-div-span">
-                  Looking for the broker for your New Home
+                  Don’t Be Limited, Sell Unlimited!
                 </span>
               </div>
             </div>
