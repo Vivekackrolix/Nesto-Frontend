@@ -565,7 +565,7 @@ const HomeBanner = () => {
           {/* circle scroll */}
           <div className="app-c">
             <main>
-              <div id="sv" data-h-color="blck-1" className="mt-5 scroll-circle">
+              <div id="sv" data-h-color="blck-1" className="scroll-circle">
                 <div id="svlg" className="lg">
                   {!!circleScrollData?.length &&
                     circleScrollData.map(
@@ -639,7 +639,7 @@ const HomeBanner = () => {
                       <div className="header-group">
                         <h3>
                           <strong className="about-mh">
-                            Lorem ipsum dolor sit amet.
+                            {/* Lorem ipsum dolor sit amet. */}
                           </strong>
                         </h3>
                       </div>

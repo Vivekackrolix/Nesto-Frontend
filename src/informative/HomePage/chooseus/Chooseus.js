@@ -124,7 +124,7 @@ export default function ChooseUs() {
   };
   return (
     <>
-      <div className="container">
+      <div className="coose-container container">
         <Heading
           title="NestoHub For Brokers"
           sub="We Make Real Estate Simple & Efficient"
