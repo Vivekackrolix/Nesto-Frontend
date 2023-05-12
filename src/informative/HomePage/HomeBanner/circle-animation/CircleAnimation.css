@@ -1460,3 +1460,8 @@ html:not(.mob) #cof .slc li > div:hover {
 .animation-cartoon-img {
   animation: floating 2s ease-in-out infinite alternate;
 }
+
+.app-c #sv .lgt{
+  background: url(../../../../../public/assets/informative/circle-1.png) top left no-repeat, url(../../../../../public/assets/informative/circle-1.png) bottom center no-repeat;
+  background-size: 20%, 25%;
+}

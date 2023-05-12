@@ -537,7 +537,7 @@ function CircleAnimation() {
               <div className="lgt fx">
                 <div>
                   <p className="offering-sh">section 1</p>
-                  <div className="header-group addExtraSpace"></div>
+                  <div className="header-group addExtraSpace my-2"></div>
 
                   <div className="tx">
                     <p className="load-p">Lorem ipsum dolor, sit</p>
@@ -546,7 +546,7 @@ function CircleAnimation() {
               </div>
               <div className="lgt fx">
                 <div>
-                  <div className="header-group addExtraSpace">
+                  <div className="header-group addExtraSpace my-2">
                     <h3>
                       <strong>Section 2</strong>
                     </h3>
@@ -558,7 +558,7 @@ function CircleAnimation() {
               </div>
               <div className="lgt fx">
                 <div>
-                  <div className="header-group addExtraSpace">
+                  <div className="header-group addExtraSpace my-2">
                     <h3>
                       <strong>Section 3</strong>
                     </h3>
@@ -571,7 +571,7 @@ function CircleAnimation() {
               </div>
               <div className="lgt fx">
                 <div>
-                  <div className="header-group addExtraSpace">
+                  <div className="header-group addExtraSpace my-2">
                     <h3>
                       <strong>Section 4</strong>
                     </h3>
