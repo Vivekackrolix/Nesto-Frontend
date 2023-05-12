@@ -7,7 +7,7 @@ const RowTwo = () => {
     <>
       <Fade left duration={1000} distance="100px" delay={1000}>
         <div
-          className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-1"
+          className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-1 mb-5"
         >
           <img
             src="/assets/informative/howWorks/gif2.gif"

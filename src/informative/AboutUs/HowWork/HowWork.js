@@ -14,33 +14,31 @@ const HowWork = () => {
   return (
     <>
       <Fade bottom duration={1000} distance="100px" delay={100}>
-        <div className="how-box px-2">
-          <Fade bottom duration={1000} distance="100px" delay={100}>
-            <span className="sections-heading">
-              How NestoHub Works For Brokers
-            </span>
-          </Fade>
-          <Fade bottom duration={1000} distance="100px" delay={100}>
-            <span className="sections-sub-heading">
-              We Follow A Simple Process To Streamline Broker’s Process
-            </span>
-          </Fade>
-          <div className="load-wrapp">
-            <Fade bottom duration={1000} distance="100px" delay={100}>
-              <div className="load">
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-              </div>
-            </Fade>
-          </div>
-        </div>
         <div className="container how-container">
-          <div className="row pt-4 px-5">
+          <div className="how-box">
             <Fade bottom duration={1000} distance="100px" delay={100}>
-              <div
-                className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
-              >
+              <span className="sections-heading">
+                How NestoHub Works For Brokers
+              </span>
+            </Fade>
+            <Fade bottom duration={1000} distance="100px" delay={100}>
+              <span className="sections-sub-heading">
+                We Follow A Simple Process To Streamline Broker’s Process
+              </span>
+            </Fade>
+            <div className="load-wrapp">
+              <Fade bottom duration={1000} distance="100px" delay={100}>
+                <div className="load">
+                  <div className="line"></div>
+                  <div className="line"></div>
+                  <div className="line"></div>
+                </div>
+              </Fade>
+            </div>
+          </div>
+          <div className="row pt-4 px-5 mt-2">
+            <Fade bottom duration={1000} distance="100px" delay={100}>
+              <div className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1">
                 <span className="how-col-1-span-1">Register Yourself</span>
                 <span className="how-col-1-span-2">
                   Create your Broker account free of cost with NestoHub by filling
@@ -82,7 +80,7 @@ const HowWork = () => {
             {/* RowThree */}
             <Fade left duration={1000} distance="100px" delay={1000}>
               <div
-                className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1"
+                className="col-lg-5 col-md-5 col-sm-5 col-5 how-col-1 mb-5"
 
               >
                 <span className="how-col-1-span-1">Manage Customer Visits</span>

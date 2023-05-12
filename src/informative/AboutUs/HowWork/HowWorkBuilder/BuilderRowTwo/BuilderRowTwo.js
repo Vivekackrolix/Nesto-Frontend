@@ -5,7 +5,7 @@ const BuilderRowTwo = () => {
   return (
     <>
       <Fade left duration={1000} distance="100px" delay={1000}>
-        <div className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-1">
+        <div className="col-lg-5 col-md-5 col-sm-5 col-5 row-two-col-1 mb-5">
           <img
             src="/assets/informative/howWorks/gif2.gif"
             className="how-work_img how-work_img-small"
