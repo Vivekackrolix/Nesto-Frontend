@@ -716,7 +716,7 @@ const HomeBanner = () => {
           <News />
           <Testimonials
             testData={testData}
-            title="Builders On NestoHub"
+            title="Builders & Brokers On NestoHub"
             subtitle="Our Achievements In Your Words"
           />
           <InformativeFooter />
