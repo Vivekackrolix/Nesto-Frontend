@@ -29,7 +29,7 @@ const InformativeNavbar = () => {
       <Navbar bg="light" expand="lg" className="login__header nes__header sticky-top">
         <Link to="/" className="navbar-brand">
           <img
-            src="/assets/nesto-logo.png"
+            src="/assets/informative/NestoNewLogo.png"
             className="info-login__header__img me-auto"
             alt='login-header'
           />
