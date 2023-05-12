@@ -11,7 +11,7 @@ const InformativeFooter = () => {
                         <div className='row'>
                             <div className='col-lg-3 footer-col-1'>
                                 <Link to='/'>
-                                <img src='/assets/informative/informative-footer-logo.svg' alt='footer-logo' className='informative-footer_logo' />
+                                <img src='/assets/informative/NestoFooter.png' alt='footer-logo' className='informative-footer_logo' />
                                 </Link>
                                 
                                 <span className='footer-col-1-span'>NestoHub is reimagining how brokers & builders are dealing with each other through our efficient yet simple and accessible platform.</span>
