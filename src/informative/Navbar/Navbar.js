@@ -13,6 +13,7 @@ import ListProperty from './../HomePage/LoginModal/ListProperty/ListProperty'
 import AppDownModal from '../HomePage/LoginModal/AppDownModal/AppDownModal';
 const InformativeNavbar = () => {
   const [show, setShow] = useState(false);
+  const [popShow, setPopShow] = useState(false);
   const onHide = () => {
     setShow(false);
   };
@@ -20,7 +21,6 @@ const InformativeNavbar = () => {
     setShow(true);
   };
   // -------------------------------------------
-  const [popShow, setPopShow] = useState(false);
   const onHidePop = () => {
     setPopShow(false);
   };
