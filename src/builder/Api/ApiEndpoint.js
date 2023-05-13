@@ -41,4 +41,5 @@ export const apiEndpoints = {
   getAllRolesFinance: "/v1/roles/getAllRoles?builderId=",
   updateRoles: "/v1/roles/updateRoles",
   addRequestNewProperty: "/v1/requestNewProperty/addRequestNewProperty",
+  addContactus: "/v1/contactus/addContactus",
 };

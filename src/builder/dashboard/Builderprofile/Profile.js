@@ -64,6 +64,9 @@ const profileSidebarNavContent = [
 
 const ProfilePage = () => {
   const builderId = useSelector((state) => state.auth.builderId);
+  const [profilePictureUrl, setProfilePictureUrl] = useState(
+    "/assets/profile-page/profile-mg-big.png"
+  );
 
   // const history = useHistory();
   const [activeTab, setActiveTab] = useState(0);
@@ -87,6 +90,14 @@ const ProfilePage = () => {
     navigate("/builder/login");
     // console.log("Click");
   };
+  function handleImageUpload(e) {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      setProfilePictureUrl(event.target.result);
+    };
+    reader.readAsDataURL(file);
+  }
 
   return (
     <>
@@ -111,7 +122,16 @@ const ProfilePage = () => {
                       alt="profileImage"
                     />
                     <div className="profile__image__overlay">
-                      <RiPencilFill />
+                      <label htmlFor="imageUpload">
+                        <RiPencilFill />
+                      </label>
+                      <input
+                        type="file"
+                        id="imageUpload"
+                        accept="image/*"
+                        style={{ display: "none" }}
+                        onChange={handleImageUpload}
+                      />
                     </div>
                   </div>
                   <h4 className="mt-3">{builderData.name}</h4>

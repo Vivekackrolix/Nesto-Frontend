@@ -1,5 +1,5 @@
 import DashboardHeader from "../header/DashboardHeader";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Modal, Row } from "react-bootstrap";
 import SearchFilterBox from "../search-filter/SearchFilter";
 import homeImage from "../../Images/homeImage.jpg";
 // import map from "../../Images/Map.png";
@@ -21,6 +21,7 @@ import "./SoldOut.css";
 
 const SoldPage = () => {
   const params = useParams();
+  const [showPopup, setShowPopup] = useState(false);
   const [property, setProperty] = useState([]);
 
   useEffect(() => {
@@ -39,6 +40,9 @@ const SoldPage = () => {
 
     getPropertyById();
   }, []);
+  const handleImage = () => {
+    setShowPopup(true);
+  };
 
   return (
     <>
@@ -58,6 +62,7 @@ const SoldPage = () => {
                       src={homeImage}
                       className="sold-page-col_div_img"
                       alt="Home"
+                      onClick={handleImage}
                     />
                     <div className="sold-page-col_div-2">
                       <div className="sold-page-col_div-3">
@@ -171,6 +176,24 @@ const SoldPage = () => {
             </Container>
           </Col>
         </Row>
+        <Modal
+          show={showPopup}
+          onHide={() => setShowPopup(false)}
+          className="mt-5 align-item-center rounded"
+          size="md"
+          style={{
+            borderRadius: "63.8029px",
+          }}
+        >
+          <Modal.Body>
+            {" "}
+            <img
+              src={homeImage}
+              alt="Home"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Modal.Body>
+        </Modal>
       </Container>
       <Footer />
     </>

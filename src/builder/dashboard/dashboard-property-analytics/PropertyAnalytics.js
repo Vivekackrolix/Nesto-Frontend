@@ -17,7 +17,7 @@ const PropertyAnalytics = () => {
         `${apiEndpoints.getPropertyAnalytics}${builderId}`
       );
       console.log(response);
-      setData(response.data);
+      setData(response.data ?? []);
     };
 
     getAnalytics();

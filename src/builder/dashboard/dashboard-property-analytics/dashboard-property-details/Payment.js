@@ -12,7 +12,7 @@ const Payment = ({ data }) => {
       <td>{itm?.milestone}</td>
     </tr>
   ));
-  const milestoneTable = data?.milestones?.map((item, index) => (
+  const milestoneTable = data?.milestonesTermsConditions?.map((item, index) => (
     <Container
       className="dashboard_wrapper_filter border border_light rounded p-3 mx-5"
       style={{ border: "2.94206px solid #E3E3E7" }}
@@ -174,9 +174,9 @@ const Payment = ({ data }) => {
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <div className="p-2 d-flex justify-content-between">
           <h4>About the Project</h4>
-          <i style={{ color: "#FC5C67", textDecorationLine: "underline" }}>
+          {/* <i style={{ color: "#FC5C67", textDecorationLine: "underline" }}>
             View Details
-          </i>
+          </i> */}
         </div>
         <hr />
         <span style={{ color: "#7D7F88", alignitems: "cente" }}>
@@ -201,12 +201,12 @@ const Payment = ({ data }) => {
         </Table>
       </Container>
       <br></br>
-      <br></br>
-      <div className="p-4 d-flex justify-content-between">
+
+      <div className="p-2 d-flex justify-content-between">
         <h3>Loan Approved By</h3>
-        <i style={{ color: "#FC5C67", textDecorationLine: "underline" }}>
+        {/* <i style={{ color: "#FC5C67", textDecorationLine: "underline" }}>
           View All
-        </i>
+        </i> */}
       </div>
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <div className="p-4 d-flex justify-content-around">{bankData}</div>
@@ -217,9 +217,9 @@ const Payment = ({ data }) => {
       <Container className="dashboard__wrapper__filter border border-light rounded shadow-sm mt-4">
         <div className="p-3 d-flex justify-content-between">
           <h4>About the Builder</h4>
-          <i style={{ color: "#FC5C67", textDecorationLine: "underline" }}>
+          {/* <i style={{ color: "#FC5C67", textDecorationLine: "underline" }}>
             View Details
-          </i>
+          </i> */}
         </div>
         <hr />
         <span style={{ color: "#7D7F88", alignitems: "cente" }}>

@@ -12,7 +12,7 @@ const Amenities = ({ data }) => {
           className="p-1 d-flex justify-content-around "
           style={{ opacity: 0.5 }}
         >
-          {data?.amenities?.map((itm) => (
+          {data?.amenitiesId?.map((itm) => (
             <div className="text-center d-flex flex-column ">
               <span>
                 <img

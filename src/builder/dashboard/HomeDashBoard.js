@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import ContentCard from "./dashboard-info-cards/DashboardInfoCards";
 import DashboardHeader from "./header/DashboardHeader";
-import { Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import SearchFilterBox from "./search-filter/SearchFilter";
 // import SearchFilterBox from "../../components/search-filter/SearchFilter";
 import PropertyAnalytics from "./dashboard-property-analytics/PropertyAnalytics";
@@ -32,7 +32,7 @@ const HomeDashBoard = () => {
   useEffect(() => {
     debugger;
     dispatch(getBuilderDetail(builderId));
-  }, []);
+  }, [dispatch]);
 
   // const filteredData = data.filter((item) =>
   //   item.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -72,6 +72,7 @@ const HomeDashBoard = () => {
         />
         <PropertyAnalytics />
         <SoldOut />
+
         <RecentlyAdded />
 
         <RecentPackage />

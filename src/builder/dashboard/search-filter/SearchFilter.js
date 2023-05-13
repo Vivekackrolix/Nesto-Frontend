@@ -101,18 +101,20 @@ const SearchFilterBox = (props) => {
       name: name,
       phoneNumber: phone,
       email: email,
-      typeOfProperty: typeOfProperty,
-      locationProperty: locationProperty,
+      typeOfProperty: [],
+      // locationProperty: locationProperty,
+      builderId: builderId,
       projectName: project,
       description: description,
     };
     const response = await postAPI(
-      apiEndpoints.addShareYourIntern,
+      apiEndpoints.addRequestNewProperty,
 
       formData
     );
-    console.log(response);
-    setData(response.data);
+    debugger;
+    console.log(response.data);
+    setData(response.data ?? []);
   };
 
   // const handleToggle = () => setShowRole(!showRole);
@@ -303,6 +305,7 @@ const SearchFilterBox = (props) => {
                   <Form.Label className="mb-0">Enter Phone Number</Form.Label>
                   <Form.Control
                     className="rounded-2"
+                    maxLength="10"
                     type="text"
                     placeholder="Enter Phone Number"
                     value={phone}
@@ -329,14 +332,24 @@ const SearchFilterBox = (props) => {
                     isMulti
                     placeholder="Choose Type Of Property"
                     // options={add}
-                    className="rounded-2"
-                    styles={{ background: "#F8F8F8" }}
+                    // className="rounded-2"
+                    // styles={{ background: "#F8F8F8" }}
+                    // onChange={(e) => {
+                    //   setTypeOfProperty(e.target.value);
+                    // }}
+                    options={propertyOptions}
                     onChange={(e) => {
-                      setTypeOfProperty(e.target.value);
+                      debugger;
+                      console.log(e);
+                      const selected = [];
+                      e.forEach((element) => {
+                        selected.push(element.value);
+                      });
+                      setTypeOfProperty(selected);
                     }}
                   />
                 </Form.Group>
-                <Form.Group className="mb-3">
+                {/* <Form.Group className="mb-3">
                   <Form.Label className="mb-0">Location of Property</Form.Label>
                   <CreatableSelect
                     isMulti
@@ -347,8 +360,8 @@ const SearchFilterBox = (props) => {
                     onChange={(e) => {
                       setLocationProperty(e.target.value);
                     }}
-                  />
-                </Form.Group>
+                  /> */}
+                {/* </Form.Group> */}
                 <Form.Group className="mb-3">
                   <Form.Label className="mb-0">Name Of Project</Form.Label>
                   <Form.Control

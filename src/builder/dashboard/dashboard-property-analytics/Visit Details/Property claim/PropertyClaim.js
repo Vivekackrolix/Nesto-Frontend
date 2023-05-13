@@ -33,7 +33,7 @@ const PropertyClaim = () => {
         `${apiEndpoints.getAllClaim}${params.propertyId}`
       );
       // console.log(response.data);
-      setData(response.data);
+      setData(response?.data ?? []);
     };
 
     getClaim();

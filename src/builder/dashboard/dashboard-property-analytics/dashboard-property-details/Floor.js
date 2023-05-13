@@ -35,7 +35,7 @@ const Floor = ({ data }) => {
     selectedTab === "All"
       ? data?.floorPlanAndPricing
       : data?.floorPlanAndPricing.filter(
-          (item) => item.unitType === selectedTab
+          (item) => item.unitType === selectedTab.trim()
         );
 
   // const floorPlan = data?.floorPlanAndPricing?.map((item) => (
@@ -45,8 +45,14 @@ const Floor = ({ data }) => {
         <div class="ribbon">
           <span>{tabKey[item?.id]} </span>
         </div>
-        <Card.Img variant="top" src="/assets/swiper-img.png" />{" "}
-        <div className="sold-page-col_div-4">
+        <Card.Img variant="top" src={item?.floorPlanImageUrl} />{" "}
+        <div
+          className="sold-page-col_div-4"
+          style={{
+            background: " #FFB630",
+            borderRadius: "5.64846px 0px 0px 5.64846px",
+          }}
+        >
           <span className="sold-page-col_div-4_span-1">{item?.unitType}</span>
         </div>
         <Card.Body className="px-0">
@@ -55,17 +61,18 @@ const Floor = ({ data }) => {
             <span className="text-right">Price</span>
           </div>
           <div className="swiper__card__row d-flex justify-content-between align-items-center">
-            <span>{item?.areaSquareFeet}</span>
+            {/* <span>{item?.areaSquareFeet}</span> */}
+            <span>{item?.furnishingStatus}</span>
             {data?.floorPlanAndPricing.map((itm) => (
               <span>{itm?.areaSquareFeet}</span>
             ))}
             <span className="swiper__price text-wrap">
-              ₹ 3.94 Cr (5,000/sq.ft.)
+              ₹ {item?.price} ({item?.onesqft}/sq.ft.)
               {data?.floorPlanAndPricing?.price}
             </span>
           </div>
           <div className="swiper__card__row d-flex justify-content-between align-items-center mt-2">
-            <span>(130.6 sq.m.)</span>
+            <span>({item?.carpetSize} sq.m.)</span>
             <span>+Govt. Charges</span>
           </div>
         </Card.Body>

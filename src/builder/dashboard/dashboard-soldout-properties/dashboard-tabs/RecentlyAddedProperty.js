@@ -42,7 +42,6 @@ const RecentlyAddedProperty = (props) => {
     indexOfLastProperty
   );
   const propertyListing = currentProperties.map((itm, index) => {
-    // const propertyListing = data.map((itm, index) => {
     return (
       <Col
         md={3}
