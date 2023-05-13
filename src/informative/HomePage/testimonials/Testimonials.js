@@ -93,7 +93,7 @@ const Testimonial = ({ testData, title, subtitle }) => {
                               </span>
                               <div className="d-flex justify-content-end">
                                 {Array.from({ length: 5 }, (_, index) => {
-                                  if (index < 4) {
+                                  if (index < 5) {
                                     return (
                                       <FaStar
                                         key={index}

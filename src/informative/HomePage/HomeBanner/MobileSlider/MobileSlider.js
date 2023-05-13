@@ -19,16 +19,16 @@ const MobileSlider = () => {
                 <div className='mobile-slider-div'>
                     <Slider {...settings}>
                         <div className='d-flex mobile-slider-div-2'>
-                            <img src="/assets/informative/homeSlider-1.png" className='mobile-slider-img' />
+                            <img src="/assets/informative/1.png" className='mobile-slider-img' />
                         </div>
                         <div className='d-flex mobile-slider-div-2'>
-                            <img src="/assets/informative/homeSlider-2.jpg" className='mobile-slider-img' />
+                            <img src="/assets/informative/2.png" className='mobile-slider-img' />
                         </div>
                         <div className='d-flex mobile-slider-div-2'>
-                            <img src="/assets/informative/homeSlider-3.jpg" className='mobile-slider-img' />
+                            <img src="/assets/informative/2.png" className='mobile-slider-img' />
                         </div>
                         <div className='d-flex mobile-slider-div-2'>
-                            <img src="/assets/informative/homeSlider-4.jpeg" className='mobile-slider-img' />
+                            <img src="/assets/informative/2.png" className='mobile-slider-img' />
                         </div>
                     </Slider>
                 </div>
