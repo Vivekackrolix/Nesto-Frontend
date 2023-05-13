@@ -81,7 +81,7 @@ const ContactForm = () => {
                     onChange={handleInputChange}
                   >
                     <option value="" disabled selected>
-                      Select Service Type
+                      I am ...
                     </option>
 
                     <option value="Builder">Builder</option>
@@ -120,7 +120,7 @@ const ContactForm = () => {
                     <SlPencil />
                   </span>
                 </div>
-                <div className="d-flex align-items-center gap-2 mt-4">
+                <div className="d-flex align-items-start gap-2 mt-4">
                   <input
                     required
                     id="check-save"
@@ -131,8 +131,8 @@ const ContactForm = () => {
                     className="contact-form_checkbox-label"
                     for="check-save"
                   >
-                    Save my name, email, and website in this browser for the
-                    next time I comment.
+                    I agree to the Terms & Conditions and Privacy Policy of NestoHub.
+                    I agree to be contacted by NestoHub related this query or similar service via WhatsApp, mobile phone (overiridng NDNC registeration), SMS, Email etc.
                   </label>
                 </div>
                 <div className="mt-3">
