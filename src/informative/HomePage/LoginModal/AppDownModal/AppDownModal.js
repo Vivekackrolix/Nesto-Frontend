@@ -1,9 +1,9 @@
 import React from 'react';
-import CustomModal from '../../../components/common/CustomModal';
-import './LoginModal.css';
+import CustomModal from '../../../../components/common/CustomModal';
+import './AppDownModal.css';
 // import { Link } from 'react-router-dom';
 
-const LoginModal = ({ show, onHide }) => {
+const AppDownModal = ({ show, onHidePop }) => {
   return (
     <CustomModal
       show={show}
@@ -11,7 +11,7 @@ const LoginModal = ({ show, onHide }) => {
       closeBtn
       modalHeader
       size="md"
-      onHide={onHide}
+      onHide={onHidePop}
     >
       <div className="login-modal">
         <h3 className="login-modal-heading">Welcome Back Netso User!</h3>
@@ -68,4 +68,4 @@ const LoginModal = ({ show, onHide }) => {
   );
 };
 
-export default LoginModal;
+export default AppDownModal;

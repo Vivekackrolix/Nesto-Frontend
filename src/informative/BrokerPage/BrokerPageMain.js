@@ -12,19 +12,19 @@ const BuilderPageMain = () => {
       personName: 'Sagar Pant',
       desc: 'With NestoHub on my side, I don’t need to worry about reaching out to big names in the market. They have everyone I want with a higher brokerage, which helps me earn and sell better.',
       role: '',
-      personImg: '/assets/informative/builder1.png'
+      personImg: '/assets/informative/profile.svg'
     },
     {
-      personName: 'Suhail Siddiqui',
+      personName: 'Sachin Sharma',
       desc: 'I was a new broker in the market, and NestoHub was the perfect platform for me to start selling properties with higher earnings and the finest properties. They advised me on gaining profits and quick sales.',
       role: '',
-      personImg: '/assets/informative/builder1.png'
+      personImg: '/assets/informative/profile.svg'
     },
     {
       personName: 'Suresh Rastogi',
       desc: 'I highly recommend NestoHub to all brokers, as it has made finding properties with higher selling chances and outstanding brokerage simple. It was superb working with the professional Nesto advisors.',
       role: '',
-      personImg: '/assets/informative/builder1.png'
+      personImg: '/assets/informative/profile.svg'
     },
   ]
 

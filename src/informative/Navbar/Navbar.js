@@ -10,6 +10,7 @@ import ReffrelRegister from './../HomePage/LoginModal/ReffrelRegister/ReffrelReg
 import SuccessfulLogin from './../HomePage/LoginModal/SuccessfulLogin/SuccessfulLogin';
 import NotRegistered from './../HomePage/LoginModal/NotRegistered/NotRegistered';
 import ListProperty from './../HomePage/LoginModal/ListProperty/ListProperty'
+import AppDownModal from '../HomePage/LoginModal/AppDownModal/AppDownModal';
 const InformativeNavbar = () => {
   const [show, setShow] = useState(false);
   const onHide = () => {
@@ -18,14 +19,23 @@ const InformativeNavbar = () => {
   const showLoginModal = () => {
     setShow(true);
   };
+  // -------------------------------------------
+  const [popShow, setPopShow] = useState(false);
+  const onHidePop = () => {
+    setPopShow(false);
+  };
+  const showDownPop = () => {
+    setPopShow(true);
+  };
   return (
     <>
-      <LoginModal show={show} onHide={onHide} /> 
+      <LoginModal show={show} onHide={onHide} />
       {/* <LoginAsBroker show={show} onHide={onHide} /> */}
       {/* <ReffrelRegister show={show} onHide={onHide} /> */}
       {/* <SuccessfulLogin show={show} onHide={onHide} />  */}
       {/* <ListProperty show={show} onHide={onHide} />   */}
       {/* <NotRegistered show={show} onHide={onHide} />  */}
+      <AppDownModal popShow={popShow} onHidePop={onHidePop} />
       <Navbar bg="light" expand="lg" className="login__header nes__header sticky-top">
         <Link to="/" className="navbar-brand">
           <img
@@ -73,9 +83,8 @@ const InformativeNavbar = () => {
               </div>
             </Nav.Item>
             {/* Download btn */}
-            <Nav.Item className="download">
-              <Link
-                to="/"
+            <Nav.Item className="download" onClick={showDownPop}>
+              <span
                 className="nes__header-download-button d-flex mb-3 mb-lg-0 btn-lg"
               >
                 <div>
@@ -89,7 +98,7 @@ const InformativeNavbar = () => {
                     <BsApple size={24} />
                   </span>
                 </div>
-              </Link>
+              </span>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

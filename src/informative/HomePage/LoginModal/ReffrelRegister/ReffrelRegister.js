@@ -10,7 +10,7 @@ import {
 const ReffrelRegister = ({ show, onHide }) => {
   return (
     <CustomModal
-      title="Register to get started"
+      title="Let's Register to NestoHub!"
       show={show}
       closeBtn
       modalHeader

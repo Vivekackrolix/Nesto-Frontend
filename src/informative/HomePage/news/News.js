@@ -8,7 +8,7 @@ import { Fade } from 'react-reveal';
 export default function News() {
   const data = [
     {
-      img: '/assets/informative/blogs/blog-1.png',
+      img: '/assets/informative/blogs/blog-4.png',
       date: '12 May 2023',
       heading: 'How Can New Brokers Contact Well-Known Builders?',
       desc: 'The real estate market is a deep pool based on trust and sources. Everyone is attracted to this ...',
