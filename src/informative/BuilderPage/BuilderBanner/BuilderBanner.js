@@ -49,7 +49,7 @@ const BuilderBanner = () => {
               <div className="builder-banner-col-4-div">
                 <div className="builder-banner-col-3_title_div">
                   <span className="builder-banner-col-3_title">
-                    Hello! List your Property / Requirement
+                    List your Property / Requirement
                   </span>
                 </div>
                 <form action="#" className="builder-banner-col-3_form">
@@ -78,13 +78,7 @@ const BuilderBanner = () => {
                     <option>option1</option>
                     <option>option1</option>
                   </select>
-                  <select className="builder-banner-col-3_input builder-banner-col-3_select">
-                    <option>Location Of Property</option>
-                    <option>option1</option>
-                    <option>option1</option>
-                    <option>option1</option>
-                    <option>option1</option>
-                  </select>
+                  <input type='text' placeholder='Location of Property' className='builder-banner-col-3_input' required />
                   <input
                     type="text"
                     placeholder="Brief Description"
@@ -102,7 +96,7 @@ const BuilderBanner = () => {
       </div >
       {/* Desktop View Form ===========
       ============================= */}
-      < BuilderForm />
+      <BuilderForm />
     </>
   );
 };

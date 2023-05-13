@@ -18,7 +18,7 @@ const InformativeFooter = () => {
                                 <div className='informative-footer-icons-div'>
                                     <a href='https://www.instagram.com/nestohub_proptech/' target='_blank'><img src='/assets/informative/footerSocialIcon4.svg' alt='social' className='footer-col-1-icons' /></a>
                                     <a href='https://www.facebook.com/profile.php?id=100092182144716' target='_blank'><img src='/assets/informative/footerSocialIcon3.svg' alt='social' className='footer-col-1-icons' /></a>
-                                    <a href='https://www.youtube.com/@NestoHub' target='_blank'><img src='/assets/informative/footerSocialIcon2.svg' alt='social' className='footer-col-1-icons' /></a>
+                                    <a href='https://www.youtube.com/@NestoHub' target='_blank'><img src='/assets/informative/footerSocialIcon5.svg' alt='social' className='footer-col-1-icons' /></a>
                                     {/* <Link to='/'><img src='/assets/informative/footerSocialIcon1.svg' alt='social' className='footer-col-1-icons' /></Link> */}
                                 </div>
                             </div>
@@ -53,7 +53,9 @@ const InformativeFooter = () => {
                 </div>
             </div>
                 <div className='informative-footer_rights'>
-                    <p className='informative-footer_rights_p'>© 2023 Nesto Hub | All Rights Reserved | Design & Develop by Bizzeonline </p>
+                    <p className='informative-footer_rights_p'>© 2023 NestoHub | All Rights Reserved 
+                    {/* | Design & Develop by Bizzeonline  */}
+                    </p>
                 </div>
         </>
     )
