@@ -14,15 +14,14 @@ const ContactBanner = () => {
                             <img src='/assets/informative/ContactUsImg1.png' alt='contact' className='contact-us_img' />
                             <div className='contact-us_text-div'>
                                 <span className='contact-us_span1'>Contact Us</span>
-                                <span className='contact-us_span2'>Borem ipsum dolor sit amet conse ctetur adipisicing elit sed do eiusmod Eorem ipsum dolor sit amet conse ctetur.</span>
+                                <span className='contact-us_span2'>Reach out and resolve all your doubts about NestoHub and streamline Real Estate for yourselft Today!</span>
                             </div>
                             <div className='d-flex align-items-center gap-2'>
                                 <div>
                                     <img src='/assets/informative/ContactMail.svg' alt='mail' />
                                 </div>
                                 <div>
-                                    <Link to='/'><span className='contact-us_span3'>info@webmail.com</span></Link>
-                                    <Link to='/'><span className='contact-us_span3'>jobs@webexample.com</span></Link>
+                                    <Link to='/'><span className='contact-us_span3'>info@nestohub.in</span></Link>
                                 </div>
                             </div>
                         </div>
