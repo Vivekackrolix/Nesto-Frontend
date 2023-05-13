@@ -17,6 +17,8 @@ const ContactForm = () => {
     service: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setContactForm((prevContactForm) => ({
@@ -29,9 +31,10 @@ const ContactForm = () => {
     // // debugger;
     // console.log(contactForm);
     // return;
-
+    setIsLoading(true);
     const response = await postAPI(apiEndpoints.addContactus, contactForm);
     console.log(response);
+    setIsLoading(false);
   };
   return (
     <>
@@ -134,11 +137,12 @@ const ContactForm = () => {
                 </div>
                 <div className="mt-3">
                   <button
+                    disabled={isLoading}
                     type="submit"
                     className="contact-form_button"
                     onClick={submitHandler}
                   >
-                    Send
+                    {isLoading ? "Sending..." : "Send"}
                   </button>
                 </div>
               </div>
