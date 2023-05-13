@@ -17,10 +17,10 @@ import market from "../../../Images/market.png";
 import canteen from "../../../Images/canteen.png";
 import hospital from "../../../Images/hospital.png";
 import station from "../../../Images/station.png";
-import img from "../../../Images/img.png";
+// import img from "../../../Images/img.png";
 // import loc from "../../../Images/loc.png";
 // import FileUpload from "../../Fileupload/Fileupload";
-import blank from "../../../Images/blank.png";
+// import blank from "../../../Images/blank.png";
 import { RiAddFill } from "react-icons/ri";
 import { BsPencilFill } from "react-icons/bs";
 // import edit from "../../../Images/edit.png";
@@ -67,22 +67,7 @@ const PropertyEdit = () => {
   const [showBank, setShowBank] = useState(false);
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
-  const [files, setFiles] = useState([]);
 
-  // const { getRootProps, getInputProps, isDragActive } = useDropzone({
-  //   accept: "image/*",
-  //   multiple: true,
-  //   onDrop: (acceptedFiles) => {
-  //     setFiles((prevFiles) => [...prevFiles, ...acceptedFiles]);
-  //   },
-  // });
-
-  // const filePreview = files.map((file) => (
-  //   <div key={file.name}>
-  //     <img src={URL.createObjectURL(file)} alt={file.name} />
-  //   </div>
-  // ));
-  // const [name, setName] = useState("");
   const params = useParams();
 
   const onAmenitiesClick = () => {
@@ -136,15 +121,6 @@ const PropertyEdit = () => {
             <Col md={12} sm={12}>
               <FileUpload />
             </Col>
-            {/* <div {...getRootProps()}>
-              <input {...getInputProps()} />
-              {isDragActive ? (
-                <p>Drop the images here</p>
-              ) : (
-                <p>Drag and drop some images here, or click to select files</p>
-              )}
-              {filePreview}
-            </div> */}
           </div>
         </Row>
         <br></br>

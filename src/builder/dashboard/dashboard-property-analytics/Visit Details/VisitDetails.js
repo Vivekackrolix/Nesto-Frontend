@@ -1,13 +1,15 @@
 import { Container, Tab, Tabs } from "react-bootstrap";
 import SearchFilterBox from "../../search-filter/SearchFilter";
 import Footer from "../../Footer/Footer";
-import Header from "../../../header/Header";
+// import Header from "../../../header/Header";
 import AllVisits from "./AllVisits";
 import PromotedVisits from "./PromotedVisits";
+import DashboardHeader from "../../header/DashboardHeader";
 const VisitDetails = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <DashboardHeader />
       <Container className="pt-5 pb-4 dashboard__wrapper">
         <SearchFilterBox />
         <h3 className="heading"> Visit Details</h3>

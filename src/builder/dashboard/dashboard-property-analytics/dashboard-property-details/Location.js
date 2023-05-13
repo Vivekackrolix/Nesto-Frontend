@@ -11,7 +11,7 @@ const Location = ({ data }) => {
         style={{ border: "2.94206px solid #E3E3E7", boxSizing: "border-box" }}
       >
         <div className="p-4 d-flex justify-content-around">
-          {data?.locationAdvantages?.map((itm) => (
+          {data?.locationAdvantagesId?.map((itm) => (
             <div className="text-center d-flex flex-column">
               <span>
                 <img

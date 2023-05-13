@@ -143,7 +143,7 @@ const RecentlyAdded = () => {
     );
   });
   return (
-    <Container className="mt-5">
+    <Container className="mt-2">
       <div className="row justify-content-between">
         <h3 className="col-8 heading">Recently Added</h3>
         <a

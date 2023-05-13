@@ -2,7 +2,8 @@ import axios from "axios";
 // import { useState } from "react";
 
 const axiosInstance = axios.create({
-  baseURL: `http://nestobackend-env.eba-fk3zufmz.ap-south-1.elasticbeanstalk.com/api`,
+  // baseURL: `http://nestobackend-env.eba-fk3zufmz.ap-south-1.elasticbeanstalk.com/api`,
+  baseURL: `http://ec2-54-166-52-219.compute-1.amazonaws.com/api`,
   // baseURL: `http://localhost:3001/api`,
 
   headers: {

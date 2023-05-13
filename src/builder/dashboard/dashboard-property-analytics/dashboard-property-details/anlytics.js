@@ -17,7 +17,7 @@ const Anlytics = () => {
       const response = await getAPI(
         apiEndpoints.getPropertiesAnalyticsForIndividualProperty
       );
-      setData(response.data);
+      setData(response.data ?? []);
     };
 
     getAnlytics();
@@ -28,7 +28,7 @@ const Anlytics = () => {
     const getAnlyticsA = async () => {
       const response = await getAPI(apiEndpoints.getPropertyById);
 
-      setData1(response.data[0]);
+      setData1(response.data[0] ?? []);
     };
 
     getAnlyticsA();
