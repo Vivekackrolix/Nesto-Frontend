@@ -63,6 +63,12 @@ const SearchFilterBox = (props) => {
     { value: "property", label: "Property Manager" },
     { value: "finance", label: "Finance Manager" },
   ];
+  const properties = [
+    { value: "Flats/Apartment", label: "Flats/Apartment" },
+    { value: "Farmhouse/Villa", label: "Farmhouse/Villa" },
+    { value: "Plots/Lands", label: "Plots/Lands" },
+    { value: "Commercial", label: "Commercial" },
+  ];
   const handleVoiceSearch = () => {
     const recognition = new window.webkitSpeechRecognition();
     recognition.lang = "en-IN";

@@ -7,6 +7,12 @@ import { postAPI } from "../../Api/ApiRequest";
 import { apiEndpoints } from "../../Api/ApiEndpoint";
 
 const Requirement = (props) => {
+  const properties = [
+    { value: "Flats/Apartment", label: "Flats/Apartment" },
+    { value: "Farmhouse/Villa", label: "Farmhouse/Villa" },
+    { value: "Plots/Lands", label: "Plots/Lands" },
+    { value: "Commercial", label: "Commercial" },
+  ];
   //   const [name, setName] = useState("");
   //   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
