@@ -16,10 +16,10 @@ const InformativeFooter = () => {
                                 
                                 <span className='footer-col-1-span'>NestoHub is reimagining how brokers & builders are dealing with each other through our efficient yet simple and accessible platform.</span>
                                 <div className='informative-footer-icons-div'>
-                                    <Link to='/'><img src='/assets/informative/footerSocialIcon4.svg' alt='social' className='footer-col-1-icons' /></Link>
-                                    <Link to='/'><img src='/assets/informative/footerSocialIcon3.svg' alt='social' className='footer-col-1-icons' /></Link>
-                                    <Link to='/'><img src='/assets/informative/footerSocialIcon2.svg' alt='social' className='footer-col-1-icons' /></Link>
-                                    <Link to='/'><img src='/assets/informative/footerSocialIcon1.svg' alt='social' className='footer-col-1-icons' /></Link>
+                                    <a href='https://www.instagram.com/nestohub_proptech/' target='_blank'><img src='/assets/informative/footerSocialIcon4.svg' alt='social' className='footer-col-1-icons' /></a>
+                                    <a href='https://www.facebook.com/profile.php?id=100092182144716' target='_blank'><img src='/assets/informative/footerSocialIcon3.svg' alt='social' className='footer-col-1-icons' /></a>
+                                    <a href='https://www.youtube.com/@NestoHub' target='_blank'><img src='/assets/informative/footerSocialIcon2.svg' alt='social' className='footer-col-1-icons' /></a>
+                                    {/* <Link to='/'><img src='/assets/informative/footerSocialIcon1.svg' alt='social' className='footer-col-1-icons' /></Link> */}
                                 </div>
                             </div>
                             <div className='col-lg-3 footer-col-2'>
@@ -27,7 +27,7 @@ const InformativeFooter = () => {
                                 <Link to='/about-us' className='informative-footer-link'>About Us</Link>
                                 <Link to='/partner-page' className='informative-footer-link'>Our Partners</Link>
                                 <Link to='/faq' className='informative-footer-link'>FAQ</Link>
-                                <Link to='/blog-list' className='informative-footer-link'>Blog</Link>
+                                {/* <Link to='/blog-list' className='informative-footer-link'>Blog</Link> */}
                             </div>
                             <div className='col-lg-3 footer-col-3'>
                                 <span className='footer-col-2-span'>Our Policies</span>

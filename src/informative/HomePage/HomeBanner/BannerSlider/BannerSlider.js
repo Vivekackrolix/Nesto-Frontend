@@ -38,6 +38,11 @@ const BannerSlider = () => {
                             <img src='/assets/informative/characterNew.svg' className='cartoon_img' />
                             <img src="/assets/informative/4.png" className='slider-img' />
                         </div>
+                        <div className='d-flex slider-div-2'>
+                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
+                            <img src='/assets/informative/characterNew.svg' className='cartoon_img' />
+                            <img src="/assets/informative/5.png" className='slider-img' />
+                        </div>
                     </Slider>
                 </div>
             </div>

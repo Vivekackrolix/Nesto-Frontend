@@ -21,3 +21,12 @@
     line-height: 25px;
     color: var(--silver-surfer);
 }
+
+.t-c_span1 {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+    line-height: 25px;
+    color: var(--silver-surfer);
+}

@@ -1,7 +1,7 @@
 .blog-detail-banner {
     /* background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.45)),
     url(../../../public/assets/informative/blogDetailBanner.png); */
-    background: url(../../../public/assets/informative/blogDetailBanner.png);
+    background: url(../../../public/assets/informative/blogs/blog-1-banner.png);
     width: 100%;
     height: 420px;
     background-repeat: no-repeat;

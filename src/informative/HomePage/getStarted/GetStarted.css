@@ -20,14 +20,17 @@
 .get-started_heading {
     font-weight: 900;
     font-size: 34px;
-    display: block;
+    /* display: block; */
     text-transform: capitalize;
+    /* line-height: 13%; */
     /* text-shadow: 2px 2px 3px #bbbbbb; */
 }
 
-.get-started_heading span {
+.get-started_span {
     font-size: 22px;
     font-weight: 400;
+    display: block;
+    /* width: 45%; */
 }
 
 .get-started_btn {

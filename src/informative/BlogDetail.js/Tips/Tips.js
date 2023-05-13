@@ -86,7 +86,7 @@ const Tips = () => {
     <>
       <Fade up duration={1000} delay={100}>
         <div
-          className="container tips-container"
+          className="mb-5 container tips-container"
           style={{ overflowX: "hidden" }}>
           <div className="tips-header">
             <div className="tips-header_box text-center">
@@ -324,9 +324,10 @@ const Tips = () => {
           </Fade>
         </div>
       </Fade >
-      {/* RecentPost */}
+      {/* RecentPost ===================
+      ============================== */}
       {/* Css coming from BlogList/LatestPostLeft/LatestPostLeft.css*/}
-      <div className="container mb-5" style={{ overflow: "hidden" }}>
+      {/* <div className="container mb-5" style={{ overflow: "hidden" }}>
         <div className="row">
           <div className="recent-post_box">
             <Fade left duration={1000} delay={100}>
@@ -383,8 +384,9 @@ const Tips = () => {
             );
           })}
         </div>
-      </div>
-      {/* RecentPostEnd */}
+      </div> */}
+      {/* RecentPostEnd ========
+      ====================== */}
       <InformativeFooter />
     </>
   );
