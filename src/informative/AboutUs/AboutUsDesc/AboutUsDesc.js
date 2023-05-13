@@ -11,7 +11,7 @@ const AboutUsDesc = () => {
             <div className="col-lg-6">
               <img
                 className="about-us_box1-img"
-                src="/assets/informative/device-new.svg"
+                src="/assets/informative/NestoAbout.png"
                 alt="about"
               />
               <div className="about-us_box1_btn-div justify-content-end align-items-start">
@@ -72,7 +72,7 @@ const AboutUsDesc = () => {
               <div className="about-us_box2">
                 <span className="sections-heading">ABOUT US</span>
                 <span className="about-us_box-span2 sections-sub-heading">
-                  Inspiring Brokers & Builders With Innovative Empowerment
+                  Building Broker-Builder Connection!
                 </span>
                 <div className="load-wrapp">
                   <div className="load">
@@ -82,16 +82,7 @@ const AboutUsDesc = () => {
                   </div>
                 </div>
                 <span className="about-us_box-span3">
-                  NestoHub is a platform that makes it simple for brokers and
-                  builders to connect, creating a vast network of possibilities
-                  for both. With the help of NestoHub, a broker can benefit from
-                  an exclusive inventory from well-known builders, and the
-                  builders can take advantage of quicker sales with greater
-                  transparency.
-                </span>
-                <span className="about-us_box-span4">
-                  We significantly provide automation, trust, and digitalization
-                  for brokers and builders across PAN India.
+                  NestoHub is a team of experts who want to revolutionize real estate by creating an effective and streamlined platform that simplifies the builder-broker connection. We serve an upper hand in the real estate market with easy property listing, vast inventory, less trouble, quicker sales, and higher earnings.
                 </span>
               </div>
             </div>

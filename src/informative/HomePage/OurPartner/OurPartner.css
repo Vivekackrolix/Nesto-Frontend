@@ -33,7 +33,7 @@
   transform: rotate(180deg);
 }
 
-.our-partner .slick-list::before {
+/* .our-partner .slick-list::before {
   background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 175px;
@@ -51,4 +51,4 @@
   right: 0;
   width: 200px;
   z-index: 2;
-}
+} */

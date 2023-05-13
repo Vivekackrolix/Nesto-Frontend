@@ -7,7 +7,7 @@ const BuilderForm = () => {
         <Fade bottom duration={1000} distance="100px" delay={100}>
             <div className='col-lg-4 builder-banner-col-3'>
                 <div className='builder-banner-col-3_title_div'>
-                    <span className='builder-banner-col-3_title'>Hello! List Your Property / Requirement</span>
+                    <span className='builder-banner-col-3_title'>List Your Property / Requirement</span>
                 </div>
                 <form action='#' className='builder-banner-col-3_form'>
                     <input type='text' placeholder='Name' className='builder-banner-col-3_input' required />
@@ -20,18 +20,11 @@ const BuilderForm = () => {
                         <option>Plots / Lands</option>
                         <option>Commercial</option>
                     </select>
-                    <select className='builder-banner-col-3_input builder-banner-col-3_select'>
-                        <option disabled={false} value="">Location of Property</option>
-                        <option>option1</option>
-                        <option>option1</option>
-                        <option>option1</option>
-                        <option>option1</option>
-                        <option>option1</option>
-                    </select>
+                    <input type='text' placeholder='Location of Property' className='builder-banner-col-3_input' required />
                     <input type='text' placeholder='Brief Description' className='builder-banner-col-3_input' required />
                     <button type='submit' className='builder-banner-col-3_btn'>Submit</button>
                 </form>
-       </div>
+            </div>
         </Fade>
     )
 }

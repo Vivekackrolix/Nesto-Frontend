@@ -25,24 +25,24 @@ import { useLocation } from 'react-router-dom';
 const HomeBanner = () => {
   const testData = [
     {
-      personName: 'Raghav Bindra',
+      personName: 'Sudhir Yadav',
       desc: 'NestoHub is a unique platform for builders and brokers. It makes property listing and selling super easy and convenient. I highly recommend NestoHub to my fellow builders.',
       role: '',
-      personImg: '/assets/person.png'
+      personImg: '/assets/informative/testimonials1.png',
     },
     {
-      personName: 'Suhail Siddiqui',
+      personName: 'Sachin Kumar',
       desc: 'I was a new broker in the market, and NestoHub was the perfect platform for me to start selling properties with higher earnings and the finest properties. They advised me on gaining profits and quick sales.',
       role: '',
-      personImg: '/assets/person.png'
+      personImg: '/assets/profile.svg',
     },
     {
-      personName: 'Jamshed Khan',
+      personName: 'Vinit Sharma',
       desc: 'I really like working with NestoHub, as they are skilled professionals and reliable for selling my properties. This digital platform is a big yes for every builder and broker from my side.',
       role: '',
-      personImg: '/assets/person.png'
+      personImg: '/assets/profile.svg',
     },
-  ]
+  ];
 
   const scrollbarRef = useRef(null);
 
@@ -565,7 +565,7 @@ const HomeBanner = () => {
           {/* circle scroll */}
           <div className="app-c">
             <main>
-              <div id="sv" data-h-color="blck-1" className="mt-5 scroll-circle">
+              <div id="sv" data-h-color="blck-1" className="scroll-circle">
                 <div id="svlg" className="lg">
                   {!!circleScrollData?.length &&
                     circleScrollData.map(
@@ -595,7 +595,7 @@ const HomeBanner = () => {
                 <div className="rg fx" data-fx>
                   <div>
                     <div className="cir">
-                      <div className=" position-absolute top-50 start-50 translate-middle">
+                      <div className="animate-cartoon position-absolute top-50 start-50 translate-middle">
                         <Image
                           className="animation-cartoon-img"
                           src="/assets/informative/animation-cartoon-original.svg"
@@ -639,7 +639,7 @@ const HomeBanner = () => {
                       <div className="header-group">
                         <h3>
                           <strong className="about-mh">
-                            Lorem ipsum dolor sit amet.
+                            {/* Lorem ipsum dolor sit amet. */}
                           </strong>
                         </h3>
                       </div>
@@ -714,7 +714,11 @@ const HomeBanner = () => {
           <OurPartner />
           <GetStarted />
           <News />
-          <Testimonials testData={testData} title='Builders On NestoHub' subtitle='Our Achievements In Your Words' />
+          <Testimonials
+            testData={testData}
+            title="Builders & Brokers On NestoHub"
+            subtitle="Our Achievements In Your Words"
+          />
           <InformativeFooter />
         </div>
       </div>

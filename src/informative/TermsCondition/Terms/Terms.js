@@ -9,69 +9,32 @@ const Terms = () => {
             ======================== */}
             <Fade up duration={1000} delay={100}>
                 <div>
-                    <span className='t-c_span'>
-                        I. Defined Terms:
+                    <span className='t-c_span1'>
+                        Acceptance of Terms:
                     </span>
-                    <span className='t-c_span2'>Unless otherwise specified, the capitalized words shall have the meanings as defined herein below:</span>
-                    <div className='t-c_box'>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'>"Agreement" shall mean and include the completed application form, its attachment(s) and the terms and conditions stated herein. It shall be deemed to have been executed at New Delhi.</li>
-                        </div>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'>"Company": is defined as Magicbricks Realty Services Limited ("the Company") an existing Company under the Companies Act, 1956 and having its corporate office at Times Centre (Digital Content Production Facility), FC - 6, (Third Floor), Sector 16 A, Film City, NOIDA - 201301 U.P., along with its unit for the Company's website Magicbricks.com.</li>
-                        </div>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'>"Date of Commencement" is the date indicating the acceptance of the application by the User to the service. It shall be specified by the Company in its notice to You either through e-mail or conventional mail.</li>
-                        </div>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'>"Date of Termination" is the date of expiry mentioned in the notice or/and the letter of termination.</li>
-                        </div>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'>Magicbricks.com" is defined as the internet website of the Company at www.magicbricks.com</li>
-                        </div>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'>"My Subscriptions" contains time to time information and description of the Services for the User provided by the Company in writing or contained in the website Magicbricks.com.</li>
-                        </div>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'>"Registration Data" is the database of all the particulars and information supplied by the User on initial application and subscription, including but without limiting to the User's name, telephone number, mailing address, account and email address.</li>
-                        </div>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'>"User" is defined as an individual or corporate subscriber for the Services and the signatory, whose particulars are contained in the application form and includes his successors and permitted assignees. "User" or "You" also includes any person who access or avail this Site of the Company for the purpose of hosting, publishing, sharing, transacting, displaying or uploading information or views and includes other persons jointly participating in using the Site of the Company.</li>
-                        </div>
-                        <div className='d-flex gap-3 align-items-center mt-3'>
-                            <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
-                            <li className='t-c_li'> Words referring to masculine include the feminine and the singular include the plural and vice versa as the context admits or requires; and Words importing persons includes individuals, bodies corporate and unincorporated.</li>
-                        </div>
-                    </div>
+                    <span className='t-c_span2'>Users of the platform must agree to these terms and conditions before accessing or using the services provided.</span>
+
                 </div>
             </Fade>
             {/* Second===========
             ================= */}
             <Fade up duration={1000} delay={100}>
                 <div>
-                    <span className='t-c_span'>
-                        II. Term:
+                    <span className='t-c_span1'>
+                        User Eligibility:
                     </span>
-                    <span className='t-c_span2'>These Terms shall continue to form a valid and binding contract between the Parties, and shall continue to be in full force and effect until the User continues to access and use the Site.</span>
+                    <span className='t-c_span2'>Users must be of legal age and capable of entering into a legally binding agreement. If the platform allows user registration, accurate and complete information must be provided.</span>
                 </div>
             </Fade>
             {/* Third===============
             ==================== */}
             <Fade up duration={1000} delay={100}>
                 <div>
-                    <span className='t-c_span'>
-                        III. Services:
+                    <span className='t-c_span1'>
+                        License and Usage:
                     </span>
-                    <span className='t-c_span2'>Company provides a number of internet-based services through its platform and shall include:</span>
-                    <div className='t-c_box'>
+                    <span className='t-c_span2'>The platform grants users a non-exclusive, non-transferable license to access and use the services provided, subject to compliance with the terms and conditions.</span>
+                    {/* <div className='t-c_box'>
                         <div className='d-flex gap-1 align-items-start mt-3'>
                             <span className='t-c_li'>1. </span>
                             <li className='t-c_li'>Posting User profile or listing for the purpose of sale/rental of property, and related property services etc.</li>
@@ -92,28 +55,29 @@ const Terms = () => {
                             <span className='t-c_li'>5. </span>
                             <li className='t-c_li'>Send advertisements and promotional messages through emails and messages.</li>
                         </div>
-                    </div>
-                    <span className='t-c_span2'>The Services can be purchased through various methods of payments offered. The purchase of Services shall be additionally governed by specific policies of sale, like subscription fees, payment and Refund policy, cancellation policy etc</span>
+                    </div> */}
+                    {/* <span className='t-c_span2'>The Services can be purchased through various methods of payments offered. The purchase of Services shall be additionally governed by specific policies of sale, like subscription fees, payment and Refund policy, cancellation policy etc</span> */}
                 </div>
             </Fade>
             {/* Fourth=================
             ======================= */}
             <Fade up duration={1000} delay={100}>
                 <div>
-                    <span className='t-c_span'>
-                        IV. Eligibility:
+                    <span className='t-c_span1'>
+                        Intellectual Property:
                     </span>
-                    <span className='t-c_span2'>You hereby represent and warrant to the Company that you are at least eighteen (18) years of age or above and are capable of entering, performing and adhering to these Terms. While individuals under the age of 18 may utilize the Service of the site, they shall do so only with the involvement & guidance of their parents and/or legal guardians, under such Parent /Legal guardian's registered account. You agree to register prior to uploading any content and/or comment and any other use or services of this site and provide your details including but not limited to complete name, age, email address, residential address, and contact number.</span>
+                    <span className='t-c_span2'>All intellectual property rights associated with the platform, including trademarks, copyrights, and proprietary information, are owned by the platform or its licensors.</span>
                 </div>
             </Fade>
             {/* Fifth=================
             ====================== */}
             <Fade up duration={1000} delay={100}>
                 <div>
-                    <span className='t-c_span'>
-                        V. PG Listing and PG Platform:
+                    <span className='t-c_span1'>
+                        Prohibited Activities:
                     </span>
-                    <div className='t-c_box'>
+                    <span className='t-c_span2'>Users must not engage in any activities that violate laws, infringe upon the rights of others, or disrupt the platform's operations. This may include unauthorized access, spamming, or uploading malicious content.</span>
+                    {/* <div className='t-c_box'>
                         <div className='d-flex gap-1 align-items-start mt-3'>
                             <span className='t-c_li'>1. </span>
                             <li className='t-c_li'>Magicbricks Realty Services Limited ("the Company") shall shortly launch a new Platform ("PG Platform") w.r.t. PG listings only.</li>
@@ -138,17 +102,17 @@ const Terms = () => {
                             <span className='t-c_li'>6. </span>
                             <li className='t-c_li'>PG owners or Operators shall be required to complete KYC as per Magicbricks policy.</li>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </Fade>
             {/* Sixth====
             ========= */}
             <Fade up duration={1000} delay={100}>
                 <div>
-                    <span className='t-c_span'>
-                        VI. Subscription Fees:
+                    <span className='t-c_span1'>
+                        Privacy and Data Protection:
                     </span>
-                    <div className='t-c_box'>
+                    {/* <div className='t-c_box'>
                         <div className='d-flex gap-3 align-items-center mt-3'>
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                             <li className='t-c_li'>The applicable rate of the Subscription Fees for the Service provided shall be such as mentioned in the "My Subscriptions" page or as may be prescribed by the Company from time to time.</li>
@@ -161,17 +125,19 @@ const Terms = () => {
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                             <li className='t-c_li'> All individual Users who access or make posting of information on the Site for the purpose of buying property shall be exempted from the application of this clause.</li>
                         </div>
-                    </div>
+                    </div> */}
+                    <span className='t-c_span2'>Please refer to platforms Privacy policy for details around Privacy and Data Protection.</span>
                 </div>
             </Fade>
             {/* Seventh====
             =========== */}
             <Fade up duration={1000} delay={100}>
                 <div>
-                    <span className='t-c_span'>
-                        VII. Payment & Refund clause:
+                    <span className='t-c_span1'>
+                        Cookies:
                     </span>
-                    <div className='t-c_box'>
+                    <span className='t-c_span2'>The platform may use cookies or similar technologies to enhance the user experience and collect certain information about users. By using the platform, users consent to the use of cookies in accordance with the platform's privacy policy. Users may have the option to manage cookie preferences through their browser settings, but disabling cookies may affect the functionality of the platform.</span>
+                    {/* <div className='t-c_box'>
                         <div className='d-flex gap-3 align-items-center mt-3'>
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                             <li className='t-c_li'> For all services bought, 50% of the order amount would be towards the activation/administration fees & the rest 50% would be refunded on pro-rata basis, considering the usages of the services. Customer agrees that the refund process would take at least 21 days after the complete documentation has been received by the Finance team for processing such refund.</li>
@@ -192,17 +158,18 @@ const Terms = () => {
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                             <li className='t-c_li'>Payments made to the Company through IOS app shall not be refundable under any circumstances, including but not limited to the termination of this Agreement for whatever reason.</li>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </Fade>
             {/* Eighth====
             ========== */}
             <Fade up duration={1000} delay={100}>
                 <div>
-                    <span className='t-c_span'>
-                        Owners Services:
+                    <span className='t-c_span1'>
+                       Content Ownership:
                     </span>
-                    <div className='t-c_box'>
+                    <span className='t-c_span2'>Users are responsible for the content they upload to the platform. By submitting content, users grant the platform a non-exclusive, worldwide, royalty-free license to use, reproduce, modify, and distribute the content for the purpose of operating and promoting the platform.</span>
+                    {/* <div className='t-c_box'>
                         <div className='d-flex gap-3 align-items-center mt-3'>
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                             <li className='t-c_li'>The Owners Service once subscribed shall be non-refundable, however, Company may refund the amount in the event a property is not linked with the package so bought. In such an event 50% of the order amount would be towards the activation/administration fees and shall be forfeited & the rest 50% would be refunded on pro-rata basis.</li>
@@ -231,7 +198,67 @@ const Terms = () => {
                             <img src='/assets/informative/square-dot.png' alt='square-dot' className='t-c_span_dot' />
                             <li className='t-c_li'> The Company retains the right to change any of the terms & conditions. Additionally, the Company's decision shall be final in the event that a disagreement occurs about the nature of the service, pricing, cancellation of a subscription pack, refunds against a subscription pack, etc. within the offer time and thereafter.</li>
                         </div>
-                    </div>
+                    </div> */}
+                </div>
+            </Fade>
+            {/* Nine ========
+            ============= */}
+            <Fade up duration={1000} delay={100}>
+                <div>
+                    <span className='t-c_span1'>
+                        Limitation of Liability:
+                    </span>
+                    <span className='t-c_span2'>The platform should not be held liable for any direct, indirect, incidental, or consequential damages arising out of the use or inability to use the services provided.</span>
+                </div>
+            </Fade>
+            {/* Ten =========
+            ============= */}
+            <Fade up duration={1000} delay={100}>
+                <div>
+                    <span className='t-c_span1'>
+                        Limitation of Liability:
+                    </span>
+                    <span className='t-c_span2'>The platform should not be held liable for any direct, indirect, incidental, or consequential damages arising out of the use or inability to use the services provided.</span>
+                </div>
+            </Fade>
+            {/* Eleven ========
+            =============== */}
+            <Fade up duration={1000} delay={100}>
+                <div>
+                    <span className='t-c_span1'>
+                        Indemnification:
+                    </span>
+                    <span className='t-c_span2'>Users agree to indemnify and hold the platform harmless from any claims, losses, or damages resulting from their use of the platform or violation of the terms and conditions.</span>
+                </div>
+            </Fade>
+            {/* 12 ========
+            =========== */}
+            <Fade up duration={1000} delay={100}>
+                <div>
+                    <span className='t-c_span1'>
+                        Modifications to Terms:
+                    </span>
+                    <span className='t-c_span2'>The platform reserves the right to modify or update the terms and conditions at any time. Users should regularly review the terms to stay informed about any changes.</span>
+                </div>
+            </Fade>
+            {/* 13 ========
+            =========== */}
+            <Fade up duration={1000} delay={100}>
+                <div>
+                    <span className='t-c_span1'>
+                        Termination:
+                    </span>
+                    <span className='t-c_span2'>The platform reserves the right to terminate or suspend user accounts or access to the services at its discretion, with or without cause.</span>
+                </div>
+            </Fade>
+            {/* 13 ========
+            =========== */}
+            <Fade up duration={1000} delay={100}>
+                <div>
+                    <span className='t-c_span1'>
+                        Governing Law and Jurisdiction:
+                    </span>
+                    <span className='t-c_span2'>All dispute related to these terms shall be exclusively resolved in the courts located in Gurgaon, India.</span>
                 </div>
             </Fade>
         </>

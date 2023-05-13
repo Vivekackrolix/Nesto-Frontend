@@ -21,22 +21,27 @@ const BannerSlider = () => {
                         <div className='d-flex slider-div-2'>
                             <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
                             <img src='/assets/informative/characterNew.svg' className='cartoon_img' />
-                            <img src="/assets/informative/homeSlider-1.png" className='slider-img' />
+                            <img src="/assets/informative/1.png" className='slider-img' />
                         </div>
                         <div className='d-flex slider-div-2'>
                             <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
                             <img src='/assets/informative/characterNew.svg' className='cartoon_img' />
-                            <img src="/assets/informative/homeSlider-2.jpg" className='slider-img' />
+                            <img src="/assets/informative/2.png" className='slider-img' />
                         </div>
                         <div className='d-flex slider-div-2'>
                             <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
                             <img src='/assets/informative/characterNew.svg' className='cartoon_img' />
-                            <img src="/assets/informative/homeSlider-3.jpg" className='slider-img' />
+                            <img src="/assets/informative/3.png" className='slider-img' />
                         </div>
                         <div className='d-flex slider-div-2'>
                             <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
                             <img src='/assets/informative/characterNew.svg' className='cartoon_img' />
-                            <img src="/assets/informative/homeSlider-4.jpeg" className='slider-img' />
+                            <img src="/assets/informative/4.png" className='slider-img' />
+                        </div>
+                        <div className='d-flex slider-div-2'>
+                            <img src='/assets/informative/curve-arrow.png' className='arrow-img' />
+                            <img src='/assets/informative/characterNew.svg' className='cartoon_img' />
+                            <img src="/assets/informative/5.png" className='slider-img' />
                         </div>
                     </Slider>
                 </div>

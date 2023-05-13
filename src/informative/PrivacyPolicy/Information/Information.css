@@ -4,13 +4,13 @@
 
 .p-p_info-container-2 {  
     overflow-y: hidden;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 
 .info_title-box {
     background: var(--lite-skyblue);
     padding: 14px 0;
-    margin-top: 50px;
+    margin-top: 2%;
 }
 
 .info_title {

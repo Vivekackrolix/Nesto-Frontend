@@ -50,51 +50,15 @@ function SamplePrevArrow(props) {
 const review = [
   {
     id: 1,
-    img: './assets/nestopartner1.png',
+    img: './assets/informative/partners/partner1.svg',
   },
   {
     id: 2,
-    img: './assets/nestopartner3.png',
+    img: './assets/informative/partners/partner2.svg',
   },
   {
     id: 3,
-    img: './assets/nestopartner6.png',
-  },
-  {
-    id: 4,
-    img: './assets/nestopartner2.png',
-  },
-  {
-    id: 5,
-    img: './assets/nestopartner5.png',
-  },
-  {
-    id: 6,
-    img: './assets/nestopartner6.png',
-  },
-  {
-    id: 7,
-    img: './assets/nestopartner5.png',
-  },
-  {
-    id: 8,
-    img: './assets/nestopartner1.png',
-  },
-  {
-    id: 9,
-    img: './assets/nestopartner2.png',
-  },
-  {
-    id: 10,
-    img: './assets/nestopartner3.png',
-  },
-  {
-    id: 11,
-    img: './assets/nestopartner4.png',
-  },
-  {
-    id: 12,
-    img: './assets/nestopartner5.png',
+    img: './assets/informative/partners/partner3.svg',
   },
 ];
 
@@ -102,7 +66,7 @@ const OurPartner = () => {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 3,
     speed: 3000,
     autoplaySpeed: 3000,
     cssEase: 'linear',
@@ -157,7 +121,7 @@ const OurPartner = () => {
     Aos.init({ duration: 1400 });
   }, []);
   return (
-    <div className="our-partner">
+    <div className="our-partner container">
       <div className="">
         <Heading title="Our Partners" sub="The Leading Collaborations On NestoHub" />
       </div>
@@ -165,12 +129,13 @@ const OurPartner = () => {
         <div className="mt-4 mb-5 px-5 d-flex">
           <Slider
             {...settings}
-            className="partner-slider d-flex gap-2"
+            className="row partner-slider d-flex gap-2"
           >
             {review.map((obj, e) => {
               return (
-                <div className="px-4" key={e}>
-                  <Link to="/partner-page">
+                <div className="col-lg-4 px-4" key={e}>
+                  {/* <Link to="/partner-page"> */}
+                  <Link to='/'>
                     <img src={obj.img} className="partner-image" alt="partner" />
                   </Link>
                 </div>
@@ -178,15 +143,15 @@ const OurPartner = () => {
             })}
           </Slider>
         </div>
-        /</Fade>
-      <Fade up duration={1000} distance="100px" delay={100}>
+        </Fade>
+      {/* <Fade up duration={1000} distance="100px" delay={100}>
         <div className="text-center">
           <Link to="/partner-page" className="primary_button">
             View All
             <MdKeyboardDoubleArrowRight size={20} className="move-arrow" />
           </Link>
         </div>
-      </Fade>
+      </Fade> */}
     </div>
   );
 };

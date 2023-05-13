@@ -78,7 +78,7 @@ export default function ChooseUs() {
     arrows: true,
     loop: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     accessibility: true,
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
@@ -124,9 +124,9 @@ export default function ChooseUs() {
   };
   return (
     <>
-      <div className="container">
+      <div className="coose-container container">
         <Heading
-          title="NestoHub For Brokers"
+          title="Why Choose Us"
           sub="We Make Real Estate Simple & Efficient"
         />
         <Fade bottom duration={1000} distance="100px" delay={100}>

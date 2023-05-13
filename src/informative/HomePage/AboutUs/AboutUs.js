@@ -13,7 +13,7 @@ const AboutUs = () => {
             <div className="col-lg-6">
               <img
                 className="about-us_box1-img"
-                src="/assets/informative/device-new.svg"
+                src="/assets/informative/NestoAbout.png"
                 alt="about"
               />
               <div className="about-us_box1_btn-div">

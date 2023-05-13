@@ -13,11 +13,11 @@ const Stats = () => {
       <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
         <img
           className="stats-row-img"
-          src="./assets/get-money.png"
+          src="./assets/informative/stats/icon4.svg"
           alt="animation"
         />
         <div className="stats-row-count">
-          <ScrollTrigger
+          {/* <ScrollTrigger
             onEnter={() => setCounter1On(true)}
             onExit={() => setCounter1On(false)}
           >
@@ -31,60 +31,33 @@ const Stats = () => {
                 duration={2}
               />
             )}
-          </ScrollTrigger>
+          </ScrollTrigger> */}
+          1500+
         </div>
         <p className="stats-row-p">NestoHub Brokers</p>
       </div>
       <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
-        <img className="stats-row-img" src="./assets/sale.png" alt="stats" />
+        <img className="stats-row-img" src="./assets/informative/stats/icon1.svg" alt="stats" />
         <div className="stats-row-count">
-          <ScrollTrigger
-            onEnter={() => setCounter2On(true)}
-            onExit={() => setCounter2On(false)}
-          >
-            {counter2On && (
-              <CountUp
-                start={0.0}
-                end={35.469}
-                decimals={3}
-                decimal=","
-                suffix="+"
-                duration={2}
-              />
-            )}
-          </ScrollTrigger>
+          500+
         </div>
         <p className="stats-row-p">NestoHub Inventory</p>
       </div>
       <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
         <img
           className="stats-row-img"
-          src="./assets/document.png"
+          src="./assets/informative/stats/icon2.svg"
           alt="stats"
         />
         <div className="stats-row-count">
-          <ScrollTrigger
-            onEnter={() => setCounter3On(true)}
-            onExit={() => setCounter3On(false)}
-          >
-            {counter3On && (
-              <CountUp start={0} end={560} suffix="+" duration={2} />
-            )}
-          </ScrollTrigger>
+          10+
         </div>
         <p className="stats-row-p">NestoHub Builders</p>
       </div>
       <div className="col-lg-3 col-md-3 col-sm-6 stats-row-col my-3">
-        <img className="stats-row-img" src="./assets/target.png" alt="stats" />
+        <img className="stats-row-img" src="./assets/informative/stats/icon3.svg" alt="stats" />
         <div className="stats-row-count">
-          <ScrollTrigger
-            onEnter={() => setCounter4On(true)}
-            onExit={() => setCounter4On(false)}
-          >
-            {counter4On && (
-              <CountUp start={0} end={30} suffix="%" duration={2} />
-            )}
-          </ScrollTrigger>
+          7+
         </div>
         <p className="stats-row-p">NestoHub Cities</p>
       </div>

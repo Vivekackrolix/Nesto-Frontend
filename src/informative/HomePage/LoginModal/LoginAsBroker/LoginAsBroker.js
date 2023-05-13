@@ -16,7 +16,7 @@ const LoginAsBroker = ({ show, onHide }) => {
     >
       <div className="login-as-broker">
         <h3 className="fw-bold text-center mb-0">
-          Embark On Your New Beginning
+          Login As Nesto Broker
         </h3>
         <div className="login-as-broker-div">
           <div>

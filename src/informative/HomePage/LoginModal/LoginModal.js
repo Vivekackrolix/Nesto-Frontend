@@ -14,9 +14,9 @@ const LoginModal = ({ show, onHide }) => {
       onHide={onHide}
     >
       <div className="login-modal">
-        <h3 className="login-modal-heading">New Place, New Home!</h3>
+        <h3 className="login-modal-heading">Welcome Back Netso User!</h3>
         <span className="login-modal-sub-heading">
-          Are you ready to uproot and start over in a new area?
+          Login to your Nesto account and keep growing with NestoHub 
         </span>
         {/* Broker Link */}
         <div className="login-modal-broker-link">
