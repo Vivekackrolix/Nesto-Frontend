@@ -4,7 +4,7 @@ import './chooseus.css';
 import Slider from 'react-slick';
 import { Fade } from 'react-reveal';
 
-export default function ChooseUs() {
+export default function ChooseUs({chooseData, title, subtitle}) {
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -40,33 +40,6 @@ export default function ChooseUs() {
       </div>
     );
   }
-  const data = [
-    {
-      img: './assets/informative/chooseUs/no-fee.svg',
-      title: 'Zero Joining Fee',
-      desc: 'NestoHub is a free and open platform for all brokers and builders. We imply no cost or limitations on our services to ensure complete benefits.',
-    },
-    {
-      img: './assets/informative/chooseUs/handshake.svg',
-      title: 'User Friendly',
-      desc: 'Our powerful platform gives you access to your property performance through the NestoHub builder dashboard.',
-    },
-    {
-      img: './assets/informative/chooseUs/social-care.svg',
-      title: 'Wide Reach',
-      desc: 'We offer you and your property access to a vast pool of brokers without having to worry about excessive administrative burden.',
-    },
-    {
-      img: './assets/informative/chooseUs/bullhorn.svg',
-      title: 'Property Promotions',
-      desc: 'NestoHub list your property on its platform and promote it to the brokers at PAN India level.',
-    },
-    {
-      img: './assets/informative/chooseUs/loan.svg',
-      title: 'Exclusive Package',
-      desc: 'You can set yourself apart both in a physical market and on NestoHub by purchasing our exclusive promotional packages.',
-    },
-  ];
 
   const settings = {
     slidesToShow: 4,
@@ -126,13 +99,13 @@ export default function ChooseUs() {
     <>
       <div className="coose-container container">
         <Heading
-          title="Why Choose Us"
-          sub="We Make Real Estate Simple & Efficient"
+          title={title}
+          sub={subtitle}
         />
         <Fade bottom duration={1000} distance="100px" delay={100}>
           <div className="row choose-row">
             <Slider {...settings}>
-              {data.map(item => {
+              {chooseData?.map(item => {
                 return (
                   <div className="col-lg-3 col-md-6 col-sm-12 choose-col">
                     <div className="choose-card">

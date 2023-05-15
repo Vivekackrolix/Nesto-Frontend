@@ -1,46 +1,84 @@
-import { useEffect, useRef } from 'react';
-import { Linear, Expo, gsap } from 'gsap';
+import { useEffect, useRef } from "react";
+import { Linear, Expo, gsap } from "gsap";
 
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import $ from 'jquery';
-import Scrollbar from 'smooth-scrollbar';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import $ from "jquery";
+import Scrollbar from "smooth-scrollbar";
 
-import InformativeNavbar from '../../Navbar/Navbar';
-import GetStarted from '../getStarted/GetStarted';
-import News from '../news/News';
-import AboutUs from '../AboutUs/AboutUs';
-import ChooseUs from '../chooseus/Chooseus';
-import Testimonials from '../testimonials/Testimonials';
-import Stats from '../stats/Stats';
-import Banner from './Banner/Banner';
-import OurPartner from '../OurPartner/OurPartner';
-import HowWork from '../../AboutUs/HowWork/HowWork';
-import HomeVideo from '../HomeVideo/HomeVideo';
-import InformativeFooter from '../../InformativeFooter/InformativeFooter';
-import './circle-animation/CircleAnimation.css';
-import { Image } from 'react-bootstrap';
-import { circleScrollData, circleScrollDataIcons } from '../../data/constant';
-import { useLocation } from 'react-router-dom';
+import InformativeNavbar from "../../Navbar/Navbar";
+import GetStarted from "../getStarted/GetStarted";
+import News from "../news/News";
+import AboutUs from "../AboutUs/AboutUs";
+import ChooseUs from "../chooseus/Chooseus";
+import Testimonials from "../testimonials/Testimonials";
+import Stats from "../stats/Stats";
+import Banner from "./Banner/Banner";
+import OurPartner from "../OurPartner/OurPartner";
+import HowWork from "../../AboutUs/HowWork/HowWork";
+import HomeVideo from "../HomeVideo/HomeVideo";
+import InformativeFooter from "../../InformativeFooter/InformativeFooter";
+import "./circle-animation/CircleAnimation.css";
+import { Image } from "react-bootstrap";
+import { circleScrollData, circleScrollDataIcons } from "../../data/constant";
+import { useLocation } from "react-router-dom";
 
 const HomeBanner = () => {
   const testData = [
     {
-      personName: 'Sudhir Yadav',
-      desc: 'NestoHub is a unique platform for builders and brokers. It makes property listing and selling super easy and convenient. I highly recommend NestoHub to my fellow builders.',
-      role: '',
-      personImg: '/assets/informative/testimonials1.png',
+      personName: "Sudhir Yadav",
+      desc: "NestoHub is a unique platform for builders and brokers. It makes property listing and selling super easy and convenient. I highly recommend NestoHub to my fellow builders.",
+      role: "",
+      personImg: "/assets/informative/testimonials1.png",
     },
     {
-      personName: 'Sachin Kumar',
-      desc: 'I was a new broker in the market, and NestoHub was the perfect platform for me to start selling properties with higher earnings and the finest properties. They advised me on gaining profits and quick sales.',
-      role: '',
-      personImg: '/assets/profile.svg',
+      personName: "Sachin Kumar",
+      desc: "I was a new broker in the market, and NestoHub was the perfect platform for me to start selling properties with higher earnings and the finest properties. They advised me on gaining profits and quick sales.",
+      role: "",
+      personImg: "/assets/profile.svg",
     },
     {
-      personName: 'Vinit Sharma',
-      desc: 'I really like working with NestoHub, as they are skilled professionals and reliable for selling my properties. This digital platform is a big yes for every builder and broker from my side.',
-      role: '',
-      personImg: '/assets/profile.svg',
+      personName: "Vinit Sharma",
+      desc: "I really like working with NestoHub, as they are skilled professionals and reliable for selling my properties. This digital platform is a big yes for every builder and broker from my side.",
+      role: "",
+      personImg: "/assets/profile.svg",
+    },
+  ];
+
+  const chooseData = [
+    {
+      img: "./assets/informative/chooseUs/no-fee.svg",
+      title: "Zero Joining Fee",
+      desc: "NestoHub is a free and open platform for all brokers and builders. We imply no cost or limitations on our services to ensure complete benefits.",
+    },
+    {
+      img: "./assets/informative/chooseUs/handshake.svg",
+      title: "No Customer Poaching",
+      desc: "We guarantee that you will retain complete ownership of your client and that we will not reveal their identity or use their data to poach them.",
+    },
+    {
+      img: "./assets/informative/chooseUs/social-care.svg",
+      title: "Community Benefits",
+      desc: "NestoHub connects users with professional Nesto Advisors and other like-minded people to encourage one another through strategic guidance.",
+    },
+    {
+      img: "./assets/informative/chooseUs/bullhorn.svg",
+      title: "Fluent Loan Support",
+      desc: "Close the deals quickly and precisely with financial assistance from credible institutions on NestoHub, and make property buying simple.",
+    },
+    {
+      img: "./assets/informative/chooseUs/loan.svg",
+      title: "Digital Marketing",
+      desc: "Brokers can easily and efficiently promote themselves free of cost as trusted fellows to their clients by creating and promoting a professional digital profile on NestoHub. ",
+    },
+    {
+      img: "./assets/informative/chooseUs/loan.svg",
+      title: "Platform For New Brokers",
+      desc: "NestoHub offers numerous opportunities for new brokers to gain access and empowerment in order to launch successful businesses.",
+    },
+    {
+      img: "./assets/informative/chooseUs/loan.svg",
+      title: "Eliminate The Mediator",
+      desc: "NestoHub removes the intermediaries, such as dealers, from the builder-broker connection, leaving the brokerage entirely to the broker.",
     },
   ];
 
@@ -49,16 +87,16 @@ const HomeBanner = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    document.body.classList.add('gsap-scroll-trigger');
+    document.body.classList.add("gsap-scroll-trigger");
 
     // jquery code start here
     const noloader = true;
 
-    const DEV = typeof noloader !== 'undefined' ? noloader : false;
+    const DEV = typeof noloader !== "undefined" ? noloader : false;
     const $win = $(window);
     const $doc = $(document);
-    const $html = $('html');
-    const $body = $('body');
+    const $html = $("html");
+    const $body = $("body");
     const $res = 950;
     const nn = Linear.easeNone;
     const exo = Expo.easeOut;
@@ -67,31 +105,31 @@ const HomeBanner = () => {
     let $y = 0;
     let $x = 0;
 
-    let $ifScrollH = $('[data-horizontal]').length;
+    let $ifScrollH = $("[data-horizontal]").length;
 
     /*********** * ************/
 
     function sizeBgRound() {
-      console.log('loaded');
+      console.log("loaded");
       var $w_w = $(window).width() * 1.5;
       var $w_h = $(window).height() * 1.5;
       if ($w_w > $w_h) {
-        $('.cirbc .cirb').width($w_w).height($w_w);
+        $(".cirbc .cirb").width($w_w).height($w_w);
       } else {
-        $('.cirbc .cirb').width($w_h).height($w_h);
+        $(".cirbc .cirb").width($w_h).height($w_h);
       }
     }
 
     function heightPart() {
       var $winh = $(window).height();
-      $('#app,  #sv .rg, #sv .lgt').outerHeight($winh);
+      $("#app,  #sv .rg, #sv .lgt").outerHeight($winh);
     }
 
-    window.addEventListener('load', function () {
+    window.addEventListener("load", function () {
       sizeBgRound();
       heightPart();
     });
-    window.addEventListener('resize', function () {
+    window.addEventListener("resize", function () {
       sizeBgRound();
       heightPart();
     });
@@ -125,7 +163,7 @@ const HomeBanner = () => {
     // ifMobile() ? $html.addClass('mob') : !1;
     const isMobile = ifMobile();
     if (isMobile) {
-      $html.addClass('mob');
+      $html.addClass("mob");
     } else {
       // do nothing
     }
@@ -135,9 +173,9 @@ const HomeBanner = () => {
     var $cursor = {
       classCursor: function () {
         var t = this;
-        $('[data-cc]').each(function () {
+        $("[data-cc]").each(function () {
           var $t = $(this);
-          var c = $t.data('cc');
+          var c = $t.data("cc");
           $t.on({
             mouseover: function () {
               $body.addClass(c);
@@ -193,7 +231,7 @@ const HomeBanner = () => {
       }
     }
 
-    _defineProperty(HorizontalScrollPlugin, 'pluginName', 'horizontalScroll');
+    _defineProperty(HorizontalScrollPlugin, "pluginName", "horizontalScroll");
 
     if (ifMobile()) {
       var $damping = 0.1;
@@ -204,28 +242,28 @@ const HomeBanner = () => {
     if ($ifScrollH) {
       if ($win.width() > $res) {
         Scrollbar.use(HorizontalScrollPlugin);
-        $html.addClass('horiz');
+        $html.addClass("horiz");
         var $vertical = false;
         ScrollTrigger.defaults({ horizontal: true });
       } else {
         Scrollbar.use();
-        $html.addClass('verti');
+        $html.addClass("verti");
         var $vertical = true;
       }
     } else {
       Scrollbar.use();
-      $html.addClass('verti');
+      $html.addClass("verti");
       var $vertical = true;
     }
-    var $s = Scrollbar.init(document.querySelector('#app'), {
+    var $s = Scrollbar.init(document.querySelector("#app"), {
       damping: $damping,
       alwaysShowTracks: false,
       delegateTo: document,
     });
 
-    $('#smooth-scrollbar-style').remove();
+    $("#smooth-scrollbar-style").remove();
 
-    ScrollTrigger.scrollerProxy('body', {
+    ScrollTrigger.scrollerProxy("body", {
       scrollTop(value) {
         if (arguments.length) {
           $s.scrollTop = value;
@@ -252,204 +290,204 @@ const HomeBanner = () => {
     /************ Scenes ************/
 
     function $afterLoad() {
-      if ($html.data('load') != true) {
-        if ($('#sv').length) {
-          gsap.from('#sv .circ', 1, {
+      if ($html.data("load") != true) {
+        if ($("#sv").length) {
+          gsap.from("#sv .circ", 1, {
             rotation: 90,
             scrollTrigger: {
-              trigger: '#sv',
-              start: 'top bottom',
-              end: 'top top',
+              trigger: "#sv",
+              start: "top bottom",
+              end: "top top",
               scrub: true,
             },
           });
 
           var $tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '#sv',
-              start: 'top top',
-              end: 'bottom top',
+              trigger: "#sv",
+              start: "top top",
+              end: "bottom top",
               scrub: true,
               onEnter: function () {
-                $('#sv .rg').removeClass('fx');
+                $("#sv .rg").removeClass("fx");
               },
               onLeaveBack: function () {
-                $('#sv .rg').addClass('fx');
+                $("#sv .rg").addClass("fx");
               },
             },
           });
-          $tl.to('#sv .circm', 1, { rotation: -360 }, 'a');
-          $tl.to('#sv .rnd i', 1, { rotation: 360 }, 'a');
+          $tl.to("#sv .circm", 1, { rotation: -360 }, "a");
+          $tl.to("#sv .rnd i", 1, { rotation: 360 }, "a");
 
           var $tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '#sv',
-              start: 'top bottom',
-              end: 'bottom bottom',
+              trigger: "#sv",
+              start: "top bottom",
+              end: "bottom bottom",
               scrub: true,
             },
           });
           $tl.staggerFrom(
-            '#sv .rnd i',
+            "#sv .rnd i",
             0.25,
             { opacity: 0, scale: 0 },
             0.25,
-            'a'
+            "a"
           );
           $tl.staggerTo(
-            '#sv .rnd > div > div',
+            "#sv .rnd > div > div",
             0.25,
-            { width: '100%', height: '100%' },
+            { width: "100%", height: "100%" },
             0.25,
-            'a'
+            "a"
           );
 
           var $tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '#sv',
-              start: 'top top',
-              end: 'bottom top',
+              trigger: "#sv",
+              start: "top top",
+              end: "bottom top",
               scrub: true,
             },
           });
           $tl.staggerTo(
-            '#sv .rnd > div > div',
+            "#sv .rnd > div > div",
             0.25,
-            { width: '5%', height: '5%' },
+            { width: "5%", height: "5%" },
             0.25,
-            'a'
+            "a"
           );
           $tl.staggerTo(
-            '#sv .rnd i',
+            "#sv .rnd i",
             0.25,
             { opacity: 0, scale: 0 },
             0.25,
-            'a'
+            "a"
           );
 
           var $tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '.sp-2',
-              start: 'top bottom',
-              end: 'bottom bottom',
+              trigger: ".sp-2",
+              start: "top bottom",
+              end: "bottom bottom",
               scrub: true,
             },
           });
           if ($win.width() > 950) {
-            $tl.to('#sv .rg', 0.25, { paddingLeft: '50%' }, 'a');
-            $tl.to('#sv .rg > div', 0.25, { y: '0%' }, 'a');
-            $tl.to('#sv .cir', 0.25, { rotation: -150, x: '-1000%' }, 'a');
+            $tl.to("#sv .rg", 0.25, { paddingLeft: "50%" }, "a");
+            $tl.to("#sv .rg > div", 0.25, { y: "0%" }, "a");
+            $tl.to("#sv .cir", 0.25, { rotation: -150, x: "-1000%" }, "a");
           } else {
-            $tl.to('#sv .rg', 0.25, { paddingLeft: '0' }, 'a');
+            $tl.to("#sv .rg", 0.25, { paddingLeft: "0" }, "a");
             $tl.to(
-              '#sv .rg > div',
+              "#sv .rg > div",
               0.25,
-              { y: $win.outerHeight() / 2 - $('#sv .rg').outerHeight() / 2 },
-              'a'
+              { y: $win.outerHeight() / 2 - $("#sv .rg").outerHeight() / 2 },
+              "a"
             );
-            $tl.to('#sv .cir', 0.25, { rotation: -150, x: '0' }, 'a');
+            $tl.to("#sv .cir", 0.25, { rotation: -150, x: "0" }, "a");
           }
           $tl.to(
-            '#sv .crc:nth-child(2) > div, #sv .crc:nth-child(4) > div',
+            "#sv .crc:nth-child(2) > div, #sv .crc:nth-child(4) > div",
             0.25,
-            { height: '0%' },
-            'a'
+            { height: "0%" },
+            "a"
           );
           $tl.to(
-            '#sv .crc:nth-child(1) > div, #sv .crc:nth-child(3) > div',
+            "#sv .crc:nth-child(1) > div, #sv .crc:nth-child(3) > div",
             0.25,
-            { width: '0%' },
-            'a'
+            { width: "0%" },
+            "a"
           );
 
-          gsap.to('#sv .crc > div', 1, {
+          gsap.to("#sv .crc > div", 1, {
             scale: 0,
             scrollTrigger: {
-              trigger: '.sp-2',
-              start: 'top top',
-              end: 'bottom top',
+              trigger: ".sp-2",
+              start: "top top",
+              end: "bottom top",
               scrub: true,
             },
           });
 
           var $tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '.sp-2',
-              start: 'top top',
-              end: 'bottom top',
+              trigger: ".sp-2",
+              start: "top top",
+              end: "bottom top",
               scrub: true,
               onEnter: function () {
-                $('.sp-2 .eavl').removeClass('fx');
+                $(".sp-2 .eavl").removeClass("fx");
               },
               onLeaveBack: function () {
-                $('.sp-2 .eavl').addClass('fx');
+                $(".sp-2 .eavl").addClass("fx");
               },
             },
           });
 
           var $tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '.sp-2',
-              start: 'bottom bottom',
+              trigger: ".sp-2",
+              start: "bottom bottom",
               scrub: true,
             },
           });
-          $tl.from('.sp-2 h2', 1, { opacity: 0, x: '0%' }, 'a');
+          $tl.from(".sp-2 h2", 1, { opacity: 0, x: "0%" }, "a");
           $tl.to(
-            '.cirbc svg',
+            ".cirbc svg",
             1,
-            { rotation: 180, opacity: 1, strokeDasharray: '300 999' },
-            'a'
+            { rotation: 180, opacity: 1, strokeDasharray: "300 999" },
+            "a"
           );
 
           var $tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '.sp-5',
-              start: 'top bottom',
-              end: 'bottom top',
+              trigger: ".sp-5",
+              start: "top bottom",
+              end: "bottom top",
               scrub: true,
             },
           });
-          $tl.to('.cirbc .cirbr', 1, { width: '100%', height: '100%' }, 'a');
-          $tl.to('#sv .cir', 1, { scale: 0, opacity: 0 }, 'a');
+          $tl.to(".cirbc .cirbr", 1, { width: "100%", height: "100%" }, "a");
+          $tl.to("#sv .cir", 1, { scale: 0, opacity: 0 }, "a");
 
-          $('.lgtxc').each(function () {
-            var n = $(this).data('lg-st');
+          $(".lgtxc").each(function () {
+            var n = $(this).data("lg-st");
             var $tl = gsap.timeline({
               scrollTrigger: {
                 trigger: this,
-                start: 'top bottom',
-                end: 'top top',
+                start: "top bottom",
+                end: "top top",
                 scrub: true,
               },
             });
-            $tl.to('.cirbc i.n' + n, 1, { opacity: 1 }, 'a');
+            $tl.to(".cirbc i.n" + n, 1, { opacity: 1 }, "a");
 
             var $tl = gsap.timeline({
               scrollTrigger: {
                 trigger: this,
-                start: 'top 20%',
-                end: 'top -30%',
+                start: "top 20%",
+                end: "top -30%",
                 scrub: true,
               },
             });
-            $tl.to(this, 1, { opacity: 0 }, 'a');
-            $tl.to('.cirbc i.n' + n, 1, { opacity: 0, scale: 0 }, 'a');
+            $tl.to(this, 1, { opacity: 0 }, "a");
+            $tl.to(".cirbc i.n" + n, 1, { opacity: 0, scale: 0 }, "a");
           });
 
           var $tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '.sp-3',
-              start: 'top 50%',
-              end: 'bottom 50%',
+              trigger: ".sp-3",
+              start: "top 50%",
+              end: "bottom 50%",
               scrub: true,
             },
           });
-          $tl.to('.cirbc .cirbr', 1, { backgroundColor: '#fff' }, 'a');
-          $tl.to('.sp-2', 1, { opacity: 0 }, 'a');
-          $tl.to('.cirbc svg', 1, { scale: 0 }, 'a');
+          $tl.to(".cirbc .cirbr", 1, { backgroundColor: "#fff" }, "a");
+          $tl.to(".sp-2", 1, { opacity: 0 }, "a");
+          $tl.to(".cirbc svg", 1, { scale: 0 }, "a");
 
-          $('#sv .lgt > div').each(function () {
+          $("#sv .lgt > div").each(function () {
             $tl.fromTo(
               this,
               1,
@@ -458,8 +496,8 @@ const HomeBanner = () => {
                 opacity: 1,
                 scrollTrigger: {
                   trigger: this,
-                  start: 'top bottom',
-                  end: 'bottom 80%',
+                  start: "top bottom",
+                  end: "bottom 80%",
                   scrub: true,
                 },
               }
@@ -468,26 +506,26 @@ const HomeBanner = () => {
         }
       }
 
-      $html.attr('data-load', true);
+      $html.attr("data-load", true);
     }
 
     /************ load ************/
 
     var ld = gsap.timeline({ paused: true });
-    ld.to('#ld svg', 1.5, { y: '120%', ease: exi }, 'a');
-    ld.to('#ld .bg', 1.5, { height: '0%', ease: exi }, 'a');
-    if ($('#cl').length) {
-      ld.to('#ld .bg', 1.5, { height: '0%', ease: exi }, 'a');
+    ld.to("#ld svg", 1.5, { y: "120%", ease: exi }, "a");
+    ld.to("#ld .bg", 1.5, { height: "0%", ease: exi }, "a");
+    if ($("#cl").length) {
+      ld.to("#ld .bg", 1.5, { height: "0%", ease: exi }, "a");
     } else {
       ld.to(
-        '#ld .bg',
+        "#ld .bg",
         1.5,
-        { height: '0%', ease: exi, onStart: $afterLoad },
-        'a'
+        { height: "0%", ease: exi, onStart: $afterLoad },
+        "a"
       );
     }
 
-    if ($('#cl').length) {
+    if ($("#cl").length) {
       ld.progress(1);
     } else {
       ld.timeScale(1);
@@ -500,24 +538,24 @@ const HomeBanner = () => {
     /************ changement page ************/
 
     var ldc = gsap.timeline({ paused: true });
-    ldc.to('#ld', 0, { pointerEvents: 'auto' }, 'a');
-    ldc.to('#ld .bg', 1, { height: '100%', ease: exi }, 'a');
-    ldc.to('#ld svg', 1, { y: '0%', ease: exi }, 'a');
+    ldc.to("#ld", 0, { pointerEvents: "auto" }, "a");
+    ldc.to("#ld .bg", 1, { height: "100%", ease: exi }, "a");
+    ldc.to("#ld svg", 1, { y: "0%", ease: exi }, "a");
 
     var ldm = gsap.timeline({ paused: true });
-    ldm.to('#ld', 0, { pointerEvents: 'auto' }, 'a');
-    ldm.to('#ld svg', 1, { y: '0%', ease: exi, delay: 0.5 }, 'a');
-    ldm.to('#n .nl .bg', 1.5, { width: '100vw', ease: exi }, 'a');
-    ldm.to('#n .nr .bg', 1.5, { width: '0%', ease: exi }, 'a');
+    ldm.to("#ld", 0, { pointerEvents: "auto" }, "a");
+    ldm.to("#ld svg", 1, { y: "0%", ease: exi, delay: 0.5 }, "a");
+    ldm.to("#n .nl .bg", 1.5, { width: "100vw", ease: exi }, "a");
+    ldm.to("#n .nr .bg", 1.5, { width: "0%", ease: exi }, "a");
 
     /************ Reload in Resize ************/
     if (DEV != true && !ifMobile()) {
-      $win.bind('resize', function (e) {
-        if ($('#land').length == 0) {
+      $win.bind("resize", function (e) {
+        if ($("#land").length == 0) {
           ldc
             .totalDuration(1.5)
             .play()
-            .eventCallback('onComplete', function () {
+            .eventCallback("onComplete", function () {
               var $wd = window.RT;
               if ($wd) clearTimeout($wd);
               $wd = setTimeout(function () {
@@ -532,14 +570,14 @@ const HomeBanner = () => {
 
     $s.addListener(function (status) {
       if (!$ifScrollH) {
-        if ($('#sv').length) {
-          var svy = $('#sv').offset().top;
-          $('#sv .rg').css({ marginTop: -svy });
+        if ($("#sv").length) {
+          var svy = $("#sv").offset().top;
+          $("#sv .rg").css({ marginTop: -svy });
         }
 
-        if ($('.sp-2').length) {
-          var eav = $('.sp-2').offset().top;
-          $('.sp-2 .eavl').css({ marginTop: -eav });
+        if ($(".sp-2").length) {
+          var eav = $(".sp-2").offset().top;
+          $(".sp-2 .eavl").css({ marginTop: -eav });
         }
         $cursor.classCursor();
       }
@@ -548,9 +586,9 @@ const HomeBanner = () => {
     $cursor.init();
 
     return () => {
-      window.removeEventListener('load', sizeBgRound);
-      window.removeEventListener('resize', heightPart);
-      document.body.classList.remove('gsap-scroll-trigger');
+      window.removeEventListener("load", sizeBgRound);
+      window.removeEventListener("resize", heightPart);
+      document.body.classList.remove("gsap-scroll-trigger");
     };
   }, []);
   return (
@@ -708,7 +746,11 @@ const HomeBanner = () => {
             </main>
           </div>
           {/* circle scroll code end here */}
-          <ChooseUs />
+          <ChooseUs
+            chooseData={chooseData}
+            title="WHY CHOOSE US"
+            subtitle="We Make Real Estate Simple & Efficient"
+          />
           <HomeVideo />
           <HowWork />
           <OurPartner />
