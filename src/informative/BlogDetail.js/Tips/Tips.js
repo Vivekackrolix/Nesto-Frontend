@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../../../components/footer/Footer";
 import "./Tips.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from "react-icons/bs";
 import InformativeFooter from "../../InformativeFooter/InformativeFooter";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { Fade, Zoom } from "react-reveal";
+import axios from "axios";
+import { apiEndpoints } from "../../BlogList/BlogListApi/ApiEndpoint";
+import { getAPI } from "../../BlogList/BlogListApi/ApiRequest";
+import { useParams } from "react-router-dom";
+
+
 
 const Tips = () => {
+  const { state } = useLocation();
+  const params = useParams();
+  const [blogDetails, setBlogsDetails] = useState([]);
+
+  // useEffect(() => {
+  //   fetchBlogDetails();
+  // }, [])
+
   const liData = [
     {
       para: "Connect with a wide range of brokers.",
@@ -82,6 +96,27 @@ const Tips = () => {
       para: "Utilize their remaining time to grab more customers and close many deals together.",
     }
   ];
+
+  // const fetchBlogDetails = async () => {
+  //   await getAPI`$(apiEndpoints.getBlogByID)$()`
+  //     .then(function (res) {
+  //       setBlogsDetails(res?.data)
+  //     })
+  //     .catch(function (error) {
+  //       // console.log(error);
+  //     })
+  // }
+
+  useEffect(() => {
+    const getPropertyById = async () => {
+      const response = await getAPI(`${apiEndpoints.getBlogByID}?id=${params._id}`
+      );
+      setBlogsDetails(response?.data?.[0]);
+    };
+    getPropertyById();
+  }, []);
+
+  console.log("blogssss", params,blogDetails);
   return (
     <>
       <Fade up duration={1000} delay={100}>
@@ -91,7 +126,7 @@ const Tips = () => {
           <div className="tips-header">
             <div className="tips-header_box text-center">
               <span className="tips-header_heading">
-                How Can New Brokers Contact Well-Known Builders?
+                {blogDetails?.blogName}
               </span>
               <div className="tips_box-1">
                 <div>
@@ -100,10 +135,10 @@ const Tips = () => {
                     src="/assets/profle.png"
                     alt="article"
                   />
-                  <span className="tips_user-name"> Sunil Kumar</span>
+                  <span className="tips_user-name"> {blogDetails?.postedByName}</span>
                 </div>
                 <div>
-                  <span className="tips_user-date">12 May 2023</span>
+                  <span className="tips_user-date"> {blogDetails?.blogDate}</span>
                 </div>
               </div>
             </div>

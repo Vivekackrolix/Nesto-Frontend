@@ -31,9 +31,18 @@
     border-radius: 14px;
 }
 
+.blogs-user-img {
+    width: 60%;
+}
+
+.blogs-user-img img {
+    width: 20%;
+}
+
 .left-col_img {
     width: 100%;
     transition: all .3s ease-in;
+    height: 250px;
 }
 
 .left-col_img:hover {

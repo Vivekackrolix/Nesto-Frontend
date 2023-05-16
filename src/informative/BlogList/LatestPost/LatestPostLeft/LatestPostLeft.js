@@ -23,10 +23,12 @@ const LatestPostLeft = () => {
       const response = await getAPI(apiEndpoints.getAllBlog);
       debugger;
       console.log(response.data);
-      setData(response.data);
+      setData(response?.data);
     };
     getPage();
   }, []);
+
+  console.log("blog list--->", data);
 
   return (
     <div className="latest-post-left" style={{ overflowX: "hidden" }}>
@@ -37,20 +39,21 @@ const LatestPostLeft = () => {
         </div>
       </Fade>
       <div className="row mt-3">
-        {data.slice(pagination.start, pagination.end).map((item) => {
+        {data?.slice(pagination.start, pagination.end).map((item) => {
           return (
             <>
               <Fade left duration={1000} delay={100}>
                 <div
                   className="col-lg-6 latest-post-left-col"
+                  id={item?._id}
                   key={item?._id}>
                   <div className="left-col_box">
                     <div className="left-col_box_child-box">
-                      <Link to="/blog-detail">
+                      <Link to={"/blog-detail/" + item._id}>
                         <img
                           className="left-col_img"
-                          src="/assets/informative/latest-news1.png"
-                          // src={item?.thumbnailImage}
+                          // src="/assets/informative/latest-news1.png"
+                          src={item?.thumbnailImage}
                           alt="news"
                         />
                       </Link>
@@ -62,11 +65,11 @@ const LatestPostLeft = () => {
                     </Link>
                     <p className="left-col_para-2">{item?.excerpt}</p>
                     <div className="d-flex align-items-center justify-content-between mt-4">
-                      <div>
+                      <div className="blogs-user-img">
                         <span>
                           <img
-                            src="/assets/informative/profile.png"
-                          // src={item?.profileImage} 
+                            // src="/assets/informative/profile.png"
+                          src={item?.profileImage} 
                           />
                           <span> {item?.postedByName}</span>
                         </span>
@@ -91,7 +94,7 @@ const LatestPostLeft = () => {
         <LatestPostPagination
           showPerPage={showPerPage}
           onPaginationChange={onPaginationChange}
-          total={data.length}
+          total={data?.length}
         />
       </div>
     </div >

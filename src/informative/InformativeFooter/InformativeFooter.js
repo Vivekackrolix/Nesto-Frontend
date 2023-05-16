@@ -27,7 +27,7 @@ const InformativeFooter = () => {
                                 <Link to='/about-us' className='informative-footer-link'>About Us</Link>
                                 <Link to='/partner-page' className='informative-footer-link'>Our Partners</Link>
                                 <Link to='/faq' className='informative-footer-link'>FAQ</Link>
-                                {/* <Link to='/blog-list' className='informative-footer-link'>Blog</Link> */}
+                                <Link to='/blog-list' className='informative-footer-link'>Blog</Link>
                             </div>
                             <div className='col-lg-3 footer-col-3'>
                                 <span className='footer-col-2-span'>Our Policies</span>
