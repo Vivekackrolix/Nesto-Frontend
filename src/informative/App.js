@@ -33,7 +33,7 @@ const App = () => {
         <Route path="/terms-condition" element={<TermsCondition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/blog-list" element={<BlogListMain />} />
-        <Route path="/blog-detail/:_id" element={<BlogDetailMain />} />
+        <Route path="/blog-detail/:slug" element={<BlogDetailMain />} />
         <Route path="/about-us" element={<AboutUsMain />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/builder-property-details" element={<BuilderPD />} />

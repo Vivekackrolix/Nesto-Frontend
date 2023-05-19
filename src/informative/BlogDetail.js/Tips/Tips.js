@@ -109,14 +109,14 @@ const Tips = () => {
 
   useEffect(() => {
     const getPropertyById = async () => {
-      const response = await getAPI(`${apiEndpoints.getBlogByID}?id=${params._id}`
+      const response = await getAPI(`${apiEndpoints.getBlogBySlug}?slug=${params.slug}`
       );
-      setBlogsDetails(response?.data?.[0]);
+      setBlogsDetails(response?.data[0]);
     };
     getPropertyById();
   }, []);
 
-  console.log("blogssss", params,blogDetails);
+  console.log("blogssss", params, blogDetails);
   return (
     <>
       <Fade up duration={1000} delay={100}>
@@ -144,12 +144,7 @@ const Tips = () => {
             </div>
             <div className="tips_box-2">
               <div className="tips_box-3">
-                <span className="tips_box-2-span">
-                  The real estate market is a deep pool based on trust and sources. Everyone is attracted to this market to invest or earn more, but they are tied down due to the fraud and limited reach.
-                </span>
-                <span className="tips_box-2-span" style={{ display: 'block' }}>
-                  While studying the audience of the real estate market, the studies found that both builders and brokers need to gain their customers’ trust, as it is the root of the relationship on which they close the deal. Therefore, any broker in the market is also looking forward to having tie-ups with big giants and wishes to sell their properties.
-                </span>
+                <div dangerouslySetInnerHTML={{ __html: blogDetails.description }} />
               </div>
               {/* <Zoom duration={1000} delay={100}>
                 <div className="tips_box-4">
@@ -207,7 +202,7 @@ const Tips = () => {
               </div>
             </Fade> */}
 
-            <Fade left duration={1000} delay={100}>
+            {/* <Fade left duration={1000} delay={100}>
               <div className="tips_box-5">
                 <div>
                   <span className="tips_box-5-heading">Can a new broker be entrusted with a big builder?</span>
@@ -219,9 +214,9 @@ const Tips = () => {
                   As a result, builders require assurance that the brokers selling their inventory are trustworthy and will not commit fraud in the builder's name.
                 </span>
               </div>
-            </Fade>
+            </Fade> */}
 
-            <Fade left duration={1000} delay={100}>
+            {/* <Fade left duration={1000} delay={100}>
               <div className="tips_box-5">
                 <div>
                   <span className="tips_box-5-heading">How can brokers build trust and networks?</span>
@@ -239,9 +234,9 @@ const Tips = () => {
                   NestoHub welcomes all brokers and builders to expand their connections with each other. We help them grow their business and stand out in the real estate market.
                 </span>
               </div>
-            </Fade>
+            </Fade> */}
 
-            <Fade left duration={1000} delay={100}>
+            {/* <Fade left duration={1000} delay={100}>
               <div className="tips_box-5">
                 <div>
                   <span className="tips_box-5-heading">Looking To Skyrocket Your Property Sales?</span>
@@ -250,9 +245,9 @@ const Tips = () => {
                   Who doesn't want to earn more? Who doesn't want to invest more? Who doesn't want to sell their property before it gets damaged? Who wouldn't want NestHub to help them grow their real estate business? We're guessing it's not you because we're bringing a game-changing digital platform to connect brokers and builders. We have the best offerings for our users to help them distinguish themselves in the market and stand out from the rest of the crowd.
                 </span>
               </div>
-            </Fade>
+            </Fade> */}
 
-            <Fade left duration={1000} delay={100}>
+            {/* <Fade left duration={1000} delay={100}>
               <div className="tips_box-5">
                 <div>
                   <span className="tips_box-5-heading">NestoHub For Builders</span>
@@ -280,8 +275,8 @@ const Tips = () => {
                   );
                 })}
               </div>
-            </Fade>
-
+            </Fade> */}
+{/* 
             <Fade left duration={1000} delay={100}>
               <div className="tips_box-5">
                 <div>
@@ -310,7 +305,7 @@ const Tips = () => {
                   );
                 })}
               </div>
-            </Fade>
+            </Fade> */}
 
             <Fade left duration={1000} delay={100}>
               <div className="tips_box-6">
@@ -325,7 +320,7 @@ const Tips = () => {
             </Fade>
           </div>
           {/* Share Box */}
-          <Fade right duration={1000} delay={100}>
+          {/* <Fade right duration={1000} delay={100}>
             <div className="share-box d-flex justify-content-between align-items-center">
               <div></div>
               <div className="d-flex justify-content-between align-items-center">
@@ -356,7 +351,7 @@ const Tips = () => {
                 </div>
               </div>
             </div>
-          </Fade>
+          </Fade> */}
         </div>
       </Fade >
       {/* RecentPost ===================

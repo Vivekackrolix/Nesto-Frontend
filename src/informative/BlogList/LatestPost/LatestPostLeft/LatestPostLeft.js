@@ -49,7 +49,7 @@ const LatestPostLeft = () => {
                   key={item?._id}>
                   <div className="left-col_box">
                     <div className="left-col_box_child-box">
-                      <Link to={"/blog-detail/" + item._id}>
+                      <Link to={"/blog-detail/" + item.slug}>
                         <img
                           className="left-col_img"
                           // src="/assets/informative/latest-news1.png"
