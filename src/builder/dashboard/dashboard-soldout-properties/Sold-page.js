@@ -33,7 +33,6 @@ const SoldPage = () => {
       const response = await getAPI(
         `${apiEndpoints.getPropertyById}${params.propertyId}`
       );
-      debugger;
       console.log(response.data[0]);
       setProperty(response.data[0]);
     };

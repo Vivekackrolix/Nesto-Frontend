@@ -12,10 +12,8 @@ import FileUpload from "../file-upload/FileUpload";
 // ];
 
 const PersonalDetailsForm = () => {
-  debugger;
   const dispatch = useDispatch();
   useEffect(() => {
-    debugger;
     dispatch(getBuilderDetail(builderId));
   }, [dispatch]);
   const builderData = useSelector(

@@ -27,7 +27,6 @@ const Floor = ({ data }) => {
     };
   }, []);
   const handleTabClick = (tab) => {
-    debugger;
     console.log(tab);
     setSelectedTab(tab);
   };

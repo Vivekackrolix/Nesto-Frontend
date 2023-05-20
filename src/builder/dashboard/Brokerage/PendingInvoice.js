@@ -10,7 +10,6 @@ const PendingInvoice = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getPending = async () => {
-      debugger;
       const response = await getAPI(apiEndpoints.getAllInvoiceForBuilder);
       console.log(response.data);
       setData(response.data);

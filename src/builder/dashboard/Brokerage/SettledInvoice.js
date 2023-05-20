@@ -11,7 +11,6 @@ const SettledInvoice = () => {
   useEffect(() => {
     const getPending = async () => {
       const response = await getAPI(apiEndpoints.getAllInvoiceForBuilder1);
-      debugger;
       console.log(response.data);
       setData(response?.data ?? []);
     };

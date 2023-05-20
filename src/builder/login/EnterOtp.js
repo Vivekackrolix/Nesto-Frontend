@@ -43,7 +43,6 @@ const EnterOtp = ({ show, onHide, phone, setRegister }) => {
         phoneNumber: phone,
         otp: otp,
       });
-      debugger;
       console.log(response);
       if (response.code === 200) {
         console.log("CORRECT OTP");

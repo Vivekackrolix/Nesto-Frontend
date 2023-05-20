@@ -21,7 +21,6 @@ const LatestPostLeft = () => {
   useEffect(() => {
     const getPage = async () => {
       const response = await getAPI(apiEndpoints.getAllBlog);
-      debugger;
       console.log(response.data);
       setData(response?.data);
     };

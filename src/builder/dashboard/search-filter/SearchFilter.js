@@ -47,7 +47,6 @@ const SearchFilterBox = (props) => {
   const [propertyOptions, setPropertyOptions] = useState([]);
   useEffect(() => {
     const getAllProperty = async () => {
-      // debugger;
       const response = await getAPI(apiEndpoints.getAllproperty);
       console.log(response);
       const propertySelectData = [];
@@ -118,7 +117,6 @@ const SearchFilterBox = (props) => {
 
       formData
     );
-    debugger;
     console.log(response.data);
     setData(response.data ?? []);
   };
@@ -345,7 +343,6 @@ const SearchFilterBox = (props) => {
                     // }}
                     options={propertyOptions}
                     onChange={(e) => {
-                      debugger;
                       console.log(e);
                       const selected = [];
                       e.forEach((element) => {
@@ -426,7 +423,6 @@ const SearchFilterBox = (props) => {
                       className="rounded-0"
                       styles={{ background: "#F8F8F8" }}
                       onChange={(e) => {
-                        debugger;
                         setAdd(e.value);
                       }}
                     />
@@ -484,7 +480,6 @@ const SearchFilterBox = (props) => {
                       className="rounded-0"
                       styles={{ background: "#F8F8F8" }}
                       onChange={(e) => {
-                        debugger;
                         console.log(e);
                         const selected = [];
                         e.forEach((element) => {

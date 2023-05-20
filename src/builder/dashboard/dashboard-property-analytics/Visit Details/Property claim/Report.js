@@ -21,7 +21,6 @@ const Report = (props) => {
   useEffect(() => {
     const getReason = async () => {
       try {
-        debugger;
         const response = await getAPI(apiEndpoints.getAllReason);
         console.log(response.data);
 

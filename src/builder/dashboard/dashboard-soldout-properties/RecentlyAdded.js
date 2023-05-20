@@ -14,7 +14,6 @@ const RecentlyAdded = () => {
   useEffect(() => {
     const getAddedProperties = async () => {
       try {
-        debugger;
         const response = await getAPI(apiEndpoints.getAllproperty);
         console.log(response.data);
         setData(response.data);

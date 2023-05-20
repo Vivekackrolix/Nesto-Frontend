@@ -28,9 +28,6 @@ const ContactForm = () => {
   };
 
   const submitHandler = async () => {
-    // // debugger;
-    // console.log(contactForm);
-    // return;
     setIsLoading(true);
     const response = await postAPI(apiEndpoints.addContactus, contactForm);
     console.log(response);

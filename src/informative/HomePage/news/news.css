@@ -31,6 +31,7 @@
     display: block;
     object-fit: cover;
     transition: all .3s ease-in;
+    height: 200px;
 }
 
 .news-box:hover .news-image {
@@ -64,6 +65,10 @@
     padding-top: 14px;
     line-height: 1.4;
     color: var(--cold-black-color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .news-heading:hover {
@@ -76,6 +81,10 @@
     color: var(--gray-color);
     line-height: 24px;
     margin-bottom: 22px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .news-btn:hover {

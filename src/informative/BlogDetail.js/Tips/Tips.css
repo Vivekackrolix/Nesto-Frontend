@@ -15,6 +15,13 @@
     padding: 3% 0;
 }
 
+.tips_user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
 .tips-header_heading {
     font-weight: 700;
     font-size: 30px;
@@ -172,5 +179,8 @@
     .tips_box-6-btn {
         width: 35%;
         margin: 0 10px;
+    }
+    .tips_box-1 {
+        width: 100%;
     }
 }

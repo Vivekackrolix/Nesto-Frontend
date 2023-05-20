@@ -30,7 +30,6 @@ const HomeDashBoard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   // console.log(data);
   useEffect(() => {
-    debugger;
     dispatch(getBuilderDetail(builderId));
   }, [dispatch]);
 

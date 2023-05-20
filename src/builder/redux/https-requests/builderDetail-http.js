@@ -13,7 +13,6 @@ export const getBuilderDetail = (id) => {
 
     //CALL HTTP REQ AND USE REDUX
     try {
-      debugger;
       const data = await getData();
       if (data.code !== 200) {
         // console.log("Permission not available");

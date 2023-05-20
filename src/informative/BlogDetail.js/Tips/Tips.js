@@ -132,7 +132,7 @@ const Tips = () => {
                 <div>
                   <img
                     className="tips_user-img"
-                    src="/assets/profle.png"
+                    src={blogDetails?.profileImage}
                     alt="article"
                   />
                   <span className="tips_user-name"> {blogDetails?.postedByName}</span>

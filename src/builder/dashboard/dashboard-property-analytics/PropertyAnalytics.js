@@ -12,7 +12,6 @@ const PropertyAnalytics = () => {
 
   useEffect(() => {
     const getAnalytics = async () => {
-      debugger;
       const response = await getAPI(
         `${apiEndpoints.getPropertyAnalytics}${builderId}`
       );

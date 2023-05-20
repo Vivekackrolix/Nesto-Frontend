@@ -36,7 +36,6 @@ const AddRole = (props) => {
       selectProperties: selectedProperty,
       builderId: props.itm.builderId._id,
     };
-    debugger;
     console.log(formData);
     const response = await putAPI(apiEndpoints.updateRoles, formData);
     if (response.code === 200) props.onChange(false);
